@@ -1,1 +1,128 @@
-[]
+[
+  {
+    "id": 7762,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Requirements Gathering",
+    "description": "Gather and document the system requirements for ImmutableDistributedSystemsProtocol.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7763,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Design RFC for ImmutableDistributedSystemsProtocol",
+    "description": "Write a design proposal (RFC) outlining the architecture and key components of the ImmutableDistributedSystemsProtocol.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7764,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Decompose Design RFC into Tasks",
+    "description": "Break down the design RFC into smaller, manageable tasks for implementation.",
+    "status": "TODO",
+    "assigned_to": "task-decomposer",
+    "priority": 3,
+    "dependencies": [
+      "Design RFC for ImmutableDistributedSystemsProtocol"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7765,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Implement ImmutableDataStructureManager",
+    "description": "Create an immutable data structure manager that handles storage and retrieval of data in the distributed system.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Decompose Design RFC into Tasks"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7766,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Implement PureFunctionExecutor Service",
+    "description": "Develop a service that executes pure functions in the distributed system.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Decompose Design RFC into Tasks"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7767,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Database Schema Design for ImmutableDistributedSystemsProtocol",
+    "description": "Design the database schema to store and manage data within the distributed system.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Decompose Design RFC into Tasks"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7768,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Integration Testing of ImmutableDistributedSystemsProtocol",
+    "description": "Perform integration tests to ensure that the distributed system is functioning correctly according to the design and requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Implement ImmutableDataStructureManager",
+      "Implement PureFunctionExecutor Service",
+      "Database Schema Design for ImmutableDistributedSystemsProtocol"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7769,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Deploy ImmutableDistributedSystemsProtocol",
+    "description": "Deploy the developed distributed system to a production environment.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Integration Testing of ImmutableDistributedSystemsProtocol"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null
+  },
+  {
+    "id": 7770,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Document ImmutableDistributedSystemsProtocol",
+    "description": "Write comprehensive documentation for the developed distributed system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Deploy ImmutableDistributedSystemsProtocol"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  }
+]

@@ -1,1 +1,112 @@
-[]
+[
+  {
+    "id": 7754,
+    "project_id": "ImmutableDataStructureLibrary",
+    "title": "Project Initiation Meeting",
+    "description": "Establish project goals, timelines, and team roles.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7755,
+    "project_id": "ImmutableDataStructureLibrary",
+    "title": "Requirements Gathering & Analysis",
+    "description": "Gather and analyze the library's functional and non-functional requirements.",
+    "status": "TODO",
+    "assigned_to": "task-decomposer",
+    "priority": 2,
+    "dependencies": [
+      "Project Initiation Meeting"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7756,
+    "project_id": "ImmutableDataStructureLibrary",
+    "title": "Design Immutable Data Structure Library Architecture",
+    "description": "Develop the architecture and design patterns for the data structure library.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Requirements Gathering & Analysis"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7757,
+    "project_id": "ImmutableDataStructureLibrary",
+    "title": "Implement Persistent Immutable Data Structures",
+    "description": "Implement each data structure according to the design.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design Immutable Data Structure Library Architecture"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7758,
+    "project_id": "ImmutableDataStructureLibrary",
+    "title": "Perform Code Review & Quality Assurance Testing",
+    "description": "Review the implemented data structures for correctness, efficiency, and compatibility with functional programming paradigms.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [
+      "Implement Persistent Immutable Data Structures"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7759,
+    "project_id": "ImmutableDataStructureLibrary",
+    "title": "Optimize Data Structure Implementations (if necessary)",
+    "description": "Optimize the data structure implementations for performance and memory usage.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Perform Code Review & Quality Assurance Testing"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7760,
+    "project_id": "ImmutableDataStructureLibrary",
+    "title": "Document the Immutable Data Structure Library",
+    "description": "Write comprehensive documentation for the library, including usage examples and API references.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Optimize Data Structure Implementations (if necessary)"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7761,
+    "project_id": "ImmutableDataStructureLibrary",
+    "title": "Prepare Library for Public Release",
+    "description": "Package and prepare the library for public release, including versioning, documentation updates, and artifact builds.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Document the Immutable Data Structure Library"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  }
+]

@@ -543,7 +543,7 @@ def categorize_projects(max_refresh=3, max_unknown=5, filename='PROJECTS.org'):
         category_usage, avg_usage = get_category_usage(filename)
         over_threshold = avg_usage * 1.5
         under_threshold = avg_usage * 0.5
-        over_utilized = [c for c, count in category_usage.items() mif count >
+        over_utilized = [c for c, count in category_usage.items() if count >
             over_threshold]
         under_utilized = [c for c, count in category_usage.items() if count <
             under_threshold]
@@ -690,28 +690,49 @@ def save_cache(cache):
     with open(CACHE_FILE, 'w') as f:
         json.dump(cache, f)
 
-
 def fetch_recent_papers(url, rp):
     cache = load_cache()
     if datetime.now() - cache['last_updated'] < CACHE_EXPIRY:
         return cache['papers'][:MAX_PAPERS]
+
     if not can_fetch(url, rp):
-        print('Fetching is not allowed according to robots.txt')
+        print("Fetching is not allowed according to robots.txt")
         return []
+
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
+    
     papers = []
     for dt in soup.find_all('dt')[:MAX_PAPERS]:
         paper = {}
-        paper['id'] = dt.find('a', {'title': 'Abstract'}).text.strip()
+        id_element = dt.find('a', {'title': 'Abstract'})
+        if id_element:
+            paper['id'] = id_element.text.strip()
+        else:
+            continue  # Skip this paper if we can't find the ID
+
         dd = dt.find_next('dd')
-        paper['title'] = dd.find('div', class_='list-title').text.replace(
-            'Title:', '').strip()
-        paper['abstract'] = dd.find('p', class_='mathjax').text.strip()
+        if dd:
+            title_element = dd.find('div', class_='list-title')
+            if title_element:
+                paper['title'] = title_element.text.replace('Title:', '').strip()
+            else:
+                paper['title'] = "Title not found"
+
+            abstract_element = dd.find('p', class_='mathjax')
+            if abstract_element:
+                paper['abstract'] = abstract_element.text.strip()
+            else:
+                paper['abstract'] = "Abstract not found"
+        else:
+            continue  # Skip this paper if we can't find the description
+
         papers.append(paper)
+    
     cache['papers'] = papers
     cache['last_updated'] = datetime.now()
     save_cache(cache)
+    
     return papers
 
 
@@ -743,107 +764,100 @@ def load_existing_projects(filename='PROJECTS.org'):
 
 def deduplicate_projects(filename='PROJECTS.org'):
     """
-    Identify and merge similar projects based on their descriptions.
+    Identify and report similar projects based on their descriptions.
     """
     tree = orgparse.load(filename)
     projects = []
     for node in tree[1:]:
         if node.heading:
             description = extract_description(node.body)
-            projects.append({'name': node.heading, 'description':
-                description, 'node': node, 'embedding': get_embedding(
-                description)})
-    similarity_threshold = 0.9
-    merged_projects = []
+            projects.append({
+                'name': node.heading,
+                'description': description,
+                'node': node,
+                'embedding': get_embedding(description)
+            })
+    
+    similarity_threshold = 0.9  # Adjust as needed
+    similar_project_pairs = []
+    
     for i, project in enumerate(projects):
-        if project in merged_projects:
-            continue
-        similar_projects = []
-        for j, other_project in enumerate(projects[i + 1:]):
-            if other_project in merged_projects:
-                continue
-            similarity = cosine_similarity([project['embedding']], [
-                other_project['embedding']])[0][0]
+        for j, other_project in enumerate(projects[i+1:]):
+            similarity = cosine_similarity([project['embedding']], [other_project['embedding']])[0][0]
             if similarity > similarity_threshold:
-                similar_projects.append(other_project)
-        if similar_projects:
-            print(f"Found similar projects to '{project['name']}'. Merging:")
-            for similar_project in similar_projects:
-                print(f"- {similar_project['name']}")
-                project['node'].body += f"""
-* Merged from '{similar_project['name']}'
-{similar_project['node'].body}"""
-                tree.remove(similar_project['node'])
-            merged_projects.extend(similar_projects)
-    if merged_projects:
-        update_readme(tree, True, filename)
-        print(f'Merged {len(merged_projects)} similar projects.')
+                similar_project_pairs.append((project['name'], other_project['name'], similarity))
+    
+    if similar_project_pairs:
+        print("Found similar project pairs:")
+        for proj1, proj2, similarity in similar_project_pairs:
+            print(f"- '{proj1}' and '{proj2}' (Similarity: {similarity:.2f})")
     else:
-        print('No similar projects found for merging.')
+        print("No similar projects found.")
 
+    return similar_project_pairs
 
 @click.command()
-@click.option('--action', type=click.Choice(['categorize', 'analyze',
-    'categories', 'export', 'train-test', 'deduplicate', 'check-arxiv']),
-    default='categorize', help='Action to perform')
-@click.option('--max-refresh', type=int, default=3, help=
-    'Maximum number of times to refresh categories and re-run categorization.')
-@click.option('--max-unknown', type=int, default=5, help=
-    'Maximum number of unknown categories to process during categorization.')
-@click.option('--output-file', type=str, default=
-    'projects_for_training.csv', help='Output file name for CSV export.')
-@click.option('--train-file', type=str, default='train_data.csv', help=
-    'Output file name for training data.')
-@click.option('--test-file', type=str, default='test_data.csv', help=
-    'Output file name for test data.')
-@click.option('--test-split', type=float, default=0.2, help=
-    'Proportion of data to use for testing (0.0 to 1.0).')
-@click.option('--filename', type=str, default='PROJECTS.org', help=
-    'Input org file name.')
-def main(action: str, max_refresh: int, max_unknown: int, output_file: str,
-    train_file: str, test_file: str, test_split: float, filename: str):
+@click.option('--action', type=click.Choice(['categorize', 'analyze', 'categories', 'export', 'train-test', 'deduplicate', 'check-arxiv']), 
+              default='categorize', 
+              help='Action to perform')
+@click.option('--max-refresh', type=int, default=3, help='Maximum number of times to refresh categories and re-run categorization.')
+@click.option('--max-unknown', type=int, default=5, help='Maximum number of unknown categories to process during categorization.')
+@click.option('--output-file', type=str, default='projects_for_training.csv', help='Output file name for CSV export.')
+@click.option('--train-file', type=str, default='train_data.csv', help='Output file name for training data.')
+@click.option('--test-file', type=str, default='test_data.csv', help='Output file name for test data.')
+@click.option('--test-split', type=float, default=0.2, help='Proportion of data to use for testing (0.0 to 1.0).')
+@click.option('--filename', type=str, default='PROJECTS.org', help='Input org file name.')
+def main(action: str, max_refresh: int, max_unknown: int, output_file: str, train_file: str, test_file: str, test_split: float, filename: str):
     try:
         if action == 'categorize':
             categorize_projects(max_refresh, max_unknown, filename)
+        
         elif action == 'analyze':
             analyze_project_similarity(filename)
             analyze_category_similarity()
+        
         elif action == 'categories':
             show_categories()
+        
         elif action == 'export':
             export_projects_to_csv(output_file, filename)
+        
         elif action == 'train-test':
             export_projects_to_csv(output_file, filename)
-            split_data_for_training(output_file, train_file, test_file,
-                test_split)
+            split_data_for_training(output_file, train_file, test_file, test_split)
+        
         elif action == 'deduplicate':
-            deduplicate_projects(filename)
+            similar_pairs = deduplicate_projects(filename)
+            print(f"Total similar project pairs found: {len(similar_pairs)}")
+        
         elif action == 'check-arxiv':
             rp = get_robots_txt(ARXIV_URL)
             papers = fetch_recent_papers(ARXIV_URL, rp)
+            
             if not papers:
-                print(
-                    'No papers fetched. Check if fetching is allowed or if cache is still valid.'
-                    )
+                print("No papers fetched. Check if fetching is allowed or if cache is still valid.")
                 return
+
+            print(f"Fetched {len(papers)} recent papers from arXiv cs.AI:")
+            for paper in papers:
+                print(f"- {paper.get('title', 'No title')} (arXiv:{paper.get('id', 'No ID')})")
+
             existing_projects = load_existing_projects(filename)
             similar_projects = check_similarity(papers, existing_projects)
-            print(f'Fetched {len(papers)} recent papers from arXiv cs.AI:')
-            for paper in papers:
-                print(f"- {paper['title']} (arXiv:{paper['id']})")
+
             if similar_projects:
-                print('\nSimilar projects found:')
+                print("\nSimilar projects found:")
                 for paper, project, similarity in similar_projects:
-                    print(f"arXiv paper: {paper['title']}")
-                    print(f"Similar to existing project: {project['title']}")
-                    print(f'Similarity score: {similarity:.2f}')
+                    print(f"arXiv paper: {paper.get('title', 'No title')}")
+                    print(f"Similar to existing project: {project.get('title', 'No title')}")
+                    print(f"Similarity score: {similarity:.2f}")
                     print()
             else:
-                print('\nNo similar projects found.')
+                print("\nNo similar projects found.")
+    
     except Exception as e:
-        logging.error(f'Error in main function: {str(e)}')
+        logging.error(f"Error in main function: {str(e)}")
         logging.debug(traceback.format_exc())
-
 
 if __name__ == '__main__':
     main()
