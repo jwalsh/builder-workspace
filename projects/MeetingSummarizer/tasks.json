@@ -1,0 +1,141 @@
+[
+  {
+    "id": 2998,
+    "project_id": "MeetingSummarizer",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the project requirements, including the desired features, functionality, and constraints for the MeetingSummarizer application.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2999,
+    "project_id": "MeetingSummarizer",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture for the MeetingSummarizer application, including the following components and considerations:\n\n1. Audio Capture and Processing: Mechanisms for capturing audio from meetings (e.g., microphones, video conferencing integrations) and preprocessing the audio data for speech recognition.\n\n2. Speech Recognition: Integration with a speech-to-text engine to transcribe the audio data into text.\n\n3. Natural Language Processing (NLP): NLP components for text summarization, entity extraction, sentiment analysis, and topic modeling.\n\n4. Data Storage: Database or storage solution for storing meeting transcripts, summaries, action items, and other relevant data.\n\n5. User Interface: Web or mobile interface for users to access meeting summaries, action items, and other features.\n\n6. Integrations: Potential integrations with calendars, task management tools, or other productivity applications.\n\n7. Security and Privacy: Mechanisms for ensuring data privacy, access control, and secure storage of sensitive meeting information.\n\n8. Scalability and Performance: Considerations for handling large volumes of audio data and ensuring efficient processing and retrieval of summaries.\n\n9. Monitoring and Logging: Mechanisms for monitoring system health, logging errors, and tracking usage metrics.\n\nThe architecture should be modular, extensible, and follow best practices for maintainability and testability.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3000,
+    "project_id": "MeetingSummarizer",
+    "title": "Develop Audio Processing Module",
+    "description": "Implement the module responsible for capturing and processing audio from meetings, including speech recognition and transcription.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3001,
+    "project_id": "MeetingSummarizer",
+    "title": "Develop Natural Language Processing Module",
+    "description": "Implement the module responsible for analyzing the meeting transcripts using natural language processing techniques to extract summaries, action items, and key decisions.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3002,
+    "project_id": "MeetingSummarizer",
+    "title": "Design and Develop User Interface",
+    "description": "Design and develop the user interface for the MeetingSummarizer application, including the meeting setup, summary viewing, and configuration options.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3003,
+    "project_id": "MeetingSummarizer",
+    "title": "Implement Data Storage and Management",
+    "description": "Design and implement the data storage and management system for meeting recordings, transcripts, summaries, and other relevant data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3004,
+    "project_id": "MeetingSummarizer",
+    "title": "Develop Security and Access Control",
+    "description": "Implement security measures and access control mechanisms to ensure the privacy and confidentiality of meeting recordings and data. This includes secure storage and transmission of data, encryption, access controls, and user authentication and authorization mechanisms.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 3005,
+    "project_id": "MeetingSummarizer",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Configure and implement a continuous integration and deployment pipeline for the MeetingSummarizer application to streamline the development and release process.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3006,
+    "project_id": "MeetingSummarizer",
+    "title": "Develop Testing Strategy and Automation",
+    "description": "Define and implement a comprehensive testing strategy, including unit tests, integration tests, and end-to-end tests, to ensure the quality and reliability of the MeetingSummarizer application.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3007,
+    "project_id": "MeetingSummarizer",
+    "title": "Create User Documentation and Training Materials",
+    "description": "Develop user documentation, guides, and training materials to assist users in effectively using the MeetingSummarizer application.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Design and Develop User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

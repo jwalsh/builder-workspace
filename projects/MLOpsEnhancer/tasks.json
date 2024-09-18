@@ -1,0 +1,98 @@
+[
+  {
+    "id": 2976,
+    "project_id": "MLOpsEnhancer",
+    "title": "Gather Requirements and Define Architecture",
+    "description": "Understand the current architecture, identify pain points, and define the desired state for the MLOpsEnhancer project. Outline the high-level architecture, including the integration points between machine learning services and other compute services, and the serverless approach with higher memory model and concurrency limits.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2977,
+    "project_id": "MLOpsEnhancer",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including the integration of machine learning services with other compute services, and the serverless approach. Consider factors such as scalability, performance, fault tolerance, security, and monitoring. Provide a high-level overview of the components, their interactions, and data flows.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Gather Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 2978,
+    "project_id": "MLOpsEnhancer",
+    "title": "Implement Backend Services",
+    "description": "Develop and implement the backend services required for the MLOpsEnhancer project, including the integration with machine learning services and other compute services.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2979,
+    "project_id": "MLOpsEnhancer",
+    "title": "Implement Serverless Infrastructure",
+    "description": "Set up and configure the serverless infrastructure required for the MLOpsEnhancer project, including the necessary compute resources and scaling mechanisms.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2980,
+    "project_id": "MLOpsEnhancer",
+    "title": "Develop Testing Strategy",
+    "description": "Define and implement a comprehensive testing strategy for the MLOpsEnhancer project, including unit tests, integration tests, performance tests, and security tests. The testing strategy should cover all critical components and services, including machine learning models, data pipelines, and compute services.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2981,
+    "project_id": "MLOpsEnhancer",
+    "title": "Implement Security Measures",
+    "description": "Identify and implement security measures to ensure the MLOpsEnhancer project is secure and compliant with industry standards and regulations. This includes but is not limited to authentication, authorization, data encryption, secure communication protocols, and regular security audits.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 1,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2982,
+    "project_id": "MLOpsEnhancer",
+    "title": "Create Documentation",
+    "description": "Develop comprehensive documentation for the MLOpsEnhancer project, including architecture diagrams, API documentation, and user guides.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

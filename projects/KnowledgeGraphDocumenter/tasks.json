@@ -1,0 +1,169 @@
+[
+  {
+    "id": 2723,
+    "project_id": "KnowledgeGraphDocumenter",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the requirements for the KnowledgeGraphDocumenter system, including the types of documentation to be processed (e.g., text files, PDFs, web pages), the desired output format for the knowledge graph (e.g., RDF, OWL, JSON-LD), any specific constraints or preferences (e.g., support for specific file formats, performance requirements, security considerations), and the expected use cases or applications of the knowledge graph.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2724,
+    "project_id": "KnowledgeGraphDocumenter",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the KnowledgeGraphDocumenter system, including the components and their interactions, data flow, integration with existing systems, data storage, and scalability considerations.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2725,
+    "project_id": "KnowledgeGraphDocumenter",
+    "title": "Develop Documentation Parsing Module",
+    "description": "Implement a module to parse and extract relevant information from various types of documentation formats (e.g., Markdown, HTML, PDF, Word documents).",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2726,
+    "project_id": "KnowledgeGraphDocumenter",
+    "title": "Develop Knowledge Graph Creation Module",
+    "description": "Implement a module to create and maintain the knowledge graph based on the extracted information from the documentation.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2727,
+    "project_id": "KnowledgeGraphDocumenter",
+    "title": "Design Knowledge Graph Data Model",
+    "description": "Define the data model and schema for the knowledge graph, including entities, relationships, properties, and data types. Consider the different types of entities (e.g., documents, topics, people, organizations) and their relationships (e.g., author, mentions, belongs to). Ensure the data model supports efficient querying and retrieval of information. Define naming conventions and guidelines for entity and relationship types.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2728,
+    "project_id": "KnowledgeGraphDocumenter",
+    "title": "Implement Knowledge Graph Storage and Querying",
+    "description": "Develop the components for storing and querying the knowledge graph, potentially using a graph database or other suitable storage solution.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Knowledge Graph Data Model"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2729,
+    "project_id": "KnowledgeGraphDocumenter",
+    "title": "Develop User Interface",
+    "description": "Design and implement a user interface for interacting with the knowledge graph, including visualizations, search, and exploration capabilities.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2730,
+    "project_id": "KnowledgeGraphDocumenter",
+    "title": "Implement Documentation Update Monitoring",
+    "description": "Develop a mechanism to monitor for updates to the organization's documentation and trigger the knowledge graph update process.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Documentation Parsing Module",
+      "Develop Knowledge Graph Creation Module"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2731,
+    "project_id": "KnowledgeGraphDocumenter",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Configure a CI/CD pipeline for automated building, testing, and deployment of the KnowledgeGraphDocumenter system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2732,
+    "project_id": "KnowledgeGraphDocumenter",
+    "title": "Conduct Security Audit",
+    "description": "Perform a security audit of the KnowledgeGraphDocumenter system to identify and mitigate potential vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Develop User Interface",
+      "Implement Knowledge Graph Storage and Querying"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 2733,
+    "project_id": "KnowledgeGraphDocumenter",
+    "title": "Write User Documentation",
+    "description": "Create comprehensive user documentation for the KnowledgeGraphDocumenter system, including installation, configuration, and usage guides.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Develop User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2734,
+    "project_id": "KnowledgeGraphDocumenter",
+    "title": "Conduct System Testing",
+    "description": "Plan and execute comprehensive testing of the KnowledgeGraphDocumenter system, including unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 1,
+    "dependencies": [
+      "Develop User Interface",
+      "Implement Documentation Update Monitoring"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

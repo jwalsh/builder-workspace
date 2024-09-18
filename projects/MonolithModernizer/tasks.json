@@ -1,0 +1,129 @@
+[
+  {
+    "id": 3193,
+    "project_id": "MonolithModernizer",
+    "title": "Project Planning and Architecture Design",
+    "description": "Define project scope, goals, and requirements. Conduct architectural design sessions to plan the migration of the monolithic application to a cloud-based, distributed architecture using CQRS and read-local write-global patterns.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3194,
+    "project_id": "MonolithModernizer",
+    "title": "Analyze Existing Monolithic Application",
+    "description": "Perform a thorough analysis of the existing monolithic application, including its architecture, data models, business logic, and dependencies.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3195,
+    "project_id": "MonolithModernizer",
+    "title": "Design CQRS and Event-Driven Architecture",
+    "description": "Design the CQRS (Command Query Responsibility Segregation) and event-driven architecture for the distributed system, including command and query models, event sourcing, and event handlers.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Project Planning and Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3196,
+    "project_id": "MonolithModernizer",
+    "title": "Design Data Storage and Replication Strategy",
+    "description": "Design the data storage and replication strategy to support the read-local write-global pattern, ensuring data consistency, low latency for global users, and high availability. Consider using a distributed database system or a combination of databases (e.g., a relational database for transactional data and a NoSQL database for read-replicas). Address data partitioning, sharding, and replication strategies, as well as failover and disaster recovery mechanisms.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Project Planning and Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 3197,
+    "project_id": "MonolithModernizer",
+    "title": "Plan Cloud Infrastructure and Deployment",
+    "description": "Plan the cloud infrastructure and deployment strategy, including containerization, orchestration, load balancing, auto-scaling, and disaster recovery. Ensure compliance with security and regulatory requirements.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Project Planning and Architecture Design",
+      "Security and Compliance Review"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 3198,
+    "project_id": "MonolithModernizer",
+    "title": "Design User Interface and Experience",
+    "description": "Design the user interface and experience for the distributed application, ensuring a seamless and responsive experience for global users. Consider the following aspects: responsive design for various devices and screen sizes, accessibility for users with disabilities, internationalization and localization support, performance optimization techniques (e.g., lazy loading, code splitting), and integration with the backend services and data sources.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Project Planning and Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 3199,
+    "project_id": "MonolithModernizer",
+    "title": "Plan Testing and Quality Assurance Strategy",
+    "description": "Plan the testing and quality assurance strategy, including unit testing, integration testing, performance testing, security testing, and user acceptance testing. Define the testing tools, frameworks, and environments required. Outline the test automation strategy and continuous integration/deployment pipeline.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Project Planning and Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3200,
+    "project_id": "MonolithModernizer",
+    "title": "Conduct Security and Compliance Review",
+    "description": "Conduct a security and compliance review to ensure the distributed application adheres to industry standards and regulatory requirements.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Project Planning and Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 3201,
+    "project_id": "MonolithModernizer",
+    "title": "Document Architecture and Implementation",
+    "description": "Document the architecture, design decisions, and implementation details for future reference and knowledge sharing.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Architecture Design",
+      "Design CQRS and Event-Driven Architecture",
+      "Design Data Storage and Replication Strategy",
+      "Plan Cloud Infrastructure and Deployment",
+      "Design User Interface and Experience"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

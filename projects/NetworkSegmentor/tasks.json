@@ -1,0 +1,132 @@
+[
+  {
+    "id": 3284,
+    "project_id": "NetworkSegmentor",
+    "title": "Gather Requirements",
+    "description": "Collect and document requirements for network segmentation, including private virtual interfaces, transit gateways, and VPN connections.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3285,
+    "project_id": "NetworkSegmentor",
+    "title": "Design Network Architecture",
+    "description": "Design the overall network architecture, including the placement of private virtual interfaces, transit gateways, and VPN connections.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Gather Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3286,
+    "project_id": "NetworkSegmentor",
+    "title": "Implement Private Virtual Interfaces",
+    "description": "Develop and test the implementation of private virtual interfaces for network segmentation.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Network Architecture"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 3287,
+    "project_id": "NetworkSegmentor",
+    "title": "Implement Transit Gateways",
+    "description": "Develop and test the implementation of transit gateways for network segmentation.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Network Architecture"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 3288,
+    "project_id": "NetworkSegmentor",
+    "title": "Implement VPN Connections",
+    "description": "Develop and test the implementation of VPN connections for network segmentation.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Network Architecture"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 3289,
+    "project_id": "NetworkSegmentor",
+    "title": "Security Audit",
+    "description": "Perform a security audit on the network segmentation implementation to identify and mitigate potential vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Implement Private Virtual Interfaces",
+      "Implement Transit Gateways",
+      "Implement VPN Connections"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 3290,
+    "project_id": "NetworkSegmentor",
+    "title": "Integration and System Testing",
+    "description": "Conduct integration and system testing to ensure the proper functioning of the network segmentation implementation.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Private Virtual Interfaces",
+      "Implement Transit Gateways",
+      "Implement VPN Connections",
+      "Security Audit"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 3291,
+    "project_id": "NetworkSegmentor",
+    "title": "Documentation",
+    "description": "Create comprehensive documentation for the network segmentation implementation, including user guides and technical references.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "Integration and System Testing"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  },
+  {
+    "id": 3292,
+    "project_id": "NetworkSegmentor",
+    "title": "Deployment and Release",
+    "description": "Deploy and release the network segmentation implementation to production environments.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Integration and System Testing",
+      "Documentation"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  }
+]

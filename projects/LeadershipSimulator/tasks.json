@@ -1,0 +1,185 @@
+[
+  {
+    "id": 2794,
+    "project_id": "LeadershipSimulator",
+    "title": "Gather Requirements",
+    "description": "Define the scope, features, and target audience for the LeadershipSimulator platform. Conduct stakeholder interviews, research existing solutions, and document functional and non-functional requirements.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2795,
+    "project_id": "LeadershipSimulator",
+    "title": "Design System Architecture",
+    "description": "Plan the overall system architecture, including components, data flow, and integration points.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Gather Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2796,
+    "project_id": "LeadershipSimulator",
+    "title": "Develop VR Environment",
+    "description": "Create the virtual reality environment for simulating leadership scenarios.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2797,
+    "project_id": "LeadershipSimulator",
+    "title": "Implement Scenario Logic",
+    "description": "Develop the backend logic to handle different leadership scenarios and interactions.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2798,
+    "project_id": "LeadershipSimulator",
+    "title": "Design Database Schema",
+    "description": "Define the database schema for storing user data, progress, scenario configurations, and other relevant application data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2799,
+    "project_id": "LeadershipSimulator",
+    "title": "Implement User Management",
+    "description": "Develop user authentication, authorization, and profile management features.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Database Schema"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2800,
+    "project_id": "LeadershipSimulator",
+    "title": "Design User Interface",
+    "description": "Create wireframes and mockups for the user interface of the LeadershipSimulator platform.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Gather Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2801,
+    "project_id": "LeadershipSimulator",
+    "title": "Implement User Interface",
+    "description": "Develop the user interface based on the approved designs.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2802,
+    "project_id": "LeadershipSimulator",
+    "title": "Set up CI/CD Pipeline",
+    "description": "Configure a continuous integration and deployment pipeline for automated builds and deployments.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2803,
+    "project_id": "LeadershipSimulator",
+    "title": "Conduct Security Audits",
+    "description": "Perform security audits and implement necessary security measures.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Implement User Management"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 2804,
+    "project_id": "LeadershipSimulator",
+    "title": "Write User Documentation",
+    "description": "Create user manuals, guides, and other documentation for the LeadershipSimulator platform.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Implement User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2805,
+    "project_id": "LeadershipSimulator",
+    "title": "Perform Testing",
+    "description": "Test the LeadershipSimulator platform thoroughly, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop VR Environment",
+      "Implement Scenario Logic",
+      "Implement User Management",
+      "Implement User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2806,
+    "project_id": "LeadershipSimulator",
+    "title": "Deploy to Production",
+    "description": "Deploy the LeadershipSimulator platform to the production environment.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Perform Testing",
+      "Conduct Security Audits",
+      "Write User Documentation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

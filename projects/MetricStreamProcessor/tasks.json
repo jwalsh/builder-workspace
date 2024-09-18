@@ -1,0 +1,113 @@
+[
+  {
+    "id": 3091,
+    "project_id": "MetricStreamProcessor",
+    "title": "Define System Architecture",
+    "description": "Design the overall architecture of the MetricStreamProcessor system, including components, data flow, and integration points. Consider the following aspects: 1) Data ingestion layer for handling high-volume metric data streams, 2) Data processing layer for real-time analysis and transformation, 3) Data storage layer for persisting processed data, 4) Scalability and load balancing mechanisms, 5) Monitoring and alerting components, 6) Security and access control, 7) Fault tolerance and high availability.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 3092,
+    "project_id": "MetricStreamProcessor",
+    "title": "Gather Requirements",
+    "description": "Collect and document functional and non-functional requirements for the MetricStreamProcessor system.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3093,
+    "project_id": "MetricStreamProcessor",
+    "title": "Design Data Ingestion Pipeline",
+    "description": "Design the data ingestion pipeline for receiving and processing large volumes of metrics data in real-time. The design should consider the following aspects: 1) Data sources and formats, 2) Data ingestion mechanisms (e.g., message queues, streaming platforms), 3) Data validation and preprocessing, 4) Fault tolerance and error handling, 5) Scalability and performance considerations, 6) Integration with other components (e.g., storage, processing engines), 7) Monitoring and logging.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Define System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 3094,
+    "project_id": "MetricStreamProcessor",
+    "title": "Design Data Storage and Querying",
+    "description": "Design the data storage and querying mechanisms for efficient storage and retrieval of large volumes of metrics data, considering scalability, performance, and data durability requirements.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Define System Architecture",
+      "Determine Data Ingestion Mechanisms"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3095,
+    "project_id": "MetricStreamProcessor",
+    "title": "Design Real-time Analysis Engine",
+    "description": "Design the real-time analysis engine for performing complex computations and transformations on the incoming metrics data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Define System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3096,
+    "project_id": "MetricStreamProcessor",
+    "title": "Design User Interface",
+    "description": "Design the user interface for visualizing and interacting with the processed metrics data, including features like real-time data visualization, customizable dashboards, alerting mechanisms, and user management.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Define System Architecture",
+      "Define Data Models and Schemas"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3097,
+    "project_id": "MetricStreamProcessor",
+    "title": "Define Security and Access Control",
+    "description": "Define the security and access control mechanisms for the MetricStreamProcessor system, including authentication, authorization, data encryption, secure communication protocols, and access control policies. Consider industry best practices, regulatory compliance requirements, and potential threats and vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Define System Architecture",
+      "Identify Regulatory Compliance Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3098,
+    "project_id": "MetricStreamProcessor",
+    "title": "Plan Deployment and Monitoring",
+    "description": "Plan the deployment strategy and monitoring mechanisms for the MetricStreamProcessor system, considering aspects such as infrastructure provisioning, containerization, orchestration, load balancing, scaling, logging, metrics collection, alerting, and observability.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Define System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  }
+]

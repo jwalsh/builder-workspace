@@ -1,0 +1,115 @@
+[
+  {
+    "id": 8039,
+    "project_id": "MoralCompassApp",
+    "title": "Requirement Gathering and Analysis",
+    "description": "Gather user requirements for the MoralCompassApp, including features and functionalities. Analyze ethical theories to be integrated into the app.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8040,
+    "project_id": "MoralCompassApp",
+    "title": "Design the User Interface (UI)",
+    "description": "Create wireframes and mockups for the MoralCompassApp's user interface, ensuring it is intuitive and easy to navigate.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Requirement Gathering and Analysis"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8041,
+    "project_id": "MoralCompassApp",
+    "title": "Develop Ethical Decision Algorithm",
+    "description": "Develop an algorithm to analyze user input and provide ethical guidance based on the ethical theories gathered.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Requirement Gathering and Analysis"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8042,
+    "project_id": "MoralCompassApp",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement a database structure to store user input, ethical theories, and generated guidance.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Develop Ethical Decision Algorithm"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8043,
+    "project_id": "MoralCompassApp",
+    "title": "Create Unit and Integration Tests",
+    "description": "Write unit tests for individual components of the app and integration tests to ensure proper functionality.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Develop Ethical Decision Algorithm",
+      "Design the User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8044,
+    "project_id": "MoralCompassApp",
+    "title": "Deploy and Test in Staging Environment",
+    "description": "Prepare the app for deployment by setting up a staging environment, deploying the app, and testing its functionality.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Ethical Decision Algorithm",
+      "Design the User Interface",
+      "Create Unit and Integration Tests"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8045,
+    "project_id": "MoralCompassApp",
+    "title": "Review Code for Quality and Security",
+    "description": "Conduct code reviews to ensure high-quality and secure implementation.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Deploy and Test in Staging Environment"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 8046,
+    "project_id": "MoralCompassApp",
+    "title": "Write Documentation for Developers and Users",
+    "description": "Create documentation detailing the app's functionality, usage, and development process.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Deploy and Test in Staging Environment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

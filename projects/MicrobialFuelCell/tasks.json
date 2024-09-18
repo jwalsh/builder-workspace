@@ -1,0 +1,169 @@
+[
+  {
+    "id": 7969,
+    "project_id": "MicrobialFuelCell",
+    "title": "Requirements Gathering for Microbial Fuel Cell System",
+    "description": "Identify and document the functional and non-functional requirements of the microbial fuel cell system.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7970,
+    "project_id": "MicrobialFuelCell",
+    "title": "Design Concept for Microbial Fuel Cell System",
+    "description": "Develop a high-level design concept for the microbial fuel cell system, including hardware and software components.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering for Microbial Fuel Cell System"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7971,
+    "project_id": "MicrobialFuelCell",
+    "title": "Backend Development for Data Collection and Processing",
+    "description": "Develop the backend of the microbial fuel cell system, handling data collection, storage, and processing.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Concept for Microbial Fuel Cell System"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7972,
+    "project_id": "MicrobialFuelCell",
+    "title": "Frontend Development for User Interface and Visualization",
+    "description": "Develop the frontend of the microbial fuel cell system, providing a user-friendly interface and visualization tools.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Concept for Microbial Fuel Cell System"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7973,
+    "project_id": "MicrobialFuelCell",
+    "title": "Database Design and Integration",
+    "description": "Design the database schema for storing microbial fuel cell system data and integrate it with the backend.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development for Data Collection and Processing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7974,
+    "project_id": "MicrobialFuelCell",
+    "title": "Deploy Microbial Fuel Cell System on Test Environment",
+    "description": "Set up a test environment for the microbial fuel cell system and deploy the developed components.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Backend Development for Data Collection and Processing",
+      "Frontend Development for User Interface and Visualization"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7975,
+    "project_id": "MicrobialFuelCell",
+    "title": "Test Microbial Fuel Cell System Components",
+    "description": "Perform unit tests, integration tests, and system tests on the various components of the microbial fuel cell system.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Deploy Microbial Fuel Cell System on Test Environment"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 7976,
+    "project_id": "MicrobialFuelCell",
+    "title": "Security Audit for Microbial Fuel Cell System",
+    "description": "Perform a security audit of the microbial fuel cell system to identify and mitigate potential vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Deploy Microbial Fuel Cell System on Test Environment"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 7977,
+    "project_id": "MicrobialFuelCell",
+    "title": "Documentation for Microbial Fuel Cell System",
+    "description": "Create technical documentation for the microbial fuel cell system, including user manuals and developer guides.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Deploy Microbial Fuel Cell System on Test Environment"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7978,
+    "project_id": "MicrobialFuelCell",
+    "title": "Iterative Refinement and Integration",
+    "description": "Address issues found during testing and iteratively refine the microbial fuel cell system, integrating components as they are ready.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [
+      "Test Microbial Fuel Cell System Components"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7979,
+    "project_id": "MicrobialFuelCell",
+    "title": "Prepare Microbial Fuel Cell System for Deployment",
+    "description": "Prepare the microbial fuel cell system for deployment, including packaging and configuration.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Iterative Refinement and Integration"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7980,
+    "project_id": "MicrobialFuelCell",
+    "title": "Deploy Microbial Fuel Cell System in Production Environment",
+    "description": "Deploy the microbial fuel cell system in a production environment for real-world testing and usage.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Prepare Microbial Fuel Cell System for Deployment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

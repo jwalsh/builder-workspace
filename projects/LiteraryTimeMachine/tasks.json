@@ -1,0 +1,153 @@
+[
+  {
+    "id": 2905,
+    "project_id": "LiteraryTimeMachine",
+    "title": "Define Project Requirements",
+    "description": "Gather and document the functional and non-functional requirements for the LiteraryTimeMachine project, including the desired input and output formats, supported historical periods, performance and scalability requirements, and any other relevant constraints or guidelines.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2906,
+    "project_id": "LiteraryTimeMachine",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture for the LiteraryTimeMachine project, including the main components, data flow, and integration points. Consider the requirements for text analysis, language transformation, text generation, user interface, data storage, and deployment. The architecture should be modular, scalable, and maintainable.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Requirements",
+      "Gather Language Corpora"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2907,
+    "project_id": "LiteraryTimeMachine",
+    "title": "Develop Text Analysis Module",
+    "description": "Implement the text analysis module responsible for parsing and analyzing input texts, extracting relevant linguistic features, and preparing data for the language transformation and generation components.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2908,
+    "project_id": "LiteraryTimeMachine",
+    "title": "Develop Language Transformation Module",
+    "description": "Implement the language transformation module responsible for converting modern texts into historical styles or adapting classical works into contemporary language, based on the extracted linguistic features and predefined rules or models.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2909,
+    "project_id": "LiteraryTimeMachine",
+    "title": "Develop User Interface",
+    "description": "Design and implement the user interface for the LiteraryTimeMachine application, allowing users to input texts, select historical periods or language styles, and view the transformed output.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2910,
+    "project_id": "LiteraryTimeMachine",
+    "title": "Set up Data Storage and Management",
+    "description": "Design and implement the data storage and management system for the LiteraryTimeMachine project, including databases or other storage solutions for linguistic rules, models, and user data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2911,
+    "project_id": "LiteraryTimeMachine",
+    "title": "Implement Security Measures",
+    "description": "Evaluate and implement appropriate security measures for the LiteraryTimeMachine application, including user authentication, data encryption, and protection against potential vulnerabilities or attacks.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2912,
+    "project_id": "LiteraryTimeMachine",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a continuous integration and deployment pipeline for the LiteraryTimeMachine project, including automated builds, testing, and deployment processes to ensure efficient and reliable software delivery.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Text Analysis Module",
+      "Develop Language Transformation Module",
+      "Develop User Interface",
+      "Set up Data Storage and Management",
+      "Implement Security Measures"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2913,
+    "project_id": "LiteraryTimeMachine",
+    "title": "Conduct Testing and Quality Assurance",
+    "description": "Plan and execute comprehensive testing and quality assurance activities for the LiteraryTimeMachine project, including unit testing, integration testing, performance testing, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop Text Analysis Module",
+      "Develop Language Transformation Module",
+      "Develop User Interface",
+      "Set up Data Storage and Management",
+      "Implement Security Measures"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2914,
+    "project_id": "LiteraryTimeMachine",
+    "title": "Write Documentation and User Guides",
+    "description": "Prepare comprehensive documentation and user guides for the LiteraryTimeMachine project, including technical documentation, installation and configuration guides, and user manuals.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Text Analysis Module",
+      "Develop Language Transformation Module",
+      "Develop User Interface",
+      "Set up Data Storage and Management",
+      "Implement Security Measures"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

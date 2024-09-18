@@ -1,0 +1,174 @@
+[
+  {
+    "id": 8006,
+    "project_id": "MolecularFilterWaterPurifier",
+    "title": "Requirements Gathering",
+    "description": "Define and document the system requirements for the molecular water purifier.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 8007,
+    "project_id": "MolecularFilterWaterPurifier",
+    "title": "Molecular Filter Design",
+    "description": "Design the molecular filters that will remove contaminants at the molecular level.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8008,
+    "project_id": "MolecularFilterWaterPurifier",
+    "title": "Control System Design",
+    "description": "Design the control system that will manage the water purification process.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8009,
+    "project_id": "MolecularFilterWaterPurifier",
+    "title": "Backend Development",
+    "description": "Implement the backend functionality for data processing and control.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Molecular Filter Design",
+      "Control System Design"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 8010,
+    "project_id": "MolecularFilterWaterPurifier",
+    "title": "Frontend Development",
+    "description": "Develop the user interface for controlling and monitoring the water purifier.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Molecular Filter Design",
+      "Control System Design"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 8011,
+    "project_id": "MolecularFilterWaterPurifier",
+    "title": "Database Design",
+    "description": "Design the database schema to store system data and logs.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Molecular Filter Design",
+      "Control System Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8012,
+    "project_id": "MolecularFilterWaterPurifier",
+    "title": "DevOps Configuration",
+    "description": "Set up the development, testing, and production environments.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8013,
+    "project_id": "MolecularFilterWaterPurifier",
+    "title": "Unit Testing",
+    "description": "Write and execute unit tests for each component of the system.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  },
+  {
+    "id": 8014,
+    "project_id": "MolecularFilterWaterPurifier",
+    "title": "Integration Testing",
+    "description": "Perform integration tests to verify the proper functioning of the system as a whole.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Unit Testing"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  },
+  {
+    "id": 8015,
+    "project_id": "MolecularFilterWaterPurifier",
+    "title": "Security Audit",
+    "description": "Perform a security audit to identify potential vulnerabilities and implement necessary fixes.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Integration Testing"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 8016,
+    "project_id": "MolecularFilterWaterPurifier",
+    "title": "System Documentation",
+    "description": "Write detailed documentation on the system design and operation.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Integration Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8017,
+    "project_id": "MolecularFilterWaterPurifier",
+    "title": "Deployment and Launch",
+    "description": "Deploy the system to production environments and launch the product.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [
+      "Security Audit",
+      "System Documentation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

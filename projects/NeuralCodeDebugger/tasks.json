@@ -1,0 +1,127 @@
+[
+  {
+    "id": 8102,
+    "project_id": "NeuralCodeDebugger",
+    "title": "Define Project Requirements",
+    "description": "Gather and document the functional and non-functional requirements for the NeuralCodeDebugger project.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 8103,
+    "project_id": "NeuralCodeDebugger",
+    "title": "Design Brain-Computer Interface Architecture",
+    "description": "Create a design for the BCI hardware and software components to interact with code.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8104,
+    "project_id": "NeuralCodeDebugger",
+    "title": "Develop BCI Hardware Prototype",
+    "description": "Prototype and test the hardware components required for the NeuralCodeDebugger BCI system.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 3,
+    "dependencies": [
+      "Design Brain-Computer Interface Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8105,
+    "project_id": "NeuralCodeDebugger",
+    "title": "Develop BCI Software Prototype",
+    "description": "Prototype and test the software components required for the NeuralCodeDebugger BCI system.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Brain-Computer Interface Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8106,
+    "project_id": "NeuralCodeDebugger",
+    "title": "Develop NeuralCodeDebugger Frontend",
+    "description": "Create the user interface for programmers to interact with their code using the BCI system.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Develop BCI Software Prototype"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8107,
+    "project_id": "NeuralCodeDebugger",
+    "title": "Integrate Hardware and Software Components",
+    "description": "Combine the hardware and software components to create a functional NeuralCodeDebugger system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Develop BCI Hardware Prototype",
+      "Develop BCI Software Prototype"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8108,
+    "project_id": "NeuralCodeDebugger",
+    "title": "Test NeuralCodeDebugger System",
+    "description": "Perform thorough testing on the NeuralCodeDebugger system to ensure it meets functional and non-functional requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Integrate Hardware and Software Components"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 8109,
+    "project_id": "NeuralCodeDebugger",
+    "title": "Iteratively Refine NeuralCodeDebugger System",
+    "description": "Address any issues found during testing and improve the system based on user feedback.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [
+      "Test NeuralCodeDebugger System"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8110,
+    "project_id": "NeuralCodeDebugger",
+    "title": "Document and Publish User Guide",
+    "description": "Create a comprehensive guide for users to learn how to use the NeuralCodeDebugger system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Iteratively Refine NeuralCodeDebugger System"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

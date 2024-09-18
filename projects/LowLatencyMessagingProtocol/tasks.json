@@ -1,0 +1,113 @@
+[
+  {
+    "id": 6451,
+    "project_id": "LowLatencyMessagingProtocol",
+    "title": "Define Protocol Requirements",
+    "description": "Gather and document the requirements for the low-latency messaging protocol, including performance targets, security considerations, and compatibility with existing systems.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 6452,
+    "project_id": "LowLatencyMessagingProtocol",
+    "title": "Design Protocol Architecture",
+    "description": "Design the overall architecture of the protocol, including message formats, transport mechanisms, and error handling strategies.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Protocol Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 6453,
+    "project_id": "LowLatencyMessagingProtocol",
+    "title": "Implement Protocol Core",
+    "description": "Develop the core functionality of the protocol, including message serialization/deserialization, connection management, and message routing.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Protocol Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6454,
+    "project_id": "LowLatencyMessagingProtocol",
+    "title": "Implement Protocol Extensions",
+    "description": "Develop additional features and extensions for the protocol, such as security mechanisms, flow control, and quality of service guarantees.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Implement Protocol Core"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6455,
+    "project_id": "LowLatencyMessagingProtocol",
+    "title": "Develop Testing Framework",
+    "description": "Create a comprehensive testing framework for the protocol, including unit tests, integration tests, and performance benchmarks.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Protocol Core"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6456,
+    "project_id": "LowLatencyMessagingProtocol",
+    "title": "Conduct Security Audit",
+    "description": "Perform a thorough security audit of the protocol implementation, identifying and addressing potential vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Implement Protocol Extensions"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 6457,
+    "project_id": "LowLatencyMessagingProtocol",
+    "title": "Write Documentation",
+    "description": "Prepare comprehensive documentation for the protocol, including user guides, API references, and deployment instructions.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Implement Protocol Extensions"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6458,
+    "project_id": "LowLatencyMessagingProtocol",
+    "title": "Deploy and Monitor",
+    "description": "Set up the necessary infrastructure for deploying and monitoring the protocol in production environments.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Conduct Security Audit",
+      "Write Documentation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

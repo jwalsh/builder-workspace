@@ -1,0 +1,141 @@
+[
+  {
+    "id": 7910,
+    "project_id": "LinguaFusionPro",
+    "title": "Requirements Gathering",
+    "description": "Gather and document project requirements from clients, stakeholders, and domain experts.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7911,
+    "project_id": "LinguaFusionPro",
+    "title": "System Architecture Design",
+    "description": "Design the overall architecture of the translation system, including hardware and software components.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7912,
+    "project_id": "LinguaFusionPro",
+    "title": "Backend Development Task Decomposition",
+    "description": "Break down the backend development tasks into smaller subtasks.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7913,
+    "project_id": "LinguaFusionPro",
+    "title": "Frontend Development Task Decomposition",
+    "description": "Break down the frontend development tasks into smaller subtasks.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7914,
+    "project_id": "LinguaFusionPro",
+    "title": "Database Schema Design",
+    "description": "Design the database schema that will store translation data and system metadata.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7915,
+    "project_id": "LinguaFusionPro",
+    "title": "Backend Development Implementation",
+    "description": "Implement the backend system according to the decomposed tasks.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development Task Decomposition"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7916,
+    "project_id": "LinguaFusionPro",
+    "title": "Frontend Development Implementation",
+    "description": "Implement the frontend system according to the decomposed tasks.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 4,
+    "dependencies": [
+      "Frontend Development Task Decomposition"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7917,
+    "project_id": "LinguaFusionPro",
+    "title": "Integration Testing",
+    "description": "Test the integration of the backend and frontend systems.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development Implementation",
+      "Frontend Development Implementation"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 7918,
+    "project_id": "LinguaFusionPro",
+    "title": "System Deployment Planning",
+    "description": "Plan the deployment strategy for the translation system.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [
+      "Integration Testing"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7919,
+    "project_id": "LinguaFusionPro",
+    "title": "System Deployment",
+    "description": "Deploy the translation system according to the deployment plan.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [
+      "System Deployment Planning"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,147 @@
+[
+  {
+    "id": 2875,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, gather requirements from stakeholders, and create a detailed project plan.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2876,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components, data flow, integration points, and considerations for scalability, maintainability, and security.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2877,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Database Design",
+    "description": "Design the database schema and data models to support the application's requirements, including user profiles, goals, tasks, and progress tracking. Ensure data integrity, security, and performance considerations are addressed.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "User Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2878,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "User Interface Design",
+    "description": "Design the user interface and user experience for the platform, ensuring a seamless and intuitive experience for users. The design should align with the overall branding and visual identity of the platform, and incorporate best practices for accessibility, responsiveness, and usability across various devices and screen sizes.",
+    "status": "IN PROGRESS",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design",
+      "User Research and Persona Development"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2879,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Backend Development",
+    "description": "Implement the backend services, APIs, and business logic for the platform.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2880,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Frontend Development",
+    "description": "Implement the user interface and integrate with the backend services.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "User Interface Design",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2881,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Security and Compliance",
+    "description": "Ensure the platform adheres to security best practices and compliance requirements.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 2882,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and execute test plans for functional, integration, and performance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2883,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline, infrastructure, and monitoring for the platform.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2884,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Documentation and Training",
+    "description": "Create user guides, technical documentation, and training materials for the platform.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]
