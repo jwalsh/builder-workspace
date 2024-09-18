@@ -1,0 +1,128 @@
+#+TITLE: RFC: Secure Environment for Coordinator
+#+AUTHOR: AI Assistant
+#+DATE: [2024-03-19 Tue]
+
+* Introduction
+
+This RFC proposes options for creating a secure environment for the Coordinator, our AI-powered project management assistant. The goal is to ensure that Coordinator has access to all necessary services while maintaining security and flexibility across different deployment scenarios.
+
+* Current Setup
+
+The Coordinator is part of a project structure that includes:
+
+- PROJECTS.org: Main project definitions file
+- README.org: Project documentation
+- ai_pro_cat.py: AI-powered project categorization script
+- arxiv_cache.json: Cache for arXiv paper information
+- categories.csv: List of project categories
+- category_projects_for_test_training.csv: Data for training categorization models
+- project_similarity_clusters.png: Visualization of project similarities
+- pyproject.toml: Python project configuration
+
+* Deployment Options
+
+** Option 1: Local Development Environment
+
+*** Description
+Run Coordinator directly on the developer's machine, utilizing existing Ollama installation and local file system.
+
+*** Implementation
+#+BEGIN_SRC bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python coordinator.py
+#+END_SRC
+
+*** Pros
+- Simple setup
+- Direct access to local files and Ollama
+- Easy debugging
+
+*** Cons
+- Less isolated
+- Potential conflicts with other Python projects
+
+** Option 2: Docker Container
+
+*** Description
+Run Coordinator in a Docker container, with Ollama either in a separate container or accessed from the host.
+
+*** Implementation
+#+BEGIN_SRC yaml
+version: '3'
+services:
+  coordinator:
+    build: .
+    volumes:
+      - .:/app
+      - ./secrets.json:/app/secrets.json
+    environment:
+      - OLLAMA_API_BASE_URL=http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+#+END_SRC
+
+*** Pros
+- Isolated environment
+- Consistent across different machines
+- Easy to deploy
+
+*** Cons
+- Requires Docker knowledge
+- Potential performance overhead
+
+** Option 3: Cloud Deployment
+
+*** Description
+Deploy Coordinator on a cloud platform (e.g., AWS, Google Cloud, Azure) with appropriate security measures.
+
+*** Implementation
+- Use cloud-native services for secrets management (e.g., AWS Secrets Manager)
+- Set up VPC and security groups
+- Use managed Kubernetes for orchestration if needed
+
+*** Pros
+- Scalable
+- Managed services for security and monitoring
+- Suitable for production use
+
+*** Cons
+- More complex setup
+- Potential cost implications
+
+* Security Considerations
+
+** Secrets Management
+- Use environment variables or a secrets management service
+- Never commit secrets to version control
+
+** Access Control
+- Implement strong authentication for Coordinator API
+- Use principle of least privilege for all components
+
+** Data Protection
+- Encrypt data at rest and in transit
+- Regularly backup project data
+
+** Monitoring and Logging
+- Implement comprehensive logging
+- Set up alerts for unusual activity
+
+* Recommendations
+
+1. For development: Use Option 1 (Local Development Environment) for simplicity and ease of debugging.
+2. For testing and staging: Use Option 2 (Docker Container) to ensure consistency across environments.
+3. For production: Use Option 3 (Cloud Deployment) for scalability and managed security features.
+
+* Next Steps
+
+1. Choose the appropriate deployment option based on the current project phase.
+2. Implement the chosen option, ensuring Coordinator has access to all required services (Ollama, file system, etc.).
+3. Set up monitoring and logging for the chosen environment.
+4. Create a contrib guide for developers, explaining how to set up and use the Coordinator in different environments.
+5. Regularly review and update the security measures as the project evolves.
+
+* Conclusion
+
+By implementing a secure environment for Coordinator, we can ensure that our AI-powered project management assistant can function effectively while maintaining the security and integrity of our project data. The proposed options provide flexibility for different stages of development and deployment.

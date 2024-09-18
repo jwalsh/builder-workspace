@@ -1,0 +1,16 @@
+version: '3'
+services:
+  project_manager:
+    build: .
+    volumes:
+      - .:/app
+      - ./secrets.json:/app/secrets.json
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_API_BASE_URL=http://ollama:11434
+
+  ollama:
+    image: ollama/ollama
+    volumes:
+      - ./ollama_data:/root/.ollama
