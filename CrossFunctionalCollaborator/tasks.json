@@ -1,0 +1,160 @@
+[
+  {
+    "id": 1491,
+    "project_id": "CrossFunctionalCollaborator",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the requirements for the CrossFunctionalCollaborator platform, including the key features, user personas, and use cases.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1492,
+    "project_id": "CrossFunctionalCollaborator",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including the frontend, backend, database, and any necessary integrations or third-party services. Consider the following aspects:\n\n- Modular and scalable architecture to accommodate future growth and changes\n- Separation of concerns between frontend, backend, and database layers\n- Robust API design for communication between frontend and backend\n- Database schema design for efficient data storage and retrieval\n- Integration with third-party services for authentication, notifications, or other functionalities\n- Security considerations, such as data encryption, access controls, and input validation\n- Performance optimizations, caching strategies, and load balancing\n- Deployment and infrastructure requirements (e.g., containerization, cloud hosting)\n- Monitoring, logging, and error handling mechanisms",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 1493,
+    "project_id": "CrossFunctionalCollaborator",
+    "title": "Develop Frontend",
+    "description": "Implement the user interface and frontend components for the CrossFunctionalCollaborator platform.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1494,
+    "project_id": "CrossFunctionalCollaborator",
+    "title": "Develop Backend",
+    "description": "Implement the backend logic, APIs, and services for the CrossFunctionalCollaborator platform.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1495,
+    "project_id": "CrossFunctionalCollaborator",
+    "title": "Set up Database",
+    "description": "Design and implement the database schema and data storage solution for the CrossFunctionalCollaborator platform.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1496,
+    "project_id": "CrossFunctionalCollaborator",
+    "title": "Implement Collaboration and Team Formation Logic",
+    "description": "Develop the core algorithms and logic for identifying collaboration opportunities and facilitating team formation.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Develop Backend"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1497,
+    "project_id": "CrossFunctionalCollaborator",
+    "title": "Set up CI/CD Pipeline",
+    "description": "Establish a continuous integration and continuous deployment (CI/CD) pipeline for automated testing, building, and deploying the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Develop Frontend",
+      "Develop Backend",
+      "Set up Database"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1498,
+    "project_id": "CrossFunctionalCollaborator",
+    "title": "Implement Authentication and Authorization",
+    "description": "Develop user authentication and authorization mechanisms to secure the CrossFunctionalCollaborator platform.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Develop Backend"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1499,
+    "project_id": "CrossFunctionalCollaborator",
+    "title": "Write Unit Tests",
+    "description": "Create comprehensive unit tests for the frontend, backend, and core logic components of the CrossFunctionalCollaborator platform.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Develop Frontend",
+      "Develop Backend",
+      "Implement Collaboration and Team Formation Logic"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1500,
+    "project_id": "CrossFunctionalCollaborator",
+    "title": "Conduct Integration Testing",
+    "description": "Perform end-to-end integration testing to ensure the seamless functioning of the CrossFunctionalCollaborator platform.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Write Unit Tests",
+      "Set up CI/CD Pipeline"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1501,
+    "project_id": "CrossFunctionalCollaborator",
+    "title": "Write Documentation",
+    "description": "Create comprehensive documentation for the CrossFunctionalCollaborator platform, including user guides, developer documentation, and deployment instructions.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

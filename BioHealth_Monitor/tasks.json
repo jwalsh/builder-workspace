@@ -1,0 +1,131 @@
+[
+  {
+    "id": 5938,
+    "project_id": "BioHealth_Monitor",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, goals, and requirements through stakeholder interviews and research.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5939,
+    "project_id": "BioHealth_Monitor",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including hardware, software, and communication components. The architecture should consider the following key aspects:\n\n- Implantable device hardware specifications and power requirements\n- Secure and reliable communication between the implant and external systems\n- Cloud-based data storage and processing infrastructure\n- Machine learning models for health prediction and treatment recommendations\n- User interfaces for monitoring and control (web, mobile)\n- Integration with healthcare providers and emergency services\n- Scalability to support a large number of users\n- Robust security measures to protect sensitive health data\n- Fault tolerance and failover mechanisms for critical components\n- Regulatory compliance and certifications for medical devices\n- Data privacy and consent management mechanisms\n- Over-the-air (OTA) update capabilities for the implantable device",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 5940,
+    "project_id": "BioHealth_Monitor",
+    "title": "Hardware Development",
+    "description": "Design and develop the implantable device hardware, including sensors, processors, and power management.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5941,
+    "project_id": "BioHealth_Monitor",
+    "title": "Software Development",
+    "description": "Develop the software components for data collection, processing, analysis, and treatment administration.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5942,
+    "project_id": "BioHealth_Monitor",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database for storing and retrieving patient data and health records.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5943,
+    "project_id": "BioHealth_Monitor",
+    "title": "Security and Privacy Measures",
+    "description": "Implement security and privacy measures to protect sensitive patient data and ensure compliance with regulations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 5944,
+    "project_id": "BioHealth_Monitor",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and perform thorough testing of all system components and integrations.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Hardware Development",
+      "Software Development",
+      "Database Design and Implementation",
+      "Security and Privacy Measures"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5945,
+    "project_id": "BioHealth_Monitor",
+    "title": "Deployment and Maintenance",
+    "description": "Plan and implement the deployment strategy, including infrastructure setup, monitoring, maintenance procedures, disaster recovery mechanisms, and update/upgrade processes.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Testing and Quality Assurance",
+      "Security and Compliance"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 5946,
+    "project_id": "BioHealth_Monitor",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation, user guides, and training materials for healthcare professionals and patients.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "Software Development",
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

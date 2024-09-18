@@ -1,0 +1,143 @@
+[
+  {
+    "id": 955,
+    "project_id": "BugHuntingChallenge",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the detailed requirements for the BugHuntingChallenge platform, including features, user roles, gamification elements, security considerations, and non-functional requirements (performance, scalability, maintainability, etc.). Ensure that the requirements cover both functional and non-functional aspects, and involve relevant stakeholders (developers, QA, security, etc.) in the process.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 956,
+    "project_id": "BugHuntingChallenge",
+    "title": "Design System Architecture",
+    "description": "Develop the overall system architecture, including the frontend, backend, database, and infrastructure components, as well as their interactions and communication protocols. Ensure the architecture follows best practices for maintainability, modularity, scalability, and security. Consider edge cases, error handling, performance optimizations, and gamification aspects. The architecture should support features like user authentication, code submission, bug reporting, leaderboards, and challenge management.",
+    "status": "ASSIGNED",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 957,
+    "project_id": "BugHuntingChallenge",
+    "title": "Design User Interface and Experience",
+    "description": "Create wireframes, mockups, and prototypes for the user interface, focusing on usability, accessibility, gamification elements, responsive design for various devices, and integration with the backend functionality.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 958,
+    "project_id": "BugHuntingChallenge",
+    "title": "Implement Backend Services",
+    "description": "Develop the backend services, including user authentication, challenge management, scoring system, and integration with external code repositories.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 959,
+    "project_id": "BugHuntingChallenge",
+    "title": "Implement Frontend User Interface",
+    "description": "Develop the frontend user interface based on the approved designs, integrating with the backend services and implementing gamification elements.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design User Interface and Experience",
+      "Implement Backend Services"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 960,
+    "project_id": "BugHuntingChallenge",
+    "title": "Set up Database and Data Models",
+    "description": "Design and implement the database schema and data models required for storing user data, challenge data, and other relevant information.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 961,
+    "project_id": "BugHuntingChallenge",
+    "title": "Implement Security Measures",
+    "description": "Implement security measures such as user authentication, data encryption, input validation, and protection against common web vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Implement Backend Services",
+      "Implement Frontend User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 962,
+    "project_id": "BugHuntingChallenge",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Configure a CI/CD pipeline for automated building, testing, and deployment of the application to various environments.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Implement Backend Services",
+      "Implement Frontend User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 963,
+    "project_id": "BugHuntingChallenge",
+    "title": "Create Test Plans and Test Cases",
+    "description": "Develop comprehensive test plans and test cases for all aspects of the application, including functional, integration, and performance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 964,
+    "project_id": "BugHuntingChallenge",
+    "title": "Write User Documentation and Tutorials",
+    "description": "Create user documentation, tutorials, and help resources to assist users in understanding and effectively using the BugHuntingChallenge platform.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Implement Frontend User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

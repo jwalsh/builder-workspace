@@ -1,0 +1,146 @@
+[
+  {
+    "id": 2701,
+    "project_id": "InteractiveKnowledgeExplorer",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, goals, and requirements. Gather input from stakeholders and subject matter experts to understand the needs and constraints for the knowledge graph visualization tool.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2702,
+    "project_id": "InteractiveKnowledgeExplorer",
+    "title": "Architecture Design",
+    "description": "Design the overall system architecture, including the data model, user interface, and backend components. Define the technology stack and integration points.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2703,
+    "project_id": "InteractiveKnowledgeExplorer",
+    "title": "Knowledge Graph Data Modeling",
+    "description": "Design the data model for representing the knowledge graph, including entities, relationships, and associated metadata. The data model should support efficient storage, retrieval, and querying of the knowledge graph data. Consider factors such as scalability, performance, and data integrity.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2704,
+    "project_id": "InteractiveKnowledgeExplorer",
+    "title": "User Interface Design",
+    "description": "Design the user interface for the knowledge graph visualization tool, including layouts, navigation, and interaction patterns.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2705,
+    "project_id": "InteractiveKnowledgeExplorer",
+    "title": "Backend Development",
+    "description": "Implement the backend components, including the knowledge graph data store, query processing, and API endpoints.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Architecture Design",
+      "Knowledge Graph Data Modeling"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2706,
+    "project_id": "InteractiveKnowledgeExplorer",
+    "title": "Frontend Development",
+    "description": "Implement the user interface for the knowledge graph visualization tool, including rendering, interaction, and integration with the backend.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Architecture Design",
+      "User Interface Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2707,
+    "project_id": "InteractiveKnowledgeExplorer",
+    "title": "Testing and Quality Assurance",
+    "description": "Plan and execute testing strategies, including unit tests, integration tests, and user acceptance testing. Ensure the application meets quality standards and requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2708,
+    "project_id": "InteractiveKnowledgeExplorer",
+    "title": "Security and Compliance",
+    "description": "Assess and mitigate security risks, implement access controls, and ensure compliance with relevant regulations and standards.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 2709,
+    "project_id": "InteractiveKnowledgeExplorer",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure, automate the build and release processes, and configure monitoring and logging.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2710,
+    "project_id": "InteractiveKnowledgeExplorer",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation for the application, including user guides, technical documentation, and support resources.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Architecture Design",
+      "User Interface Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

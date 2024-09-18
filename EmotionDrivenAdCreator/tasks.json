@@ -1,0 +1,217 @@
+[
+  {
+    "id": 2025,
+    "project_id": "EmotionDrivenAdCreator",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the project requirements, including the target audience, desired emotional responses, media platforms to analyze, and key features.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2026,
+    "project_id": "EmotionDrivenAdCreator",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including components for sentiment analysis, cultural trend analysis, ad creation, and integration with media platforms. The architecture should consider scalability, fault tolerance, and security aspects.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2027,
+    "project_id": "EmotionDrivenAdCreator",
+    "title": "Develop Sentiment Analysis Module",
+    "description": "Implement algorithms and models for analyzing audience sentiment across various media platforms.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2028,
+    "project_id": "EmotionDrivenAdCreator",
+    "title": "Develop Cultural Trend Analysis Module",
+    "description": "Implement algorithms and models for analyzing cultural trends and their potential emotional impact.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2029,
+    "project_id": "EmotionDrivenAdCreator",
+    "title": "Develop Ad Creation Module",
+    "description": "Implement algorithms and models for generating emotionally resonant advertisements based on sentiment and trend analysis.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2030,
+    "project_id": "EmotionDrivenAdCreator",
+    "title": "Develop Media Platform Integration",
+    "description": "Implement interfaces and APIs for integrating with various media platforms for data collection and ad delivery.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2031,
+    "project_id": "EmotionDrivenAdCreator",
+    "title": "Design User Interface",
+    "description": "Design the user interface for the ad creation tool, including input and output interfaces, data visualization components, and user experience flow.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Analyze Target Audience and Media Platforms"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2032,
+    "project_id": "EmotionDrivenAdCreator",
+    "title": "Implement User Interface",
+    "description": "Develop the user interface based on the approved design, ensuring a seamless and intuitive experience for users.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2033,
+    "project_id": "EmotionDrivenAdCreator",
+    "title": "Set up Development Environment",
+    "description": "Configure the development environment, including version control, continuous integration, and deployment pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2034,
+    "project_id": "EmotionDrivenAdCreator",
+    "title": "Implement Data Storage and Management",
+    "description": "Design and implement a scalable and efficient data storage and management system for storing and retrieving sentiment analysis data, trend data, and generated advertisements. The system should support high throughput and low latency data ingestion, as well as efficient querying and retrieval. It should also provide data backup, recovery, and archiving mechanisms to ensure data integrity and availability.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2035,
+    "project_id": "EmotionDrivenAdCreator",
+    "title": "Develop Testing Strategy",
+    "description": "Define a comprehensive testing strategy that covers all aspects of the system, including unit tests for individual components, integration tests for component interactions, end-to-end tests for user scenarios, performance tests for load and stress testing, security tests for vulnerability assessment, and usability tests for user experience evaluation. Ensure that the testing strategy aligns with industry best practices and adheres to relevant standards and guidelines.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2036,
+    "project_id": "EmotionDrivenAdCreator",
+    "title": "Implement Testing Suite",
+    "description": "Develop and implement the testing suite based on the defined testing strategy.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop Testing Strategy"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2037,
+    "project_id": "EmotionDrivenAdCreator",
+    "title": "Conduct Security Audits",
+    "description": "Perform security audits to identify and mitigate potential vulnerabilities in the system, ensuring data privacy and system integrity.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 2038,
+    "project_id": "EmotionDrivenAdCreator",
+    "title": "Write Documentation",
+    "description": "Develop comprehensive documentation, including user guides, technical documentation, and API references.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2039,
+    "project_id": "EmotionDrivenAdCreator",
+    "title": "Deploy and Monitor System",
+    "description": "Deploy the system to production environments, set up monitoring and logging systems, and establish processes for maintenance and updates.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Implement User Interface",
+      "Develop Sentiment Analysis Module",
+      "Develop Cultural Trend Analysis Module",
+      "Develop Ad Creation Module",
+      "Develop Media Platform Integration",
+      "Implement Data Storage and Management",
+      "Implement Testing Suite",
+      "Write Documentation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

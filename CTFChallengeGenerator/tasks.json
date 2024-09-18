@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1007,
+    "project_id": "CTFChallengeGenerator",
+    "title": "Define Project Requirements",
+    "description": "Gather and document the detailed requirements for the CTFChallengeGenerator system, including the types of challenges to be generated (e.g., web application vulnerabilities, network attacks, cryptography, forensics), difficulty levels (e.g., beginner, intermediate, advanced), scoring mechanisms (e.g., points, time-based, partial scoring), and integration with existing cybersecurity training platforms (e.g., CTFd, HackTheBox, TryHackMe). Consider requirements for challenge generation, deployment, submission, and evaluation processes, as well as user roles and permissions, reporting, and analytics.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 1008,
+    "project_id": "CTFChallengeGenerator",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the CTFChallengeGenerator system, including the main components, data flows, integration points with other systems, deployment strategies, scalability considerations, and security measures. The architecture should follow best practices for maintainability, modularity, and extensibility.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Requirements",
+      "Gather Security Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 1009,
+    "project_id": "CTFChallengeGenerator",
+    "title": "Develop Challenge Generation Engine",
+    "description": "Implement the core engine responsible for generating unique and scalable Capture The Flag challenges based on the defined requirements and difficulty levels.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1010,
+    "project_id": "CTFChallengeGenerator",
+    "title": "Implement User Interface",
+    "description": "Develop the user interface for the CTFChallengeGenerator system, allowing administrators to configure challenge parameters, difficulty levels, and scoring mechanisms.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1011,
+    "project_id": "CTFChallengeGenerator",
+    "title": "Set up Database and Data Storage",
+    "description": "Design and implement the database schema and data storage mechanisms for storing generated challenges, user data, and scoring information.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1012,
+    "project_id": "CTFChallengeGenerator",
+    "title": "Implement Scoring and Leaderboard",
+    "description": "Develop the scoring mechanisms and leaderboard functionality for tracking and displaying user progress and performance in the CTF challenges.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Challenge Generation Engine",
+      "Set up Database and Data Storage"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1013,
+    "project_id": "CTFChallengeGenerator",
+    "title": "Integrate with Cybersecurity Training Platforms",
+    "description": "Implement integration mechanisms to allow the CTFChallengeGenerator system to be seamlessly integrated with existing cybersecurity training platforms and learning management systems.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Challenge Generation Engine",
+      "Implement User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1014,
+    "project_id": "CTFChallengeGenerator",
+    "title": "Implement Security Measures",
+    "description": "Ensure the CTFChallengeGenerator system adheres to best security practices, including secure data storage, user authentication, and protection against potential vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Develop Challenge Generation Engine",
+      "Implement User Interface",
+      "Set up Database and Data Storage"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1015,
+    "project_id": "CTFChallengeGenerator",
+    "title": "Write Documentation",
+    "description": "Create comprehensive documentation for the CTFChallengeGenerator system, including installation guides, user manuals, and developer documentation.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Challenge Generation Engine",
+      "Implement User Interface",
+      "Integrate with Cybersecurity Training Platforms"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1016,
+    "project_id": "CTFChallengeGenerator",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Implement a continuous integration and deployment pipeline for the CTFChallengeGenerator system, ensuring automated testing, building, and deployment to various environments.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Challenge Generation Engine",
+      "Implement User Interface",
+      "Set up Database and Data Storage"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1017,
+    "project_id": "CTFChallengeGenerator",
+    "title": "Conduct Testing and Quality Assurance",
+    "description": "Perform comprehensive testing and quality assurance activities, including unit testing, integration testing, and user acceptance testing, to ensure the CTFChallengeGenerator system meets the defined requirements and functions as expected.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 1,
+    "dependencies": [
+      "Develop Challenge Generation Engine",
+      "Implement User Interface",
+      "Implement Scoring and Leaderboard",
+      "Integrate with Cybersecurity Training Platforms",
+      "Implement Security Measures"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

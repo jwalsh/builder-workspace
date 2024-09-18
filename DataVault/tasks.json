@@ -1,0 +1,144 @@
+[
+  {
+    "id": 1760,
+    "project_id": "DataVault",
+    "title": "Gather Requirements",
+    "description": "Collect and document all requirements for the DataVault project, including security, data storage, sharing, access control mechanisms, and compliance with relevant regulations (e.g., GDPR, CCPA).",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1761,
+    "project_id": "DataVault",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including components, data flow, integration points, security considerations, and scalability strategies.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Gather Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 1762,
+    "project_id": "DataVault",
+    "title": "Define Data Models",
+    "description": "Design and document the data models for storing and representing advertiser data, including user accounts, permissions, data types, relationships between entities, and data security considerations.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Gather Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 1763,
+    "project_id": "DataVault",
+    "title": "Implement Security Mechanisms",
+    "description": "Develop and implement security mechanisms for data storage, access control, and sharing.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Design System Architecture",
+      "Define Data Models"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1764,
+    "project_id": "DataVault",
+    "title": "Build Data Storage and Management Components",
+    "description": "Develop components for storing, managing, and querying advertiser data based on the defined data models.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Define Data Models"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1765,
+    "project_id": "DataVault",
+    "title": "Develop User Interface",
+    "description": "Create the user interface for advertisers to interact with the DataVault, including data upload, sharing, and access control.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1766,
+    "project_id": "DataVault",
+    "title": "Implement Cross-Platform Integration",
+    "description": "Develop mechanisms for integrating the DataVault with various advertising platforms for data sharing and insights.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Build Data Storage and Management Components"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1767,
+    "project_id": "DataVault",
+    "title": "Set Up Deployment and Monitoring",
+    "description": "Configure deployment pipelines, monitoring, and logging for the DataVault application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1768,
+    "project_id": "DataVault",
+    "title": "Write Documentation",
+    "description": "Create comprehensive documentation for the DataVault, including user guides, technical documentation, and API references.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Gather Requirements",
+      "Design System Architecture",
+      "Define Data Models"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1769,
+    "project_id": "DataVault",
+    "title": "Test and Quality Assurance",
+    "description": "Plan and execute comprehensive testing, including unit tests, integration tests, and end-to-end tests, to ensure the quality and reliability of the DataVault.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Implement Security Mechanisms",
+      "Build Data Storage and Management Components",
+      "Develop User Interface",
+      "Implement Cross-Platform Integration"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

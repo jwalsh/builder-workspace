@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1730,
+    "project_id": "DataPageSeeker",
+    "title": "Define Project Requirements",
+    "description": "Gather and document the detailed requirements for the DataPageSeeker project, including the following key aspects:\n\n1. Data Sources: Identify the specific purpose-built databases and their schemas that will be used as data sources for the application.\n\n2. Search Functionality: Define the search criteria and filters that users will be able to apply to the data, such as keyword search, date range, and any other relevant filters.\n\n3. Pagination: Specify the requirements for paginating the search results, including the number of items per page, navigation controls, and any other relevant pagination features.\n\n4. Data Transformation: Outline the necessary data transformations or aggregations that need to be performed on the data before presenting it to the user.\n\n5. User Interface: Describe the desired user interface for the searchable, paginated list, including the layout, design, and any specific UI/UX requirements.\n\n6. Performance and Scalability: Identify any specific performance and scalability requirements, such as expected data volumes, concurrent user loads, and any other relevant factors.\n\n7. Security and Access Control: Define any security and access control requirements, such as user authentication, data encryption, and role-based access controls.\n\n8. Integrations: Identify any external systems or APIs that need to be integrated with the application.\n\n9. Reporting and Analytics: Specify any reporting or analytics requirements, such as generating reports or visualizations based on the search results.\n\n10. Testing and Quality Assurance: Outline the testing and quality assurance requirements, including unit testing, integration testing, and any other relevant testing strategies.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 1731,
+    "project_id": "DataPageSeeker",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including the data flow, components, their interactions, and the technologies to be used. Consider the following aspects: data ingestion, storage, processing, querying, caching, search indexing, pagination, and user interface.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Requirements",
+      "Identify Data Sources"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1732,
+    "project_id": "DataPageSeeker",
+    "title": "Set up Development Environment",
+    "description": "Set up the development environment, including the necessary tools, frameworks, and libraries.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1733,
+    "project_id": "DataPageSeeker",
+    "title": "Implement Backend",
+    "description": "Implement the backend components, including the database connections, data transformations, and API endpoints.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Set up Development Environment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1734,
+    "project_id": "DataPageSeeker",
+    "title": "Implement Frontend",
+    "description": "Implement the frontend components, including the user interface, search functionality, and pagination.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Set up Development Environment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1735,
+    "project_id": "DataPageSeeker",
+    "title": "Write Documentation",
+    "description": "Write comprehensive documentation for the project, including installation instructions, API documentation, and user guides.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Implement Backend",
+      "Implement Frontend"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1736,
+    "project_id": "DataPageSeeker",
+    "title": "Perform Testing",
+    "description": "Develop and execute test cases to ensure the application meets the requirements and functions as expected.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Backend",
+      "Implement Frontend"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1737,
+    "project_id": "DataPageSeeker",
+    "title": "Conduct Security Audit",
+    "description": "Perform a security audit to identify and mitigate potential vulnerabilities in the application.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Implement Backend",
+      "Implement Frontend"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 1738,
+    "project_id": "DataPageSeeker",
+    "title": "Deploy to Production",
+    "description": "Deploy the application to the production environment, including any necessary configuration and setup.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Perform Testing",
+      "Conduct Security Audit",
+      "Write Documentation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

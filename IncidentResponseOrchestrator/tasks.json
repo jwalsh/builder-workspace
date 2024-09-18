@@ -1,0 +1,152 @@
+[
+  {
+    "id": 2598,
+    "project_id": "IncidentResponseOrchestrator",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the requirements for the IncidentResponseOrchestrator platform, including the types of incidents it should handle, the tools and teams it should integrate with, the desired automation and orchestration workflows, and any specific security, compliance, or regulatory requirements.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2599,
+    "project_id": "IncidentResponseOrchestrator",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the IncidentResponseOrchestrator platform, including the components, data flow, integration points with external tools and systems, communication protocols, security considerations, and scalability and performance requirements.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Identify External Tools and Systems"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2600,
+    "project_id": "IncidentResponseOrchestrator",
+    "title": "Develop Data Models and Database Schema",
+    "description": "Design and implement the data models and database schema required to store incident data, workflow configurations, and other relevant information.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2601,
+    "project_id": "IncidentResponseOrchestrator",
+    "title": "Implement Core Incident Management Functionality",
+    "description": "Develop the core functionality for incident management, including incident creation, tracking, and resolution.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Develop Data Models and Database Schema"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2602,
+    "project_id": "IncidentResponseOrchestrator",
+    "title": "Develop Automation and Orchestration Workflows",
+    "description": "Implement the automation and orchestration workflows for incident response, including integration with external tools and systems.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Implement Core Incident Management Functionality"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2603,
+    "project_id": "IncidentResponseOrchestrator",
+    "title": "Build User Interface and Dashboard",
+    "description": "Design and develop the user interface and dashboard for the IncidentResponseOrchestrator platform, allowing users to view and manage incidents, configure workflows, and monitor system status.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture",
+      "Implement Core Incident Management Functionality"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2604,
+    "project_id": "IncidentResponseOrchestrator",
+    "title": "Implement Security and Access Control",
+    "description": "Develop and integrate security features and access control mechanisms to ensure the platform is secure and accessible only to authorized users and teams.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2605,
+    "project_id": "IncidentResponseOrchestrator",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a continuous integration and deployment pipeline for the IncidentResponseOrchestrator platform, including automated testing, build, and deployment processes.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Implement Core Incident Management Functionality",
+      "Develop Automation and Orchestration Workflows",
+      "Build User Interface and Dashboard",
+      "Implement Security and Access Control"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2606,
+    "project_id": "IncidentResponseOrchestrator",
+    "title": "Conduct Comprehensive Testing",
+    "description": "Plan and execute comprehensive testing of the IncidentResponseOrchestrator platform, including unit tests, integration tests, and end-to-end tests, to ensure its functionality and reliability.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Core Incident Management Functionality",
+      "Develop Automation and Orchestration Workflows",
+      "Build User Interface and Dashboard",
+      "Implement Security and Access Control"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2607,
+    "project_id": "IncidentResponseOrchestrator",
+    "title": "Prepare Documentation and User Guides",
+    "description": "Create comprehensive documentation and user guides for the IncidentResponseOrchestrator platform, covering installation, configuration, usage, and troubleshooting.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Implement Core Incident Management Functionality",
+      "Develop Automation and Orchestration Workflows",
+      "Build User Interface and Dashboard"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

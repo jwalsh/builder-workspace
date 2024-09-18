@@ -1,0 +1,133 @@
+[
+  {
+    "id": 7078,
+    "project_id": "CorporateSkillQuest",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the detailed requirements for the CorporateSkillQuest platform, including features, user roles, gamification elements, integration with existing systems, data models, security considerations, scalability requirements, and performance expectations.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 7079,
+    "project_id": "CorporateSkillQuest",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the CorporateSkillQuest platform, including the frontend, backend, database, and any necessary integrations. Ensure that the architecture follows best practices for scalability, maintainability, and performance. Consider the use of microservices, event-driven architecture, and serverless functions where appropriate. Outline the technology stack, including programming languages, frameworks, and libraries. Define the data models and database schemas. Identify potential third-party integrations (e.g., authentication, gamification, analytics). Address security concerns, such as data encryption, access control, and compliance with relevant regulations (e.g., GDPR, CCPA). Provide a high-level overview of the deployment strategy and infrastructure requirements.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 7080,
+    "project_id": "CorporateSkillQuest",
+    "title": "Develop Frontend",
+    "description": "Implement the user interface and gamification elements for the CorporateSkillQuest platform.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7081,
+    "project_id": "CorporateSkillQuest",
+    "title": "Develop Backend",
+    "description": "Implement the server-side logic, APIs, and integrations for the CorporateSkillQuest platform.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7082,
+    "project_id": "CorporateSkillQuest",
+    "title": "Set up Database",
+    "description": "Design and implement the database schema for storing user data, progress, and other relevant information.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7083,
+    "project_id": "CorporateSkillQuest",
+    "title": "Implement Security Measures",
+    "description": "Ensure the platform adheres to security best practices and implement necessary measures to protect user data and prevent unauthorized access.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Develop Frontend",
+      "Develop Backend",
+      "Set up Database"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 7084,
+    "project_id": "CorporateSkillQuest",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a CI/CD pipeline for automated testing, building, and deploying the CorporateSkillQuest platform.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Develop Frontend",
+      "Develop Backend"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7085,
+    "project_id": "CorporateSkillQuest",
+    "title": "Conduct Testing and Quality Assurance",
+    "description": "Perform comprehensive testing, including unit tests, integration tests, and user acceptance testing, to ensure the platform meets the defined requirements and functions as expected.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Develop Frontend",
+      "Develop Backend",
+      "Set up Database"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7086,
+    "project_id": "CorporateSkillQuest",
+    "title": "Create Documentation",
+    "description": "Develop comprehensive documentation for the CorporateSkillQuest platform, including user guides, technical documentation, and maintenance procedures.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Develop Frontend",
+      "Develop Backend",
+      "Set up Database"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

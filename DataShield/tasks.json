@@ -1,0 +1,144 @@
+[
+  {
+    "id": 1739,
+    "project_id": "DataShield",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document detailed requirements for the DataShield project, including data types, security policies, user roles, integration points with the data warehouse and object storage, as well as non-functional requirements such as performance, scalability, and availability.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 1740,
+    "project_id": "DataShield",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including components for data encryption/decryption, access control, integration with the data warehouse and object storage, as well as considerations for scalability, performance, and security best practices.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 1741,
+    "project_id": "DataShield",
+    "title": "Implement Data Encryption and Decryption",
+    "description": "Develop the core functionality for encrypting and decrypting sensitive data based on the defined security policies and user roles.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1742,
+    "project_id": "DataShield",
+    "title": "Implement Access Control and User Management",
+    "description": "Develop the access control and user management components, including integration with the data warehouse for user roles and permissions.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1743,
+    "project_id": "DataShield",
+    "title": "Integrate with Object Storage",
+    "description": "Implement the integration with the object storage system to retrieve and store encrypted data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1744,
+    "project_id": "DataShield",
+    "title": "Develop User Interface",
+    "description": "Design and implement the user interface for displaying clear text data based on user permissions and roles.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1745,
+    "project_id": "DataShield",
+    "title": "Set up Testing and Deployment Infrastructure",
+    "description": "Configure the testing and deployment environments, including continuous integration and delivery pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1746,
+    "project_id": "DataShield",
+    "title": "Conduct Security Audits",
+    "description": "Perform regular security audits and penetration testing to identify and mitigate potential vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Implement Data Encryption and Decryption",
+      "Implement Access Control and User Management"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 1747,
+    "project_id": "DataShield",
+    "title": "Write Documentation",
+    "description": "Develop comprehensive documentation for the DataShield system, including user guides, technical documentation, and deployment instructions.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1748,
+    "project_id": "DataShield",
+    "title": "Perform Quality Assurance Testing",
+    "description": "Conduct thorough quality assurance testing, including functional, integration, and performance testing, to ensure the system meets the defined requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Implement Data Encryption and Decryption",
+      "Implement Access Control and User Management",
+      "Integrate with Object Storage",
+      "Develop User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

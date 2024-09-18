@@ -1,0 +1,135 @@
+[
+  {
+    "id": 593,
+    "project_id": "AlgorithmicThinkingTutor",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements. Conduct research on algorithmic thinking concepts and existing solutions. Gather input from subject matter experts and potential users.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 594,
+    "project_id": "AlgorithmicThinkingTutor",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including the AI engine, user interface, data storage components, and integration points. Define the technology stack, considering scalability, maintainability, performance, and security. Address edge cases, error handling, accessibility, and user experience. Provide a detailed architecture diagram and documentation.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 595,
+    "project_id": "AlgorithmicThinkingTutor",
+    "title": "AI Engine Development",
+    "description": "Develop the AI engine responsible for guiding users through the algorithmic thinking process. Implement algorithms for problem analysis, solution design, and feedback generation.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 596,
+    "project_id": "AlgorithmicThinkingTutor",
+    "title": "User Interface Design and Development",
+    "description": "Design and develop the user interface for the tutor application. Ensure a user-friendly and intuitive experience for presenting problems, receiving user input, and displaying feedback.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 597,
+    "project_id": "AlgorithmicThinkingTutor",
+    "title": "Data Storage and Management",
+    "description": "Design and implement a secure, scalable, and high-performance data storage solution for storing user data, problem sets, and algorithmic thinking resources. Ensure data integrity, security, and efficient retrieval. Consider using a combination of relational and NoSQL databases to handle structured and unstructured data respectively. Implement proper data access controls, encryption, and backup/recovery mechanisms. Design the data models and schemas to support efficient querying and data retrieval for the application's use cases. Additionally, implement caching mechanisms for frequently accessed data to improve performance. Ensure data storage and management solutions align with the overall system architecture and adhere to best practices for maintainability, modularity, and scalability.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 598,
+    "project_id": "AlgorithmicThinkingTutor",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop a comprehensive testing strategy, including unit tests, integration tests, and user acceptance tests. Ensure the tutor application meets the defined requirements and provides accurate guidance.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "AI Engine Development",
+      "User Interface Design and Development",
+      "Data Storage and Management"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 599,
+    "project_id": "AlgorithmicThinkingTutor",
+    "title": "Security and Compliance",
+    "description": "Implement security measures to protect user data and ensure compliance with relevant regulations (e.g., GDPR, FERPA). Conduct security audits and vulnerability assessments.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Storage and Management"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 600,
+    "project_id": "AlgorithmicThinkingTutor",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure and automate the deployment process. Implement monitoring, logging, and scalability solutions for the tutor application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "AI Engine Development",
+      "User Interface Design and Development",
+      "Data Storage and Management",
+      "Testing and Quality Assurance",
+      "Security and Compliance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 601,
+    "project_id": "AlgorithmicThinkingTutor",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation for the tutor application, including user guides, developer documentation, and troubleshooting resources. Establish a user support system for addressing inquiries and issues.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "AI Engine Development",
+      "User Interface Design and Development",
+      "Data Storage and Management"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

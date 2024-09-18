@@ -1,0 +1,144 @@
+[
+  {
+    "id": 2115,
+    "project_id": "EndpointCentralizer",
+    "title": "Gather Requirements",
+    "description": "Collect and document requirements for the EndpointCentralizer project, including the specific needs for centralizing endpoint access, enabling on-premises to cloud access, security considerations, and any other relevant requirements.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2116,
+    "project_id": "EndpointCentralizer",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture for the EndpointCentralizer, including components, communication protocols, integration points with existing on-premises and cloud systems, data flow, security considerations (authentication, authorization, encryption), and scalability/performance requirements (load balancing, caching, asynchronous processing).",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Gather Requirements",
+      "Analyze Existing Systems"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 2117,
+    "project_id": "EndpointCentralizer",
+    "title": "Implement Backend Services",
+    "description": "Develop and implement the backend services required for centralized endpoint management, authentication, and communication with cloud services.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2118,
+    "project_id": "EndpointCentralizer",
+    "title": "Develop Frontend Interface",
+    "description": "Create the frontend user interface for administrators to manage and monitor endpoint access and connections.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2119,
+    "project_id": "EndpointCentralizer",
+    "title": "Implement Security Measures",
+    "description": "Implement security measures such as authentication, authorization, encryption, and auditing to ensure secure access and communication.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2120,
+    "project_id": "EndpointCentralizer",
+    "title": "Set up Infrastructure",
+    "description": "Provision and configure the necessary infrastructure, including servers, databases, and networking components, for hosting the EndpointCentralizer solution.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2121,
+    "project_id": "EndpointCentralizer",
+    "title": "Integrate with Existing Systems",
+    "description": "Integrate the EndpointCentralizer with existing on-premises systems and cloud services to enable seamless access and communication.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Implement Backend Services"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2122,
+    "project_id": "EndpointCentralizer",
+    "title": "Test and Quality Assurance",
+    "description": "Perform comprehensive testing, including unit tests, integration tests, and end-to-end tests, to ensure the EndpointCentralizer meets the requirements and functions as expected.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Backend Services",
+      "Develop Frontend Interface",
+      "Implement Security Measures",
+      "Integrate with Existing Systems"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2123,
+    "project_id": "EndpointCentralizer",
+    "title": "Deploy and Monitor",
+    "description": "Deploy the EndpointCentralizer solution to the production environment, and set up monitoring and logging mechanisms to ensure its proper functioning and performance.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Test and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2124,
+    "project_id": "EndpointCentralizer",
+    "title": "Documentation and Training",
+    "description": "Create comprehensive documentation, including user guides, administration manuals, and technical documentation, and provide training to relevant stakeholders.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Test and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

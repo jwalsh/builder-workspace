@@ -1,0 +1,144 @@
+[
+  {
+    "id": 447,
+    "project_id": "APIDesignWorkshop",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the requirements for the APIDesignWorkshop platform, including the target audience, features, desired outcomes, and any relevant constraints or assumptions. Conduct stakeholder interviews, market research, and competitive analysis to ensure a comprehensive understanding of the project's goals and objectives. Identify the key stakeholders, such as developers, API consumers, and business stakeholders, and gather their input. Define the scope of the project, including the types of APIs (e.g., REST, GraphQL, WebSockets) and the industries or domains it will target. Outline the desired features and functionalities, such as API design tools, documentation generators, testing frameworks, and deployment options. Consider the platform's architecture, including the front-end, back-end, and database components. Identify any potential integration points with existing systems or third-party services. Establish the project's success criteria and key performance indicators (KPIs).",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 448,
+    "project_id": "APIDesignWorkshop",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including the frontend, backend, database, and any necessary integrations or third-party services. The architecture should prioritize maintainability, modularity, scalability, and consider edge cases, error handling, and performance optimizations. Ensure separation of concerns, loose coupling, and high cohesion among components. Identify potential bottlenecks and propose strategies for load balancing, caching, and horizontal scaling. Define the communication protocols and data formats for inter-component communication. Outline the deployment strategy, including containerization, orchestration, and infrastructure provisioning. Provide detailed documentation and diagrams to facilitate understanding and collaboration among team members.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 449,
+    "project_id": "APIDesignWorkshop",
+    "title": "Develop User Interface",
+    "description": "Design and implement the user interface for the APIDesignWorkshop platform, ensuring a smooth and intuitive user experience.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 450,
+    "project_id": "APIDesignWorkshop",
+    "title": "Implement Backend Services",
+    "description": "Develop the backend services and APIs required for the APIDesignWorkshop platform, including authentication, data storage, and any necessary integrations.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 451,
+    "project_id": "APIDesignWorkshop",
+    "title": "Set up Database and Data Models",
+    "description": "Design and implement the database schema and data models required for the APIDesignWorkshop platform.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 452,
+    "project_id": "APIDesignWorkshop",
+    "title": "Implement API Design Guidance",
+    "description": "Develop the core functionality for guiding users through the process of designing and implementing robust APIs.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Implement Backend Services"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 453,
+    "project_id": "APIDesignWorkshop",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Configure a continuous integration and deployment pipeline for the APIDesignWorkshop platform, ensuring automated testing and seamless deployments.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Develop User Interface",
+      "Implement Backend Services",
+      "Set up Database and Data Models"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 454,
+    "project_id": "APIDesignWorkshop",
+    "title": "Implement Security Measures",
+    "description": "Ensure the APIDesignWorkshop platform adheres to best practices for security, including authentication, authorization, and data protection.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Implement Backend Services"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 455,
+    "project_id": "APIDesignWorkshop",
+    "title": "Create Test Suite",
+    "description": "Develop a comprehensive test suite for the APIDesignWorkshop platform, covering unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Develop User Interface",
+      "Implement Backend Services",
+      "Set up Database and Data Models"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 456,
+    "project_id": "APIDesignWorkshop",
+    "title": "Write Documentation",
+    "description": "Create user documentation, developer guides, and any other necessary documentation for the APIDesignWorkshop platform.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Implement API Design Guidance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

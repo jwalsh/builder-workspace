@@ -1,0 +1,144 @@
+[
+  {
+    "id": 1582,
+    "project_id": "CrossTeamSyncBot",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the requirements for the CrossTeamSyncBot, including its main features, integrations, target users, and non-functional requirements such as scalability, performance, security, and maintainability.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1583,
+    "project_id": "CrossTeamSyncBot",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including components, communication protocols, data flow, and integration points. Consider scalability, maintainability, and performance requirements. Define the roles and responsibilities of each component, and the interactions between them. Specify the technologies and frameworks to be used for each component.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 1584,
+    "project_id": "CrossTeamSyncBot",
+    "title": "Design User Interface",
+    "description": "Design the user interface for the CrossTeamSyncBot, including the bot's conversational flow, integration with team collaboration tools, and consideration for accessibility and internationalization.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Identify Target Platforms and Integrations"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1585,
+    "project_id": "CrossTeamSyncBot",
+    "title": "Design Database Schema",
+    "description": "Design the database schema for storing team information, communication logs, and task alignments.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1586,
+    "project_id": "CrossTeamSyncBot",
+    "title": "Implement Backend Services",
+    "description": "Implement the backend services for the CrossTeamSyncBot, including team management, communication handling, and task alignment.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Design Database Schema"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1587,
+    "project_id": "CrossTeamSyncBot",
+    "title": "Implement User Interface",
+    "description": "Implement the user interface for the CrossTeamSyncBot, including the bot's conversational flow and integration with team collaboration tools.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1588,
+    "project_id": "CrossTeamSyncBot",
+    "title": "Set up CI/CD Pipeline",
+    "description": "Set up a continuous integration and continuous deployment (CI/CD) pipeline for the CrossTeamSyncBot project. The pipeline should include the following stages:\n\n1. Code linting and static analysis\n2. Unit and integration testing\n3. Build and package artifacts\n4. Deploy to a staging environment for testing\n5. Manual approval for production deployment\n6. Deploy to production environment\n\nThe pipeline should be configured to run automatically on every code commit to the main branch. It should also support manual triggers for testing and deployment to specific environments. Ensure that the pipeline is secure, scalable, and follows best practices for CI/CD.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 1589,
+    "project_id": "CrossTeamSyncBot",
+    "title": "Implement Security Measures",
+    "description": "Implement security measures for the CrossTeamSyncBot, including authentication, authorization, and data encryption.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1590,
+    "project_id": "CrossTeamSyncBot",
+    "title": "Create Test Suite",
+    "description": "Create a comprehensive test suite for the CrossTeamSyncBot, including unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Implement Backend Services",
+      "Implement User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1591,
+    "project_id": "CrossTeamSyncBot",
+    "title": "Write Documentation",
+    "description": "Write documentation for the CrossTeamSyncBot, including user guides, developer guides, and API documentation.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Design System Architecture",
+      "Design User Interface",
+      "Design Database Schema"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "id": 363,
+    "project_id": "AISecurityAuditor",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document detailed requirements for the AISecurityAuditor project, including the types of security vulnerabilities to be detected (e.g., code vulnerabilities, misconfigured infrastructure, outdated dependencies), the codebases and infrastructure configurations to be scanned (e.g., source code repositories, cloud infrastructure, containerized environments), the desired output formats for vulnerability reports (e.g., human-readable reports, machine-readable formats for integration with other tools), and the integration points with existing security tools and processes (e.g., CI/CD pipelines, issue tracking systems, notification mechanisms).",
+    "status": "IN PROGRESS",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 364,
+    "project_id": "AISecurityAuditor",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture for the AISecurityAuditor, including the components for scanning codebases, dependencies, and infrastructure configurations, as well as the AI-powered vulnerability detection and reporting modules.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 365,
+    "project_id": "AISecurityAuditor",
+    "title": "Develop Scanning and Auditing Modules",
+    "description": "Implement the modules for scanning codebases, dependencies, and infrastructure configurations, as well as the AI-powered vulnerability detection and reporting modules.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 366,
+    "project_id": "AISecurityAuditor",
+    "title": "Develop User Interface",
+    "description": "Design and implement the user interface for the AISecurityAuditor, allowing users to configure scanning settings, view vulnerability reports, and manage the auditing process.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 367,
+    "project_id": "AISecurityAuditor",
+    "title": "Set up Infrastructure and Deployment",
+    "description": "Set up the necessary infrastructure and deployment pipelines for the AISecurityAuditor, including hosting environments, continuous integration and delivery processes, and monitoring and logging systems.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Scanning and Auditing Modules",
+      "Develop User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 368,
+    "project_id": "AISecurityAuditor",
+    "title": "Conduct Security Audits and Testing",
+    "description": "Perform comprehensive security audits and testing on the AISecurityAuditor system, including penetration testing, vulnerability scanning, and compliance checks.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Set up Infrastructure and Deployment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 369,
+    "project_id": "AISecurityAuditor",
+    "title": "Develop Documentation and Training Materials",
+    "description": "Create comprehensive documentation and training materials for the AISecurityAuditor, including user guides, technical documentation, and training resources for administrators and end-users.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Develop User Interface",
+      "Conduct Security Audits and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 370,
+    "project_id": "AISecurityAuditor",
+    "title": "Perform Quality Assurance and Testing",
+    "description": "Conduct thorough quality assurance and testing activities, including unit testing, integration testing, and end-to-end testing, to ensure the AISecurityAuditor meets all functional and non-functional requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop Scanning and Auditing Modules",
+      "Develop User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 371,
+    "project_id": "AISecurityAuditor",
+    "title": "Deploy and Monitor AISecurityAuditor",
+    "description": "Deploy the AISecurityAuditor to production environments, monitor its performance and usage, and implement processes for ongoing maintenance, updates, and support.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Set up Infrastructure and Deployment",
+      "Conduct Security Audits and Testing",
+      "Develop Documentation and Training Materials",
+      "Perform Quality Assurance and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

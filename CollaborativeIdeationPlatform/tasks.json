@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1275,
+    "project_id": "CollaborativeIdeationPlatform",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the functional and non-functional requirements for the collaborative ideation platform, including user roles, workflows, integration with existing systems, data models, security considerations, scalability, and performance requirements.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1276,
+    "project_id": "CollaborativeIdeationPlatform",
+    "title": "Design System Architecture",
+    "description": "Develop the overall system architecture, including the frontend, backend, database, and deployment infrastructure.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1277,
+    "project_id": "CollaborativeIdeationPlatform",
+    "title": "Implement User Authentication and Authorization",
+    "description": "Develop the user authentication and authorization mechanisms, including integration with existing identity providers (e.g., Active Directory, LDAP, OAuth providers) and role-based access control (RBAC). Ensure compliance with industry-standard security practices and data protection regulations. Implement mechanisms for user registration, password management, multi-factor authentication, and session management. Provide a flexible and extensible authorization model to support different levels of access and permissions based on user roles and responsibilities. Consider implementing token-based authentication (e.g., JWT) for stateless authentication and authorization. Implement appropriate security measures such as input validation, output encoding, and protection against common web vulnerabilities (e.g., XSS, CSRF, SQL injection).",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 1278,
+    "project_id": "CollaborativeIdeationPlatform",
+    "title": "Design and Implement Collaborative Ideation Workflows",
+    "description": "Define and implement the core workflows for idea submission, discussion, voting, and refinement, including notifications and collaboration features.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1279,
+    "project_id": "CollaborativeIdeationPlatform",
+    "title": "Set up Database and Data Models",
+    "description": "Design and implement the database schema and data models for storing and managing ideas, comments, votes, user data, and related metadata.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 1280,
+    "project_id": "CollaborativeIdeationPlatform",
+    "title": "Implement Reporting and Analytics",
+    "description": "Develop reporting and analytics features to track idea engagement, voting trends, user participation, and other relevant metrics. This should include a dashboard for visualizing data and generating reports. Ensure proper data aggregation, filtering capabilities, and performance optimizations for handling large data sets.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Set up Database and Data Models",
+      "Implement User Authentication and Authorization"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 1281,
+    "project_id": "CollaborativeIdeationPlatform",
+    "title": "Implement Integration with Existing Systems",
+    "description": "Develop integrations with existing enterprise systems, such as project management tools, communication platforms, knowledge bases, and authentication/authorization systems. Ensure secure data exchange, handle different data formats, and implement error handling and logging mechanisms. Prioritize systems based on business impact and user needs.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Identify Existing Systems and APIs",
+      "Define Integration Requirements and Priorities"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1282,
+    "project_id": "CollaborativeIdeationPlatform",
+    "title": "Implement Security and Compliance Features",
+    "description": "Ensure the platform adheres to security best practices and compliance requirements, including data encryption, audit logging, and access controls.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 1283,
+    "project_id": "CollaborativeIdeationPlatform",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a CI/CD pipeline for automated testing, building, and deployment of the platform to different environments. The pipeline should include steps for linting, unit testing, integration testing, building artifacts, and deploying to staging and production environments. Ensure proper configuration management, environment parity, and rollback strategies. Additionally, consider implementing monitoring, logging, and alerting mechanisms to track the health and performance of the deployed application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 1284,
+    "project_id": "CollaborativeIdeationPlatform",
+    "title": "Develop Test Plans and Automation Scripts",
+    "description": "Create comprehensive test plans and automation scripts for functional, integration, and performance testing of the platform.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1285,
+    "project_id": "CollaborativeIdeationPlatform",
+    "title": "Create User Documentation and Training Materials",
+    "description": "Develop user guides, training materials, and online help resources to assist users in effectively utilizing the platform.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  }
+]

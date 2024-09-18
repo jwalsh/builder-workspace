@@ -1,0 +1,186 @@
+[
+  {
+    "id": 6144,
+    "project_id": "BrainwaveDriverAssistant",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the project requirements, including the desired features, functionalities, performance specifications, and system constraints for the BrainwaveDriverAssistant system. Ensure that the requirements cover driver monitoring, fatigue and distraction detection, alert mechanisms, data privacy and security considerations, integration with vehicle systems, and regulatory compliance.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 6145,
+    "project_id": "BrainwaveDriverAssistant",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including hardware and software components, data flow, and integration with vehicle systems.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6146,
+    "project_id": "BrainwaveDriverAssistant",
+    "title": "Develop Brainwave Monitoring Module",
+    "description": "Implement the module responsible for capturing and processing the driver's brainwave data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6147,
+    "project_id": "BrainwaveDriverAssistant",
+    "title": "Develop Driver Attention and Fatigue Detection",
+    "description": "Implement algorithms and models to detect driver attention levels and fatigue based on brainwave data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6148,
+    "project_id": "BrainwaveDriverAssistant",
+    "title": "Develop Vehicle Integration Module",
+    "description": "Implement the module responsible for integrating with the vehicle's systems, such as alerts, notifications, and safety mechanisms.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6149,
+    "project_id": "BrainwaveDriverAssistant",
+    "title": "Develop User Interface",
+    "description": "Design and implement the user interface for the BrainwaveDriverAssistant system, including dashboards, alerts, and configuration options.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6150,
+    "project_id": "BrainwaveDriverAssistant",
+    "title": "Implement Data Storage and Management",
+    "description": "Design and implement the data storage and management system for storing and retrieving brainwave data, driver profiles, and system logs.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6151,
+    "project_id": "BrainwaveDriverAssistant",
+    "title": "Develop Security and Privacy Measures",
+    "description": "Implement security and privacy measures to protect the driver's brainwave data and ensure compliance with relevant regulations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6152,
+    "project_id": "BrainwaveDriverAssistant",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a CI/CD pipeline for automated testing, building, and deployment of the BrainwaveDriverAssistant system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6153,
+    "project_id": "BrainwaveDriverAssistant",
+    "title": "Conduct System Testing and Quality Assurance",
+    "description": "Develop and execute comprehensive test plans to ensure the system's functionality, performance, and reliability.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Develop Brainwave Monitoring Module",
+      "Develop Driver Attention and Fatigue Detection",
+      "Develop Vehicle Integration Module",
+      "Develop User Interface",
+      "Implement Data Storage and Management",
+      "Develop Security and Privacy Measures"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6154,
+    "project_id": "BrainwaveDriverAssistant",
+    "title": "Prepare Documentation and User Guides",
+    "description": "Create comprehensive documentation, user guides, and training materials for the BrainwaveDriverAssistant system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Develop User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6155,
+    "project_id": "BrainwaveDriverAssistant",
+    "title": "Conduct Pilot Deployment and Evaluation",
+    "description": "Deploy the BrainwaveDriverAssistant system in a controlled environment for pilot testing and evaluation, gathering feedback from users and stakeholders.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [
+      "Conduct System Testing and Quality Assurance",
+      "Prepare Documentation and User Guides"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6156,
+    "project_id": "BrainwaveDriverAssistant",
+    "title": "Finalize and Deploy Production System",
+    "description": "Incorporate feedback from the pilot deployment, make necessary adjustments, and deploy the final BrainwaveDriverAssistant system for production use.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [
+      "Conduct Pilot Deployment and Evaluation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "id": 7087,
+    "project_id": "CascoAumentoCognitivo",
+    "title": "Define Project Requirements",
+    "description": "Gather and document project requirements for the cognitive enhancement helmet.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7088,
+    "project_id": "CascoAumentoCognitivo",
+    "title": "Design Cognitive Enhancement Algorithm",
+    "description": "Create a design for the neurostimulation algorithm that enhances cognitive abilities.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7089,
+    "project_id": "CascoAumentoCognitivo",
+    "title": "Develop Frontend for User Interface",
+    "description": "Design and build the user interface for the helmet's control system.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Define Project Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7090,
+    "project_id": "CascoAumentoCognitivo",
+    "title": "Implement Neurostimulation Algorithm (Backend Development)",
+    "description": "Develop the backend code to implement the neurostimulation algorithm.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Cognitive Enhancement Algorithm"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7091,
+    "project_id": "CascoAumentoCognitivo",
+    "title": "Integrate User Interface with Backend",
+    "description": "Connect the frontend user interface to the implemented backend.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Develop Frontend for User Interface",
+      "Implement Neurostimulation Algorithm"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7092,
+    "project_id": "CascoAumentoCognitivo",
+    "title": "Test Cognitive Enhancement Helmet",
+    "description": "Conduct functional and performance tests on the cognitive enhancement helmet.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Integrate User Interface with Backend"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7093,
+    "project_id": "CascoAumentoCognitivo",
+    "title": "Revise Cognitive Enhancement Algorithm Design",
+    "description": "Review and provide feedback on the design of the neurostimulation algorithm.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Design Cognitive Enhancement Algorithm"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7094,
+    "project_id": "CascoAumentoCognitivo",
+    "title": "Review Frontend User Interface Design",
+    "description": "Review and provide feedback on the design of the frontend user interface.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 3,
+    "dependencies": [
+      "Develop Frontend for User Interface"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7095,
+    "project_id": "CascoAumentoCognitivo",
+    "title": "Security Audit of Helmet's Software",
+    "description": "Perform a security audit to ensure the safety and privacy of users.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Integrate User Interface with Backend"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "id": 2372,
+    "project_id": "GasDistributionOptimizer",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements. Gather input from stakeholders and subject matter experts.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2373,
+    "project_id": "GasDistributionOptimizer",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components, data flow, and integration points. The architecture should consider the following key aspects: 1) Data ingestion and preprocessing pipelines for real-time and historical data sources, 2) Distributed computing infrastructure for running machine learning models, 3) Optimization algorithms for balancing supply and demand, 4) Integration with existing gas distribution systems, 5) Monitoring and alerting mechanisms, 6) Scalability and fault tolerance, 7) Security and access control.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2374,
+    "project_id": "GasDistributionOptimizer",
+    "title": "Data Pipeline and Storage Design",
+    "description": "Design the data pipeline for ingesting and processing real-time gas distribution data, as well as the storage solution for historical data. The design should consider data volume, velocity, and variety, as well as scalability, fault tolerance, and data security requirements.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2375,
+    "project_id": "GasDistributionOptimizer",
+    "title": "Machine Learning Model Development",
+    "description": "Develop and train machine learning models for demand forecasting and network optimization.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Data Pipeline and Storage Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2376,
+    "project_id": "GasDistributionOptimizer",
+    "title": "User Interface Design and Development",
+    "description": "Design and develop the user interface for visualizing network data, monitoring performance, and adjusting optimization parameters.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2377,
+    "project_id": "GasDistributionOptimizer",
+    "title": "Security and Compliance",
+    "description": "Ensure the system adheres to relevant security and compliance standards, including data privacy and access controls.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 2378,
+    "project_id": "GasDistributionOptimizer",
+    "title": "Integration and Testing",
+    "description": "Integrate the various components and perform comprehensive testing, including unit, integration, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Machine Learning Model Development",
+      "User Interface Design and Development",
+      "Security and Compliance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2379,
+    "project_id": "GasDistributionOptimizer",
+    "title": "Deployment and Monitoring",
+    "description": "Deploy the system to production environments, set up monitoring and logging, and establish processes for ongoing maintenance and updates.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2380,
+    "project_id": "GasDistributionOptimizer",
+    "title": "Documentation and Training",
+    "description": "Create comprehensive documentation for the system, including user guides, technical documentation, and training materials for stakeholders.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,148 @@
+[
+  {
+    "id": 5760,
+    "project_id": "ARNavigationApp",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, goals, and requirements for the ARNavigationApp. Conduct user research, analyze the market, and gather feedback from stakeholders.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5761,
+    "project_id": "ARNavigationApp",
+    "title": "Architecture Design",
+    "description": "Design the overall system architecture, including the client-server model, data flow, and integration with external services (e.g., maps, location services, augmented reality frameworks). Consider the following aspects:\n\n- Client-side architecture (mobile app): Modular design, separation of concerns, UI/UX considerations, performance optimizations, and support for different device configurations.\n- Server-side architecture: Scalable and fault-tolerant design, microservices or monolithic approach, API design, and data storage strategy.\n- Communication protocols and data formats for client-server communication.\n- Integration with external services: APIs, authentication, and data caching mechanisms.\n- Security considerations: Data encryption, user authentication, and authorization mechanisms.\n- Deployment and infrastructure requirements: Cloud or on-premises, containerization, and continuous integration/deployment (CI/CD) pipelines.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 5762,
+    "project_id": "ARNavigationApp",
+    "title": "User Interface and Experience Design",
+    "description": "Design the user interface and user experience for the ARNavigationApp, including wireframes, mockups, and prototypes.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5763,
+    "project_id": "ARNavigationApp",
+    "title": "Backend Development",
+    "description": "Develop the backend components of the ARNavigationApp, including server-side logic, data processing, and integration with external services.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5764,
+    "project_id": "ARNavigationApp",
+    "title": "Frontend Development",
+    "description": "Develop the frontend components of the ARNavigationApp, including the user interface, augmented reality features, and integration with the backend.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Architecture Design",
+      "User Interface and Experience Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5765,
+    "project_id": "ARNavigationApp",
+    "title": "Data Storage and Management",
+    "description": "Design and implement the data storage and management system for the ARNavigationApp, including databases, caching mechanisms, and data synchronization across multiple devices and platforms.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 5766,
+    "project_id": "ARNavigationApp",
+    "title": "Testing and Quality Assurance",
+    "description": "Plan and execute comprehensive testing strategies, including unit tests, integration tests, and end-to-end tests, to ensure the quality and reliability of the ARNavigationApp.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5767,
+    "project_id": "ARNavigationApp",
+    "title": "Security and Compliance",
+    "description": "Implement security measures and ensure compliance with relevant regulations and industry standards, such as data privacy and location data handling.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Architecture Design",
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 5768,
+    "project_id": "ARNavigationApp",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline, continuous integration and delivery processes, and infrastructure for the ARNavigationApp, including cloud services and monitoring tools.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5769,
+    "project_id": "ARNavigationApp",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation for the ARNavigationApp, including user guides, API documentation, and developer resources. Plan and implement user support channels.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "User Interface and Experience Design",
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

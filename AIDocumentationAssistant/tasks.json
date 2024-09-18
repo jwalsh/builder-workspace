@@ -1,0 +1,143 @@
+[
+  {
+    "id": 169,
+    "project_id": "AIDocumentationAssistant",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the requirements for the AIDocumentationAssistant, including the expected features, target audience, and desired outcomes.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 170,
+    "project_id": "AIDocumentationAssistant",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture for the AI Documentation Assistant, including the components, data flow, integration points, and key considerations such as scalability, performance, maintainability, security, fault tolerance, and extensibility.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 171,
+    "project_id": "AIDocumentationAssistant",
+    "title": "Develop AI Model",
+    "description": "Research and develop the AI model for content suggestion, formatting, and gap identification.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 172,
+    "project_id": "AIDocumentationAssistant",
+    "title": "Build User Interface",
+    "description": "Design and develop the user interface for the AIDocumentationAssistant.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 173,
+    "project_id": "AIDocumentationAssistant",
+    "title": "Implement Data Storage",
+    "description": "Set up the database and data storage mechanisms for storing and retrieving documentation data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 174,
+    "project_id": "AIDocumentationAssistant",
+    "title": "Integrate AI Model with User Interface",
+    "description": "Integrate the AI model with the user interface to enable seamless interaction and content generation.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Develop AI Model",
+      "Build User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 175,
+    "project_id": "AIDocumentationAssistant",
+    "title": "Implement Security Measures",
+    "description": "Ensure the application adheres to security best practices and implement necessary measures to protect user data. This includes, but is not limited to, implementing secure authentication and authorization mechanisms, encrypting sensitive data, securing communication channels, and protecting against common web application vulnerabilities such as SQL injection, cross-site scripting (XSS), and cross-site request forgery (CSRF).",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 176,
+    "project_id": "AIDocumentationAssistant",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a CI/CD pipeline for automated testing, building, and deployment of the application. The pipeline should include the following stages: code linting, unit testing, integration testing, build, and deployment to staging and production environments. Implement automated rollback mechanisms in case of deployment failures. The pipeline should also include security scanning and code quality checks. Consider using containerization and orchestration tools like Docker and Kubernetes for better scalability and portability.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 177,
+    "project_id": "AIDocumentationAssistant",
+    "title": "Create Documentation",
+    "description": "Write comprehensive documentation for the AIDocumentationAssistant, including installation instructions, user guides, and API references.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Integrate AI Model with User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 178,
+    "project_id": "AIDocumentationAssistant",
+    "title": "Perform Testing and Quality Assurance",
+    "description": "Conduct thorough testing of the application, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Integrate AI Model with User Interface",
+      "Implement Security Measures",
+      "Set up Continuous Integration and Deployment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

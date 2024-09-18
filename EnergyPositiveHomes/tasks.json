@@ -1,0 +1,145 @@
+[
+  {
+    "id": 2125,
+    "project_id": "EnergyPositiveHomes",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, goals, and requirements for the EnergyPositiveHomes system.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2126,
+    "project_id": "EnergyPositiveHomes",
+    "title": "System Architecture Design",
+    "description": "Design the overall architecture of the EnergyPositiveHomes system, including components, interfaces, data flow, and integration with renewable energy sources and energy storage solutions. Consider scalability, maintainability, performance requirements, and high availability. Address security and privacy concerns related to energy data, user information, and communication with external systems. Incorporate monitoring, logging, and alerting mechanisms for system health and performance.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 2127,
+    "project_id": "EnergyPositiveHomes",
+    "title": "Renewable Energy Integration",
+    "description": "Develop modules for integrating various renewable energy sources (solar, wind, geothermal, etc.) into the system.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2128,
+    "project_id": "EnergyPositiveHomes",
+    "title": "Energy Storage Solutions",
+    "description": "Implement advanced energy storage solutions (batteries, thermal storage, etc.) for efficient energy management.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2129,
+    "project_id": "EnergyPositiveHomes",
+    "title": "Home Energy Management System",
+    "description": "Develop a system for monitoring and controlling energy consumption, generation, and storage in homes.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Renewable Energy Integration",
+      "Energy Storage Solutions"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2130,
+    "project_id": "EnergyPositiveHomes",
+    "title": "Data Storage and Analytics",
+    "description": "Design and implement a scalable, secure, and high-performance database system for storing and analyzing energy-related data from homes, including energy consumption, production, and storage metrics. The system should support real-time data ingestion, historical data storage, and advanced analytics capabilities. The database should be designed with a focus on data integrity, fault tolerance, and high availability. Implement appropriate data partitioning and sharding strategies to handle large volumes of data. Consider using a time-series database or a combination of relational and NoSQL databases based on the data structure and query patterns. Implement robust data backup and recovery mechanisms. Integrate with a data analytics platform or develop custom analytics modules for generating insights and reports.",
+    "status": "IN PROGRESS",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 2131,
+    "project_id": "EnergyPositiveHomes",
+    "title": "Security and Privacy",
+    "description": "Implement security measures and ensure privacy of user data in the EnergyPositiveHomes system.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 2132,
+    "project_id": "EnergyPositiveHomes",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and perform thorough testing of the EnergyPositiveHomes system.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Renewable Energy Integration",
+      "Energy Storage Solutions",
+      "Home Energy Management System",
+      "Data Storage and Analytics"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2133,
+    "project_id": "EnergyPositiveHomes",
+    "title": "Deployment and DevOps",
+    "description": "Set up the infrastructure and automate the deployment process for the EnergyPositiveHomes system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2134,
+    "project_id": "EnergyPositiveHomes",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation and user guides for the EnergyPositiveHomes system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Home Energy Management System"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

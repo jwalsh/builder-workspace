@@ -1,0 +1,130 @@
+[
+  {
+    "id": 625,
+    "project_id": "AnonymousFeedbackEngine",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, goals, and requirements for the AnonymousFeedbackEngine platform.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 626,
+    "project_id": "AnonymousFeedbackEngine",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components, data flow, security considerations, scalability, and performance optimizations. Ensure proper separation of concerns, modular design, and adherence to best practices. Consider incorporating microservices architecture for better scalability and maintainability. Implement robust authentication and authorization mechanisms, and ensure data anonymization and encryption at rest and in transit. Design for high availability and fault tolerance, with load balancing and failover mechanisms. Incorporate monitoring, logging, and auditing for better observability, troubleshooting, and regulatory compliance. Consider integrating with existing enterprise systems or third-party services for enhanced functionality or data enrichment.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 627,
+    "project_id": "AnonymousFeedbackEngine",
+    "title": "Database Design",
+    "description": "Design the database schema and data models for storing feedback data, user information, and related entities, considering data privacy, security, and scalability requirements.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 628,
+    "project_id": "AnonymousFeedbackEngine",
+    "title": "Frontend Development",
+    "description": "Develop the user interface for submitting and viewing anonymous feedback.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 629,
+    "project_id": "AnonymousFeedbackEngine",
+    "title": "Backend Development",
+    "description": "Implement the server-side logic for handling feedback submissions, analysis, and reporting.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 630,
+    "project_id": "AnonymousFeedbackEngine",
+    "title": "Security Implementation",
+    "description": "Implement security measures to ensure data anonymity, integrity, and confidentiality.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  },
+  {
+    "id": 631,
+    "project_id": "AnonymousFeedbackEngine",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop test plans and perform thorough testing of the AnonymousFeedbackEngine platform.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development",
+      "Security Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 632,
+    "project_id": "AnonymousFeedbackEngine",
+    "title": "Deployment and DevOps",
+    "description": "Set up the production environment and implement continuous integration and deployment processes.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 633,
+    "project_id": "AnonymousFeedbackEngine",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation and user guides for the AnonymousFeedbackEngine platform.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

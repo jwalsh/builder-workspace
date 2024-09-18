@@ -1,0 +1,148 @@
+[
+  {
+    "id": 1429,
+    "project_id": "CorporateDNAAlignmentTool",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the project requirements, including the core values and 'DNA' of the organization, the desired features and functionalities of the tool, and the target audience.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1430,
+    "project_id": "CorporateDNAAlignmentTool",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including the frontend, backend, and database components, as well as the integration points with existing organizational systems. The architecture should prioritize maintainability, modularity, scalability, and consider edge cases, error handling, performance optimizations, and security best practices.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 1431,
+    "project_id": "CorporateDNAAlignmentTool",
+    "title": "Develop Frontend",
+    "description": "Implement the user interface and frontend logic for the tool, ensuring a user-friendly and intuitive experience.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1432,
+    "project_id": "CorporateDNAAlignmentTool",
+    "title": "Develop Backend",
+    "description": "Implement the backend logic and functionality, including the integration with organizational systems and data sources.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1433,
+    "project_id": "CorporateDNAAlignmentTool",
+    "title": "Set up Database",
+    "description": "Design and implement the database schema and data models required for the tool.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1434,
+    "project_id": "CorporateDNAAlignmentTool",
+    "title": "Implement Security Measures",
+    "description": "Ensure the tool adheres to security best practices and organizational policies, including authentication, authorization, and data protection.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 1435,
+    "project_id": "CorporateDNAAlignmentTool",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a CI/CD pipeline for automated building, testing, and deployment of the tool.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Develop Frontend",
+      "Develop Backend",
+      "Set up Database"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1436,
+    "project_id": "CorporateDNAAlignmentTool",
+    "title": "Conduct Testing",
+    "description": "Plan and execute comprehensive testing strategies, including unit tests, integration tests, and user acceptance testing, to ensure the tool meets the defined requirements and standards.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop Frontend",
+      "Develop Backend",
+      "Set up Database"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1437,
+    "project_id": "CorporateDNAAlignmentTool",
+    "title": "Write Documentation",
+    "description": "Create comprehensive documentation for the tool, including user guides, technical documentation, and maintenance procedures.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Frontend",
+      "Develop Backend",
+      "Set up Database"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1438,
+    "project_id": "CorporateDNAAlignmentTool",
+    "title": "Deploy and Launch",
+    "description": "Deploy the tool to the production environment and coordinate the official launch, including user training and communication.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [
+      "Conduct Testing",
+      "Write Documentation",
+      "Set up Continuous Integration and Deployment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

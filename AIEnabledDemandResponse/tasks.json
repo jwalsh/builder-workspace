@@ -1,0 +1,128 @@
+[
+  {
+    "id": 5638,
+    "project_id": "AIEnabledDemandResponse",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements. Conduct stakeholder interviews and market research to understand user needs and energy demand patterns.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5639,
+    "project_id": "AIEnabledDemandResponse",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including AI models, data pipelines, integration with energy grid and user interfaces, scalability considerations, security measures, and deployment strategies. Ensure the architecture follows best practices for modularity, maintainability, and testability. Consider the use of microservices, event-driven architecture, and cloud-native technologies. Address data privacy and compliance requirements, as well as monitoring and logging strategies.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 5640,
+    "project_id": "AIEnabledDemandResponse",
+    "title": "AI Model Development",
+    "description": "Develop and train AI models for demand forecasting, user behavior prediction, and optimal resource allocation.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5641,
+    "project_id": "AIEnabledDemandResponse",
+    "title": "Data Pipeline and Integration",
+    "description": "Implement data pipelines for ingesting energy consumption data, user preferences, and external data sources (e.g., weather, pricing).",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5642,
+    "project_id": "AIEnabledDemandResponse",
+    "title": "User Interface Development",
+    "description": "Design and develop user interfaces for energy consumers and utility providers, including dashboards, notifications, and incentive management.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5643,
+    "project_id": "AIEnabledDemandResponse",
+    "title": "Security and Compliance",
+    "description": "Implement security measures to protect user data and system integrity. Ensure compliance with relevant regulations and industry standards.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 5644,
+    "project_id": "AIEnabledDemandResponse",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and execute testing at various levels (unit, integration, system, and acceptance) to ensure system quality and reliability.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "AI Model Development",
+      "Data Pipeline and Integration",
+      "User Interface Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5645,
+    "project_id": "AIEnabledDemandResponse",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure, including cloud resources, monitoring, and automation. Implement continuous integration and delivery pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5646,
+    "project_id": "AIEnabledDemandResponse",
+    "title": "Documentation and Training",
+    "description": "Create comprehensive documentation for system architecture, APIs, and user guides. Develop training materials for energy consumers and utility providers.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "User Interface Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

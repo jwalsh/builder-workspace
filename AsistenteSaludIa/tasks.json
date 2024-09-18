@@ -1,0 +1,129 @@
+[
+  {
+    "id": 6873,
+    "project_id": "AsistenteSaludIa",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the project requirements, including the features and functionalities of the personal health assistant, data sources, and target users.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6874,
+    "project_id": "AsistenteSaludIa",
+    "title": "Dise\u00f1ar la arquitectura del sistema",
+    "description": "Dise\u00f1ar la arquitectura general del sistema, incluyendo los componentes, el flujo de datos y los puntos de integraci\u00f3n. Considerar aspectos como escalabilidad, mantenibilidad, modularidad, manejo de errores y optimizaci\u00f3n de rendimiento.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Definir el alcance y los requisitos del proyecto"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 6875,
+    "project_id": "AsistenteSaludIa",
+    "title": "Design User Interface",
+    "description": "Design the user interface for the personal health assistant, including the layout, navigation, user experience, and accessibility considerations.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 6876,
+    "project_id": "AsistenteSaludIa",
+    "title": "Design Data Storage and Management",
+    "description": "Design the data storage and management system, including the database schema, data ingestion pipelines, data processing pipelines, data security and privacy measures, and data backup and recovery strategies.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 6877,
+    "project_id": "AsistenteSaludIa",
+    "title": "Design Health Recommendation Engine",
+    "description": "Design the health recommendation engine, including the algorithms, data sources, personalization mechanisms, and integration with other system components.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 5,
+    "dependencies": [
+      "Design System Architecture",
+      "Design Data Storage and Management",
+      "Define User Profiles and Preferences"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 6878,
+    "project_id": "AsistenteSaludIa",
+    "title": "Design Security and Privacy Measures",
+    "description": "Design the security and privacy measures for handling sensitive health data and ensuring user privacy.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 6879,
+    "project_id": "AsistenteSaludIa",
+    "title": "Define Testing Strategy",
+    "description": "Define the testing strategy, including unit tests, integration tests, and end-to-end tests, to ensure the quality and reliability of the system.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6880,
+    "project_id": "AsistenteSaludIa",
+    "title": "Plan Deployment and DevOps",
+    "description": "Plan the deployment and DevOps strategy, including the infrastructure, continuous integration and delivery, and monitoring and logging.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6881,
+    "project_id": "AsistenteSaludIa",
+    "title": "Develop Documentation and User Guides",
+    "description": "Develop comprehensive documentation and user guides for the personal health assistant, including installation, configuration, and usage instructions.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Design User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,159 @@
+[
+  {
+    "id": 2040,
+    "project_id": "EmotionalAtmosphereMonitor",
+    "title": "Define Project Requirements",
+    "description": "Gather and document requirements for the EmotionalAtmosphereMonitor project, including the types of sensors needed, the emotional states to be monitored, the desired visualization methods, and any specific constraints or regulations to be considered.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2041,
+    "project_id": "EmotionalAtmosphereMonitor",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including the sensor network, data collection and processing pipelines, AI models for emotion detection, and visualization components.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2042,
+    "project_id": "EmotionalAtmosphereMonitor",
+    "title": "Develop Sensor Network",
+    "description": "Design and implement the network of sensors for collecting data from public spaces or large events.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2043,
+    "project_id": "EmotionalAtmosphereMonitor",
+    "title": "Build Data Processing Pipeline",
+    "description": "Develop the data processing pipeline for ingesting, cleaning, and preparing the sensor data for analysis.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2044,
+    "project_id": "EmotionalAtmosphereMonitor",
+    "title": "Develop AI Models for Emotion Detection",
+    "description": "Research, train, and deploy AI models capable of detecting and classifying emotional states from the collected data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Build Data Processing Pipeline"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2045,
+    "project_id": "EmotionalAtmosphereMonitor",
+    "title": "Design and Implement Visualization Components",
+    "description": "Design and develop the user interface components for visualizing the collective emotional state of people in public spaces or large events.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Develop AI Models for Emotion Detection"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2046,
+    "project_id": "EmotionalAtmosphereMonitor",
+    "title": "Set up Data Storage and Management",
+    "description": "Design and implement the data storage and management solutions for storing and retrieving sensor data, processed data, and visualization data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2047,
+    "project_id": "EmotionalAtmosphereMonitor",
+    "title": "Implement Security and Privacy Measures",
+    "description": "Develop and implement security and privacy measures to protect the collected data and ensure compliance with relevant regulations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2048,
+    "project_id": "EmotionalAtmosphereMonitor",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a continuous integration and deployment pipeline for automated testing, building, and deploying the EmotionalAtmosphereMonitor system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Develop Sensor Network",
+      "Build Data Processing Pipeline",
+      "Develop AI Models for Emotion Detection",
+      "Design and Implement Visualization Components",
+      "Set up Data Storage and Management",
+      "Implement Security and Privacy Measures"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2049,
+    "project_id": "EmotionalAtmosphereMonitor",
+    "title": "Conduct System Testing and Quality Assurance",
+    "description": "Plan and execute comprehensive testing and quality assurance processes to ensure the EmotionalAtmosphereMonitor system meets all requirements and functions as expected.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Set up Continuous Integration and Deployment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2050,
+    "project_id": "EmotionalAtmosphereMonitor",
+    "title": "Write Documentation and User Guides",
+    "description": "Develop comprehensive documentation and user guides for the EmotionalAtmosphereMonitor system, covering installation, configuration, usage, and maintenance.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Conduct System Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

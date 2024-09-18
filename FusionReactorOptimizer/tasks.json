@@ -1,0 +1,72 @@
+[
+  {
+    "id": 2356,
+    "project_id": "FusionReactorOptimizer",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements for the FusionReactorOptimizer system. Conduct research on fusion reactor design and operation, gather input from subject matter experts, and document functional and non-functional requirements.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2357,
+    "project_id": "FusionReactorOptimizer",
+    "title": "System Architecture Design",
+    "description": "Design the overall architecture of the FusionReactorOptimizer system, including components, data flows, and integration points. Define the AI models, optimization algorithms, simulation frameworks, and data pipelines to be used. Consider scalability, fault tolerance, and security aspects. Outline the deployment strategy and infrastructure requirements.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2358,
+    "project_id": "FusionReactorOptimizer",
+    "title": "Data Acquisition and Preprocessing",
+    "description": "Identify and acquire relevant data sources for fusion reactor design and operation, such as experimental data, simulations, and expert knowledge. Develop data preprocessing pipelines to clean, transform, and prepare the data for model training and optimization.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2359,
+    "project_id": "FusionReactorOptimizer",
+    "title": "AI Model Development",
+    "description": "Develop and train AI models for fusion reactor design optimization, including machine learning models for parameter tuning, reinforcement learning agents for control systems, and physics-informed neural networks for simulations.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Data Acquisition and Preprocessing",
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2360,
+    "project_id": "FusionReactorOptimizer",
+    "title": "Optimization and Simulation Framework",
+    "description": "Implement a framework for running optimization algorithms and simulations, integrating the AI models and leveraging high-performance computing resources. Develop interfaces for visualizing and analyzing optimization results.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "AI Model Development",
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

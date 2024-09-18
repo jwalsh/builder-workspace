@@ -1,0 +1,141 @@
+[
+  {
+    "id": 1305,
+    "project_id": "CombatantIdentificationSystem",
+    "title": "Project Initiation",
+    "description": "Kick off the project, gather requirements, and define the project scope and objectives.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1306,
+    "project_id": "CombatantIdentificationSystem",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including the AI model, multi-spectral imaging pipeline, data processing components, and integration with existing military systems. Consider scalability, performance, security, fault tolerance, and ethical requirements. Ensure compliance with relevant laws and regulations regarding the use of AI in military applications.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1307,
+    "project_id": "CombatantIdentificationSystem",
+    "title": "Data Collection and Preparation",
+    "description": "Collect and prepare the necessary data for training the AI model and testing the system.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1308,
+    "project_id": "CombatantIdentificationSystem",
+    "title": "AI Model Development",
+    "description": "Develop and train the AI model for combatant identification using the collected data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Data Collection and Preparation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1309,
+    "project_id": "CombatantIdentificationSystem",
+    "title": "Multi-spectral Imaging Pipeline",
+    "description": "Implement the multi-spectral imaging pipeline for capturing and processing battlefield data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1310,
+    "project_id": "CombatantIdentificationSystem",
+    "title": "User Interface Design",
+    "description": "Design the user interface for the system, including visualizations and control interfaces for operators to interact with the system and view the identified combatants.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design",
+      "User Experience Research"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1311,
+    "project_id": "CombatantIdentificationSystem",
+    "title": "System Integration and Testing",
+    "description": "Integrate the AI model, multi-spectral imaging pipeline, and user interface components, and perform thorough testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "AI Model Development",
+      "Multi-spectral Imaging Pipeline",
+      "User Interface Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1312,
+    "project_id": "CombatantIdentificationSystem",
+    "title": "Security and Compliance",
+    "description": "Ensure the system meets all necessary security and compliance requirements for handling sensitive data and battlefield operations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 1313,
+    "project_id": "CombatantIdentificationSystem",
+    "title": "Deployment and Operations",
+    "description": "Plan and implement the deployment and ongoing operations of the system in the target environment.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "System Integration and Testing",
+      "Security and Compliance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1314,
+    "project_id": "CombatantIdentificationSystem",
+    "title": "Documentation and Training",
+    "description": "Develop comprehensive documentation and training materials for system users and administrators.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "User Interface Design",
+      "System Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

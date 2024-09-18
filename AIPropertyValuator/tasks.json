@@ -1,0 +1,145 @@
+[
+  {
+    "id": 322,
+    "project_id": "AIPropertyValuator",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, goals, and requirements. Identify stakeholders and gather their input. Conduct market research and analyze existing property valuation solutions.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 323,
+    "project_id": "AIPropertyValuator",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components, data flow, and integration points. Define the AI model architecture, data requirements, and data pipelines. Consider scalability, fault tolerance, security aspects, compliance with relevant regulations (e.g., data privacy laws), and integration with external data sources (e.g., real estate databases, market data providers). Provide a detailed architecture diagram and documentation.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 324,
+    "project_id": "AIPropertyValuator",
+    "title": "Data Collection and Preprocessing",
+    "description": "Identify and acquire relevant data sources for property valuations, such as real estate listings, market trends, and property characteristics. Preprocess and clean the data for AI model training.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 325,
+    "project_id": "AIPropertyValuator",
+    "title": "AI Model Development",
+    "description": "Develop and train the AI model for property valuations using the collected and preprocessed data. Implement and optimize the model architecture and algorithms.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Data Collection and Preprocessing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 326,
+    "project_id": "AIPropertyValuator",
+    "title": "User Interface Design and Development",
+    "description": "Design and develop the user interface for the property valuation system, including input forms, result displays, and data visualization components.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 327,
+    "project_id": "AIPropertyValuator",
+    "title": "Backend Development",
+    "description": "Develop the backend components of the system, including APIs, data storage, and integration with the AI model and other external services.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "AI Model Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 328,
+    "project_id": "AIPropertyValuator",
+    "title": "Testing and Quality Assurance",
+    "description": "Plan and execute comprehensive testing strategies, including unit tests, integration tests, and end-to-end tests. Ensure the system meets quality standards and requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "User Interface Design and Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 329,
+    "project_id": "AIPropertyValuator",
+    "title": "Security and Compliance",
+    "description": "Implement security measures to protect user data and system integrity. Ensure compliance with relevant regulations and industry standards.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 330,
+    "project_id": "AIPropertyValuator",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment environment and infrastructure. Implement continuous integration and continuous deployment (CI/CD) pipelines for seamless updates and scalability.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Testing and Quality Assurance",
+      "Security and Compliance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 331,
+    "project_id": "AIPropertyValuator",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation for the system, including user guides, technical documentation, and API references. Establish user support channels and processes.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "User Interface Design and Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "id": 6741,
+    "project_id": "AnalisisAgricolaIa",
+    "title": "Gather Requirements",
+    "description": "Collect and document requirements for the agricultural AI system, including desired features, data sources, performance metrics, and user needs.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6742,
+    "project_id": "AnalisisAgricolaIa",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including components for data ingestion, data preprocessing, model training, prediction, and result visualization. Consider scalability, maintainability, and performance optimizations. Ensure proper error handling and edge case considerations.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Gather Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 6743,
+    "project_id": "AnalisisAgricolaIa",
+    "title": "Set up Data Pipeline",
+    "description": "Establish a robust data pipeline to collect, clean, and preprocess agricultural data from various sources.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6744,
+    "project_id": "AnalisisAgricolaIa",
+    "title": "Develop Machine Learning Models",
+    "description": "Research, implement, and train machine learning models to analyze agricultural data and provide predictions for maximizing yield and minimizing losses.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture",
+      "Set up Data Pipeline"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6745,
+    "project_id": "AnalisisAgricolaIa",
+    "title": "Build User Interface",
+    "description": "Design and develop a user-friendly interface for farmers and agricultural experts to interact with the system, visualize results, and provide input.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6746,
+    "project_id": "AnalisisAgricolaIa",
+    "title": "Implement Comprehensive Security Measures",
+    "description": "Ensure the system is secure by implementing appropriate authentication, authorization, data encryption, secure communication protocols, input validation, and security best practices throughout the application lifecycle.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 1,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 6747,
+    "project_id": "AnalisisAgricolaIa",
+    "title": "Set up Testing Framework",
+    "description": "Establish a comprehensive testing framework, including unit tests, integration tests, end-to-end tests, and performance tests, to ensure system quality, reliability, and efficiency.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 6748,
+    "project_id": "AnalisisAgricolaIa",
+    "title": "Deploy and Monitor System",
+    "description": "Deploy the system to a production environment, set up monitoring, logging, and alerting mechanisms, establish processes for maintenance, updates, and rollbacks, and document the deployment and operational procedures.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Build User Interface",
+      "Develop Machine Learning Models",
+      "Set up Data Pipeline",
+      "Implement Security Measures",
+      "Set up Testing Framework"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 6749,
+    "project_id": "AnalisisAgricolaIa",
+    "title": "Write Documentation",
+    "description": "Create comprehensive documentation for the system, including user guides, technical documentation, and maintenance manuals.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Gather Requirements",
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

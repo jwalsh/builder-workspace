@@ -1,0 +1,131 @@
+[
+  {
+    "id": 723,
+    "project_id": "BackupFortress",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the project requirements, including the types of workloads to be protected, the desired level of data protection, and any specific compliance or regulatory requirements.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 724,
+    "project_id": "BackupFortress",
+    "title": "Design Data Protection Architecture",
+    "description": "Design the overall architecture for the data protection solution, including the backup and recovery mechanisms, storage systems, and integration with cloud and on-premises environments.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 725,
+    "project_id": "BackupFortress",
+    "title": "Implement Backup and Recovery Mechanisms",
+    "description": "Develop the core functionality for backing up and restoring data, including scheduling, deduplication, compression, and encryption.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Data Protection Architecture"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 726,
+    "project_id": "BackupFortress",
+    "title": "Integrate with Cloud and On-Premises Environments",
+    "description": "Implement the necessary integrations and connectors to support backup and recovery for cloud-native and hybrid workloads, including virtual machines, containers, and databases.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Design Data Protection Architecture"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 727,
+    "project_id": "BackupFortress",
+    "title": "Develop User Interface and Management Console",
+    "description": "Design and implement a user-friendly interface and management console for configuring and monitoring the data protection solution.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design Data Protection Architecture"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 728,
+    "project_id": "BackupFortress",
+    "title": "Implement Security and Compliance Measures",
+    "description": "Ensure that the data protection solution adheres to industry-standard security practices and meets any relevant compliance requirements, such as data privacy regulations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 729,
+    "project_id": "BackupFortress",
+    "title": "Conduct Comprehensive Testing",
+    "description": "Plan and execute a thorough testing strategy, including unit tests, integration tests, and end-to-end tests, to validate the functionality and reliability of the data protection solution.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Implement Backup and Recovery Mechanisms",
+      "Integrate with Cloud and On-Premises Environments",
+      "Develop User Interface and Management Console"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  },
+  {
+    "id": 730,
+    "project_id": "BackupFortress",
+    "title": "Prepare Documentation and Training Materials",
+    "description": "Create comprehensive documentation and training materials to support the deployment, configuration, and maintenance of the data protection solution.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Implement Backup and Recovery Mechanisms",
+      "Integrate with Cloud and On-Premises Environments",
+      "Develop User Interface and Management Console"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  },
+  {
+    "id": 731,
+    "project_id": "BackupFortress",
+    "title": "Deploy and Maintain the Solution",
+    "description": "Plan and execute the deployment of the data protection solution in production environments, and establish processes for ongoing maintenance, monitoring, and support.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Conduct Comprehensive Testing",
+      "Prepare Documentation and Training Materials"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,147 @@
+[
+  {
+    "id": 2576,
+    "project_id": "IdeaAnonymizer",
+    "title": "Define Project Requirements",
+    "description": "Gather and document all requirements for the IdeaAnonymizer system, including functional and non-functional requirements, security considerations, data privacy regulations, and stakeholder expectations.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2577,
+    "project_id": "IdeaAnonymizer",
+    "title": "Design System Architecture",
+    "description": "Create a high-level system architecture design, including components, data flow, and integration points.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2578,
+    "project_id": "IdeaAnonymizer",
+    "title": "Design Database Schema",
+    "description": "Design the database schema for storing and managing ideas, user information, and other relevant data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2579,
+    "project_id": "IdeaAnonymizer",
+    "title": "Implement Backend Services",
+    "description": "Develop the backend services for handling idea submission, vetting, and presentation to management.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Design Database Schema"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2580,
+    "project_id": "IdeaAnonymizer",
+    "title": "Implement Frontend User Interface",
+    "description": "Develop the frontend user interface for idea submission and management dashboard.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2581,
+    "project_id": "IdeaAnonymizer",
+    "title": "Implement Security Measures",
+    "description": "Implement security measures to ensure data privacy, anonymity, and access control.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2582,
+    "project_id": "IdeaAnonymizer",
+    "title": "Set up CI/CD Pipeline",
+    "description": "Configure a continuous integration and continuous deployment (CI/CD) pipeline for automated testing and deployment.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Implement Backend Services",
+      "Implement Frontend User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2583,
+    "project_id": "IdeaAnonymizer",
+    "title": "Write User Documentation",
+    "description": "Create user documentation, including installation guides, usage instructions, and troubleshooting tips.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Implement Backend Services",
+      "Implement Frontend User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2584,
+    "project_id": "IdeaAnonymizer",
+    "title": "Perform Quality Assurance Testing",
+    "description": "Conduct comprehensive testing, including functional, integration, security, and performance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Backend Services",
+      "Implement Frontend User Interface",
+      "Implement Security Measures"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2585,
+    "project_id": "IdeaAnonymizer",
+    "title": "Deploy to Production",
+    "description": "Deploy the IdeaAnonymizer system to the production environment and monitor for any issues.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Set up CI/CD Pipeline",
+      "Perform Quality Assurance Testing",
+      "Write User Documentation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

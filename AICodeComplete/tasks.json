@@ -1,0 +1,130 @@
+[
+  {
+    "id": 80,
+    "project_id": "AICodeComplete",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, requirements, and high-level architecture for the AI-powered code completion system. This should include the following key areas: 1) Identifying the target programming languages and frameworks to support, 2) Defining the user interface and interaction model for code completion suggestions, 3) Determining the required data sources and preprocessing steps for training the AI model, 4) Outlining the AI model architecture and components (e.g., language model, code generation model), 5) Specifying the integration points with IDEs and code editors, 6) Defining the deployment and scaling strategy for serving the AI model, 7) Identifying potential challenges and risks, such as handling large codebases, ensuring code quality and security, and managing model updates.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 81,
+    "project_id": "AICodeComplete",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture for the AICodeComplete system, including the following components and their interactions: 1) Code Editor Interface, 2) Context Analyzer, 3) Deep Learning Model, 4) Code Suggestion Engine, 5) Data Storage, 6) Model Training Pipeline. Consider scalability, performance, fault tolerance, security, and maintainability aspects. Define the data flow and integration points between components. Provide a high-level diagram and detailed component descriptions, including technologies, frameworks, and design patterns to be used. Address potential challenges and mitigation strategies related to real-time code completion, model performance, handling large codebases, and model retraining/updates. Ensure the architecture supports incremental deployment and rollback strategies, as well as monitoring and logging capabilities for troubleshooting and performance analysis.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 82,
+    "project_id": "AICodeComplete",
+    "title": "Deep Learning Model Development",
+    "description": "Research and develop the deep learning model(s) for context-aware code completion.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 83,
+    "project_id": "AICodeComplete",
+    "title": "Code Editor Integration",
+    "description": "Design and implement the integration with popular code editors for seamless code completion suggestions.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 84,
+    "project_id": "AICodeComplete",
+    "title": "Data Collection and Preprocessing",
+    "description": "Collect and preprocess code repositories and other relevant data for training the deep learning model(s).",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Deep Learning Model Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 85,
+    "project_id": "AICodeComplete",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and strategies for ensuring the quality and accuracy of the code completion system.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Deep Learning Model Development",
+      "Code Editor Integration"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 86,
+    "project_id": "AICodeComplete",
+    "title": "Security and Privacy Considerations",
+    "description": "Assess and address potential security and privacy risks associated with the code completion system.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 87,
+    "project_id": "AICodeComplete",
+    "title": "Deployment and Continuous Integration/Delivery",
+    "description": "Implement a robust deployment strategy and set up continuous integration and delivery pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Deep Learning Model Development",
+      "Code Editor Integration",
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 88,
+    "project_id": "AICodeComplete",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation and user support resources for the code completion system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Deep Learning Model Development",
+      "Code Editor Integration"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

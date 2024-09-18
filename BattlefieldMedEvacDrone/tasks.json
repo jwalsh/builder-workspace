@@ -1,0 +1,149 @@
+[
+  {
+    "id": 732,
+    "project_id": "BattlefieldMedEvacDrone",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements for the BattlefieldMedEvacDrone system. Gather input from various stakeholders, including military personnel, medical professionals, drone experts, and relevant government agencies. Conduct research on existing medical evacuation systems, relevant regulations, and potential challenges in battlefield environments. Identify key functional and non-functional requirements, such as drone speed, payload capacity, communication protocols, security measures, environmental resilience, and compliance with military and aviation standards. Develop a detailed project plan, including timelines, resource allocation, risk mitigation strategies, a comprehensive testing and validation plan, as well as a deployment and maintenance strategy.",
+    "status": "IN PROGRESS",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 733,
+    "project_id": "BattlefieldMedEvacDrone",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including hardware components, software systems, communication protocols, and integration points.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 734,
+    "project_id": "BattlefieldMedEvacDrone",
+    "title": "Drone Hardware Development",
+    "description": "Design and develop the physical drone hardware, including the airframe, propulsion system, and sensor suite.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 735,
+    "project_id": "BattlefieldMedEvacDrone",
+    "title": "Software Development",
+    "description": "Develop the software systems for flight control, navigation, communication, and medical payload management.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 736,
+    "project_id": "BattlefieldMedEvacDrone",
+    "title": "Ground Control Station Development",
+    "description": "Develop the ground control station software for mission planning, monitoring, and control of the drone fleet.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 737,
+    "project_id": "BattlefieldMedEvacDrone",
+    "title": "Communication Systems Integration",
+    "description": "Integrate communication systems for secure and reliable data transmission between drones, ground control, and medical facilities.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Drone Hardware Development",
+      "Software Development",
+      "Ground Control Station Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 738,
+    "project_id": "BattlefieldMedEvacDrone",
+    "title": "Security and Compliance",
+    "description": "Ensure the system complies with relevant security standards and regulations for military and medical applications.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  },
+  {
+    "id": 739,
+    "project_id": "BattlefieldMedEvacDrone",
+    "title": "Testing and Validation",
+    "description": "Develop comprehensive test plans and conduct rigorous testing of the system, including hardware, software, and integration tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Drone Hardware Development",
+      "Software Development",
+      "Ground Control Station Development",
+      "Communication Systems Integration"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 740,
+    "project_id": "BattlefieldMedEvacDrone",
+    "title": "Deployment and Training",
+    "description": "Plan and execute the deployment of the BattlefieldMedEvacDrone system, including logistics, infrastructure setup, and user training.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Testing and Validation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 741,
+    "project_id": "BattlefieldMedEvacDrone",
+    "title": "Documentation and User Manuals",
+    "description": "Create comprehensive documentation, user manuals, and training materials for the BattlefieldMedEvacDrone system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Drone Hardware Development",
+      "Software Development",
+      "Ground Control Station Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,151 @@
+[
+  {
+    "id": 754,
+    "project_id": "BetHedge",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements, including regulatory compliance needs and performance goals. Conduct market research and gather stakeholder feedback.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 755,
+    "project_id": "BetHedge",
+    "title": "Architecture Design",
+    "description": "Design the overall system architecture, including the edge computing infrastructure, components for handling regulatory requirements, data storage, security measures, scalability considerations, and performance optimizations. The architecture should also consider the integration of third-party services (e.g., payment gateways, identity verification) and the separation of concerns between the frontend, backend, and edge components.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [
+      "Project Planning and Requirements Gathering",
+      "Regulatory Requirements Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 756,
+    "project_id": "BetHedge",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema to store user data, betting information, and regulatory compliance data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 757,
+    "project_id": "BetHedge",
+    "title": "Backend Development",
+    "description": "Develop the server-side logic for handling betting operations, regulatory compliance, and integration with edge computing infrastructure.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Architecture Design",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 758,
+    "project_id": "BetHedge",
+    "title": "Frontend Development",
+    "description": "Develop the user interface for the sports betting application, ensuring a smooth and responsive experience.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 759,
+    "project_id": "BetHedge",
+    "title": "Edge Computing Infrastructure Setup",
+    "description": "Set up the edge computing infrastructure to ensure low latency and high performance for the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 760,
+    "project_id": "BetHedge",
+    "title": "Security and Compliance",
+    "description": "Implement security measures and ensure compliance with relevant regulations for sports betting and data privacy.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Architecture Design",
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 761,
+    "project_id": "BetHedge",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and execute comprehensive test plans to ensure the application's functionality, performance, and compliance with regulatory requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Security and Compliance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 762,
+    "project_id": "BetHedge",
+    "title": "Deployment and Monitoring",
+    "description": "Deploy the application to the edge computing infrastructure and implement monitoring and logging mechanisms for performance and compliance tracking.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Edge Computing Infrastructure Setup",
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 763,
+    "project_id": "BetHedge",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation for the application, including user guides, technical documentation, and support resources.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Security and Compliance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

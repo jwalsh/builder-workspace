@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1977,
+    "project_id": "DynamicSummaryDashboard",
+    "title": "Gather Requirements",
+    "description": "Collect and document requirements for the DynamicSummaryDashboard project, including data sources, metrics, stakeholders, and desired functionality.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1978,
+    "project_id": "DynamicSummaryDashboard",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including data pipelines, data storage, application components, and their interactions. Consider scalability, performance, security, and maintainability aspects.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Gather Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1979,
+    "project_id": "DynamicSummaryDashboard",
+    "title": "Implement Data Ingestion",
+    "description": "Develop mechanisms to collect and ingest data from various sources into the system.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1980,
+    "project_id": "DynamicSummaryDashboard",
+    "title": "Set up Data Storage",
+    "description": "Design and implement the data storage solution for storing and querying ingested data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1981,
+    "project_id": "DynamicSummaryDashboard",
+    "title": "Develop Dashboard Frontend",
+    "description": "Build the user interface and frontend components for the dynamic summary dashboard.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1982,
+    "project_id": "DynamicSummaryDashboard",
+    "title": "Implement Backend Logic",
+    "description": "Develop the backend logic for processing data, generating summaries, and serving data to the frontend.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Implement Data Ingestion",
+      "Set up Data Storage"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1983,
+    "project_id": "DynamicSummaryDashboard",
+    "title": "Set up Continuous Integration/Deployment",
+    "description": "Establish a CI/CD pipeline for automated testing, building, and deployment of the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1984,
+    "project_id": "DynamicSummaryDashboard",
+    "title": "Write Documentation",
+    "description": "Create comprehensive documentation for the project, including architecture diagrams, user guides, and developer documentation.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1985,
+    "project_id": "DynamicSummaryDashboard",
+    "title": "Conduct Security Audit",
+    "description": "Perform a security audit to identify and mitigate potential vulnerabilities in the system.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Implement Backend Logic",
+      "Develop Dashboard Frontend"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 1986,
+    "project_id": "DynamicSummaryDashboard",
+    "title": "Test and Quality Assurance",
+    "description": "Develop and execute comprehensive test plans, including unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Backend Logic",
+      "Develop Dashboard Frontend"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

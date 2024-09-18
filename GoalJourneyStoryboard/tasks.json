@@ -1,0 +1,131 @@
+[
+  {
+    "id": 2448,
+    "project_id": "GoalJourneyStoryboard",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, goals, and requirements. Gather input from stakeholders and end-users.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2449,
+    "project_id": "GoalJourneyStoryboard",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including the data model, user interface, and integration with existing systems. Ensure scalability, maintainability, and modularity. Consider security, performance, and error handling.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2450,
+    "project_id": "GoalJourneyStoryboard",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema to store user goals, journeys, and related data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2451,
+    "project_id": "GoalJourneyStoryboard",
+    "title": "Backend Development",
+    "description": "Develop the backend services and APIs for managing user data, goals, and journeys.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2452,
+    "project_id": "GoalJourneyStoryboard",
+    "title": "Frontend Development",
+    "description": "Develop the user interface for creating, editing, and visualizing goal journeys.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2453,
+    "project_id": "GoalJourneyStoryboard",
+    "title": "Security and Access Control",
+    "description": "Implement secure authentication, authorization, and data protection mechanisms. This should include user registration, login, password management, role-based access control, data encryption at rest and in transit, and secure communication protocols. Additionally, implement security best practices such as input validation, output encoding, and protection against common web vulnerabilities (e.g., XSS, CSRF, SQL injection).",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 1,
+    "dependencies": [
+      "Design System Architecture",
+      "Define User Roles and Permissions"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2454,
+    "project_id": "GoalJourneyStoryboard",
+    "title": "Testing and Quality Assurance",
+    "description": "Plan and execute comprehensive testing strategies, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2455,
+    "project_id": "GoalJourneyStoryboard",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline, infrastructure, and monitoring for the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2456,
+    "project_id": "GoalJourneyStoryboard",
+    "title": "Documentation and User Guide",
+    "description": "Create comprehensive documentation for developers and end-users, including installation guides, API references, and user manuals.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

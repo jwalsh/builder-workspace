@@ -1,0 +1,71 @@
+[
+  {
+    "id": 144,
+    "project_id": "AIConstructionWasteOptimizer",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements. Conduct research on construction waste management practices, regulations, and existing solutions. Gather stakeholder input from construction companies, waste management facilities, and relevant government agencies. Identify key features and functionalities, such as material demand forecasting, waste tracking, recycling opportunities identification, and regulatory compliance. Consider data sources, integration requirements, and user interface design.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 145,
+    "project_id": "AIConstructionWasteOptimizer",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components, data flow, and integration points. Define the AI model architecture and algorithms for waste prediction and optimization. Consider the following aspects: data ingestion pipeline (from construction management systems and other data sources), data preprocessing (cleaning, feature engineering), model training and evaluation (supervised learning, time-series forecasting), deployment and monitoring (containerization, orchestration, monitoring), user interface (web application or mobile app), and integration with construction management systems (APIs, data exchange formats).",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 146,
+    "project_id": "AIConstructionWasteOptimizer",
+    "title": "Data Collection and Preparation",
+    "description": "Identify and acquire relevant data sources for training the AI model, such as construction project data, material specifications, and waste management practices. Preprocess and clean the data for model training.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 147,
+    "project_id": "AIConstructionWasteOptimizer",
+    "title": "AI Model Development",
+    "description": "Implement the AI algorithms and models for waste prediction and optimization based on the defined architecture. Develop and train the models using the prepared data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Collection and Preparation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 148,
+    "project_id": "AIConstructionWasteOptimizer",
+    "title": "User Interface Design and Development",
+    "description": "Design and develop the user interface for the system, including input interfaces for project data and material specifications, as well as visualization tools for waste predictions and optimization recommendations.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

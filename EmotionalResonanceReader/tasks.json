@@ -1,0 +1,143 @@
+[
+  {
+    "id": 2071,
+    "project_id": "EmotionalResonanceReader",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements. Conduct research and gather input from stakeholders to understand the desired functionality and user experience.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2072,
+    "project_id": "EmotionalResonanceReader",
+    "title": "Architecture Design",
+    "description": "Develop the overall system architecture, including the components responsible for emotion detection, content adaptation, and user interface. The architecture should consider the following key aspects: 1) Modular design for easy maintenance and scalability, 2) Real-time emotion detection and analysis, 3) Dynamic content adaptation based on reader's emotional state, 4) Seamless integration with e-book content sources, 5) User-friendly interface for personalized reading experience, 6) Secure data handling and privacy measures, 7) Performance optimization for smooth user experience.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2073,
+    "project_id": "EmotionalResonanceReader",
+    "title": "Emotion Detection Module",
+    "description": "Design and implement the module responsible for detecting and interpreting the reader's emotional responses.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2074,
+    "project_id": "EmotionalResonanceReader",
+    "title": "Content Adaptation Module",
+    "description": "Develop the module that adapts the tone, pacing, and content of the story based on the reader's emotional responses and preferences.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2075,
+    "project_id": "EmotionalResonanceReader",
+    "title": "User Interface Design",
+    "description": "Design the user interface for the e-reader, including the presentation of the adapted content and the integration of emotion detection features.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2076,
+    "project_id": "EmotionalResonanceReader",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema to store user preferences, reading history, and other relevant data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2077,
+    "project_id": "EmotionalResonanceReader",
+    "title": "Security and Privacy Considerations",
+    "description": "Evaluate and implement security measures to protect user data and ensure privacy compliance.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 2078,
+    "project_id": "EmotionalResonanceReader",
+    "title": "Integration and Testing",
+    "description": "Integrate the various components and modules, and conduct thorough testing to ensure the system meets the requirements and functions as expected.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Emotion Detection Module",
+      "Content Adaptation Module",
+      "User Interface Design",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2079,
+    "project_id": "EmotionalResonanceReader",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment environment, automate the build and release processes, and implement monitoring and logging systems.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2080,
+    "project_id": "EmotionalResonanceReader",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation for developers, administrators, and end-users. Establish user support channels and resources.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

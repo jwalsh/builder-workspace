@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1690,
+    "project_id": "CybercrimePredictor",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements. Gather input from stakeholders and subject matter experts.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1691,
+    "project_id": "CybercrimePredictor",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components, data flow, integration points, and key considerations for scalability, security, and performance.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 1692,
+    "project_id": "CybercrimePredictor",
+    "title": "Data Modeling and Database Design",
+    "description": "Design the data model and database schema to store and manage cyber activity data, including data sources, data types, data structures, and relationships. Consider scalability, performance, and security requirements.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Ingestion and Processing Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 1693,
+    "project_id": "CybercrimePredictor",
+    "title": "Cybercrime Pattern Analysis and Prediction Algorithm Development",
+    "description": "Develop the core AI algorithm for analyzing cyber activity patterns and predicting potential cybercrime incidents.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Modeling and Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1694,
+    "project_id": "CybercrimePredictor",
+    "title": "User Interface Design and Development",
+    "description": "Design and develop the user interface for the CybercrimePredictor system, including data visualization and reporting components.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1695,
+    "project_id": "CybercrimePredictor",
+    "title": "Security and Compliance",
+    "description": "Ensure the system adheres to relevant security standards and compliance regulations for handling sensitive cyber activity data.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 1696,
+    "project_id": "CybercrimePredictor",
+    "title": "Testing and Quality Assurance",
+    "description": "Plan and execute comprehensive testing strategies, including unit tests, integration tests, and end-to-end tests, to ensure system quality and reliability.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Cybercrime Pattern Analysis and Prediction Algorithm Development",
+      "User Interface Design and Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1697,
+    "project_id": "CybercrimePredictor",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure, continuous integration/continuous deployment (CI/CD) pipelines, and monitoring systems for the CybercrimePredictor system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1698,
+    "project_id": "CybercrimePredictor",
+    "title": "Documentation and User Training",
+    "description": "Develop comprehensive documentation, including user guides, technical documentation, and training materials for end-users and support staff.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "User Interface Design and Development",
+      "Cybercrime Pattern Analysis and Prediction Algorithm Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

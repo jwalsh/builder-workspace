@@ -1,0 +1,144 @@
+[
+  {
+    "id": 1223,
+    "project_id": "CodeTranslator",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the requirements for the CodeTranslator system, including supported programming languages, translation accuracy goals, performance targets, input/output formats, error handling, edge cases, security considerations, scalability, and any additional features or constraints.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 1224,
+    "project_id": "CodeTranslator",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the CodeTranslator system, including components for code parsing, translation, and code generation, as well as any necessary databases or external services.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1225,
+    "project_id": "CodeTranslator",
+    "title": "Develop Translation Algorithms",
+    "description": "Research and develop algorithms for translating code between different programming languages while preserving functionality and adhering to best practices in the target language.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1226,
+    "project_id": "CodeTranslator",
+    "title": "Implement Code Parsing and Generation",
+    "description": "Develop components for parsing and generating code in various programming languages, based on the designed architecture and translation algorithms.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture",
+      "Develop Translation Algorithms"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1227,
+    "project_id": "CodeTranslator",
+    "title": "Design and Develop User Interface",
+    "description": "Design and implement the user interface for the CodeTranslator system, allowing users to input code, select source and target languages, and view the translated code.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1228,
+    "project_id": "CodeTranslator",
+    "title": "Implement Data Storage and Retrieval",
+    "description": "Design and implement a database or other data storage solution for storing and retrieving code samples, translation models, and any other necessary data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1229,
+    "project_id": "CodeTranslator",
+    "title": "Develop Testing Framework",
+    "description": "Create a comprehensive testing framework for the CodeTranslator system, including unit tests, integration tests, and end-to-end tests to ensure translation accuracy and system reliability.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Code Parsing and Generation",
+      "Design and Develop User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1230,
+    "project_id": "CodeTranslator",
+    "title": "Implement Security Measures",
+    "description": "Identify and implement security measures to protect the CodeTranslator system from potential threats, such as input validation, secure data transmission, and access controls.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1231,
+    "project_id": "CodeTranslator",
+    "title": "Set up Deployment and Monitoring",
+    "description": "Configure the deployment environment for the CodeTranslator system, including setting up servers, load balancers, and monitoring tools to ensure system availability and performance.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Implement Data Storage and Retrieval",
+      "Implement Security Measures"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1232,
+    "project_id": "CodeTranslator",
+    "title": "Create Documentation",
+    "description": "Develop comprehensive documentation for the CodeTranslator system, including user guides, developer guides, and API documentation.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

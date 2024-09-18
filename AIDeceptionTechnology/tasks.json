@@ -1,0 +1,143 @@
+[
+  {
+    "id": 159,
+    "project_id": "AIDeceptionTechnology",
+    "title": "Project Planning and Management",
+    "description": "Define project scope, objectives, timeline, and resource allocation. Set up project management tools and communication channels.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 160,
+    "project_id": "AIDeceptionTechnology",
+    "title": "Requirements Gathering and Analysis",
+    "description": "Conduct stakeholder interviews, analyze existing systems, and document functional and non-functional requirements for the deception technology.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 161,
+    "project_id": "AIDeceptionTechnology",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components, interfaces, and data flows. Define the AI models and algorithms for creating and managing decoys, considering techniques like generative adversarial networks (GANs), reinforcement learning, and anomaly detection. Address scalability, fault tolerance, security (e.g., secure enclaves, data encryption), performance requirements, and integration with existing security tools and processes (e.g., SIEM, IDS/IPS). Outline the deployment strategy (e.g., cloud, on-premises), monitoring, and maintenance processes. Consider edge cases, error handling, and performance optimizations.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 162,
+    "project_id": "AIDeceptionTechnology",
+    "title": "Database Design",
+    "description": "Design the database schema for storing and managing decoy data, attacker behavior, logs, and other relevant information. Consider data models for decoy configurations, attacker profiles, attack patterns, and analytics. Ensure scalability, performance, security best practices, and data integrity. Incorporate encryption and access control mechanisms for sensitive data. Define data retention policies and backup strategies. Ensure compliance with relevant data privacy and security regulations.",
+    "status": "ASSIGNED",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 163,
+    "project_id": "AIDeceptionTechnology",
+    "title": "Frontend Development",
+    "description": "Develop the user interface for managing and monitoring the deception technology, including dashboards and reporting tools.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 164,
+    "project_id": "AIDeceptionTechnology",
+    "title": "Backend Development",
+    "description": "Implement the core functionality of the deception technology, including AI models, decoy management, and attacker behavior analysis.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 165,
+    "project_id": "AIDeceptionTechnology",
+    "title": "Security and Penetration Testing",
+    "description": "Perform security audits, vulnerability assessments, and penetration testing to ensure the robustness and resilience of the deception technology.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 166,
+    "project_id": "AIDeceptionTechnology",
+    "title": "Integration and System Testing",
+    "description": "Integrate the frontend, backend, and database components. Perform end-to-end system testing to validate functionality and performance.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 167,
+    "project_id": "AIDeceptionTechnology",
+    "title": "Deployment and Monitoring",
+    "description": "Deploy the deception technology to production environments. Set up monitoring and logging systems for performance tracking and incident response.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Integration and System Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 168,
+    "project_id": "AIDeceptionTechnology",
+    "title": "Documentation and Training",
+    "description": "Develop comprehensive documentation, including user guides, technical manuals, and training materials for administrators and analysts.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

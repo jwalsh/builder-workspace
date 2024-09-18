@@ -1,0 +1,144 @@
+[
+  {
+    "id": 385,
+    "project_id": "AIStructuralAnalyzer",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements for the AIStructuralAnalyzer tool. This includes gathering input from stakeholders (architects, engineers, building inspectors, construction companies, etc.) to understand their needs, pain points, and existing workflows. Research existing solutions, industry standards/regulations (e.g., building codes, safety guidelines), and relevant AI/ML techniques for structural analysis. Identify key features, functionalities, and performance requirements (e.g., accuracy, speed, scalability). Outline the overall system architecture, including the AI/ML components (e.g., computer vision, structural analysis models), user interface (e.g., CAD integration, reporting), data storage (e.g., building designs, analysis results), and integration with external systems (e.g., CAD software, building codes databases, construction management tools). Develop a project plan with milestones, timelines, resource estimates, and risk management strategies.",
+    "status": "IN PROGRESS",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 386,
+    "project_id": "AIStructuralAnalyzer",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components, data flow, integration points, and key considerations such as scalability, performance, security, and maintainability.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 387,
+    "project_id": "AIStructuralAnalyzer",
+    "title": "Data Modeling and Database Design",
+    "description": "Design the database schema and data structures to store building designs and analysis results.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 388,
+    "project_id": "AIStructuralAnalyzer",
+    "title": "AI Model Development",
+    "description": "Develop and train the AI models for structural analysis and code compliance checking.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 389,
+    "project_id": "AIStructuralAnalyzer",
+    "title": "User Interface Design and Development",
+    "description": "Design and develop the user interface for uploading building designs and viewing analysis results.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 390,
+    "project_id": "AIStructuralAnalyzer",
+    "title": "Backend Development",
+    "description": "Develop the backend services for processing building designs, running AI analysis, and managing data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Modeling and Database Design",
+      "AI Model Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 391,
+    "project_id": "AIStructuralAnalyzer",
+    "title": "Integration and Testing",
+    "description": "Integrate the frontend, backend, and AI components, and perform comprehensive testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "User Interface Design and Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 392,
+    "project_id": "AIStructuralAnalyzer",
+    "title": "Security and Compliance",
+    "description": "Ensure the system adheres to security best practices and relevant compliance regulations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 393,
+    "project_id": "AIStructuralAnalyzer",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure and automate the deployment process.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 394,
+    "project_id": "AIStructuralAnalyzer",
+    "title": "Documentation and User Training",
+    "description": "Develop comprehensive documentation and training materials for users and administrators.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "User Interface Design and Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,161 @@
+[
+  {
+    "id": 517,
+    "project_id": "AdFlow",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, gather requirements from stakeholders, and create a detailed project plan.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 518,
+    "project_id": "AdFlow",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture for the AdFlow platform, including components, data flow, integration points, and key considerations for scalability, maintainability, and security. The architecture should address the following functional areas: campaign management, content item approval, user management, and campaign auditing.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 519,
+    "project_id": "AdFlow",
+    "title": "Database Design",
+    "description": "Design the database schema and data models for storing campaign, content, user, and audit data. Ensure the schema supports efficient querying, data integrity, and scalability. Consider indexing, normalization, and partitioning strategies. Define relationships between entities and data access patterns. Provide recommendations for database technology (e.g., relational, NoSQL) and justify the choice based on project requirements. Additionally, provide guidelines for data backup, recovery, and replication strategies to ensure high availability and disaster recovery. Incorporate security considerations, such as data encryption, access controls, and auditing mechanisms.",
+    "status": "IN PROGRESS",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 520,
+    "project_id": "AdFlow",
+    "title": "User Management Module",
+    "description": "Develop the user management module, including user registration, authentication, and authorization.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 521,
+    "project_id": "AdFlow",
+    "title": "Campaign Management Module",
+    "description": "Develop the campaign management module, including campaign creation, scheduling, and reporting.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 522,
+    "project_id": "AdFlow",
+    "title": "Content Approval Module",
+    "description": "Develop the content approval module, including content submission, review, and approval workflows.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 523,
+    "project_id": "AdFlow",
+    "title": "Campaign Auditing Module",
+    "description": "Develop the campaign auditing module, including audit logging, reporting, and compliance checks.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 524,
+    "project_id": "AdFlow",
+    "title": "Security and Compliance",
+    "description": "Implement security measures, such as data encryption, access controls, and compliance with relevant regulations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  },
+  {
+    "id": 525,
+    "project_id": "AdFlow",
+    "title": "Integration and Testing",
+    "description": "Integrate the various modules, perform unit, integration, and system testing, and ensure overall system quality.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "User Management Module",
+      "Campaign Management Module",
+      "Content Approval Module",
+      "Campaign Auditing Module"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 526,
+    "project_id": "AdFlow",
+    "title": "Deployment and DevOps",
+    "description": "Set up the production environment, implement continuous integration and deployment pipelines, and prepare for system launch.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 527,
+    "project_id": "AdFlow",
+    "title": "Documentation and User Training",
+    "description": "Create comprehensive documentation, including user guides, technical documentation, and training materials.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  }
+]

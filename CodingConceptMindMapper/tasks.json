@@ -1,0 +1,144 @@
+[
+  {
+    "id": 1246,
+    "project_id": "CodingConceptMindMapper",
+    "title": "Define project scope and requirements",
+    "description": "Gather and document requirements for the CodingConceptMindMapper tool, including user stories, use cases, functional and non-functional requirements, data models, and technical constraints. Ensure to cover requirements for creating, editing, and visualizing mind maps, as well as managing coding concepts and their relationships. Consider requirements for collaboration, sharing, and exporting mind maps. Address performance, scalability, and security concerns.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1247,
+    "project_id": "CodingConceptMindMapper",
+    "title": "Design system architecture",
+    "description": "Design the overall system architecture, including the frontend, backend, database, and any external integrations or services required. Consider the following aspects: \n\n1. Frontend: Decide on the technology stack (e.g., React, Angular, Vue) and the user interface design principles to ensure an intuitive and responsive experience for creating and exploring mind maps. Consider using a modern UI library or framework like Material-UI or Ant Design for a consistent and visually appealing interface.\n\n2. Backend: Choose a suitable backend framework (e.g., Node.js with Express, Django, Ruby on Rails) and design the API endpoints required for CRUD operations on mind maps, user authentication, and any other necessary functionality. Implement RESTful APIs and consider using GraphQL for efficient data fetching.\n\n3. Database: Evaluate the database requirements and select an appropriate database system (e.g., PostgreSQL, MongoDB) based on the data structure and querying needs. Consider using a document-oriented database like MongoDB for storing mind map data, and a relational database like PostgreSQL for user data and other structured data.\n\n4. External Services: Identify any external services or APIs required for features like real-time collaboration (e.g., Socket.IO, WebSockets), sharing (e.g., social media APIs), or integration with other learning platforms (e.g., LMS APIs).\n\n5. Scalability and Performance: Consider the scalability requirements and implement appropriate caching mechanisms (e.g., Redis), load balancing, and performance optimizations (e.g., code splitting, lazy loading).\n\n6. Security: Implement proper authentication (e.g., JWT, OAuth), authorization (e.g., role-based access control), and data encryption mechanisms (e.g., bcrypt for password hashing) to ensure the security of user data and mind maps. Consider implementing security best practices like input validation, sanitization, and protection against common web vulnerabilities (e.g., XSS, CSRF).\n\n7. Deployment and DevOps: Plan for the deployment strategy (e.g., containerization with Docker, cloud deployment on AWS or GCP) and implement CI/CD pipelines for automated testing (e.g., Jest, Cypress) and deployment (e.g., GitHub Actions, CircleCI).\n\n8. Logging and Monitoring: Implement logging and monitoring mechanisms (e.g., Sentry, Datadog) to track application performance, errors, and user behavior for debugging and optimization purposes.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define project scope and requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 1248,
+    "project_id": "CodingConceptMindMapper",
+    "title": "Design user interface and experience",
+    "description": "Design the user interface and user experience for creating, exploring, and managing mind maps of coding concepts. The design should be intuitive, responsive, accessible, and adhere to best practices for user experience and interface design. Ensure the design supports features like creating, editing, and organizing mind maps, navigating between concepts, adding notes and resources, sharing or exporting mind maps, and collaborating with other users.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Define project scope and requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 1249,
+    "project_id": "CodingConceptMindMapper",
+    "title": "Develop backend services",
+    "description": "Implement the backend services required for managing and persisting mind maps, user data, and any other necessary functionality.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design system architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1250,
+    "project_id": "CodingConceptMindMapper",
+    "title": "Develop frontend application",
+    "description": "Implement the frontend application for creating, exploring, and managing mind maps of coding concepts, based on the designed user interface and experience.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design user interface and experience",
+      "Develop backend services"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1251,
+    "project_id": "CodingConceptMindMapper",
+    "title": "Set up database and data models",
+    "description": "Design and implement the database schema and data models required for storing and managing mind maps, user data, and any other necessary data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design system architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1252,
+    "project_id": "CodingConceptMindMapper",
+    "title": "Implement security measures",
+    "description": "Implement security measures for the application, including user authentication, authorization, data encryption, and protection against common web application vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Develop backend services",
+      "Develop frontend application"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1253,
+    "project_id": "CodingConceptMindMapper",
+    "title": "Set up continuous integration and deployment",
+    "description": "Configure and set up a continuous integration and deployment pipeline for automated testing, building, and deploying the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Develop backend services",
+      "Develop frontend application"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1254,
+    "project_id": "CodingConceptMindMapper",
+    "title": "Write documentation and user guides",
+    "description": "Create comprehensive documentation and user guides for the CodingConceptMindMapper tool, covering installation, usage, and any relevant technical details.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Develop frontend application"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1255,
+    "project_id": "CodingConceptMindMapper",
+    "title": "Conduct testing and quality assurance",
+    "description": "Plan and execute thorough testing and quality assurance activities, including unit testing, integration testing, performance testing, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop backend services",
+      "Develop frontend application"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "id": 220,
+    "project_id": "AIFraudDetector",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements. Gather input from stakeholders, including banking institutions, regulatory bodies, and security experts. Identify the types of fraud to be detected and the channels to be monitored.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 221,
+    "project_id": "AIFraudDetector",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components for data ingestion, feature extraction, model training, real-time fraud detection, adaptive learning, and monitoring. Define the integration points with existing banking systems and channels, as well as security and compliance considerations. Ensure scalability, fault tolerance, high availability, and data privacy.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 222,
+    "project_id": "AIFraudDetector",
+    "title": "Data Pipeline and Storage",
+    "description": "Design and implement the data pipeline for ingesting and processing transactional data from various banking channels. Define the data storage strategy, including databases and data lakes.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 223,
+    "project_id": "AIFraudDetector",
+    "title": "Feature Engineering and Model Training",
+    "description": "Develop techniques for extracting relevant features from transactional data. Implement machine learning models for fraud detection and adaptive learning mechanisms to handle new fraud patterns.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Data Pipeline and Storage"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 224,
+    "project_id": "AIFraudDetector",
+    "title": "Real-time Fraud Detection and Alerting",
+    "description": "Implement the real-time fraud detection engine, integrating with the data pipeline and machine learning models. Develop mechanisms for generating alerts and notifications for detected fraudulent activities.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Feature Engineering and Model Training"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 225,
+    "project_id": "AIFraudDetector",
+    "title": "User Interface and Reporting",
+    "description": "Design and develop the user interface for monitoring fraud detection activities, configuring rules and thresholds, and generating reports and dashboards.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Real-time Fraud Detection and Alerting"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 226,
+    "project_id": "AIFraudDetector",
+    "title": "Security and Compliance",
+    "description": "Implement robust security measures to protect sensitive data and ensure compliance with relevant regulations and industry standards. Conduct security audits and penetration testing.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 227,
+    "project_id": "AIFraudDetector",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and test cases to validate the system's functionality, performance, and accuracy. Conduct integration testing with banking systems and channels.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Real-time Fraud Detection and Alerting",
+      "User Interface and Reporting"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 228,
+    "project_id": "AIFraudDetector",
+    "title": "Deployment and DevOps",
+    "description": "Plan and implement the deployment strategy, including infrastructure provisioning, continuous integration, and continuous deployment pipelines. Ensure monitoring, logging, and scalability of the system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 229,
+    "project_id": "AIFraudDetector",
+    "title": "Documentation and Training",
+    "description": "Develop comprehensive documentation, including user manuals, technical specifications, and training materials for banking staff and administrators.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "User Interface and Reporting",
+      "Real-time Fraud Detection and Alerting"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

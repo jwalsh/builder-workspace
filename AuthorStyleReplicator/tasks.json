@@ -1,0 +1,158 @@
+[
+  {
+    "id": 663,
+    "project_id": "AuthorStyleReplicator",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements. Conduct research on existing author style replication techniques and tools. Gather input from potential users and stakeholders.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 664,
+    "project_id": "AuthorStyleReplicator",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components for text analysis, style modeling, text generation, and user interface. Define data structures, algorithms, APIs, and data flow. Consider scalability, performance, security aspects, and ethical considerations for AI-generated content.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 665,
+    "project_id": "AuthorStyleReplicator",
+    "title": "Data Collection and Preprocessing",
+    "description": "Identify and collect a diverse corpus of text samples from various authors. Preprocess the data for training and analysis.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 666,
+    "project_id": "AuthorStyleReplicator",
+    "title": "Style Modeling and Analysis",
+    "description": "Develop algorithms and models to analyze and capture the unique writing styles of different authors. Explore techniques like natural language processing, machine learning, and deep learning.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Collection and Preprocessing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 667,
+    "project_id": "AuthorStyleReplicator",
+    "title": "Text Generation and Style Replication",
+    "description": "Implement algorithms and models for generating text that mimics the style of a given author. Integrate the style modeling and analysis components.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Style Modeling and Analysis"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 668,
+    "project_id": "AuthorStyleReplicator",
+    "title": "User Interface Design and Development",
+    "description": "Design and develop a user-friendly interface for writers to interact with the system. Allow users to input text samples, select target authors, and generate stylized text.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 669,
+    "project_id": "AuthorStyleReplicator",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement a database to store text samples, author profiles, and generated text. Ensure efficient storage and retrieval of data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 670,
+    "project_id": "AuthorStyleReplicator",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and test cases to ensure the system's functionality, performance, and accuracy. Conduct unit, integration, and end-to-end testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Text Generation and Style Replication",
+      "User Interface Design and Development",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 671,
+    "project_id": "AuthorStyleReplicator",
+    "title": "Security and Privacy Considerations",
+    "description": "Implement measures to protect user data and ensure the system's security. Conduct security audits and address potential vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 672,
+    "project_id": "AuthorStyleReplicator",
+    "title": "Deployment and DevOps",
+    "description": "Set up the infrastructure and environments for deploying the application. Implement continuous integration and continuous deployment (CI/CD) pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 673,
+    "project_id": "AuthorStyleReplicator",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation for developers, administrators, and end-users. Establish user support channels and resources.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "User Interface Design and Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

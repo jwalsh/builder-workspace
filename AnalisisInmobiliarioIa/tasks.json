@@ -1,0 +1,145 @@
+[
+  {
+    "id": 6760,
+    "project_id": "AnalisisInmobiliarioIa",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the requirements for the real estate market analysis and price prediction tool, including data sources, analysis techniques, and desired outputs.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6761,
+    "project_id": "AnalisisInmobiliarioIa",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including data ingestion, storage, processing, and prediction components. Consider the following aspects: data sources, data pipelines, data storage (SQL/NoSQL), data processing (batch/stream), machine learning model training and deployment, serving predictions, scalability, fault tolerance, monitoring, and security.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 6762,
+    "project_id": "AnalisisInmobiliarioIa",
+    "title": "Set up Data Pipeline",
+    "description": "Implement a data pipeline to collect and preprocess real estate market data from various sources.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6763,
+    "project_id": "AnalisisInmobiliarioIa",
+    "title": "Develop Data Storage and Processing",
+    "description": "Design and implement a scalable data storage solution and data processing components for cleaning, transforming, and preparing data for analysis.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6764,
+    "project_id": "AnalisisInmobiliarioIa",
+    "title": "Implement Machine Learning Models",
+    "description": "Develop and train machine learning models for real estate market analysis and price prediction.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Set up Data Pipeline",
+      "Develop Data Storage and Processing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6765,
+    "project_id": "AnalisisInmobiliarioIa",
+    "title": "Build User Interface",
+    "description": "Design and develop a user-friendly interface for interacting with the real estate market analysis and price prediction tool.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Implement Machine Learning Models"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6766,
+    "project_id": "AnalisisInmobiliarioIa",
+    "title": "Implement Security and Access Controls",
+    "description": "Ensure data privacy and security by implementing appropriate access controls and security measures.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6767,
+    "project_id": "AnalisisInmobiliarioIa",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a CI/CD pipeline for automated testing, building, and deploying the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Implement Machine Learning Models",
+      "Build User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6768,
+    "project_id": "AnalisisInmobiliarioIa",
+    "title": "Conduct Testing and Quality Assurance",
+    "description": "Perform comprehensive testing, including unit tests, integration tests, and user acceptance testing, to ensure the application meets the requirements and functions as expected.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Machine Learning Models",
+      "Build User Interface",
+      "Set up Continuous Integration and Deployment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6769,
+    "project_id": "AnalisisInmobiliarioIa",
+    "title": "Write Documentation and User Guides",
+    "description": "Prepare comprehensive documentation, including installation guides, user manuals, and API references.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Implement Machine Learning Models",
+      "Build User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

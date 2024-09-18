@@ -1,0 +1,145 @@
+[
+  {
+    "id": 6124,
+    "project_id": "BrainStatesClassifier",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements. Conduct research on brain states classification and identify potential use cases. Gather input from subject matter experts and stakeholders.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6125,
+    "project_id": "BrainStatesClassifier",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components, data flow, and integration points. Define the AI model architecture, data processing pipeline, data storage strategy, and user interfaces. Consider scalability, maintainability, performance requirements, security, and compliance with relevant regulations (e.g., HIPAA for handling medical data). Outline the deployment strategy and infrastructure requirements.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 6126,
+    "project_id": "BrainStatesClassifier",
+    "title": "Data Acquisition and Preprocessing",
+    "description": "Identify and acquire relevant brain data sources (e.g., EEG, fMRI) for training and testing the AI model. Develop data preprocessing and cleaning pipelines.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6127,
+    "project_id": "BrainStatesClassifier",
+    "title": "AI Model Development",
+    "description": "Develop and train the AI model for brain state classification using appropriate machine learning algorithms and techniques.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Acquisition and Preprocessing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6128,
+    "project_id": "BrainStatesClassifier",
+    "title": "User Interface Design and Development",
+    "description": "Design and develop the user interface for the system, including visualization of brain state classifications and user interactions.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6129,
+    "project_id": "BrainStatesClassifier",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema for storing brain data, AI model parameters, and classification results.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6130,
+    "project_id": "BrainStatesClassifier",
+    "title": "Integration and Testing",
+    "description": "Integrate the various components of the system and perform comprehensive testing, including unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "AI Model Development",
+      "User Interface Design and Development",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6131,
+    "project_id": "BrainStatesClassifier",
+    "title": "Security and Compliance",
+    "description": "Ensure the system adheres to relevant security and privacy regulations, such as GDPR and HIPAA. Implement appropriate security measures and data protection mechanisms.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 6132,
+    "project_id": "BrainStatesClassifier",
+    "title": "Deployment and Monitoring",
+    "description": "Deploy the system to a production environment and implement monitoring and logging mechanisms for performance and error tracking.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Integration and Testing",
+      "Security and Compliance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6133,
+    "project_id": "BrainStatesClassifier",
+    "title": "Documentation and User Training",
+    "description": "Develop comprehensive documentation for the system, including user manuals, technical documentation, and training materials.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "User Interface Design and Development",
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

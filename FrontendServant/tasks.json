@@ -1,0 +1,133 @@
+[
+  {
+    "id": 2337,
+    "project_id": "FrontendServant",
+    "title": "Gather Requirements and Define Architecture",
+    "description": "Understand the project requirements, define the overall architecture, and identify the necessary components and services for the BFF pattern implementation. Consider the following aspects: data projections required for different UI views, event-driven update mechanisms, data caching strategies, API gateway integration, and microservices architecture for scalability and maintainability.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2338,
+    "project_id": "FrontendServant",
+    "title": "Design Data Projections",
+    "description": "Define the structure and format of the UI-ready data projections that will be served by the BFF layer.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Gather Requirements and Define Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2339,
+    "project_id": "FrontendServant",
+    "title": "Implement BFF Layer",
+    "description": "Develop the BFF layer, including APIs, data transformations, and event handling mechanisms.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Gather Requirements and Define Architecture",
+      "Design Data Projections"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2340,
+    "project_id": "FrontendServant",
+    "title": "Set up Event-Driven Architecture",
+    "description": "Implement the event-driven architecture to enable real-time UI updates based on backend events.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Gather Requirements and Define Architecture",
+      "Implement BFF Layer"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2341,
+    "project_id": "FrontendServant",
+    "title": "Integrate with Backend Services",
+    "description": "Connect the BFF layer with the existing backend services and data sources.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Implement BFF Layer"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2342,
+    "project_id": "FrontendServant",
+    "title": "Implement UI Components",
+    "description": "Develop the UI components that will consume the data projections and handle real-time updates.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design Data Projections",
+      "Set up Event-Driven Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2343,
+    "project_id": "FrontendServant",
+    "title": "Set up Testing and Deployment Pipelines",
+    "description": "Establish testing and deployment pipelines for the BFF layer and UI components.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Implement BFF Layer",
+      "Implement UI Components"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2344,
+    "project_id": "FrontendServant",
+    "title": "Conduct Security Audits",
+    "description": "Perform security audits on the BFF layer and event-driven architecture to identify and mitigate potential vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Implement BFF Layer",
+      "Set up Event-Driven Architecture"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 2345,
+    "project_id": "FrontendServant",
+    "title": "Write Documentation",
+    "description": "Document the BFF layer, data projections, event-driven architecture, and UI components for future reference and maintenance.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "Implement BFF Layer",
+      "Implement UI Components",
+      "Set up Event-Driven Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

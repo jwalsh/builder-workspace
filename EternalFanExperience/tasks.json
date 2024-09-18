@@ -1,0 +1,144 @@
+[
+  {
+    "id": 2135,
+    "project_id": "EternalFanExperience",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, goals, and requirements. Conduct market research, gather stakeholder input, and document functional and non-functional requirements.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2136,
+    "project_id": "EternalFanExperience",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including the AI model, virtual avatar rendering, user interaction components, data storage, and security considerations. Define the system's components, interfaces, data flow, and integration points. Consider scalability, performance, maintainability, and accessibility requirements. Address data privacy and ethical concerns related to AI-driven avatars interacting with users.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 2137,
+    "project_id": "EternalFanExperience",
+    "title": "AI Model Development",
+    "description": "Develop the AI model responsible for generating realistic interactions and responses based on the entertainment figure's persona and existing data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2138,
+    "project_id": "EternalFanExperience",
+    "title": "Virtual Avatar Rendering",
+    "description": "Develop the component responsible for rendering realistic 3D virtual avatars of the entertainment figures, including facial expressions, body movements, and lip-syncing.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2139,
+    "project_id": "EternalFanExperience",
+    "title": "User Interface and Experience Design",
+    "description": "Design the user interface and experience for fans to interact with the virtual avatars, including features like voice input, text chat, and virtual environments.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2140,
+    "project_id": "EternalFanExperience",
+    "title": "Data Management and Storage",
+    "description": "Design and implement a scalable, secure, and high-performance data management and storage system for storing and retrieving entertainment figure data, user interactions, and other relevant data. The system should support efficient data retrieval, backup, and archiving mechanisms. Ensure compliance with data privacy and security regulations. Consider using a combination of relational and NoSQL databases for different types of data, and implement caching mechanisms for frequently accessed data. Develop a data partitioning and sharding strategy for horizontal scalability. Implement robust data backup and disaster recovery mechanisms. Ensure data integrity and consistency through transactions and locking mechanisms. Develop a data access layer with APIs for secure and efficient data access.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Privacy and Security Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2141,
+    "project_id": "EternalFanExperience",
+    "title": "Security and Privacy Measures",
+    "description": "Implement security and privacy measures to protect user data, ensure secure communication, and prevent unauthorized access or misuse of the system.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 2142,
+    "project_id": "EternalFanExperience",
+    "title": "Integration and Testing",
+    "description": "Integrate the various components of the system and conduct thorough testing, including unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "AI Model Development",
+      "Virtual Avatar Rendering",
+      "User Interface and Experience Design",
+      "Data Management and Storage"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2143,
+    "project_id": "EternalFanExperience",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure, including cloud services, containerization, and continuous integration/continuous deployment (CI/CD) pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2144,
+    "project_id": "EternalFanExperience",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation, including user guides, API documentation, and developer documentation. Establish user support channels and processes.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

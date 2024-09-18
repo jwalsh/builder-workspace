@@ -1,0 +1,140 @@
+[
+  {
+    "id": 2174,
+    "project_id": "EthicalDilemmaTrainer",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the project's scope, objectives, and requirements, including the types of ethical dilemmas to be covered, target audience, and desired learning outcomes.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2175,
+    "project_id": "EthicalDilemmaTrainer",
+    "title": "Design System Architecture",
+    "description": "Develop the overall system architecture, including the AI components, simulation engine, user interface, data storage, and integration points. Consider scalability, performance, security, and maintainability requirements. Define the high-level components, their responsibilities, and interactions. Provide guidelines for technology stack, coding standards, and best practices.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 2176,
+    "project_id": "EthicalDilemmaTrainer",
+    "title": "Implement AI Components",
+    "description": "Develop the AI components responsible for generating and evaluating ethical dilemmas, as well as providing feedback and analysis.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2177,
+    "project_id": "EthicalDilemmaTrainer",
+    "title": "Build Simulation Engine",
+    "description": "Implement the simulation engine that presents the ethical dilemmas to users and handles user interactions.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2178,
+    "project_id": "EthicalDilemmaTrainer",
+    "title": "Develop User Interface",
+    "description": "Design and implement the user interface for the simulation tool, including the dilemma presentation, user input, and feedback display.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2179,
+    "project_id": "EthicalDilemmaTrainer",
+    "title": "Set up Data Storage",
+    "description": "Design and implement a secure, scalable, and efficient data storage solution for storing user data, simulation results, and other relevant information. The solution should consider data privacy, compliance with relevant regulations (e.g., GDPR, HIPAA), and support for data analytics and reporting. Implement robust access controls, encryption, and auditing mechanisms to ensure data security and integrity.",
+    "status": "IN PROGRESS",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 2180,
+    "project_id": "EthicalDilemmaTrainer",
+    "title": "Implement Security Measures",
+    "description": "Ensure the system is secure by implementing appropriate security measures, such as user authentication, data encryption, access controls, and secure coding practices. Conduct regular security audits and vulnerability assessments. Implement a robust incident response plan and ensure compliance with relevant security standards and regulations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 1,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 2181,
+    "project_id": "EthicalDilemmaTrainer",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a continuous integration and deployment pipeline for automated testing, building, and deploying the application. The pipeline should include the following stages:\n\n1. Code linting and static analysis\n2. Unit, integration, and end-to-end testing\n3. Build and package the application\n4. Deploy to a staging environment for testing\n5. Deploy to production after successful testing\n6. Monitoring and logging for the application in production\n\nThe pipeline should also include monitoring and alerting mechanisms to notify the team of any issues, failures, or performance degradations. Consider implementing automated rollback mechanisms in case of deployment failures. Additionally, ensure that the pipeline follows security best practices, such as vulnerability scanning and code signing.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 2182,
+    "project_id": "EthicalDilemmaTrainer",
+    "title": "Create Test Plan and Test Cases",
+    "description": "Develop a comprehensive test plan and test cases to ensure the application's functionality, usability, and performance meet the requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2183,
+    "project_id": "EthicalDilemmaTrainer",
+    "title": "Write User Documentation",
+    "description": "Create user documentation, including installation guides, user manuals, and training materials.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Develop User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

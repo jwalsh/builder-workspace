@@ -1,0 +1,130 @@
+[
+  {
+    "id": 2274,
+    "project_id": "FeedbackLoopOptimizer",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements by gathering input from stakeholders, including managers, employees, and subject matter experts.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2275,
+    "project_id": "FeedbackLoopOptimizer",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including the feedback loop workflow, data models, and integration with existing systems. The architecture should consider scalability, maintainability, and performance. It should also address security concerns, error handling, data privacy, and compliance with relevant regulations (e.g., GDPR).",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2276,
+    "project_id": "FeedbackLoopOptimizer",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema to store feedback data, user information, and other relevant data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2277,
+    "project_id": "FeedbackLoopOptimizer",
+    "title": "Backend Development",
+    "description": "Develop the server-side components, including APIs, business logic, and integration with other systems.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2278,
+    "project_id": "FeedbackLoopOptimizer",
+    "title": "Frontend Development",
+    "description": "Develop the user interfaces for managers, employees, and administrators, ensuring a seamless and intuitive experience.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2279,
+    "project_id": "FeedbackLoopOptimizer",
+    "title": "Security and Access Control",
+    "description": "Implement appropriate security measures, including authentication, authorization, and data encryption, to ensure the confidentiality and integrity of feedback data. This should include, but not be limited to, the following:\n\n1. User authentication using industry-standard protocols (e.g., OAuth, OpenID Connect) and secure password storage (e.g., salted and hashed).\n2. Role-based access control (RBAC) to restrict access to sensitive data and functionality based on user roles and permissions.\n3. Data encryption at rest (e.g., using AES-256) and in transit (e.g., using TLS/SSL) to protect feedback data.\n4. Secure communication channels (e.g., HTTPS) for all data transmissions.\n5. Regular security audits and penetration testing to identify and mitigate vulnerabilities.\n6. Adherence to relevant security standards and best practices (e.g., OWASP, NIST).",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2280,
+    "project_id": "FeedbackLoopOptimizer",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and execute comprehensive test plans, including unit tests, integration tests, and user acceptance tests, to ensure the system meets the defined requirements and functions as expected.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2281,
+    "project_id": "FeedbackLoopOptimizer",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment environment, including infrastructure provisioning, continuous integration/continuous deployment (CI/CD) pipelines, and monitoring and logging systems.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2282,
+    "project_id": "FeedbackLoopOptimizer",
+    "title": "Documentation and User Training",
+    "description": "Create comprehensive documentation, including user guides, administration manuals, and training materials, to support the adoption and effective use of the system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

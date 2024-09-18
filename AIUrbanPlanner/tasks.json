@@ -1,0 +1,130 @@
+[
+  {
+    "id": 433,
+    "project_id": "AIUrbanPlanner",
+    "title": "Define Project Requirements",
+    "description": "Gather and document detailed requirements for the AI Urban Planner system, including user stories, functional requirements, non-functional requirements, constraints, and key performance indicators (KPIs). Involve stakeholders from various domains such as urban planning, environmental science, local government, community representatives, and end-users to ensure comprehensive coverage of requirements and alignment with diverse perspectives.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 434,
+    "project_id": "AIUrbanPlanner",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including components, data flow, integration points, scalability considerations, and performance optimizations. Ensure modularity and maintainability of the architecture.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Requirements",
+      "Gather Data Sources"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 435,
+    "project_id": "AIUrbanPlanner",
+    "title": "Design Data Model",
+    "description": "Design the data model for storing and managing urban planning data, including housing, population, environmental, and quality of life metrics. The data model should be scalable, efficient, and support complex queries and analytics.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 436,
+    "project_id": "AIUrbanPlanner",
+    "title": "Develop AI Optimization Algorithms",
+    "description": "Develop and implement AI algorithms for optimizing urban housing development based on the defined requirements and constraints.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture",
+      "Design Data Model"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 437,
+    "project_id": "AIUrbanPlanner",
+    "title": "Implement User Interface",
+    "description": "Design and develop the user interface for the AI Urban Planner system, allowing users to input data, view results, and interact with the system.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 438,
+    "project_id": "AIUrbanPlanner",
+    "title": "Set up CI/CD Pipeline",
+    "description": "Establish a continuous integration and continuous deployment (CI/CD) pipeline for automated building, testing, and deployment of the AI Urban Planner system. The pipeline should include steps for code linting, unit testing, integration testing, security scanning, and deployment to staging and production environments.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Set up Version Control System"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 439,
+    "project_id": "AIUrbanPlanner",
+    "title": "Implement Security Measures",
+    "description": "Identify and implement security measures to protect the system and user data, including authentication, authorization, data encryption, secure communication protocols, and regular security audits. Consider industry best practices and compliance with relevant regulations (e.g., GDPR, CCPA). Ensure that security measures are implemented across all components of the system, including the frontend, backend, and database. Implement secure coding practices, such as input validation, output encoding, and protection against common web vulnerabilities (e.g., XSS, CSRF, SQL injection). Establish a security incident response plan and regular security testing and monitoring processes. Implement secure DevOps practices, such as secure code repositories, secure build and deployment processes, and secure infrastructure management.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Design System Architecture",
+      "Define Data Models"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 440,
+    "project_id": "AIUrbanPlanner",
+    "title": "Create Test Suite",
+    "description": "Develop a comprehensive test suite for the AI Urban Planner system, including unit tests, integration tests, and end-to-end tests. The test suite should cover the core functionalities, edge cases, and error handling scenarios. Ensure that the tests are modular, maintainable, and easy to extend as the system evolves.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 441,
+    "project_id": "AIUrbanPlanner",
+    "title": "Write Technical Documentation",
+    "description": "Create technical documentation for the AI Urban Planner system, including architecture diagrams, API documentation, and user guides.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

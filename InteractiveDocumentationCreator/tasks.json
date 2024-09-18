@@ -1,0 +1,149 @@
+[
+  {
+    "id": 2691,
+    "project_id": "InteractiveDocumentationCreator",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, goals, and requirements. Conduct market research, gather user feedback, and analyze existing documentation tools. Identify target audience, use cases, and key features. Determine technology stack and integration requirements. Establish project timeline, milestones, and resource allocation.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 2692,
+    "project_id": "InteractiveDocumentationCreator",
+    "title": "Architecture Design",
+    "description": "Design the overall system architecture, including the frontend, backend, database, and infrastructure components.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2693,
+    "project_id": "InteractiveDocumentationCreator",
+    "title": "User Interface Design",
+    "description": "Design the user interface and user experience for creating, viewing, and interacting with the interactive documentation.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2694,
+    "project_id": "InteractiveDocumentationCreator",
+    "title": "Backend Development",
+    "description": "Develop the backend components, including APIs, content management system, and integration with multimedia assets.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2695,
+    "project_id": "InteractiveDocumentationCreator",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema to store documentation content, user data, and multimedia assets.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2696,
+    "project_id": "InteractiveDocumentationCreator",
+    "title": "Infrastructure and DevOps",
+    "description": "Set up the infrastructure, including servers, networking, and continuous integration/deployment pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2697,
+    "project_id": "InteractiveDocumentationCreator",
+    "title": "Security and Compliance",
+    "description": "Implement security measures, such as authentication, authorization, and data encryption, and ensure compliance with relevant regulations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2698,
+    "project_id": "InteractiveDocumentationCreator",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation and user guides for the platform, including tutorials and best practices.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "User Interface Design",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2699,
+    "project_id": "InteractiveDocumentationCreator",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and implement a comprehensive testing strategy, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "User Interface Design",
+      "Backend Development",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 2700,
+    "project_id": "InteractiveDocumentationCreator",
+    "title": "Deployment and Launch",
+    "description": "Deploy the platform to production environments, perform final testing, and launch the platform to users.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "User Interface Design",
+      "Backend Development",
+      "Database Design and Implementation",
+      "Infrastructure and DevOps",
+      "Security and Compliance",
+      "Documentation and User Guides",
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

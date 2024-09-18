@@ -1,0 +1,129 @@
+[
+  {
+    "id": 230,
+    "project_id": "AIHousingMarketPredictor",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements by collaborating with stakeholders and conducting market research.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 231,
+    "project_id": "AIHousingMarketPredictor",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components, data flow, integration points, and infrastructure requirements. Consider scalability, fault tolerance, security, data privacy, and regulatory compliance aspects. Provide a high-level overview, detailed component diagrams, and a data architecture plan. Ensure compliance with relevant regulations and industry standards such as GDPR, CCPA, and industry-specific guidelines.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 232,
+    "project_id": "AIHousingMarketPredictor",
+    "title": "Data Pipeline and ETL",
+    "description": "Develop a robust data pipeline to collect, clean, and transform housing market data from various sources.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 233,
+    "project_id": "AIHousingMarketPredictor",
+    "title": "Machine Learning Model Development",
+    "description": "Design, train, and optimize machine learning models for housing market trend prediction.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Pipeline and ETL"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 234,
+    "project_id": "AIHousingMarketPredictor",
+    "title": "User Interface and Visualization",
+    "description": "Develop a user-friendly interface for visualizing housing market predictions and insights.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 235,
+    "project_id": "AIHousingMarketPredictor",
+    "title": "Security and Compliance",
+    "description": "Implement security measures and ensure compliance with relevant regulations and data privacy laws.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 236,
+    "project_id": "AIHousingMarketPredictor",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and execute thorough testing across all components and functionalities.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Data Pipeline and ETL",
+      "Machine Learning Model Development",
+      "User Interface and Visualization"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 237,
+    "project_id": "AIHousingMarketPredictor",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline, infrastructure, and monitoring for the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 238,
+    "project_id": "AIHousingMarketPredictor",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation and provide user support channels for the application.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "User Interface and Visualization"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

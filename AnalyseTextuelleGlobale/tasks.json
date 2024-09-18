@@ -1,0 +1,142 @@
+[
+  {
+    "id": 6770,
+    "project_id": "AnalyseTextuelleGlobale",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the project requirements, define the scope, and identify the key features and functionalities of the text analysis platform.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6771,
+    "project_id": "AnalyseTextuelleGlobale",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture for the global text analysis platform, including the components, data flow, integration points, and considerations for scalability, maintainability, and performance. The architecture should support processing and analyzing documents in multiple languages using AI techniques.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 6772,
+    "project_id": "AnalyseTextuelleGlobale",
+    "title": "Develop Natural Language Processing (NLP) Models",
+    "description": "Research, develop, and train NLP models for text analysis tasks such as sentiment analysis, named entity recognition, and topic modeling.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6773,
+    "project_id": "AnalyseTextuelleGlobale",
+    "title": "Implement Backend Services",
+    "description": "Develop the backend services for text processing, analysis, and data management.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6774,
+    "project_id": "AnalyseTextuelleGlobale",
+    "title": "Design and Develop User Interface",
+    "description": "Design and develop the user interface for the text analysis platform, including document upload, analysis configuration, and result visualization.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6775,
+    "project_id": "AnalyseTextuelleGlobale",
+    "title": "Implement Data Storage and Management",
+    "description": "Design and implement a scalable and efficient data storage and management solution for storing and retrieving documents, analysis results, and other relevant data. Consider using a combination of relational databases and NoSQL databases based on the data requirements. Implement caching mechanisms for frequently accessed data to improve performance. Ensure data security, integrity, and backup strategies are in place.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 6776,
+    "project_id": "AnalyseTextuelleGlobale",
+    "title": "Establish Security and Compliance Measures",
+    "description": "Implement security measures, such as authentication, authorization, data encryption, secure communication protocols, and regular security audits, to ensure the platform's security and compliance with relevant regulations (e.g., GDPR, HIPAA, PCI-DSS).",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 6777,
+    "project_id": "AnalyseTextuelleGlobale",
+    "title": "Set up Continuous Integration and Deployment (CI/CD)",
+    "description": "Establish a CI/CD pipeline for automated building, testing, and deployment of the application. The pipeline should include the following stages: code linting, unit testing, integration testing, security scanning, build and packaging, and deployment to staging and production environments. Ensure that the pipeline is configured to automatically trigger on code changes and supports rollbacks in case of deployment failures.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 6778,
+    "project_id": "AnalyseTextuelleGlobale",
+    "title": "Conduct Testing and Quality Assurance",
+    "description": "Plan and execute various testing activities, including unit testing, integration testing, and user acceptance testing, to ensure the platform's quality and functionality.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Backend Services",
+      "Design and Develop User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 6779,
+    "project_id": "AnalyseTextuelleGlobale",
+    "title": "Prepare Documentation and User Guides",
+    "description": "Create comprehensive documentation and user guides for the text analysis platform, covering installation, configuration, and usage instructions.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Design and Develop User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

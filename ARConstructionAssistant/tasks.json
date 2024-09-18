@@ -1,0 +1,148 @@
+[
+  {
+    "id": 498,
+    "project_id": "ARConstructionAssistant",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, goals, and requirements through stakeholder interviews and research.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 499,
+    "project_id": "ARConstructionAssistant",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components, data flows, and integration points. The architecture should consider the following key aspects:\n\n1. Device compatibility: The system should support various AR-enabled devices (e.g., smartphones, tablets, AR headsets) and handle different hardware capabilities. Consider a modular design that separates device-specific logic from core functionality.\n\n2. Data management: Implement a centralized data storage solution (e.g., cloud-based database) for construction data and user data. Ensure data integrity, backup, and recovery mechanisms.\n\n3. Real-time data processing: Utilize edge computing or serverless architectures for low-latency processing of sensor data. Consider offloading computationally intensive tasks to cloud resources.\n\n4. Scalability and performance: Adopt a microservices architecture with load balancing and auto-scaling capabilities. Implement caching and content delivery networks (CDNs) for improved performance.\n\n5. Integration with existing systems: Expose APIs or use industry-standard protocols (e.g., IFC, BCF) for integration with construction management software, BIM tools, and other relevant systems.\n\n6. Security and privacy: Implement secure authentication and authorization mechanisms. Encrypt data in transit and at rest. Adhere to relevant data privacy regulations (e.g., GDPR, CCPA).\n\n7. Offline mode: Consider supporting an offline mode for situations with limited or no internet connectivity, with local data caching and synchronization mechanisms.\n\n8. Extensibility and maintainability: Design a modular and extensible architecture that allows for easy integration of new features, devices, and data sources. Follow industry best practices for code organization, documentation, and testing.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 500,
+    "project_id": "ARConstructionAssistant",
+    "title": "User Interface Design",
+    "description": "Design the user interface for the augmented reality application, considering usability, accessibility, integration with the core functionality of the system, and adherence to industry standards and best practices for augmented reality user interfaces. The design should also account for potential hardware limitations, such as processing power and battery life, and optimize the user experience accordingly.",
+    "status": "IN PROGRESS",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Project Planning and Requirements Gathering",
+      "Core Functionality Development",
+      "Hardware Selection and Integration"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 501,
+    "project_id": "ARConstructionAssistant",
+    "title": "Backend Development",
+    "description": "Implement the backend services, including data processing, computer vision, and integration with external systems.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 502,
+    "project_id": "ARConstructionAssistant",
+    "title": "Frontend Development",
+    "description": "Develop the augmented reality user interface, integrating with the backend services.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "User Interface Design",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 503,
+    "project_id": "ARConstructionAssistant",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema for storing project data, measurements, user information, safety records, equipment data, and other relevant data required for the AR Construction Assistant application. Ensure the database design follows best practices for scalability, performance, data integrity, and security. Consider using a NoSQL database for storing large amounts of sensor data and measurements, while using a relational database for structured data like user information and project details.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Modeling and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED"
+  },
+  {
+    "id": 504,
+    "project_id": "ARConstructionAssistant",
+    "title": "Security and Compliance",
+    "description": "Ensure the system adheres to security best practices and industry regulations for construction sites.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 505,
+    "project_id": "ARConstructionAssistant",
+    "title": "Testing and Quality Assurance",
+    "description": "Plan and execute comprehensive testing strategies, including unit, integration, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 506,
+    "project_id": "ARConstructionAssistant",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline, infrastructure, and monitoring for the production environment.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 507,
+    "project_id": "ARConstructionAssistant",
+    "title": "Documentation and User Training",
+    "description": "Create comprehensive documentation and training materials for end-users and administrators.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

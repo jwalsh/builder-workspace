@@ -1,0 +1,115 @@
+[
+  {
+    "id": 89,
+    "project_id": "AICodeReviewer",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the detailed requirements for the AICodeReviewer system, including the types of code analysis to be performed, the programming languages and frameworks to be supported, and the desired user interface and integration points.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 90,
+    "project_id": "AICodeReviewer",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the AICodeReviewer system, including the main components, their interactions, data flow, and integration points. Consider the following components: a web-based user interface, a code analysis engine, a code repository integration, a database for storing analysis results and project data, and a notification system. Address scalability, performance, security, and maintainability concerns.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 91,
+    "project_id": "AICodeReviewer",
+    "title": "Develop Code Analysis Engine",
+    "description": "Implement the core code analysis engine that can parse and analyze source code, identify potential issues, and suggest improvements.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 92,
+    "project_id": "AICodeReviewer",
+    "title": "Implement User Interface",
+    "description": "Develop the user interface for the AICodeReviewer system, including the ability to submit code repositories or pull requests, view analysis results, and manage settings.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 93,
+    "project_id": "AICodeReviewer",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Configure the CI/CD pipeline for the AICodeReviewer system, including automated builds, testing, and deployment to staging and production environments.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Code Analysis Engine",
+      "Implement User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 94,
+    "project_id": "AICodeReviewer",
+    "title": "Implement Security and Compliance Checks",
+    "description": "Integrate security and compliance checks into the code analysis engine, including checks for vulnerabilities, data privacy, and regulatory compliance.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Develop Code Analysis Engine"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 95,
+    "project_id": "AICodeReviewer",
+    "title": "Develop Testing and Quality Assurance Strategy",
+    "description": "Define and implement a comprehensive testing and quality assurance strategy for the AICodeReviewer system, including unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Develop Code Analysis Engine",
+      "Implement User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 96,
+    "project_id": "AICodeReviewer",
+    "title": "Write Documentation and User Guides",
+    "description": "Prepare comprehensive documentation and user guides for the AICodeReviewer system, including installation instructions, usage examples, and API references.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Implement User Interface",
+      "Develop Testing and Quality Assurance Strategy"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

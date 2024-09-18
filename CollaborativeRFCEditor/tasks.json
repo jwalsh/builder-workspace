@@ -1,0 +1,136 @@
+[
+  {
+    "id": 1286,
+    "project_id": "CollaborativeRFCEditor",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, gather requirements from stakeholders, and create a detailed project plan.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1287,
+    "project_id": "CollaborativeRFCEditor",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including the backend, frontend, and database components. The architecture should prioritize scalability, maintainability, and performance. Consider using a microservices architecture with separate services for different functionalities. Ensure proper separation of concerns and modular design. Incorporate real-time collaboration features, version control, and access control mechanisms. Define the data models and database schemas. Outline the technology stack and programming languages to be used. Address security considerations, such as authentication, authorization, and data protection. Provide guidelines for deployment, monitoring, and logging.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1288,
+    "project_id": "CollaborativeRFCEditor",
+    "title": "Backend Development",
+    "description": "Implement the backend services and APIs for real-time collaborative editing and RFC management.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1289,
+    "project_id": "CollaborativeRFCEditor",
+    "title": "Frontend Development",
+    "description": "Develop the user interface for the collaborative RFC editor, including real-time editing and document management features.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1290,
+    "project_id": "CollaborativeRFCEditor",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema for storing RFCs, revisions, user data, and related metadata. The schema should support versioning, collaboration features, and efficient querying. Consider using a document-oriented database or a relational database with appropriate indexing and normalization strategies.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1291,
+    "project_id": "CollaborativeRFCEditor",
+    "title": "Security and Access Control",
+    "description": "Implement user authentication, authorization, and access control mechanisms for the collaborative editing platform.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1292,
+    "project_id": "CollaborativeRFCEditor",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and execute test plans for the collaborative RFC editor, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Database Design and Implementation",
+      "Security and Access Control"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 1293,
+    "project_id": "CollaborativeRFCEditor",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure, continuous integration/continuous deployment (CI/CD) pipelines, monitoring, and logging for the collaborative RFC editor. This should include the following components:\n\n1. Containerization (e.g., Docker) for consistent and reproducible deployments.\n2. Container orchestration (e.g., Kubernetes) for managing and scaling the application.\n3. CI/CD pipeline (e.g., GitHub Actions, Jenkins) for automated builds, testing, and deployments.\n4. Monitoring and logging tools (e.g., Prometheus, Grafana, ELK stack) for observability and troubleshooting.\n5. Load balancing and scaling strategies for handling high traffic.\n6. Secure deployment practices, including encryption, access controls, and regular security updates.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Database Design and Implementation",
+      "Security and Access Control"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 1294,
+    "project_id": "CollaborativeRFCEditor",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation and user guides for the collaborative RFC editor, covering installation, usage, and administration.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Database Design and Implementation",
+      "Security and Access Control",
+      "Deployment and DevOps"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]
