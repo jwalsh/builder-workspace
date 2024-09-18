@@ -68,6 +68,22 @@ test-all: ## Run all actions in sequence
 test-all: categorize analyze categories export train-test deduplicate check-arxiv
 	@echo "$(CYAN)All tests completed.$(NC)"
 
+ollama-test-generate:
+	curl -X POST http://localhost:11434/api/generate -H "Content-Type: application/json" -d "{\"model\": \"llama3:8b-instruct-q8_0\", \"prompt\": \"System Message: Provide a concise summary of the following text.\n\nText: Machine learning is a subset of artificial intelligence that focuses on building systems that learn from data. It involves algorithms and statistical models to perform specific tasks without explicit instructions, relying on patterns and inference instead.\", \"temperature\": 0.5}"
+
+ollama-test-embeddings:
+	curl -X POST http://localhost:11434/api/embeddings -H "Content-Type: application/json" -d "{\"model\": \"mxbai-embed-large\", \"prompt\": \"Llamas are members of the camelid family\"}"
+
+MultilinguaStoryForge:
+	python coordinator.py --name MultilinguaStoryForge
+
+
+BuilderAgents:
+	python coordinator.py --name BuilderAgents
+
+AdFlow:
+	python coordinator.py --name AdFlow --force
+
 clean: ## Remove generated files
 	rm -f $(OUTPUT_FILE) $(TRAIN_FILE) $(TEST_FILE)
 	rm -f category_similarity_dendrogram.png project_similarity_clusters.png
