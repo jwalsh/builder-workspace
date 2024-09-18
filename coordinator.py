@@ -63,7 +63,7 @@ class LLMConfig(BaseModel):
     provider: LLMProvider
     ollama_healthy: bool
     claude_healthy: bool
-    last_check: str 
+    last_check: datetime  # Change this from str to datetime
 
 # Initialize Anthropic client
 client = anthropic.Client(api_key=os.environ.get("ANTHROPIC_API_KEY"))
@@ -125,13 +125,9 @@ def load_config():
         try:
             with open(CONFIG_FILE, 'r') as f:
                 config_data = json.load(f)
-            if isinstance(config_data['last_check'], str):
-                config = LLMConfig(**config_data)
-            else:
-                # Convert datetime to string if it's still stored as a datetime
-                config_data['last_check'] = config_data['last_check'].isoformat()
-                config = LLMConfig(**config_data)
-        except (json.JSONDecodeError, KeyError, TypeError):
+            config_data['last_check'] = datetime.fromisoformat(config_data['last_check'])
+            config = LLMConfig(**config_data)
+        except (json.JSONDecodeError, KeyError, TypeError, ValueError):
             logging.warning("Invalid config file. Creating a new configuration.")
             create_default_config()
     else:
@@ -143,20 +139,22 @@ def create_default_config():
         provider=LLMProvider.OLLAMA,
         ollama_healthy=True,
         claude_healthy=True,
-        last_check=datetime.now().isoformat()
+        last_check=datetime.now()
     )
     save_config()
 
 def save_config():
+    config_dict = config.dict()
+    config_dict['last_check'] = config.last_check.isoformat()
     with open(CONFIG_FILE, 'w') as f:
-        json.dump(config.dict(), f)
+        json.dump(config_dict, f)
 
 def update_health_status(force_check=False):
     global config
     if force_check or (datetime.now() - datetime.fromisoformat(config.last_check)) > timedelta(hours=4):
         config.ollama_healthy = check_ollama_health()
         config.claude_healthy = check_claude_health()
-        config.last_check = datetime.now().isoformat()
+        config.last_check = datetime.now()
         save_config()
 
 def check_ollama_health():
