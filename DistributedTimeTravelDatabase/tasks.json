@@ -1,1 +1,113 @@
-[]
+[
+  {
+    "id": 7252,
+    "project_id": "DistributedTimeTravelDatabase",
+    "title": "Requirements Gathering and Analysis",
+    "description": "Identify and document the functional and non-functional requirements of the DistributedTimeTravelDatabase.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7253,
+    "project_id": "DistributedTimeTravelDatabase",
+    "title": "Design the Database Architecture",
+    "description": "Design the overall architecture of the distributed time-travel database, considering data distribution, scalability, and consistency.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7254,
+    "project_id": "DistributedTimeTravelDatabase",
+    "title": "Design the Time-Travel Query System",
+    "description": "Design a system that allows for time-travel queries across the large-scale dataset.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design the Database Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7255,
+    "project_id": "DistributedTimeTravelDatabase",
+    "title": "Implement Backend Services",
+    "description": "Develop the necessary backend services for the distributed time-travel database.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design the Database Architecture",
+      "Design the Time-Travel Query System"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7256,
+    "project_id": "DistributedTimeTravelDatabase",
+    "title": "Develop Frontend Interface",
+    "description": "Create a user-friendly interface for users to interact with the distributed time-travel database.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 5,
+    "dependencies": [
+      "Implement Backend Services"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7257,
+    "project_id": "DistributedTimeTravelDatabase",
+    "title": "Perform Unit and Integration Tests",
+    "description": "Write and execute unit tests for individual components and integration tests to ensure proper functioning of the overall system.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Implement Backend Services"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7258,
+    "project_id": "DistributedTimeTravelDatabase",
+    "title": "Deploy the DistributedTimeTravelDatabase",
+    "description": "Deploy the distributed time-travel database to a production environment, ensuring proper configuration and monitoring.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Develop Frontend Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7259,
+    "project_id": "DistributedTimeTravelDatabase",
+    "title": "Security Audit",
+    "description": "Conduct a thorough security audit to identify and address any potential vulnerabilities in the distributed time-travel database.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Deploy the DistributedTimeTravelDatabase"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  }
+]
