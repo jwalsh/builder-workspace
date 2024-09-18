@@ -1,1 +1,186 @@
-[]
+[
+  {
+    "id": 7534,
+    "project_id": "GeneticOptimizationPlatform",
+    "title": "Define Project Requirements",
+    "description": "Gather and document project requirements from stakeholders, including functional, non-functional, and performance requirements.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7535,
+    "project_id": "GeneticOptimizationPlatform",
+    "title": "Design Platform Architecture",
+    "description": "Create an architectural design for the GeneticOptimizationPlatform, including frontend, backend, database, and deployment components.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7536,
+    "project_id": "GeneticOptimizationPlatform",
+    "title": "Create Frontend User Interface Design",
+    "description": "Design the user interface for the GeneticOptimizationPlatform, considering user experience, accessibility, and responsiveness.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Platform Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7537,
+    "project_id": "GeneticOptimizationPlatform",
+    "title": "Develop Backend Services",
+    "description": "Implement the backend services for the GeneticOptimizationPlatform, including data processing, analytics, and API endpoints.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design Platform Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7538,
+    "project_id": "GeneticOptimizationPlatform",
+    "title": "Set Up Database Schema",
+    "description": "Create and configure the database schema for the GeneticOptimizationPlatform, including tables, relationships, and indexes.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design Platform Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7539,
+    "project_id": "GeneticOptimizationPlatform",
+    "title": "Implement Data Security Measures",
+    "description": "Secure the GeneticOptimizationPlatform by implementing appropriate data encryption, authentication, and authorization mechanisms.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design Platform Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7540,
+    "project_id": "GeneticOptimizationPlatform",
+    "title": "Conduct Unit Testing",
+    "description": "Write and execute unit tests for the GeneticOptimizationPlatform components to ensure they meet functional requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Backend Services Development",
+      "Frontend Development"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7541,
+    "project_id": "GeneticOptimizationPlatform",
+    "title": "Integration Testing",
+    "description": "Test the integration between different components of the GeneticOptimizationPlatform to ensure proper functionality.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Backend Services Development",
+      "Frontend Development"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7542,
+    "project_id": "GeneticOptimizationPlatform",
+    "title": "Perform Code Reviews",
+    "description": "Review the code developed for the GeneticOptimizationPlatform to ensure it adheres to best practices and design patterns.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Backend Services Development",
+      "Frontend Development"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7543,
+    "project_id": "GeneticOptimizationPlatform",
+    "title": "Deploy GeneticOptimizationPlatform",
+    "description": "Prepare and execute the deployment of the GeneticOptimizationPlatform to a staging environment for further testing.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Design Platform Architecture",
+      "Implement Data Security Measures"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7544,
+    "project_id": "GeneticOptimizationPlatform",
+    "title": "Test in Staging Environment",
+    "description": "Execute tests on the GeneticOptimizationPlatform in the staging environment to ensure proper functionality and performance.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Deploy GeneticOptimizationPlatform"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7545,
+    "project_id": "GeneticOptimizationPlatform",
+    "title": "Prepare for Production Deployment",
+    "description": "Prepare the GeneticOptimizationPlatform for production deployment, including updating configuration settings and performing final checks.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Test in Staging Environment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7546,
+    "project_id": "GeneticOptimizationPlatform",
+    "title": "Production Deployment",
+    "description": "Deploy the GeneticOptimizationPlatform to a production environment and monitor its performance.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Prepare for Production Deployment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

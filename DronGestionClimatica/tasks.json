@@ -1,1 +1,130 @@
-[]
+[
+  {
+    "id": 7290,
+    "project_id": "DronGestionClimatica",
+    "title": "Requirements Gathering for DroneGestionClimatica",
+    "description": "Gather and document project requirements from stakeholders",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7291,
+    "project_id": "DronGestionClimatica",
+    "title": "Design Architecture for Drones and Climate Management System",
+    "description": "Develop high-level architecture design for the drone system and climate management",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering for DroneGestionClimatica"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7292,
+    "project_id": "DronGestionClimatica",
+    "title": "Database Design for Climate Data and Drone Operations",
+    "description": "Design the database schema for storing climate data and drone operation details",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design Architecture for Drones and Climate Management System"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7293,
+    "project_id": "DronGestionClimatica",
+    "title": "Develop Frontend Interface for User Interaction",
+    "description": "Create the user interface to manage drones, monitor climate data, and adjust parameters",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design Architecture for Drones and Climate Management System"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7294,
+    "project_id": "DronGestionClimatica",
+    "title": "Implement Backend Functions for Drone Control and Data Processing",
+    "description": "Develop the backend functions to control drones, process climate data, and manage database interactions",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 5,
+    "dependencies": [
+      "Design Architecture for Drones and Climate Management System",
+      "Database Design for Climate Data and Drone Operations"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7295,
+    "project_id": "DronGestionClimatica",
+    "title": "Integrate DevOps for Continuous Deployment and Monitoring",
+    "description": "Set up the DevOps pipeline for continuous deployment, monitoring, and maintenance of the system",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Implement Backend Functions for Drone Control and Data Processing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7296,
+    "project_id": "DronGestionClimatica",
+    "title": "Perform Security Audit on the System",
+    "description": "Review the system architecture and implementation for potential security vulnerabilities",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Implement Backend Functions for Drone Control and Data Processing"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 7297,
+    "project_id": "DronGestionClimatica",
+    "title": "Test the DronGestionClimatica System",
+    "description": "Perform functional, integration, and unit testing on the system to ensure it meets requirements",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Implement Backend Functions for Drone Control and Data Processing"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  },
+  {
+    "id": 7298,
+    "project_id": "DronGestionClimatica",
+    "title": "Review and Approve Requirements and Design Documents",
+    "description": "Review the gathered requirements, design documents, and audit findings to ensure they meet project goals and are ready for implementation",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [
+      "Requirements Gathering for DroneGestionClimatica",
+      "Design Architecture for Drones and Climate Management System",
+      "Database Design for Climate Data and Drone Operations",
+      "Security Audit on the System"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  }
+]

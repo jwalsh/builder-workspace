@@ -1,1 +1,101 @@
-[]
+[
+  {
+    "id": 7378,
+    "project_id": "EmotionalAIForCustomerService",
+    "title": "Requirements Gathering and Analysis",
+    "description": "Understand the project's requirements for the EmotionalAIForCustomerService. This includes identifying the emotional states to detect, desired response customization, and any specific platform compatibility needs.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7379,
+    "project_id": "EmotionalAIForCustomerService",
+    "title": "Design AI Model Architecture",
+    "description": "Design the overall architecture of the AI model that will detect emotional states. This includes defining the data inputs, processing steps, and output format.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7380,
+    "project_id": "EmotionalAIForCustomerService",
+    "title": "Develop AI Model for Emotion Detection",
+    "description": "Develop the AI model using machine learning techniques to detect emotional states from customer inputs.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design AI Model Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7381,
+    "project_id": "EmotionalAIForCustomerService",
+    "title": "Develop Tailored Customer Service Responses",
+    "description": "Create tailored customer service responses based on the detected emotional states.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "AI Model for Emotion Detection"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7382,
+    "project_id": "EmotionalAIForCustomerService",
+    "title": "Integrate AI into Customer Service Platform",
+    "description": "Integrate the developed AI system into an existing customer service platform.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Develop AI Model for Emotion Detection",
+      "Develop Tailored Customer Service Responses"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7383,
+    "project_id": "EmotionalAIForCustomerService",
+    "title": "Perform Unit and Integration Testing",
+    "description": "Test each component of the AI system as well as its integration with the customer service platform.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 1,
+    "dependencies": [
+      "Develop AI Model for Emotion Detection",
+      "Develop Tailored Customer Service Responses",
+      "Integrate AI into Customer Service Platform"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 7384,
+    "project_id": "EmotionalAIForCustomerService",
+    "title": "Deploy the EmotionalAIForCustomerService to Production",
+    "description": "Deploy the finished product to a production environment, ensuring minimal downtime and smooth transition.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Perform Unit and Integration Testing"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  }
+]

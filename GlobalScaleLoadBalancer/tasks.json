@@ -1,1 +1,157 @@
-[]
+[
+  {
+    "id": 7643,
+    "project_id": "GlobalScaleLoadBalancer",
+    "title": "Requirements Gathering and Analysis",
+    "description": "Gather requirements from stakeholders, analyze business needs, and document them.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7644,
+    "project_id": "GlobalScaleLoadBalancer",
+    "title": "Design Architecture for GlobalScaleLoadBalancer",
+    "description": "Develop the overall system architecture that addresses latency, capacity, and fault tolerance requirements.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7645,
+    "project_id": "GlobalScaleLoadBalancer",
+    "title": "Design Load Balancer Algorithm",
+    "description": "Develop the algorithm for intelligent traffic distribution considering latency, capacity, and fault tolerance.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Architecture for GlobalScaleLoadBalancer"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7646,
+    "project_id": "GlobalScaleLoadBalancer",
+    "title": "Develop Data Center Connectivity Module",
+    "description": "Implement the module to connect data centers and ensure seamless traffic flow.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design Architecture for GlobalScaleLoadBalancer"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null
+  },
+  {
+    "id": 7647,
+    "project_id": "GlobalScaleLoadBalancer",
+    "title": "Develop User Interface for Load Balancer Management",
+    "description": "Create a user-friendly interface to manage and monitor the load balancing system.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 5,
+    "dependencies": [
+      "Design Architecture for GlobalScaleLoadBalancer"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null
+  },
+  {
+    "id": 7648,
+    "project_id": "GlobalScaleLoadBalancer",
+    "title": "Database Design and Implementation",
+    "description": "Create a scalable database design to store and manage load balancing data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design Architecture for GlobalScaleLoadBalancer"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7649,
+    "project_id": "GlobalScaleLoadBalancer",
+    "title": "Deploy Load Balancer to Test Environment",
+    "description": "Setup the load balancing system in a test environment and configure necessary resources.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Design Architecture for GlobalScaleLoadBalancer",
+      "Develop Data Center Connectivity Module",
+      "Develop User Interface for Load Balancer Management",
+      "Database Design and Implementation"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null
+  },
+  {
+    "id": 7650,
+    "project_id": "GlobalScaleLoadBalancer",
+    "title": "Test GlobalScaleLoadBalancer in Test Environment",
+    "description": "Perform functional, integration, and performance testing to ensure the load balancing system works as intended.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Deploy Load Balancer to Test Environment"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null
+  },
+  {
+    "id": 7651,
+    "project_id": "GlobalScaleLoadBalancer",
+    "title": "Address Test Findings and Iterate",
+    "description": "Fix any identified issues or inefficiencies based on testing results, and iterate until the system passes tests.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [
+      "Test GlobalScaleLoadBalancer in Test Environment"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null
+  },
+  {
+    "id": 7652,
+    "project_id": "GlobalScaleLoadBalancer",
+    "title": "Deploy Load Balancer to Production",
+    "description": "Setup the load balancing system in a production environment and configure necessary resources.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Address Test Findings and Iterate"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null
+  },
+  {
+    "id": 7653,
+    "project_id": "GlobalScaleLoadBalancer",
+    "title": "Monitor GlobalScaleLoadBalancer in Production",
+    "description": "Set up monitoring and alerting mechanisms to ensure smooth operation of the load balancing system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Deploy Load Balancer to Production"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null
+  }
+]

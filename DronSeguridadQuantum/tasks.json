@@ -1,1 +1,140 @@
-[]
+[
+  {
+    "id": 7299,
+    "project_id": "DronSeguridadQuantum",
+    "title": "Define Project Requirements",
+    "description": "Gather and document project requirements from stakeholders.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 7300,
+    "project_id": "DronSeguridadQuantum",
+    "title": "Design Quantum Communication System Architecture",
+    "description": "Develop the architecture for the quantum communication system.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7301,
+    "project_id": "DronSeguridadQuantum",
+    "title": "Design Drones Hardware and Software Architecture",
+    "description": "Develop the architecture for the drone hardware and software.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Design Quantum Communication System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 7302,
+    "project_id": "DronSeguridadQuantum",
+    "title": "Develop Quantum Communication System Software",
+    "description": "Implement the software for the quantum communication system.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Quantum Communication System Architecture"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null
+  },
+  {
+    "id": 7303,
+    "project_id": "DronSeguridadQuantum",
+    "title": "Develop Drones Software",
+    "description": "Implement the software for the drones.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Drones Hardware and Software Architecture"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null
+  },
+  {
+    "id": 7304,
+    "project_id": "DronSeguridadQuantum",
+    "title": "Implement Quantum Key Distribution (QKD) Algorithm",
+    "description": "Integrate the QKD algorithm into the quantum communication system.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Develop Quantum Communication System Software"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null
+  },
+  {
+    "id": 7305,
+    "project_id": "DronSeguridadQuantum",
+    "title": "Test Quantum Communication System Integration",
+    "description": "Perform unit and integration tests on the quantum communication system.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Develop Quantum Communication System Software"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null
+  },
+  {
+    "id": 7306,
+    "project_id": "DronSeguridadQuantum",
+    "title": "Test Drones Functionality and Integration",
+    "description": "Perform unit and integration tests on the drones.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Develop Drones Software"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null
+  },
+  {
+    "id": 7307,
+    "project_id": "DronSeguridadQuantum",
+    "title": "Deploy and Conduct Initial Test Flights",
+    "description": "Set up the drones in a test environment and conduct initial flights.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Test Drones Functionality and Integration"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null
+  },
+  {
+    "id": 7308,
+    "project_id": "DronSeguridadQuantum",
+    "title": "Review and Address Feedback from Test Flights",
+    "description": "Address any issues identified during test flights and ensure the system is functioning as expected.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [
+      "Deploy and Conduct Initial Test Flights"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  }
+]
