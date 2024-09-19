@@ -1,0 +1,131 @@
+#+TITLE: RFC-006: Standardized Resources for Code Implementation with RAG and Ollama
+#+AUTHOR: Meta AI
+#+DATE: 2024-09-19
+
+* Introduction
+
+This RFC proposes the creation of a standardized resources directory for code implementation, specifically designed for use with Retrieval-Augmented Generation (RAG) and Ollama.
+
+* Current Setup
+
+Our code implementation agent is part of a project structure that includes various scripts and configuration files. However, there is no centralized resource for library documentation, leading to potential inefficiencies in code implementation.
+
+* Proposed Solution
+
+Create a `resources` directory within the project structure, containing subdirectories for each supported programming language. Each language directory will contain a list of popular libraries, along with their documentation and usage examples.
+
+```python
+# Define the resources directory
+resources_dir = 'resources'
+
+# Define the languages and their libraries
+languages = {
+    'python': [
+        {'name': 'requests', 'version': '2.28.1'},
+        {'name': 'numpy', 'version': '1.23.2'},
+        # Add more libraries here
+    ],
+    'typescript': [
+        {'name': 'express', 'version': '4.17.1'},
+        {'name': 'react', 'version': '18.2.0'},
+        # Add more libraries here
+    ],
+    'clojure': [
+        {'name': 'ring', 'version': '1.9.5'},
+        {'name': 'compojure', 'version': '1.6.2'},
+        # Add more libraries here
+    ],
+    'scheme': [
+        {'name': 'racket', 'version': '8.6'},
+        {'name': 'guile', 'version': '3.0.8'},
+        # Add more libraries here
+    ]
+}
+Directory Structure
+MarkDown
+resources
+├── python
+│   ├── libraries.csv
+│   ├── requests
+│   │   ├── README.md
+│   │   └── example.py
+│   ├── numpy
+│   │   ├── README.md
+│   │   └── example.py
+│   └── ...
+├── typescript
+│   ├── libraries.csv
+│   ├── express
+│   │   ├── README.md
+│   │   └── example.ts
+│   ├── react
+│   │   ├── README.md
+│   │   └── example.ts
+│   └── ...
+├── clojure
+│   ├── libraries.csv
+│   ├── ring
+│   │   ├── README.md
+│   │   └── example.clj
+│   ├── compojure
+│   │   ├── README.md
+│   │   └── example.clj
+│   └── ...
+└── scheme
+    ├── libraries.csv
+    ├── racket
+    │   ├── README.md
+    │   └── example.rkt
+    ├── guile
+    │   ├── README.md
+    │   └── example.scm
+    └── ...
+libraries.csv
+CSV
+library,version
+requests,2.28.1
+numpy,1.23.2
+Library Documentation
+Each library directory will contain a README.md file, providing an overview of the library, its usage, and any relevant documentation.
+Example Code
+Each library directory will contain an example file (e.g., example.py, example.ts, etc.), demonstrating the usage of the library.
+RAG and Ollama Integration
+This resources directory is designed to be used in conjunction with RAG and Ollama, allowing our AI-powered code implementation agent to retrieve relevant library documentation and examples.
+Alternative Options
+While this RFC focuses on RAG and Ollama, the proposed resources directory can also be used with other AI models and platforms, such as:
+Hugging Face Transformers
+Bedrock
+OpenAI Codex
+LlamaIndex
+Other RAG-based models
+Benefits
+Easy access to library documentation and examples
+Improved efficiency and accuracy in code implementation
+Standardized resource structure for all supported languages
+Compatibility with various AI models and platforms
+* Next Steps
+Create the resources directory and language subdirectories.
+Populate the libraries.csv files for each language.
+Add library documentation and example code for each included library.
+Update the code implementation agent to utilize the new resources directory with RAG and Ollama.
+* Conclusion
+By creating a standardized resources directory for code implementation with RAG and Ollama, we can enhance the efficiency and accuracy of our AI-powered code implementation agent. This RFC provides a clear structure for organizing library documentation and examples, ensuring easy access to the resources needed for effective code implementation.
+
+
+#+BEGIN_SRC python :tangle resources.py
+Tangle the resources directory creation code
+import os
+def create_resources_dir():
+resources_dir = 'resources'
+if not os.path.exists(resources_dir):
+os.makedirs(resources_dir)
+# Create language subdirectories
+languages = ['python', 'typescript', 'clojure', 'scheme']
+for language in languages:
+    language_dir = os.path.join(resources_dir, language)
+    if not os.path.exists(language_dir):
+        os.makedirs(language_dir)
+create_resources_dir()
+#+END_SRC
+
+You can tangle the code block to create a Python script that creates the resources directory and language subdirectories.
