@@ -4,7 +4,7 @@ import sqlite3
 from typing import List
 from .db import add_project_version, add_task, get_tasks, update_task, get_db_path
 from .models import ProjectDefinition, Task, TaskType, RFCState
-from .llm import run_llm_command
+from .llm import run_llm_command, load_config
 from .utils import extract_json_from_response, create_project_directory
 from .prompts import AVAILABLE_AGENTS
 
@@ -33,10 +33,13 @@ Please provide a JSON array of tasks, where each task has the following structur
         logging.error("No response received from LLM")
         return []
 
+    logging.info(f"LLM Response: {tasks_response}")  # Log the full response
+
     tasks_data = extract_json_from_response(tasks_response)
     
     if not isinstance(tasks_data, list):
-        logging.error("Invalid response format: expected a list of tasks")
+        logging.error(f"Invalid response format: expected a list of tasks, got {type(tasks_data)}")
+        logging.error(f"Response content: {tasks_data}")
         return []
 
     tasks = []
@@ -69,9 +72,12 @@ Please provide a JSON array of tasks, where each task has the following structur
             rfc_state=rfc_state
         ))
     
+    logging.info(f"Created {len(tasks)} tasks")
+    return tasks
     return tasks
 
 def process_rfc(task: Task, project_definition: ProjectDefinition) -> Task:
+    config = load_config()
     prompt = f"""Review and update the following RFC task:
 
 Project Name: {project_definition.name}
@@ -83,7 +89,7 @@ Task:
 Please review the RFC and suggest any necessary changes or improvements. If the RFC is ready for the next state, update the rfc_state field accordingly. Provide your response as a JSON object with the updated task fields. Ensure that the 'assigned_to' field is one of the following: {', '.join(AVAILABLE_AGENTS)}"""
 
     cache_key = f"process_rfc_{task.id}_{task.rfc_state.value if task.rfc_state else 'UNKNOWN'}"
-    updated_task_response = run_llm_command(prompt, cache_key, 'code-architect')
+    updated_task_response = run_llm_command(config, prompt, cache_key, 'code-architect')
     
     if not updated_task_response:
         logging.error(f"No response received from LLM for task {task.id}")

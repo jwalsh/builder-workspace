@@ -34,6 +34,9 @@ pre-commit: ## Run pre-commit checks
 repl: ## Start Python REPL with coordinator module
 	$(PYTHON) -c "import coordinator; print('Coordinator module loaded. Use coordinator.main() to run the main function.')" && $(PYTHON)
 
+coordinator-files: ## Get Coordinator files for LLM review
+	files-to-prompt coordinator | tee coordinator_files.txt
+
 test-coordinator: ## Run test coordinator with a sample project
 	$(COORDINATOR) --name TestProject --description "This is a test project" --force
 
@@ -41,5 +44,11 @@ test-coordinator-all: test-coordinator ## Run all coordinator tests
 	$(COORDINATOR) --list
 	$(COORDINATOR) --name TestProject --use-llm claude
 	$(COORDINATOR) --check-health
+
+list: # List Coordinator tasks
+	$(COORDINATOR) --list
+
+list-tasks: ## List all tasks
+	sqlite3 tasks.db "SELECT id, project_id, title, status, assigned_to, task_type, rfc_state FROM tasks;" | tee tasks_output.txt
 
 .PHONY: help setup test lint format pre-commit repl test-coordinator test-coordinator-all

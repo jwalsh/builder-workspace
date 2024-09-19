@@ -4,6 +4,7 @@ import logging
 import requests
 import random
 import anthropic
+from typing import Optional
 from datetime import datetime, timedelta
 from .models import LLMConfig, LLMProvider
 
@@ -62,8 +63,30 @@ def check_claude_health():
             messages=[{"role": "user", "content": "Hello"}]
         )
         return True
-    except Exception:
+    except Exception as e:
+        logging.error(f"Error checking Claude health: {e}")
         return False
+
+def check_claude_health():
+    try:
+        response = client.messages.create(
+            model="claude-3-sonnet-20240229",
+            max_tokens=10,
+            messages=[{"role": "user", "content": "Hello"}]
+        )
+        return True
+    except Exception as e:
+        logging.error(f"Error checking Claude health: {e}")
+        return False
+
+def update_health_status(force_check=False):
+    global config
+    if force_check or (datetime.now() - config.last_check) > timedelta(hours=4):
+        config.ollama_healthy = check_ollama_health()
+        config.claude_healthy = check_claude_health()
+        config.last_check = datetime.now()
+        save_config()
+    logging.info(f"Ollama health: {config.ollama_healthy}, Claude health: {config.claude_healthy}")
 
 def get_active_provider(config: LLMConfig):
     update_health_status(config)
@@ -91,7 +114,7 @@ def run_llm_command(config: LLMConfig, prompt: str, cache_key: str, role: str) -
         logging.error("No healthy LLM provider available")
         return ""
 
-def run_ollama_command(prompt: str, cache_key: str, role: str) -> str:
+def run_ollama_command(prompt: str, cache_key: str, role: str) -> Optional[str]:
     from .prompts import SYSTEM_PROMPTS
     system_message = f"Cache key: {cache_key}\n{SYSTEM_PROMPTS.get(role, SYSTEM_PROMPTS['default'])}"
     logging.info(f"{role}: {cache_key}")
@@ -101,13 +124,22 @@ def run_ollama_command(prompt: str, cache_key: str, role: str) -> str:
             json={
                 "model": "mistral:latest",
                 "prompt": f"{system_message}\n\n{prompt}",
+                "stream": False
             },
         )
         response.raise_for_status()
-        return response.json().get('response', '')
+        response_data = response.json()
+        if 'response' in response_data:
+            return response_data['response']
+        else:
+            logging.error(f"Unexpected Ollama response format: {response_data}")
+            return None
     except requests.RequestException as e:
         logging.error(f"Error calling Ollama API: {e}")
-        return ""
+        return None
+    except json.JSONDecodeError as e:
+        logging.error(f"Error decoding Ollama response: {e}")
+        return None
 
 def run_claude_command(prompt: str, cache_key: str, role: str) -> str:
     from .prompts import SYSTEM_PROMPTS
