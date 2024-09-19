@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "builder-workspace"
 version = "0.1.0"
-description = ""
+description = "A workspace for AI-assisted project management and code generation"
 authors = ["Jason Walsh <j@wal.sh>"]
 readme = "README.org"
-package-mode = false
+packages = [{include = "coordinator"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -25,6 +25,36 @@ beautifulsoup4 = "^4.12.3"
 pydantic = "^2.9.2"
 ollama = "^0.3.3"
 
+[tool.poetry.dev-dependencies]
+pytest = "^8.3.3"
+flake8 = "^7.1.1"
+black = "^24.8.0"
+isort = "^5.13.2"
+pre-commit = "^3.8.0"
+
+[tool.poetry.scripts]
+coordinator = "coordinator.main:main"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
