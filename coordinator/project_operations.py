@@ -10,7 +10,7 @@ from .prompts import AVAILABLE_AGENTS
 from .utils import create_project_directory, extract_json_from_response
 
 
-def decompose_project(project_definition: ProjectDefinition) -> List[Task]:
+def decompose_project(config, project_definition: ProjectDefinition) -> List[Task]:
     prompt = f"""Decompose the following project into initial high-level tasks:
 
 Project Name: {project_definition.name}
@@ -29,7 +29,8 @@ Please provide a JSON array of tasks, where each task has the following structur
 }}"""
 
     cache_key = f"decompose_project_{project_definition.name}"
-    tasks_response = run_llm_command(prompt, cache_key, "task-decomposer")
+
+    tasks_response = run_llm_command(config, prompt, cache_key, "task-decomposer")
 
     if not tasks_response:
         logging.error("No response received from LLM")
@@ -82,11 +83,9 @@ Please provide a JSON array of tasks, where each task has the following structur
 
     logging.info(f"Created {len(tasks)} tasks")
     return tasks
-    return tasks
 
 
-def process_rfc(task: Task, project_definition: ProjectDefinition) -> Task:
-    config = load_config()
+def process_rfc(config, task: Task, project_definition: ProjectDefinition) -> Task:
     prompt = f"""Review and update the following RFC task:
 
 Project Name: {project_definition.name}
@@ -175,8 +174,14 @@ def show_project_tasks(project_name: str):
         )
 
 
-def process_project(name: str, description: str, force: bool):
+def process_project(
+    name: str, description: str, force: bool, process_rfcs: bool = False
+):
     try:
+        config = load_config()
+
+        print(config)
+
         project_definition = ProjectDefinition(name=name, description=description)
 
         add_project_version(project_definition.name, project_definition.json())
@@ -191,7 +196,8 @@ def process_project(name: str, description: str, force: bool):
             else:
                 print("\nDecomposing project into tasks...")
 
-            initial_tasks = decompose_project(project_definition)
+            initial_tasks = decompose_project(config, project_definition)
+
             for task in initial_tasks:
                 task_id = add_task(task)
                 if task_id:
@@ -214,21 +220,22 @@ def process_project(name: str, description: str, force: bool):
                 project_definition.name, project_definition.description, existing_tasks
             )
 
-        print("\nProcessing RFC tasks...")
-        rfc_tasks = [
-            task
-            for task in get_tasks(project_definition.name)
-            if task.task_type == TaskType.RFC
-        ]
-        for rfc_task in rfc_tasks:
-            try:
-                updated_rfc_task = process_rfc(rfc_task, project_definition)
-                update_task(updated_rfc_task)
-                print(
-                    f"Processed RFC task: {updated_rfc_task.title} (New state: {updated_rfc_task.rfc_state})"
-                )
-            except Exception as e:
-                logging.error(f"Error processing RFC task {rfc_task.id}: {str(e)}")
+        if process_rfcs:
+            print("\nProcessing RFC tasks...")
+            rfc_tasks = [
+                task
+                for task in get_tasks(project_definition.name)
+                if task.task_type == TaskType.RFC
+            ]
+            for rfc_task in rfc_tasks:
+                try:
+                    updated_rfc_task = process_rfc(config, rfc_task, project_definition)
+                    update_task(updated_rfc_task)
+                    print(
+                        f"Processed RFC task: {updated_rfc_task.title} (New state: {updated_rfc_task.rfc_state})"
+                    )
+                except Exception as e:
+                    logging.error(f"Error processing RFC task {rfc_task.id}: {str(e)}")
 
         print(
             "\nProject setup complete. Tasks added to the database and project directory created."

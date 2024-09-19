@@ -104,24 +104,40 @@ def update_health_status(force_check=False):
 
 
 def get_active_provider(config: LLMConfig):
-    update_health_status(config)
+    # update_health_status(config)
+
+    # Validate health status after updating
+    assert config.ollama_healthy is not None, "ollama_healthy status not updated"
+    assert config.claude_healthy is not None, "claude_healthy status not updated"
+
     if config.provider == LLMProvider.RANDOM:
         available_providers = []
         if config.ollama_healthy:
             available_providers.append(LLMProvider.OLLAMA)
         if config.claude_healthy:
             available_providers.append(LLMProvider.CLAUDE)
-        return random.choice(available_providers) if available_providers else None
+
+        if not available_providers:
+            logging.error("No healthy providers available")
+            return None
+
+        return random.choice(available_providers)
     elif config.provider == LLMProvider.OLLAMA and config.ollama_healthy:
         return LLMProvider.OLLAMA
     elif config.provider == LLMProvider.CLAUDE and config.claude_healthy:
         return LLMProvider.CLAUDE
     else:
+        logging.error(f"No healthy providers found for {config.provider}")
         return None
 
 
 def run_llm_command(config: LLMConfig, prompt: str, cache_key: str, role: str) -> str:
     provider = get_active_provider(config)
+
+    if provider is None:
+        logging.error("No LLM provider selected or no healthy providers available")
+        return ""
+
     if provider == LLMProvider.OLLAMA:
         return run_ollama_command(prompt, cache_key, role)
     elif provider == LLMProvider.CLAUDE:

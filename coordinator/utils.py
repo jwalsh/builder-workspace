@@ -37,6 +37,7 @@ def create_project_directory(project_name: str, description: str, tasks: List[Ta
     try:
         if not os.path.exists(project_path):
             os.makedirs(project_path)
+            logging.info(f"Project directory created at: {project_path}")
 
         # Create a project info file
         with open(os.path.join(project_path, "project_info.json"), "w") as f:
@@ -54,7 +55,8 @@ def create_project_directory(project_name: str, description: str, tasks: List[Ta
         with open(os.path.join(project_path, "tasks.json"), "w") as f:
             json.dump([task.dict() for task in tasks], f, indent=2)
 
-        logging.info(f"Project directory created at: {project_path}")
+        logging.info(f"Project info and tasks added at {project_path}")
+
     except OSError as e:
         logging.error(f"Error creating project directory: {e}")
 
