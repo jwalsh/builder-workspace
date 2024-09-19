@@ -32,7 +32,7 @@ pre-commit: ## Run pre-commit checks
 	poetry run pre-commit run --all-files
 
 repl: ## Start Python REPL with coordinator module
-	$(PYTHON) -c "import coordinator; print('Coordinator module loaded. Use coordinator.main() to run the main function.')" && $(PYTHON)
+	poetry run ipython -i -c "import coordinator; print('Coordinator module loaded. Use coordinator.main() to run the main function.')"
 
 coordinator-files: ## Get Coordinator files for LLM review
 	files-to-prompt coordinator | tee coordinator_files.txt

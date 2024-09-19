@@ -2,11 +2,13 @@ import json
 import logging
 import sqlite3
 from typing import List
-from .db import add_project_version, add_task, get_tasks, update_task, get_db_path
-from .models import ProjectDefinition, Task, TaskType, RFCState
-from .llm import run_llm_command, load_config
-from .utils import extract_json_from_response, create_project_directory
+
+from .db import add_project_version, add_task, get_db_path, get_tasks, update_task
+from .llm import load_config, run_llm_command
+from .models import ProjectDefinition, RFCState, Task, TaskType
 from .prompts import AVAILABLE_AGENTS
+from .utils import create_project_directory, extract_json_from_response
+
 
 def decompose_project(project_definition: ProjectDefinition) -> List[Task]:
     prompt = f"""Decompose the following project into initial high-level tasks:
@@ -27,8 +29,8 @@ Please provide a JSON array of tasks, where each task has the following structur
 }}"""
 
     cache_key = f"decompose_project_{project_definition.name}"
-    tasks_response = run_llm_command(prompt, cache_key, 'task-decomposer')
-    
+    tasks_response = run_llm_command(prompt, cache_key, "task-decomposer")
+
     if not tasks_response:
         logging.error("No response received from LLM")
         return []
@@ -36,45 +38,52 @@ Please provide a JSON array of tasks, where each task has the following structur
     logging.info(f"LLM Response: {tasks_response}")  # Log the full response
 
     tasks_data = extract_json_from_response(tasks_response)
-    
+
     if not isinstance(tasks_data, list):
-        logging.error(f"Invalid response format: expected a list of tasks, got {type(tasks_data)}")
+        logging.error(
+            f"Invalid response format: expected a list of tasks, got {type(tasks_data)}"
+        )
         logging.error(f"Response content: {tasks_data}")
         return []
 
     tasks = []
     for task in tasks_data:
         try:
-            task_type = TaskType(task.get('task_type', 'unknown').lower())
+            task_type = TaskType(task.get("task_type", "unknown").lower())
         except ValueError:
             task_type = TaskType.UNKNOWN
 
         rfc_state = None
         if task_type == TaskType.RFC:
             try:
-                rfc_state = RFCState(task.get('rfc_state', 'UNKNOWN').upper())
+                rfc_state = RFCState(task.get("rfc_state", "UNKNOWN").upper())
             except ValueError:
                 rfc_state = RFCState.UNKNOWN
 
-        if task['assigned_to'] not in AVAILABLE_AGENTS:
-            task['assigned_to'] = 'project-manager'  # Default to project manager if invalid
+        if task["assigned_to"] not in AVAILABLE_AGENTS:
+            task["assigned_to"] = (
+                "project-manager"  # Default to project manager if invalid
+            )
 
-        tasks.append(Task(
-            id=0,
-            project_id=project_definition.name,
-            title=task['title'],
-            description=task['description'],
-            status=task['status'],
-            assigned_to=task['assigned_to'],
-            priority=task['priority'],
-            dependencies=task['dependencies'],
-            task_type=task_type,
-            rfc_state=rfc_state
-        ))
-    
+        tasks.append(
+            Task(
+                id=0,
+                project_id=project_definition.name,
+                title=task["title"],
+                description=task["description"],
+                status=task["status"],
+                assigned_to=task["assigned_to"],
+                priority=task["priority"],
+                dependencies=task["dependencies"],
+                task_type=task_type,
+                rfc_state=rfc_state,
+            )
+        )
+
     logging.info(f"Created {len(tasks)} tasks")
     return tasks
     return tasks
+
 
 def process_rfc(task: Task, project_definition: ProjectDefinition) -> Task:
     config = load_config()
@@ -88,47 +97,58 @@ Task:
 
 Please review the RFC and suggest any necessary changes or improvements. If the RFC is ready for the next state, update the rfc_state field accordingly. Provide your response as a JSON object with the updated task fields. Ensure that the 'assigned_to' field is one of the following: {', '.join(AVAILABLE_AGENTS)}"""
 
-    cache_key = f"process_rfc_{task.id}_{task.rfc_state.value if task.rfc_state else 'UNKNOWN'}"
-    updated_task_response = run_llm_command(config, prompt, cache_key, 'code-architect')
-    
+    cache_key = (
+        f"process_rfc_{task.id}_{task.rfc_state.value if task.rfc_state else 'UNKNOWN'}"
+    )
+    updated_task_response = run_llm_command(config, prompt, cache_key, "code-architect")
+
     if not updated_task_response:
         logging.error(f"No response received from LLM for task {task.id}")
         return task
 
     updated_task_data = extract_json_from_response(updated_task_response)
-    
+
     if not updated_task_data:
         logging.error(f"Failed to extract valid JSON for task {task.id}")
         return task
 
-    if updated_task_data.get('assigned_to') not in AVAILABLE_AGENTS:
-        updated_task_data['assigned_to'] = task.assigned_to  # Keep the original assignment
+    if updated_task_data.get("assigned_to") not in AVAILABLE_AGENTS:
+        updated_task_data["assigned_to"] = (
+            task.assigned_to
+        )  # Keep the original assignment
 
     try:
-        updated_task_data['task_type'] = TaskType(updated_task_data.get('task_type', 'unknown').lower())
+        updated_task_data["task_type"] = TaskType(
+            updated_task_data.get("task_type", "unknown").lower()
+        )
     except ValueError:
-        updated_task_data['task_type'] = TaskType.UNKNOWN
+        updated_task_data["task_type"] = TaskType.UNKNOWN
 
-    if updated_task_data['task_type'] == TaskType.RFC:
+    if updated_task_data["task_type"] == TaskType.RFC:
         try:
-            updated_task_data['rfc_state'] = RFCState(updated_task_data.get('rfc_state', 'UNKNOWN').upper())
+            updated_task_data["rfc_state"] = RFCState(
+                updated_task_data.get("rfc_state", "UNKNOWN").upper()
+            )
         except ValueError:
-            updated_task_data['rfc_state'] = RFCState.UNKNOWN
+            updated_task_data["rfc_state"] = RFCState.UNKNOWN
     else:
-        updated_task_data['rfc_state'] = None
+        updated_task_data["rfc_state"] = None
 
     return Task(**updated_task_data)
+
 
 def show_project_summary():
     try:
         conn = sqlite3.connect(get_db_path())
         c = conn.cursor()
-        c.execute('''
+        c.execute(
+            """
             SELECT project_id, COUNT(*) as task_count
             FROM tasks
             GROUP BY project_id
             ORDER BY project_id
-        ''')
+        """
+        )
         projects = c.fetchall()
         print("Projects and task counts:")
         for project, count in projects:
@@ -138,60 +158,81 @@ def show_project_summary():
     finally:
         conn.close()
 
+
 def show_project_tasks(project_name: str):
     tasks = get_tasks(project_name)
-    
+
     if not tasks:
-        print(f"Warning: No tasks found for project '{project_name}'. The project may not have been decomposed yet.")
+        print(
+            f"Warning: No tasks found for project '{project_name}'. The project may not have been decomposed yet."
+        )
         return
 
     print(f"Tasks for project '{project_name}':")
     for task in tasks:
-        print(f"ID: {task.id}, Priority: {task.priority}, Title: {task.title}, Status: {task.status}, Assigned: {task.assigned_to}, Type: {task.task_type}, RFC State: {task.rfc_state}")
+        print(
+            f"ID: {task.id}, Priority: {task.priority}, Title: {task.title}, Status: {task.status}, Assigned: {task.assigned_to}, Type: {task.task_type}, RFC State: {task.rfc_state}"
+        )
+
 
 def process_project(name: str, description: str, force: bool):
     try:
-        project_definition = ProjectDefinition(
-            name=name,
-            description=description
-        )
+        project_definition = ProjectDefinition(name=name, description=description)
 
         add_project_version(project_definition.name, project_definition.json())
 
         existing_tasks = get_tasks(project_definition.name)
-        
+
         if not existing_tasks or force:
             if existing_tasks and force:
-                print(f"\nForce flag used. Re-decomposing project '{project_definition.name}' into tasks...")
+                print(
+                    f"\nForce flag used. Re-decomposing project '{project_definition.name}' into tasks..."
+                )
             else:
                 print("\nDecomposing project into tasks...")
-            
+
             initial_tasks = decompose_project(project_definition)
             for task in initial_tasks:
                 task_id = add_task(task)
                 if task_id:
                     task.id = task_id
-                    print(f"Added task: {task.title} (Type: {task.task_type}, Assigned to: {task.assigned_to})")
+                    print(
+                        f"Added task: {task.title} (Type: {task.task_type}, Assigned to: {task.assigned_to})"
+                    )
                 else:
                     logging.error(f"Failed to add task: {task.title}")
-            
-            create_project_directory(project_definition.name, project_definition.description, initial_tasks)
+
+            create_project_directory(
+                project_definition.name, project_definition.description, initial_tasks
+            )
         else:
-            print(f"\nTasks already exist for project '{project_definition.name}'. Skipping decomposition. Use --force to override.")
-            
-            create_project_directory(project_definition.name, project_definition.description, existing_tasks)
+            print(
+                f"\nTasks already exist for project '{project_definition.name}'. Skipping decomposition. Use --force to override."
+            )
+
+            create_project_directory(
+                project_definition.name, project_definition.description, existing_tasks
+            )
 
         print("\nProcessing RFC tasks...")
-        rfc_tasks = [task for task in get_tasks(project_definition.name) if task.task_type == TaskType.RFC]
+        rfc_tasks = [
+            task
+            for task in get_tasks(project_definition.name)
+            if task.task_type == TaskType.RFC
+        ]
         for rfc_task in rfc_tasks:
             try:
                 updated_rfc_task = process_rfc(rfc_task, project_definition)
                 update_task(updated_rfc_task)
-                print(f"Processed RFC task: {updated_rfc_task.title} (New state: {updated_rfc_task.rfc_state})")
+                print(
+                    f"Processed RFC task: {updated_rfc_task.title} (New state: {updated_rfc_task.rfc_state})"
+                )
             except Exception as e:
                 logging.error(f"Error processing RFC task {rfc_task.id}: {str(e)}")
 
-        print("\nProject setup complete. Tasks added to the database and project directory created.")
+        print(
+            "\nProject setup complete. Tasks added to the database and project directory created."
+        )
     except Exception as e:
         logging.error(f"An error occurred while processing the project: {str(e)}")
         raise
