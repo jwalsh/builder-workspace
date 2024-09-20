@@ -1,0 +1,86 @@
+[
+  {
+    "id": 8623,
+    "project_id": "PlasticToFuelConverter",
+    "title": "Define System Architecture",
+    "description": "Design the overall structure of the PlasticToFuelConverter system, considering the conversion process, waste sorting, energy generation, and data logging.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8624,
+    "project_id": "PlasticToFuelConverter",
+    "title": "Develop Plastic Waste Sorting Algorithm",
+    "description": "Create an efficient algorithm to identify and sort different types of plastic waste for optimal conversion.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Define System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8625,
+    "project_id": "PlasticToFuelConverter",
+    "title": "Design Conversion Process Hardware Interface",
+    "description": "Design the user interface for controlling the conversion process, including temperature, pressure, and other relevant parameters.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Define System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8626,
+    "project_id": "PlasticToFuelConverter",
+    "title": "Implement Conversion Process Control Logic",
+    "description": "Develop the software logic that controls the conversion process based on user input and collected data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Develop Plastic Waste Sorting Algorithm",
+      "Design Conversion Process Hardware Interface"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 8627,
+    "project_id": "PlasticToFuelConverter",
+    "title": "Set Up Data Collection and Storage System",
+    "description": "Create a system for logging data about waste input, conversion process parameters, energy output, and other relevant metrics.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Define System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8628,
+    "project_id": "PlasticToFuelConverter",
+    "title": "Test PlasticToFuelConverter System",
+    "description": "Conduct rigorous testing of the entire PlasticToFuelConverter system, ensuring efficient conversion, data logging, and user-friendly interface.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Implement Conversion Process Control Logic",
+      "Set Up Data Collection and Storage System"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null
+  }
+]

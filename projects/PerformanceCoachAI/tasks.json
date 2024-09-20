@@ -1,0 +1,145 @@
+[
+  {
+    "id": 3574,
+    "project_id": "PerformanceCoachAI",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, goals, and requirements for the PerformanceCoachAI system.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3575,
+    "project_id": "PerformanceCoachAI",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including the AI model, data pipeline, user interface components, and integration with third-party services (if applicable).",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering",
+      "Data Collection and Preparation"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 3576,
+    "project_id": "PerformanceCoachAI",
+    "title": "AI Model Development",
+    "description": "Develop and train the AI model for providing personalized performance coaching advice.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3577,
+    "project_id": "PerformanceCoachAI",
+    "title": "Data Pipeline Implementation",
+    "description": "Implement the data pipeline for collecting and processing user data and performance metrics.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3578,
+    "project_id": "PerformanceCoachAI",
+    "title": "User Interface Design and Development",
+    "description": "Design and develop the user interface for the PerformanceCoachAI system, including the coaching dashboard and user profile management.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3579,
+    "project_id": "PerformanceCoachAI",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema for storing user data, performance metrics, coaching advice, and other relevant data. The database should be scalable, secure, and optimized for performance.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Modeling"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 3580,
+    "project_id": "PerformanceCoachAI",
+    "title": "Security and Privacy Considerations",
+    "description": "Implement security measures and ensure compliance with privacy regulations for handling user data.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 3581,
+    "project_id": "PerformanceCoachAI",
+    "title": "Integration and System Testing",
+    "description": "Perform integration testing of all system components and end-to-end testing of the PerformanceCoachAI system.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "AI Model Development",
+      "Data Pipeline Implementation",
+      "User Interface Design and Development",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3582,
+    "project_id": "PerformanceCoachAI",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment environment, continuous integration/continuous deployment (CI/CD) pipelines, and monitoring for the PerformanceCoachAI system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Integration and System Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3583,
+    "project_id": "PerformanceCoachAI",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation and user guides for the PerformanceCoachAI system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "User Interface Design and Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

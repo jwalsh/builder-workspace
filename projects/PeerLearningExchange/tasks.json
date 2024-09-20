@@ -1,0 +1,180 @@
+[
+  {
+    "id": 3540,
+    "project_id": "PeerLearningExchange",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the scope, requirements, and constraints of the PeerLearningExchange system.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3541,
+    "project_id": "PeerLearningExchange",
+    "title": "System Architecture Design",
+    "description": "Design the overall architecture of the PeerLearningExchange system, including components, data flow, and integration points.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3542,
+    "project_id": "PeerLearningExchange",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema for storing user profiles, learning sessions, and other relevant data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3543,
+    "project_id": "PeerLearningExchange",
+    "title": "User Authentication and Authorization",
+    "description": "Implement user authentication and authorization mechanisms, including role-based access control.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3544,
+    "project_id": "PeerLearningExchange",
+    "title": "Learning Session Management",
+    "description": "Develop features for creating, scheduling, and managing peer-to-peer learning sessions.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3545,
+    "project_id": "PeerLearningExchange",
+    "title": "User Profile and Skill Management",
+    "description": "Implement functionality for users to create and update their profiles, including skills and areas of expertise.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3546,
+    "project_id": "PeerLearningExchange",
+    "title": "Notification and Communication System",
+    "description": "Develop a system for sending notifications and facilitating communication between users and session organizers.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3547,
+    "project_id": "PeerLearningExchange",
+    "title": "User Interface Design and Development",
+    "description": "Design and develop the user interface for the PeerLearningExchange system, ensuring a seamless and intuitive user experience.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Learning Session Management",
+      "User Profile and Skill Management"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3548,
+    "project_id": "PeerLearningExchange",
+    "title": "Testing and Quality Assurance",
+    "description": "Plan and execute comprehensive testing strategies, including unit, integration, and end-to-end testing, to ensure the system's quality and reliability.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "User Authentication and Authorization",
+      "Learning Session Management",
+      "User Profile and Skill Management",
+      "Notification and Communication System",
+      "User Interface Design and Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3549,
+    "project_id": "PeerLearningExchange",
+    "title": "Security and Compliance",
+    "description": "Implement security measures and ensure compliance with relevant regulations and industry standards.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "User Authentication and Authorization"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 3550,
+    "project_id": "PeerLearningExchange",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure and implement DevOps practices for continuous integration, delivery, and monitoring.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3551,
+    "project_id": "PeerLearningExchange",
+    "title": "Documentation and User Support",
+    "description": "Develop comprehensive documentation, including user guides, API references, and troubleshooting resources.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "User Interface Design and Development",
+      "Learning Session Management",
+      "User Profile and Skill Management"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

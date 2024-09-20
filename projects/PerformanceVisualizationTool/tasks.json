@@ -1,0 +1,131 @@
+[
+  {
+    "id": 3613,
+    "project_id": "PerformanceVisualizationTool",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, gather requirements from stakeholders, and create a detailed project plan.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3614,
+    "project_id": "PerformanceVisualizationTool",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including data models, APIs, integration points, and infrastructure considerations.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3615,
+    "project_id": "PerformanceVisualizationTool",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema to store performance metrics and related data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3616,
+    "project_id": "PerformanceVisualizationTool",
+    "title": "Backend Development",
+    "description": "Develop the backend services for data ingestion, processing, and APIs.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3617,
+    "project_id": "PerformanceVisualizationTool",
+    "title": "Frontend Development",
+    "description": "Develop the user interface and data visualization components for the performance metrics dashboard.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3618,
+    "project_id": "PerformanceVisualizationTool",
+    "title": "Security and Compliance",
+    "description": "Ensure the system adheres to security best practices and complies with relevant regulations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 3619,
+    "project_id": "PerformanceVisualizationTool",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and execute test plans for the backend, frontend, and integration components.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3620,
+    "project_id": "PerformanceVisualizationTool",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline and infrastructure for the production environment.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3621,
+    "project_id": "PerformanceVisualizationTool",
+    "title": "Documentation and User Training",
+    "description": "Create user guides, technical documentation, and training materials for the performance visualization tool.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]
