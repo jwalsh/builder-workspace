@@ -14,9 +14,9 @@
   {
     "id": 910,
     "project_id": "BlockchainRentalPlatform",
-    "title": "Design System Architecture",
-    "description": "Design the overall system architecture, including the blockchain infrastructure (e.g., Ethereum, Hyperledger Fabric), smart contracts (e.g., Solidity, Chaincode), integrations with external systems (e.g., payment gateways, identity verification services), and the user-facing application (web/mobile). Consider scalability, security, fault tolerance, and performance requirements. Define the data models, APIs, communication protocols, and interaction flows between different components. Address potential challenges such as data privacy, regulatory compliance, and dispute resolution mechanisms.",
-    "status": "TODO",
+    "title": "Design System Architecture for Blockchain Rental Platform",
+    "description": "Design the overall system architecture, including the blockchain infrastructure (e.g., Ethereum, Hyperledger Fabric), smart contracts (e.g., Solidity, Chaincode), integrations with external systems (e.g., payment gateways, identity verification services), and the user-facing application (web/mobile). Consider scalability, security, fault tolerance, performance requirements, and edge cases such as error handling and performance optimizations. Define data models, APIs, communication protocols, and interaction flows between different components. Address potential challenges such as data privacy, regulatory compliance, dispute resolution mechanisms, and consider long-term maintenance and extensibility. Provide a detailed design document with clear specifications for each component.",
+    "status": "DOING",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
@@ -24,7 +24,7 @@
       "Conduct Market Research and Competitor Analysis"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW"
+    "rfc_state": "UNKNOWN"
   },
   {
     "id": 911,
@@ -119,13 +119,13 @@
     "id": 917,
     "project_id": "BlockchainRentalPlatform",
     "title": "Set up CI/CD Pipeline",
-    "description": "Set up a continuous integration and continuous deployment (CI/CD) pipeline for automated testing, building, and deploying the application. The pipeline should include the following stages:\n\n1. Code linting and static analysis\n2. Unit and integration testing\n3. Build and package the application\n4. Deploy to a staging environment for testing\n5. Deploy to production after successful testing\n\nThe pipeline should support multiple environments (e.g., development, staging, production) and enable easy rollbacks in case of issues. It should also include monitoring and alerting mechanisms to notify the team of any failures or issues.",
-    "status": "TODO",
+    "description": "Set up a continuous integration and continuous deployment (CI/CD) pipeline for automated testing, building, and deploying the application. The pipeline should include the following stages:\n\n1. Code linting and static analysis\n2. Unit and integration testing\n3. Build and package the application\n4. Deploy to a staging environment for testing with automatic rollback capability in case of issues.\n5. Deploy to production after successful testing, with option for manual deployment for additional safety.\n6. Implement monitoring and alerting mechanisms to notify the team of any failures or issues.\n7. Ensure pipeline supports multiple environments (e.g., development, staging, production) and adheres to established naming conventions for environment configurations.\n8. Improve error handling by logging and reporting detailed information about failed tests, builds, and deployments.\n\nThe assigned DevOps Engineer should consider the following best practices:\n- Modularize the pipeline to allow for easy maintenance and updates.\n- Optimize the pipeline for performance and scalability to handle increasing traffic and code changes.\n- Document the pipeline setup and configuration for future reference.",
+    "status": "IN_PROGRESS",
     "assigned_to": "devops-engineer",
     "priority": 2,
     "dependencies": [],
     "task_type": "rfc",
-    "rfc_state": "REVIEW"
+    "rfc_state": "APPROVED"
   },
   {
     "id": 918,

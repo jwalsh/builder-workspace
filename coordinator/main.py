@@ -2,11 +2,12 @@ import json
 import logging
 import os
 import sqlite3
+import asyncio
 
 import click
 
 from .db import create_tables, get_db_path
-from .llm import load_config, save_config, update_health_status
+from .llm import llm_manager
 from .models import LLMProvider
 from .project_operations import (
     process_project,
@@ -18,7 +19,6 @@ from .project_operations import (
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
-
 
 @click.command()
 @click.option("--name", help="Project name")
@@ -48,34 +48,33 @@ def main(
     check_health: bool,
     reset_config: bool,
 ):
-    try:
-        if reset_config:
-            if os.path.exists("llm_config.json"):
-                os.remove("llm_config.json")
-            click.echo("Configuration has been reset.")
+    async def async_main():
+        nonlocal description  # This line allows us to modify the outer scope variable
+        try:
+            if reset_config:
+                llm_manager.create_default_config()
+                click.echo("Configuration has been reset.")
+                return
 
-        config = load_config()
+            llm_manager.config.provider = LLMProvider(use_llm)
+            llm_manager.save_config(llm_manager.config)
 
-        if check_health:
-            update_health_status(config, force_check=True)
-            click.echo(
-                f"Ollama health: {'Healthy' if config.ollama_healthy else 'Unhealthy'}"
-            )
-            click.echo(
-                f"Claude health: {'Healthy' if config.claude_healthy else 'Unhealthy'}"
-            )
-            return
+            if check_health:
+                await llm_manager.update_health_status(force_check=True)
+                click.echo(
+                    f"Ollama health: {'Healthy' if llm_manager.config.ollama_healthy else 'Unhealthy'}"
+                )
+                click.echo(
+                    f"Claude health: {'Healthy' if llm_manager.config.claude_healthy else 'Unhealthy'}"
+                )
+                return
 
-        config.provider = LLMProvider(use_llm)
-        save_config(config)
+            create_tables()
 
-        create_tables()
-
-        if list:
-            show_project_summary()
-        elif name:
-            if force:
-                if not description:
+            if list:
+                show_project_summary()
+            elif name:
+                if force and not description:
                     conn = sqlite3.connect(get_db_path())
                     c = conn.cursor()
                     c.execute(
@@ -101,18 +100,19 @@ def main(
                         )
                         return
 
-            if description or force:
-                process_project(name, description, force)
+                if description or force:
+                    await process_project(name, description, force)
+                else:
+                    show_project_tasks(name)
             else:
-                show_project_tasks(name)
-        else:
-            click.echo(
-                "Please provide a project name or use --list to see all projects."
-            )
-    except Exception as e:
-        logging.error(f"An unexpected error occurred: {str(e)}")
-        click.echo("An error occurred. Please check the logs for more information.")
+                click.echo(
+                    "Please provide a project name or use --list to see all projects."
+                )
+        except Exception as e:
+            logging.error(f"An unexpected error occurred: {str(e)}")
+            click.echo("An error occurred. Please check the logs for more information.")
 
+    asyncio.run(async_main())
 
 if __name__ == "__main__":
     main()

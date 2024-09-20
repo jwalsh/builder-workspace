@@ -1,0 +1,113 @@
+[
+  {
+    "id": 8442,
+    "project_id": "NeuroGamingController",
+    "title": "Define BCI Interface Specification",
+    "description": "Create a detailed specification of how the Brain-Computer Interface (BCI) will interact with the gaming controller.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8443,
+    "project_id": "NeuroGamingController",
+    "title": "Design Controller Hardware",
+    "description": "Create a design for the physical gaming controller that accommodates BCI technology.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "BCI Interface Specification"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8444,
+    "project_id": "NeuroGamingController",
+    "title": "Develop BCI Firmware",
+    "description": "Create firmware that interprets brain signals and sends appropriate game commands.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Controller Hardware Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8445,
+    "project_id": "NeuroGamingController",
+    "title": "Develop Gaming Application Backend",
+    "description": "Create the server-side application to manage game states and interactions.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "BCI Firmware"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8446,
+    "project_id": "NeuroGamingController",
+    "title": "Develop Gaming Application Frontend",
+    "description": "Create the user interface for the gaming application.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 5,
+    "dependencies": [
+      "Gaming Application Backend"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 8447,
+    "project_id": "NeuroGamingController",
+    "title": "Integrate BCI with Gaming Application",
+    "description": "Connect the developed BCI firmware to the gaming application.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "BCI Firmware",
+      "Gaming Application Backend"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 8448,
+    "project_id": "NeuroGamingController",
+    "title": "Test BCI Integration",
+    "description": "Conduct functional tests to ensure the BCI integration works as intended.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Integrate BCI with Gaming Application"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 8449,
+    "project_id": "NeuroGamingController",
+    "title": "Document Controller Assembly Process",
+    "description": "Create assembly instructions for the gaming controller.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Controller Hardware Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  }
+]

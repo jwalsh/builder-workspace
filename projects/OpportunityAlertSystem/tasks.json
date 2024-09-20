@@ -1,0 +1,148 @@
+[
+  {
+    "id": 3490,
+    "project_id": "OpportunityAlertSystem",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the detailed requirements for the OpportunityAlertSystem, including user roles, features, integration points with existing systems (HR, Learning Management, Project Management tools), data privacy and security considerations, scalability and performance requirements, and deployment environments.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3491,
+    "project_id": "OpportunityAlertSystem",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the system, including components, data flow, technology stack, scalability considerations, security measures, and integration points with existing systems.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 3492,
+    "project_id": "OpportunityAlertSystem",
+    "title": "Design User Interface",
+    "description": "Design the user interface for the OpportunityAlertSystem, including wireframes, mockups, and prototypes. The UI should be intuitive, responsive, and accessible, following best practices for user experience design.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Identify Target Users and Personas"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3493,
+    "project_id": "OpportunityAlertSystem",
+    "title": "Design Database Schema",
+    "description": "Design the database schema for storing and retrieving opportunity data, user profiles, preferences, and notifications. Consider data models for opportunities, users, roles, skills, interests, and notification history. Ensure data integrity, normalization, and efficient querying.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 3494,
+    "project_id": "OpportunityAlertSystem",
+    "title": "Implement Backend Services",
+    "description": "Implement the backend services for managing opportunities, user profiles, and notifications.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Design Database Schema"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3495,
+    "project_id": "OpportunityAlertSystem",
+    "title": "Implement Frontend Application",
+    "description": "Implement the frontend application for users to view and manage opportunities and preferences.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design User Interface",
+      "Implement Backend Services"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3496,
+    "project_id": "OpportunityAlertSystem",
+    "title": "Implement Authentication and Authorization",
+    "description": "Implement authentication and authorization mechanisms for secure access to the system.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Implement Backend Services"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3497,
+    "project_id": "OpportunityAlertSystem",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Configure a CI/CD pipeline for automated build, testing, and deployment of the system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Implement Backend Services",
+      "Implement Frontend Application"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3498,
+    "project_id": "OpportunityAlertSystem",
+    "title": "Develop Test Suite",
+    "description": "Create a comprehensive test suite for the system, including unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Backend Services",
+      "Implement Frontend Application"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3499,
+    "project_id": "OpportunityAlertSystem",
+    "title": "Write Documentation",
+    "description": "Prepare user guides, technical documentation, and other supporting materials for the system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Design System Architecture",
+      "Implement Backend Services",
+      "Implement Frontend Application"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

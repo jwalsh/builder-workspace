@@ -2,15 +2,15 @@ import json
 import logging
 import sqlite3
 from typing import List
+import asyncio
 
 from .db import add_project_version, add_task, get_db_path, get_tasks, update_task
-from .llm import load_config, run_llm_command
+from .llm import llm_manager
 from .models import ProjectDefinition, RFCState, Task, TaskType
 from .prompts import AVAILABLE_AGENTS
 from .utils import create_project_directory, extract_json_from_response
 
-
-def decompose_project(config, project_definition: ProjectDefinition) -> List[Task]:
+async def decompose_project(project_definition: ProjectDefinition) -> List[Task]:
     prompt = f"""Decompose the following project into initial high-level tasks:
 
 Project Name: {project_definition.name}
@@ -30,7 +30,7 @@ Please provide a JSON array of tasks, where each task has the following structur
 
     cache_key = f"decompose_project_{project_definition.name}"
 
-    tasks_response = run_llm_command(config, prompt, cache_key, "task-decomposer")
+    tasks_response = await llm_manager.run_llm_command(prompt, cache_key, "task-decomposer")
 
     if not tasks_response:
         logging.error("No response received from LLM")
@@ -84,8 +84,7 @@ Please provide a JSON array of tasks, where each task has the following structur
     logging.info(f"Created {len(tasks)} tasks")
     return tasks
 
-
-def process_rfc(config, task: Task, project_definition: ProjectDefinition) -> Task:
+async def process_rfc(task: Task, project_definition: ProjectDefinition) -> Task:
     prompt = f"""Review and update the following RFC task:
 
 Project Name: {project_definition.name}
@@ -99,7 +98,7 @@ Please review the RFC and suggest any necessary changes or improvements. If the 
     cache_key = (
         f"process_rfc_{task.id}_{task.rfc_state.value if task.rfc_state else 'UNKNOWN'}"
     )
-    updated_task_response = run_llm_command(config, prompt, cache_key, "code-architect")
+    updated_task_response = await llm_manager.run_llm_command(prompt, cache_key, "code-architect")
 
     if not updated_task_response:
         logging.error(f"No response received from LLM for task {task.id}")
@@ -135,7 +134,6 @@ Please review the RFC and suggest any necessary changes or improvements. If the 
 
     return Task(**updated_task_data)
 
-
 def show_project_summary():
     try:
         conn = sqlite3.connect(get_db_path())
@@ -157,7 +155,6 @@ def show_project_summary():
     finally:
         conn.close()
 
-
 def show_project_tasks(project_name: str):
     tasks = get_tasks(project_name)
 
@@ -173,15 +170,10 @@ def show_project_tasks(project_name: str):
             f"ID: {task.id}, Priority: {task.priority}, Title: {task.title}, Status: {task.status}, Assigned: {task.assigned_to}, Type: {task.task_type}, RFC State: {task.rfc_state}"
         )
 
-
-def process_project(
+async def process_project(
     name: str, description: str, force: bool, process_rfcs: bool = False
 ):
     try:
-        config = load_config()
-
-        print(config)
-
         project_definition = ProjectDefinition(name=name, description=description)
 
         add_project_version(project_definition.name, project_definition.json())
@@ -196,7 +188,7 @@ def process_project(
             else:
                 print("\nDecomposing project into tasks...")
 
-            initial_tasks = decompose_project(config, project_definition)
+            initial_tasks = await decompose_project(project_definition)
 
             for task in initial_tasks:
                 task_id = add_task(task)
@@ -229,7 +221,7 @@ def process_project(
             ]
             for rfc_task in rfc_tasks:
                 try:
-                    updated_rfc_task = process_rfc(config, rfc_task, project_definition)
+                    updated_rfc_task = await process_rfc(rfc_task, project_definition)
                     update_task(updated_rfc_task)
                     print(
                         f"Processed RFC task: {updated_rfc_task.title} (New state: {updated_rfc_task.rfc_state})"

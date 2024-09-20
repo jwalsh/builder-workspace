@@ -1,0 +1,157 @@
+[
+  {
+    "id": 3460,
+    "project_id": "OilTradeAIAnalyst",
+    "title": "Project Planning and Management",
+    "description": "Define project scope, objectives, timelines, and resource requirements. Set up project management tools and processes.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3461,
+    "project_id": "OilTradeAIAnalyst",
+    "title": "Requirements Gathering and Analysis",
+    "description": "Conduct market research, gather requirements from stakeholders, and analyze existing oil trading systems and data sources.",
+    "status": "TODO",
+    "assigned_to": "task-decomposer",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3462,
+    "project_id": "OilTradeAIAnalyst",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components for data ingestion, processing, modeling, user interfaces, and system operations. Consider scalability, fault tolerance, security, and performance requirements.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Requirements Gathering and Analysis",
+      "Data Sources Identification"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 3463,
+    "project_id": "OilTradeAIAnalyst",
+    "title": "Data Pipeline and Storage",
+    "description": "Design and implement data pipelines for ingesting and storing oil market data from various sources.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3464,
+    "project_id": "OilTradeAIAnalyst",
+    "title": "Predictive Modeling and Analysis",
+    "description": "Develop machine learning models for predicting oil prices and analyzing market trends.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Pipeline and Storage"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3465,
+    "project_id": "OilTradeAIAnalyst",
+    "title": "Trading Strategy Optimization",
+    "description": "Implement algorithms for optimizing trading strategies based on predictive models and market analysis.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Predictive Modeling and Analysis"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3466,
+    "project_id": "OilTradeAIAnalyst",
+    "title": "User Interface and Visualization",
+    "description": "Design and develop user interfaces for visualizing market data, predictions, and trading strategies.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3467,
+    "project_id": "OilTradeAIAnalyst",
+    "title": "Security and Compliance",
+    "description": "Implement security measures and ensure compliance with relevant regulations and industry standards.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3468,
+    "project_id": "OilTradeAIAnalyst",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop test plans, create test cases, and perform various types of testing (unit, integration, performance, etc.).",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Data Pipeline and Storage",
+      "Predictive Modeling and Analysis",
+      "Trading Strategy Optimization",
+      "User Interface and Visualization"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3469,
+    "project_id": "OilTradeAIAnalyst",
+    "title": "Deployment and DevOps",
+    "description": "Set up deployment pipelines, configure infrastructure, and manage the production environment.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3470,
+    "project_id": "OilTradeAIAnalyst",
+    "title": "Documentation and Training",
+    "description": "Create user manuals, technical documentation, and training materials for the system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "User Interface and Visualization"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

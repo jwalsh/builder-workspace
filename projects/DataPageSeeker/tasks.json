@@ -3,9 +3,9 @@
     "id": 1730,
     "project_id": "DataPageSeeker",
     "title": "Define Project Requirements",
-    "description": "Gather and document the detailed requirements for the DataPageSeeker project, including the following key aspects:\n\n1. Data Sources: Identify the specific purpose-built databases and their schemas that will be used as data sources for the application.\n\n2. Search Functionality: Define the search criteria and filters that users will be able to apply to the data, such as keyword search, date range, and any other relevant filters.\n\n3. Pagination: Specify the requirements for paginating the search results, including the number of items per page, navigation controls, and any other relevant pagination features.\n\n4. Data Transformation: Outline the necessary data transformations or aggregations that need to be performed on the data before presenting it to the user.\n\n5. User Interface: Describe the desired user interface for the searchable, paginated list, including the layout, design, and any specific UI/UX requirements.\n\n6. Performance and Scalability: Identify any specific performance and scalability requirements, such as expected data volumes, concurrent user loads, and any other relevant factors.\n\n7. Security and Access Control: Define any security and access control requirements, such as user authentication, data encryption, and role-based access controls.\n\n8. Integrations: Identify any external systems or APIs that need to be integrated with the application.\n\n9. Reporting and Analytics: Specify any reporting or analytics requirements, such as generating reports or visualizations based on the search results.\n\n10. Testing and Quality Assurance: Outline the testing and quality assurance requirements, including unit testing, integration testing, and any other relevant testing strategies.",
+    "description": "Gather and document the detailed requirements for the DataPageSeeker project, including the following key aspects:\n\n1. Data Sources: Identify the specific purpose-built databases and their schemas that will be used as data sources for the application, along with the APIs or connectors required to access these databases.\n\n2. Search Functionality: Define the search criteria and filters that users will be able to apply to the data, such as keyword search, date range, and any other relevant filters. Consider edge cases like spelling variations, wildcard searches, and complex queries.\n\n3. Pagination: Specify the requirements for paginating the search results, including the number of items per page, navigation controls, and any other relevant pagination features. Additionally, consider infinite scrolling as an alternative or additional option.\n\n4. Data Transformation: Outline the necessary data transformations or aggregations that need to be performed on the data before presenting it to the user. This should include error handling strategies for unexpected data formats or inconsistencies.\n\n5. User Interface: Describe the desired user interface for the searchable, paginated list, including the layout, design, and any specific UI/UX requirements. Provide wireframes or mockups where applicable.\n\n6. Performance and Scalability: Identify any specific performance and scalability requirements, such as expected data volumes, concurrent user loads, and any other relevant factors. Also, discuss strategies for caching, indexing, and optimizing SQL queries to ensure efficient data retrieval.\n\n7. Security and Access Control: Define any security and access control requirements, such as user authentication, data encryption, and role-based access controls. Include OAuth or JWT implementations where appropriate.\n\n8. Integrations: Identify any external systems or APIs that need to be integrated with the application, along with their documentation and any necessary API keys or credentials.\n\n9. Reporting and Analytics: Specify any reporting or analytics requirements, such as generating reports or visualizations based on the search results. Consider using popular data analysis libraries like Tableau or PowerBI for exporting results.\n\n10. Testing and Quality Assurance: Outline the testing and quality assurance requirements, including unit testing, integration testing, and any other relevant testing strategies. This should include functional testing, performance testing, security testing, and usability testing.",
     "status": "TODO",
-    "assigned_to": "project-manager",
+    "assigned_to": "task-decomposer",
     "priority": 5,
     "dependencies": [],
     "task_type": "rfc",
@@ -15,8 +15,8 @@
     "id": 1731,
     "project_id": "DataPageSeeker",
     "title": "Design System Architecture",
-    "description": "Design the overall system architecture, including the data flow, components, their interactions, and the technologies to be used. Consider the following aspects: data ingestion, storage, processing, querying, caching, search indexing, pagination, and user interface.",
-    "status": "TODO",
+    "description": "Design the overall system architecture for the DataPageSeeker project, considering the following aspects: data ingestion, storage, processing, querying, caching, search indexing, pagination, and user interface. The architecture should be designed with a focus on maintainability, modularity, scalability, and consider edge cases, error handling, and performance optimizations. Break down the problem into manageable tasks as needed. Also, specify the technologies to be used and their interactions.",
+    "status": "IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
@@ -24,7 +24,7 @@
       "Identify Data Sources"
     ],
     "task_type": "rfc",
-    "rfc_state": "DRAFT"
+    "rfc_state": "UNKNOWN"
   },
   {
     "id": 1732,
