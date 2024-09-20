@@ -1,0 +1,116 @@
+[
+  {
+    "id": 4303,
+    "project_id": "RepoLens",
+    "title": "Define Project Requirements",
+    "description": "Gather and document the functional and non-functional requirements for RepoLens, including features, performance, security, and integration needs. Ensure that the requirements cover the following aspects:\n\n- Repository analysis capabilities (e.g., code analysis, dependency tracking, version control)\n- LLM integration and interaction (e.g., prompting, model selection, result processing)\n- User interface and experience (e.g., command-line, web-based, IDE integration)\n- Extensibility and plugin architecture\n- Deployment and distribution options (e.g., self-hosted, cloud-based)\n- Security and access control\n- Performance and scalability\n- Documentation and developer resources",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 4304,
+    "project_id": "RepoLens",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture for RepoLens, including components, data flow, and integration points with LLMs and other tools.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4305,
+    "project_id": "RepoLens",
+    "title": "Implement Core Functionality",
+    "description": "Develop the core functionality for repository packaging, analysis, and processing, including integration with LLMs.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4306,
+    "project_id": "RepoLens",
+    "title": "Build User Interface",
+    "description": "Design and implement the user interface for RepoLens, including configuration, management, and visualization components.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4307,
+    "project_id": "RepoLens",
+    "title": "Implement Security Measures",
+    "description": "Ensure RepoLens adheres to security best practices, including data encryption, access controls, and secure communication with LLMs.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Implement Core Functionality",
+      "Build User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4308,
+    "project_id": "RepoLens",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a CI/CD pipeline for automated testing, building, and deployment of RepoLens to various environments.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Implement Core Functionality",
+      "Build User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4309,
+    "project_id": "RepoLens",
+    "title": "Develop Test Suite",
+    "description": "Create a comprehensive test suite for RepoLens, including unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Implement Core Functionality",
+      "Build User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4310,
+    "project_id": "RepoLens",
+    "title": "Write Documentation",
+    "description": "Prepare user guides, API documentation, and other relevant documentation for RepoLens.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Implement Core Functionality",
+      "Build User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

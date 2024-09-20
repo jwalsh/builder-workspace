@@ -1,0 +1,176 @@
+[
+  {
+    "id": 3859,
+    "project_id": "PredictiveBankingAI",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements. Conduct research and gather input from stakeholders, including banking experts, financial advisors, and potential users.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3860,
+    "project_id": "PredictiveBankingAI",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including the AI models, data pipelines, integration with banking systems, and infrastructure requirements. Consider scalability, security, and performance aspects.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3861,
+    "project_id": "PredictiveBankingAI",
+    "title": "Data Collection and Preprocessing",
+    "description": "Identify and collect relevant data sources, such as transaction histories, user profiles, and financial market data. Preprocess and clean the data for use in the AI models.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3862,
+    "project_id": "PredictiveBankingAI",
+    "title": "AI Model Development",
+    "description": "Develop and train AI models for predicting financial needs, automating savings, and providing personalized financial advice based on the collected data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Data Collection and Preprocessing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3863,
+    "project_id": "PredictiveBankingAI",
+    "title": "User Interface Design",
+    "description": "Design the user interface for the PredictiveBankingAI application, considering user experience, accessibility, branding guidelines, and integration with the backend system.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "User Experience Research"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 3864,
+    "project_id": "PredictiveBankingAI",
+    "title": "Frontend Development",
+    "description": "Implement the user interface using modern web technologies, integrating with the backend systems and AI models.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "User Interface Design",
+      "AI Model Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3865,
+    "project_id": "PredictiveBankingAI",
+    "title": "Backend Development",
+    "description": "Develop the backend systems, including APIs, data processing pipelines, and integration with banking systems.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "AI Model Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3866,
+    "project_id": "PredictiveBankingAI",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema to store user data, transaction histories, financial goals, and other relevant information. Consider data security, privacy, and compliance with relevant regulations. The database should be scalable and support efficient querying and data retrieval.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Modeling and Requirements Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3867,
+    "project_id": "PredictiveBankingAI",
+    "title": "Security and Compliance",
+    "description": "Ensure the system adheres to security best practices and complies with relevant regulations, such as data privacy laws and financial regulations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 3868,
+    "project_id": "PredictiveBankingAI",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and implement a comprehensive testing strategy, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3869,
+    "project_id": "PredictiveBankingAI",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure, including continuous integration and continuous deployment (CI/CD) pipelines, monitoring, and scaling strategies.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development",
+      "Database Design and Implementation"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3870,
+    "project_id": "PredictiveBankingAI",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation for developers, administrators, and end-users. Establish user support channels and processes.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

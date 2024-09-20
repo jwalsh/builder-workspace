@@ -1,0 +1,145 @@
+[
+  {
+    "id": 4454,
+    "project_id": "SecureDataSandbox",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the requirements for the SecureDataSandbox project, including security considerations, performance goals, integration with existing systems, and scalability needs.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 4455,
+    "project_id": "SecureDataSandbox",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the secure data sandbox, including components, communication protocols, security mechanisms, data flow, and isolation strategies. Consider using virtualization or containerization technologies for sandboxing and ensure secure file transfer protocols. Address scalability, high availability, and fault tolerance requirements. Define monitoring and logging mechanisms for security auditing and incident response.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 4456,
+    "project_id": "SecureDataSandbox",
+    "title": "Implement Sandbox Environment",
+    "description": "Develop the core sandbox environment, including virtualization, isolation, and resource management.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4457,
+    "project_id": "SecureDataSandbox",
+    "title": "Develop Security Mechanisms",
+    "description": "Implement security mechanisms for the sandbox, such as access controls, data sanitization, and malware detection.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4458,
+    "project_id": "SecureDataSandbox",
+    "title": "Build User Interface",
+    "description": "Design and develop the user interface for interacting with the secure data sandbox, including file upload, analysis initiation, and result visualization.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4459,
+    "project_id": "SecureDataSandbox",
+    "title": "Implement Data Storage and Management",
+    "description": "Design and develop the data storage and management system for the sandbox, including secure storage of files, analysis results, and audit logs.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4460,
+    "project_id": "SecureDataSandbox",
+    "title": "Set up CI/CD Pipeline",
+    "description": "Establish a continuous integration and continuous deployment (CI/CD) pipeline for the project, including automated testing, build, and deployment processes.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4461,
+    "project_id": "SecureDataSandbox",
+    "title": "Develop Test Suite",
+    "description": "Create a comprehensive test suite for the secure data sandbox, covering unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Implement Sandbox Environment",
+      "Develop Security Mechanisms",
+      "Build User Interface",
+      "Implement Data Storage and Management"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4462,
+    "project_id": "SecureDataSandbox",
+    "title": "Conduct Security Audits",
+    "description": "Perform regular security audits on the secure data sandbox to identify and mitigate potential vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Implement Sandbox Environment",
+      "Develop Security Mechanisms",
+      "Build User Interface",
+      "Implement Data Storage and Management"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 4463,
+    "project_id": "SecureDataSandbox",
+    "title": "Write Documentation",
+    "description": "Create comprehensive documentation for the secure data sandbox, including user guides, technical documentation, and deployment instructions.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,130 @@
+[
+  {
+    "id": 4294,
+    "project_id": "RemoteTeamBonder",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, goals, and requirements for the RemoteTeamBonder platform. This includes identifying key features, user roles, data models, and technical requirements for the platform.",
+    "status": "IN PROGRESS",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 4295,
+    "project_id": "RemoteTeamBonder",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components, data flow, integration points, and infrastructure requirements. Consider scalability, security, and performance aspects. Define the technology stack and architectural patterns to be used.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 4296,
+    "project_id": "RemoteTeamBonder",
+    "title": "Database Design",
+    "description": "Design the database schema and data models for storing user information, team details, activity data, and related metadata. Consider scalability, data integrity, and performance requirements. Define relationships between entities and ensure proper normalization.",
+    "status": "IN PROGRESS",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 4297,
+    "project_id": "RemoteTeamBonder",
+    "title": "Frontend Development",
+    "description": "Develop the user interface and frontend components for the RemoteTeamBonder platform.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4298,
+    "project_id": "RemoteTeamBonder",
+    "title": "Backend Development",
+    "description": "Develop the server-side logic, APIs, and integration with third-party services for virtual team-building activities.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4299,
+    "project_id": "RemoteTeamBonder",
+    "title": "Security and Compliance",
+    "description": "Ensure the platform adheres to security best practices and complies with relevant regulations (e.g., data privacy, user authentication).",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  },
+  {
+    "id": 4300,
+    "project_id": "RemoteTeamBonder",
+    "title": "Testing and Quality Assurance",
+    "description": "Plan and execute comprehensive testing strategies, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4301,
+    "project_id": "RemoteTeamBonder",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline, infrastructure, and monitoring for the RemoteTeamBonder platform. This includes the following tasks:\n\n- Containerize the application using Docker or similar technology\n- Set up a continuous integration and continuous deployment (CI/CD) pipeline\n- Provision and configure the necessary cloud infrastructure (e.g., virtual machines, load balancers, databases)\n- Implement monitoring and logging solutions for the application and infrastructure\n- Set up automated testing and deployment processes\n- Ensure security best practices are followed (e.g., secure communication, access controls, data encryption)\n- Implement scalability and high availability measures\n- Document the deployment and DevOps processes",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 4302,
+    "project_id": "RemoteTeamBonder",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation, user guides, and training materials for the RemoteTeamBonder platform.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  }
+]

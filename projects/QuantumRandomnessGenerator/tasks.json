@@ -1,0 +1,147 @@
+[
+  {
+    "id": 4089,
+    "project_id": "QuantumRandomnessGenerator",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the detailed requirements for the QuantumRandomnessGenerator system, including the target use cases, performance metrics, security considerations, and integration with existing systems.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4090,
+    "project_id": "QuantumRandomnessGenerator",
+    "title": "Research Quantum Random Number Generation Techniques",
+    "description": "Investigate and evaluate different quantum-based methods for generating true random numbers, such as quantum optics, quantum vacuum fluctuations, and quantum spin. Assess their feasibility, security, and performance characteristics.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 4091,
+    "project_id": "QuantumRandomnessGenerator",
+    "title": "Design System Architecture",
+    "description": "Develop the overall architecture for the QuantumRandomnessGenerator system, including the quantum random number generation component, the interface for consuming the random numbers, and any necessary supporting services or infrastructure. The architecture should consider scalability, fault tolerance, security, and performance requirements.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Research Quantum Random Number Generation Techniques"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 4092,
+    "project_id": "QuantumRandomnessGenerator",
+    "title": "Implement Quantum Random Number Generation",
+    "description": "Based on the chosen technique, implement the quantum random number generation component, including any necessary hardware or software interfaces.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4093,
+    "project_id": "QuantumRandomnessGenerator",
+    "title": "Develop Random Number Consumption Interface",
+    "description": "Create the interface (e.g., API, library) for consuming the generated random numbers, including any necessary security measures, such as key management and access control.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4094,
+    "project_id": "QuantumRandomnessGenerator",
+    "title": "Implement Supporting Services and Infrastructure",
+    "description": "Develop any necessary supporting services or infrastructure components, such as logging, monitoring, and deployment automation.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4095,
+    "project_id": "QuantumRandomnessGenerator",
+    "title": "Conduct Security Audits",
+    "description": "Perform comprehensive security audits of the QuantumRandomnessGenerator system, including vulnerability assessments, penetration testing, and code reviews.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Implement Quantum Random Number Generation",
+      "Develop Random Number Consumption Interface",
+      "Implement Supporting Services and Infrastructure"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 4096,
+    "project_id": "QuantumRandomnessGenerator",
+    "title": "Develop Test Suite",
+    "description": "Create a comprehensive test suite for the QuantumRandomnessGenerator system, including unit tests, integration tests, and end-to-end tests, to ensure the correctness and reliability of the system.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Implement Quantum Random Number Generation",
+      "Develop Random Number Consumption Interface",
+      "Implement Supporting Services and Infrastructure"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4097,
+    "project_id": "QuantumRandomnessGenerator",
+    "title": "Write Documentation",
+    "description": "Prepare comprehensive documentation for the QuantumRandomnessGenerator system, including user guides, developer guides, and deployment instructions.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Implement Quantum Random Number Generation",
+      "Develop Random Number Consumption Interface",
+      "Implement Supporting Services and Infrastructure"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4098,
+    "project_id": "QuantumRandomnessGenerator",
+    "title": "Deploy and Monitor",
+    "description": "Deploy the QuantumRandomnessGenerator system to the production environment, set up monitoring and alerting mechanisms, and establish processes for ongoing maintenance and support.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Conduct Security Audits",
+      "Develop Test Suite",
+      "Write Documentation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "id": 4464,
+    "project_id": "SecureFileShare",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, gather requirements, and create a detailed project plan including security considerations, file transfer protocols, malware detection mechanisms, and integration with existing systems.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 4465,
+    "project_id": "SecureFileShare",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components, interfaces, data flow, security considerations, and scalability. The architecture should include the following components: a front-end interface for users to upload/download files, a back-end server to handle file transfers, a malware detection engine, a database to store file metadata and user information, and a secure storage system for files. Consider using microservices architecture for better scalability and maintainability. Ensure proper authentication, authorization, and encryption mechanisms are in place for secure file transfers. Address potential performance bottlenecks and provide recommendations for load balancing and caching strategies.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 4466,
+    "project_id": "SecureFileShare",
+    "title": "Security Architecture and Threat Modeling",
+    "description": "Design the security architecture and perform threat modeling to identify potential vulnerabilities. The security architecture should cover encryption, authentication, access control, and secure communication protocols. Threat modeling should consider various attack vectors, such as man-in-the-middle attacks, brute-force attacks, and malware injection.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 1,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 4467,
+    "project_id": "SecureFileShare",
+    "title": "File Transfer Protocol Implementation",
+    "description": "Implement secure file transfer protocols (SFTP, FTP, FTPS) for file sharing.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Security Architecture and Threat Modeling"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4468,
+    "project_id": "SecureFileShare",
+    "title": "Malware Detection and Scanning",
+    "description": "Integrate malware detection and scanning mechanisms to identify potential threats.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Security Architecture and Threat Modeling"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4469,
+    "project_id": "SecureFileShare",
+    "title": "User Authentication and Authorization",
+    "description": "Implement user authentication and authorization mechanisms for secure access control.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Security Architecture and Threat Modeling"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4470,
+    "project_id": "SecureFileShare",
+    "title": "User Interface and Experience Design",
+    "description": "Design the user interface and user experience for the file sharing application.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4471,
+    "project_id": "SecureFileShare",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema for storing user data, file metadata, and other relevant information.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4472,
+    "project_id": "SecureFileShare",
+    "title": "Continuous Integration and Deployment Setup",
+    "description": "Set up a continuous integration and deployment pipeline for automated builds, testing, and deployment.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4473,
+    "project_id": "SecureFileShare",
+    "title": "Testing and Quality Assurance",
+    "description": "Plan and execute comprehensive testing strategies, including unit, integration, and end-to-end testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "File Transfer Protocol Implementation",
+      "Malware Detection and Scanning",
+      "User Authentication and Authorization",
+      "User Interface and Experience Design",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4474,
+    "project_id": "SecureFileShare",
+    "title": "Documentation and User Guide",
+    "description": "Create comprehensive documentation and user guides for the application.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "System Architecture Design",
+      "User Interface and Experience Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

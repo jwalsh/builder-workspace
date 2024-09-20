@@ -1,0 +1,99 @@
+[
+  {
+    "id": 3977,
+    "project_id": "QuantumAlgorithmForge",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the project requirements, including the specific quantum algorithms to be developed, target applications, performance goals, constraints, assumptions, and any relevant industry standards or regulations.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 3978,
+    "project_id": "QuantumAlgorithmForge",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including the quantum computing simulator(s) to be used, the programming languages and frameworks, the integration with external libraries or tools, and the development, testing, and deployment workflows.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 3979,
+    "project_id": "QuantumAlgorithmForge",
+    "title": "Develop Quantum Algorithms",
+    "description": "Implement the quantum algorithms for the specified applications, following the defined system architecture and best practices for quantum programming.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3980,
+    "project_id": "QuantumAlgorithmForge",
+    "title": "Set up Testing and Validation Framework",
+    "description": "Establish a testing and validation framework to ensure the correctness and performance of the developed quantum algorithms, including unit tests, integration tests, and benchmarking tools.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3981,
+    "project_id": "QuantumAlgorithmForge",
+    "title": "Implement Security Measures",
+    "description": "Integrate appropriate security measures to protect the quantum algorithms and the underlying system, considering potential quantum computing threats and vulnerabilities such as quantum attacks on classical cryptography, side-channel attacks, and vulnerabilities in quantum error correction codes.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 3982,
+    "project_id": "QuantumAlgorithmForge",
+    "title": "Develop Documentation and User Guides",
+    "description": "Create comprehensive documentation and user guides for the developed quantum algorithms, covering installation, usage, and troubleshooting.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Develop Quantum Algorithms"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 3983,
+    "project_id": "QuantumAlgorithmForge",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a continuous integration and deployment pipeline to automate the build, testing, and deployment processes for the quantum algorithms and related components. The pipeline should include steps for code linting, static analysis, unit testing, integration testing, and deployment to staging and production environments. Ensure that the pipeline is configurable, maintainable, and scalable to accommodate future growth and changes.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Develop Quantum Algorithms",
+      "Set up Testing and Validation Framework"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  }
+]

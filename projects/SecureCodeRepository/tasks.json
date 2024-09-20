@@ -1,0 +1,172 @@
+[
+  {
+    "id": 4410,
+    "project_id": "SecureCodeRepository",
+    "title": "Define Project Requirements",
+    "description": "Gather and document the functional and non-functional requirements for the SecureCodeRepository system, including security features, user stories, technical constraints, and compliance with relevant industry standards and regulations.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 4411,
+    "project_id": "SecureCodeRepository",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the SecureCodeRepository system, including components, data flow, and integration points.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4412,
+    "project_id": "SecureCodeRepository",
+    "title": "Implement Version Control System",
+    "description": "Develop the core version control functionality, including repository management, branching, merging, and commit history.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4413,
+    "project_id": "SecureCodeRepository",
+    "title": "Implement Secret Detection",
+    "description": "Develop the secret detection feature, which scans code repositories for sensitive information like API keys, passwords, and other secrets.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4414,
+    "project_id": "SecureCodeRepository",
+    "title": "Implement Vulnerability Scanning",
+    "description": "Develop the vulnerability scanning feature, which analyzes code repositories for known security vulnerabilities and provides remediation recommendations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4415,
+    "project_id": "SecureCodeRepository",
+    "title": "Design User Interface",
+    "description": "Design the user interface for the SecureCodeRepository system, including repository management, security reporting, and configuration interfaces. The UI should be intuitive, responsive, and accessible, adhering to industry best practices and standards.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 4416,
+    "project_id": "SecureCodeRepository",
+    "title": "Implement User Interface",
+    "description": "Develop the user interface components based on the approved design, integrating with the backend services.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4417,
+    "project_id": "SecureCodeRepository",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Configure a CI/CD pipeline for automated building, testing, and deployment of the SecureCodeRepository system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Implement Version Control System"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4418,
+    "project_id": "SecureCodeRepository",
+    "title": "Write User Documentation",
+    "description": "Create comprehensive user documentation, including installation guides, usage instructions, and feature explanations.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Design User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4419,
+    "project_id": "SecureCodeRepository",
+    "title": "Conduct Security Audits",
+    "description": "Perform regular security audits on the SecureCodeRepository system to identify and mitigate potential vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Implement Secret Detection",
+      "Implement Vulnerability Scanning"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 4420,
+    "project_id": "SecureCodeRepository",
+    "title": "Develop Test Suite",
+    "description": "Create a comprehensive test suite, including unit tests, integration tests, and end-to-end tests, to ensure the quality and security of the SecureCodeRepository system.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Version Control System",
+      "Implement Secret Detection",
+      "Implement Vulnerability Scanning",
+      "Implement User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4421,
+    "project_id": "SecureCodeRepository",
+    "title": "Conduct Performance and Load Testing",
+    "description": "Perform performance and load testing on the SecureCodeRepository system to identify and address potential bottlenecks and scalability issues.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop Test Suite"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]
