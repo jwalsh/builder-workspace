@@ -34,6 +34,17 @@ doc-analytics-engine/
 │   └── user_interface.md
 ├── docs/
 │   └── write_documentation.md
+├── infrastructure/
+│   ├── modules/
+│   │   ├── s3/
+│   │   ├── lambda/
+│   │   ├── dynamodb/
+│   │   ├── api_gateway/
+│   │   └── bedrock/
+│   ├── dev/
+│   │   └── main.tf
+│   └── prod/
+│       └── main.tf
 ├── rfcs/
 │   └── rfc_1882_project_scope.md
 ├── scripts/
@@ -43,14 +54,9 @@ doc-analytics-engine/
 │   └── update_repo.sh
 ├── src/
 │   ├── analytics/
-│   ├── analytics_engine/
-│   ├── backend/
-│   ├── components/
-│   ├── data/
-│   ├── data_pipeline/
-│   ├── frontend/
-│   ├── security/
-│   └── user/
+│   ├── lambda_functions/
+│   ├── api/
+│   └── utils/
 ├── tests/
 │   └── test_and_validate.py
 └── README.org
@@ -75,9 +81,9 @@ graph TD
     
     Users -->|10. Query| apigateway:get[API Gateway: GET API]
     apigateway:get -->|11. Handle request| lambda:query[Lambda: Query Function]
-    lambda:query -->|12. Search| kendra:search[Amazon Kendra]
-    kendra:search -->|13. Search| s3:analyzed
-    kendra:search -->|14. Retrieve metadata| dynamodb:metadata
+    lambda:query -->|12. Search| opensearch:service[Amazon OpenSearch]
+    opensearch:service -->|13. Search| s3:analyzed
+    opensearch:service -->|14. Retrieve metadata| dynamodb:metadata
     
     subgraph AWS Cloud
         s3:raw
@@ -90,20 +96,47 @@ graph TD
         dynamodb:metadata
         apigateway:get
         lambda:query
-        kendra:search
+        opensearch:service
     end
     
     classDef aws fill:#FF9900,stroke:#232F3E,stroke-width:2px,color:#232F3E;
-    class s3:raw,lambda:process,textract:service,s3:extracted,lambda:analyze,bedrock:service,s3:analyzed,dynamodb:metadata,apigateway:get,lambda:query,kendra:search aws;
+    class s3:raw,lambda:process,textract:service,s3:extracted,lambda:analyze,bedrock:service,s3:analyzed,dynamodb:metadata,apigateway:get,lambda:query,opensearch:service aws;
 #+END_SRC
 
-This diagram illustrates the flow of data and processing in our Documentation Analytics Engine, utilizing various AWS services including Amazon Bedrock for advanced analysis.
+This diagram illustrates the flow of data and processing in our Documentation Analytics Engine, utilizing various AWS services including Amazon Bedrock for advanced analysis and Amazon OpenSearch for efficient querying.
+
+** Infrastructure
+
+We use Terraform to manage our infrastructure. The configuration is split into dev and prod environments, located in the `infrastructure/` directory.
+
+*** Development Environment (us-west-2)
+
+To set up the development environment:
+
+#+BEGIN_SRC shell
+cd infrastructure/dev
+terraform init
+terraform plan
+terraform apply
+#+END_SRC
+
+*** Production Environment (us-east-2)
+
+To set up the production environment:
+
+#+BEGIN_SRC shell
+cd infrastructure/prod
+terraform init
+terraform plan
+terraform apply
+#+END_SRC
+
 ** Data Import
 
 The trial exhibits were initially imported using the following command:
 
 #+BEGIN_SRC shell
-mv mirrors/us-and-plaintiff-states-v-google-llc-2023-trial-exhibits/* data/us-v-google-2023
+mv us-and-plaintiff-states-v-google-llc-2023-trial-exhibits/* data/us-v-google-2023
 #+END_SRC
 
 ** Mirroring Justice.gov
@@ -122,9 +155,11 @@ The mirrored data will be saved in the =data/mirrors/[DATE_TIME]/= directory, or
 
 1. Set up the project structure by running =./scripts/build_project.sh=
 2. Import or mirror the required data as described above
-3. Implement the analytics engine in the =src/analytics= directory
-4. Run tests using =./tests/test_and_validate.py=
-5. Deploy using =./deployment/deploy_and_monitor.sh=
+3. Deploy the infrastructure using Terraform for the desired environment
+4. Implement the analytics engine in the =src/analytics= directory
+5. Deploy Lambda functions and API Gateway endpoints
+6. Run tests using =./tests/test_and_validate.py=
+7. Monitor the system using AWS CloudWatch and the custom =deploy_and_monitor.sh= script
 
 ** License
 
