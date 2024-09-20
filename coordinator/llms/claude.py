@@ -9,29 +9,25 @@ class ClaudeProvider(LLMProvider):
         self.client = AsyncAnthropic(api_key=self.api_key)
 
     async def generate(self, prompt: str, cache_key: str = "", role: str = "", **kwargs) -> str:
-        system_message = f"Cache key: {cache_key}\nRole: {role}\n\n"
         try:
             response = await self.client.messages.create(
                 model=self.model,
                 max_tokens=kwargs.get("max_tokens", 1000),
-                system=system_message,
+                system=f"Cache key: {cache_key}\nRole: {role}",
                 messages=[{"role": "user", "content": prompt}],
             )
             return response.content[0].text
         except Exception as e:
-            return f"Error: {str(e)}"
+            if "credit balance is too low" in str(e):
+                raise Exception("Claude API credit balance too low") from e
+            raise
 
     async def embed(self, text: str, **kwargs) -> list[float]:
-        # Claude doesn't have a separate embedding API, so this is a placeholder
         raise NotImplementedError("Claude does not support separate embedding API")
 
     async def health_check(self) -> bool:
         try:
-            response = await self.client.messages.create(
-                model=self.model,
-                max_tokens=10,
-                messages=[{"role": "user", "content": "Hello"}],
-            )
+            await self.generate("Hello", cache_key="health_check", role="system")
             return True
         except Exception:
             return False

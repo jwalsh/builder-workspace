@@ -62,19 +62,25 @@ class LLMManager:
             return None
 
     async def run_llm_command(self, prompt: str, cache_key: str, role: str, **kwargs) -> str:
-        provider_name = self.get_active_provider()
-        if provider_name is None:
-            logging.error("No LLM provider selected or no healthy providers available")
-            return ""
+        providers_to_try = [self.config.provider.value]
+        if self.config.provider != LLMProvider.OLLAMA:
+            providers_to_try.append("ollama")  # Fallback to Ollama if it's not the primary choice
 
-        if self.provider is None or self.provider.__class__.__name__.lower() != provider_name:
-            self.provider = create_llm_provider(provider_name)
+        for provider_name in providers_to_try:
+            if not getattr(self.config, f"{provider_name}_healthy", False):
+                continue
 
-        try:
-            return await self.provider.generate(prompt, cache_key=cache_key, role=role, **kwargs)
-        except Exception as e:
-            logging.error(f"Error running LLM command: {e}")
-            return ""
+            try:
+                provider = create_llm_provider(provider_name)
+                result = await provider.generate(prompt, cache_key=cache_key, role=role, **kwargs)
+                return result
+            except Exception as e:
+                logging.error(f"Error with {provider_name} provider: {str(e)}")
+                setattr(self.config, f"{provider_name}_healthy", False)
+                self.save_config(self.config)
+
+        logging.error("All providers failed. Unable to process the request.")
+        return ""
 
 # Create a singleton instance of LLMManager
 llm_manager = LLMManager()
