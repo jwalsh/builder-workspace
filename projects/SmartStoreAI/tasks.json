@@ -1,0 +1,131 @@
+[
+  {
+    "id": 4735,
+    "project_id": "SmartStoreAI",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, gather requirements from stakeholders, and create a detailed project plan.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4736,
+    "project_id": "SmartStoreAI",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components for scan-and-go shopping, self-checkout, IoT connectivity, computer vision for inventory management and customer behavior analysis, data storage and processing, and security considerations.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 4737,
+    "project_id": "SmartStoreAI",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema to store product information, customer data, and transaction records.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4738,
+    "project_id": "SmartStoreAI",
+    "title": "Backend Development",
+    "description": "Develop the backend services for scan-and-go shopping, self-checkout, IoT connectivity, and computer vision.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4739,
+    "project_id": "SmartStoreAI",
+    "title": "Frontend Development",
+    "description": "Develop the user interfaces for scan-and-go shopping, self-checkout, and customer-facing applications.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4740,
+    "project_id": "SmartStoreAI",
+    "title": "Security and Compliance",
+    "description": "Ensure the system complies with relevant security standards and regulations, and implement security measures.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 4741,
+    "project_id": "SmartStoreAI",
+    "title": "Testing and Quality Assurance",
+    "description": "Plan and execute comprehensive testing strategies, including unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4742,
+    "project_id": "SmartStoreAI",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline, configure infrastructure, and automate the deployment process.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4743,
+    "project_id": "SmartStoreAI",
+    "title": "Documentation and Training",
+    "description": "Create comprehensive documentation for the system, including user guides and technical documentation, and plan for user training.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,71 @@
+[
+  {
+    "id": 5041,
+    "project_id": "TeamEnergyFlowVisualizer",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the detailed requirements for the TeamEnergyFlowVisualizer project, including data sources, visualization types, user interactions, performance metrics, and non-functional requirements such as security, scalability, and maintainability.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 5042,
+    "project_id": "TeamEnergyFlowVisualizer",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including data ingestion, processing, storage, and visualization components, as well as the integration points with existing systems.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5043,
+    "project_id": "TeamEnergyFlowVisualizer",
+    "title": "Define Data Model and Schema",
+    "description": "Design the data model and schema for storing and processing team productivity and morale data, considering scalability, performance, and security requirements. The data model should include entities for teams, projects, tasks, and individuals, as well as metrics for productivity, morale, and other relevant factors. The schema should be optimized for efficient querying and data retrieval, while ensuring data integrity and security.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 5044,
+    "project_id": "TeamEnergyFlowVisualizer",
+    "title": "Develop Data Ingestion and Processing Pipeline",
+    "description": "Implement the data ingestion and processing components to collect, transform, and load team productivity and morale data into the defined data store.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture",
+      "Define Data Model and Schema"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5045,
+    "project_id": "TeamEnergyFlowVisualizer",
+    "title": "Design and Implement Visualization Components",
+    "description": "Design and develop the user interface components for visualizing team productivity and morale data as 'energy flows', including interactive features and customization options.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

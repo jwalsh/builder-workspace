@@ -1,0 +1,129 @@
+[
+  {
+    "id": 4869,
+    "project_id": "StrengthsFinderAI",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, goals, and requirements. Conduct stakeholder interviews and research to understand the organization's needs and existing processes for talent management and project assignment.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4870,
+    "project_id": "StrengthsFinderAI",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including the AI model, data pipelines, user interfaces, and integration points with existing systems. Define the technology stack, considering factors such as scalability, maintainability, and performance. Outline the high-level components, their responsibilities, and interactions. Address data storage, security, and privacy concerns. Propose a deployment strategy and monitoring approach.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 4871,
+    "project_id": "StrengthsFinderAI",
+    "title": "Data Collection and Preparation",
+    "description": "Identify and collect relevant data sources for training the AI model, such as employee profiles, performance reviews, and project histories. Preprocess and clean the data for model training.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4872,
+    "project_id": "StrengthsFinderAI",
+    "title": "AI Model Development",
+    "description": "Develop and train the AI model for strength identification and role/project recommendation based on the collected data and defined requirements.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Data Collection and Preparation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4873,
+    "project_id": "StrengthsFinderAI",
+    "title": "User Interface Design and Development",
+    "description": "Design and develop the user interfaces for employees to take the assessment, view their strengths, and explore recommended roles and projects. Integrate with the AI model and existing systems.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4874,
+    "project_id": "StrengthsFinderAI",
+    "title": "Integration and Deployment",
+    "description": "Integrate the StrengthsFinderAI system with the organization's existing systems and infrastructure. Set up deployment pipelines and environments for testing and production.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "AI Model Development",
+      "User Interface Design and Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4875,
+    "project_id": "StrengthsFinderAI",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and execute comprehensive test plans for the StrengthsFinderAI system, including unit tests, integration tests, and user acceptance testing. Ensure the system meets the defined requirements and performs as expected.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "AI Model Development",
+      "User Interface Design and Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4876,
+    "project_id": "StrengthsFinderAI",
+    "title": "Security and Compliance",
+    "description": "Assess and address security risks and compliance requirements related to data privacy, user authentication, and system access controls. Implement necessary security measures and obtain required certifications or approvals.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4877,
+    "project_id": "StrengthsFinderAI",
+    "title": "Documentation and Training",
+    "description": "Develop comprehensive documentation for the StrengthsFinderAI system, including user guides, technical documentation, and training materials for administrators and end-users.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "User Interface Design and Development",
+      "Integration and Deployment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

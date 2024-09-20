@@ -1,0 +1,161 @@
+[
+  {
+    "id": 5030,
+    "project_id": "TeamDiversityEnhancer",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the detailed requirements for the TeamDiversityEnhancer tool, including the specific metrics and criteria for assessing team diversity (e.g., gender, ethnicity, age, educational background, skills, experience), the desired user interface and experience for different user roles (e.g., HR managers, project managers, team members), integration requirements with existing HR or project management systems, data privacy and security considerations, and any regulatory or legal compliance requirements.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 5031,
+    "project_id": "TeamDiversityEnhancer",
+    "title": "Design System Architecture",
+    "description": "Develop the overall system architecture and design for the TeamDiversityEnhancer tool, including the data models, algorithms, and components required to analyze team composition and generate diversity recommendations. The architecture should consider scalability, maintainability, and performance. Ensure proper separation of concerns, modular design, and adherence to industry best practices.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Gather and Analyze Diversity Data Sources"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 5032,
+    "project_id": "TeamDiversityEnhancer",
+    "title": "Create Database Schema",
+    "description": "Design and implement the database schema to store team composition data, diversity metrics, and other relevant information.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5033,
+    "project_id": "TeamDiversityEnhancer",
+    "title": "Develop Backend Services",
+    "description": "Implement the backend services and APIs required for the TeamDiversityEnhancer tool, including data ingestion, team composition analysis, and diversity recommendation generation.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture",
+      "Create Database Schema"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5034,
+    "project_id": "TeamDiversityEnhancer",
+    "title": "Build User Interface",
+    "description": "Design and develop the user interface for the TeamDiversityEnhancer tool, including interfaces for data input, team composition visualization, and diversity recommendation display.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5035,
+    "project_id": "TeamDiversityEnhancer",
+    "title": "Implement Security and Access Controls",
+    "description": "Ensure the TeamDiversityEnhancer tool has proper security measures and access controls in place to protect sensitive team and employee data.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  },
+  {
+    "id": 5036,
+    "project_id": "TeamDiversityEnhancer",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a CI/CD pipeline for the TeamDiversityEnhancer tool, including automated testing, build, and deployment processes.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Develop Backend Services",
+      "Build User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5037,
+    "project_id": "TeamDiversityEnhancer",
+    "title": "Develop Test Suite",
+    "description": "Create a comprehensive test suite to ensure the TeamDiversityEnhancer tool functions as expected and produces accurate diversity recommendations.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Develop Backend Services",
+      "Build User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5038,
+    "project_id": "TeamDiversityEnhancer",
+    "title": "Write Documentation",
+    "description": "Prepare user and technical documentation for the TeamDiversityEnhancer tool, including installation guides, usage instructions, and API references.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Backend Services",
+      "Build User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5039,
+    "project_id": "TeamDiversityEnhancer",
+    "title": "Conduct User Acceptance Testing",
+    "description": "Perform user acceptance testing with a diverse group of stakeholders to validate the TeamDiversityEnhancer tool meets the defined requirements and provides value to the organization.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop Test Suite",
+      "Write Documentation"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 5040,
+    "project_id": "TeamDiversityEnhancer",
+    "title": "Deploy and Monitor",
+    "description": "Deploy the TeamDiversityEnhancer tool to production environments, and set up monitoring and logging systems to ensure its ongoing stability and performance.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Set up Continuous Integration and Deployment",
+      "Conduct User Acceptance Testing"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,147 @@
+[
+  {
+    "id": 5066,
+    "project_id": "TeamSynergyMetrics",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements for the TeamSynergyMetrics dashboard. Conduct stakeholder interviews and gather user stories.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5067,
+    "project_id": "TeamSynergyMetrics",
+    "title": "Architecture Design",
+    "description": "Design the overall system architecture, including the data model, backend services, frontend components, and infrastructure. Define the technology stack, integration points, and deployment strategy. Consider scalability, maintainability, and performance requirements.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 5068,
+    "project_id": "TeamSynergyMetrics",
+    "title": "Data Modeling and Database Design",
+    "description": "Design the database schema and data structures to store team collaboration data, communication logs, and productivity metrics.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5069,
+    "project_id": "TeamSynergyMetrics",
+    "title": "Backend Development",
+    "description": "Implement the backend services for data ingestion, processing, and API endpoints to serve the frontend.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design",
+      "Data Modeling and Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5070,
+    "project_id": "TeamSynergyMetrics",
+    "title": "Frontend Development",
+    "description": "Design and implement the user interface for the TeamSynergyMetrics dashboard, including data visualization components and user interactions.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5071,
+    "project_id": "TeamSynergyMetrics",
+    "title": "Data Integration and ETL",
+    "description": "Develop processes to extract data from various sources (e.g., communication tools, project management systems), transform it into a standardized format, and load it into the database.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Data Modeling and Database Design",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5072,
+    "project_id": "TeamSynergyMetrics",
+    "title": "Security and Access Control",
+    "description": "Implement authentication and authorization mechanisms to secure the dashboard and ensure data privacy and access control based on user roles and permissions.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design",
+      "Backend Development"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 5073,
+    "project_id": "TeamSynergyMetrics",
+    "title": "Continuous Integration and Deployment",
+    "description": "Set up a CI/CD pipeline for automated testing, building, and deployment of the TeamSynergyMetrics application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5074,
+    "project_id": "TeamSynergyMetrics",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and execute test plans for unit, integration, and end-to-end testing of the TeamSynergyMetrics dashboard. Ensure quality standards are met.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Data Integration and ETL"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5075,
+    "project_id": "TeamSynergyMetrics",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation, including installation guides, user manuals, and API references for the TeamSynergyMetrics dashboard.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

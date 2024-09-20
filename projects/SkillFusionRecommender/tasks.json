@@ -1,0 +1,159 @@
+[
+  {
+    "id": 4545,
+    "project_id": "SkillFusionRecommender",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the project requirements, including the desired features, user personas, use cases, data sources, performance/scalability considerations, and ethical implications for the SkillFusionRecommender system.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 4546,
+    "project_id": "SkillFusionRecommender",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the SkillFusionRecommender system, including the components, data flow, integration points, and key considerations such as scalability, maintainability, performance, security, and fault tolerance.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 4547,
+    "project_id": "SkillFusionRecommender",
+    "title": "Set up Development Environment",
+    "description": "Configure the development environment, including version control, continuous integration/deployment (CI/CD) pipelines, and development tools.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4548,
+    "project_id": "SkillFusionRecommender",
+    "title": "Implement Data Ingestion and Processing",
+    "description": "Develop the components responsible for ingesting and processing data related to skills, industries, and job market trends.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4549,
+    "project_id": "SkillFusionRecommender",
+    "title": "Build Recommendation Engine",
+    "description": "Implement the core AI algorithm that generates unique skill combination recommendations based on the ingested data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture",
+      "Implement Data Ingestion and Processing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4550,
+    "project_id": "SkillFusionRecommender",
+    "title": "Develop User Interface",
+    "description": "Design and implement the user interface for the SkillFusionRecommender system, including user authentication, recommendation display, and user feedback mechanisms.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4551,
+    "project_id": "SkillFusionRecommender",
+    "title": "Implement Data Storage and Management",
+    "description": "Set up the data storage and management components, including databases, caching mechanisms, and data backup/recovery processes.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4552,
+    "project_id": "SkillFusionRecommender",
+    "title": "Ensure System Security",
+    "description": "Implement security measures to protect the SkillFusionRecommender system and user data, including authentication, authorization, and data encryption.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 4553,
+    "project_id": "SkillFusionRecommender",
+    "title": "Write Documentation and User Guides",
+    "description": "Create comprehensive documentation and user guides for the SkillFusionRecommender system, covering installation, configuration, and usage instructions.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Design System Architecture",
+      "Develop User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4554,
+    "project_id": "SkillFusionRecommender",
+    "title": "Conduct Testing and Quality Assurance",
+    "description": "Plan and execute comprehensive testing strategies, including unit tests, integration tests, and user acceptance testing, to ensure the quality and reliability of the SkillFusionRecommender system.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Implement Data Ingestion and Processing",
+      "Build Recommendation Engine",
+      "Develop User Interface",
+      "Implement Data Storage and Management"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4555,
+    "project_id": "SkillFusionRecommender",
+    "title": "Deploy and Monitor System",
+    "description": "Deploy the SkillFusionRecommender system to production environments, set up monitoring and logging mechanisms, and establish processes for ongoing maintenance and support.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Conduct Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

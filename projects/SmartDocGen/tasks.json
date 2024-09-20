@@ -1,0 +1,129 @@
+[
+  {
+    "id": 4684,
+    "project_id": "SmartDocGen",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements. Conduct research and gather input from stakeholders to understand their needs and expectations.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4685,
+    "project_id": "SmartDocGen",
+    "title": "Design and Architecture",
+    "description": "Design the overall system architecture, including the core components, data flow, and integration points. Define the technical specifications, standards, and best practices for maintainability, scalability, and performance. Consider edge cases, error handling, and security aspects.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 4686,
+    "project_id": "SmartDocGen",
+    "title": "Code Analysis and Parsing",
+    "description": "Develop the core functionality to analyze and parse various programming languages and codebases. Implement algorithms for code comprehension and extraction of relevant information.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design and Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4687,
+    "project_id": "SmartDocGen",
+    "title": "Documentation Generation",
+    "description": "Implement the logic to generate comprehensive documentation, including API references, architecture diagrams, and usage examples, based on the analyzed codebase.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Code Analysis and Parsing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4688,
+    "project_id": "SmartDocGen",
+    "title": "User Interface and Visualization",
+    "description": "Design and develop the user interface for interacting with the documentation generator, including visualization tools for exploring the generated documentation.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design and Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4689,
+    "project_id": "SmartDocGen",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test suites to ensure the correctness and reliability of the documentation generator. Implement automated testing frameworks and continuous integration pipelines.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Code Analysis and Parsing",
+      "Documentation Generation",
+      "User Interface and Visualization"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4690,
+    "project_id": "SmartDocGen",
+    "title": "Deployment and DevOps",
+    "description": "Set up the infrastructure and deployment pipelines for the documentation generator. Implement monitoring, logging, and scaling strategies.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 4691,
+    "project_id": "SmartDocGen",
+    "title": "Security and Compliance",
+    "description": "Ensure the documentation generator adheres to security best practices and industry standards. Implement access controls, data encryption, and auditing mechanisms.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design and Architecture"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 4692,
+    "project_id": "SmartDocGen",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive user guides, tutorials, and documentation for the documentation generator, covering installation, configuration, and usage scenarios.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "User Interface and Visualization",
+      "Deployment and DevOps"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]
