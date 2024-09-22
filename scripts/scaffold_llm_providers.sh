@@ -17,75 +17,205 @@ safe_create_file() {
     fi
 }
 
-# Scaffold Gemini provider
+# Scaffold provider.py (abstract base class)
+safe_create_file "coordinator/llms/provider_scaffold" "
+from abc import ABC, abstractmethod
+
+class LLMProvider(ABC):
+    @abstractmethod
+    async def generate(self, prompt: str, **kwargs) -> str:
+        pass
+
+    @abstractmethod
+    async def embed(self, text: str, **kwargs) -> list[float]:
+        pass
+
+    @abstractmethod
+    async def health_check(self) -> bool:
+        pass
+"
+
+# Scaffold ollama.py
+safe_create_file "coordinator/llms/ollama_scaffold" "
+from .provider import LLMProvider
+import aiohttp
+
+class OllamaProvider(LLMProvider):
+    def __init__(self, base_url: str = 'http://localhost:11434', model: str = 'mistral:latest'):
+        self.base_url = base_url
+        self.model = model
+
+    async def generate(self, prompt: str, cache_key: str = '', role: str = '', **kwargs) -> str:
+        # Implement Ollama generation logic here
+        pass
+
+    async def embed(self, text: str, **kwargs) -> list[float]:
+        # Implement Ollama embedding logic here
+        pass
+
+    async def health_check(self) -> bool:
+        # Implement Ollama health check logic here
+        pass
+"
+
+# Scaffold claude.py
+safe_create_file "coordinator/llms/claude_scaffold" "
+from .provider import LLMProvider
+from anthropic import AsyncAnthropic
+
+class ClaudeProvider(LLMProvider):
+    def __init__(self, api_key: str = None, model: str = 'claude-3-sonnet-20240229'):
+        self.api_key = api_key
+        self.model = model
+        self.client = AsyncAnthropic(api_key=self.api_key)
+
+    async def generate(self, prompt: str, cache_key: str = '', role: str = '', **kwargs) -> str:
+        # Implement Claude generation logic here
+        pass
+
+    async def embed(self, text: str, **kwargs) -> list[float]:
+        # Implement Claude embedding logic here
+        pass
+
+    async def health_check(self) -> bool:
+        # Implement Claude health check logic here
+        pass
+"
+
+# Scaffold azure_openai.py
+safe_create_file "coordinator/llms/azure_openai_scaffold" "
+from .provider import LLMProvider
+
+class AzureOpenAIProvider(LLMProvider):
+    def __init__(self, api_key: str = None, endpoint: str = None, deployment_name: str = None):
+        self.api_key = api_key
+        self.endpoint = endpoint
+        self.deployment_name = deployment_name
+
+    async def generate(self, prompt: str, cache_key: str = '', role: str = '', **kwargs) -> str:
+        # Implement Azure OpenAI generation logic here
+        pass
+
+    async def embed(self, text: str, **kwargs) -> list[float]:
+        # Implement Azure OpenAI embedding logic here
+        pass
+
+    async def health_check(self) -> bool:
+        # Implement Azure OpenAI health check logic here
+        pass
+"
+
+# Scaffold openai.py
+safe_create_file "coordinator/llms/openai_scaffold" "
+from .provider import LLMProvider
+
+class OpenAIProvider(LLMProvider):
+    def __init__(self, api_key: str = None, model: str = 'gpt-3.5-turbo'):
+        self.api_key = api_key
+        self.model = model
+
+    async def generate(self, prompt: str, cache_key: str = '', role: str = '', **kwargs) -> str:
+        # Implement OpenAI generation logic here
+        pass
+
+    async def embed(self, text: str, **kwargs) -> list[float]:
+        # Implement OpenAI embedding logic here
+        pass
+
+    async def health_check(self) -> bool:
+        # Implement OpenAI health check logic here
+        pass
+"
+
+# Scaffold bedrock.py
+safe_create_file "coordinator/llms/bedrock_scaffold" "
+from .provider import LLMProvider
+import boto3
+
+class BedrockProvider(LLMProvider):
+    def __init__(self, model: str = 'amazon.titan-text-express-v1'):
+        self.model = model
+        self.client = boto3.client('bedrock-runtime')
+
+    async def generate(self, prompt: str, cache_key: str = '', role: str = '', **kwargs) -> str:
+        # Implement Bedrock generation logic here
+        pass
+
+    async def embed(self, text: str, **kwargs) -> list[float]:
+        # Implement Bedrock embedding logic here
+        pass
+
+    async def health_check(self) -> bool:
+        # Implement Bedrock health check logic here
+        pass
+"
+
+# Scaffold gemini.py (new provider)
 safe_create_file "coordinator/llms/gemini_scaffold" "
 from .provider import LLMProvider
-# Note: Uncomment the following line when ready to integrate
-# import google.generativeai as genai
+import google.generativeai as genai
 
 class GeminiProvider(LLMProvider):
     def __init__(self, api_key: str = None, model: str = 'gemini-pro'):
         self.api_key = api_key
         self.model = model
-        # Note: Uncomment the following line when ready to integrate
-        # genai.configure(api_key=self.api_key)
+        genai.configure(api_key=self.api_key)
 
     async def generate(self, prompt: str, cache_key: str = '', role: str = '', **kwargs) -> str:
-        # Note: Replace this placeholder implementation when ready to integrate
-        return f'Placeholder response for prompt: {prompt}'
+        # Implement Gemini generation logic here
+        pass
 
     async def embed(self, text: str, **kwargs) -> list[float]:
-        raise NotImplementedError('Gemini does not support embeddings')
+        # Implement Gemini embedding logic here
+        pass
 
     async def health_check(self) -> bool:
-        try:
-            await self.generate('Hello, World!')
-            return True
-        except Exception:
-            return False
-
-# TODO: Integrate this provider in the factory.py file
-# TODO: Add Gemini to the LLMProvider enum in models.py
-# TODO: Update configuration handling for Gemini API key
+        # Implement Gemini health check logic here
+        pass
 "
 
-# Scaffold AWS Bedrock provider (using Titan model as an example)
-safe_create_file "coordinator/llms/bedrock_scaffold" "
+# Scaffold factory.py
+safe_create_file "coordinator/llms/factory_scaffold" "
+from typing import Tuple
 from .provider import LLMProvider
-# Note: Uncomment the following line when ready to integrate
-# import boto3
+from .ollama import OllamaProvider
+from .claude import ClaudeProvider
+from .azure_openai import AzureOpenAIProvider
+from .openai import OpenAIProvider
+from .bedrock import BedrockProvider
+from .gemini import GeminiProvider
 
-class BedrockProvider(LLMProvider):
-    def __init__(self, model: str = 'amazon.titan-text-express-v1'):
-        self.model = model
-        # Note: Uncomment the following line when ready to integrate
-        # self.client = boto3.client('bedrock-runtime')
-
-    async def generate(self, prompt: str, cache_key: str = '', role: str = '', **kwargs) -> str:
-        # Note: Replace this placeholder implementation when ready to integrate
-        return f'Placeholder response for prompt: {prompt}'
-
-    async def embed(self, text: str, **kwargs) -> list[float]:
-        raise NotImplementedError('This Bedrock model does not support embeddings')
-
-    async def health_check(self) -> bool:
-        try:
-            await self.generate('Hello, World!')
-            return True
-        except Exception:
-            return False
-
-# TODO: Integrate this provider in the factory.py file
-# TODO: Add Bedrock to the LLMProvider enum in models.py
-# TODO: Update configuration handling for AWS credentials
-# TODO: Consider adding support for other Bedrock models (e.g., Claude, Jurassic)
+def create_llm_provider(provider: str, **kwargs) -> Tuple[LLMProvider, str, str]:
+    if provider == 'ollama':
+        model = kwargs.get('model', 'mistral:latest')
+        return OllamaProvider(base_url=kwargs.get('base_url', 'http://localhost:11434'), model=model), 'ollama', model
+    elif provider == 'claude':
+        model = kwargs.get('model', 'claude-3-sonnet-20240229')
+        return ClaudeProvider(api_key=kwargs.get('api_key'), model=model), 'claude', model
+    elif provider == 'azure_openai':
+        return AzureOpenAIProvider(api_key=kwargs.get('api_key'), endpoint=kwargs.get('endpoint'), deployment_name=kwargs.get('deployment_name')), 'azure_openai', kwargs.get('deployment_name')
+    elif provider == 'openai':
+        model = kwargs.get('model', 'gpt-3.5-turbo')
+        return OpenAIProvider(api_key=kwargs.get('api_key'), model=model), 'openai', model
+    elif provider == 'bedrock':
+        model = kwargs.get('model', 'amazon.titan-text-express-v1')
+        return BedrockProvider(model=model), 'bedrock', model
+    elif provider == 'gemini':
+        model = kwargs.get('model', 'gemini-pro')
+        return GeminiProvider(api_key=kwargs.get('api_key'), model=model), 'gemini', model
+    else:
+        raise ValueError(f'Unknown provider: {provider}')
 "
 
-echo "LLM provider scaffolds have been safely created for Gemini and AWS Bedrock (Titan model)."
+echo "LLM provider scaffolds have been safely created for all providers."
 echo "New files created (if they didn't already exist):"
-echo "- coordinator/llms/gemini_scaffold_${TIMESTAMP}.py"
+echo "- coordinator/llms/provider_scaffold_${TIMESTAMP}.py"
+echo "- coordinator/llms/ollama_scaffold_${TIMESTAMP}.py"
+echo "- coordinator/llms/claude_scaffold_${TIMESTAMP}.py"
+echo "- coordinator/llms/azure_openai_scaffold_${TIMESTAMP}.py"
+echo "- coordinator/llms/openai_scaffold_${TIMESTAMP}.py"
 echo "- coordinator/llms/bedrock_scaffold_${TIMESTAMP}.py"
-echo "Please review these files and complete the TODOs for full integration."
-echo "When ready to integrate, you will need to install additional dependencies:"
-echo "  pip install google-generativeai boto3"
-echo "Remember to set up proper authentication for these services."
+echo "- coordinator/llms/gemini_scaffold_${TIMESTAMP}.py"
+echo "- coordinator/llms/factory_scaffold_${TIMESTAMP}.py"
+echo "Please review these files and update as needed."
+echo "Remember to install necessary dependencies and set up proper authentication for these services."
