@@ -39,6 +39,8 @@ coordinator = "coordinator.main:main"
 
 [tool.poetry.group.dev.dependencies]
 ipython = "^8.27.0"
+pytest-asyncio = "^0.24.0"
+pytest-mock = "^3.14.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -63,3 +65,6 @@ extend-exclude = '''
 
 [tool.isort]
 profile = "black"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
