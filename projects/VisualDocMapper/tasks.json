@@ -1,0 +1,146 @@
+[
+  {
+    "id": 5471,
+    "project_id": "VisualDocMapper",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements. Gather input from stakeholders and subject matter experts to understand their needs and expectations.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5472,
+    "project_id": "VisualDocMapper",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including the components, data flow, and interactions between different modules. The architecture should consider scalability, maintainability, and performance requirements. It should also address security concerns, error handling, and potential integration with existing systems or third-party services.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 5473,
+    "project_id": "VisualDocMapper",
+    "title": "Data Model and Database Design",
+    "description": "Design the data model and database schema to store and manage the documentation and mapping information. The data model should include entities for documents, sections, relationships, and any other relevant metadata. Consider the need for versioning and access control mechanisms. The database schema should be optimized for efficient querying and retrieval of mapping information.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 5474,
+    "project_id": "VisualDocMapper",
+    "title": "User Interface Design",
+    "description": "Design the user interface for the VisualDocMapper tool, including the layout, navigation, and visual representation of the documentation maps. The design should consider usability, accessibility, and responsiveness across different devices and screen sizes.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 5475,
+    "project_id": "VisualDocMapper",
+    "title": "Backend Development",
+    "description": "Implement the backend functionality, including the core logic for parsing documentation, extracting relationships, and generating visual maps.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Model and Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5476,
+    "project_id": "VisualDocMapper",
+    "title": "Frontend Development",
+    "description": "Implement the user interface and integrate it with the backend functionality to display the visual documentation maps.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "User Interface Design",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5477,
+    "project_id": "VisualDocMapper",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop test plans, write test cases, and perform thorough testing of the VisualDocMapper tool, including functional, integration, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5478,
+    "project_id": "VisualDocMapper",
+    "title": "Security Audit",
+    "description": "Perform a security audit to identify and mitigate potential vulnerabilities in the VisualDocMapper tool.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 5479,
+    "project_id": "VisualDocMapper",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment environment, configure the necessary infrastructure, and automate the deployment process for the VisualDocMapper tool.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Testing and Quality Assurance",
+      "Security Audit"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5480,
+    "project_id": "VisualDocMapper",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation and user guides to assist users in understanding and effectively utilizing the VisualDocMapper tool.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "id": 5328,
+    "project_id": "UtopianSocietyDesigner",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the functional and non-functional requirements for the UtopianSocietyDesigner platform, including user stories, use cases, system constraints, and key performance indicators (KPIs).",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 5329,
+    "project_id": "UtopianSocietyDesigner",
+    "title": "Design System Architecture",
+    "description": "Define the overall system architecture, including the frontend, backend, database, and infrastructure components, as well as the communication protocols and data flow. The architecture should prioritize scalability, maintainability, and modularity to accommodate future growth and changes. Ensure proper separation of concerns and adherence to industry best practices.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 5330,
+    "project_id": "UtopianSocietyDesigner",
+    "title": "Design User Interface and Experience",
+    "description": "Create wireframes, mockups, and prototypes for the user interface, ensuring a seamless and intuitive experience for designing and simulating utopian societies.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5331,
+    "project_id": "UtopianSocietyDesigner",
+    "title": "Develop Backend Services",
+    "description": "Implement the backend services responsible for handling user input, simulating societies, and managing data storage and retrieval.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5332,
+    "project_id": "UtopianSocietyDesigner",
+    "title": "Implement Frontend Components",
+    "description": "Develop the frontend components and user interfaces for designing and visualizing utopian societies, integrating with the backend services.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design User Interface and Experience",
+      "Develop Backend Services"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5333,
+    "project_id": "UtopianSocietyDesigner",
+    "title": "Set up Database and Data Modeling",
+    "description": "Design and implement the database schema and data models for storing and retrieving user-created societies and simulation data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5334,
+    "project_id": "UtopianSocietyDesigner",
+    "title": "Implement Simulation Engine",
+    "description": "Develop the core simulation engine responsible for modeling and simulating the dynamics of utopian societies based on user input and predefined rules.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Backend Services",
+      "Set up Database and Data Modeling"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5335,
+    "project_id": "UtopianSocietyDesigner",
+    "title": "Integrate Frontend and Backend",
+    "description": "Ensure seamless communication and data exchange between the frontend and backend components, enabling real-time updates and synchronization.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Implement Frontend Components",
+      "Develop Backend Services"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5336,
+    "project_id": "UtopianSocietyDesigner",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a robust CI/CD pipeline for automated building, testing, and deployment of the UtopianSocietyDesigner platform.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Backend Services",
+      "Implement Frontend Components"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5337,
+    "project_id": "UtopianSocietyDesigner",
+    "title": "Implement Security Measures",
+    "description": "Ensure the platform is secure by implementing appropriate authentication, authorization, and data protection mechanisms.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Develop Backend Services",
+      "Implement Frontend Components"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5338,
+    "project_id": "UtopianSocietyDesigner",
+    "title": "Conduct Thorough Testing",
+    "description": "Plan and execute comprehensive testing strategies, including unit tests, integration tests, and end-to-end tests, to ensure the platform's functionality and reliability.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Frontend Components",
+      "Develop Backend Services",
+      "Implement Simulation Engine"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5339,
+    "project_id": "UtopianSocietyDesigner",
+    "title": "Prepare Documentation and User Guides",
+    "description": "Create comprehensive documentation and user guides to assist users in understanding and utilizing the UtopianSocietyDesigner platform effectively.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "Implement Frontend Components",
+      "Develop Backend Services",
+      "Implement Simulation Engine"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

@@ -1,0 +1,158 @@
+[
+  {
+    "id": 5308,
+    "project_id": "UserBehaviorAnalytics",
+    "title": "Project Planning and Management",
+    "description": "Define project scope, goals, and timeline. Establish project management processes and communication channels.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5309,
+    "project_id": "UserBehaviorAnalytics",
+    "title": "Requirements Gathering and Analysis",
+    "description": "Collect and analyze requirements for the user behavior analytics platform, including data sources, analysis techniques, and desired outputs.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5310,
+    "project_id": "UserBehaviorAnalytics",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including data ingestion, processing, storage, and analysis components.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 5311,
+    "project_id": "UserBehaviorAnalytics",
+    "title": "Data Ingestion and Processing",
+    "description": "Implement components for ingesting and processing user behavior data from various sources.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5312,
+    "project_id": "UserBehaviorAnalytics",
+    "title": "Data Storage and Management",
+    "description": "Design and implement data storage solutions for user behavior data, including databases and data lakes.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5313,
+    "project_id": "UserBehaviorAnalytics",
+    "title": "User Behavior Analysis",
+    "description": "Develop algorithms and models for analyzing user behavior data to detect insider threats and compromised accounts.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Data Ingestion and Processing",
+      "Data Storage and Management"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5314,
+    "project_id": "UserBehaviorAnalytics",
+    "title": "Reporting and Alerting",
+    "description": "Implement reporting and alerting mechanisms for detected threats and suspicious user behavior.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "User Behavior Analysis"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5315,
+    "project_id": "UserBehaviorAnalytics",
+    "title": "Security and Compliance",
+    "description": "Ensure the platform adheres to relevant security and compliance standards, including data privacy, access controls, secure coding practices, regular security audits, and industry-specific regulations (e.g., HIPAA, PCI-DSS, GDPR).",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Storage and Management",
+      "User Authentication and Authorization"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 5316,
+    "project_id": "UserBehaviorAnalytics",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and execute test plans for the user behavior analytics platform, including unit, integration, and end-to-end testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Data Ingestion and Processing",
+      "Data Storage and Management",
+      "User Behavior Analysis",
+      "Reporting and Alerting"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5317,
+    "project_id": "UserBehaviorAnalytics",
+    "title": "Deployment and DevOps",
+    "description": "Set up deployment pipelines and infrastructure for the user behavior analytics platform, including continuous integration and delivery.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5318,
+    "project_id": "UserBehaviorAnalytics",
+    "title": "Documentation and Training",
+    "description": "Create comprehensive documentation for the user behavior analytics platform, including user guides and technical documentation. Develop training materials for end-users and administrators.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Reporting and Alerting"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

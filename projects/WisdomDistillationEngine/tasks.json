@@ -1,0 +1,171 @@
+[
+  {
+    "id": 5552,
+    "project_id": "WisdomDistillationEngine",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements. Conduct research on existing philosophical texts and wisdom sources. Identify target use cases and scenarios for the AI system.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5553,
+    "project_id": "WisdomDistillationEngine",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components for text processing, knowledge extraction, reasoning, decision-making, and user interaction. Define data models, workflows, and system interfaces. Consider scalability, maintainability, and performance requirements.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
+    "id": 5554,
+    "project_id": "WisdomDistillationEngine",
+    "title": "Data Acquisition and Preprocessing",
+    "description": "Identify and acquire relevant philosophical texts and wisdom sources. Preprocess the data for further analysis and knowledge extraction.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5555,
+    "project_id": "WisdomDistillationEngine",
+    "title": "Knowledge Extraction and Representation",
+    "description": "Develop algorithms and models to extract practical wisdom and knowledge from the acquired texts. Define knowledge representation formats and ontologies.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5556,
+    "project_id": "WisdomDistillationEngine",
+    "title": "Reasoning and Decision-Making Engine",
+    "description": "Implement the reasoning and decision-making components of the AI system. Develop algorithms to apply the extracted wisdom to real-world scenarios and situations.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Knowledge Extraction and Representation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5557,
+    "project_id": "WisdomDistillationEngine",
+    "title": "User Interface and Experience Design",
+    "description": "Design the user interface and experience for interacting with the AI system. Define input and output formats, and create wireframes and mockups.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 5558,
+    "project_id": "WisdomDistillationEngine",
+    "title": "Frontend Development",
+    "description": "Implement the user interface and experience based on the approved designs. Integrate with the backend components and APIs.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "User Interface and Experience Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5559,
+    "project_id": "WisdomDistillationEngine",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema for storing philosophical texts, extracted knowledge, user data, and metadata. Ensure data integrity, performance, and scalability. Consider using a document-oriented database for storing unstructured text data and a relational database for structured data. Implement caching mechanisms for frequently accessed data. Develop data access layers and APIs for seamless integration with other components.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 5560,
+    "project_id": "WisdomDistillationEngine",
+    "title": "Integration and System Testing",
+    "description": "Integrate all components of the AI system and perform comprehensive system testing. Validate the functionality, performance, and accuracy of the knowledge extraction and decision-making processes.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Reasoning and Decision-Making Engine",
+      "Frontend Development",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5561,
+    "project_id": "WisdomDistillationEngine",
+    "title": "Security and Privacy Audit",
+    "description": "Conduct a thorough security and privacy audit of the AI system. Identify and mitigate potential risks and vulnerabilities, ensuring data privacy and system integrity.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Integration and System Testing"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 5562,
+    "project_id": "WisdomDistillationEngine",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure and processes for the AI system. Implement monitoring, logging, and automated deployment pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Integration and System Testing",
+      "Security and Privacy Audit"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5563,
+    "project_id": "WisdomDistillationEngine",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation and user guides for the AI system. Include installation instructions, usage examples, and API references.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Integration and System Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]

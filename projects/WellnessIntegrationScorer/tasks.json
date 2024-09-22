@@ -1,0 +1,163 @@
+[
+  {
+    "id": 5531,
+    "project_id": "WellnessIntegrationScorer",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the requirements for the WellnessIntegrationScorer tool, including the types of wellness activities to be tracked (e.g., physical exercise, mindfulness practices, healthy eating habits), the scoring criteria (e.g., frequency, duration, intensity), the desired user experience (e.g., mobile app, web dashboard), data privacy and security considerations (e.g., compliance with relevant regulations, secure data storage and transmission), integration with existing systems (e.g., HR systems, fitness trackers, wellness platforms), and scalability and performance requirements (e.g., handling large user bases, real-time data processing).",
+    "status": "IN_PROGRESS",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 5532,
+    "project_id": "WellnessIntegrationScorer",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including the data model, APIs, integration points with other systems or data sources, and consider aspects like scalability, maintainability, security, and performance.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT"
+  },
+  {
+    "id": 5533,
+    "project_id": "WellnessIntegrationScorer",
+    "title": "Set up Development Environment",
+    "description": "Configure the development environment, including version control, continuous integration/deployment, and any necessary tools or libraries.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5534,
+    "project_id": "WellnessIntegrationScorer",
+    "title": "Implement Backend Services",
+    "description": "Develop the backend services responsible for data processing, scoring calculations, and integration with other systems.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Set up Development Environment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5535,
+    "project_id": "WellnessIntegrationScorer",
+    "title": "Develop User Interface",
+    "description": "Create the user interface for the WellnessIntegrationScorer tool, including the dashboard, personalized suggestions, and any necessary user interactions.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Set up Development Environment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5536,
+    "project_id": "WellnessIntegrationScorer",
+    "title": "Implement Data Storage and Retrieval",
+    "description": "Set up the database or data storage solution and implement the necessary data access layer for storing and retrieving employee wellness data and scoring information.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture",
+      "Set up Development Environment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5537,
+    "project_id": "WellnessIntegrationScorer",
+    "title": "Develop Testing Strategy",
+    "description": "Define a comprehensive testing strategy for the WellnessIntegrationScorer tool, including unit tests, integration tests, and end-to-end tests. The strategy should cover testing the core functionality, edge cases, error handling, and performance. Additionally, consider incorporating automated testing frameworks, continuous integration, and test coverage reporting.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 5538,
+    "project_id": "WellnessIntegrationScorer",
+    "title": "Implement Security Measures",
+    "description": "Identify and implement necessary security measures, such as authentication, authorization, and data encryption, to protect employee data and ensure the system's security.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null
+  },
+  {
+    "id": 5539,
+    "project_id": "WellnessIntegrationScorer",
+    "title": "Create Documentation",
+    "description": "Develop comprehensive documentation for the WellnessIntegrationScorer tool, including user guides, technical documentation, and any necessary training materials.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture",
+      "Implement Backend Services",
+      "Develop User Interface",
+      "Implement Data Storage and Retrieval"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5540,
+    "project_id": "WellnessIntegrationScorer",
+    "title": "Conduct System Testing",
+    "description": "Perform thorough testing of the WellnessIntegrationScorer tool, including functional testing, integration testing, performance testing, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Backend Services",
+      "Develop User Interface",
+      "Implement Data Storage and Retrieval",
+      "Develop Testing Strategy"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 5541,
+    "project_id": "WellnessIntegrationScorer",
+    "title": "Deploy to Production",
+    "description": "Deploy the WellnessIntegrationScorer tool to the production environment, ensuring proper configuration, monitoring, and maintenance procedures are in place.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Conduct System Testing"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  }
+]

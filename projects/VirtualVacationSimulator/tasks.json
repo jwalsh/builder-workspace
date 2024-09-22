@@ -1,0 +1,144 @@
+[
+  {
+    "id": 5451,
+    "project_id": "VirtualVacationSimulator",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, goals, and requirements. Conduct market research, gather user feedback, and create detailed specifications for the virtual vacation simulator platform.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5452,
+    "project_id": "VirtualVacationSimulator",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including the virtual reality engine, user interface, data storage, and integration with external services (e.g., travel booking platforms). The architecture should consider scalability, performance, security, and maintainability.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW"
+  },
+  {
+    "id": 5453,
+    "project_id": "VirtualVacationSimulator",
+    "title": "Virtual Environment Creation",
+    "description": "Develop the virtual reality environments, including photo-realistic 3D models, textures, and animations for various vacation destinations.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5454,
+    "project_id": "VirtualVacationSimulator",
+    "title": "User Interface Development",
+    "description": "Design and implement the user interface for the virtual vacation simulator, including navigation, controls, and integration with the virtual reality environments.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5455,
+    "project_id": "VirtualVacationSimulator",
+    "title": "Backend Development",
+    "description": "Develop the backend systems for managing user accounts, vacation planning, and integration with travel booking platforms.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5456,
+    "project_id": "VirtualVacationSimulator",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema for storing user data, vacation plans, and other relevant information.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5457,
+    "project_id": "VirtualVacationSimulator",
+    "title": "Security and Privacy Considerations",
+    "description": "Implement security measures to protect user data and ensure privacy compliance with relevant regulations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 5458,
+    "project_id": "VirtualVacationSimulator",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and execute testing for the virtual vacation simulator platform, including functional, performance, and usability testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Virtual Environment Creation",
+      "User Interface Development",
+      "Backend Development",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5459,
+    "project_id": "VirtualVacationSimulator",
+    "title": "Deployment and DevOps",
+    "description": "Set up the infrastructure for hosting and deploying the virtual vacation simulator platform, including continuous integration and deployment pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 5460,
+    "project_id": "VirtualVacationSimulator",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation for users, including user guides, tutorials, and support resources.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "User Interface Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  }
+]
