@@ -28,16 +28,19 @@ class RFCState(str, Enum):
     OBSOLETE = "OBSOLETE"
     UNKNOWN = "UNKNOWN"
 
+
 from datetime import datetime
 from enum import Enum
 from typing import Optional
 
 from pydantic import BaseModel, Field
 
+
 class LLMProvider(str, Enum):
     OLLAMA = "ollama"
     CLAUDE = "claude"
     RANDOM = "random"
+
 
 class LLMConfig(BaseModel):
     provider: LLMProvider
@@ -46,15 +49,14 @@ class LLMConfig(BaseModel):
     last_check: Optional[datetime] = Field(default_factory=datetime.now)
 
     class Config:
-        json_encoders = {
-            datetime: lambda v: v.isoformat()
-        }
+        json_encoders = {datetime: lambda v: v.isoformat()}
 
     @classmethod
     def parse_obj(cls, obj):
-        if isinstance(obj.get('last_check'), str):
-            obj['last_check'] = datetime.fromisoformat(obj['last_check'])
+        if isinstance(obj.get("last_check"), str):
+            obj["last_check"] = datetime.fromisoformat(obj["last_check"])
         return super().parse_obj(obj)
+
 
 class ProjectDefinition(BaseModel):
     name: str

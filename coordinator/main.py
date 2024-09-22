@@ -20,6 +20,7 @@ logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
+
 @click.command()
 @click.option("--name", help="Project name")
 @click.option("--description", help="Project description")
@@ -113,6 +114,7 @@ def main(
             click.echo("An error occurred. Please check the logs for more information.")
 
     asyncio.run(async_main())
+
 
 if __name__ == "__main__":
     main()

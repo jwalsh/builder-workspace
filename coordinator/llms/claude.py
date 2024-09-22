@@ -2,13 +2,16 @@ import os
 from anthropic import AsyncAnthropic
 from .provider import LLMProvider
 
+
 class ClaudeProvider(LLMProvider):
     def __init__(self, api_key: str = None, model: str = "claude-3-sonnet-20240229"):
         self.api_key = api_key or os.environ.get("ANTHROPIC_API_KEY")
         self.model = model
         self.client = AsyncAnthropic(api_key=self.api_key)
 
-    async def generate(self, prompt: str, cache_key: str = "", role: str = "", **kwargs) -> str:
+    async def generate(
+        self, prompt: str, cache_key: str = "", role: str = "", **kwargs
+    ) -> str:
         try:
             response = await self.client.messages.create(
                 model=self.model,

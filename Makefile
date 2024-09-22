@@ -40,6 +40,11 @@ coordinator-files: ## Get Coordinator files for LLM review
 test-coordinator: ## Run test coordinator with a sample project
 	$(COORDINATOR) --name TestProject --description "This is a test project" --force
 
+clean-test-project: ## Remove TestProject and add JSON files
+	rm -rf projects/TestProject
+	git add projects/*/*.json
+	@echo "TestProject removed and JSON files added to git."
+
 test-coordinator-all: test-coordinator ## Run all coordinator tests
 	$(COORDINATOR) --list
 	$(COORDINATOR) --name TestProject --use-llm claude
@@ -50,5 +55,12 @@ list: # List Coordinator tasks
 
 list-tasks: ## List all tasks
 	sqlite3 tasks.db "SELECT id, project_id, title, status, assigned_to, task_type, rfc_state FROM tasks;" | tee tasks_output.txt
+
+tangle: ## Get txt files for all projects
+	poetry run emacs -Q --batch -l org --eval '(org-babel-tangle-file "projects/README.org")'
+
+run-analyzer: ## Run the analyzer on the projects
+	$(PYTHON) -m analyzer --action categorize --filename projects/README.org
+	$(PYTHON) -m analyzer --action analyze --filename projects/README.org
 
 .PHONY: help setup test lint format pre-commit repl test-coordinator test-coordinator-all

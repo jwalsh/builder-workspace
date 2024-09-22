@@ -1,15 +1,20 @@
 import aiohttp
 from .provider import LLMProvider
 
+
 class OllamaProvider(LLMProvider):
-    def __init__(self, base_url: str = "http://localhost:11434", model: str = "mistral:latest"):
+    def __init__(
+        self, base_url: str = "http://localhost:11434", model: str = "mistral:latest"
+    ):
         self.base_url = base_url
         self.model = model
 
-    async def generate(self, prompt: str, cache_key: str = "", role: str = "", **kwargs) -> str:
+    async def generate(
+        self, prompt: str, cache_key: str = "", role: str = "", **kwargs
+    ) -> str:
         system_message = f"Cache key: {cache_key}\nRole: {role}\n\n"
         full_prompt = system_message + prompt
-        
+
         async with aiohttp.ClientSession() as session:
             async with session.post(
                 f"{self.base_url}/api/generate",
