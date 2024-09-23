@@ -180,7 +180,7 @@ def show_project_tasks(project_name: str):
 
 
 async def process_project(
-    name: str, description: str, force: bool, process_rfcs: bool = False
+    name: str, description: str, force: bool, process_rfcs: bool = True
 ):
     try:
         project_definition = ProjectDefinition(name=name, description=description)
