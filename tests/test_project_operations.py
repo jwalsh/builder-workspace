@@ -3,14 +3,16 @@ from unittest.mock import Mock, patch
 from coordinator.project_operations import decompose_project, process_rfc
 from coordinator.models import ProjectDefinition, Task, TaskType, RFCState
 
+
 @pytest.fixture
 def mock_llm_manager():
-    with patch('coordinator.project_operations.llm_manager') as mock:
+    with patch("coordinator.project_operations.llm_manager") as mock:
         yield mock
+
 
 def test_decompose_project(mock_llm_manager):
     # Mock the LLM response
-    mock_llm_manager.run_llm_command.return_value = '''
+    mock_llm_manager.run_llm_command.return_value = """
     [
         {
             "title": "Task 1",
@@ -33,9 +35,11 @@ def test_decompose_project(mock_llm_manager):
             "rfc_state": null
         }
     ]
-    '''
+    """
 
-    project_definition = ProjectDefinition(name="Test Project", description="A test project")
+    project_definition = ProjectDefinition(
+        name="Test Project", description="A test project"
+    )
     tasks = decompose_project(project_definition)
 
     assert len(tasks) == 2
@@ -46,9 +50,10 @@ def test_decompose_project(mock_llm_manager):
     assert tasks[1].task_type == TaskType.DECOMPOSE
     assert tasks[1].rfc_state is None
 
+
 def test_process_rfc(mock_llm_manager):
     # Mock the LLM response
-    mock_llm_manager.run_llm_command.return_value = '''
+    mock_llm_manager.run_llm_command.return_value = """
     {
         "title": "Updated RFC",
         "description": "Updated description",
@@ -59,9 +64,11 @@ def test_process_rfc(mock_llm_manager):
         "task_type": "rfc",
         "rfc_state": "REVIEW"
     }
-    '''
+    """
 
-    project_definition = ProjectDefinition(name="Test Project", description="A test project")
+    project_definition = ProjectDefinition(
+        name="Test Project", description="A test project"
+    )
     task = Task(
         id=1,
         project_id="test_project",
@@ -72,7 +79,7 @@ def test_process_rfc(mock_llm_manager):
         priority=1,
         dependencies=[],
         task_type=TaskType.RFC,
-        rfc_state=RFCState.DRAFT
+        rfc_state=RFCState.DRAFT,
     )
 
     updated_task = process_rfc(task, project_definition)

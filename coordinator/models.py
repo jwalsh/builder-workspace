@@ -1,8 +1,18 @@
+# File: coordinator/models.py
+
 from datetime import datetime
 from enum import Enum
 from typing import List, Optional
 
 from pydantic import BaseModel, Field
+
+
+class ImplementationState(str, Enum):
+    NOT_STARTED = "not_started"
+    IN_PROGRESS = "in_progress"
+    REVIEW = "review"
+    TESTING = "testing"
+    COMPLETED = "completed"
 
 
 class TaskType(str, Enum):
@@ -11,6 +21,13 @@ class TaskType(str, Enum):
     RFC_REVIEW = "rfc_review"
     CODE_REVIEW = "code_review"
     AUDIT = "audit"
+    IMPLEMENTATION = "implementation"
+    TESTING = "testing"
+    DOCUMENTATION = "documentation"
+    INFRASTRUCTURE = "infrastructure"
+    MONITORING = "monitoring"
+    DIAGRAM = "diagram"
+    RESEARCH = "research"
     UNKNOWN = "unknown"
 
 
@@ -29,11 +46,12 @@ class RFCState(str, Enum):
     UNKNOWN = "UNKNOWN"
 
 
-from datetime import datetime
-from enum import Enum
-from typing import Optional
-
-from pydantic import BaseModel, Field
+class ImplementationState(str, Enum):
+    NOT_STARTED = "not_started"
+    IN_PROGRESS = "in_progress"
+    REVIEW = "review"
+    TESTING = "testing"
+    COMPLETED = "completed"
 
 
 class LLMProvider(str, Enum):
@@ -74,6 +92,7 @@ class Task(BaseModel):
     dependencies: List[str]
     task_type: TaskType = Field(default=TaskType.UNKNOWN)
     rfc_state: Optional[RFCState] = Field(default=None)
+    implementation_state: Optional[ImplementationState] = Field(default=None)
 
 
 class ProjectVersion(BaseModel):
@@ -99,6 +118,7 @@ class TaskUpdate(BaseModel):
     dependencies: Optional[List[str]] = None
     task_type: Optional[TaskType] = None
     rfc_state: Optional[RFCState] = None
+    implementation_state: Optional[ImplementationState] = None
 
 
 class ProjectStats(BaseModel):

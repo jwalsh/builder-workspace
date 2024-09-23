@@ -9,7 +9,7 @@ from typing import Any, Dict, List
 from .models import Task
 
 
-def extract_json_from_response(text: str) -> Dict[str, Any]:
+def extract_json_from_response(text: str) -> dict:
     try:
         # First, try to parse the entire text as JSON
         return json.loads(text)
@@ -20,10 +20,10 @@ def extract_json_from_response(text: str) -> Dict[str, Any]:
             try:
                 return json.loads(json_match.group(0))
             except json.JSONDecodeError:
-                logging.error("Failed to extract valid JSON from the response")
+                logging.error(f"Failed to extract valid JSON from the response: {text}")
                 return {}
         else:
-            logging.error("No JSON-like content found in the response")
+            logging.error(f"No JSON-like content found in the response: {text}")
             return {}
 
 
