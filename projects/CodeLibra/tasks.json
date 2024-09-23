@@ -1,5 +1,117 @@
 [
   {
+    "id": 9320,
+    "project_id": "CodeLibra",
+    "title": "Define Data Model",
+    "description": "Design and document the data model that will store code quality metrics, team performance statistics, and project health indicators.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 9321,
+    "project_id": "CodeLibra",
+    "title": "Develop Code Quality Analysis Module",
+    "description": "Write the code for analyzing the quality of the codebase, including metrics such as complexity, maintainability, and test coverage.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Define Data Model"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 9322,
+    "project_id": "CodeLibra",
+    "title": "Create Team Performance Monitoring Module",
+    "description": "Develop a module for monitoring team performance based on metrics such as productivity, code commits, and issue resolution.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Define Data Model"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 9323,
+    "project_id": "CodeLibra",
+    "title": "Design Project Health Dashboard",
+    "description": "Create a user-friendly dashboard for displaying actionable insights into project health, including code quality, team performance, and development progress.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Define Data Model"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 9324,
+    "project_id": "CodeLibra",
+    "title": "Integrate with External APIs",
+    "description": "Connect CodeLibra with external APIs such as version control systems, issue tracking tools, and continuous integration services.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Define Data Model"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null
+  },
+  {
+    "id": 9325,
+    "project_id": "CodeLibra",
+    "title": "Conduct Code Reviews",
+    "description": "Review the code written for each module to ensure it adheres to coding standards and best practices.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [
+      "Develop Code Quality Analysis Module",
+      "Create Team Performance Monitoring Module"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null
+  },
+  {
+    "id": 9326,
+    "project_id": "CodeLibra",
+    "title": "Perform Security Audits",
+    "description": "Evaluate the security of the codebase, identify potential vulnerabilities, and provide recommendations for remediation.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Develop Code Quality Analysis Module"
+    ],
+    "task_type": "audit",
+    "rfc_state": null
+  },
+  {
+    "id": 9327,
+    "project_id": "CodeLibra",
+    "title": "Write Technical Documentation",
+    "description": "Create user guides, API references, and other documentation to help developers and users make the most of CodeLibra.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Define Data Model",
+      "Design Project Health Dashboard"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN"
+  },
+  {
     "id": 9598,
     "project_id": "CodeLibra",
     "title": "Define the overall architecture and design of CodeLibra",
