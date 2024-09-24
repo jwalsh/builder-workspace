@@ -76,9 +76,9 @@
     "id": 6775,
     "project_id": "AnalyseTextuelleGlobale",
     "title": "Implement Data Storage and Management",
-    "description": "Design and implement a scalable, efficient, and secure data storage and management solution. Consider using a combination of relational databases (e.g., PostgreSQL for structured data) and NoSQL databases (e.g., MongoDB or Cassandra for unstructured or semi-structured data) based on the project's specific data requirements. Implement caching mechanisms (e.g., Redis) for frequently accessed data to improve performance, focusing on LRU, ARC, or other cache eviction strategies. Ensure the use of encryption at rest and in transit, and implement robust backup strategies (e.g., daily snapshots, transaction logs) to maintain data integrity. Consider implementing read/write replication, sharding, and partitioning for scalability.",
+    "description": "Design and implement a scalable, efficient, and secure data storage and management solution. Leverage a combination of relational databases (e.g., PostgreSQL for structured data) and NoSQL databases (e.g., MongoDB or Cassandra for unstructured or semi-structured data) based on the project's specific data requirements. Implement caching mechanisms (e.g., Redis) for frequently accessed data to improve performance, focusing on LRU, ARC, or other cache eviction strategies. Ensure the use of encryption at rest and in transit, and implement robust backup strategies (e.g., daily snapshots, transaction logs) to maintain data integrity. Consider implementing read/write replication, sharding, and partitioning for scalability. In addition, perform load testing to ensure system performance under expected loads, and monitor the system using tools like Prometheus or Grafana for real-time insights.",
     "status": "IN_PROGRESS",
-    "assigned_to": "database-specialist",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "Design System Architecture"
@@ -106,7 +106,7 @@
     "id": 6777,
     "project_id": "AnalyseTextuelleGlobale",
     "title": "Set up Continuous Integration and Deployment (CI/CD)",
-    "description": "Establish a CI/CD pipeline for automated building, testing, and deployment of the application. The pipeline should include the following stages: code linting, unit testing, integration testing, security scanning, build and packaging, and deployment to staging and production environments. Ensure that the pipeline is configured to automatically trigger on code changes and supports rollbacks in case of deployment failures.",
+    "description": "Implement a CI/CD pipeline for automated building, testing, and deployment of the application. The pipeline will include stages such as code linting, unit testing, integration testing, security scanning, build and packaging, and deployment to staging and production environments. The pipeline should be configured to automatically trigger on code changes and support rollbacks in case of deployment failures. To ensure a smooth flow, consider the following suggestions: \n1. Break down the task into smaller, manageable sub-tasks for better tracking and execution.\n2. Collaborate with the frontend and backend developers to ensure that their specific testing requirements are met.\n3. Work closely with the security specialist to incorporate necessary security measures during CI/CD.\n4. Ensure proper documentation of the pipeline for future reference and maintenance by the technical writer.",
     "status": "TODO",
     "assigned_to": "devops-engineer",
     "priority": 2,
@@ -114,7 +114,7 @@
       "Design System Architecture"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW",
+    "rfc_state": "UNKNOWN",
     "implementation_state": null
   },
   {

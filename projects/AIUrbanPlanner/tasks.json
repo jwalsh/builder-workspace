@@ -3,9 +3,9 @@
     "id": 433,
     "project_id": "AIUrbanPlanner",
     "title": "Define Project Requirements",
-    "description": "Gather and document detailed requirements for the AI Urban Planner system, including user stories, functional requirements, non-functional requirements, constraints, and key performance indicators (KPIs). Involve stakeholders from various domains such as urban planning, environmental science, local government, community representatives, and end-users to ensure comprehensive coverage of requirements and alignment with diverse perspectives.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "technical-writer",
+    "description": "Gather and document detailed requirements for the AI Urban Planner system. This will include user stories, functional requirements, non-functional requirements, constraints, and key performance indicators (KPIs). Engage stakeholders from various domains such as urban planning, environmental science, local government, community representatives, and end-users to ensure comprehensive coverage of requirements and alignment with diverse perspectives. Additionally, consider incorporating feedback from the code-architect, frontend-developer, backend-developer, database-specialist, devops-engineer, qa-tester, and security-specialist during this process.",
+    "status": "REVIEW_REQUIRED",
+    "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [],
     "task_type": "rfc",
@@ -31,16 +31,16 @@
   {
     "id": 435,
     "project_id": "AIUrbanPlanner",
-    "title": "Design Data Model",
-    "description": "Design the data model for storing and managing urban planning data, including housing, population, environmental, and quality of life metrics. The data model should be scalable, efficient, and support complex queries and analytics.",
-    "status": "TODO",
-    "assigned_to": "database-specialist",
+    "title": "Design Data Model for Scalable Urban Planning Data Storage and Management",
+    "description": "Design a scalable, efficient data model for storing and managing urban planning data. The data model should support complex queries, analytics, housing, population, environmental, and quality of life metrics. It should be designed with considerations for future growth, handling large volumes of data, and ensuring data integrity.",
+    "status": "NEEDS_REVISION",
+    "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
       "Design System Architecture"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW",
+    "rfc_state": "UNKNOWN",
     "implementation_state": null
   },
   {
@@ -77,10 +77,10 @@
   {
     "id": 438,
     "project_id": "AIUrbanPlanner",
-    "title": "Set up CI/CD Pipeline",
-    "description": "Establish a continuous integration and continuous deployment (CI/CD) pipeline for automated building, testing, and deployment of the AI Urban Planner system. The pipeline should include steps for code linting, unit testing, integration testing, security scanning, and deployment to staging and production environments.",
-    "status": "TODO",
-    "assigned_to": "devops-engineer",
+    "title": "Set up CI/CD Pipeline with enhanced security measures",
+    "description": "Establish a continuous integration and continuous deployment (CI/CD) pipeline for automated building, testing, and deployment of the AI Urban Planner system. The pipeline should include steps for code linting, unit testing, integration testing, advanced security scanning, code review, artifact management, deployment to staging and production environments, and post-deployment monitoring.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
       "Design System Architecture",
@@ -109,16 +109,16 @@
   {
     "id": 440,
     "project_id": "AIUrbanPlanner",
-    "title": "Create Test Suite",
-    "description": "Develop a comprehensive test suite for the AI Urban Planner system, including unit tests, integration tests, and end-to-end tests. The test suite should cover the core functionalities, edge cases, and error handling scenarios. Ensure that the tests are modular, maintainable, and easy to extend as the system evolves.",
-    "status": "TODO",
-    "assigned_to": "qa-tester",
+    "title": "Create Comprehensive Test Suite (Updated)",
+    "description": "Develop a robust and modular test suite for the AI Urban Planner system. The test suite should cover all core functionalities, edge cases, and error handling scenarios, ensuring the system functions as intended under various conditions. It will include unit tests, integration tests, and end-to-end tests to verify system behavior across different layers of the application stack. The test suite design should accommodate for future expansions and updates to the AI Urban Planner system.",
+    "status": "NEEDS_REVISION",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "Design System Architecture"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW",
+    "rfc_state": "UNKNOWN",
     "implementation_state": null
   },
   {

@@ -16,30 +16,30 @@
     "id": 6781,
     "project_id": "AnalyseurSentimentMultimarche\u0301",
     "title": "Requirements Gathering and Analysis",
-    "description": "Conduct stakeholder interviews, market research, and document detailed requirements including supported languages, data sources, analysis techniques, performance requirements, security considerations, and integration with existing systems",
-    "status": "TODO",
-    "assigned_to": "project-manager",
+    "description": "Conduct stakeholder interviews, market research, and document detailed requirements including supported languages (English, French, Spanish, German, Mandarin), data sources (social media platforms, news outlets, customer feedback forms), analysis techniques (sentiment analysis, topic modeling), performance requirements (response time less than 5 seconds for small datasets, scalable for larger datasets), security considerations (data encryption, access controls), integration with existing systems (CRM, Marketing Automation Platforms), and create technical documentation",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
       "Project Initiation"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW",
+    "rfc_state": "UNKNOWN",
     "implementation_state": null
   },
   {
     "id": 6782,
     "project_id": "AnalyseurSentimentMultimarche\u0301",
     "title": "System Architecture Design",
-    "description": "Design the overall system architecture, including components, data flow, and integration points. The architecture should consider the following aspects: multilingual support, scalability, performance, security, and maintainability.",
-    "status": "IN PROGRESS",
-    "assigned_to": "code-architect",
+    "description": "Design the overall system architecture, including components, data flow, and integration points. The architecture should consider the following aspects: multilingual support, scalability, performance, security, and maintainability. Additionally, ensure that the design aligns with best practices for modularity, extensibility, and ease of maintenance. Consider using microservices architecture to enable independent scaling of each service and to facilitate integration with third-party services.",
+    "status": "READY_FOR_APPROVAL",
+    "assigned_to": "project-manager",
     "priority": 3,
     "dependencies": [
       "Requirements Gathering and Analysis"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW",
+    "rfc_state": "UNKNOWN",
     "implementation_state": null
   },
   {
@@ -91,16 +91,16 @@
   {
     "id": 6786,
     "project_id": "AnalyseurSentimentMultimarche\u0301",
-    "title": "Database Design",
-    "description": "Design the database schema for storing and retrieving sentiment analysis data, considering factors such as data volume, performance, scalability, and security.",
-    "status": "TODO",
-    "assigned_to": "database-specialist",
+    "title": "Database Design for Multilingual Sentiment Analysis Tool",
+    "description": "Design the database schema for storing and retrieving sentiment analysis data for our multilingual sentiment analysis tool, considering factors such as data volume, performance, scalability, security, and internationalization. This includes planning for efficient indexing, data compression, and multi-region deployment to ensure fast and reliable access worldwide.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "System Architecture Design"
     ],
     "task_type": "rfc",
-    "rfc_state": "DRAFT",
+    "rfc_state": "UNKNOWN",
     "implementation_state": null
   },
   {
@@ -122,15 +122,15 @@
     "id": 6788,
     "project_id": "AnalyseurSentimentMultimarche\u0301",
     "title": "DevOps and Deployment",
-    "description": "Set up the development, testing, and production environments for the sentiment analysis tool. Implement CI/CD pipelines, containerization, infrastructure as code, and monitoring solutions.",
-    "status": "TODO",
+    "description": "Set up the development, testing, and production environments for the sentiment analysis tool. Implement Continuous Integration/Continuous Delivery (CI/CD) pipelines, containerization using Docker or Kubernetes, infrastructure as code (IaC) with tools like Terraform, Ansible, or CloudFormation, and monitoring solutions such as Prometheus, Grafana, or Datadog.",
+    "status": "READY_FOR_IMPLEMENTATION",
     "assigned_to": "devops-engineer",
     "priority": 2,
     "dependencies": [
       "System Architecture Design"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW",
+    "rfc_state": "UNKNOWN",
     "implementation_state": null
   },
   {

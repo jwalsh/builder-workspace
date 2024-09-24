@@ -16,8 +16,8 @@
     "id": 614,
     "project_id": "AnomalyDetectionEngine",
     "title": "Design System Architecture",
-    "description": "Design the overall architecture of the AnomalyDetectionEngine, including the components, data flow, communication between subsystems, and integration with external systems/services. Ensure the architecture is modular, scalable, secure, performant, maintainable, and follows best practices for data ingestion, processing, storage, and analysis pipelines. Consider using microservices, event-driven architecture, containerization, and serverless functions for improved scalability and maintainability. Address high availability, fault tolerance, and disaster recovery requirements. Outline monitoring and logging strategies. Implement edge case handling, error management, and performance optimizations. Incorporate the feedback from 'Define Project Scope and Requirements', 'Identify External Systems/Services', and 'Conduct Risk Assessment and Threat Modeling'. Once complete, conduct a code review with the relevant team members to ensure adherence to standards. Update design documentation accordingly.",
-    "status": "IN_REVIEW",
+    "description": "Design the overall architecture of the AnomalyDetectionEngine, including the components, data flow, communication between subsystems, and integration with external systems/services. Ensure the architecture is modular, scalable, secure, performant, maintainable, and follows best practices for data ingestion, processing, storage, and analysis pipelines. Consider using microservices, event-driven architecture, containerization, and serverless functions for improved scalability and maintainability. Address high availability, fault tolerance, and disaster recovery requirements. Outline monitoring and logging strategies. Implement edge case handling, error management, and performance optimizations. Incorporate the feedback from 'Define Project Scope and Requirements', 'Identify External Systems/Services', and 'Conduct Risk Assessment and Threat Modeling'. Once complete, conduct a code review with the relevant team members to ensure adherence to standards. Update design documentation accordingly. To improve clarity, break down the architecture design into subtasks as follows: \n 1. Design data ingestion and processing pipeline\n 2. Design system components and their interconnections\n 3. Design communication protocols between subsystems\n 4. Design monitoring and logging strategies\n 5. Design edge case handling, error management, and performance optimizations\n 6. Design disaster recovery and fault tolerance mechanisms\n 7. Design integration with external systems/services\n Once each subtask is complete, update the design documentation accordingly. This approach will make the task more manageable and transparent.",
+    "status": "REVIEW_REQUIRED",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
@@ -122,16 +122,16 @@
   {
     "id": 621,
     "project_id": "AnomalyDetectionEngine",
-    "title": "Implement Security and Access Control",
-    "description": "Implement security measures and access control mechanisms to ensure the confidentiality, integrity, and availability of the AnomalyDetectionEngine and its data. This includes but is not limited to: authentication and authorization mechanisms (e.g., role-based access control, multi-factor authentication), data encryption (at rest and in transit using industry-standard algorithms and key management practices), secure communication protocols (e.g., HTTPS, TLS), secure coding practices (e.g., input validation, output encoding, secure session management), regular security audits and vulnerability assessments, incident response procedures, and adherence to relevant security standards and best practices (e.g., OWASP, CIS).",
-    "status": "IN PROGRESS",
-    "assigned_to": "security-specialist",
+    "title": "Implement Security and Access Control (Updated)",
+    "description": "Update the description to provide more specific details about the implementation. This includes but is not limited to: implementing role-based access control with multi-factor authentication, data encryption at rest and in transit using AES-256 and RSA respectively, secure communication protocols such as HTTPS/TLS, adhering to OWASP and CIS security standards, secure coding practices (e.g., input validation, output encoding, secure session management), regular security audits and vulnerability assessments, incident response procedures, and maintaining a comprehensive log of security events for analysis. Additionally, specify the use of industry-standard key management practices, such as HSMs or cloud-based key management services.",
+    "status": "IN PROGRESS (Under Code-Architect Review)",
+    "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
       "Design System Architecture"
     ],
     "task_type": "rfc",
-    "rfc_state": "APPROVED",
+    "rfc_state": "REVIEW",
     "implementation_state": null
   },
   {

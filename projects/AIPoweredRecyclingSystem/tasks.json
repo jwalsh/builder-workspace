@@ -16,15 +16,15 @@
     "id": 5700,
     "project_id": "AIPoweredRecyclingSystem",
     "title": "System Architecture Design",
-    "description": "Design the overall system architecture, including components, data flow, and integration points. Consider the following aspects: 1) Input sources (e.g., conveyor belts, drop-off points, cameras, sensors) 2) AI-powered material recognition and sorting (computer vision, machine learning models) 3) Storage and processing of sorted materials (bins, compactors, balers) 4) Integration with external systems (e.g., recycling facilities, logistics providers, inventory management) 5) Scalability and fault tolerance (load balancing, failover mechanisms, distributed architecture) 6) Security and access controls (data encryption, user authentication, role-based access) 7) Monitoring and reporting (system health, performance metrics, material tracking).",
-    "status": "TODO",
+    "description": "Design the overall system architecture, including components, data flow, and integration points. Consider the following aspects: 1) Input sources (e.g., conveyor belts, drop-off points, cameras, sensors) 2) AI-powered material recognition and sorting (computer vision, machine learning models, emphasize on model explainability for traceability and auditing purposes) 3) Storage and processing of sorted materials (bins, compactors, balers, with considerations for efficient space utilization and energy consumption) 4) Integration with external systems (e.g., recycling facilities, logistics providers, inventory management, focus on APIs and data exchange standards for seamless integration) 5) Scalability and fault tolerance (load balancing, failover mechanisms, distributed architecture, discuss the use of microservices and Kubernetes for horizontal scaling) 6) Security and access controls (data encryption, user authentication, role-based access, address potential security vulnerabilities through threat modeling and penetration testing) 7) Monitoring and reporting (system health, performance metrics, material tracking, include dashboards for real-time monitoring and alerting systems) 8) Document the design decisions and rationale in a technical documentation format (e.g., Architecture Description document).",
+    "status": "REVIEW",
     "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
       "Project Planning and Requirements Gathering"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW",
+    "rfc_state": "UNKNOWN",
     "implementation_state": null
   },
   {
@@ -76,16 +76,16 @@
     "id": 5704,
     "project_id": "AIPoweredRecyclingSystem",
     "title": "Database Design and Implementation",
-    "description": "Design and implement the database schema for storing material data, system logs, and other relevant information required for the AI-powered recycling system. The database should be scalable, efficient, and support complex queries for data analysis and reporting.",
-    "status": "TODO",
-    "assigned_to": "database-specialist",
+    "description": "Design and implement a scalable, efficient database schema for the AI-powered recycling system. The schema should store material data, system logs, and other relevant information required for data analysis and reporting. Ensure the design supports complex queries and is adaptable to future system enhancements.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
       "System Architecture Design",
       "Data Modeling and Requirements Gathering"
     ],
     "task_type": "rfc",
-    "rfc_state": "DRAFT",
+    "rfc_state": "UNKNOWN",
     "implementation_state": null
   },
   {
