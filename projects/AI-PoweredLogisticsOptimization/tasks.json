@@ -16,8 +16,8 @@
     "id": 6627,
     "project_id": "AI-PoweredLogisticsOptimization",
     "title": "System Architecture Design",
-    "description": "Design the overall architecture of the AI-powered logistics optimization system. This includes defining components, data flows, integration points, and addressing considerations for scalability, maintainability, performance, edge cases, error handling, and other non-functional requirements (such as security and reliability). The design should aim to facilitate easy extensibility and modifications in the future.",
-    "status": "NEEDS_REVIEW",
+    "description": "Design the overall architecture of the AI-powered logistics optimization system. This includes defining components, data flows, integration points, and addressing considerations for scalability, maintainability, performance, edge cases, error handling, and other non-functional requirements (such as security and reliability). The design should aim to facilitate easy extensibility and modifications in the future. Additionally, provide a clear documentation of the architecture and its components, including diagrams where necessary, to aid in understanding and collaboration.",
+    "status": "REVIEW_IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
@@ -91,9 +91,9 @@
     "id": 6632,
     "project_id": "AI-PoweredLogisticsOptimization",
     "title": "Database Design and Implementation",
-    "description": "Design and implement a scalable and efficient database schema to store logistics data (e.g., routes, vehicles, shipments), optimization results, system configurations, and audit trails. The schema should support high concurrency and large data volumes. Consider using a distributed database system or a NoSQL database for better scalability and performance.",
-    "status": "TODO",
-    "assigned_to": "database-specialist",
+    "description": "Design and implement a scalable and efficient database schema to store logistics data (e.g., routes, vehicles, shipments), optimization results, system configurations, and audit trails. The schema should support high concurrency and large data volumes. Consider using a distributed NoSQL database like Cassandra or MongoDB for better scalability and performance. Additionally, ensure the schema is compatible with our existing tech stack (e.g., if we are using any specific ORM tools).",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "System Architecture Design"
@@ -106,9 +106,9 @@
     "id": 6633,
     "project_id": "AI-PoweredLogisticsOptimization",
     "title": "Security and Access Control",
-    "description": "Implement robust security measures including multi-factor authentication, role-based access control, and data encryption at rest and in transit, to secure the system and protect sensitive data.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "code-architect",
+    "description": "Implement robust security measures including multi-factor authentication, role-based access control, and data encryption at rest and in transit, to secure the system and protect sensitive data. Additionally, consider implementing least privilege access and regular security audits to maintain a high level of system security.",
+    "status": "REVIEW_READY",
+    "assigned_to": "security-specialist",
     "priority": 4,
     "dependencies": [
       "System Architecture Design"
@@ -138,9 +138,9 @@
     "id": 6635,
     "project_id": "AI-PoweredLogisticsOptimization",
     "title": "Database Design and Implementation",
-    "description": "Design and implement a scalable, efficient, and highly concurrent database schema for storing logistics data (e.g., routes, vehicles, shipments), optimization results, system configurations, and audit trails. This schema should be able to handle large data volumes and support distributed databases or NoSQL databases for better scalability and performance. Include considerations for edge cases, error handling, and performance optimizations. Ensure the schema design adheres to industry best practices for database design, such as normalization and indexing strategies.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "database-specialist",
+    "description": "Design and implement a scalable, efficient, and highly concurrent database schema for storing logistics data (e.g., routes, vehicles, shipments), optimization results, system configurations, and audit trails. This schema should be able to handle large data volumes, support distributed databases or NoSQL databases for better scalability and performance, and be designed with considerations for edge cases, error handling, and performance optimizations. The design should adhere to industry best practices for database design, such as normalization and indexing strategies. As the project's code-architect, I suggest incorporating data modeling approaches that ensure high data consistency and reliability, and enable easy integration with other system components. To improve efficiency, consider using appropriate data compression techniques and caching strategies.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "System Architecture Design"

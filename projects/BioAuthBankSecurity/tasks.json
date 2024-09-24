@@ -31,24 +31,24 @@
     "id": 766,
     "project_id": "BioAuthBankSecurity",
     "title": "Biometric Authentication Module Design",
-    "description": "Design the biometric authentication module, including fingerprint, facial recognition, and behavioral biometrics.",
-    "status": "TODO",
+    "description": "Design the biometric authentication module, including fingerprint, facial recognition, and behavioral biometrics. Ensure that the design is scalable, secure, and user-friendly.",
+    "status": "IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
       "Project Planning and Requirements Gathering"
     ],
     "task_type": "rfc",
-    "rfc_state": "DRAFT",
+    "rfc_state": "UNKNOWN",
     "implementation_state": null
   },
   {
     "id": 767,
     "project_id": "BioAuthBankSecurity",
     "title": "Database Design",
-    "description": "Design the database schema for storing user data, biometric data, authentication logs, and related metadata. Consider data encryption, access controls, and compliance with relevant regulations (e.g., GDPR, CCPA, PCI-DSS). Ensure scalability, high availability, performance optimization for handling large volumes of data and concurrent requests, and data partitioning/sharding strategies. Define data retention policies and archiving/purging mechanisms. Incorporate audit logging and monitoring capabilities.",
+    "description": "Design the database schema for storing user data, biometric data, authentication logs, and related metadata. Consider data encryption (AES-256), access controls (Role-Based Access Control), compliance with relevant regulations (e.g., GDPR, CCPA, PCI-DSS), and privacy by design principles. Ensure scalability, high availability, performance optimization for handling large volumes of data and concurrent requests, and data partitioning/sharding strategies using horizontally-partitioned shards and vertical partitioning for large tables. Define data retention policies based on regulatory requirements and industry best practices, and implement archiving/purging mechanisms to manage long-term storage. Incorporate audit logging and monitoring capabilities using tools like ELK Stack or Splunk for real-time analysis and alerting. Update the task when the database design is complete, including ER diagrams and SQL scripts, and provide a clear handoff plan for development.",
     "status": "IN PROGRESS",
-    "assigned_to": "database-specialist",
+    "assigned_to": "task-decomposer",
     "priority": 5,
     "dependencies": [
       "Project Planning and Requirements Gathering",
