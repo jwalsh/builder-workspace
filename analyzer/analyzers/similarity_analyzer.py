@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import orgparse
 
+
 def analyze_project_similarity(filename="PROJECTS.org"):
     tree = orgparse.load(filename)
     projects = []

@@ -6,6 +6,7 @@ from ..models import Task, ProjectDefinition, TaskType, RFCState, Implementation
 from ..db import update_task
 from ..llm import llm_manager
 from ..utils import extract_json_from_response
+from ..implementation_workflow import create_implementation_plan
 
 
 async def process_rfc(task: Task, project_definition: ProjectDefinition) -> Task:

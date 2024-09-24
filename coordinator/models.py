@@ -5,12 +5,14 @@ from enum import Enum
 from typing import List, Optional
 from pydantic import BaseModel, Field
 
+
 class ImplementationState(str, Enum):
     NOT_STARTED = "not_started"
     IN_PROGRESS = "in_progress"
     REVIEW = "review"
     TESTING = "testing"
     COMPLETED = "completed"
+
 
 class TaskType(str, Enum):
     RFC = "rfc"
@@ -26,6 +28,8 @@ class TaskType(str, Enum):
     DIAGRAM = "diagram"
     RESEARCH = "research"
     UNKNOWN = "unknown"
+    IMPLEMENTATION_PLANNING = "implementation_planning"
+
 
 class RFCState(str, Enum):
     DRAFT = "DRAFT"
@@ -43,10 +47,12 @@ class RFCState(str, Enum):
     PENDING_REVIEW = "PENDING_REVIEW"
     IN_REVIEW = "IN_REVIEW"
 
+
 class LLMProvider(str, Enum):
     OLLAMA = "ollama"
     CLAUDE = "claude"
     RANDOM = "random"
+
 
 class LLMConfig(BaseModel):
     provider: LLMProvider
@@ -63,9 +69,11 @@ class LLMConfig(BaseModel):
             obj["last_check"] = datetime.fromisoformat(obj["last_check"])
         return super().parse_obj(obj)
 
+
 class ProjectDefinition(BaseModel):
     name: str
     description: str
+
 
 class Task(BaseModel):
     id: int
@@ -81,11 +89,21 @@ class Task(BaseModel):
     implementation_state: Optional[ImplementationState] = Field(default=None)
     review_comments: Optional[str] = None
     approver: Optional[str] = None
+    parent_task_id: Optional[int] = None
+    related_rfc_id: Optional[int] = None
+
+
+class ImplementationPlan(BaseModel):
+    rfc_id: int
+    planning_task_id: int
+    subtasks: List[int]
+
 
 class ProjectVersion(BaseModel):
     id: str
     definition: str
     created_at: datetime
+
 
 class ProjectSummary(BaseModel):
     id: str
@@ -93,6 +111,7 @@ class ProjectSummary(BaseModel):
     description: str
     task_count: int
     last_updated: datetime
+
 
 class TaskUpdate(BaseModel):
     title: Optional[str] = None
@@ -107,6 +126,7 @@ class TaskUpdate(BaseModel):
     review_comments: Optional[str] = None
     approver: Optional[str] = None
 
+
 class ProjectStats(BaseModel):
     total_tasks: int
     completed_tasks: int
@@ -115,11 +135,13 @@ class ProjectStats(BaseModel):
     rfc_count: int
     average_priority: float
 
+
 class UserRole(str, Enum):
     ADMIN = "admin"
     MANAGER = "manager"
     DEVELOPER = "developer"
     VIEWER = "viewer"
+
 
 class User(BaseModel):
     id: int
@@ -128,6 +150,7 @@ class User(BaseModel):
     role: UserRole
     created_at: datetime
     last_login: Optional[datetime] = None
+
 
 class AuditLog(BaseModel):
     id: int
