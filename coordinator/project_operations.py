@@ -2,14 +2,11 @@ import asyncio
 import json
 import logging
 import sqlite3
-from typing import List
+from typing import List, Optional
 
-import logging
-from typing import Optional
-
-from .models import Task, ProjectDefinition, TaskType, RFCState, ImplementationState
-from .llm import llm_manager
 from .db import add_project_version, add_task, get_db_path, get_tasks, update_task
+from .llm import llm_manager
+from .models import ImplementationState, ProjectDefinition, RFCState, Task, TaskType
 from .prompts import AVAILABLE_AGENTS
 from .utils import create_project_directory, extract_json_from_response
 
