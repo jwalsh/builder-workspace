@@ -9,6 +9,9 @@
 (require 'org)
 (require 'sqlite)
 
+(when (require 'org nil t)
+  (message "org package loaded successfully"))
+
 (defvar aws-ai-practice-db-file
   (expand-file-name "~/.emacs.d/aws-ai-practice.db")
   "Path to the SQLite database file for AWS AI practice.")

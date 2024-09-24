@@ -24,17 +24,27 @@
 
 (defun aws-ai-practice-ensure-db ()
   "Ensure the SQLite database exists and is initialized."
+  (message "Initializing database at: %s" aws-ai-practice-db-file)
   (unless (file-exists-p aws-ai-practice-db-file)
+    (message "Database file does not exist. Creating...")
     (with-temp-buffer
-      (sqlite-execute aws-ai-practice-db-file "CREATE TABLE IF NOT EXISTS dummy (id INTEGER PRIMARY KEY)")
-      (sqlite-execute aws-ai-practice-db-file "DROP TABLE IF EXISTS dummy")))
+      (condition-case err
+          (progn
+            (sqlite-execute aws-ai-practice-db-file "CREATE TABLE IF NOT EXISTS dummy (id INTEGER PRIMARY KEY)")
+            (sqlite-execute aws-ai-practice-db-file "DROP TABLE IF EXISTS dummy")
+            (message "Temporary table created and dropped successfully."))
+        (error
+         (message "Error creating temporary table: %s" (error-message-string err))
+         (signal (car err) (cdr err))))))
   (condition-case err
-      (sqlite-execute aws-ai-practice-db-file
-                      "CREATE TABLE IF NOT EXISTS completed_migrations (
-                         id INTEGER PRIMARY KEY AUTOINCREMENT,
-                         migration_name TEXT NOT NULL UNIQUE,
-                         applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-                       )")
+      (progn
+        (sqlite-execute aws-ai-practice-db-file
+                        "CREATE TABLE IF NOT EXISTS completed_migrations (
+                           id INTEGER PRIMARY KEY AUTOINCREMENT,
+                           migration_name TEXT NOT NULL UNIQUE,
+                           applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                         )")
+        (message "completed_migrations table created successfully."))
     (error
      (message "Error initializing database: %s" (error-message-string err))
      (signal (car err) (cdr err)))))
