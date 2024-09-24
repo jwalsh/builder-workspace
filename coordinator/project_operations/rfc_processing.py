@@ -1,3 +1,5 @@
+# File: coordinator/project_operations/rfc_processing.py
+
 import logging
 from typing import Optional
 from ..models import Task, ProjectDefinition, TaskType, RFCState, ImplementationState
@@ -5,6 +7,8 @@ from ..db import update_task
 from ..llm import llm_manager
 from ..utils import extract_json_from_response
 
+
+async def process_rfc(task: Task, project_definition: ProjectDefinition) -> Task:
     logging.info(f"Processing RFC task: {task.id} - {task.title}")
 
     prompt = f"""Review and update the following RFC task:
@@ -99,6 +103,8 @@ Please review the RFC and suggest any necessary changes or improvements. If the 
         logging.error(f"Error processing RFC task {task.id}: {str(e)}")
         return task
 
+
+def parse_enum(enum_class, value: Optional[str], default):
     if value is None:
         return default
     try:

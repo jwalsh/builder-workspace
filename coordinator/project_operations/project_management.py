@@ -1,3 +1,5 @@
+# File: coordinator/project_operations/project_management.py
+
 import asyncio
 import logging
 import sqlite3
@@ -8,6 +10,8 @@ from ..utils import create_project_directory
 from .decompose import decompose_project
 from .rfc_processing import process_rfc
 
+
+def show_project_summary():
     try:
         conn = sqlite3.connect(get_db_path())
         c = conn.cursor()
@@ -58,12 +62,10 @@ async def process_project(
         if not existing_tasks or force:
             if existing_tasks and force:
                 print(
-                    f"
-Force flag used. Re-decomposing project '{project_definition.name}' into tasks..."
+                    f"\nForce flag used. Re-decomposing project '{project_definition.name}' into tasks..."
                 )
             else:
-                print("
-Decomposing project into tasks...")
+                print("\nDecomposing project into tasks...")
 
             initial_tasks = await decompose_project(project_definition)
 
@@ -82,8 +84,7 @@ Decomposing project into tasks...")
             )
         else:
             print(
-                f"
-Tasks already exist for project '{project_definition.name}'. Skipping decomposition. Use --force to override."
+                f"\nTasks already exist for project '{project_definition.name}'. Skipping decomposition. Use --force to override."
             )
 
             create_project_directory(
@@ -91,8 +92,7 @@ Tasks already exist for project '{project_definition.name}'. Skipping decomposit
             )
 
         if process_rfcs:
-            print("
-Processing RFC tasks...")
+            print("\nProcessing RFC tasks...")
             rfc_tasks = [
                 task
                 for task in get_tasks(project_definition.name)
@@ -109,8 +109,8 @@ Processing RFC tasks...")
                     logging.error(f"Error processing RFC task {rfc_task.id}: {str(e)}")
 
         print(
-            "
-Project setup complete. Tasks added to the database and project directory created."
+            "\nProject setup complete. Tasks added to the database and project directory created."
         )
     except Exception as e:
         logging.error(f"An error occurred while processing the project: {str(e)}")
+        raise
