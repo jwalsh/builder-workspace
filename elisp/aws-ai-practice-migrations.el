@@ -13,13 +13,21 @@
   "Directory containing aws-ai-practice migrations.")
 
 (defvar aws-ai-practice-db-file
-  (expand-file-name "~/.emacs.d/aws-ai-practice.db")
+  (expand-file-name "aws-ai-practice.db"
+                    (file-name-directory load-file-name))
   "Path to the SQLite database file for AWS AI practice.")
+
+(defvar aws-ai-practice-file
+  (expand-file-name "aws-ai-practice.el"
+                    (file-name-directory load-file-name))
+  "Path to the main AWS AI practice file.")
 
 (defun aws-ai-practice-ensure-db ()
   "Ensure the SQLite database exists and is initialized."
   (unless (file-exists-p aws-ai-practice-db-file)
-    (make-empty-file aws-ai-practice-db-file))
+    (with-temp-buffer
+      (sqlite-execute aws-ai-practice-db-file "CREATE TABLE IF NOT EXISTS dummy (id INTEGER PRIMARY KEY)")
+      (sqlite-execute aws-ai-practice-db-file "DROP TABLE IF EXISTS dummy")))
   (condition-case err
       (sqlite-execute aws-ai-practice-db-file
                       "CREATE TABLE IF NOT EXISTS completed_migrations (
