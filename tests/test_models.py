@@ -1,19 +1,21 @@
-import pytest
 from datetime import datetime
+
+import pytest
+
 from coordinator.models import (
-    TaskType,
-    RFCState,
-    LLMProvider,
-    LLMConfig,
-    ProjectDefinition,
-    Task,
-    ProjectVersion,
-    ProjectSummary,
-    TaskUpdate,
-    ProjectStats,
-    UserRole,
-    User,
     AuditLog,
+    LLMConfig,
+    LLMProvider,
+    ProjectDefinition,
+    ProjectStats,
+    ProjectSummary,
+    ProjectVersion,
+    RFCState,
+    Task,
+    TaskType,
+    TaskUpdate,
+    User,
+    UserRole,
 )
 
 

@@ -16,7 +16,15 @@ and project summarization.
 See the README.md file for more detailed usage instructions and configuration options.
 """
 
+from .db import *
+
+# Import the main function last to avoid circular imports
 from .main import main
+
+# Import necessary modules, but avoid circular imports
+from .models import *
+from .prompts import *
+from .utils import *
 
 # Version of the coordinator package
 __version__ = "0.1.0"

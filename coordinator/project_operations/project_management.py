@@ -4,8 +4,9 @@ import asyncio
 import logging
 import sqlite3
 from typing import List
-from ..models import ProjectDefinition, Task, TaskType
+
 from ..db import add_project_version, add_task, get_db_path, get_tasks, update_task
+from ..models import ProjectDefinition, Task, TaskType
 from ..utils import create_project_directory
 from .decompose import decompose_project
 from .rfc_processing import process_rfc

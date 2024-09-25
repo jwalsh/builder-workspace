@@ -3,7 +3,9 @@ from abc import ABC, abstractmethod
 
 class LLMProvider(ABC):
     @abstractmethod
-    async def generate(self, prompt: str, **kwargs) -> str:
+    async def generate(
+        self, prompt: str, cache_key: str = "", role: str = "", **kwargs
+    ) -> str:
         pass
 
     @abstractmethod

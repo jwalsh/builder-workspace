@@ -1,4 +1,4 @@
-from coordinator.prompts import SYSTEM_PROMPTS, AVAILABLE_AGENTS
+from coordinator.prompts import AVAILABLE_AGENTS, SYSTEM_PROMPTS
 
 
 def test_system_prompts_exist():

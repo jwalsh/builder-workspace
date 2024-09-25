@@ -1,24 +1,26 @@
-import pytest
 import json
 import os
 from datetime import datetime
+
+import pytest
+
+from coordinator.models import RFCState, Task, TaskType
 from coordinator.utils import (
-    extract_json_from_response,
-    create_project_directory,
-    generate_cache_key,
-    sanitize_filename,
-    format_time_estimate,
-    parse_dependencies,
-    generate_task_id,
     calculate_project_progress,
-    format_org_mode_task,
-    generate_project_summary,
-    validate_email,
-    is_valid_url,
-    truncate_string,
+    create_project_directory,
+    extract_json_from_response,
     format_file_size,
+    format_org_mode_task,
+    format_time_estimate,
+    generate_cache_key,
+    generate_project_summary,
+    generate_task_id,
+    is_valid_url,
+    parse_dependencies,
+    sanitize_filename,
+    truncate_string,
+    validate_email,
 )
-from coordinator.models import Task, TaskType, RFCState
 
 
 def test_extract_json_from_response():
