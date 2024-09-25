@@ -10,14 +10,18 @@
     "dependencies": [],
     "task_type": "decompose",
     "rfc_state": null,
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6742,
     "project_id": "AnalisisAgricolaIa",
     "title": "Design System Architecture for AnalisisAgricolaIa",
-    "description": "Design the overall system architecture, focusing on components for data ingestion, preprocessing, model training, prediction, and result visualization. Prioritize scalability, maintainability, performance optimizations, robust error handling, and edge case considerations. The design should include a modular structure to facilitate easy upgrades and maintenance.",
-    "status": "NEEDS_REVIEW",
+    "description": "Design the overall system architecture focusing on components for data ingestion, preprocessing, model training, prediction, and result visualization. Emphasize scalability, maintainability, performance optimizations, robust error handling, and edge case considerations. The design should incorporate a modular structure to facilitate easy upgrades and maintenance while also ensuring compliance with security best practices. Provide detailed documentation for each module and its interactions with others in the system. Upon completion, review the architecture with relevant stakeholders before moving forward with implementation. (Consult with database-specialist, devops-engineer, and security-specialist during the design process as needed.)",
+    "status": "READY_FOR_REVIEW",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
@@ -25,7 +29,11 @@
     ],
     "task_type": "rfc",
     "rfc_state": "UNKNOWN",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6743,
@@ -40,7 +48,11 @@
     ],
     "task_type": "decompose",
     "rfc_state": null,
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6744,
@@ -56,7 +68,11 @@
     ],
     "task_type": "decompose",
     "rfc_state": null,
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6745,
@@ -71,13 +87,17 @@
     ],
     "task_type": "decompose",
     "rfc_state": null,
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6746,
     "project_id": "AnalisisAgricolaIa",
-    "title": "Implement Comprehensive Security Measures",
-    "description": "Ensure the system is secure by implementing robust authentication, authorization, data encryption (including at-rest and in-transit), secure communication protocols (HTTPS), input validation, and security best practices throughout the application lifecycle. Additionally, ensure compliance with relevant industry standards such as GDPR, HIPAA, or PCI DSS where applicable.",
+    "title": "Implement Comprehensive Security Measures (Revised)",
+    "description": "Ensure the system is secure by implementing robust authentication (OAuth/OpenID), authorization (Role-Based Access Control, RBAC), data encryption (including at-rest and in-transit using AES-256), secure communication protocols (HTTPS), input validation with Content Security Policy (CSP), and adhering to security best practices throughout the application lifecycle. Additionally, ensure compliance with relevant industry standards such as GDPR, HIPAA, or PCI DSS where applicable. Also, consider performing regular security audits, penetration testing, and implementing multi-factor authentication wherever possible. Lastly, document all implemented security measures in the Security Guide for future reference. If necessary, consult with security experts for best practices and potential risks.",
     "status": "REVIEW",
     "assigned_to": "code-architect",
     "priority": 1,
@@ -86,30 +106,38 @@
     ],
     "task_type": "rfc",
     "rfc_state": "DRAFT",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6747,
     "project_id": "AnalisisAgricolaIa",
     "title": "Set up Comprehensive Testing Framework",
-    "description": "Establish a comprehensive testing framework including unit tests, integration tests, end-to-end tests, and performance tests to ensure system quality, reliability, and efficiency. This will include test case design, implementation, execution, and maintenance.",
-    "status": "TODO",
-    "assigned_to": "code-architect",
+    "description": "Implement a comprehensive testing framework that includes unit tests, integration tests, end-to-end tests, and performance tests to ensure system quality, reliability, and efficiency. This will involve designing test cases, implementing them, executing them, and maintaining them. Additionally, consider using existing testing libraries or tools to streamline the process. It is also recommended to include automated UI tests for a more robust testing suite.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "task-decomposer",
     "priority": 3,
     "dependencies": [
       "Design System Architecture"
     ],
     "task_type": "rfc",
-    "rfc_state": "UNKNOWN",
-    "implementation_state": null
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6748,
     "project_id": "AnalisisAgricolaIa",
     "title": "Deploy and Monitor System",
-    "description": "Deploy the system to a production environment, set up monitoring, logging, and alerting mechanisms, establish processes for maintenance, updates, and rollbacks, and document the deployment and operational procedures.",
-    "status": "TODO",
-    "assigned_to": "devops-engineer",
+    "description": "Deploy the system to a production environment, set up monitoring, logging, and alerting mechanisms, establish processes for maintenance, updates, and rollbacks. Document the deployment and operational procedures. Ensure that the system is scalable, secure, and disaster-recoverable. Additionally, consider including a plan for disaster recovery. Dependencies include: Build User Interface, Develop Machine Learning Models, Set up Data Pipeline, Implement Security Measures, Set up Testing Framework.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
       "Build User Interface",
@@ -120,7 +148,11 @@
     ],
     "task_type": "rfc",
     "rfc_state": "REVIEW",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6749,
@@ -136,6 +168,10 @@
     ],
     "task_type": "decompose",
     "rfc_state": null,
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   }
 ]
