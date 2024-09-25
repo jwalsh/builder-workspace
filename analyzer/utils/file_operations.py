@@ -1,6 +1,8 @@
 import csv
+
 import numpy as np
 import orgparse
+
 from analyzer.utils.text_processing import extract_description
 
 

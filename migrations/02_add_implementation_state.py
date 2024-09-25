@@ -1,7 +1,7 @@
 # File: migrations/02_add_implementation_state.py
 
-import sqlite3
 import os
+import sqlite3
 from datetime import datetime
 
 

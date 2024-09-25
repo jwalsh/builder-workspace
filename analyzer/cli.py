@@ -1,16 +1,17 @@
 import click
+
+from analyzer.analyzers.arxiv_analyzer import check_arxiv_papers
 from analyzer.analyzers.category_analyzer import categorize_projects
 from analyzer.analyzers.similarity_analyzer import (
-    analyze_project_similarity,
     analyze_category_similarity,
+    analyze_project_similarity,
 )
-from analyzer.analyzers.arxiv_analyzer import check_arxiv_papers
+from analyzer.models.category import show_categories
 from analyzer.utils.file_operations import (
     export_projects_to_csv,
     split_data_for_training,
 )
 from analyzer.utils.text_processing import deduplicate_projects
-from analyzer.models.category import show_categories
 
 
 @click.command()

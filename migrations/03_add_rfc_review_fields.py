@@ -1,7 +1,7 @@
 # File: migrations/03_add_rfc_review_fields.py
 
-import sqlite3
 import os
+import sqlite3
 from datetime import datetime
 
 

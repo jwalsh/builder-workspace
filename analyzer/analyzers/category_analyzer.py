@@ -1,12 +1,14 @@
-import orgparse
-from collections import Counter
-from analyzer.models.category import CategoryEnum, update_category_enum
-from analyzer.utils.embedding import get_embedding
-from analyzer.utils.text_processing import extract_description, categorize_description
-import google.generativeai as genai
 import os
 import socket
+from collections import Counter
 from datetime import datetime
+
+import google.generativeai as genai
+import orgparse
+
+from analyzer.models.category import CategoryEnum, update_category_enum
+from analyzer.utils.embedding import get_embedding
+from analyzer.utils.text_processing import categorize_description, extract_description
 
 
 def get_category_usage(filename="PROJECTS.org"):

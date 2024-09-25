@@ -1,11 +1,13 @@
-import requests
-from bs4 import BeautifulSoup
-from datetime import datetime, timedelta
 import json
 import os
+from datetime import datetime, timedelta
 from urllib.robotparser import RobotFileParser
-from analyzer.utils.text_processing import check_similarity
+
+import requests
+from bs4 import BeautifulSoup
+
 from analyzer.utils.file_operations import load_existing_projects
+from analyzer.utils.text_processing import check_similarity
 
 ARXIV_URL = "https://arxiv.org/list/cs.AI/recent"
 CACHE_FILE = "arxiv_cache.json"

@@ -1,13 +1,14 @@
-from analyzer.models.category import CategoryEnum
-from analyzer.utils.embedding import get_embedding
-from analyzer.utils.text_processing import extract_description
+import matplotlib.pyplot as plt
+import numpy as np
+import orgparse
 from scipy.cluster.hierarchy import dendrogram, linkage
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 from sklearn.metrics.pairwise import cosine_similarity
-import matplotlib.pyplot as plt
-import numpy as np
-import orgparse
+
+from analyzer.models.category import CategoryEnum
+from analyzer.utils.embedding import get_embedding
+from analyzer.utils.text_processing import extract_description
 
 
 def analyze_project_similarity(filename="PROJECTS.org"):
