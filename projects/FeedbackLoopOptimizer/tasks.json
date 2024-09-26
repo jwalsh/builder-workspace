@@ -20,8 +20,8 @@
     "id": 2275,
     "project_id": "FeedbackLoopOptimizer",
     "title": "System Architecture Design",
-    "description": "Design the overall system architecture, focusing on a modular, scalable, and maintainable structure. The design should include the feedback loop workflow, data models, and integration with existing systems. Consider edge cases, error handling, performance optimizations, and ensure adherence to security best practices (e.g., encryption, authentication, and authorization). Address data privacy concerns, comply with relevant regulations (e.g., GDPR), and prepare for potential scalability issues by planning for future growth. Upon completion, provide documentation for each component of the system architecture.",
-    "status": "NEEDS_REVISSION",
+    "description": "Design the overall system architecture for the FeedbackLoopOptimizer project. Focus on a modular, scalable, and maintainable structure. The design should include the feedback loop workflow, data models, integration with existing systems, edge cases handling, error management, performance optimizations, and adherence to security best practices (e.g., encryption, authentication, and authorization). Address data privacy concerns, comply with relevant regulations (e.g., GDPR), plan for potential scalability issues by considering future growth, and provide documentation for each component of the system architecture. Consider involving the Data Privacy Officer in discussions regarding user data handling to ensure compliance.",
+    "status": "NEEDS_WORK",
     "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
@@ -96,10 +96,10 @@
   {
     "id": 2279,
     "project_id": "FeedbackLoopOptimizer",
-    "title": "Security and Access Control",
-    "description": "Implement appropriate security measures, including authentication, authorization, and data encryption, to ensure the confidentiality and integrity of feedback data. This should include, but not be limited to, the following:\n\n1. User authentication using industry-standard protocols (e.g., OAuth, OpenID Connect) and secure password storage (e.g., salted and hashed).\n2. Role-based access control (RBAC) to restrict access to sensitive data and functionality based on user roles and permissions.\n3. Data encryption at rest (e.g., using AES-256) and in transit (e.g., using TLS/SSL) to protect feedback data.\n4. Secure communication channels (e.g., HTTPS) for all data transmissions.\n5. Regular security audits and penetration testing to identify and mitigate vulnerabilities.\n6. Adherence to relevant security standards and best practices (e.g., OWASP, NIST).",
-    "status": "TODO",
-    "assigned_to": "security-specialist",
+    "title": "Security and Access Control (Updated)",
+    "description": "Implement appropriate security measures, including authentication, authorization, and data encryption, to ensure the confidentiality and integrity of feedback data. This should include, but not be limited to, the following:\n\n1. User authentication using industry-standard protocols (e.g., OAuth, OpenID Connect) and secure password storage (e.g., salted and hashed with bcrypt).\n2. Role-based access control (RBAC) to restrict access to sensitive data and functionality based on user roles and permissions, implementing least privilege principle.\n3. Data encryption at rest (e.g., using AES-256 in XTS mode) and in transit (e.g., using TLS/SSL with forward secrecy).\n4. Secure communication channels (e.g., HTTPS over QUIC) for all data transmissions.\n5. Regular security audits, penetration testing, and vulnerability assessments to identify and mitigate vulnerabilities.\n6. Adherence to relevant security standards and best practices (e.g., OWASP Top Ten, NIST SP 800-53).\n7. Implement a secure logging mechanism for audit trails and incident response.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
       "System Architecture Design"
