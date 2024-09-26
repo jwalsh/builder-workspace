@@ -20,7 +20,7 @@
     "id": 6874,
     "project_id": "AsistenteSaludIa",
     "title": "Design the system architecture for AsistenteSaludIa",
-    "description": "Design the general architecture of the system, including components, data flow, and integration points. Ensure compatibility with real-time health metrics and personalized advice. Consider aspects such as scalability, maintainability, modularity, error handling, performance optimization, and security. Provide a detailed design document outlining the chosen technologies, their roles, and interactions. Include an initial architecture diagram for better understanding.",
+    "description": "Design the general architecture of the system, including components, data flow, and integration points. Ensure compatibility with real-time health metrics and personalized advice. Consider aspects such as scalability, maintainability, modularity, error handling, performance optimization, and security. Provide a detailed design document outlining the chosen technologies, their roles, and interactions. Include an initial architecture diagram for better understanding, focusing on the following areas: 1. Data ingestion from various health sensors and APIs, 2. Real-time data processing and analytics, 3. Machine learning models for personalized advice, 4. User interface design for seamless interaction, 5. Security measures to protect user data, and 6. Monitoring and logging for system performance.",
     "status": "NEEDS_REVISION",
     "assigned_to": "code-architect",
     "priority": 5,
@@ -39,9 +39,9 @@
     "id": 6875,
     "project_id": "AsistenteSaludIa",
     "title": "Design User Interface - Updated",
-    "description": "Design the user interface for the personal health assistant. The design should include a responsive layout, intuitive navigation, prioritizing user experience, accessibility considerations, and adherence to our established Design System. The updated design will focus on creating an engaging yet informative platform that caters to various user preferences and abilities, with a special emphasis on health-related data privacy and security. Please ensure the design is easily navigable for users of all abilities and follows best practices for mobile-first design.",
+    "description": "Design the user interface for the personal health assistant. The design should include a responsive layout, intuitive navigation, prioritizing user experience, accessibility considerations, and adherence to our established Design System. The updated design will focus on creating an engaging yet informative platform that caters to various user preferences and abilities, with a special emphasis on health-related data privacy and security. This version of the design takes into account best practices for mobile-first design and aims to be easily navigable for users of all abilities. Please ensure the design is consistent with our brand guidelines and follows up-to-date design trends.",
     "status": "NEEDS_REVIEW",
-    "assigned_to": "code-architect",
+    "assigned_to": "frontend-developer",
     "priority": 3,
     "dependencies": [
       "Design System Architecture"
@@ -57,9 +57,9 @@
   {
     "id": 6876,
     "project_id": "AsistenteSaludIa",
-    "title": "Design Data Storage and Management",
-    "description": "Design the data storage and management system for the AsistenteSaludIa project. This includes creating the database schema, implementing data ingestion pipelines, defining data processing pipelines, outlining data security and privacy measures, planning data backup and recovery strategies, and considering potential scalability issues.",
-    "status": "NEEDS_REVIEW",
+    "title": "Design Data Storage and Management for AsistenteSaludIa",
+    "description": "Design the data storage and management system for the AsistenteSaludIa project. This includes creating a robust database schema, implementing secure and efficient data ingestion pipelines, defining data processing pipelines for real-time analytics, outlining comprehensive data security and privacy measures, planning effective data backup and disaster recovery strategies, considering potential scalability issues, and ensuring the system is compliant with relevant healthcare data regulations. Also, consider the use of distributed databases for horizontal scaling and implement appropriate data sharding techniques.",
+    "status": "REVIEW_COMPLETED",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
@@ -77,8 +77,8 @@
     "id": 6877,
     "project_id": "AsistenteSaludIa",
     "title": "Design Health Recommendation Engine (Revised)",
-    "description": "Design the health recommendation engine focusing on creating efficient and effective algorithms for personalized health advice. The design should incorporate multiple data sources, robust personalization mechanisms, and seamless integration with other system components. Additionally, consider the scalability and maintainability of the solution while ensuring the privacy and security of user data. The design process will involve collaboration with the assigned team members. Upon completion, the design will be reviewed by the project manager and task-decomposer for further development.",
-    "status": "IN_REVIEW",
+    "description": "Design the health recommendation engine focusing on creating efficient and effective algorithms for personalized health advice. The design should incorporate multiple data sources, robust personalization mechanisms, seamless integration with other system components, and ensure scalability, maintainability, privacy, and security of user data. The design process will involve collaboration with the assigned team members. Upon completion, the design will be reviewed by the project manager and task-decomposer for further development. Please note that this task depends on 'Design System Architecture', 'Design Data Storage and Management', and 'Define User Profiles and Preferences'. Once these dependencies are met, please update the status to 'IN_PROGRESS'.",
+    "status": "PENDING_DEPENDENCIES",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
@@ -98,9 +98,9 @@
     "id": 6878,
     "project_id": "AsistenteSaludIa",
     "title": "Design Security and Privacy Measures for Handling Sensitive Health Data and Ensuring User Privacy",
-    "description": "Design the security and privacy measures including data encryption, anonymization techniques, secure user authentication, compliance with relevant regulations such as HIPAA, and addressing potential vulnerabilities in the system architecture. The design should also consider the use of best practices for handling sensitive health data and maintaining user privacy, and provide guidelines for regular data audits to ensure ongoing compliance.",
-    "status": "READY_FOR_REVIEW",
-    "assigned_to": "security-specialist",
+    "description": "Design the security and privacy measures including data encryption (AES-256), anonymization techniques (K-anonymity or L-diversity), secure user authentication using multi-factor authentication, compliance with relevant regulations such as HIPAA, GDPR, and PIPEDA, and addressing potential vulnerabilities in the system architecture. The design should also consider the use of best practices for handling sensitive health data and maintaining user privacy (OWASP Healthcare Top Ten), provide guidelines for regular data audits to ensure ongoing compliance, and implement a process for incident response and reporting. This RFC is also open to suggestions for additional security measures or strategies for enhancing user privacy.",
+    "status": "READY_FOR_CODE_ARCHITECT_REVIEW",
+    "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
       "Design System Architecture"

@@ -20,8 +20,8 @@
     "id": 594,
     "project_id": "AlgorithmicThinkingTutor",
     "title": "System Architecture Design for AlgorithmicThinkingTutor",
-    "description": "Design the overall system architecture, including the AI engine, user interface, data storage components, and integration points. Define the technology stack, considering scalability, maintainability, performance, security, accessibility, edge cases, error handling, and user experience. Provide a detailed architecture diagram and documentation.",
-    "status": "IN PROGRESS",
+    "description": "Design the overall system architecture, including the AI engine, user interface, data storage components, and integration points. Define the technology stack, considering scalability, maintainability, performance, security, accessibility, edge cases, error handling, and user experience. Provide a detailed architecture diagram and documentation, with an emphasis on modularity for ease of development and maintenance. Include a clear definition of the roles and responsibilities of each component or service within the system. Update the design to reflect the latest AI/ML best practices and emerging technologies.",
+    "status": "REVIEW_PENDING",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
@@ -77,9 +77,9 @@
     "id": 597,
     "project_id": "AlgorithmicThinkingTutor",
     "title": "Data Storage and Management",
-    "description": "Design and implement a secure, scalable, and high-performance data storage solution for the Algorithmic Thinking Tutor project. The solution will store user data, problem sets, and algorithmic thinking resources, ensuring data integrity, security, and efficient retrieval using a combination of relational (e.g., PostgreSQL) and NoSQL databases (e.g., MongoDB or DynamoDB). Implement proper data access controls, encryption at rest and in transit, backup/recovery mechanisms (consider services like AWS S3), and versioning for data. Design the data models and schemas to support efficient querying and data retrieval for the application's use cases. Additionally, implement caching mechanisms (e.g., Redis) for frequently accessed data to improve performance. Ensure data storage and management solutions align with the overall system architecture and adhere to best practices for maintainability, modularity, and scalability. Collaborate with the assigned team members during the development process to ensure a cohesive and high-quality implementation. Once the task is started, update the rfc_state field to 'IN_PROGRESS'.",
+    "description": "Design and implement a secure, scalable, and high-performance data storage solution for the Algorithmic Thinking Tutor project. The solution will store user data, problem sets, and algorithmic thinking resources, ensuring data integrity, security, and efficient retrieval using a combination of relational (e.g., PostgreSQL) and NoSQL databases (e.g., MongoDB or DynamoDB). Implement proper data access controls, encryption at rest and in transit, backup/recovery mechanisms (consider services like AWS S3), and versioning for data. Design the data models and schemas to support efficient querying and data retrieval for the application's use cases. Additionally, implement caching mechanisms (e.g., Redis) for frequently accessed data to improve performance. Ensure data storage and management solutions align with the overall system architecture and adhere to best practices for maintainability, modularity, and scalability. Collaborate with the assigned team members during the development process to ensure a cohesive and high-quality implementation. Once the task is started, update the rfc_state field to 'IN_PROGRESS'.\n\nFor the purposes of this RFC, I suggest considering the following additional aspects: 1) Performance testing and optimization to ensure that the chosen databases can handle the expected load, 2) Data migration strategy for any existing data, if applicable, 3) Monitoring and logging solutions to track database performance and identify potential issues early, 4) Integration with other system components such as the user authentication system and the AI component.",
     "status": "IN_PROGRESS",
-    "assigned_to": "code-architect",
+    "assigned_to": "database-specialist",
     "priority": 3,
     "dependencies": [
       "System Architecture Design"

@@ -20,9 +20,9 @@
     "id": 765,
     "project_id": "BioAuthBankSecurity",
     "title": "System Architecture Design",
-    "description": "Design the overall system architecture, including components, interfaces, and data flow. Consider the following aspects: 1) Modular design for scalability and maintainability, 2) Secure data handling and storage, including encryption and access controls, 3) High availability and fault tolerance, with redundancy and failover mechanisms, 4) Performance optimization for real-time biometric processing, including load balancing and caching strategies (consider using distributed caching systems like Redis or Memcached), 5) Integration with existing banking systems, using secure APIs and data exchange protocols (ensure compatibility with common standards such as SWIFT, ISO 20022, etc.), 6) Compliance with relevant security and privacy regulations (e.g., GDPR, PCI-DSS), including data protection measures and audit trails, 7) Implement monitoring and logging systems for security and performance analysis.",
-    "status": "READY_FOR_IMPLEMENTATION",
-    "assigned_to": "backend-developer",
+    "description": "Design the overall system architecture, including components, interfaces, and data flow. This task encompasses the following aspects: 1) Modular design for scalability and maintainability, 2) Secure data handling and storage, including encryption and access controls, 3) High availability and fault tolerance, with redundancy and failover mechanisms, 4) Performance optimization for real-time biometric processing, including load balancing and caching strategies (consider using distributed caching systems like Redis or Memcached), 5) Integration with existing banking systems, using secure APIs and data exchange protocols (ensure compatibility with common standards such as SWIFT, ISO 20022, etc.), 6) Compliance with relevant security and privacy regulations (e.g., GDPR, PCI-DSS), including data protection measures and audit trails, 7) Implement monitoring and logging systems for security and performance analysis, 8) Collaborate with the task-decomposer to break down this task into smaller subtasks that can be assigned efficiently.",
+    "status": "READY_FOR_DECOMPOSITION",
+    "assigned_to": "task-decomposer",
     "priority": 5,
     "dependencies": [
       "Project Planning and Requirements Gathering"
@@ -39,8 +39,8 @@
     "id": 766,
     "project_id": "BioAuthBankSecurity",
     "title": "Biometric Authentication Module Design",
-    "description": "Design the biometric authentication module, including fingerprint, facial recognition, and behavioral biometrics. Ensure that the design is scalable, secure, and user-friendly. Include a clear delineation of each component's role in the overall system architecture, and consider edge cases for improved robustness.",
-    "status": "PENDING_REVIEW",
+    "description": "Design the biometric authentication module, including fingerprint, facial recognition, and behavioral biometrics. Ensure that the design is scalable, secure, and user-friendly. Include a clear delineation of each component's role in the overall system architecture, and consider edge cases for improved robustness. Provide detailed specifications for each module, emphasizing privacy concerns, performance optimizations, and potential integration with existing banking systems. Also, consider the impact of regional regulations on the design.",
+    "status": "PENDING_RESEARCH",
     "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
@@ -58,9 +58,9 @@
     "id": 767,
     "project_id": "BioAuthBankSecurity",
     "title": "Database Design",
-    "description": "Design the database schema for storing user data, biometric data, authentication logs, and related metadata. Consider data encryption (AES-256), access controls (Role-Based Access Control), compliance with relevant regulations (e.g., GDPR, CCPA, PCI-DSS), and privacy by design principles. Ensure scalability, high availability, performance optimization for handling large volumes of data and concurrent requests, and data partitioning/sharding strategies using horizontally-partitioned shards and vertical partitioning for large tables. Define data retention policies based on regulatory requirements and industry best practices, and implement archiving/purging mechanisms to manage long-term storage. Incorporate audit logging and monitoring capabilities using tools like ELK Stack or Splunk for real-time analysis and alerting. Update the task when the database design is complete, including ER diagrams and SQL scripts, and provide a clear handoff plan for development.",
+    "description": "Design the database schema for storing user data, biometric data, authentication logs, and related metadata. Consider data encryption (AES-256), access controls (Role-Based Access Control), compliance with relevant regulations (e.g., GDPR, CCPA, PCI-DSS), and privacy by design principles. Ensure scalability, high availability, performance optimization for handling large volumes of data and concurrent requests, and data partitioning/sharding strategies using horizontally-partitioned shards and vertical partitioning for large tables. Define data retention policies based on regulatory requirements and industry best practices, and implement archiving/purging mechanisms to manage long-term storage. Incorporate audit logging and monitoring capabilities using tools like ELK Stack or Splunk for real-time analysis and alerting. Update the task when the database design is complete, including ER diagrams and SQL scripts, and provide a clear handoff plan for development. To ensure thoroughness, also consider integrating anomaly detection systems to flag potential security threats, and implement a disaster recovery plan. Once these aspects are addressed, update the task status to 'COMPLETE' and assign it to the database-specialist or devops-engineer for implementation.",
     "status": "IN PROGRESS",
-    "assigned_to": "task-decomposer",
+    "assigned_to": "database-specialist",
     "priority": 5,
     "dependencies": [
       "Project Planning and Requirements Gathering",

@@ -20,8 +20,8 @@
     "id": 1287,
     "project_id": "CollaborativeRFCEditor",
     "title": "System Architecture Design",
-    "description": "Design the overall system architecture, including the backend, frontend, and database components. The architecture should prioritize scalability, maintainability, and performance. Consider using a microservices architecture with separate services for different functionalities. Ensure proper separation of concerns and modular design. Incorporate real-time collaboration features, version control, and access control mechanisms. Define the data models and database schemas. Outline the technology stack and programming languages to be used. Address security considerations, such as authentication, authorization, and data protection. Provide guidelines for deployment, monitoring, and logging.",
-    "status": "IN PROGRESS",
+    "description": "Design the overall system architecture, prioritizing scalability, maintainability, and performance. Consider a microservices architecture with separate services for different functionalities (e.g., real-time collaboration, version control, access control). Ensure proper separation of concerns and modular design. Incorporate real-time collaboration features using WebSockets or similar technologies. Define data models and database schemas, considering normalized design for efficiency and scalability. Outline the technology stack (e.g., programming languages, frameworks, databases), ensuring compatibility with chosen tech stack. Address security considerations, including authentication, authorization, and data protection. Provide guidelines for deployment, monitoring, and logging, considering DevOps practices and tooling such as Docker, Kubernetes, and CI/CD pipelines. Suggest strategies for handling concurrency and real-time collaboration at scale. Address scalability concerns for the database, considering sharding or partitioning strategies.",
+    "status": "READY_FOR_REVIEW",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
@@ -96,9 +96,9 @@
     "id": 1291,
     "project_id": "CollaborativeRFCEditor",
     "title": "Security and Access Control",
-    "description": "Implement user authentication, authorization, and access control mechanisms for the collaborative editing platform.",
-    "status": "TODO",
-    "assigned_to": "security-specialist",
+    "description": "Implement user authentication, role-based access control (RBAC), and permissions management for the collaborative editing platform. Ensure secure data storage and transmission.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
       "System Architecture Design"
@@ -137,8 +137,8 @@
     "id": 1293,
     "project_id": "CollaborativeRFCEditor",
     "title": "Deployment and DevOps",
-    "description": "Set up the deployment infrastructure, continuous integration/continuous deployment (CI/CD) pipelines, monitoring, and logging for the collaborative RFC editor. This should include the following components:\n\n1. Containerization (e.g., Docker) for consistent and reproducible deployments.\n2. Container orchestration (e.g., Kubernetes) for managing and scaling the application.\n3. CI/CD pipeline (e.g., GitHub Actions, Jenkins) for automated builds, testing, and deployments.\n4. Monitoring and logging tools (e.g., Prometheus, Grafana, ELK stack) for observability and troubleshooting.\n5. Load balancing and scaling strategies for handling high traffic.\n6. Secure deployment practices, including encryption, access controls, and regular security updates.",
-    "status": "TODO",
+    "description": "Set up the deployment infrastructure, continuous integration/continuous deployment (CI/CD) pipelines, monitoring, and logging for the collaborative RFC editor. This should include the following components:\n\n1. Containerization (e.g., Docker) for consistent and reproducible deployments.\n2. Container orchestration (e.g., Kubernetes) for managing and scaling the application.\n3. CI/CD pipeline (e.g., GitHub Actions, Jenkins) for automated builds, testing, and deployments.\n4. Monitoring and logging tools (e.g., Prometheus, Grafana, ELK stack) for observability and troubleshooting.\n5. Load balancing and scaling strategies for handling high traffic.\n6. Secure deployment practices, including encryption, access controls, and regular security updates.\n7. Documentation of the setup process, best practices, and troubleshooting guide.",
+    "status": "IN_PROGRESS",
     "assigned_to": "devops-engineer",
     "priority": 2,
     "dependencies": [
