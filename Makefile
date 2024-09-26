@@ -105,3 +105,6 @@ test-standard-model: ## Test standard LLM model
 
 .PHONY: help setup test lint format pre-commit repl test-coordinator test-coordinator-all
 .PHONY: migrate test-all test-claude test-openai test-azure-openai test-bedrock test-ollama test-standard-model
+
+deduplicate: ## Run deduplication process
+	$(PYTHON) -m analyzer --action deduplicate --filename projects/README.org --similarity-threshold 0.9 --interactive

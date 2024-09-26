@@ -1,3 +1,6 @@
+import orgparse
+from analyzer.utils.embedding import get_embedding
+from sklearn.metrics.pairwise import cosine_similarity
 import google.generativeai as genai
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -56,7 +59,9 @@ def check_similarity(papers, existing_projects):
     return similar_projects
 
 
-def deduplicate_projects(filename="PROJECTS.org"):
+def deduplicate_projects(
+    filename="PROJECTS.org", similarity_threshold=0.9, interactive=False
+):
     tree = orgparse.load(filename)
     projects = []
     for node in tree[1:]:
@@ -71,7 +76,6 @@ def deduplicate_projects(filename="PROJECTS.org"):
                 }
             )
 
-    similarity_threshold = 0.9
     similar_project_pairs = []
 
     for i, project in enumerate(projects):
@@ -80,14 +84,32 @@ def deduplicate_projects(filename="PROJECTS.org"):
                 [project["embedding"]], [other_project["embedding"]]
             )[0][0]
             if similarity > similarity_threshold:
-                similar_project_pairs.append(
-                    (project["name"], other_project["name"], similarity)
-                )
+                similar_project_pairs.append((project, other_project, similarity))
 
     if similar_project_pairs:
-        print("Found similar project pairs:")
+        print(f"Found {len(similar_project_pairs)} similar project pairs:")
         for proj1, proj2, similarity in similar_project_pairs:
-            print(f"- '{proj1}' and '{proj2}' (Similarity: {similarity:.2f})")
+            print(
+                f"\n- '{proj1['name']}' and '{proj2['name']}' (Similarity: {similarity:.2f})"
+            )
+            print(f"  Description 1: {proj1['description'][:100]}...")
+            print(f"  Description 2: {proj2['description'][:100]}...")
+
+            if interactive:
+                action = input(
+                    "Enter 'm' to merge, 'k' to keep both, or 's' to skip: "
+                ).lower()
+                if action == "m":
+                    # Implement merging logic here
+                    print("Merging projects...")
+                elif action == "k":
+                    print("Keeping both projects.")
+                else:
+                    print("Skipping this pair.")
+            else:
+                print(
+                    "Recommendation: Review these projects for potential merging or differentiation."
+                )
     else:
         print("No similar projects found.")
 
