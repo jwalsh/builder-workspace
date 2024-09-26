@@ -107,4 +107,4 @@ test-standard-model: ## Test standard LLM model
 .PHONY: migrate test-all test-claude test-openai test-azure-openai test-bedrock test-ollama test-standard-model
 
 deduplicate: ## Run deduplication process
-	$(PYTHON) -m analyzer --action deduplicate --filename projects/README.org --similarity-threshold 0.9 --interactive
+	$(PYTHON) -m analyzer --action deduplicate --filename projects/README.org --similarity-threshold 0.9
