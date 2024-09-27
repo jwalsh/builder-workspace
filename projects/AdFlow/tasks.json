@@ -9,35 +9,50 @@
     "priority": 1,
     "dependencies": [],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 518,
     "project_id": "AdFlow",
-    "title": "System Architecture Design",
-    "description": "Design the overall system architecture for the AdFlow platform, including components, data flow, integration points, and key considerations for scalability, maintainability, and security. The architecture should address the following functional areas: campaign management, content item approval, user management, and campaign auditing.",
-    "status": "TODO",
-    "assigned_to": "code-architect",
+    "title": "System Architecture Design for AdFlow Platform",
+    "description": "Design the overall system architecture for the AdFlow platform, including components, data flow, integration points, and key considerations for scalability, maintainability, and security. The architecture should address functional areas: campaign management, content item approval, user management, and campaign auditing; also, ensure adherence to best practices in software design and development. This task builds upon 'Project Planning and Requirements Gathering'. Additionally, consider the use of microservices architecture for better scalability and maintainability, and include a detailed security plan with encryption strategies and access controls. The RFC is ready for review by the project manager or technical lead. This RFC also emphasizes the importance of ensuring modularity, testability, and maintainability throughout the design process. Upon approval, this RFC will be passed to the 'task-decomposer' for further task decomposition.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "task-decomposer",
     "priority": 1,
     "dependencies": [
       "Project Planning and Requirements Gathering"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW"
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 519,
     "project_id": "AdFlow",
-    "title": "Database Design",
-    "description": "Design the database schema and data models for storing campaign, content, user, and audit data. Ensure the schema supports efficient querying, data integrity, and scalability. Consider indexing, normalization, and partitioning strategies. Define relationships between entities and data access patterns. Provide recommendations for database technology (e.g., relational, NoSQL) and justify the choice based on project requirements. Additionally, provide guidelines for data backup, recovery, and replication strategies to ensure high availability and disaster recovery. Incorporate security considerations, such as data encryption, access controls, and auditing mechanisms.",
-    "status": "IN PROGRESS",
-    "assigned_to": "database-specialist",
+    "title": "Database Design for AdFlow",
+    "description": "Design the database schema and data models for storing campaign, content, user, and audit data. Ensure the schema supports efficient querying, data integrity, and scalability. Consider indexing, normalization, and partitioning strategies. Define relationships between entities and data access patterns. Provide recommendations for database technology (e.g., relational, NoSQL) based on project requirements such as performance, scalability, and security. Justify the choice of database technology. Incorporate guidelines for data backup, recovery, and replication strategies to ensure high availability and disaster recovery. Address security considerations like data encryption, access controls, and auditing mechanisms. Provide a high-level diagram illustrating the data architecture.",
+    "status": "REVIEW_IN_PROGRESS",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "System Architecture Design"
     ],
     "task_type": "rfc",
-    "rfc_state": "APPROVED"
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 520,
@@ -52,7 +67,12 @@
       "Database Design"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 521,
@@ -67,7 +87,12 @@
       "Database Design"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 522,
@@ -82,7 +107,12 @@
       "Database Design"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 523,
@@ -97,7 +127,12 @@
       "Database Design"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 524,
@@ -111,7 +146,12 @@
       "System Architecture Design"
     ],
     "task_type": "rfc_review",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 525,
@@ -128,7 +168,12 @@
       "Campaign Auditing Module"
     ],
     "task_type": "code_review",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 526,
@@ -142,7 +187,12 @@
       "Integration and Testing"
     ],
     "task_type": "audit",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 527,
@@ -156,6 +206,11 @@
       "Integration and Testing"
     ],
     "task_type": "code_review",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   }
 ]

@@ -1,8 +1,17 @@
+# File: coordinator/models.py
+
 from datetime import datetime
 from enum import Enum
 from typing import List, Optional
-
 from pydantic import BaseModel, Field
+
+
+class ImplementationState(str, Enum):
+    NOT_STARTED = "not_started"
+    IN_PROGRESS = "in_progress"
+    REVIEW = "review"
+    TESTING = "testing"
+    COMPLETED = "completed"
 
 
 class TaskType(str, Enum):
@@ -11,7 +20,15 @@ class TaskType(str, Enum):
     RFC_REVIEW = "rfc_review"
     CODE_REVIEW = "code_review"
     AUDIT = "audit"
+    IMPLEMENTATION = "implementation"
+    TESTING = "testing"
+    DOCUMENTATION = "documentation"
+    INFRASTRUCTURE = "infrastructure"
+    MONITORING = "monitoring"
+    DIAGRAM = "diagram"
+    RESEARCH = "research"
     UNKNOWN = "unknown"
+    IMPLEMENTATION_PLANNING = "implementation_planning"
 
 
 class RFCState(str, Enum):
@@ -27,13 +44,8 @@ class RFCState(str, Enum):
     IMPLEMENTED = "IMPLEMENTED"
     OBSOLETE = "OBSOLETE"
     UNKNOWN = "UNKNOWN"
-
-
-from datetime import datetime
-from enum import Enum
-from typing import Optional
-
-from pydantic import BaseModel, Field
+    PENDING_REVIEW = "PENDING_REVIEW"
+    IN_REVIEW = "IN_REVIEW"
 
 
 class LLMProvider(str, Enum):
@@ -74,6 +86,17 @@ class Task(BaseModel):
     dependencies: List[str]
     task_type: TaskType = Field(default=TaskType.UNKNOWN)
     rfc_state: Optional[RFCState] = Field(default=None)
+    implementation_state: Optional[ImplementationState] = Field(default=None)
+    review_comments: Optional[str] = None
+    approver: Optional[str] = None
+    parent_task_id: Optional[int] = None
+    related_rfc_id: Optional[int] = None
+
+
+class ImplementationPlan(BaseModel):
+    rfc_id: int
+    planning_task_id: int
+    subtasks: List[int]
 
 
 class ProjectVersion(BaseModel):
@@ -99,6 +122,9 @@ class TaskUpdate(BaseModel):
     dependencies: Optional[List[str]] = None
     task_type: Optional[TaskType] = None
     rfc_state: Optional[RFCState] = None
+    implementation_state: Optional[ImplementationState] = None
+    review_comments: Optional[str] = None
+    approver: Optional[str] = None
 
 
 class ProjectStats(BaseModel):

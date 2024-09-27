@@ -14,10 +14,10 @@ if response.status_code == 200:
     page_content = response.content
 
     # Create a BeautifulSoup object and specify the parser
-    soup = BeautifulSoup(page_content, 'html.parser')
+    soup = BeautifulSoup(page_content, "html.parser")
 
     # Find all links on the webpage
-    links = soup.find_all('a')
+    links = soup.find_all("a")
 
     # Create a directory to store the downloaded documents
     documents_dir = "documents"
@@ -26,15 +26,15 @@ if response.status_code == 200:
 
     # Loop through all links and download the documents
     for link in links:
-        href = link.get('href')
-        if href and href.endswith(('.pdf', '.docx', '.doc', '.txt')):
+        href = link.get("href")
+        if href and href.endswith((".pdf", ".docx", ".doc", ".txt")):
             document_url = href
-            if not document_url.startswith('http'):
+            if not document_url.startswith("http"):
                 document_url = "https://www.justice.gov" + document_url
             document_name = os.path.basename(document_url)
             print(f"Downloading {document_name}...")
             response = requests.get(document_url)
-            with open(os.path.join(documents_dir, document_name), 'wb') as f:
+            with open(os.path.join(documents_dir, document_name), "wb") as f:
                 f.write(response.content)
             print(f"Downloaded {document_name} successfully!")
 else:

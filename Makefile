@@ -1,3 +1,4 @@
+
 # Makefile for coordinator project
 
 PYTHON = poetry run python
@@ -64,3 +65,23 @@ run-analyzer: ## Run the analyzer on the projects
 	$(PYTHON) -m analyzer --action analyze --filename projects/README.org
 
 .PHONY: help setup test lint format pre-commit repl test-coordinator test-coordinator-all
+
+.PHONY: migrate
+
+# Define the directory where migration scripts are located
+MIGRATIONS_DIR := migrations
+
+# Find all Python files in the migrations directory and sort them
+MIGRATION_SCRIPTS := $(sort $(wildcard $(MIGRATIONS_DIR)/*.py))
+
+migrate:
+	@echo "Running database migrations..."
+	@for script in $(MIGRATION_SCRIPTS); do \
+		echo "Applying migration: $$script"; \
+		python $$script; \
+		if [ $$? -ne 0 ]; then \
+			echo "Error applying migration: $$script"; \
+			exit 1; \
+		fi; \
+	done
+	@echo "All migrations completed successfully."

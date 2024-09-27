@@ -1,11 +1,9 @@
 ;;; aws-ai-practice-migrations.el --- Run migrations for aws-ai-practice
 
 ;;; Commentary:
-;; This file manages the running of migrations for aws-ai-practice
+;; This file manages the running of migrations for aws-ai-practice using file-based storage
 
 ;;; Code:
-
-(require 'sqlite)
 
 (defvar aws-ai-practice-migrations-dir
   (expand-file-name "migrations"
@@ -13,9 +11,9 @@
   "Directory containing aws-ai-practice migrations.")
 
 (defvar aws-ai-practice-db-file
-  (expand-file-name "aws-ai-practice.db"
+  (expand-file-name "aws-ai-practice-db.el"
                     (file-name-directory load-file-name))
-  "Path to the SQLite database file for AWS AI practice.")
+  "Path to the file-based database for AWS AI practice.")
 
 (defvar aws-ai-practice-file
   (expand-file-name "aws-ai-practice.el"
@@ -23,49 +21,39 @@
   "Path to the main AWS AI practice file.")
 
 (defun aws-ai-practice-ensure-db ()
-  "Ensure the SQLite database exists and is initialized."
+  "Ensure the file-based database exists and is initialized."
   (message "Initializing database at: %s" aws-ai-practice-db-file)
   (unless (file-exists-p aws-ai-practice-db-file)
-    (message "Database file does not exist. Creating...")
-    (with-temp-buffer
-      (condition-case err
-          (progn
-            (sqlite-execute aws-ai-practice-db-file "CREATE TABLE IF NOT EXISTS dummy (id INTEGER PRIMARY KEY)")
-            (sqlite-execute aws-ai-practice-db-file "DROP TABLE IF EXISTS dummy")
-            (message "Temporary table created and dropped successfully."))
-        (error
-         (message "Error creating temporary table: %s" (error-message-string err))
-         (signal (car err) (cdr err))))))
-  (condition-case err
-      (progn
-        (sqlite-execute aws-ai-practice-db-file
-                        "CREATE TABLE IF NOT EXISTS completed_migrations (
-                           id INTEGER PRIMARY KEY AUTOINCREMENT,
-                           migration_name TEXT NOT NULL UNIQUE,
-                           applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-                         )")
-        (message "completed_migrations table created successfully."))
-    (error
-     (message "Error initializing database: %s" (error-message-string err))
-     (signal (car err) (cdr err)))))
+    (with-temp-file aws-ai-practice-db-file
+      (insert "((completed-migrations . nil))")))
+  (message "Database initialized successfully."))
+
+(defun aws-ai-practice-get-db-contents ()
+  "Get the contents of the file-based database."
+  (with-temp-buffer
+    (insert-file-contents aws-ai-practice-db-file)
+    (read (buffer-string))))
+
+(defun aws-ai-practice-save-db-contents (contents)
+  "Save CONTENTS to the file-based database."
+  (with-temp-file aws-ai-practice-db-file
+    (prin1 contents (current-buffer))))
 
 (defun aws-ai-practice-migration-completed-p (migration-name)
   "Check if MIGRATION-NAME has been completed."
-  (condition-case nil
-      (car (sqlite-select aws-ai-practice-db-file
-                          "SELECT 1 FROM completed_migrations WHERE migration_name = ?"
-                          migration-name))
-    (error nil)))
+  (let ((db-contents (aws-ai-practice-get-db-contents)))
+    (member migration-name (cdr (assq 'completed-migrations db-contents)))))
 
 (defun aws-ai-practice-record-migration (migration-name)
   "Record MIGRATION-NAME as completed."
-  (condition-case err
-      (sqlite-execute aws-ai-practice-db-file
-                      "INSERT INTO completed_migrations (migration_name) VALUES (?)"
-                      migration-name)
-    (error
-     (message "Error recording migration: %s" (error-message-string err))
-     (signal (car err) (cdr err)))))
+  (let* ((db-contents (aws-ai-practice-get-db-contents))
+         (completed-migrations (cdr (assq 'completed-migrations db-contents))))
+    (unless (member migration-name completed-migrations)
+      (setq completed-migrations (cons migration-name completed-migrations))
+      (setq db-contents (cons (cons 'completed-migrations completed-migrations)
+                              (assq-delete-all 'completed-migrations db-contents)))
+      (aws-ai-practice-save-db-contents db-contents))))
+
 
 (defun aws-ai-practice-run-migrations ()
   "Run all migrations for aws-ai-practice."
@@ -86,31 +74,24 @@
                  (message "Error running migration %s: %s" migration-name (error-message-string err))
                  nil)))))))))
 
+
 (defun aws-ai-practice-list-completed-migrations ()
   "List all completed migrations for aws-ai-practice."
   (interactive)
   (aws-ai-practice-ensure-db)
-  (condition-case err
-      (let ((migrations (sqlite-select aws-ai-practice-db-file
-                                       "SELECT migration_name, applied_at FROM completed_migrations ORDER BY id")))
-        (if migrations
-            (with-output-to-temp-buffer "*AWS AI Practice Migrations*"
-              (princ "Completed migrations:\n\n")
-              (dolist (migration migrations)
-                (princ (format "%s - Applied at: %s\n" (car migration) (cadr migration)))))
-          (message "No migrations have been applied yet.")))
-    (error
-     (message "Error listing migrations: %s" (error-message-string err)))))
+  (let* ((db-contents (aws-ai-practice-get-db-contents))
+         (completed-migrations (cdr (assq 'completed-migrations db-contents))))
+    (if completed-migrations
+        (progn
+          (message "Completed migrations:")
+          (dolist (migration completed-migrations)
+            (message "- %s" migration)))
+      (message "No migrations have been applied yet."))))
 
 (defun aws-ai-practice-get-completed-migrations ()
   "Get a list of completed migrations."
   (aws-ai-practice-ensure-db)
-  (condition-case err
-      (sqlite-select aws-ai-practice-db-file
-                     "SELECT migration_name FROM completed_migrations ORDER BY id")
-    (error
-     (message "Error getting completed migrations: %s" (error-message-string err))
-     nil)))
+  (cdr (assq 'completed-migrations (aws-ai-practice-get-db-contents))))
 
 (provide 'aws-ai-practice-migrations)
 

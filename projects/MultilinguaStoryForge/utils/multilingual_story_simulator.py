@@ -12,6 +12,7 @@ import click
 
 # TODO: Implement the simulator functionality
 
+
 @click.command()
 def main():
     """
@@ -19,6 +20,7 @@ def main():
     """
     click.echo("Multilingual Story Simulator")
     # TODO: Implement main logic
+
 
 if __name__ == "__main__":
     main()

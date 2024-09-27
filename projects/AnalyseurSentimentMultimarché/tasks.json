@@ -9,41 +9,56 @@
     "priority": 5,
     "dependencies": [],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6781,
     "project_id": "AnalyseurSentimentMultimarche\u0301",
     "title": "Requirements Gathering and Analysis",
-    "description": "Conduct stakeholder interviews, market research, and document detailed requirements including supported languages, data sources, analysis techniques, performance requirements, security considerations, and integration with existing systems",
-    "status": "TODO",
-    "assigned_to": "project-manager",
+    "description": "Conduct stakeholder interviews, market research, and document detailed requirements including supported languages (English, French, Spanish, German, Mandarin), data sources (social media platforms, news outlets, customer feedback forms), analysis techniques (sentiment analysis, topic modeling), performance requirements (response time less than 5 seconds for small datasets, scalable for larger datasets, with benchmarks provided), security considerations (data encryption, access controls, and compliance with GDPR/CCPA as applicable), integration with existing systems (CRM, Marketing Automation Platforms, API documentation provided), technical documentation including functional specifications, architecture diagrams, and user stories, and provide a comprehensive report summarizing findings and recommendations. Also, consider the potential need for language-specific nuances in sentiment analysis and the importance of maintaining a diverse team to account for cultural differences.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
       "Project Initiation"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW"
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6782,
     "project_id": "AnalyseurSentimentMultimarche\u0301",
     "title": "System Architecture Design",
-    "description": "Design the overall system architecture, including components, data flow, and integration points. The architecture should consider the following aspects: multilingual support, scalability, performance, security, and maintainability.",
-    "status": "IN PROGRESS",
+    "description": "Design the overall system architecture, including components, data flow, and integration points. The architecture should consider the following aspects: multilingual support, scalability, performance, security, and maintainability. Additionally, ensure that the design aligns with best practices for modularity, extensibility, and ease of maintenance. Consider using microservices architecture to enable independent scaling of each service and to facilitate integration with third-party services. For better clarity, also include a detailed list of components, their roles, and interconnections. Furthermore, consider the future expansion of features and languages, and ensure that the design is adaptable to such changes.",
+    "status": "NEEDS_REVIEW",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "Requirements Gathering and Analysis"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW"
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6783,
     "project_id": "AnalyseurSentimentMultimarche\u0301",
-    "title": "Data Pipeline Design",
-    "description": "Design the data ingestion, processing, and storage pipelines for multilingual sentiment analysis, considering scalability, fault tolerance, and data security",
+    "title": "Data Pipeline Design for Multilingual Sentiment Analysis Tool",
+    "description": "Design the data ingestion, processing, and storage pipelines for multilingual sentiment analysis in a scalable, fault-tolerant manner, while ensuring data security and considering the needs of enterprises operating on international markets. The design should be able to handle multiple languages and accommodate future language additions.",
     "status": "IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 2,
@@ -51,7 +66,12 @@
       "System Architecture Design"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW"
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6784,
@@ -65,36 +85,51 @@
       "Data Pipeline Design"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6785,
     "project_id": "AnalyseurSentimentMultimarche\u0301",
-    "title": "User Interface Design",
-    "description": "Design the user interface for the sentiment analysis tool, considering multilingual requirements and accessibility standards",
-    "status": "TODO",
-    "assigned_to": "frontend-developer",
+    "title": "User Interface Design for Multilingual Sentiment Analysis Tool with Accessibility Focus",
+    "description": "Design the user interface for the multilingual sentiment analysis tool, focusing on accessibility standards, accommodating various languages, considering cultural nuances in each language, and emphasizing the importance of cross-browser compatibility.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "System Architecture Design",
       "Multilingual Support Design"
     ],
     "task_type": "rfc",
-    "rfc_state": "DRAFT"
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6786,
     "project_id": "AnalyseurSentimentMultimarche\u0301",
-    "title": "Database Design",
-    "description": "Design the database schema for storing and retrieving sentiment analysis data, considering factors such as data volume, performance, scalability, and security.",
-    "status": "TODO",
-    "assigned_to": "database-specialist",
+    "title": "Database Design for Multilingual Sentiment Analysis Tool",
+    "description": "Design the database schema for storing and retrieving sentiment analysis data for our multilingual sentiment analysis tool, considering factors such as data volume, performance, scalability, security, and internationalization. This includes planning for efficient indexing, data compression, and multi-region deployment to ensure fast and reliable access worldwide. The design should be flexible enough to accommodate various languages, follow best practices for database normalization, support efficient querying, and optimize the database for real-time analysis. Additionally, the design should take into account the need for machine learning algorithms to improve sentiment analysis accuracy over time.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "System Architecture Design"
     ],
     "task_type": "rfc",
-    "rfc_state": "DRAFT"
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6787,
@@ -108,21 +143,31 @@
       "System Architecture Design"
     ],
     "task_type": "audit",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6788,
     "project_id": "AnalyseurSentimentMultimarche\u0301",
     "title": "DevOps and Deployment",
-    "description": "Set up the development, testing, and production environments for the sentiment analysis tool. Implement CI/CD pipelines, containerization, infrastructure as code, and monitoring solutions.",
-    "status": "TODO",
-    "assigned_to": "devops-engineer",
+    "description": "Setup the development, testing, and production environments for the multilingual sentiment analysis tool. Implement CI/CD pipelines, containerization using Docker or Kubernetes, infrastructure as code (IaC) with tools like Terraform, Ansible, or CloudFormation, and monitoring solutions such as Prometheus, Grafana, or Datadog. This task also includes the setup of a system for managing secrets securely.",
+    "status": "NEEDS_REVIEW",
+    "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
       "System Architecture Design"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW"
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6789,
@@ -139,7 +184,12 @@
       "DevOps and Deployment"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6790,
@@ -156,6 +206,11 @@
       "DevOps and Deployment"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   }
 ]
