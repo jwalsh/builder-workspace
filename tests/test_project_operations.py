@@ -1,7 +1,9 @@
-import pytest
 from unittest.mock import Mock, patch
+
+import pytest
+
+from coordinator.models import ProjectDefinition, RFCState, Task, TaskType
 from coordinator.project_operations import decompose_project, process_rfc
-from coordinator.models import ProjectDefinition, Task, TaskType, RFCState
 
 
 @pytest.fixture

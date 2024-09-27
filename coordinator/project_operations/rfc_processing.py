@@ -2,11 +2,12 @@
 
 import logging
 from typing import Optional
-from ..models import Task, ProjectDefinition, TaskType, RFCState, ImplementationState
+
 from ..db import update_task
-from ..llm import llm_manager
-from ..utils import extract_json_from_response
 from ..implementation_workflow import create_implementation_plan
+from ..llm import llm_manager
+from ..models import ImplementationState, ProjectDefinition, RFCState, Task, TaskType
+from ..utils import extract_json_from_response
 
 
 async def process_rfc(task: Task, project_definition: ProjectDefinition) -> Task:

@@ -1,8 +1,9 @@
-from enum import Enum
 import ast
-import astor
 import inspect
 import sys
+from enum import Enum
+
+import astor
 
 
 class CategoryEnum(str, Enum):

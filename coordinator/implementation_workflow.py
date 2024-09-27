@@ -1,8 +1,9 @@
 # File: coordinator/implementation_workflow.py
 
 from typing import List
-from .models import Task, RFCState, TaskType, ImplementationPlan
-from .db import add_task, update_task, get_tasks
+
+from .db import add_task, get_tasks, update_task
+from .models import ImplementationPlan, RFCState, Task, TaskType
 
 
 def create_implementation_plan(rfc_task: Task) -> ImplementationPlan:

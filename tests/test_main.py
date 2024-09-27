@@ -1,4 +1,5 @@
 import pytest
+
 from coordinator.main import main
 
 

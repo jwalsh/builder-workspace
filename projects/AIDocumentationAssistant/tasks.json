@@ -20,8 +20,8 @@
     "id": 170,
     "project_id": "AIDocumentationAssistant",
     "title": "Design System Architecture (Revised)",
-    "description": "Design the overall system architecture for the AI Documentation Assistant. The design will encompass components, data flow, integration points, and key considerations such as scalability, performance, maintainability, security, fault tolerance, extensibility, edge cases, error handling, and performance optimizations. The design will be broken down into modular and reusable components to facilitate future enhancements. Specific focus will also be given on the development of an efficient search functionality for quick content retrieval, as well as incorporating AI technologies such as NLP (Natural Language Processing) and machine learning algorithms to improve content suggestions and format recommendations. Additionally, the design should be flexible to accommodate potential future integrations with other tools or systems.",
-    "status": "IMPLEMENTATION_IN_PROGRESS",
+    "description": "Design the overall system architecture for the AI Documentation Assistant. The design will encompass components, data flow, integration points, and key considerations such as scalability, performance, maintainability, security, fault tolerance, extensibility, edge cases, error handling, and performance optimizations. The design will be broken down into modular and reusable components to facilitate future enhancements. Specific focus will also be given on the development of an efficient search functionality for quick content retrieval, as well as incorporating AI technologies such as NLP (Natural Language Processing) and machine learning algorithms to improve content suggestions and format recommendations. Additionally, the design should be flexible to accommodate potential future integrations with other tools or systems, and provide support for real-time collaboration features. The architecture will also take into account the need for offline functionality and robust data storage solutions. To ensure the project's success, regular communication and collaboration with the cross-functional team members is essential. If needed, consult with the frontend-developer, backend-developer, database-specialist, devops-engineer, qa-tester, security-specialist, technical-writer, and project-manager for their input on specific areas of expertise.",
+    "status": "REVIEW_IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
@@ -116,9 +116,9 @@
     "id": 175,
     "project_id": "AIDocumentationAssistant",
     "title": "Implement Comprehensive Security Measures",
-    "description": "Implement comprehensive security measures in the application to adhere to best practices and protect user data. This includes secure authentication and authorization mechanisms, encryption of sensitive data, securing communication channels, protection against common web application vulnerabilities such as SQL injection, cross-site scripting (XSS), and cross-site request forgery (CSRF), and additional measures to safeguard the AI model's integrity. ",
+    "description": "Implement comprehensive security measures in the application to adhere to best practices and protect user data. This includes secure authentication and authorization mechanisms (e.g., OAuth, JWT), encryption of sensitive data using AES-256 or equivalent, securing communication channels with HTTPS, protection against common web application vulnerabilities such as SQL injection, cross-site scripting (XSS), and cross-site request forgery (CSRF) via input validation and sanitization, rate limiting, and additional measures to safeguard the AI model's integrity. The implementation should consider industry standards and best practices such as OWASP Top 10 and NIST Cybersecurity Framework.",
     "status": "TODO",
-    "assigned_to": "security-specialist",
+    "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
       "Design System Architecture"
@@ -135,12 +135,13 @@
     "id": 176,
     "project_id": "AIDocumentationAssistant",
     "title": "Set up Continuous Integration and Deployment (CI/CD)",
-    "description": "Implement a CI/CD pipeline for the automated testing, building, and deployment of the AIDocumentationAssistant application. The pipeline should encompass the following stages: linting, unit testing, integration testing, build, deployment to staging and production environments. Implement rollback mechanisms in case of deployment failures. Security scanning and code quality checks should be included using tools such as Snyk, SonarQube or similar. To ensure scalability and portability, consider using containerization (Docker) and orchestration tools (Kubernetes). For a streamlined CI/CD process setup, utilize GitHub Actions. Additionally, consider the use of Jenkins for more complex workflows if needed. Since this task involves both frontend and backend development, assign it to 'frontend-developer' and 'backend-developer'. To ensure thorough review and improvement suggestions, assign a 'code-architect' as well.",
-    "status": "NEEDS_REVIEW",
-    "assigned_to": "devops-engineer",
+    "description": "Implement a CI/CD pipeline for the automated testing, building, and deployment of the AIDocumentationAssistant application. The pipeline should encompass the following stages: linting, unit testing, integration testing, build, deployment to staging and production environments. Implement rollback mechanisms in case of deployment failures. Security scanning and code quality checks should be included using tools such as Snyk, SonarQube or similar. To ensure scalability and portability, consider using containerization (Docker) and orchestration tools (Kubernetes). For a streamlined CI/CD process setup, utilize GitHub Actions for simple workflows, and Jenkins for more complex ones. Since this task involves both frontend and backend development, assign it to 'frontend-developer' and 'backend-developer'. To ensure thorough review and improvement suggestions, assign a 'code-architect' as well. Update the dependencies to include 'Design System Architecture' and 'Project Setup' (as this task depends on the project setup being in place). For better clarity, break down the task into smaller subtasks: Linting, Unit Testing, Integration Testing, Building, Deployment, and Security Scanning. Once these subtasks are completed, merge them back into the main task.",
+    "status": "NEEDS_REWORK",
+    "assigned_to": "task-decomposer",
     "priority": 2,
     "dependencies": [
-      "Design System Architecture"
+      "Design System Architecture",
+      "Project Setup"
     ],
     "task_type": "rfc",
     "rfc_state": "IMPLEMENTING",

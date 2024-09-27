@@ -2,28 +2,38 @@
   {
     "id": 1126,
     "project_id": "CodeExplanationGenerator",
-    "title": "Define Project Scope and Requirements",
-    "description": "Gather and document the detailed requirements for the CodeExplanationGenerator tool, including the types of code it should support (e.g., programming languages, frameworks, libraries), the desired level of explanation (e.g., high-level overview, line-by-line details, performance considerations), the expected input and output formats, and any specific features or constraints (e.g., integration with IDEs, support for code snippets or entire files, user authentication, and access control).",
-    "status": "TODO",
-    "assigned_to": "project-manager",
+    "title": "Define Project Scope and Requirements - Updated",
+    "description": "Revised detailed requirements for the CodeExplanationGenerator tool: \n1. Supported programming languages: Python, JavaScript (including Node.js), Java, C++, and Ruby.\n2. Level of explanation: High-level overview, line-by-line details, and performance considerations upon user request.\n3. Input formats: Code snippets or entire files in the supported programming languages.\n4. Output formats: Markdown (for integration with platforms like GitHub and Stack Overflow).\n5. Specific features or constraints: Integration with popular IDEs such as Visual Studio Code, PyCharm, and IntelliJ;\nSupport for code snippets or entire files;\nUser authentication and access control (basic/advanced levels);\nAbility to explain code in real-time while the user is coding.\n6. Non-functional requirements: Tool should be scalable, secure, and have good performance.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [],
     "task_type": "rfc",
-    "rfc_state": "DRAFT"
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1127,
     "project_id": "CodeExplanationGenerator",
     "title": "Design System Architecture",
-    "description": "Design the overall architecture of the CodeExplanationGenerator system, including the components needed for code parsing, explanation generation, user interface, data storage, and deployment/hosting. Consider the following aspects: 1) Modular design for scalability and maintainability, 2) Separation of concerns between components, 3) Efficient data flow and communication between components, 4) Handling of different programming languages and code formats, 5) Integration with external services or APIs if needed, 6) Security considerations for user data and code submissions, 7) Deployment strategies (e.g., containerization, cloud hosting), 8) Monitoring and logging mechanisms, 9) Error handling and fault tolerance.",
-    "status": "IN_PROGRESS",
+    "description": "Design the overall architecture of the CodeExplanationGenerator system, including the components needed for code parsing, explanation generation, user interface, data storage, and deployment/hosting. The design should adhere to the following guidelines: 1) Modular design for scalability and maintainability, 2) Separation of concerns between components, 3) Efficient data flow and communication between components, 4) Handling of different programming languages and code formats, 5) Integration with external services or APIs if needed (e.g., code formatting libraries, machine learning models for explanation generation), 6) Security considerations for user data and code submissions (data encryption, access controls), 7) Deployment strategies (e.g., containerization using Docker, cloud hosting on AWS or Google Cloud), 8) Monitoring and logging mechanisms (implementing ELK stack or similar), 9) Error handling and fault tolerance, 10) Consideration for future upgrades and improvements (microservices architecture, A/B testing capabilities). This RFC is ready for the next state, so update the 'rfc_state' field to 'PENDING_IMPLEMENTATION'.",
+    "status": "PENDING_IMPLEMENTATION",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
       "Define Project Scope and Requirements"
     ],
     "task_type": "rfc",
-    "rfc_state": "UNKNOWN"
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1128,
@@ -37,7 +47,12 @@
       "Design System Architecture"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1129,
@@ -51,7 +66,12 @@
       "Design System Architecture"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1130,
@@ -65,7 +85,12 @@
       "Design System Architecture"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1131,
@@ -77,7 +102,12 @@
     "priority": 2,
     "dependencies": [],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1132,
@@ -93,7 +123,12 @@
       "Design and Develop User Interface"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1133,
@@ -107,7 +142,12 @@
       "Design System Architecture"
     ],
     "task_type": "audit",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1134,
@@ -122,7 +162,12 @@
       "Design System Architecture"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1135,
@@ -141,6 +186,11 @@
       "Write Documentation"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   }
 ]

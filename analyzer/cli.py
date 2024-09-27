@@ -1,16 +1,17 @@
 import click
+
+from analyzer.analyzers.arxiv_analyzer import check_arxiv_papers
 from analyzer.analyzers.category_analyzer import categorize_projects
 from analyzer.analyzers.similarity_analyzer import (
-    analyze_project_similarity,
     analyze_category_similarity,
+    analyze_project_similarity,
 )
-from analyzer.analyzers.arxiv_analyzer import check_arxiv_papers
+from analyzer.models.category import show_categories
 from analyzer.utils.file_operations import (
     export_projects_to_csv,
     split_data_for_training,
 )
 from analyzer.utils.text_processing import deduplicate_projects
-from analyzer.models.category import show_categories
 
 
 @click.command()
@@ -69,6 +70,15 @@ from analyzer.models.category import show_categories
 @click.option(
     "--filename", type=str, default="PROJECTS.org", help="Input org file name."
 )
+@click.option(
+    "--similarity-threshold",
+    type=float,
+    default=0.9,
+    help="Similarity threshold for deduplication.",
+)
+@click.option(
+    "--interactive", is_flag=True, help="Enable interactive mode for deduplication."
+)
 def main(
     action,
     max_refresh,
@@ -78,6 +88,8 @@ def main(
     test_file,
     test_split,
     filename,
+    similarity_threshold,
+    interactive,
 ):
     if action == "categorize":
         categorize_projects(max_refresh, max_unknown, filename)
@@ -92,7 +104,7 @@ def main(
         export_projects_to_csv(output_file, filename)
         split_data_for_training(output_file, train_file, test_file, test_split)
     elif action == "deduplicate":
-        deduplicate_projects(filename)
+        deduplicate_projects(filename, similarity_threshold, interactive)
     elif action == "check-arxiv":
         check_arxiv_papers(filename)
 

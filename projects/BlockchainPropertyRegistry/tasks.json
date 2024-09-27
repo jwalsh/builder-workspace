@@ -3,27 +3,37 @@
     "id": 898,
     "project_id": "BlockchainPropertyRegistry",
     "title": "Define Project Scope and Requirements - REVISED",
-    "description": "Thoroughly document the comprehensive requirements for the blockchain-based property registry system, covering functional and non-functional aspects, stakeholder needs, regulatory compliance (e.g., real estate laws, data privacy, KYC/AML), security and privacy considerations (e.g., data encryption, access controls), integration with existing systems (if any), and any other relevant constraints or assumptions. Focus on clarity, completeness, and alignment with project goals and objectives. Prioritize scalability, performance, fault tolerance, and future enhancements/integrations. Include edge cases, error handling mechanisms, and consider potential bottlenecks and optimization opportunities.\n\nConsider the following additional details:\n- User Interface Design: Wireframes, mockups, or prototypes for user interactions and interfaces.\n- Data Modeling: Entity Relationship Diagrams (ERDs) or similar visualizations to represent the structure of data within the system.\n- API Specification: Definitions for API endpoints, request/response formats, error handling, authentication, and authorization.\n- System Performance Monitoring: Metrics, logging, and alerting strategies to ensure the system performs optimally under varying loads.\n\nUpdate the requirements document as necessary based on feedback from stakeholders, domain experts, and developers. Once complete, review with the project manager for approval.",
-    "status": "IN PROGRESS",
-    "assigned_to": "task-decomposer",
+    "description": "Thoroughly document the comprehensive requirements for the blockchain-based property registry system, covering functional and non-functional aspects, stakeholder needs, regulatory compliance (e.g., real estate laws, data privacy, KYC/AML), security and privacy considerations (e.g., data encryption, access controls), integration with existing systems (if any), and any other relevant constraints or assumptions. Focus on clarity, completeness, and alignment with project goals and objectives. Prioritize scalability, performance, fault tolerance, and future enhancements/integrations. Include edge cases, error handling mechanisms, and consider potential bottlenecks and optimization opportunities.\n\nConsider the following additional details:\n- User Interface Design: Wireframes, mockups, or prototypes for user interactions and interfaces.\n- Data Modeling: Entity Relationship Diagrams (ERDs) or similar visualizations to represent the structure of data within the system.\n- API Specification: Definitions for API endpoints, request/response formats, error handling, authentication, and authorization. Include documentation on API versioning, backwards compatibility, and testing strategies.\n- System Performance Monitoring: Metrics, logging, and alerting strategies to ensure the system performs optimally under varying loads. Consider adding details on monitoring tools, thresholds, and escalation procedures for critical alerts.\n\nUpdate the requirements document as necessary based on feedback from stakeholders, domain experts, and developers. Once complete, review with the project manager for approval.",
+    "status": "PENDING_REVIEW",
+    "assigned_to": "project-manager",
     "priority": 5,
     "dependencies": [],
     "task_type": "rfc",
-    "rfc_state": "APPROVED"
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 899,
     "project_id": "BlockchainPropertyRegistry",
     "title": "Design System Architecture",
-    "description": "Design the overall system architecture, including the blockchain network, smart contracts, off-chain components, and integrations with external systems (e.g., land registries, payment gateways). Consider the following aspects:\n\n- Blockchain network type (public, private, or consortium)\n- Consensus mechanism (e.g., Proof-of-Work, Proof-of-Stake)\n- Smart contract design and deployment\n- Off-chain data storage and management\n- User interfaces (web, mobile)\n- Integration with land registries and payment gateways\n- Security considerations (encryption, access control)\n- Scalability and performance requirements\n- Fault tolerance and disaster recovery\n- Monitoring and logging",
-    "status": "TODO",
+    "description": "Design the overall system architecture for the BlockchainPropertyRegistry project. This includes the following aspects:\n\n- Type of blockchain network (public, private, or consortium)\n- Consensus mechanism (e.g., Proof-of-Work, Proof-of-Stake)\n- Design and deployment of smart contracts\n- Off-chain data storage and management solutions\n- Creation of user interfaces (web, mobile)\n- Integrations with land registries, payment gateways, and other external systems\n- Implementation of security measures (encryption, access control)\n- Scalability and performance optimizations\n- Fault tolerance and disaster recovery strategies\n- Monitoring and logging mechanisms",
+    "status": "IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
       "Define Project Scope and Requirements"
     ],
     "task_type": "rfc",
-    "rfc_state": "DRAFT"
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 900,
@@ -37,7 +47,12 @@
       "Design System Architecture"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 901,
@@ -51,7 +66,12 @@
       "Design System Architecture"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 902,
@@ -65,21 +85,31 @@
       "Design System Architecture"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW"
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 903,
     "project_id": "BlockchainPropertyRegistry",
     "title": "Ensure System Security and Compliance",
-    "description": "Implement security measures and compliance controls to ensure the system's integrity, data privacy, and adherence to relevant regulations and standards.",
-    "status": "TODO",
-    "assigned_to": "security-specialist",
+    "description": "Implement robust security measures, including encryption, access controls, and secure coding practices. Ensure adherence to relevant regulations, standards, and best practices for data privacy and security in the BlockchainPropertyRegistry system.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
       "Design System Architecture"
     ],
     "task_type": "rfc",
-    "rfc_state": "DRAFT"
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 904,
@@ -91,7 +121,12 @@
     "priority": 4,
     "dependencies": [],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 905,
@@ -105,7 +140,12 @@
       "Define Project Scope and Requirements"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 906,
@@ -121,7 +161,12 @@
       "Build Off-Chain Components"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 907,
@@ -135,7 +180,12 @@
       "Conduct System Testing and Quality Assurance"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 908,
@@ -150,6 +200,11 @@
       "Design System Architecture"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   }
 ]

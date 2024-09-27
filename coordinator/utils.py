@@ -68,7 +68,9 @@ def generate_cache_key(prompt: str, role: str) -> str:
 
 
 def sanitize_filename(filename: str) -> str:
-    """Sanitize a string to be used as a filename."""
+    """
+    Sanitize a string to be used as a filename.
+    """
     # Remove invalid characters
     sanitized = re.sub(r'[<>:"/\\|?*]', "", filename)
     # Replace spaces with underscores

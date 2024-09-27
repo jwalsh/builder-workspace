@@ -1,9 +1,10 @@
-import os
-import boto3
 import json
+import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from dotenv import load_dotenv
+
+import boto3
 from botocore.exceptions import ClientError
+from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()

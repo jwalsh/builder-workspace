@@ -1,18 +1,20 @@
-import pytest
 import os
 import sqlite3
+
+import pytest
+
 from coordinator.db import (
-    get_db_path,
-    create_tables,
     add_project_version,
     add_task,
-    get_tasks,
-    update_task,
-    get_project_version,
+    create_tables,
     delete_project,
     get_all_projects,
+    get_db_path,
+    get_project_version,
+    get_tasks,
+    update_task,
 )
-from coordinator.models import Task, TaskType, RFCState
+from coordinator.models import RFCState, Task, TaskType
 
 
 @pytest.fixture(scope="function")

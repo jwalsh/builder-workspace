@@ -2,8 +2,9 @@
 
 import logging
 from typing import List
-from ..models import ProjectDefinition, Task, TaskType, RFCState
+
 from ..llm import llm_manager
+from ..models import ProjectDefinition, RFCState, Task, TaskType
 from ..prompts import AVAILABLE_AGENTS
 from ..utils import extract_json_from_response
 

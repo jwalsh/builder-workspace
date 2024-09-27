@@ -3,41 +3,56 @@
     "id": 1246,
     "project_id": "CodingConceptMindMapper",
     "title": "Define project scope and requirements",
-    "description": "Gather and document requirements for the CodingConceptMindMapper tool, including user stories, use cases, functional and non-functional requirements, data models, and technical constraints. Ensure to cover requirements for creating, editing, and visualizing mind maps, as well as managing coding concepts and their relationships. Consider requirements for collaboration, sharing, and exporting mind maps. Address performance, scalability, and security concerns.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "project-manager",
+    "description": "Gather and document detailed requirements for the CodingConceptMindMapper tool. This includes user stories, use cases, functional and non-functional requirements, data models, technical constraints, and edge cases. Requirements should encompass creating, editing, and visualizing mind maps, managing coding concepts and their relationships, as well as collaboration, sharing, and exporting mind maps features. Additionally, address performance, scalability, security concerns, and accessibility considerations. Collaborate with the assigned team members for task decomposition and further detailing of each requirement.",
+    "status": "NEEDS_REVIEW",
+    "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [],
     "task_type": "rfc",
-    "rfc_state": "DRAFT"
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1247,
     "project_id": "CodingConceptMindMapper",
     "title": "Design system architecture",
-    "description": "Design the overall system architecture, including the frontend, backend, database, and any external integrations or services required. Consider the following aspects:\n\n1. Frontend: Decide on the technology stack (e.g., React, Angular, Vue) and the user interface design principles to ensure an intuitive and responsive experience for creating and exploring mind maps. Consider using a modern UI library or framework like Material-UI or Ant Design for a consistent and visually appealing interface.\n\n2. Backend: Choose a suitable backend framework (e.g., Node.js with Express, Django, Ruby on Rails) and design the API endpoints required for CRUD operations on mind maps, user authentication, and any other necessary functionality. Implement RESTful APIs and consider using GraphQL for efficient data fetching. Ensure the backend is designed to be modular, scalable, and maintainable.\n\n3. Database: Evaluate the database requirements and select an appropriate database system (e.g., PostgreSQL, MongoDB) based on the data structure and querying needs. Consider using a document-oriented database like MongoDB for storing mind map data, and a relational database like PostgreSQL for user data and other structured data. Implement efficient indexing and normalization strategies to optimize performance.\n\n4. External Services: Identify any external services or APIs required for features like real-time collaboration (e.g., Socket.IO, WebSockets), sharing (e.g., social media APIs), or integration with other learning platforms (e.g., LMS APIs). Ensure the chosen services are reliable, scalable, and secure.\n\n5. Scalability and Performance: Consider the scalability requirements and implement appropriate caching mechanisms (e.g., Redis), load balancing, and performance optimizations (e.g., code splitting, lazy loading) to handle increasing traffic effectively. Implement monitoring systems (e.g., Datadog, Sentry) for tracking application performance, errors, and user behavior.\n\n6. Security: Implement proper authentication (e.g., JWT, OAuth), authorization (e.g., role-based access control), and data encryption mechanisms (e.g., bcrypt for password hashing) to ensure the security of user data and mind maps. Ensure that input validation, sanitization, and protection against common web vulnerabilities (e.g., XSS, CSRF) are implemented.\n\n7. Deployment and DevOps: Plan for the deployment strategy (e.g., containerization with Docker, cloud deployment on AWS or GCP) and implement CI/CD pipelines for automated testing (e.g., Jest, Cypress) and deployment (e.g., GitHub Actions, CircleCI). Ensure that deployment is easy, repeatable, and scalable.\n\n8. Logging and Monitoring: Implement logging and monitoring mechanisms (e.g., Sentry, Datadog) to track application performance, errors, and user behavior for debugging and optimization purposes.",
-    "status": "REVIEW",
-    "assigned_to": "code-architect",
+    "description": "Design the overall system architecture, including the frontend, backend, database, and any external integrations or services required. Consider the following aspects:\n\n1. Frontend: Decide on the technology stack (e.g., React, Angular, Vue) and the user interface design principles to ensure an intuitive and responsive experience for creating and exploring mind maps. Consider using a modern UI library or framework like Material-UI or Ant Design for a consistent and visually appealing interface.\n\n2. Backend: Choose a suitable backend framework (e.g., Node.js with Express, Django, Ruby on Rails) and design the API endpoints required for CRUD operations on mind maps, user authentication, and any other necessary functionality. Implement RESTful APIs, and consider using GraphQL for efficient data fetching where appropriate. Ensure the backend is designed to be modular, scalable, and maintainable.\n\n3. Database: Evaluate the database requirements and select an appropriate database system (e.g., PostgreSQL, MongoDB) based on the data structure and querying needs. Consider using a document-oriented database like MongoDB for storing mind map data, and a relational database like PostgreSQL for user data and other structured data. Implement efficient indexing and normalization strategies to optimize performance.\n\n4. External Services: Identify any external services or APIs required for features like real-time collaboration (e.g., Socket.IO, WebSockets), sharing (e.g., social media APIs), or integration with other learning platforms (e.g., LMS APIs). Ensure the chosen services are reliable, scalable, and secure.\n\n5. Scalability and Performance: Consider the scalability requirements and implement appropriate caching mechanisms (e.g., Redis), load balancing, and performance optimizations (e.g., code splitting, lazy loading) to handle increasing traffic effectively. Implement monitoring systems (e.g., Datadog, Sentry) for tracking application performance, errors, and user behavior.\n\n6. Security: Implement proper authentication (e.g., JWT, OAuth), authorization (e.g., role-based access control), and data encryption mechanisms (e.g., bcrypt for password hashing) to ensure the security of user data and mind maps. Ensure that input validation, sanitization, and protection against common web vulnerabilities (e.g., XSS, CSRF) are implemented.\n\n7. Deployment and DevOps: Plan for the deployment strategy (e.g., containerization with Docker, cloud deployment on AWS or GCP) and implement CI/CD pipelines for automated testing (e.g., Jest, Cypress) and deployment (e.g., GitHub Actions, CircleCI). Ensure that deployment is easy, repeatable, and scalable.\n\n8. Logging and Monitoring: Implement logging and monitoring mechanisms (e.g., Sentry, Datadog) to track application performance, errors, and user behavior for debugging and optimization purposes.\n\n9. Documentation: Write clear and concise documentation for developers, explaining the system architecture, API endpoints, data structures, and any best practices or guidelines for using the tool.",
+    "status": "IMPLEMENTATION",
+    "assigned_to": "frontend-developer",
     "priority": 5,
     "dependencies": [
       "Define project scope and requirements"
     ],
     "task_type": "rfc",
-    "rfc_state": "APPROVED"
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1248,
     "project_id": "CodingConceptMindMapper",
     "title": "Design user interface and experience",
-    "description": "Design the user interface and user experience for creating, exploring, and managing mind maps of coding concepts. The design should be intuitive, responsive, accessible, and adhere to best practices for user experience and interface design. Ensure the design supports features like creating, editing, and organizing mind maps, navigating between concepts, adding notes and resources, sharing or exporting mind maps, and collaborating with other users.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "frontend-developer",
+    "description": "Design the user interface and user experience for creating, exploring, and managing mind maps of coding concepts. The design should be intuitive, responsive, accessible, and adhere to best practices for user experience and interface design. Ensure the design supports features like creating, editing, and organizing mind maps, navigating between concepts, adding notes and resources, sharing or exporting mind maps, collaborating with other users, and offering a seamless transition between mobile and desktop versions. The design should also incorporate feedback mechanisms for continuous improvement and provide an option for customization by the user.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "Define project scope and requirements"
     ],
     "task_type": "rfc",
-    "rfc_state": "APPROVED"
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1249,
@@ -51,7 +66,12 @@
       "Design system architecture"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1250,
@@ -66,7 +86,12 @@
       "Develop backend services"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1251,
@@ -80,7 +105,12 @@
       "Design system architecture"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1252,
@@ -95,7 +125,12 @@
       "Develop frontend application"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1253,
@@ -110,7 +145,12 @@
       "Develop frontend application"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1254,
@@ -124,7 +164,12 @@
       "Develop frontend application"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 1255,
@@ -139,6 +184,11 @@
       "Develop frontend application"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   }
 ]

@@ -3,27 +3,37 @@
     "id": 2025,
     "project_id": "EmotionDrivenAdCreator",
     "title": "Define Project Scope and Requirements",
-    "description": "Gather and document the project requirements, including the target audience, desired emotional responses, media platforms to analyze, and key features.",
-    "status": "TODO",
+    "description": "Gather and document the project requirements, including the target audience demographics (age, gender, location), desired emotional responses (happiness, sadness, anger, fear, surprise, disgust, contempt), media platforms to analyze (social media, news sites, blogs), and key features (AI-powered sentiment analysis, trend prediction, adaptive ad creation). Also consider ethical implications, scalability, and integration with existing marketing tools. Document these in a comprehensive requirements document.",
+    "status": "IN_PROGRESS",
     "assigned_to": "project-manager",
     "priority": 5,
     "dependencies": [],
     "task_type": "rfc",
-    "rfc_state": "DRAFT"
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 2026,
     "project_id": "EmotionDrivenAdCreator",
     "title": "Design System Architecture",
-    "description": "Design the overall system architecture, including components for sentiment analysis, cultural trend analysis, ad creation, and integration with media platforms. The architecture should consider scalability, fault tolerance, and security aspects.",
-    "status": "IN PROGRESS",
+    "description": "Design the overall system architecture, including components for sentiment analysis, cultural trend analysis, ad creation, and integration with media platforms. The architecture should consider scalability, fault tolerance, and security aspects. Also, the design should follow microservices approach to ensure modularity, flexibility, and easy maintainability.",
+    "status": "REVIEW",
     "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
       "Define Project Scope and Requirements"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW"
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 2027,
@@ -37,7 +47,12 @@
       "Design System Architecture"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 2028,
@@ -51,7 +66,12 @@
       "Design System Architecture"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 2029,
@@ -65,7 +85,12 @@
       "Design System Architecture"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 2030,
@@ -79,7 +104,12 @@
       "Design System Architecture"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 2031,
@@ -94,7 +124,12 @@
       "Analyze Target Audience and Media Platforms"
     ],
     "task_type": "rfc",
-    "rfc_state": "DRAFT"
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 2032,
@@ -108,7 +143,12 @@
       "Design User Interface"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 2033,
@@ -120,35 +160,50 @@
     "priority": 4,
     "dependencies": [],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 2034,
     "project_id": "EmotionDrivenAdCreator",
     "title": "Implement Data Storage and Management",
-    "description": "Design and implement a scalable and efficient data storage and management system for storing and retrieving sentiment analysis data, trend data, and generated advertisements. The system should support high throughput and low latency data ingestion, as well as efficient querying and retrieval. It should also provide data backup, recovery, and archiving mechanisms to ensure data integrity and availability.",
-    "status": "TODO",
-    "assigned_to": "database-specialist",
+    "description": "Design and implement a scalable and efficient data storage and management system for storing and retrieving sentiment analysis data, trend data, and generated advertisements. The system should support high throughput and low latency data ingestion, as well as efficient querying and retrieval. It should also provide data backup, recovery, and archiving mechanisms to ensure data integrity and availability. Additionally, consider implementing data compression techniques to reduce storage costs and improve performance.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "Design System Architecture"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW"
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 2035,
     "project_id": "EmotionDrivenAdCreator",
     "title": "Develop Testing Strategy",
-    "description": "Define a comprehensive testing strategy that covers all aspects of the system, including unit tests for individual components, integration tests for component interactions, end-to-end tests for user scenarios, performance tests for load and stress testing, security tests for vulnerability assessment, and usability tests for user experience evaluation. Ensure that the testing strategy aligns with industry best practices and adheres to relevant standards and guidelines.",
-    "status": "TODO",
-    "assigned_to": "qa-tester",
+    "description": "Define a comprehensive testing strategy that covers all aspects of the system, including unit tests for individual components, integration tests for component interactions, end-to-end tests for user scenarios, performance tests for load and stress testing, security tests for vulnerability assessment, usability tests for user experience evaluation, and additional exploratory tests to validate the AI model's performance in real-world scenarios. Ensure that the testing strategy aligns with industry best practices, adheres to relevant standards and guidelines such as ISO 29119 for software testing, and considers the specific requirements of an AI-powered tool. Suggest possible automation tools for efficient test execution. Also, consider integrating monitoring and logging mechanisms to facilitate continuous testing during development and deployment phases. Update the testing strategy regularly based on feedback from users and other stakeholders.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "Define Project Scope and Requirements"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW"
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 2036,
@@ -162,7 +217,12 @@
       "Develop Testing Strategy"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 2037,
@@ -176,7 +236,12 @@
       "Design System Architecture"
     ],
     "task_type": "audit",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 2038,
@@ -191,7 +256,12 @@
       "Design System Architecture"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 2039,
@@ -212,6 +282,11 @@
       "Write Documentation"
     ],
     "task_type": "decompose",
-    "rfc_state": null
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   }
 ]

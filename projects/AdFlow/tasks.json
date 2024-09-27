@@ -20,15 +20,15 @@
     "id": 518,
     "project_id": "AdFlow",
     "title": "System Architecture Design for AdFlow Platform",
-    "description": "Design the overall system architecture for the AdFlow platform, including components, data flow, integration points, and key considerations for scalability, maintainability, and security. The architecture should address functional areas: campaign management, content item approval, user management, and campaign auditing; also, ensure adherence to best practices in software design and development. This task builds upon 'Project Planning and Requirements Gathering'. Additionally, consider the use of microservices architecture for better scalability and maintainability, and include a detailed security plan with encryption strategies and access controls. The RFC is ready for review by the project manager or technical lead. This RFC also emphasizes the importance of ensuring modularity, testability, and maintainability throughout the design process. Upon approval, this RFC will be passed to the 'task-decomposer' for further task decomposition.",
+    "description": "Design the overall system architecture for the AdFlow platform, including components, data flow, integration points, and key considerations for scalability, maintainability, and security. The architecture should address functional areas: campaign management, content item approval, user management, and campaign auditing; also, ensure adherence to best practices in software design and development. This task builds upon 'Project Planning and Requirements Gathering'. Additionally, consider the use of microservices architecture for better scalability and maintainability, and include a detailed security plan with encryption strategies and access controls. The RFC is ready for review by the project manager or technical lead. This RFC also emphasizes the importance of ensuring modularity, testability, and maintainability throughout the design process. Upon approval, this RFC will be passed to the 'task-decomposer' for further task decomposition. To improve clarity, consider breaking down the functional areas (campaign management, content item approval, user management, and campaign auditing) into more specific subtasks.",
     "status": "READY_FOR_REVIEW",
-    "assigned_to": "task-decomposer",
+    "assigned_to": "project-manager",
     "priority": 1,
     "dependencies": [
       "Project Planning and Requirements Gathering"
     ],
     "task_type": "rfc",
-    "rfc_state": "UNKNOWN",
+    "rfc_state": "IN_REVIEW",
     "implementation_state": null,
     "review_comments": null,
     "approver": null,
@@ -39,9 +39,9 @@
     "id": 519,
     "project_id": "AdFlow",
     "title": "Database Design for AdFlow",
-    "description": "Design the database schema and data models for storing campaign, content, user, and audit data. Ensure the schema supports efficient querying, data integrity, and scalability. Consider indexing, normalization, and partitioning strategies. Define relationships between entities and data access patterns. Provide recommendations for database technology (e.g., relational, NoSQL) based on project requirements such as performance, scalability, and security. Justify the choice of database technology. Incorporate guidelines for data backup, recovery, and replication strategies to ensure high availability and disaster recovery. Address security considerations like data encryption, access controls, and auditing mechanisms. Provide a high-level diagram illustrating the data architecture.",
-    "status": "REVIEW_IN_PROGRESS",
-    "assigned_to": "code-architect",
+    "description": "Design the database schema and data models for storing campaign, content, user, and audit data. Ensure the schema supports efficient querying, data integrity, and scalability. Consider indexing, normalization, partitioning strategies for optimized performance. Define relationships between entities and data access patterns. Provide recommendations for database technology (e.g., relational, NoSQL) based on project requirements such as performance, scalability, and security. Justify the choice of database technology by comparing its pros and cons with other alternatives. Incorporate guidelines for data backup, recovery, and replication strategies to ensure high availability and disaster recovery. Address security considerations like data encryption, access controls, and auditing mechanisms. Provide a high-level diagram illustrating the data architecture, including key entities and their relationships. Ensure that the design is flexible enough to accommodate future enhancements and expansions of AdFlow.",
+    "status": "REVIEW_COMPLETED",
+    "assigned_to": "database-specialist",
     "priority": 3,
     "dependencies": [
       "System Architecture Design"
