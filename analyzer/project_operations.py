@@ -1,14 +1,14 @@
 # File: analyzer/project_operations.py
 
+import json
 import logging
 from difflib import get_close_matches
 from typing import List
-import json
 
-from coordinator.models import RFCState, Task, ProjectDefinition, TaskType
-from coordinator.llm import llm_manager
-from coordinator.utils import generate_cache_key
 from coordinator.db import add_task
+from coordinator.llm import llm_manager
+from coordinator.models import ProjectDefinition, RFCState, Task, TaskType
+from coordinator.utils import generate_cache_key
 
 
 async def decompose_project(project_definition: ProjectDefinition) -> List[Task]:

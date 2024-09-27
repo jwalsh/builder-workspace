@@ -1,14 +1,11 @@
+import hashlib
 import json
 import os
 import re
-import hashlib
 from datetime import datetime
 from typing import List
 
 from .models import RFCState, Task, TaskType
-
-import json
-import re
 
 
 def extract_json_from_response(text: str) -> dict:

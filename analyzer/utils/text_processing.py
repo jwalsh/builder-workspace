@@ -1,9 +1,10 @@
-import orgparse
-from analyzer.utils.embedding import get_embedding
-from sklearn.metrics.pairwise import cosine_similarity
 import google.generativeai as genai
+import orgparse
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
 from analyzer.models.category import CategoryEnum
+from analyzer.utils.embedding import get_embedding
 
 
 def extract_description(body):
