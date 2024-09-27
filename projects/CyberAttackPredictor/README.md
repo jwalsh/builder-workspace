@@ -12,11 +12,11 @@ This project aims to predict potential large-scale cyber attacks using machine l
 - Tests: Unit, integration, and end-to-end tests
 - Deployment: Configuration files for containerization and orchestration
 
-## Getting Started:
-[Instructions for setting up and running the project]
+## Design Documents:
+The following design documents are available in the `docs` folder:
+- [System Architecture Design](docs/system_architecture_design.md)
+- [API Specification](docs/api_specification.md)
+- [Database Schema Design](docs/database_schema_design.md)
+- [Security and Compliance Plan](docs/security_and_compliance_plan.md)
+- [Data Processing Pipeline Design](docs/data_processing_pipeline_design.md)
 
-## Contributing:
-[Guidelines for contributing to the project]
-
-## License:
-[Project license information]
