@@ -60,6 +60,38 @@ list-tasks: ## List all tasks
 tangle: ## Get txt files for all projects
 	poetry run emacs -Q --batch -l org --eval '(org-babel-tangle-file "projects/README.org")'
 
+tangle-all: ## Tangle code blocks from org files
+	@echo "Tangling code blocks..."
+	@for file in $(ORG_FILES); do \
+		emacs --batch --eval "(progn \
+			(require 'org) \
+			(org-babel-tangle-file \"$$file\"))"; \
+	done
+	@echo "Tangling complete."
+
+generate-diagrams: ## Generate diagrams from org files
+	@echo "Generating diagrams..."
+	@for file in $(MERMAID_ORG_FILES); do \
+		emacs --batch --eval "(progn \
+			(require 'org) \
+			(find-file \"$$file\") \
+			(org-babel-execute-buffer) \
+			(save-buffer) \
+			(kill-buffer))"; \
+	done
+	@echo "Diagram generation complete."
+
+install-emacs-packages: ## Install required Emacs packages
+	@echo "Installing Emacs packages..."
+	@emacs --batch --eval "(progn \
+		(require 'package) \
+		(add-to-list 'package-archives '(\"melpa\" . \"https://melpa.org/packages/\") t) \
+		(package-initialize) \
+		(package-refresh-contents) \
+		(package-install 'org) \
+		(package-install 'htmlize))"
+
+
 run-analyzer: ## Run the analyzer on the projects
 	$(PYTHON) -m analyzer --action categorize --filename projects/README.org
 	$(PYTHON) -m analyzer --action analyze --filename projects/README.org
@@ -85,3 +117,15 @@ migrate:
 		fi; \
 	done
 	@echo "All migrations completed successfully."
+
+
+generate-docs: ## Generate documentation for the project
+	@echo "Generating documentation..."
+	poetry add sphinx
+	poetry run sphinx-quickstart -q -p "Coordinator" -a "Jason Walsh" -v "0.1" -l "en" --ext-autodoc --makefile docs
+	poetry run sphinx-apidoc -o docs/source coordinator
+	@echo "import os" >> docs/source/conf.py
+	@echo "import sys" >> docs/source/conf.py
+	@echo "sys.path.insert(0, os.path.abspath('../..'))" >> docs/source/conf.py
+	cd docs && poetry run make html
+	@echo "Documentation generated in the 'docs/_build/html' directory."

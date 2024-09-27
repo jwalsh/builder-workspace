@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>coordinator &#8212; Coordinator 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=c058f7c8" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="coordinator">
+<h1>coordinator<a class="headerlink" href="#coordinator" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="coordinator.html">coordinator package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="coordinator.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.project_operations.html">coordinator.project_operations package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.project_operations.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.project_operations.html#module-coordinator.project_operations.decompose">coordinator.project_operations.decompose module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.project_operations.html#module-coordinator.project_operations.project_management">coordinator.project_operations.project_management module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.project_operations.html#module-coordinator.project_operations.rfc_processing">coordinator.project_operations.rfc_processing module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.project_operations.html#module-coordinator.project_operations.utils">coordinator.project_operations.utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.project_operations.html#module-coordinator.project_operations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="coordinator.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinator.html#module-coordinator.db">coordinator.db module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.db.add_project_version"><code class="docutils literal notranslate"><span class="pre">add_project_version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.db.add_task"><code class="docutils literal notranslate"><span class="pre">add_task()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.db.create_tables"><code class="docutils literal notranslate"><span class="pre">create_tables()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.db.delete_project"><code class="docutils literal notranslate"><span class="pre">delete_project()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.db.get_all_projects"><code class="docutils literal notranslate"><span class="pre">get_all_projects()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.db.get_db_path"><code class="docutils literal notranslate"><span class="pre">get_db_path()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.db.get_project_version"><code class="docutils literal notranslate"><span class="pre">get_project_version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.db.get_tasks"><code class="docutils literal notranslate"><span class="pre">get_tasks()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.db.update_task"><code class="docutils literal notranslate"><span class="pre">update_task()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="coordinator.html#module-coordinator.implementation_workflow">coordinator.implementation_workflow module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.implementation_workflow.add_implementation_subtask"><code class="docutils literal notranslate"><span class="pre">add_implementation_subtask()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.implementation_workflow.complete_implementation"><code class="docutils literal notranslate"><span class="pre">complete_implementation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.implementation_workflow.create_implementation_plan"><code class="docutils literal notranslate"><span class="pre">create_implementation_plan()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="coordinator.html#module-coordinator.indexer">coordinator.indexer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinator.html#module-coordinator.llm">coordinator.llm module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.llm.LLMManager"><code class="docutils literal notranslate"><span class="pre">LLMManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.llm.LLMManager.create_default_config"><code class="docutils literal notranslate"><span class="pre">LLMManager.create_default_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.llm.LLMManager.get_active_provider"><code class="docutils literal notranslate"><span class="pre">LLMManager.get_active_provider()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.llm.LLMManager.load_config"><code class="docutils literal notranslate"><span class="pre">LLMManager.load_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.llm.LLMManager.run_llm_command"><code class="docutils literal notranslate"><span class="pre">LLMManager.run_llm_command()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.llm.LLMManager.save_config"><code class="docutils literal notranslate"><span class="pre">LLMManager.save_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.llm.LLMManager.update_health_status"><code class="docutils literal notranslate"><span class="pre">LLMManager.update_health_status()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.llm.run_llm_command"><code class="docutils literal notranslate"><span class="pre">run_llm_command()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="coordinator.html#module-coordinator.main">coordinator.main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coordinator.html#module-coordinator.models">coordinator.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.models.AuditLog"><code class="docutils literal notranslate"><span class="pre">AuditLog</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.AuditLog.action"><code class="docutils literal notranslate"><span class="pre">AuditLog.action</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.AuditLog.details"><code class="docutils literal notranslate"><span class="pre">AuditLog.details</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.AuditLog.entity_id"><code class="docutils literal notranslate"><span class="pre">AuditLog.entity_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.AuditLog.entity_type"><code class="docutils literal notranslate"><span class="pre">AuditLog.entity_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.AuditLog.id"><code class="docutils literal notranslate"><span class="pre">AuditLog.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.AuditLog.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">AuditLog.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.AuditLog.model_config"><code class="docutils literal notranslate"><span class="pre">AuditLog.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.AuditLog.model_fields"><code class="docutils literal notranslate"><span class="pre">AuditLog.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.AuditLog.timestamp"><code class="docutils literal notranslate"><span class="pre">AuditLog.timestamp</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.AuditLog.user_id"><code class="docutils literal notranslate"><span class="pre">AuditLog.user_id</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.models.ImplementationPlan"><code class="docutils literal notranslate"><span class="pre">ImplementationPlan</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ImplementationPlan.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">ImplementationPlan.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ImplementationPlan.model_config"><code class="docutils literal notranslate"><span class="pre">ImplementationPlan.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ImplementationPlan.model_fields"><code class="docutils literal notranslate"><span class="pre">ImplementationPlan.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ImplementationPlan.planning_task_id"><code class="docutils literal notranslate"><span class="pre">ImplementationPlan.planning_task_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ImplementationPlan.rfc_id"><code class="docutils literal notranslate"><span class="pre">ImplementationPlan.rfc_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ImplementationPlan.subtasks"><code class="docutils literal notranslate"><span class="pre">ImplementationPlan.subtasks</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.models.ImplementationState"><code class="docutils literal notranslate"><span class="pre">ImplementationState</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ImplementationState.COMPLETED"><code class="docutils literal notranslate"><span class="pre">ImplementationState.COMPLETED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ImplementationState.IN_PROGRESS"><code class="docutils literal notranslate"><span class="pre">ImplementationState.IN_PROGRESS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ImplementationState.NOT_STARTED"><code class="docutils literal notranslate"><span class="pre">ImplementationState.NOT_STARTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ImplementationState.REVIEW"><code class="docutils literal notranslate"><span class="pre">ImplementationState.REVIEW</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ImplementationState.TESTING"><code class="docutils literal notranslate"><span class="pre">ImplementationState.TESTING</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.models.LLMConfig"><code class="docutils literal notranslate"><span class="pre">LLMConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.LLMConfig.Config"><code class="docutils literal notranslate"><span class="pre">LLMConfig.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.LLMConfig.claude_healthy"><code class="docutils literal notranslate"><span class="pre">LLMConfig.claude_healthy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.LLMConfig.last_check"><code class="docutils literal notranslate"><span class="pre">LLMConfig.last_check</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.LLMConfig.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">LLMConfig.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.LLMConfig.model_config"><code class="docutils literal notranslate"><span class="pre">LLMConfig.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.LLMConfig.model_fields"><code class="docutils literal notranslate"><span class="pre">LLMConfig.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.LLMConfig.ollama_healthy"><code class="docutils literal notranslate"><span class="pre">LLMConfig.ollama_healthy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.LLMConfig.parse_obj"><code class="docutils literal notranslate"><span class="pre">LLMConfig.parse_obj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.LLMConfig.provider"><code class="docutils literal notranslate"><span class="pre">LLMConfig.provider</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.models.LLMProvider"><code class="docutils literal notranslate"><span class="pre">LLMProvider</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.LLMProvider.CLAUDE"><code class="docutils literal notranslate"><span class="pre">LLMProvider.CLAUDE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.LLMProvider.OLLAMA"><code class="docutils literal notranslate"><span class="pre">LLMProvider.OLLAMA</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.LLMProvider.RANDOM"><code class="docutils literal notranslate"><span class="pre">LLMProvider.RANDOM</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectDefinition"><code class="docutils literal notranslate"><span class="pre">ProjectDefinition</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectDefinition.description"><code class="docutils literal notranslate"><span class="pre">ProjectDefinition.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectDefinition.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">ProjectDefinition.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectDefinition.model_config"><code class="docutils literal notranslate"><span class="pre">ProjectDefinition.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectDefinition.model_fields"><code class="docutils literal notranslate"><span class="pre">ProjectDefinition.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectDefinition.name"><code class="docutils literal notranslate"><span class="pre">ProjectDefinition.name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectStats"><code class="docutils literal notranslate"><span class="pre">ProjectStats</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectStats.average_priority"><code class="docutils literal notranslate"><span class="pre">ProjectStats.average_priority</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectStats.completed_tasks"><code class="docutils literal notranslate"><span class="pre">ProjectStats.completed_tasks</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectStats.in_progress_tasks"><code class="docutils literal notranslate"><span class="pre">ProjectStats.in_progress_tasks</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectStats.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">ProjectStats.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectStats.model_config"><code class="docutils literal notranslate"><span class="pre">ProjectStats.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectStats.model_fields"><code class="docutils literal notranslate"><span class="pre">ProjectStats.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectStats.pending_tasks"><code class="docutils literal notranslate"><span class="pre">ProjectStats.pending_tasks</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectStats.rfc_count"><code class="docutils literal notranslate"><span class="pre">ProjectStats.rfc_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectStats.total_tasks"><code class="docutils literal notranslate"><span class="pre">ProjectStats.total_tasks</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectSummary"><code class="docutils literal notranslate"><span class="pre">ProjectSummary</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectSummary.description"><code class="docutils literal notranslate"><span class="pre">ProjectSummary.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectSummary.id"><code class="docutils literal notranslate"><span class="pre">ProjectSummary.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectSummary.last_updated"><code class="docutils literal notranslate"><span class="pre">ProjectSummary.last_updated</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectSummary.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">ProjectSummary.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectSummary.model_config"><code class="docutils literal notranslate"><span class="pre">ProjectSummary.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectSummary.model_fields"><code class="docutils literal notranslate"><span class="pre">ProjectSummary.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectSummary.name"><code class="docutils literal notranslate"><span class="pre">ProjectSummary.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectSummary.task_count"><code class="docutils literal notranslate"><span class="pre">ProjectSummary.task_count</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectVersion"><code class="docutils literal notranslate"><span class="pre">ProjectVersion</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectVersion.created_at"><code class="docutils literal notranslate"><span class="pre">ProjectVersion.created_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectVersion.definition"><code class="docutils literal notranslate"><span class="pre">ProjectVersion.definition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectVersion.id"><code class="docutils literal notranslate"><span class="pre">ProjectVersion.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectVersion.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">ProjectVersion.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectVersion.model_config"><code class="docutils literal notranslate"><span class="pre">ProjectVersion.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.ProjectVersion.model_fields"><code class="docutils literal notranslate"><span class="pre">ProjectVersion.model_fields</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.models.RFCState"><code class="docutils literal notranslate"><span class="pre">RFCState</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.RFCState.APPROVED"><code class="docutils literal notranslate"><span class="pre">RFCState.APPROVED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.RFCState.DEFERRED"><code class="docutils literal notranslate"><span class="pre">RFCState.DEFERRED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.RFCState.DRAFT"><code class="docutils literal notranslate"><span class="pre">RFCState.DRAFT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.RFCState.IMPLEMENTED"><code class="docutils literal notranslate"><span class="pre">RFCState.IMPLEMENTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.RFCState.IMPLEMENTING"><code class="docutils literal notranslate"><span class="pre">RFCState.IMPLEMENTING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.RFCState.IN_REVIEW"><code class="docutils literal notranslate"><span class="pre">RFCState.IN_REVIEW</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.RFCState.OBSOLETE"><code class="docutils literal notranslate"><span class="pre">RFCState.OBSOLETE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.RFCState.PENDING_REVIEW"><code class="docutils literal notranslate"><span class="pre">RFCState.PENDING_REVIEW</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.RFCState.REJECTED"><code class="docutils literal notranslate"><span class="pre">RFCState.REJECTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.RFCState.REVIEW"><code class="docutils literal notranslate"><span class="pre">RFCState.REVIEW</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.RFCState.REVISE"><code class="docutils literal notranslate"><span class="pre">RFCState.REVISE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.RFCState.SUBMITTED"><code class="docutils literal notranslate"><span class="pre">RFCState.SUBMITTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.RFCState.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">RFCState.UNKNOWN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.RFCState.WITHDRAWN"><code class="docutils literal notranslate"><span class="pre">RFCState.WITHDRAWN</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.models.Task"><code class="docutils literal notranslate"><span class="pre">Task</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.approver"><code class="docutils literal notranslate"><span class="pre">Task.approver</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.assigned_to"><code class="docutils literal notranslate"><span class="pre">Task.assigned_to</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.dependencies"><code class="docutils literal notranslate"><span class="pre">Task.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.description"><code class="docutils literal notranslate"><span class="pre">Task.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.id"><code class="docutils literal notranslate"><span class="pre">Task.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.implementation_state"><code class="docutils literal notranslate"><span class="pre">Task.implementation_state</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">Task.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.model_config"><code class="docutils literal notranslate"><span class="pre">Task.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.model_fields"><code class="docutils literal notranslate"><span class="pre">Task.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.parent_task_id"><code class="docutils literal notranslate"><span class="pre">Task.parent_task_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.priority"><code class="docutils literal notranslate"><span class="pre">Task.priority</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.project_id"><code class="docutils literal notranslate"><span class="pre">Task.project_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.related_rfc_id"><code class="docutils literal notranslate"><span class="pre">Task.related_rfc_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.review_comments"><code class="docutils literal notranslate"><span class="pre">Task.review_comments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.rfc_state"><code class="docutils literal notranslate"><span class="pre">Task.rfc_state</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.status"><code class="docutils literal notranslate"><span class="pre">Task.status</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.task_type"><code class="docutils literal notranslate"><span class="pre">Task.task_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.Task.title"><code class="docutils literal notranslate"><span class="pre">Task.title</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.models.TaskType"><code class="docutils literal notranslate"><span class="pre">TaskType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskType.AUDIT"><code class="docutils literal notranslate"><span class="pre">TaskType.AUDIT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskType.CODE_REVIEW"><code class="docutils literal notranslate"><span class="pre">TaskType.CODE_REVIEW</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskType.DECOMPOSE"><code class="docutils literal notranslate"><span class="pre">TaskType.DECOMPOSE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskType.DIAGRAM"><code class="docutils literal notranslate"><span class="pre">TaskType.DIAGRAM</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskType.DOCUMENTATION"><code class="docutils literal notranslate"><span class="pre">TaskType.DOCUMENTATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskType.IMPLEMENTATION"><code class="docutils literal notranslate"><span class="pre">TaskType.IMPLEMENTATION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskType.IMPLEMENTATION_PLANNING"><code class="docutils literal notranslate"><span class="pre">TaskType.IMPLEMENTATION_PLANNING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskType.INFRASTRUCTURE"><code class="docutils literal notranslate"><span class="pre">TaskType.INFRASTRUCTURE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskType.MONITORING"><code class="docutils literal notranslate"><span class="pre">TaskType.MONITORING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskType.RESEARCH"><code class="docutils literal notranslate"><span class="pre">TaskType.RESEARCH</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskType.RFC"><code class="docutils literal notranslate"><span class="pre">TaskType.RFC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskType.RFC_REVIEW"><code class="docutils literal notranslate"><span class="pre">TaskType.RFC_REVIEW</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskType.TESTING"><code class="docutils literal notranslate"><span class="pre">TaskType.TESTING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskType.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">TaskType.UNKNOWN</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.models.TaskUpdate"><code class="docutils literal notranslate"><span class="pre">TaskUpdate</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskUpdate.approver"><code class="docutils literal notranslate"><span class="pre">TaskUpdate.approver</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskUpdate.assigned_to"><code class="docutils literal notranslate"><span class="pre">TaskUpdate.assigned_to</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskUpdate.dependencies"><code class="docutils literal notranslate"><span class="pre">TaskUpdate.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskUpdate.description"><code class="docutils literal notranslate"><span class="pre">TaskUpdate.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskUpdate.implementation_state"><code class="docutils literal notranslate"><span class="pre">TaskUpdate.implementation_state</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskUpdate.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">TaskUpdate.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskUpdate.model_config"><code class="docutils literal notranslate"><span class="pre">TaskUpdate.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskUpdate.model_fields"><code class="docutils literal notranslate"><span class="pre">TaskUpdate.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskUpdate.priority"><code class="docutils literal notranslate"><span class="pre">TaskUpdate.priority</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskUpdate.review_comments"><code class="docutils literal notranslate"><span class="pre">TaskUpdate.review_comments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskUpdate.rfc_state"><code class="docutils literal notranslate"><span class="pre">TaskUpdate.rfc_state</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskUpdate.status"><code class="docutils literal notranslate"><span class="pre">TaskUpdate.status</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskUpdate.task_type"><code class="docutils literal notranslate"><span class="pre">TaskUpdate.task_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.TaskUpdate.title"><code class="docutils literal notranslate"><span class="pre">TaskUpdate.title</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.models.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.User.created_at"><code class="docutils literal notranslate"><span class="pre">User.created_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.User.email"><code class="docutils literal notranslate"><span class="pre">User.email</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.User.id"><code class="docutils literal notranslate"><span class="pre">User.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.User.last_login"><code class="docutils literal notranslate"><span class="pre">User.last_login</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.User.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">User.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.User.model_config"><code class="docutils literal notranslate"><span class="pre">User.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.User.model_fields"><code class="docutils literal notranslate"><span class="pre">User.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.User.role"><code class="docutils literal notranslate"><span class="pre">User.role</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.User.username"><code class="docutils literal notranslate"><span class="pre">User.username</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.models.UserRole"><code class="docutils literal notranslate"><span class="pre">UserRole</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.UserRole.ADMIN"><code class="docutils literal notranslate"><span class="pre">UserRole.ADMIN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.UserRole.DEVELOPER"><code class="docutils literal notranslate"><span class="pre">UserRole.DEVELOPER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.UserRole.MANAGER"><code class="docutils literal notranslate"><span class="pre">UserRole.MANAGER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="coordinator.html#coordinator.models.UserRole.VIEWER"><code class="docutils literal notranslate"><span class="pre">UserRole.VIEWER</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="coordinator.html#module-coordinator.prompts">coordinator.prompts module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.prompts.AgentRole"><code class="docutils literal notranslate"><span class="pre">AgentRole</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.prompts.get_valid_agents"><code class="docutils literal notranslate"><span class="pre">get_valid_agents()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="coordinator.html#module-coordinator.utils">coordinator.utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.utils.calculate_project_progress"><code class="docutils literal notranslate"><span class="pre">calculate_project_progress()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.utils.create_project_directory"><code class="docutils literal notranslate"><span class="pre">create_project_directory()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.utils.extract_json_from_response"><code class="docutils literal notranslate"><span class="pre">extract_json_from_response()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.utils.format_file_size"><code class="docutils literal notranslate"><span class="pre">format_file_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.utils.format_org_mode_task"><code class="docutils literal notranslate"><span class="pre">format_org_mode_task()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.utils.format_time_estimate"><code class="docutils literal notranslate"><span class="pre">format_time_estimate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.utils.generate_cache_key"><code class="docutils literal notranslate"><span class="pre">generate_cache_key()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.utils.generate_project_summary"><code class="docutils literal notranslate"><span class="pre">generate_project_summary()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.utils.generate_task_id"><code class="docutils literal notranslate"><span class="pre">generate_task_id()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.utils.is_valid_url"><code class="docutils literal notranslate"><span class="pre">is_valid_url()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.utils.parse_dependencies"><code class="docutils literal notranslate"><span class="pre">parse_dependencies()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.utils.sanitize_filename"><code class="docutils literal notranslate"><span class="pre">sanitize_filename()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.utils.truncate_string"><code class="docutils literal notranslate"><span class="pre">truncate_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="coordinator.html#coordinator.utils.validate_email"><code class="docutils literal notranslate"><span class="pre">validate_email()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="coordinator.html#module-coordinator">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Coordinator</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Jason Walsh.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/source/modules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
