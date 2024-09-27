@@ -1,0 +1,177 @@
+[
+  {
+    "id": 3994,
+    "project_id": "QuantumComputingSimulator",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements. Conduct research on quantum computing concepts and simulation techniques. Identify target audience and their needs.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3995,
+    "project_id": "QuantumComputingSimulator",
+    "title": "Architecture Design and System Planning",
+    "description": "Design the overall system architecture, including the simulation engine, user interface, and data storage components. Define the technology stack, development tools, and consider performance optimization strategies for interactive coding exercises.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3996,
+    "project_id": "QuantumComputingSimulator",
+    "title": "User Interface Design and Development",
+    "description": "Design and develop the user interface for the simulation environment, including interactive coding exercises, visualization tools, and user feedback mechanisms.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design and System Planning"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3997,
+    "project_id": "QuantumComputingSimulator",
+    "title": "Quantum Computing Simulation Engine Development",
+    "description": "Implement the core simulation engine that models quantum computing concepts and executes user-provided code. Integrate with the user interface and data storage components.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design and System Planning"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3998,
+    "project_id": "QuantumComputingSimulator",
+    "title": "Data Storage and Persistence",
+    "description": "Design and implement a scalable, secure, and efficient data storage solution for user code, simulation results, user data, and other relevant data in the Quantum Computing Simulator project. The solution should leverage appropriate combinations of relational databases (such as PostgreSQL or MySQL), NoSQL databases (like MongoDB or Cassandra), caching mechanisms (e.g., Redis), and file storage systems (AWS S3, Google Cloud Storage) to address data integrity, security, and efficient retrieval. Implement proper data access controls and encryption for sensitive information, ensuring adherence to industry standards for data privacy and protection. Incorporate a layered caching strategy with intelligent cache eviction policies to optimize performance and reduce latency. Collaborate closely with the assigned team members and other stakeholders throughout the process. To ensure thoroughness, consider conducting benchmark tests on different database configurations before making final decisions. For better readability, structure the RFC into sections covering design choices, implementation details, security measures, caching strategies, performance metrics, and a timeline for completion. Once complete, include a section for post-implementation testing and maintenance.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Architecture Design and System Planning"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3999,
+    "project_id": "QuantumComputingSimulator",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and test cases for the simulation environment, including unit tests, integration tests, and user acceptance tests. Ensure code quality and functionality.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "User Interface Design and Development",
+      "Quantum Computing Simulation Engine Development",
+      "Data Storage and Persistence"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4000,
+    "project_id": "QuantumComputingSimulator",
+    "title": "Security and Compliance",
+    "description": "Implement security measures to protect user data and ensure compliance with relevant regulations and industry standards.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Architecture Design and System Planning"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4001,
+    "project_id": "QuantumComputingSimulator",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure and continuous integration/continuous deployment (CI/CD) pipelines. Ensure smooth deployment and monitoring of the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "User Interface Design and Development",
+      "Quantum Computing Simulation Engine Development",
+      "Data Storage and Persistence",
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4002,
+    "project_id": "QuantumComputingSimulator",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation and user guides for the simulation environment, covering installation, usage, and advanced features.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "User Interface Design and Development",
+      "Quantum Computing Simulation Engine Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

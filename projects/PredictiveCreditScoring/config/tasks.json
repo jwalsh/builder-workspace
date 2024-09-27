@@ -1,0 +1,173 @@
+[
+  {
+    "id": 3871,
+    "project_id": "PredictiveCreditScoring",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements. Gather input from stakeholders and subject matter experts.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3872,
+    "project_id": "PredictiveCreditScoring",
+    "title": "System Architecture Design for Predictive Credit Scoring (Revised)",
+    "description": "Design the overall system architecture, including data pipelines, machine learning models, and integration with existing systems. The design should consider scalability, security, inclusivity, and explainability in mind. The architecture should also be designed to allow for easy integration of new data sources and model updates as they become available.",
+    "status": "NEEDS_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3873,
+    "project_id": "PredictiveCreditScoring",
+    "title": "Data Acquisition and Preprocessing",
+    "description": "Identify and acquire alternative data sources, preprocess and clean data for model training.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3874,
+    "project_id": "PredictiveCreditScoring",
+    "title": "Machine Learning Model Development",
+    "description": "Develop and train predictive models for credit scoring using alternative data sources.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Data Acquisition and Preprocessing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3875,
+    "project_id": "PredictiveCreditScoring",
+    "title": "User Interface Design and Development",
+    "description": "Design and develop the user interface for credit analysts and customers to interact with the system.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3876,
+    "project_id": "PredictiveCreditScoring",
+    "title": "Data Security and Privacy (Revised)",
+    "description": "Implement robust data security and privacy measures, ensuring protection of sensitive information, compliance with regulations, and anonymization of user data where possible. Additionally, consider the use of encryption techniques, regular data audits for ongoing compliance, and implementing a comprehensive access control system to manage user permissions. Also, consider incorporating pseudonymization as an additional privacy measure.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3877,
+    "project_id": "PredictiveCreditScoring",
+    "title": "Integration and Testing",
+    "description": "Integrate system components and perform comprehensive testing, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Machine Learning Model Development",
+      "User Interface Design and Development",
+      "Data Security and Privacy"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3878,
+    "project_id": "PredictiveCreditScoring",
+    "title": "Deployment and Monitoring",
+    "description": "Deploy the system to production environments, implement monitoring and logging, and establish maintenance procedures.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3879,
+    "project_id": "PredictiveCreditScoring",
+    "title": "Documentation and Training",
+    "description": "Develop comprehensive documentation and provide training for users, administrators, and support staff.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

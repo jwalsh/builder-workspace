@@ -1,0 +1,191 @@
+[
+  {
+    "id": 8864,
+    "project_id": "RealTimeAnomalyDetectionSystem",
+    "title": "Define System Requirements",
+    "description": "Outline the specific needs of the RealTimeAnomalyDetectionSystem, including data types, throughput requirements, accuracy expectations, and any other essential system characteristics.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8865,
+    "project_id": "RealTimeAnomalyDetectionSystem",
+    "title": "Design Distributed Statistical Analysis Model",
+    "description": "Create a design for the statistical model used to detect anomalies in real-time. This design should account for multiple data streams and high throughput.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define System Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8866,
+    "project_id": "RealTimeAnomalyDetectionSystem",
+    "title": "Choose Machine Learning Algorithms",
+    "description": "Research and select appropriate machine learning algorithms that can effectively detect anomalies in real-time for the chosen statistical model.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Design Distributed Statistical Analysis Model"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8867,
+    "project_id": "RealTimeAnomalyDetectionSystem",
+    "title": "Develop Real-Time Data Stream Processing Layer",
+    "description": "Create a layer that can handle and process multiple real-time data streams for anomaly detection.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Choose Machine Learning Algorithms"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8868,
+    "project_id": "RealTimeAnomalyDetectionSystem",
+    "title": "Implement Machine Learning Models",
+    "description": "Integrate the chosen machine learning algorithms into the developed data stream processing layer.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 5,
+    "dependencies": [
+      "Develop Real-Time Data Stream Processing Layer"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8869,
+    "project_id": "RealTimeAnomalyDetectionSystem",
+    "title": "Create User Interface for System Monitoring",
+    "description": "Design and implement a user interface that allows administrators to monitor the system's performance, data streams, and anomaly detections in real-time.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Implement Machine Learning Models"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8870,
+    "project_id": "RealTimeAnomalyDetectionSystem",
+    "title": "Test System Functionality and Performance",
+    "description": "Conduct thorough testing of the RealTimeAnomalyDetectionSystem to ensure its functionality, performance, and scalability under various conditions.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 1,
+    "dependencies": [
+      "Implement Machine Learning Models",
+      "Create User Interface for System Monitoring"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8871,
+    "project_id": "RealTimeAnomalyDetectionSystem",
+    "title": "Optimize System Performance and Resource Usage",
+    "description": "Analyze and optimize the performance and resource usage of the RealTimeAnomalyDetectionSystem to improve efficiency and scalability.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Test System Functionality and Performance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8872,
+    "project_id": "RealTimeAnomalyDetectionSystem",
+    "title": "Secure the RealTimeAnomalyDetectionSystem",
+    "description": "Implement security measures to protect the system from potential threats, ensuring data integrity and confidentiality.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 1,
+    "dependencies": [
+      "Test System Functionality and Performance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8873,
+    "project_id": "RealTimeAnomalyDetectionSystem",
+    "title": "Document the RealTimeAnomalyDetectionSystem",
+    "description": "Create comprehensive documentation for the system, including installation, configuration, usage, maintenance, and troubleshooting guides. The documentation should be well-structured, easy to navigate, with clear examples and step-by-step instructions. Additionally, consider providing explanations of key concepts, use cases, and potential pitfalls.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "task-decomposer",
+    "priority": 5,
+    "dependencies": [
+      "Secure the RealTimeAnomalyDetectionSystem"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

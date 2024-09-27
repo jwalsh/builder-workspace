@@ -1,0 +1,173 @@
+[
+  {
+    "id": 4027,
+    "project_id": "QuantumEncryptionComms",
+    "title": "Define Project Scope and Requirements",
+    "description": "Complete a comprehensive analysis to gather and document the detailed requirements for the quantum encryption system. This includes identifying relevant security standards (such as NIST PQC, FIPS 140-3), establishing performance targets (latency, throughput, key size), assessing integration needs with existing military communication networks, understanding user needs (ease of use, compatibility with existing devices), and addressing any other relevant requirements. Additionally, perform a SWOT analysis, risk assessment, and consider potential future-proofing against quantum computing attacks. Document all findings in a clear and concise manner for further development. This task is currently assigned to 'code-architect' but may require input from other roles such as 'security-specialist', 'frontend-developer', 'backend-developer', and 'technical-writer'.",
+    "status": "REVIEW_IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4028,
+    "project_id": "QuantumEncryptionComms",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the quantum encryption system, including components, interfaces, and data flow.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4029,
+    "project_id": "QuantumEncryptionComms",
+    "title": "Develop Quantum Key Distribution Protocol",
+    "description": "Implement the quantum key distribution protocol for secure key exchange between parties.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4030,
+    "project_id": "QuantumEncryptionComms",
+    "title": "Implement Encryption/Decryption Algorithms",
+    "description": "Develop the encryption and decryption algorithms using the quantum-secure keys.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture",
+      "Develop Quantum Key Distribution Protocol"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4031,
+    "project_id": "QuantumEncryptionComms",
+    "title": "Design Secure User Interface and Communication Protocols",
+    "description": "Design a secure and user-friendly interface for message exchange, along with robust communication protocols to ensure end-to-end encryption and integrity of transmitted data. The design should incorporate security principles such as least privilege access, strong authentication mechanisms, tamper-evident features, and key management strategies considering future quantum computing attacks. Additionally, the design should provide clear instructions for setup and usage, with intuitive error handling and troubleshooting guidance.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Define Security Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4032,
+    "project_id": "QuantumEncryptionComms",
+    "title": "Develop Security Auditing and Monitoring",
+    "description": "Implement security auditing and monitoring mechanisms to detect and respond to potential threats or attacks.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4033,
+    "project_id": "QuantumEncryptionComms",
+    "title": "Set up Testing and Validation Environment",
+    "description": "Establish a testing and validation environment for the quantum encryption system, including simulated attacks and performance benchmarking.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4034,
+    "project_id": "QuantumEncryptionComms",
+    "title": "Develop Deployment and Integration Plan",
+    "description": "Create a comprehensive plan for deploying and integrating the quantum encryption system with existing military communication infrastructure. The plan should cover the following key aspects: 1) Infrastructure requirements (hardware, software, network) 2) Integration points and interfaces with legacy systems 3) Deployment strategy (phased rollout, pilot testing, post-deployment monitoring and adjustments, including timelines and milestones) 4) Security and access control measures (including encryption keys management, secure communication channels, user authentication, and data protection strategies such as zero-knowledge proofs and quantum key distribution) 5) Monitoring and maintenance processes (including system health checks, incident response, regular security audits, and performance metrics) 6) Training and documentation for personnel (including training modules, user guides, and technical documentation) 7) Rollback and contingency plans 8) Collaboration with other teams (such as DevOps, Security, and QA) to ensure seamless integration and operation. Additionally, consider the potential impact on system performance and usability during the deployment process.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4035,
+    "project_id": "QuantumEncryptionComms",
+    "title": "Write Technical Documentation",
+    "description": "Document the system architecture, components, and usage instructions for the quantum encryption system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

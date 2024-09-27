@@ -1,0 +1,172 @@
+[
+  {
+    "id": 3840,
+    "project_id": "PortVisionX",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements through stakeholder interviews, market research, and analysis of existing systems.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3841,
+    "project_id": "PortVisionX",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including data models, integration points, scalability considerations, security measures, performance optimizations, and a clear plan for testing and validating the design. The design will aim to eliminate data silos for global port terminals and inland logistics facilities, providing near-real-time visibility into operational and financial metrics.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3842,
+    "project_id": "PortVisionX",
+    "title": "Data Integration and ETL",
+    "description": "Develop strategies and mechanisms for integrating data from various sources, including port terminals and logistics facilities.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3843,
+    "project_id": "PortVisionX",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema to store and manage operational and financial data for global port terminals and inland logistics facilities. The database should support efficient data retrieval, updates, and analytics for near-real-time visibility. Consider data partitioning, indexing, caching strategies (such as Redis or Memcached), and query optimization techniques for optimal performance. Ensure data integrity, security, and compliance with industry standards and regulations applicable to the logistics and maritime industries. Additionally, consider the use of a distributed database system such as Google's Spanner or Amazon's DynamoDB to handle the global scale of the project.",
+    "status": "IN_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Modeling and Requirements Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3844,
+    "project_id": "PortVisionX",
+    "title": "User Interface and Reporting",
+    "description": "Design and develop the user interface for data visualization, reporting, and analytics.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3845,
+    "project_id": "PortVisionX",
+    "title": "Security and Access Control (v2)",
+    "description": "Implement robust security measures, including authentication, authorization, and data encryption, to ensure data privacy and integrity. Also, consider implementing Role-Based Access Control (RBAC) for secure user management.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3846,
+    "project_id": "PortVisionX",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure, including continuous integration, continuous deployment, and monitoring.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3847,
+    "project_id": "PortVisionX",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and implement a comprehensive testing strategy, including unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3848,
+    "project_id": "PortVisionX",
+    "title": "Documentation and Training",
+    "description": "Create comprehensive documentation for the system, including user guides, technical documentation, and training materials.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

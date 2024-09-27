@@ -1,0 +1,193 @@
+[
+  {
+    "id": 3849,
+    "project_id": "PredictiveAnalysisEngine",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, goals, and requirements. Identify stakeholders and gather their needs. Conduct market research and analyze competitors. Develop a project plan and timeline.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3850,
+    "project_id": "PredictiveAnalysisEngine",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture for PredictiveAnalysisEngine, focusing on data ingestion, processing, storage, and analysis components. Determine scalability, performance, security, and fault tolerance requirements, considering microservices, event-driven architecture, and cloud-native technologies. Illustrate data flow, component interactions, and communication protocols. Include a discussion of the use cases and edge cases that may impact system design.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3851,
+    "project_id": "PredictiveAnalysisEngine",
+    "title": "Data Pipeline Design and Implementation",
+    "description": "Design and implement the data pipeline for ingesting, cleaning, and transforming data from various sources. Develop data connectors, ETL processes, and data validation mechanisms.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3852,
+    "project_id": "PredictiveAnalysisEngine",
+    "title": "Predictive Modeling and Analysis",
+    "description": "Develop and train machine learning models for predictive analysis. Implement algorithms for forecasting, anomaly detection, and pattern recognition. Integrate models into the data pipeline.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3853,
+    "project_id": "PredictiveAnalysisEngine",
+    "title": "Data Storage and Management",
+    "description": "Design and implement the data storage solution, including databases, data warehouses, and data lakes. Ensure data security, integrity, and efficient querying capabilities.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3854,
+    "project_id": "PredictiveAnalysisEngine",
+    "title": "User Interface and Reporting",
+    "description": "Design and develop the user interface for visualizing and interacting with the predictive analysis results. Implement reporting and dashboard features for stakeholders.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3855,
+    "project_id": "PredictiveAnalysisEngine",
+    "title": "Security and Compliance",
+    "description": "Implement security measures to protect data privacy and system integrity. Ensure compliance with relevant industry regulations and data protection laws.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3856,
+    "project_id": "PredictiveAnalysisEngine",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and test cases for the system components. Perform unit, integration, and end-to-end testing. Ensure quality and reliability of the predictive analysis engine.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Data Pipeline Design and Implementation",
+      "Predictive Modeling and Analysis",
+      "Data Storage and Management",
+      "User Interface and Reporting"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3857,
+    "project_id": "PredictiveAnalysisEngine",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure and automate the deployment process. Implement monitoring, logging, and alerting mechanisms. Ensure scalability and high availability of the system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3858,
+    "project_id": "PredictiveAnalysisEngine",
+    "title": "Documentation and Training",
+    "description": "Create comprehensive documentation for the system, including architecture diagrams, user guides, and technical documentation. Develop training materials and conduct training sessions for stakeholders and end-users.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "User Interface and Reporting"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

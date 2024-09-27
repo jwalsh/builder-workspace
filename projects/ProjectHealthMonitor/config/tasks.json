@@ -1,0 +1,193 @@
+[
+  {
+    "id": 3967,
+    "project_id": "ProjectHealthMonitor",
+    "title": "Define Project Scope and Requirements - RFC REVISED",
+    "description": "This RFC proposes a detailed specification for the ProjectHealthMonitor tool. The following refined requirements are suggested: 1) Desired features, including real-time progress tracking (including task completion status, time spent, and priority), team morale indicators (such as sentiment analysis from communication platforms like Slack, Microsoft Teams, and surveys), and bottleneck detection (using machine learning algorithms to identify trends in project workflows). 2) User roles, such as project manager, team member, stakeholder, and team lead. 3) Data sources, like project management tools (e.g., Jira, Asana), communication platforms (Slack, Microsoft Teams), development repositories (GitHub, GitLab), and APIs for additional data collection from other internal and external systems. 4) Integration points with external APIs for real-time data collection, analysis, and visualization. To ensure a comprehensive solution, it is also recommended to include historical project data, user feedback, and performance metrics in the tool's scope. Please review and provide feedback for further refinement.",
+    "status": "READY_FOR_DISCUSSION",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3968,
+    "project_id": "ProjectHealthMonitor",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including components, data flow, and communication between modules.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3969,
+    "project_id": "ProjectHealthMonitor",
+    "title": "Set up Development Environment",
+    "description": "Configure the development environment, including version control, build tools, and continuous integration/deployment pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3970,
+    "project_id": "ProjectHealthMonitor",
+    "title": "Design and Implement Data Collection Mechanisms",
+    "description": "Develop mechanisms to collect project data from various sources, such as version control systems, issue trackers, and collaboration tools.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3971,
+    "project_id": "ProjectHealthMonitor",
+    "title": "Design and Implement Data Storage and Processing",
+    "description": "Design and implement a data storage solution and mechanisms for processing and analyzing the collected data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3972,
+    "project_id": "ProjectHealthMonitor",
+    "title": "Design and Implement User Interface",
+    "description": "Design and develop the user interface for visualizing project health metrics and providing insights to users.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3973,
+    "project_id": "ProjectHealthMonitor",
+    "title": "Implement Security Measures",
+    "description": "Implement security measures to protect sensitive project data and ensure secure access to the tool.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3974,
+    "project_id": "ProjectHealthMonitor",
+    "title": "Write Documentation",
+    "description": "Create comprehensive documentation for the ProjectHealthMonitor tool, including installation guides, user manuals, and API references.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Design and Implement User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3975,
+    "project_id": "ProjectHealthMonitor",
+    "title": "Implement Testing and Quality Assurance",
+    "description": "Develop and implement a comprehensive testing strategy, including unit tests, integration tests, and end-to-end tests, to ensure the quality and reliability of the tool.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Design and Implement Data Collection Mechanisms",
+      "Design and Implement Data Storage and Processing",
+      "Design and Implement User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3976,
+    "project_id": "ProjectHealthMonitor",
+    "title": "Deploy and Monitor",
+    "description": "Deploy the ProjectHealthMonitor tool to a production environment and implement monitoring and alerting mechanisms to ensure its reliable operation.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Implement Testing and Quality Assurance",
+      "Write Documentation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

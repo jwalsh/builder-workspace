@@ -1,0 +1,174 @@
+[
+  {
+    "id": 4071,
+    "project_id": "QuantumPortfolioOptimizer",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements for the QuantumPortfolioOptimizer system. This will include functional and non-functional requirements, performance targets (specifically, able to analyze at least a million potential combinations in near-real-time), integration with existing portfolio management systems, regulatory compliance considerations, and a comprehensive analysis of quantum computing algorithms relevant to portfolio optimization. The deliverables should also cover project timelines, resource allocation, risk management strategies, and a roadmap for future upgrades and improvements. Note that the system must be designed for scalability and maintainability. Upon completion, a technical report detailing the chosen solutions and rationales will be prepared.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "task-decomposer",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4072,
+    "project_id": "QuantumPortfolioOptimizer",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including the quantum computing component, data processing pipeline, user interface, and integration with external data sources. Define the system's components, their interactions, and the technology stack. Consider scalability, fault tolerance, security, and performance requirements. Provide detailed design documents, diagrams, and pseudocode for each component as needed, ensuring that the design is modular, extensible, and easily maintainable. The design should also take into account future expansion and upgrades, including the addition of new data sources or quantum algorithms. Incorporate best practices for asynchronous processing, ensure compatibility with various operating systems, and address accessibility concerns. Further, consider the potential for machine learning integration to improve portfolio optimization.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4073,
+    "project_id": "QuantumPortfolioOptimizer",
+    "title": "Quantum Computing Module Development",
+    "description": "Develop the quantum computing module responsible for portfolio optimization calculations, leveraging quantum algorithms and hardware.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4074,
+    "project_id": "QuantumPortfolioOptimizer",
+    "title": "Data Processing Pipeline",
+    "description": "Implement the data processing pipeline for ingesting and preprocessing financial data, feeding it into the quantum computing module, and processing the results.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4075,
+    "project_id": "QuantumPortfolioOptimizer",
+    "title": "User Interface Development",
+    "description": "Design and develop the user interface for the QuantumPortfolioOptimizer system, allowing users to input parameters, view results, and manage their portfolios.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4076,
+    "project_id": "QuantumPortfolioOptimizer",
+    "title": "Security and Compliance",
+    "description": "Ensure the system adheres to relevant security and compliance standards, including data privacy regulations and secure handling of financial information.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4077,
+    "project_id": "QuantumPortfolioOptimizer",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and execute testing activities, including unit testing, integration testing, performance testing, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Quantum Computing Module Development",
+      "Data Processing Pipeline",
+      "User Interface Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4078,
+    "project_id": "QuantumPortfolioOptimizer",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure, including cloud resources, containerization, and continuous integration/continuous deployment (CI/CD) pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4079,
+    "project_id": "QuantumPortfolioOptimizer",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation for the system, including user guides, technical documentation, and support resources.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "User Interface Development",
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

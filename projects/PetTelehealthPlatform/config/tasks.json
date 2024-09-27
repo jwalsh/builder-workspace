@@ -1,0 +1,198 @@
+[
+  {
+    "id": 3710,
+    "project_id": "PetTelehealthPlatform",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements by conducting research, stakeholder interviews, and market analysis.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3711,
+    "project_id": "PetTelehealthPlatform",
+    "title": "Architecture Design",
+    "description": "Design the overall system architecture, including frontend, backend, database, AI components, and infrastructure. Consider microservices architecture, event-driven architecture, and serverless functions where applicable. Outline the technology stack, deployment strategy, and monitoring/logging approach. To ensure scalability, security, performance, and maintainability, emphasize on modularity, decoupling, and resilience. Provide a detailed explanation of how data privacy and security will be maintained. Include a section discussing future scalability plans as the platform grows.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3712,
+    "project_id": "PetTelehealthPlatform",
+    "title": "Frontend Development",
+    "description": "Develop the user interface for pet owners and veterinarians, including video conferencing, chat, and appointment scheduling features.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3713,
+    "project_id": "PetTelehealthPlatform",
+    "title": "Backend Development",
+    "description": "Implement the server-side logic, including user authentication, data processing, and integration with the AI diagnosis and treatment recommendation system.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3714,
+    "project_id": "PetTelehealthPlatform",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema to store user data, pet information, consultation records, and other relevant data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3715,
+    "project_id": "PetTelehealthPlatform",
+    "title": "AI Diagnosis and Treatment Recommendation System - Revised",
+    "description": "Develop the AI-assisted diagnosis and treatment recommendation system. This task involves integrating machine learning models (such as Convolutional Neural Networks for image analysis), veterinary knowledge bases, and a user-friendly interface. The system should provide accurate diagnostic suggestions and tailored treatment recommendations based on pet symptoms, with an emphasis on continuous learning to improve accuracy over time. Additionally, the system should be designed to handle various types of pets (cats, dogs, etc.) and their unique health issues.",
+    "status": "NEEDS_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Architecture Design",
+      "Veterinary Knowledge Base Development",
+      "ML Model Training"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3716,
+    "project_id": "PetTelehealthPlatform",
+    "title": "Security and Compliance",
+    "description": "Ensure the platform adheres to relevant security standards and regulations, including data privacy, encryption, and access controls.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3717,
+    "project_id": "PetTelehealthPlatform",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and implement comprehensive testing strategies, including unit tests, integration tests, and end-to-end tests, to ensure the platform's functionality and reliability.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development",
+      "Database Design and Implementation",
+      "AI Diagnosis and Treatment Recommendation System"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3718,
+    "project_id": "PetTelehealthPlatform",
+    "title": "Deployment and DevOps",
+    "description": "Set up the infrastructure for hosting the platform, including servers, load balancers, and continuous integration/continuous deployment (CI/CD) pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3719,
+    "project_id": "PetTelehealthPlatform",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation for users, administrators, and developers, and establish a support system for addressing issues and inquiries.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development",
+      "Database Design and Implementation",
+      "AI Diagnosis and Treatment Recommendation System"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

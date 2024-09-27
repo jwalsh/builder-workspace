@@ -1,0 +1,194 @@
+[
+  {
+    "id": 3912,
+    "project_id": "PredictivePolicing",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements. Gather input from stakeholders, analyze existing crime data, and identify key factors to consider for predictive modeling.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3913,
+    "project_id": "PredictivePolicing",
+    "title": "System Architecture Design for Predictive Policing System",
+    "description": "Design the overall system architecture for the Predictive Policing project. This includes data ingestion, processing, modeling, and visualization components, as well as defining the technology stack and integration points. The design should adhere to best practices for security, privacy, and ethical considerations in predictive policing systems, while considering the implications of AI-driven decision making on social justice and community safety. The architecture should aim to optimize police patrols and resources, while minimizing potential biases or disparities. The design should also include a plan for regular audits and updates to ensure the model's predictions remain accurate and fair over time. Upon completion, a detailed technical document will be prepared by the Technical Writer.",
+    "status": "NEEDS_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3914,
+    "project_id": "PredictivePolicing",
+    "title": "Data Ingestion and Preprocessing",
+    "description": "Implement data ingestion pipelines to collect and preprocess crime data, social factors, and environmental conditions from various sources.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3915,
+    "project_id": "PredictivePolicing",
+    "title": "Predictive Modeling",
+    "description": "Develop machine learning models to analyze the collected data and predict potential criminal activities based on identified patterns and correlations.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Data Ingestion and Preprocessing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3916,
+    "project_id": "PredictivePolicing",
+    "title": "Patrol Optimization",
+    "description": "Implement algorithms to optimize police patrol routes and resource allocation based on the predictive modeling results.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Predictive Modeling"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3917,
+    "project_id": "PredictivePolicing",
+    "title": "User Interface Development",
+    "description": "Design and develop a user-friendly interface for law enforcement agencies to visualize predictions, patrol routes, and other relevant information.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3918,
+    "project_id": "PredictivePolicing",
+    "title": "Security and Privacy Measures for Predictive Policing System - RFC Review and Update",
+    "description": "Update the current security and privacy measures task. This includes but is not limited to: data encryption, access controls, secure communication protocols, anonymization techniques, consent management processes, GDPR compliance strategies, and consideration of potential ethical concerns related to AI in law enforcement. The updated task also includes a review of the current status and progress, as well as addressing any identified gaps or issues. This task will require collaboration with the System Architecture Design team and Data Collection and Processing team to ensure comprehensive security and privacy measures are implemented.",
+    "status": "REVISED_DRAFT",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [
+      "System Architecture Design",
+      "Data Collection and Processing"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3919,
+    "project_id": "PredictivePolicing",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and execute testing activities to ensure the system's functionality, performance, and reliability. Conduct user acceptance testing with stakeholders.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Data Ingestion and Preprocessing",
+      "Predictive Modeling",
+      "Patrol Optimization",
+      "User Interface Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3920,
+    "project_id": "PredictivePolicing",
+    "title": "Deployment and Monitoring",
+    "description": "Set up the production environment and deploy the system. Implement monitoring and logging mechanisms to track system performance and identify potential issues.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3921,
+    "project_id": "PredictivePolicing",
+    "title": "Documentation and Training",
+    "description": "Create comprehensive documentation for the system, including user guides, technical documentation, and training materials for law enforcement agencies.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "User Interface Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

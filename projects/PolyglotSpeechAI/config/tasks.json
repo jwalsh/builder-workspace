@@ -1,0 +1,255 @@
+[
+  {
+    "id": 3827,
+    "project_id": "PolyglotSpeechAI",
+    "title": "Define Project Scope and Requirements - REVISED",
+    "description": "Detailed requirements gathering for the PolyglotSpeechAI project:\n1. Supported audio formats (MP3, WAV, FLAC, etc.) \n2. Languages supported (English, Spanish, Mandarin, Arabic, Hindi, French, German, Japanese, Korean, Russian, Portuguese)\n3. Transcription accuracy targets (>95% for English, >85% for other languages)\n4. Translation quality expectations (BLEU score > 80%, human-level performance in English and target language within top quartile)\n5. Desired insights/comprehension features (sentiment analysis, entity recognition, topic modeling, speech-to-text speed adjustment, text-to-speech conversion, keyword spotting)\n6. Data privacy and security considerations (anonymization, encryption at rest and in transit, GDPR compliance, CCPA compliance, HIPAA compliance if applicable, secure data storage solutions)\n7. Scalability requirements (able to process 1000 audio files per hour initially, scaling up to 5000 files within a year with efficient parallel processing and resource management)\n8. Integration with existing systems or third-party services (Google Cloud Speech-to-Text, Microsoft Azure Text Translation, IBM Watson, Amazon Transcribe, OpenSubtitles for subtitle alignment if needed)\n9. User interface design guidelines (user-friendly, intuitive, responsive, multi-device compatibility)\n10. Performance benchmarking and monitoring strategies to ensure system reliability and efficiency",
+    "status": "NEEDS_REVISION",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3828,
+    "project_id": "PolyglotSpeechAI",
+    "title": "Design System Architecture for PolyglotSpeechAI",
+    "description": "Design the overall system architecture for PolyglotSpeechAI, including components for audio processing, transcription, translation, comprehension, and data storage. Define the integration points with external AI/ML services, considering scalability, fault tolerance, security aspects, and high-performance requirements for real-time processing. The design should also address data privacy and compliance issues.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3829,
+    "project_id": "PolyglotSpeechAI",
+    "title": "Set up Development Environment",
+    "description": "Configure the development environment, including version control, continuous integration/deployment (CI/CD) pipelines, and any necessary cloud infrastructure or services.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3830,
+    "project_id": "PolyglotSpeechAI",
+    "title": "Implement Audio Processing Module",
+    "description": "Develop the module responsible for handling various audio file formats, preprocessing, and preparing the audio data for transcription.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3831,
+    "project_id": "PolyglotSpeechAI",
+    "title": "Integrate Transcription Service",
+    "description": "Integrate with a third-party or custom-built transcription service to convert audio data into text transcripts in multiple languages.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Implement Audio Processing Module"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3832,
+    "project_id": "PolyglotSpeechAI",
+    "title": "Implement Translation Module",
+    "description": "Develop the module responsible for translating transcripts from one language to another, leveraging AI/ML translation services.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Integrate Transcription Service"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3833,
+    "project_id": "PolyglotSpeechAI",
+    "title": "Develop Comprehension Module",
+    "description": "Implement the module responsible for extracting insights and comprehension from the translated transcripts, using AI/ML comprehension services.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Implement Translation Module"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3834,
+    "project_id": "PolyglotSpeechAI",
+    "title": "Design and Implement Data Storage",
+    "description": "Design and implement the data storage solution for storing audio files, transcripts, translations, and comprehension results, considering scalability and performance requirements.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3835,
+    "project_id": "PolyglotSpeechAI",
+    "title": "Build User Interface",
+    "description": "Develop the user interface for PolyglotSpeechAI, allowing users to upload audio files, view transcripts, translations, and comprehension insights, and manage their data.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Implement Audio Processing Module",
+      "Integrate Transcription Service",
+      "Implement Translation Module",
+      "Develop Comprehension Module",
+      "Design and Implement Data Storage"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3836,
+    "project_id": "PolyglotSpeechAI",
+    "title": "Implement Security and Access Controls",
+    "description": "Implement appropriate security measures and access controls to ensure data privacy and protect against unauthorized access or misuse of the system.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3837,
+    "project_id": "PolyglotSpeechAI",
+    "title": "Conduct Integration and System Testing",
+    "description": "Perform comprehensive integration and system testing to ensure all components of PolyglotSpeechAI work together seamlessly and meet the defined requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Build User Interface",
+      "Implement Security and Access Controls"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3838,
+    "project_id": "PolyglotSpeechAI",
+    "title": "Prepare Documentation",
+    "description": "Create comprehensive documentation for PolyglotSpeechAI, including user guides, API documentation, and system architecture diagrams.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3839,
+    "project_id": "PolyglotSpeechAI",
+    "title": "Deploy and Monitor PolyglotSpeechAI",
+    "description": "Deploy PolyglotSpeechAI to the production environment, set up monitoring and logging systems, and establish processes for ongoing maintenance and support.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Conduct Integration and System Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]
