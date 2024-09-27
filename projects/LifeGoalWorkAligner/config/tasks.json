@@ -1,0 +1,197 @@
+[
+  {
+    "id": 2875,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, gather requirements from stakeholders, and create a detailed project plan.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2876,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "System Architecture Design for LifeGoalWorkAligner",
+    "description": "Design the overall system architecture including components, data flow, integration points, and considerations for scalability, maintainability, security, accessibility, and performance. Provide a comprehensive privacy-centric approach focusing on handling sensitive user data, outlining strategies for consent management, and addressing potential challenges related to data protection regulations. Additionally, suggest an initial high-level design that can serve as a starting point for the implementation phase. Consider implementing a modular architecture approach to allow for easy integration of new features and third-party services. Moreover, suggest best practices for documentation throughout the project life cycle.",
+    "status": "NEEDS_REVISION",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2877,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Database Design for LifeGoalWorkAligner",
+    "description": "Design the database schema and data models to support the application's requirements, including user profiles, goals, tasks, progress tracking, performance metrics, and normalize tables for data consistency. Address data integrity, security, scalability, and maintainability in design. Consider edge cases, error handling, and performance optimizations. Align with the System Architecture Design and User Requirements Gathering before implementation. Ensure data models are flexible enough to accommodate future updates or expansions of the platform, and ensure that they follow best practices for database design, such as using normalization and ensuring proper indexing for efficient queries. Once completed, review and provide feedback on the design with a focus on optimizing for performance and maintainability, considering sharding strategies for scalability, and implementing data masking for security. Update the design to support real-time data streaming for user activity tracking and machine learning algorithms for goal recommendations. Also, consider using NoSQL databases for semi-structured data storage like user profiles or goal descriptions. Once reviewed, suggest potential improvements and optimizations for database queries, indexes, and caching strategies.",
+    "status": "REVIEW_COMPLETED",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "User Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "IN_REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2878,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "User Interface Design (UI/UX) - Enhanced",
+    "description": "Update the User Interface and User Experience design for the LifeGoalWorkAligner platform. The enhanced design should incorporate best practices for accessibility, responsiveness, usability across various devices and screen sizes. Optimize for performance and error handling, considering edge cases and scalability. Collaborate with User Research and Persona Development team to ensure user needs are met. Prioritize cross-browser compatibility, adhere to web standards, and consider internationalization aspects for a global audience. Consider feedback from the previous RFC 'System Architecture Design' while designing. Additionally, to maintain consistency with the branding and visual identity, collaborate closely with Graphic Design team. To ensure the design is scalable and can handle potential future features, liaise with the Code-Architect on the system architecture aspects.",
+    "status": "READY FOR IMPLEMENTATION",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design",
+      "User Research and Persona Development"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2879,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Backend Development",
+    "description": "Implement the backend services, APIs, and business logic for the platform.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2880,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Frontend Development",
+    "description": "Implement the user interface and integrate with the backend services.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "User Interface Design",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2881,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Security and Compliance",
+    "description": "Ensure the platform adheres to security best practices and compliance requirements.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2882,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and execute test plans for functional, integration, and performance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2883,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline, infrastructure, and monitoring for the platform.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2884,
+    "project_id": "LifeGoalWorkAligner",
+    "title": "Documentation and Training",
+    "description": "Create user guides, technical documentation, and training materials for the platform.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

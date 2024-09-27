@@ -1,0 +1,176 @@
+[
+  {
+    "id": 3008,
+    "project_id": "MentorSkillMarketplace",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, goals, and requirements. Conduct stakeholder interviews and market research to understand user needs and preferences.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3009,
+    "project_id": "MentorSkillMarketplace",
+    "title": "System Architecture Design for MentorSkillMarketplace",
+    "description": "Design the overall system architecture including functional and non-functional requirements, components, data flow diagrams, integration points, scalability considerations, performance optimization strategies. This design should take into account user experience, security, accessibility considerations, and ensure modularity for easy maintenance and future enhancements. The design will be based on a microservices architecture with RESTful APIs and follow best practices in software development (e.g., SOLID principles, clean architecture).",
+    "status": "NEEDS_REVISION",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3010,
+    "project_id": "MentorSkillMarketplace",
+    "title": "Database Design",
+    "description": "Design the database schema to store mentor profiles, skills, and mentee information.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3011,
+    "project_id": "MentorSkillMarketplace",
+    "title": "Frontend Development",
+    "description": "Develop the user interface for mentors to create profiles, showcase skills, and for mentees to search and connect with mentors.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3012,
+    "project_id": "MentorSkillMarketplace",
+    "title": "Backend Development",
+    "description": "Implement the server-side logic, including authentication, profile management, search functionality, and mentor-mentee matching.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3013,
+    "project_id": "MentorSkillMarketplace",
+    "title": "Security and Access Control",
+    "description": "Implement robust security measures including authentication, authorization, and data protection mechanisms. Ensure compliance with industry standards and best practices for handling sensitive user data and financial transactions. Additionally, consider the use of encryption, secure communication protocols, periodic vulnerability assessments, regular penetration testing, and a system for secure storage and transmission of sensitive data (e.g., two-factor authentication). Collaborate with the Security-Specialist and DevOps-Engineer team members for implementation, and consult with the Frontend-Developer and Backend-Developer teams for integration into the user interface and API respectively. Ensure that security measures are documented in the technical design specifications for future reference.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "security-specialist",
+    "priority": 1,
+    "dependencies": [
+      "System Architecture Design",
+      "User Management and Authentication"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3014,
+    "project_id": "MentorSkillMarketplace",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and execute test plans for functional, integration, and performance testing. Ensure high code quality and user experience.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3015,
+    "project_id": "MentorSkillMarketplace",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline, infrastructure, and monitoring for the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3016,
+    "project_id": "MentorSkillMarketplace",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation for developers, administrators, and end-users.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

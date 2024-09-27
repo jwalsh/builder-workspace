@@ -1,0 +1,193 @@
+[
+  {
+    "id": 2608,
+    "project_id": "InclusivityAnalyzer",
+    "title": "Define Project Scope and Requirements",
+    "description": "Create a comprehensive document detailing the requirements for the InclusivityAnalyzer tool. This should include target user personas, use cases, desired features, data sources (both internal and external), API and service integration points, security and privacy considerations (including GDPR and HIPAA compliance if applicable), performance and scalability requirements, accessibility, usability, cultural sensitivity, and a roadmap for implementing these requirements in phases. The document should also address design principles such as inclusivity, ethics, and user-centricity throughout the tool's lifecycle.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2609,
+    "project_id": "InclusivityAnalyzer",
+    "title": "Design System Architecture (Revised)",
+    "description": "Design the overall system architecture, including components, data flow, integration points. Ensure the design is inclusive and follows best practices for diversity, accessibility, scalability, performance, security, and maintainability. Consider using microservices architecture for better scalability and modularity.",
+    "status": "NEEDS_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Conduct Market Research and Competitor Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2610,
+    "project_id": "InclusivityAnalyzer",
+    "title": "Define Data Model and Storage - InclusivityAnalyzer (Updated)",
+    "description": "Revised data model design for company communications, decisions, analysis results, and metadata related to inclusivity. This includes structuring the data for efficient querying and analysis. The design takes into account considerations such as privacy, scalability, and adaptability to different types of company structures.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "project-manager",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2611,
+    "project_id": "InclusivityAnalyzer",
+    "title": "Develop Analysis Algorithms",
+    "description": "Implement algorithms and machine learning models to analyze company communications and decisions for inclusivity and diversity.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture",
+      "Define Data Model and Storage"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2612,
+    "project_id": "InclusivityAnalyzer",
+    "title": "Build User Interface",
+    "description": "Design and develop the user interface for the InclusivityAnalyzer tool, including data input, analysis configuration, and result visualization.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2613,
+    "project_id": "InclusivityAnalyzer",
+    "title": "Implement Data Integration",
+    "description": "Develop mechanisms to integrate company communications and decisions from various sources into the InclusivityAnalyzer tool.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Define Data Model and Storage"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2614,
+    "project_id": "InclusivityAnalyzer",
+    "title": "Set up CI/CD Pipeline",
+    "description": "Establish a continuous integration and continuous deployment (CI/CD) pipeline for automated builds, testing, and deployment.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2615,
+    "project_id": "InclusivityAnalyzer",
+    "title": "Implement Security and Access Controls (Updated)",
+    "description": "Develop comprehensive security measures and access controls to ensure data privacy, protect sensitive company information, and adhere to GDPR and other relevant regulations. This includes authentication, authorization, encryption, secure data storage, and regular security audits. The implementation should follow best practices such as OWASP Top Ten and the principle of least privilege.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2616,
+    "project_id": "InclusivityAnalyzer",
+    "title": "Create Test Suite",
+    "description": "Develop a comprehensive test suite to validate the functionality and performance of the InclusivityAnalyzer tool.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop Analysis Algorithms",
+      "Build User Interface",
+      "Implement Data Integration"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2617,
+    "project_id": "InclusivityAnalyzer",
+    "title": "Write Documentation",
+    "description": "Create user guides, technical documentation, and training materials for the InclusivityAnalyzer tool.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

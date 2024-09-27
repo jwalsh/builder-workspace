@@ -1,0 +1,200 @@
+[
+  {
+    "id": 2774,
+    "project_id": "LeadershipChallengeSimulator",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements. Conduct market research, gather user feedback, and document functional and non-functional requirements. This task includes creating a comprehensive plan for the project timeline, resources, budget, and milestones, with a focus on ensuring the platform's scalability, security, and usability. Additionally, this task involves collaborating with cross-functional teams to gather inputs and ensure alignment.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2775,
+    "project_id": "LeadershipChallengeSimulator",
+    "title": "System Architecture Design for LeadershipChallengeSimulator",
+    "description": "Design the overall system architecture, including the application's components, data flow, and integration points. Define the technology stack and development approach. Consider aspects such as scalability, maintainability, modularity, security, performance optimization, and ensure the design supports the gamification aspects of the platform and can handle real-world business scenarios.\n\n**Additional Considerations:**\n1. Implement a microservices architecture to allow for easier scaling and maintenance.\n2. Utilize containerization technology (e.g., Docker) for efficient deployment and management.\n3. Design with RESTful APIs to enable seamless integration between components and third-party services.\n4. Consider implementing server-side rendering for better performance and user experience.\n5. Integrate real-time data processing capabilities (like WebSockets or GraphQL Subscriptions) for dynamic updates in the gamified environment.\n6. Investigate using a modern frontend technology stack for improved user interface and interactivity.\n7. Research and consider implementing AI/ML techniques to enhance the gamified learning experience.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2776,
+    "project_id": "LeadershipChallengeSimulator",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema to store user data, challenge scenarios, and other application data. Ensure data integrity, security, and scalability.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2777,
+    "project_id": "LeadershipChallengeSimulator",
+    "title": "Backend Development",
+    "description": "Develop the server-side components, including APIs, business logic, and integration with external services. Implement authentication, authorization, and data access layers.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2778,
+    "project_id": "LeadershipChallengeSimulator",
+    "title": "Frontend Development",
+    "description": "Develop the user interface and interactive components for the gamified platform. Ensure a seamless and engaging user experience.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2779,
+    "project_id": "LeadershipChallengeSimulator",
+    "title": "Challenge Scenario Design and Development",
+    "description": "Design and develop realistic business challenge scenarios, including branching paths based on user decisions. Ensure diversity and relevance of challenges.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2780,
+    "project_id": "LeadershipChallengeSimulator",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and implement a comprehensive testing strategy, including unit tests, integration tests, and end-to-end tests. Ensure the application meets quality standards and requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Challenge Scenario Design and Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2781,
+    "project_id": "LeadershipChallengeSimulator",
+    "title": "Security and Compliance",
+    "description": "Implement security measures to protect user data and ensure compliance with relevant regulations and industry standards. Conduct security audits and penetration testing.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Database Design and Implementation"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2782,
+    "project_id": "LeadershipChallengeSimulator",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline, infrastructure, and monitoring systems. Automate the build, testing, and deployment processes. Ensure scalability and high availability.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Database Design and Implementation",
+      "Testing and Quality Assurance",
+      "Security and Compliance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2783,
+    "project_id": "LeadershipChallengeSimulator",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation for users, administrators, and developers. Establish user support channels and knowledge base.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Project Planning and Requirements Gathering",
+      "Challenge Scenario Design and Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

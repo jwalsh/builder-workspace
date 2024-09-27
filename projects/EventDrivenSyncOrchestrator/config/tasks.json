@@ -1,0 +1,95 @@
+[
+  {
+    "id": 6369,
+    "project_id": "EventDrivenSyncOrchestrator",
+    "title": "Define Project Scope and Requirements - v2",
+    "description": "Thoroughly revise and expand the requirements gathering for the EventDrivenSyncOrchestrator platform. This involves documenting the types of distributed systems it needs to support (e.g., cloud-based, on-premises, hybrid), detailing synchronization mechanisms such as message brokers (Apache Kafka, RabbitMQ), data replication strategies (Change Data Capture, Streaming Replication), and describing expected performance and scalability requirements (including throughput, latency, and resource utilization). Additionally, outline any necessary integrations with existing systems and consider the security implications of the platform. This includes authentication (OAuth2, JWT), authorization (Role-Based Access Control, Attribute-Based Access Control), data encryption at rest and in transit, and implementing monitoring and logging mechanisms. Furthermore, specify the use cases and edge cases for the platform to ensure comprehensive coverage. Lastly, propose a high-level architecture of the system and break down the project into smaller tasks for development.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "task-decomposer",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6370,
+    "project_id": "EventDrivenSyncOrchestrator",
+    "title": "Design System Architecture - EventDrivenSyncOrchestrator",
+    "description": "Design the overall architecture of the EventDrivenSyncOrchestrator platform, including components, their interactions, data flow, and scalability considerations. The design should adhere to principles of maintainability, modularity, and performance optimizations. Additionally, provide edge case scenarios, error handling mechanisms, discuss potential security implications, and suggest suitable technologies for each component. If possible, provide initial wireframes or diagrams for better understanding, along with a detailed explanation of each component's function, potential issues, and solutions. Incorporate the feedback from the Define Project Scope and Requirements task. Once complete, update the task to reflect the current state and progress.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "PENDING_REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6371,
+    "project_id": "EventDrivenSyncOrchestrator",
+    "title": "Design Event Processing Pipeline",
+    "description": "Design the event processing pipeline, including event ingestion, filtering, transformation, and routing to the appropriate synchronization mechanisms.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6372,
+    "project_id": "EventDrivenSyncOrchestrator",
+    "title": "Design Synchronization Mechanisms",
+    "description": "Design the synchronization mechanisms for different types of distributed systems, such as databases, message queues, and file systems.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6373,
+    "project_id": "EventDrivenSyncOrchestrator",
+    "title": "Design Monitoring and Logging",
+    "description": "Design the monitoring and logging components to track the health and performance of the EventDrivenSyncOrchestrator platform and its components.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

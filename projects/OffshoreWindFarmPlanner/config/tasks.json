@@ -1,0 +1,197 @@
+[
+  {
+    "id": 3429,
+    "project_id": "OffshoreWindFarmPlanner",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements for the OffshoreWindFarmPlanner software.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3430,
+    "project_id": "OffshoreWindFarmPlanner",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components, data flow, integration points, and key considerations for maintainability, scalability, performance, security, and accessibility (user-friendly interface). Review and incorporate feedback from cross-functional team members as needed. Prepare a technical design document detailing the proposed architecture.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering",
+      "Environmental Data Analysis",
+      "Wind Energy Modeling"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3431,
+    "project_id": "OffshoreWindFarmPlanner",
+    "title": "Environmental Data Integration",
+    "description": "Identify and integrate relevant environmental data sources (e.g., wind patterns, ocean currents, weather conditions) for wind farm planning.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3432,
+    "project_id": "OffshoreWindFarmPlanner",
+    "title": "Wind Farm Layout Optimization Algorithm",
+    "description": "Develop an AI-powered algorithm for optimal wind turbine placement and layout based on environmental factors and energy production efficiency.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3433,
+    "project_id": "OffshoreWindFarmPlanner",
+    "title": "User Interface Design - Refined",
+    "description": "Design an intuitive and user-friendly interface for wind farm planning and visualization with a focus on efficiency, scalability, and seamless integration with the system architecture. Prioritize accessibility and cross-platform compatibility, ensuring compliance with best practices. Provide clear documentation and consider incorporating interactive tutorials for easy onboarding of new users.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3434,
+    "project_id": "OffshoreWindFarmPlanner",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement a database schema to store environmental data, wind farm layouts, and related information.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3435,
+    "project_id": "OffshoreWindFarmPlanner",
+    "title": "Security and Access Control",
+    "description": "Implement security measures and access control mechanisms to protect sensitive data and ensure proper authorization.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3436,
+    "project_id": "OffshoreWindFarmPlanner",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop a comprehensive testing strategy and plan for the OffshoreWindFarmPlanner software, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Environmental Data Integration",
+      "Wind Farm Layout Optimization Algorithm",
+      "User Interface Design",
+      "Database Design and Implementation",
+      "Security and Access Control"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3437,
+    "project_id": "OffshoreWindFarmPlanner",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline, infrastructure, and monitoring for the OffshoreWindFarmPlanner software.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3438,
+    "project_id": "OffshoreWindFarmPlanner",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation and user guides for the OffshoreWindFarmPlanner software.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "User Interface Design",
+      "Wind Farm Layout Optimization Algorithm"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

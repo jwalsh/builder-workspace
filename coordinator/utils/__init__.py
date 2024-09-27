@@ -1,4 +1,5 @@
 from .file_utils import create_project_directory, sanitize_filename
+from .git_utils import generate_commit_message
 from .json_utils import extract_json_from_response
 from .misc_utils import (
     calculate_project_progress,

@@ -1,0 +1,195 @@
+[
+  {
+    "id": 6402,
+    "project_id": "FutureScenariosGenerator",
+    "title": "Define Project Scope and Requirements (Revised)",
+    "description": "Detailed task for defining the requirements of the FutureScenariosGenerator system. This includes specifying the types of scenarios to be generated, input data sources, output formats, target users, and use cases. Additionally, we should outline functional requirements such as real-time processing capabilities, security measures, scalability, and integration with existing systems. Non-functional requirements like performance expectations, error handling, user interface design, and documentation should also be considered. The deliverable will be a comprehensive documentation detailing the system's requirements.",
+    "status": "REVIEW_REQUIRED",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6403,
+    "project_id": "FutureScenariosGenerator",
+    "title": "Design System Architecture for FutureScenariosGenerator",
+    "description": "Design the overall architecture of the FutureScenariosGenerator system, including components, data flows, and integration points with external systems. This design should consider scalability, reliability, and security in accordance with best practices for AI-powered systems. Additionally, outline strategies for handling large volumes of data and real-time scenario generation.",
+    "status": "NEEDS_REVISION",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6404,
+    "project_id": "FutureScenariosGenerator",
+    "title": "Develop Data Ingestion Pipeline",
+    "description": "Implement a pipeline to ingest and preprocess data from various sources (e.g., news, social media, historical data) that will be used as input for scenario generation.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6405,
+    "project_id": "FutureScenariosGenerator",
+    "title": "Implement Scenario Generation Model",
+    "description": "Develop and train a machine learning model capable of generating plausible future scenarios based on the ingested data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6406,
+    "project_id": "FutureScenariosGenerator",
+    "title": "Build User Interface",
+    "description": "Design and implement a user interface that allows users to input parameters, trigger scenario generation, and visualize the generated scenarios.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6407,
+    "project_id": "FutureScenariosGenerator",
+    "title": "Implement Scenario Analysis and Reporting",
+    "description": "Develop functionality to analyze and report on the generated scenarios, including identifying trends, risks, and opportunities.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Implement Scenario Generation Model"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6408,
+    "project_id": "FutureScenariosGenerator",
+    "title": "Set up Testing and Continuous Integration",
+    "description": "Establish a testing framework and continuous integration pipeline to ensure the quality and reliability of the system.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Develop Data Ingestion Pipeline",
+      "Implement Scenario Generation Model",
+      "Build User Interface",
+      "Implement Scenario Analysis and Reporting"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6409,
+    "project_id": "FutureScenariosGenerator",
+    "title": "Implement Security and Access Controls",
+    "description": "Design and implement robust security measures including encryption (AES-256 for data at rest and TLS for data in transit), authentication using OAuth 2.0, and role-based access control (RBAC) for user management. Implement multi-factor authentication for admin accounts. Integrate with existing identity providers such as Okta or Auth0.",
+    "status": "REVIEW_COMPLETED",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6410,
+    "project_id": "FutureScenariosGenerator",
+    "title": "Deploy and Monitor the System",
+    "description": "Set up the infrastructure and deploy the FutureScenariosGenerator system, including monitoring and logging mechanisms.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Set up Testing and Continuous Integration",
+      "Implement Security and Access Controls"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6411,
+    "project_id": "FutureScenariosGenerator",
+    "title": "Create Documentation and User Guides",
+    "description": "Develop comprehensive documentation and user guides to assist users in understanding and utilizing the FutureScenariosGenerator system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Build User Interface",
+      "Implement Scenario Analysis and Reporting"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

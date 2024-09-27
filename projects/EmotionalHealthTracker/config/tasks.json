@@ -1,0 +1,177 @@
+[
+  {
+    "id": 6311,
+    "project_id": "EmotionalHealthTracker",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, goals, and requirements. Conduct user research and stakeholder interviews to understand user needs and desired features.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6312,
+    "project_id": "EmotionalHealthTracker",
+    "title": "System Architecture Design for Emotional Health Tracker App",
+    "description": "Design the overall system architecture including the mobile app, backend services, data storage, and third-party integrations. Define the technology stack (React Native for mobile app, Node.js with Express for backend, MongoDB as primary database), architectural patterns (Microservices, RESTful API), and integration points (Firebase for real-time data sync, Stripe for in-app purchases). Consider scalability, security (using JWT for authentication and OWASP for security best practices), performance, and maintainability, focusing on a modular design for easy updates and maintenance. This RFC also includes recommendations for data privacy (GDPR and CCPA compliance) and user consent management (in-app notifications and cookie policies).",
+    "status": "NEEDS_REVISION",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6313,
+    "project_id": "EmotionalHealthTracker",
+    "title": "Database Design for Emotional Health Tracker App",
+    "description": "Design a scalable and secure database schema to store user data, emotional states, and coping strategies. Include mechanisms for data integrity, encryption, anonymization (consider using pseudonyms instead of actual identities), and real-time analytics and reporting. Consider the need for data segmentation based on user consent for privacy purposes.",
+    "status": "READY_FOR_CODE_ARCHITECT",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6314,
+    "project_id": "EmotionalHealthTracker",
+    "title": "Mobile App Development",
+    "description": "Develop the mobile app for tracking emotional states and providing coping strategies. Implement user authentication, data entry, and visualization features.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6315,
+    "project_id": "EmotionalHealthTracker",
+    "title": "Backend Development",
+    "description": "Develop the backend services for processing user data, integrating with third-party APIs (if needed), and serving the mobile app.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6316,
+    "project_id": "EmotionalHealthTracker",
+    "title": "Security and Data Privacy",
+    "description": "Implement security measures to protect user data and ensure compliance with data privacy regulations. Conduct security audits and vulnerability testing.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6317,
+    "project_id": "EmotionalHealthTracker",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop test plans and test cases for the mobile app, backend services, and overall system. Perform functional, integration, and performance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Mobile App Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6318,
+    "project_id": "EmotionalHealthTracker",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline and infrastructure for the mobile app and backend services. Implement continuous integration and continuous deployment (CI/CD) processes.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Mobile App Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6319,
+    "project_id": "EmotionalHealthTracker",
+    "title": "Documentation and User Support",
+    "description": "Create user documentation, FAQs, and support resources for the EmotionalHealthTracker app. Develop a support plan for addressing user inquiries and issues.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Mobile App Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

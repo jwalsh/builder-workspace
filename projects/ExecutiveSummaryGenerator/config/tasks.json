@@ -1,0 +1,248 @@
+[
+  {
+    "id": 2212,
+    "project_id": "ExecutiveSummaryGenerator",
+    "title": "Define Project Requirements",
+    "description": "Gather and document the requirements for the ExecutiveSummaryGenerator system, including input formats, output formats, desired features, performance criteria, and any constraints or limitations.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2213,
+    "project_id": "ExecutiveSummaryGenerator",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the system, including the main components, their interactions, and the data flow. The following aspects should be considered: input handling (document ingestion, preprocessing), text summarization model (e.g., transformer-based, extractive, abstractive), output generation, user interface, data storage, scalability, security, and deployment strategy. Each component's role and responsibilities will be clearly described, as well as the expected data flow between them. An initial high-level design will be provided that can serve as a foundation for further detailed design and implementation. Additionally, the document will detail considerations for accessibility, error handling, and performance optimization.",
+    "status": "NEEDS_REVISION",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2214,
+    "project_id": "ExecutiveSummaryGenerator",
+    "title": "Develop Natural Language Processing (NLP) Module",
+    "description": "Implement the NLP module responsible for understanding and processing the input documents or reports.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2215,
+    "project_id": "ExecutiveSummaryGenerator",
+    "title": "Develop Text Summarization Module",
+    "description": "Implement the module that generates concise summaries from the processed text.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2216,
+    "project_id": "ExecutiveSummaryGenerator",
+    "title": "Design User Interface - RFC APPROVED",
+    "description": "Design the user interface for the ExecutiveSummaryGenerator project, including input and output interfaces, user experience, and any necessary visualizations. Consider the following aspects: 1) Input interface for uploading or providing documents/reports (support multiple file formats like PDF, Word, plain text, etc.), 2) Output interface for displaying the generated executive summary (with options for formatting, export, and sharing), 3) User experience features like progress indicators, error handling, feedback mechanisms, and input validation, 4) Visualizations or formatting options for the summary (e.g., bullet points, headings, tables), 5) Accessibility and responsiveness for different devices and screen sizes, 6) User authentication and authorization mechanisms, 7) Branding and theming options, 8) Design System Architecture integration to maintain consistency with other system components, 9) Implement a preview feature that allows users to review the executive summary before final submission.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2217,
+    "project_id": "ExecutiveSummaryGenerator",
+    "title": "Implement User Interface",
+    "description": "Develop the user interface based on the approved design.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2218,
+    "project_id": "ExecutiveSummaryGenerator",
+    "title": "Set up Development Environment",
+    "description": "Set up the development environment, including version control, continuous integration, and any necessary tools or libraries.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2219,
+    "project_id": "ExecutiveSummaryGenerator",
+    "title": "Implement Data Storage and Management",
+    "description": "Design and implement a scalable, fault-tolerant data storage and management system for the input documents, processed text, and generated summaries. To achieve this, consider using distributed databases or cloud storage services like AWS S3 or Google Cloud Storage for large-scale deployments, ensuring efficient data retrieval and storage. Implement data partitioning strategies to optimize performance and reduce potential bottlenecks. For consistency and data integrity, consider using transactional databases or eventual consistency models such as the one used in Google's Bigtable or Amazon DynamoDB. Additionally, ensure that encryption is implemented at rest and during transfer for data security. Finally, consider implementing data backup strategies to protect against data loss.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2220,
+    "project_id": "ExecutiveSummaryGenerator",
+    "title": "Develop Testing Strategy",
+    "description": "Define a comprehensive testing strategy that includes unit tests, integration tests, end-to-end tests, performance tests, and security tests. The strategy should incorporate automated testing frameworks (e.g., Jest for JavaScript or Pytest for Python), test case management (TestRail/Jira), and continuous integration/continuous deployment (CI/CD) pipelines (e.g., GitLab CI/CD). Additionally, consider the use of tools like Selenium for UI testing and Artillery for performance testing. The strategy should also account for edge cases and exceptional scenarios to ensure the system's functionality, reliability, and robustness.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2221,
+    "project_id": "ExecutiveSummaryGenerator",
+    "title": "Implement Testing Suite",
+    "description": "Develop and implement the testing suite based on the approved testing strategy.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop Testing Strategy"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2222,
+    "project_id": "ExecutiveSummaryGenerator",
+    "title": "Conduct Security Audit",
+    "description": "Perform a comprehensive security audit to identify and mitigate potential vulnerabilities in the system.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2223,
+    "project_id": "ExecutiveSummaryGenerator",
+    "title": "Develop Documentation",
+    "description": "Create comprehensive documentation for the system, including user guides, technical documentation, and maintenance procedures.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2224,
+    "project_id": "ExecutiveSummaryGenerator",
+    "title": "Deploy and Monitor System",
+    "description": "Deploy the ExecutiveSummaryGenerator system to a production environment and set up monitoring and logging mechanisms.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Implement User Interface",
+      "Implement Data Storage and Management",
+      "Implement Testing Suite",
+      "Develop Documentation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

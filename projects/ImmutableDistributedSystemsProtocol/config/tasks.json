@@ -1,0 +1,173 @@
+[
+  {
+    "id": 7762,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Requirements Gathering for ImmutableDistributedSystemsProtocol",
+    "description": "Gather and document detailed functional (operational requirements, user stories) and non-functional requirements (performance, scalability, security) for the ImmutableDistributedSystemsProtocol. Identify potential edge cases and error handling strategies. Ensure that all gathered requirements align with the overall project goals, focusing on clarity, completeness, and feasibility. Collaborate with relevant team members to ensure alignment with the project's vision.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "IN_REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7763,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Design RFC for ImmutableDistributedSystemsProtocol",
+    "description": "Write a design proposal (RFC) outlining the architecture and key components of the ImmutableDistributedSystemsProtocol. This RFC will serve as a guide for the development of the protocol, focusing on simplicity and ease of reasoning about distributed state.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7764,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Decompose Design RFC into Tasks",
+    "description": "Break down the design RFC into smaller, manageable tasks for implementation.",
+    "status": "TODO",
+    "assigned_to": "task-decomposer",
+    "priority": 3,
+    "dependencies": [
+      "Design RFC for ImmutableDistributedSystemsProtocol"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7765,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Implement ImmutableDataStructureManager",
+    "description": "Create an immutable data structure manager that handles storage and retrieval of data in the distributed system.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Decompose Design RFC into Tasks"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7766,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Implement PureFunctionExecutor Service",
+    "description": "Develop a service that executes pure functions in the distributed system.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Decompose Design RFC into Tasks"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7767,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Database Schema Design for ImmutableDistributedSystemsProtocol",
+    "description": "Design the database schema to store and manage data within the distributed system, considering scalability, fault tolerance, and performance. Include a strategy for handling data versioning, concurrency control, and efficient querying for large datasets. Provide details on chosen database technology and rationale behind the choice.",
+    "status": "REVIEW_IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Decompose Design RFC into Tasks"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7768,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Integration Testing of ImmutableDistributedSystemsProtocol",
+    "description": "Perform integration tests to ensure that the distributed system is functioning correctly according to the design and requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Implement ImmutableDataStructureManager",
+      "Implement PureFunctionExecutor Service",
+      "Database Schema Design for ImmutableDistributedSystemsProtocol"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7769,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Deploy ImmutableDistributedSystemsProtocol",
+    "description": "Deploy the developed distributed system to a production environment.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Integration Testing of ImmutableDistributedSystemsProtocol"
+    ],
+    "task_type": "unknown",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7770,
+    "project_id": "ImmutableDistributedSystemsProtocol",
+    "title": "Document ImmutableDistributedSystemsProtocol",
+    "description": "Write comprehensive documentation for the developed distributed system, including a detailed explanation of the architecture, APIs, use-cases, and best practices for implementation. The goal is to simplify reasoning about distributed state.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Deploy ImmutableDistributedSystemsProtocol"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

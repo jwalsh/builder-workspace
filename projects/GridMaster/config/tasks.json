@@ -1,0 +1,174 @@
+[
+  {
+    "id": 2487,
+    "project_id": "GridMaster",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document all requirements for the GridMaster system, including functional and non-functional requirements, performance goals, scalability, security considerations, integration with existing systems or third-party services, and use cases. Conduct stakeholder interviews, workshops, and user story mapping to capture comprehensive requirements. Also, outline the project's technical architecture, system design, and key components. Ensure the documentation is clear, concise, and easy to understand for all team members.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2488,
+    "project_id": "GridMaster",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the GridMaster system, including components, modules, and their interactions. Define the system's high-level design principles and patterns.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2489,
+    "project_id": "GridMaster",
+    "title": "Develop Data Management Strategy",
+    "description": "Define the data management strategy, including database design, data modeling, and data integration approaches for handling complex electricity distribution network data.\n\n1. Data storage requirements: Estimate the volume and velocity of data to be handled, and determine the appropriate database technology (e.g., relational, NoSQL, time-series) based on the data characteristics. Consider using distributed databases to handle large scale data and ensure high availability.\n\n2. Data modeling: Design the data models and schemas to represent the complex relationships and hierarchies present in electricity distribution networks, ensuring data integrity and efficient querying. Use entity relationship diagrams (ERD) for visual representation and documentation.\n\n3. Data integration: Define the mechanisms for integrating data from various sources, such as smart meters, sensors, and external systems, ensuring data consistency and reliability. Implement APIs and middleware services to facilitate seamless data flow and transformation.\n\n4. Data security and privacy: Implement measures to protect sensitive data, such as customer information and network configurations, adhering to industry regulations and best practices. Utilize encryption techniques and access controls to ensure data confidentiality, integrity, and availability.\n\n5. Data archiving and retention: Establish policies and procedures for data archiving, backup, and retention, considering legal and operational requirements. Implement data compression strategies to minimize storage costs.\n\n6. Data access and querying: Develop strategies for efficient data retrieval, analysis, and reporting, considering the diverse needs of stakeholders (e.g., network operators, maintenance teams, billing systems). Implement SQL-based data queries and Business Intelligence tools for ad-hoc analytics and report generation.\n\nThis RFC is ready for the next state, update the rfc_state field to 'IN_PROGRESS'.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2490,
+    "project_id": "GridMaster",
+    "title": "Implement Automation and Optimization Algorithms",
+    "description": "Develop algorithms and techniques for automating the management of electricity distribution networks and optimizing their performance.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Develop Data Management Strategy"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2491,
+    "project_id": "GridMaster",
+    "title": "Design User Interfaces - GridMaster",
+    "description": "Design and develop user interfaces for monitoring, managing, and interacting with the GridMaster system. Ensure usability, accessibility, and adherence to industry standards, best practices, and our defined design system. Collaborate with project team members during the design process. Prioritize responsive design considering various device sizes and screen resolutions. Ensure compatibility with modern browsers.",
+    "status": "READY_FOR_CODE_ARCHITECT_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture",
+      "Define User Roles and Permissions"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2492,
+    "project_id": "GridMaster",
+    "title": "Implement Security and Access Controls - Update",
+    "description": "Update the task description to provide more specific requirements and expectations for the implementation of security measures, access controls, and data protection mechanisms. This includes implementing secure authentication and authorization mechanisms (OAuth2 or similar), encrypting sensitive data at rest and in transit using AES-256 encryption, implementing role-based access controls (RBAC) based on job functions, integrating single sign-on (SSO) for seamless user experience, implementing security monitoring and logging mechanisms (SIEM solutions like Splunk or Elasticsearch), performing regular security audits to maintain system security, and ensuring compliance with industry standards such as GDPR, HIPAA, and ISO 27001. Additionally, consider the use of Zero Trust Network Architecture principles for added security.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "security-specialist",
+    "priority": 1,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2493,
+    "project_id": "GridMaster",
+    "title": "Develop Deployment and Monitoring Strategies",
+    "description": "Define strategies for deploying the GridMaster system in production environments, including containerization, orchestration, monitoring tools, and automated deployment pipelines for ensuring high availability, resilience, and efficient updates.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2494,
+    "project_id": "GridMaster",
+    "title": "Create Revised Testing and Quality Assurance Plan (TQAP) for GridMaster System",
+    "description": "Revise and expand the existing TQAP to include unit tests, integration tests, performance tests, acceptance criteria for the GridMaster system, and a clear outline of test scenarios. The plan should also address potential edge cases, scalability, resilience requirements, as well as testing strategies for high availability. Additionally, provide guidelines on how to handle intermittent failures and test recovery mechanisms.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2495,
+    "project_id": "GridMaster",
+    "title": "Develop Documentation and User Guides (Updated)",
+    "description": "Update the existing documentation, including system architecture diagrams, API documentation, and user guides to facilitate system maintenance and user adoption. Incorporate feedback from relevant stakeholders and ensure clarity and comprehensiveness.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture",
+      "Design User Interfaces"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

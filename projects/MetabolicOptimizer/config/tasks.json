@@ -1,0 +1,194 @@
+[
+  {
+    "id": 8382,
+    "project_id": "MetabolicOptimizer",
+    "title": "Define System Architecture",
+    "description": "Design the overall structure and components of the MetabolicOptimizer system.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8383,
+    "project_id": "MetabolicOptimizer",
+    "title": "Develop User Registration and Authentication",
+    "description": "Implement user registration and authentication functionality for the system. The system should allow users to register, log in, and forget passwords. Implement a secure and scalable solution using best practices.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Define System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8384,
+    "project_id": "MetabolicOptimizer",
+    "title": "Create User Profile and Data Collection Interface",
+    "description": "Design the user interface for collecting user data such as age, gender, height, weight, activity level, etc.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Develop User Registration and Authentication"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8385,
+    "project_id": "MetabolicOptimizer",
+    "title": "Integrate Metabolic Profile Analysis Module",
+    "description": "Develop a module that analyzes user input data to generate metabolic profiles.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Define System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8386,
+    "project_id": "MetabolicOptimizer",
+    "title": "Develop Recommendation Algorithm",
+    "description": "Create an algorithm that generates personalized nutrition and exercise recommendations based on the user's metabolic profile.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 5,
+    "dependencies": [
+      "Integrate Metabolic Profile Analysis Module"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8387,
+    "project_id": "MetabolicOptimizer",
+    "title": "Design and Implement Database Structure",
+    "description": "Create the necessary database tables and structure for storing user data, metabolic profiles, and recommendations.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Define System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8388,
+    "project_id": "MetabolicOptimizer",
+    "title": "Implement User Interface for Recommendations",
+    "description": "Design and develop the user interface for displaying nutrition and exercise recommendations.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Develop Recommendation Algorithm"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8389,
+    "project_id": "MetabolicOptimizer",
+    "title": "Perform Unit Tests for each Module",
+    "description": "Write and execute unit tests for all developed modules to ensure they function correctly.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Develop User Registration and Authentication",
+      "Create User Profile and Data Collection Interface",
+      "Integrate Metabolic Profile Analysis Module",
+      "Develop Recommendation Algorithm",
+      "Implement User Interface for Recommendations"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8390,
+    "project_id": "MetabolicOptimizer",
+    "title": "Perform System Integration Tests",
+    "description": "Execute end-to-end tests to ensure all components of the system work seamlessly together.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Perform Unit Tests for each Module"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8391,
+    "project_id": "MetabolicOptimizer",
+    "title": "Document System Design and Implementation",
+    "description": "Write clear documentation detailing the system design, implementation, and usage. Include sections for architecture, technical details, and user guide.",
+    "status": "IN PROGRESS",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "Define System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

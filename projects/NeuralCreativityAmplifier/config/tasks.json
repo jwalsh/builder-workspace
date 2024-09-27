@@ -1,0 +1,173 @@
+[
+  {
+    "id": 8111,
+    "project_id": "NeuralCreativityAmplifier",
+    "title": "Requirements Gathering",
+    "description": "Collaborate with stakeholders to gather and document project requirements in a clear, concise, and feasible manner that aligns with the project scope. Focus on understanding the technical and non-technical aspects of the system design.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8112,
+    "project_id": "NeuralCreativityAmplifier",
+    "title": "Design the NeuralCreativityAmplifier System",
+    "description": "Create a high-level design for the system architecture and user interfaces",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8113,
+    "project_id": "NeuralCreativityAmplifier",
+    "title": "Develop the Frontend Interface",
+    "description": "Create a user-friendly and intuitive interface for controlling and interacting with the NeuralCreativityAmplifier system. The interface should enable users to adjust settings, monitor progress, receive feedback on their creative output, and offer a seamless user experience. This includes implementing responsive design for various devices.",
+    "status": "PENDING_REVIEW",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design the NeuralCreativityAmplifier System"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "PENDING_REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8114,
+    "project_id": "NeuralCreativityAmplifier",
+    "title": "Implement the Backend Logic",
+    "description": "Develop the server-side logic for processing and responding to user inputs. This includes data handling, model integration, and response generation.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design the NeuralCreativityAmplifier System"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "IN_REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8115,
+    "project_id": "NeuralCreativityAmplifier",
+    "title": "Integrate Database Functionality",
+    "description": "Design and implement a robust database schema for efficient storage of user data, system logs, and machine learning models relevant to the NeuralCreativityAmplifier. Consider scalability, data security, and easy querying. The design should align with the principles of NoSQL databases due to the expected high volume of data and real-time requirements.",
+    "status": "IN-PROGRESS",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design the NeuralCreativityAmplifier System"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8116,
+    "project_id": "NeuralCreativityAmplifier",
+    "title": "Test the NeuralCreativityAmplifier System",
+    "description": "Execute functional and performance tests on the system to ensure correctness and efficiency. This includes testing the entire system from frontend interface, backend logic, to database functionality. Additionally, suggest improvements for potential issues found during testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Develop the Frontend Interface",
+      "Implement the Backend Logic",
+      "Integrate Database Functionality"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8117,
+    "project_id": "NeuralCreativityAmplifier",
+    "title": "Deploy the NeuralCreativityAmplifier System",
+    "description": "Prepare and execute deployment procedures for production environment. Please ensure all necessary tests have been conducted prior to this step.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Test the NeuralCreativityAmplifier System"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8118,
+    "project_id": "NeuralCreativityAmplifier",
+    "title": "Review and Approve Design Documents",
+    "description": "Review design documents for accuracy, completeness, and adherence to project requirements",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [
+      "Design the NeuralCreativityAmplifier System"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8119,
+    "project_id": "NeuralCreativityAmplifier",
+    "title": "Review and Approve Requirements Document",
+    "description": "Review requirements document for accuracy, completeness, and feasibility",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [
+      "Requirements Gathering"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

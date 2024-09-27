@@ -1,0 +1,199 @@
+[
+  {
+    "id": 3450,
+    "project_id": "OilSpillCleanupRobot",
+    "title": "Define Project Scope and Requirements - REVISED",
+    "description": "Gather and document detailed requirements for the OilSpillCleanupRobot project, including functional requirements (e.g., navigation, oil detection, collection mechanisms), non-functional requirements (e.g., autonomy, durability, safety, scalability, maintainability, energy efficiency, user interface design), constraints (e.g., regulations, environmental factors, operational conditions, data security and privacy), success criteria (e.g., cleanup efficiency, cost-effectiveness, reliability, adaptability, compatibility with existing infrastructure), and future upgrade considerations. The defined scope and requirements should be detailed enough to guide the design, development, testing, and implementation phases of the project. The focus should be on creating a clear, comprehensive, and actionable document that can serve as a foundation for the entire project lifecycle. This RFC is currently in draft state.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3451,
+    "project_id": "OilSpillCleanupRobot",
+    "title": "Design System Architecture for OilSpillCleanupRobot",
+    "description": "Design the overall system architecture, including hardware components, software modules, communication protocols, and integration points. Ensure the design adheres to the following aspects: 1) Modular design for easy maintenance and upgrades, 2) Scalability to handle varying spill sizes, 3) Robust error handling and fault tolerance, 4) Real-time monitoring and reporting capabilities, 5) Integration with external systems (e.g., mapping, weather data), 6) Security measures to prevent unauthorized access or tampering, 7) Energy efficiency to maximize operational time, 8) Consider the impact of marine life during design and operation, 9) Include guidelines for testing and validation, 10) Plan for future AI/ML integration for optimized performance.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3452,
+    "project_id": "OilSpillCleanupRobot",
+    "title": "Develop Robot Hardware",
+    "description": "Design and manufacture the physical robot components, including the chassis, motors, sensors, and other hardware components.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3453,
+    "project_id": "OilSpillCleanupRobot",
+    "title": "Develop Control Software",
+    "description": "Develop the software for controlling the robot's movement, navigation, and oil cleanup operations.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3454,
+    "project_id": "OilSpillCleanupRobot",
+    "title": "Develop User Interface",
+    "description": "Design and develop the user interface for monitoring and controlling the robot remotely.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3455,
+    "project_id": "OilSpillCleanupRobot",
+    "title": "Implement Data Storage and Analytics",
+    "description": "Design and implement a data storage solution for storing sensor data, mission logs, and other relevant data, and develop analytics tools for data analysis and reporting.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3456,
+    "project_id": "OilSpillCleanupRobot",
+    "title": "Establish Testing and Quality Assurance",
+    "description": "Develop a comprehensive testing strategy including unit testing, integration testing, system testing, and regression testing. This will involve creating test cases for various scenarios, edge cases, stress tests, and extreme conditions to validate the robot's functionality, reliability, and performance. Additionally, consider implementing a continuous integration/continuous deployment (CI/CD) pipeline for automated testing.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Develop Robot Hardware",
+      "Develop Control Software",
+      "Develop User Interface",
+      "Implement Data Storage and Analytics"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3457,
+    "project_id": "OilSpillCleanupRobot",
+    "title": "Implement Security and Compliance",
+    "description": "Ensure the robot's software and communication systems are secure and compliant with relevant regulations and industry standards.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3458,
+    "project_id": "OilSpillCleanupRobot",
+    "title": "Comprehensive Deployment and Maintenance Plan for OilSpillCleanupRobot",
+    "description": "Develop a comprehensive deployment strategy for the autonomous OilSpillCleanupRobot in real-world oil spill scenarios. This strategy should include logistics for transportation, on-site setup procedures, and regular maintenance routines to maximize performance and lifespan. Emphasis is placed on robustness, scalability, safety, and adaptability to various environmental conditions. The plan should also address the following: remote control capabilities, emergency shutdown mechanisms, data transmission protocols, and disaster recovery plans. Furthermore, provide guidelines for troubleshooting common issues that may arise during deployment.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Develop Robot Hardware",
+      "Develop Control Software",
+      "Develop User Interface",
+      "Implement Data Storage and Analytics"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3459,
+    "project_id": "OilSpillCleanupRobot",
+    "title": "Create Documentation and Training Materials",
+    "description": "Develop comprehensive documentation and training materials for end-users, maintenance personnel, and other stakeholders.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Design System Architecture",
+      "Establish Testing and Quality Assurance",
+      "Plan Deployment and Maintenance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

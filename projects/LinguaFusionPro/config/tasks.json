@@ -1,0 +1,191 @@
+[
+  {
+    "id": 7910,
+    "project_id": "LinguaFusionPro",
+    "title": "Requirements Gathering",
+    "description": "Gather and document project requirements from clients, stakeholders, and domain experts. This will include defining the scope of the project, understanding user needs, and identifying any potential constraints. In addition, research best practices for requirements gathering in AI-based translation systems, focusing on efficiency, accuracy, and scalability.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7911,
+    "project_id": "LinguaFusionPro",
+    "title": "System Architecture Design",
+    "description": "Design the overall architecture of the translation system, including hardware and software components.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7912,
+    "project_id": "LinguaFusionPro",
+    "title": "Backend Development Task Decomposition",
+    "description": "Break down the backend development tasks into smaller subtasks.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7913,
+    "project_id": "LinguaFusionPro",
+    "title": "Frontend Development Task Decomposition",
+    "description": "Break down the frontend development tasks into smaller subtasks.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7914,
+    "project_id": "LinguaFusionPro",
+    "title": "Database Schema Design",
+    "description": "Design the database schema that will store translation data and system metadata.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7915,
+    "project_id": "LinguaFusionPro",
+    "title": "Backend Development Implementation",
+    "description": "Implement the backend system according to the decomposed tasks.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development Task Decomposition"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7916,
+    "project_id": "LinguaFusionPro",
+    "title": "Frontend Development Implementation",
+    "description": "Implement the frontend system according to the decomposed tasks.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 4,
+    "dependencies": [
+      "Frontend Development Task Decomposition"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7917,
+    "project_id": "LinguaFusionPro",
+    "title": "Integration Testing",
+    "description": "Test the integration of the backend and frontend systems.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development Implementation",
+      "Frontend Development Implementation"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7918,
+    "project_id": "LinguaFusionPro",
+    "title": "Comprehensive Deployment Strategy for LinguaFusionPro Translation System",
+    "description": "Plan a comprehensive deployment strategy for the LinguaFusionPro translation system, considering factors such as scalability, redundancy, and security. This plan should include details on infrastructure requirements (hardware, software, cloud services), rollout methodologies (staging environments, phased releases), disaster recovery strategies (backup plans, failover mechanisms), and performance monitoring tools. Address potential challenges in implementing the strategy, such as data privacy concerns and language-specific complexities. Also, suggest methods for integrating new languages into the system.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Integration Testing"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7919,
+    "project_id": "LinguaFusionPro",
+    "title": "System Deployment",
+    "description": "Deploy the translation system according to the deployment plan.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [
+      "System Deployment Planning"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

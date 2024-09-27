@@ -1,0 +1,255 @@
+[
+  {
+    "id": 2934,
+    "project_id": "LocalExperienceMatchmaker",
+    "title": "Define project scope and requirements",
+    "description": "Gather and document the requirements for the LocalExperienceMatchmaker platform, including user stories, functional and non-functional requirements, and any constraints or assumptions.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2935,
+    "project_id": "LocalExperienceMatchmaker",
+    "title": "Design System Architecture for LocalExperienceMatchmaker",
+    "description": "Design the overall system architecture for the LocalExperienceMatchmaker project. The design should focus on maintainability, modularity, scalability, and performance, taking into account aspects such as user authentication and authorization, search and matching algorithms (including AI/ML integration), payment processing, messaging and communication, rating and review systems, scalability and load balancing, error handling and graceful degradation for edge cases, data privacy and security, and documentation of components, data flow, and interactions between different modules. This RFC serves as a guide for the development team. Once the project scope and requirements have been defined, this task can be assigned to the code-architect or task-decomposer based on the project's needs. Please note that the AI/ML integration in search and matching algorithms may require collaboration with our data science team. This RFC is now ready for the 'REVIEWED' state.",
+    "status": "REVIEWED",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define project scope and requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2936,
+    "project_id": "LocalExperienceMatchmaker",
+    "title": "Design database schema for LocalExperienceMatchmaker",
+    "description": "Design the database schema to store user profiles, experiences, guides, and other relevant data. The schema should consider data normalization, indexing, partitioning, caching, and performance optimizations for large-scale data. It should also support scalability and future growth, with a focus on efficiency and flexibility. Consider using cloud-based databases (e.g., AWS DynamoDB or Google Firestore) for easy scalability. Include the use of NoSQL databases to handle unstructured data and real-time updates. Ensure the schema is designed with data modeling best practices, including denormalization where necessary to improve query performance. Consider using a combination of key-value stores (for example, DynamoDB's item model) and document databases (like Firestore) to leverage their respective strengths. Also, consider sharding the database based on geographical regions for improved latency and data locality. Lastly, include security measures such as encryption at rest, access control, and data masking to protect user privacy.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design system architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2937,
+    "project_id": "LocalExperienceMatchmaker",
+    "title": "Develop user authentication and authorization",
+    "description": "Implement user authentication and authorization mechanisms, including user registration, login, and role-based access control.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design system architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2938,
+    "project_id": "LocalExperienceMatchmaker",
+    "title": "Develop user profile management",
+    "description": "Implement functionality for users to create and manage their profiles, including personal information, interests, and preferences.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design system architecture",
+      "Design database schema"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2939,
+    "project_id": "LocalExperienceMatchmaker",
+    "title": "Develop experience and guide management",
+    "description": "Implement functionality for creating, updating, and managing local experiences and guides, including descriptions, pricing, availability, and ratings.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design system architecture",
+      "Design database schema"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2940,
+    "project_id": "LocalExperienceMatchmaker",
+    "title": "Implement matchmaking algorithm",
+    "description": "Develop the algorithm to match travelers with local experiences and guides based on shared interests, personality traits, and cultural preferences.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design system architecture",
+      "Develop user profile management",
+      "Develop experience and guide management"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2941,
+    "project_id": "LocalExperienceMatchmaker",
+    "title": "Design and develop user interface",
+    "description": "Design and implement the user interface for the LocalExperienceMatchmaker platform, including user profiles, experience browsing, booking, and messaging.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design system architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2942,
+    "project_id": "LocalExperienceMatchmaker",
+    "title": "Implement payment processing",
+    "description": "Integrate a secure payment gateway to handle transactions between travelers and guides.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design system architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2943,
+    "project_id": "LocalExperienceMatchmaker",
+    "title": "Set up continuous integration and deployment",
+    "description": "Establish a continuous integration and deployment pipeline for automated testing, building, and deploying the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2944,
+    "project_id": "LocalExperienceMatchmaker",
+    "title": "Implement security measures",
+    "description": "Implement security measures to protect user data and ensure the platform's integrity, including encryption, secure communication, and input validation.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design system architecture"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2945,
+    "project_id": "LocalExperienceMatchmaker",
+    "title": "Conduct testing and quality assurance",
+    "description": "Develop and execute test plans for functional, non-functional, and security testing to ensure the platform meets the requirements and is ready for production.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Develop user authentication and authorization",
+      "Develop user profile management",
+      "Develop experience and guide management",
+      "Implement matchmaking algorithm",
+      "Design and develop user interface",
+      "Implement payment processing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2946,
+    "project_id": "LocalExperienceMatchmaker",
+    "title": "Write documentation",
+    "description": "Create comprehensive documentation for users, administrators, and developers, including user guides, technical documentation, and API references.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Define project scope and requirements",
+      "Design system architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

@@ -1,0 +1,176 @@
+[
+  {
+    "id": 2245,
+    "project_id": "FacialRecognitionNetwork",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements. Conduct stakeholder interviews, analyze existing systems, and document functional and non-functional requirements.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2246,
+    "project_id": "FacialRecognitionNetwork",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components, interfaces, and data flow. Define the integration approach with existing CCTV infrastructure, ensuring compatibility with data privacy regulations and ethical guidelines for facial recognition technology. Particular attention should be paid to data security, access controls, and auditing mechanisms to prevent misuse and protect individual privacy rights. The design will consider scalability and performance optimizations. Collaborate with the assigned team members for detailed task decomposition as needed.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering",
+      "Legal and Ethical Considerations",
+      "Data Privacy Impact Assessment"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2247,
+    "project_id": "FacialRecognitionNetwork",
+    "title": "Facial Recognition Algorithm Development",
+    "description": "Research and develop robust facial recognition algorithms, considering factors like lighting conditions, angles, and occlusions.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2248,
+    "project_id": "FacialRecognitionNetwork",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement a scalable database to store and manage facial recognition data, including images, metadata, and associated information. Consider performance, privacy, and security requirements for a citywide system.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2249,
+    "project_id": "FacialRecognitionNetwork",
+    "title": "User Interface and Visualization",
+    "description": "Develop a user-friendly interface for monitoring, searching, and analyzing facial recognition data. Implement visualization tools for tracking individuals across multiple cameras.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2250,
+    "project_id": "FacialRecognitionNetwork",
+    "title": "Security and Privacy Considerations",
+    "description": "Implement robust security measures to protect sensitive data and ensure compliance with privacy regulations. Conduct security audits and vulnerability assessments.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2251,
+    "project_id": "FacialRecognitionNetwork",
+    "title": "Integration and Deployment",
+    "description": "Integrate the facial recognition system with existing CCTV infrastructure. Develop deployment strategies and automate the deployment process.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Facial Recognition Algorithm Development",
+      "Database Design and Implementation",
+      "User Interface and Visualization"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2252,
+    "project_id": "FacialRecognitionNetwork",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and execute tests at various levels, including unit, integration, and system testing. Ensure the system meets performance, accuracy, and reliability requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Integration and Deployment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2253,
+    "project_id": "FacialRecognitionNetwork",
+    "title": "Documentation and Training",
+    "description": "Create comprehensive documentation, including user manuals, technical specifications, and maintenance guides. Develop training materials and conduct training sessions for system operators and administrators.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

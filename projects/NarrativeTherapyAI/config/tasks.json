@@ -1,0 +1,190 @@
+[
+  {
+    "id": 3264,
+    "project_id": "NarrativeTherapyAI",
+    "title": "Project Planning and Management",
+    "description": "Define project scope, objectives, and timeline. Establish project management processes and communication channels.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3265,
+    "project_id": "NarrativeTherapyAI",
+    "title": "Requirements Gathering and Analysis",
+    "description": "Conduct user research, gather requirements, analyze existing narrative therapy techniques (including but not limited to RFC 7182 - Narrative Therapy for Digital Systems), best practices, and provide a detailed report for the project team. Collaborate with mental health professionals and UX/UI designers as needed.",
+    "status": "REVIEW_PENDING",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3266,
+    "project_id": "NarrativeTherapyAI",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including the AI model, user interface, data storage components, and integration with third-party services (if applicable). Consider the following aspects:\n\n1. AI Model Architecture: Determine the appropriate type of AI model (e.g., transformer-based, RNN, etc.) and the specific architecture (e.g., GPT, BERT, etc.) for the narrative therapy task. Consider the model's ability to understand and generate natural language, as well as its capacity for emotional intelligence and context understanding.\n\n2. User Interface: Design the user interface for both the client-side (e.g., web or mobile app) and the therapist/admin interface. Consider the user experience, accessibility, and intuitive navigation. Include a section on responsive design to ensure compatibility with various devices.\n\n3. Data Storage: Determine the data storage requirements, including user data, session transcripts, and any other relevant data. Consider data privacy, security, and compliance with relevant regulations (e.g., HIPAA). Store data securely using encryption and ensure regular backups for disaster recovery. Additionally, consider implementing a data retention policy to manage data storage costs.\n\n4. Integration: Identify any potential third-party services or APIs that may need to be integrated, such as natural language processing services, sentiment analysis tools, or knowledge bases. Ensure compatibility with the chosen technology stack and evaluate the cost and impact of these integrations on system performance.\n\n5. Scalability and Performance: Ensure that the architecture can handle increasing user loads and data volumes while maintaining acceptable performance levels. Implement caching strategies for improved response times and horizontal scalability for seamless expansion, considering the use of cloud services such as AWS or Azure.\n\n6. Security and Privacy: Implement appropriate security measures to protect user data and ensure compliance with relevant regulations and industry standards. Incorporate features such as authentication, authorization, and secure communication protocols. Address concerns around data breaches, DDoS attacks, and unauthorized access.\n\n7. Monitoring and Logging: Incorporate monitoring and logging mechanisms to track system performance, identify issues, and facilitate debugging and maintenance. Implement alert systems for critical errors and performance degradation. Consider using tools such as Splunk or Elasticsearch for log management.\n\n8. Accessibility: Ensure the user interface is accessible to individuals with disabilities by following web accessibility guidelines such as WCAG 2.1. Include a section on testing for color contrast, text readability, and keyboard navigation.\n\n9. Documentation: Provide comprehensive documentation for developers, testers, and future maintenance teams, including architecture diagrams, API documentation, and usage instructions. Incorporate code comments to improve understanding and maintainability.\n\n10. Performance Testing and Optimization: Perform performance tests on the system to ensure it can handle the expected user load and data volumes. Optimize the system where necessary to achieve optimal performance levels.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3267,
+    "project_id": "NarrativeTherapyAI",
+    "title": "AI Model Development",
+    "description": "Develop and train the AI model for narrative therapy, incorporating natural language processing and machine learning techniques.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3268,
+    "project_id": "NarrativeTherapyAI",
+    "title": "User Interface Design and Development",
+    "description": "Design and develop the user interface for the application, ensuring a seamless and intuitive experience for users.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3269,
+    "project_id": "NarrativeTherapyAI",
+    "title": "Data Storage and Management",
+    "description": "Design and implement the data storage and management system for user data and therapy sessions.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3270,
+    "project_id": "NarrativeTherapyAI",
+    "title": "Security and Privacy Implementation",
+    "description": "Implement security measures and ensure compliance with privacy regulations for handling sensitive user data.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3271,
+    "project_id": "NarrativeTherapyAI",
+    "title": "Integration and Testing",
+    "description": "Integrate the various components and perform comprehensive testing, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "AI Model Development",
+      "User Interface Design and Development",
+      "Data Storage and Management"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3272,
+    "project_id": "NarrativeTherapyAI",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment environment, implement continuous integration and continuous deployment (CI/CD) pipelines, and manage infrastructure and monitoring.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3273,
+    "project_id": "NarrativeTherapyAI",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation for users and developers, and establish user support channels.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

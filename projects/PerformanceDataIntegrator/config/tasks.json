@@ -1,0 +1,195 @@
+[
+  {
+    "id": 3584,
+    "project_id": "PerformanceDataIntegrator",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, gather requirements from stakeholders, and create a detailed project plan.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3585,
+    "project_id": "PerformanceDataIntegrator",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including data sources (HRMS, CRM, timesheets etc.), data integration methods (ETL, real-time streaming, APIs etc.), performance reporting components (dashboards, charts, alerts), data security considerations (encryption, anonymization, access controls), and consider incorporating microservices architecture for scalability and modularity. Also, provide a clear outline of the data flow within the system.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "task-decomposer",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3586,
+    "project_id": "PerformanceDataIntegrator",
+    "title": "Data Source Integration",
+    "description": "Identify and integrate various data sources for performance data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3587,
+    "project_id": "PerformanceDataIntegrator",
+    "title": "Data Transformation and Consolidation",
+    "description": "Develop processes to transform and consolidate performance data from different sources into a unified format.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3588,
+    "project_id": "PerformanceDataIntegrator",
+    "title": "Performance Reporting and Visualization",
+    "description": "Design and develop the user interface and reporting tools for performance data visualization.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3589,
+    "project_id": "PerformanceDataIntegrator",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema for storing and managing performance data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3590,
+    "project_id": "PerformanceDataIntegrator",
+    "title": "Security and Access Control",
+    "description": "Implement security measures and access control mechanisms to ensure data privacy and integrity.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3591,
+    "project_id": "PerformanceDataIntegrator",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and execute comprehensive test plans to ensure system functionality and performance.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Data Source Integration",
+      "Data Transformation and Consolidation",
+      "Performance Reporting and Visualization",
+      "Database Design and Implementation",
+      "Security and Access Control"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3592,
+    "project_id": "PerformanceDataIntegrator",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment environment, automate deployment processes, and implement monitoring and logging.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3593,
+    "project_id": "PerformanceDataIntegrator",
+    "title": "Documentation and User Training",
+    "description": "Create comprehensive documentation and provide user training for the PerformanceDataIntegrator system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Performance Reporting and Visualization",
+      "Security and Access Control"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

@@ -1,0 +1,298 @@
+[
+  {
+    "id": 8047,
+    "project_id": "MultilingualMaster",
+    "title": "Define Project Requirements",
+    "description": "Gather and document functional requirements, non-functional requirements, and business requirements for the MultilingualMaster system.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8048,
+    "project_id": "MultilingualMaster",
+    "title": "Design System Architecture",
+    "description": "Develop the overall system architecture for the MultilingualMaster application, including frontend, backend, and database design.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8049,
+    "project_id": "MultilingualMaster",
+    "title": "Develop Frontend Interface",
+    "description": "Create the user interface for the MultilingualMaster application, allowing users to manage translations and settings.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8050,
+    "project_id": "MultilingualMaster",
+    "title": "Develop Backend Services",
+    "description": "Create the backend services to handle translation requests and manage user data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8051,
+    "project_id": "MultilingualMaster",
+    "title": "Create Translation Workflow",
+    "description": "Establish a workflow for translators to receive, review, and submit translations within the system.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Requirements",
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8052,
+    "project_id": "MultilingualMaster",
+    "title": "Implement Translation Management UI",
+    "description": "Develop the user interface for translators to manage their tasks, submit translations, and view translation statuses.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Create Translation Workflow"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8053,
+    "project_id": "MultilingualMaster",
+    "title": "Configure Database Schema",
+    "description": "Design and implement the database schema to store translations, users, and other relevant data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8054,
+    "project_id": "MultilingualMaster",
+    "title": "Set Up Continuous Integration/Continuous Deployment (CI/CD)",
+    "description": "Configure the CI/CD pipeline to automate the testing, building, and deployment of application changes.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8055,
+    "project_id": "MultilingualMaster",
+    "title": "Perform Unit Tests",
+    "description": "Develop and execute unit tests for the application to ensure proper functionality and code coverage.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop Frontend Interface",
+      "Develop Backend Services"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8056,
+    "project_id": "MultilingualMaster",
+    "title": "Perform Integration Tests",
+    "description": "Execute integration tests to verify the functionality and compatibility between the frontend, backend, and database components.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Develop Frontend Interface",
+      "Develop Backend Services",
+      "Implement Translation Management UI"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8057,
+    "project_id": "MultilingualMaster",
+    "title": "Conduct System Testing",
+    "description": "Execute system-level testing to ensure that the MultilingualMaster application meets all requirements and performs as expected.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Develop Frontend Interface",
+      "Develop Backend Services",
+      "Implement Translation Management UI",
+      "Configure Database Schema",
+      "Set Up CI/CD"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8058,
+    "project_id": "MultilingualMaster",
+    "title": "Fix Identified Issues",
+    "description": "Address any issues discovered during testing and re-test to ensure the resolution.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [
+      "Perform Unit Tests",
+      "Perform Integration Tests",
+      "Conduct System Testing"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8059,
+    "project_id": "MultilingualMaster",
+    "title": "Secure the Application",
+    "description": "Implement security measures to protect user data and prevent unauthorized access.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 1,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8060,
+    "project_id": "MultilingualMaster",
+    "title": "Document the Application",
+    "description": "Create technical documentation for the MultilingualMaster system, including API references and user guides.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Develop Frontend Interface",
+      "Develop Backend Services"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 8061,
+    "project_id": "MultilingualMaster",
+    "title": "Deploy the MultilingualMaster System",
+    "description": "Prepare the application for production deployment, ensuring proper configuration and testing.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Fix Identified Issues",
+      "Configure Database Schema",
+      "Set Up CI/CD"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

@@ -1,0 +1,210 @@
+[
+  {
+    "id": 3439,
+    "project_id": "OilPumpSentry",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements through stakeholder interviews, market research, and analysis of existing solutions.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3440,
+    "project_id": "OilPumpSentry",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture for OilPumpSentry, including components for data ingestion, processing, storage, visualization, and security. Consider scalability, fault tolerance, and performance requirements. Outline the technologies and frameworks to be used for each component, focusing on industry-standard tools that are both efficient and reliable. Include a discussion on how real-time inference and near real-time notifications will be integrated into the system architecture.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3441,
+    "project_id": "OilPumpSentry",
+    "title": "Data Ingestion and Processing Pipeline",
+    "description": "Develop a pipeline to ingest and process sensor data from sucker rod pumping systems in near real-time.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3442,
+    "project_id": "OilPumpSentry",
+    "title": "Machine Learning Model Development",
+    "description": "Develop and train machine learning models for condition-based maintenance prediction and anomaly detection.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3443,
+    "project_id": "OilPumpSentry",
+    "title": "Data Storage and Management",
+    "description": "Design and implement a scalable and secure data storage solution for sensor data and model results.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3444,
+    "project_id": "OilPumpSentry",
+    "title": "User Interface and Visualization",
+    "description": "Develop a user-friendly web application for visualizing sensor data, model results, and maintenance notifications.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3445,
+    "project_id": "OilPumpSentry",
+    "title": "Notification and Alerting System",
+    "description": "Implement a system for generating and delivering timely notifications and alerts based on model results.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design",
+      "Machine Learning Model Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3446,
+    "project_id": "OilPumpSentry",
+    "title": "Security and Access Control",
+    "description": "Design and implement secure authentication, authorization, and access control mechanisms for the application.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3447,
+    "project_id": "OilPumpSentry",
+    "title": "Continuous Integration and Deployment",
+    "description": "Set up a CI/CD pipeline for automated testing, building, and deployment of the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3448,
+    "project_id": "OilPumpSentry",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and execute comprehensive test plans for functional, performance, and security testing of the application.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3449,
+    "project_id": "OilPumpSentry",
+    "title": "Documentation and User Guides",
+    "description": "Create technical documentation, user guides, and training materials for the application.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

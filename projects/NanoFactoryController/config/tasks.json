@@ -1,0 +1,213 @@
+[
+  {
+    "id": 3253,
+    "project_id": "NanoFactoryController",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the requirements for the NanoFactoryController system, including the types of molecular manufacturing processes to be controlled, the desired level of precision, and any other relevant constraints or specifications.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3254,
+    "project_id": "NanoFactoryController",
+    "title": "Design System Architecture for NanoFactoryController",
+    "description": "Design the overall architecture of the NanoFactoryController system, including the various components, their interactions, and the communication protocols between them. The architecture should consider scalability, fault tolerance, security, and performance requirements. Ensure that the design follows industry best practices, adheres to relevant standards, and includes a clear documentation for each component's role and responsibilities. Since this task involves critical system-level decisions, it is highly recommended to include a detailed analysis of potential trade-offs and their impact on the system's performance and scalability. The design should also provide an outline for the implementation plan.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3255,
+    "project_id": "NanoFactoryController",
+    "title": "Develop Control Algorithms",
+    "description": "Develop the algorithms and logic for controlling the molecular manufacturing processes with the required precision and accuracy.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3256,
+    "project_id": "NanoFactoryController",
+    "title": "Design Revised User Interface for NanoFactoryController System",
+    "description": "Design the user interface for the NanoFactoryController system, ensuring it is intuitive, responsive, and adheres to best practices for user experience (UX) design. The UI should cater to different user roles (Admin, Operator, Scientist) and access levels, integrate seamlessly with other system components, provide monitoring and control capabilities for molecular manufacturing processes, and offer real-time feedback mechanisms, data visualization tools, error handling features, and clear documentation. In addition, consider the need for a flexible design to accommodate future updates and expansions of the system.",
+    "status": "READY_FOR_REVISE",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3257,
+    "project_id": "NanoFactoryController",
+    "title": "Implement Security Measures for NanoFactoryController System",
+    "description": "Implement robust and comprehensive security measures for the NanoFactoryController system. This includes implementing access controls, data encryption, secure communication protocols, and threat detection mechanisms. Collaborate with relevant team members throughout the implementation process, ensuring adherence to industry best practices and standards. Also, consider implementing measures for user authentication, authorization, and accountability. Upon completion, document the implemented security measures in the system's technical documentation. Provide regular updates on progress and any potential challenges during the implementation process.",
+    "status": "DRAFT_FOR_REVIEW",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3258,
+    "project_id": "NanoFactoryController",
+    "title": "Set up Development and Testing Environment",
+    "description": "Set up the development and testing environment for the NanoFactoryController system, including the necessary hardware, software, and tools.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3259,
+    "project_id": "NanoFactoryController",
+    "title": "Develop Comprehensive Testing Framework (Revised)",
+    "description": "Develop a robust testing framework for the NanoFactoryController system. The revised framework will include unit tests, integration tests, and system tests focusing on edge cases, error handling, performance optimizations, and security aspects. Ensure test coverage of all critical functionalities while considering best practices in test-driven development (TDD). Update the test framework to allow for easy maintenance, scalability, and extensibility. Include a focus on test automation and continuous integration/continuous delivery (CI/CD) practices.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Set up Development and Testing Environment"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3260,
+    "project_id": "NanoFactoryController",
+    "title": "Implement System Components",
+    "description": "Implement the various components of the NanoFactoryController system, including the control algorithms, user interface, and security measures.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Control Algorithms",
+      "Design User Interface",
+      "Implement Security Measures"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3261,
+    "project_id": "NanoFactoryController",
+    "title": "Conduct System Testing",
+    "description": "Conduct thorough testing of the NanoFactoryController system, using the developed testing framework, to ensure its proper functioning and compliance with the requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement System Components",
+      "Develop Testing Framework"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3262,
+    "project_id": "NanoFactoryController",
+    "title": "Prepare Documentation",
+    "description": "Prepare comprehensive documentation for the NanoFactoryController system, including user manuals, technical specifications, and maintenance guides.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Implement System Components"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 3263,
+    "project_id": "NanoFactoryController",
+    "title": "Deploy and Maintain System",
+    "description": "Deploy the NanoFactoryController system in the production environment, and establish processes for ongoing maintenance, updates, and support.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Conduct System Testing",
+      "Prepare Documentation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

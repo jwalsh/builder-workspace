@@ -1,0 +1,217 @@
+[
+  {
+    "id": 2638,
+    "project_id": "InnovationIncubator",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document detailed requirements for the InnovationIncubator platform, including features, user roles, workflows, and integration with existing systems.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2639,
+    "project_id": "InnovationIncubator",
+    "title": "Design System Architecture - RFC Review and Revisions",
+    "description": "Design the overall system architecture for the InnovationIncubator project, including components, data flow, technology stack, and infrastructure requirements. Consider scalability, maintainability, security aspects, provide a high-level overview, detailed component diagrams, and suggestions on optimizations. This RFC is open for discussion, improvements, and suggestions. The following changes are proposed: 1. Break the architecture design into smaller tasks for easier implementation and review. 2. Incorporate microservices approach to increase scalability and maintainability. 3. Provide detailed explanations of chosen technologies and their advantages. 4. Clarify infrastructure requirements, including cloud services, storage solutions, and database configurations.",
+    "status": "DISCUSSION",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Gather Non-Functional Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2640,
+    "project_id": "InnovationIncubator",
+    "title": "Design User Interface and Experience (UI/UX) - Refactored",
+    "description": "Refine the design of the user interface and user experience for the InnovationIncubator platform. This includes wireframes, mockups, prototypes, accessibility considerations, high-fidelity visual design elements, and interactive design elements. Collaborate with stakeholders to ensure the design aligns with project goals, meets user needs, and is scalable for future growth. Also, consider performance optimizations and progressive enhancement for better cross-device compatibility.",
+    "status": "IN_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Conduct User Research and Persona Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2641,
+    "project_id": "InnovationIncubator",
+    "title": "Set up Development Environment",
+    "description": "Configure the development environment, including version control, build tools, and continuous integration/deployment pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2642,
+    "project_id": "InnovationIncubator",
+    "title": "Design Database Schema for InnovationIncubator",
+    "description": "Design the database schema to store and manage innovation initiatives, user data, roles and permissions, and other relevant information. Consider scalability, security, and performance requirements. The design should be modular, extensible, and adhere to best practices for data modeling. Additionally, ensure the schema is compatible with our existing systems for seamless integration. Also, consider implementing version control mechanisms for easier updates and rollbacks.",
+    "status": "NEEDS_EDIT",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Define User Roles and Permissions"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2643,
+    "project_id": "InnovationIncubator",
+    "title": "Implement Backend Services",
+    "description": "Develop and implement backend services for the platform, including APIs, business logic, and integration with other systems.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Design Database Schema"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2644,
+    "project_id": "InnovationIncubator",
+    "title": "Implement Frontend Components",
+    "description": "Develop and implement frontend components for the platform, including user interfaces, navigation, and interactions.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design User Interface and Experience"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2645,
+    "project_id": "InnovationIncubator",
+    "title": "Implement Comprehensive Security Measures (Revised)",
+    "description": "Update the platform with robust security measures such as multi-factor authentication, role-based access control, data encryption at rest and in transit, regular vulnerability testing, secure coding practices, and implementation of a centralized logging system for monitoring and auditing purposes.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2646,
+    "project_id": "InnovationIncubator",
+    "title": "Write Documentation",
+    "description": "Write comprehensive documentation for the platform, including user guides, developer guides, and API documentation.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Implement Backend Services",
+      "Implement Frontend Components"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2647,
+    "project_id": "InnovationIncubator",
+    "title": "Conduct Testing and Quality Assurance",
+    "description": "Perform thorough testing and quality assurance for the platform, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Backend Services",
+      "Implement Frontend Components"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2648,
+    "project_id": "InnovationIncubator",
+    "title": "Deploy and Monitor Platform",
+    "description": "Deploy the InnovationIncubator platform to production environments, and set up monitoring and logging systems.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Implement Backend Services",
+      "Implement Frontend Components",
+      "Conduct Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

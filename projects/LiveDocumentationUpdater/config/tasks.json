@@ -1,0 +1,196 @@
+[
+  {
+    "id": 2924,
+    "project_id": "LiveDocumentationUpdater",
+    "title": "Define Project Scope and Requirements - REVISED",
+    "description": "Revised and expanded detailed requirements for the LiveDocumentationUpdater system. The requirements include types of documentation to be updated (e.g., user guides, API docs, code comments, technical blogs), sources of code and process changes (including version control systems such as GitHub or Bitbucket, continuous integration/continuous deployment pipelines like Jenkins or CircleCI, event-driven triggers such as webhooks or events from messaging queues), desired update mechanisms (real-time, scheduled, on-demand), handling of edge cases such as merges, pull requests, hotfixes, support for multiple programming languages, and consideration for compatibility with various IDEs. This aim is to provide a comprehensive understanding of the system's intended functionality, its interactions with other components, and how it will adapt to our ever-evolving development landscape. Additionally, it would be beneficial to consider integrating the system with popular issue tracking tools like Jira or GitHub Issues for better traceability.",
+    "status": "READY_FOR_APPROVAL",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2925,
+    "project_id": "LiveDocumentationUpdater",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the LiveDocumentationUpdater system, including the components, their interactions, and the data flow.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2926,
+    "project_id": "LiveDocumentationUpdater",
+    "title": "Develop Code Change Monitoring",
+    "description": "Implement the mechanisms for monitoring code changes in the source control system and triggering the documentation update process.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2927,
+    "project_id": "LiveDocumentationUpdater",
+    "title": "Develop Process Change Monitoring",
+    "description": "Implement the mechanisms for monitoring process changes (e.g., workflow updates, policy changes) and triggering the documentation update process.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2928,
+    "project_id": "LiveDocumentationUpdater",
+    "title": "Develop Documentation Update Engine",
+    "description": "Implement the core engine that updates the documentation based on the detected code and process changes.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Code Change Monitoring",
+      "Develop Process Change Monitoring"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2929,
+    "project_id": "LiveDocumentationUpdater",
+    "title": "Integrate with Documentation Sources",
+    "description": "Develop the mechanisms for integrating with various documentation sources (e.g., wikis, knowledge bases, code comments) and updating them with the changes.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Documentation Update Engine"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2930,
+    "project_id": "LiveDocumentationUpdater",
+    "title": "Develop User Interface",
+    "description": "Design and implement a user interface for configuring the system, monitoring the update process, and accessing the updated documentation.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2931,
+    "project_id": "LiveDocumentationUpdater",
+    "title": "Set up Testing and Deployment",
+    "description": "Define and implement the testing strategies and deployment processes for the LiveDocumentationUpdater system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Develop Documentation Update Engine",
+      "Integrate with Documentation Sources",
+      "Develop User Interface"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2932,
+    "project_id": "LiveDocumentationUpdater",
+    "title": "Conduct Security Review",
+    "description": "Perform a comprehensive security review of the LiveDocumentationUpdater system to identify and mitigate potential vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Develop Documentation Update Engine",
+      "Integrate with Documentation Sources",
+      "Develop User Interface"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 2933,
+    "project_id": "LiveDocumentationUpdater",
+    "title": "Write User Documentation",
+    "description": "Create comprehensive user documentation for the LiveDocumentationUpdater system, including installation guides, configuration instructions, and usage examples.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Develop User Interface",
+      "Set up Testing and Deployment"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]
