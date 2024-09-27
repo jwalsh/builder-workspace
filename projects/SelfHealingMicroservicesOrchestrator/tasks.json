@@ -2,37 +2,45 @@
   {
     "id": 6533,
     "project_id": "SelfHealingMicroservicesOrchestrator",
-    "title": "Define Project Scope and Requirements",
-    "description": "Gather and document the detailed requirements for the self-healing microservices orchestrator, including the desired features, performance goals, scalability needs, and integration with existing systems.",
-    "status": "TODO",
-    "assigned_to": "project-manager",
+    "title": "Define Project Scope and Requirements - Revised",
+    "description": "Gather and document the detailed requirements for the self-healing microservices orchestrator, including the desired features (such as automatic service recovery, failure detection, load balancing, and intelligent routing), performance goals, scalability needs (e.g., handling high request volumes with minimal latency), integration with existing systems, and any other relevant requirements. Additionally, specify any additional resources required for the successful completion of this task.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [],
     "task_type": "rfc",
     "rfc_state": "DRAFT",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6534,
     "project_id": "SelfHealingMicroservicesOrchestrator",
-    "title": "Design System Architecture",
-    "description": "Design the overall architecture of the self-healing microservices orchestrator, including the components, their interactions, and the communication protocols. Consider factors such as scalability, fault tolerance, monitoring, and self-healing mechanisms. Outline the high-level architecture and the responsibilities of each component.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "code-architect",
+    "title": "Design System Architecture - Revised",
+    "description": "This RFC proposes a high-level design for the Self-Healing Microservices Orchestrator. The architecture includes key components, their interactions, and the communication protocols. Factors such as scalability, fault tolerance, monitoring, self-healing mechanisms are considered. This document outlines the proposed architecture, the responsibilities of each component, and discusses potential dependencies.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "project-manager",
     "priority": 5,
     "dependencies": [
       "Define Project Scope and Requirements"
     ],
     "task_type": "rfc",
-    "rfc_state": "DRAFT",
-    "implementation_state": null
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6535,
     "project_id": "SelfHealingMicroservicesOrchestrator",
     "title": "Design Failure Detection and Recovery Mechanisms",
-    "description": "Design the mechanisms for detecting failures in microservices and the strategies for automatically recovering from those failures, ensuring high availability.",
-    "status": "TODO",
+    "description": "Design the mechanisms for detecting failures in microservices, including health checks, monitoring, and logging, and the strategies for automatically recovering from those failures through techniques such as service replication, auto-scaling, and failover, ensuring high availability. Consider potential edge cases and failure scenarios, and ensure the design is scalable and fault-tolerant.",
+    "status": "IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
@@ -40,14 +48,18 @@
     ],
     "task_type": "rfc",
     "rfc_state": "DRAFT",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6536,
     "project_id": "SelfHealingMicroservicesOrchestrator",
-    "title": "Design Monitoring and Logging Components",
-    "description": "Design the components responsible for monitoring the health of microservices and logging relevant events, metrics, and traces for analysis, troubleshooting, and auditing purposes. Consider integrating with existing monitoring and logging solutions or developing custom components based on project requirements.",
-    "status": "TODO",
+    "title": "Design Monitoring and Logging Components for SelfHealing Microservices Orchestrator",
+    "description": "Design the monitoring and logging components responsible for: a) health monitoring of microservices, b) capturing relevant events, metrics, and traces for analysis, troubleshooting, and auditing purposes. Consider integrating with existing monitoring and logging solutions or developing custom components based on project requirements. To ensure scalability and efficiency, consider implementing distributed tracing techniques such as Jaeger or Zipkin. Include guidelines for logging structure (e.g., structured logs), alert thresholds, and log retention policies.",
+    "status": "DONE",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
@@ -55,15 +67,19 @@
     ],
     "task_type": "rfc",
     "rfc_state": "REVIEW",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6537,
     "project_id": "SelfHealingMicroservicesOrchestrator",
-    "title": "Design User Interface and API",
-    "description": "Design the user interface and API for interacting with the self-healing microservices orchestrator, including management, configuration, monitoring, and reporting capabilities.",
-    "status": "TODO",
-    "assigned_to": "frontend-developer",
+    "title": "Design User Interface and API - Revised",
+    "description": "Design a user-friendly interface and API for the self-healing microservices orchestrator. The design should include intuitive management, configuration, monitoring, and reporting capabilities. Ensure integration with our existing Design System Architecture and consider the defined Monitoring and Logging Requirements.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "task-decomposer",
     "priority": 3,
     "dependencies": [
       "Design System Architecture",
@@ -71,7 +87,11 @@
     ],
     "task_type": "rfc",
     "rfc_state": "REVIEW",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 6538,
@@ -89,6 +109,10 @@
     ],
     "task_type": "rfc_review",
     "rfc_state": null,
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   }
 ]

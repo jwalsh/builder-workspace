@@ -2,22 +2,26 @@
   {
     "id": 3977,
     "project_id": "QuantumAlgorithmForge",
-    "title": "Define Project Scope and Requirements",
-    "description": "Gather and document the project requirements, including the specific quantum algorithms to be developed, target applications, performance goals, constraints, assumptions, and any relevant industry standards or regulations.",
-    "status": "TODO",
-    "assigned_to": "project-manager",
+    "title": "Define Project Scope and Requirements - REVISION",
+    "description": "Reviewed and updated the project requirements. The project will focus on developing quantum algorithms for cryptography and drug discovery applications using quantum computing simulators. Specific algorithms include Shor's algorithm, Grover's algorithm, Quantum Monte Carlo (QMC) methods, and variational quantum eigensolver (VQE). Performance goals have been established, and constraints, assumptions, and relevant industry standards have been identified. A list of target applications is included.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [],
     "task_type": "rfc",
-    "rfc_state": "REVIEW",
-    "implementation_state": null
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 3978,
     "project_id": "QuantumAlgorithmForge",
-    "title": "Design System Architecture",
-    "description": "Design the overall system architecture, including the quantum computing simulator(s) to be used, the programming languages and frameworks, the integration with external libraries or tools, and the development, testing, and deployment workflows.",
-    "status": "TODO",
+    "title": "Design System Architecture - RFC Review",
+    "description": "Design the overall system architecture for QuantumAlgorithmForge project. This includes selection of quantum computing simulator(s), choice of programming languages and frameworks, integration with external libraries or tools, defining development, testing, and deployment workflows.",
+    "status": "REVIEW",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
@@ -25,7 +29,11 @@
     ],
     "task_type": "rfc",
     "rfc_state": "REVIEW",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 3979,
@@ -40,37 +48,49 @@
     ],
     "task_type": "decompose",
     "rfc_state": null,
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 3980,
     "project_id": "QuantumAlgorithmForge",
     "title": "Set up Testing and Validation Framework",
-    "description": "Establish a testing and validation framework to ensure the correctness and performance of the developed quantum algorithms, including unit tests, integration tests, and benchmarking tools.",
-    "status": "TODO",
-    "assigned_to": "qa-tester",
+    "description": "Create a comprehensive testing and validation framework that ensures the correctness, performance, and scalability of developed quantum algorithms. The framework will encompass unit tests, integration tests, benchmarking tools, and automated test suites for continuous integration and regression testing.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "Design System Architecture"
     ],
     "task_type": "rfc",
     "rfc_state": "DRAFT",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 3981,
     "project_id": "QuantumAlgorithmForge",
-    "title": "Implement Security Measures",
-    "description": "Integrate appropriate security measures to protect the quantum algorithms and the underlying system, considering potential quantum computing threats and vulnerabilities such as quantum attacks on classical cryptography, side-channel attacks, and vulnerabilities in quantum error correction codes.",
-    "status": "TODO",
+    "title": "Implement Quantum-Resistant Security Measures",
+    "description": "Integrate quantum-resistant security measures to protect the quantum algorithms and the underlying system, addressing potential quantum computing threats and vulnerabilities such as quantum attacks on classical cryptography, side-channel attacks, and weaknesses in quantum error correction codes. Also consider the future-proofing aspects, preparing for post-quantum cryptographic standards.",
+    "status": "IN_PROGRESS",
     "assigned_to": "security-specialist",
     "priority": 5,
     "dependencies": [
       "Design System Architecture"
     ],
     "task_type": "rfc",
-    "rfc_state": "DRAFT",
-    "implementation_state": null
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 3982,
@@ -85,14 +105,18 @@
     ],
     "task_type": "decompose",
     "rfc_state": null,
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 3983,
     "project_id": "QuantumAlgorithmForge",
-    "title": "Set up Continuous Integration and Deployment",
-    "description": "Establish a continuous integration and deployment pipeline to automate the build, testing, and deployment processes for the quantum algorithms and related components. The pipeline should include steps for code linting, static analysis, unit testing, integration testing, and deployment to staging and production environments. Ensure that the pipeline is configurable, maintainable, and scalable to accommodate future growth and changes.",
-    "status": "TODO",
+    "title": "Set up Continuous Integration and Deployment (CI/CD)",
+    "description": "Establish a continuous integration and deployment pipeline to automate the build, testing, and deployment processes for the quantum algorithms and related components. The pipeline should include steps for code linting, static analysis, unit testing, integration testing, and deployment to staging and production environments. Ensure that the pipeline is configurable, maintainable, scalable, secure, and efficient to accommodate future growth and changes. Involve relevant team members in the CI/CD process, such as developers, QA testers, and security specialists.",
+    "status": "IN_PROGRESS",
     "assigned_to": "devops-engineer",
     "priority": 3,
     "dependencies": [
@@ -100,7 +124,11 @@
       "Set up Testing and Validation Framework"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW",
-    "implementation_state": null
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   }
 ]

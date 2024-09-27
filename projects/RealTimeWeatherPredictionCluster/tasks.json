@@ -10,14 +10,18 @@
     "dependencies": [],
     "task_type": "decompose",
     "rfc_state": null,
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 8964,
     "project_id": "RealTimeWeatherPredictionCluster",
     "title": "Develop Data Acquisition Module",
-    "description": "Create a module to collect data from weather stations and satellites in real-time.",
-    "status": "TODO",
+    "description": "Create a module to collect data from weather stations and satellites in real-time. This module should be able to handle various data formats, ensure data integrity, and implement error handling mechanisms.",
+    "status": "TO_DO",
     "assigned_to": "backend-developer",
     "priority": 2,
     "dependencies": [
@@ -25,30 +29,38 @@
     ],
     "task_type": "rfc",
     "rfc_state": "UNKNOWN",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 8965,
     "project_id": "RealTimeWeatherPredictionCluster",
     "title": "Implement Meteorological Models",
-    "description": "Code the complex meteorological models that will be used for weather prediction.",
+    "description": "Code the complex meteorological models that will be used for weather prediction. This task includes implementation of numerical weather prediction (NWP) models such as NAM, GFS, and others.",
     "status": "TODO",
-    "assigned_to": "project-manager",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "Define System Architecture"
     ],
     "task_type": "rfc",
     "rfc_state": "UNKNOWN",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 8966,
     "project_id": "RealTimeWeatherPredictionCluster",
     "title": "Create Real-Time Prediction Algorithm",
-    "description": "Develop an algorithm to process the acquired data and make real-time weather predictions.",
-    "status": "TODO",
-    "assigned_to": "backend-developer",
+    "description": "Develop an efficient and accurate algorithm to process the acquired data in real-time for weather prediction. The algorithm should leverage the power of machine learning techniques where applicable.",
+    "status": "TO REVIEW",
+    "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
       "Develop Data Acquisition Module",
@@ -56,52 +68,68 @@
     ],
     "task_type": "rfc",
     "rfc_state": "UNKNOWN",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 8967,
     "project_id": "RealTimeWeatherPredictionCluster",
     "title": "Design User Interface",
-    "description": "Create an intuitive and user-friendly interface to visualize the weather data and predictions.",
-    "status": "TODO",
-    "assigned_to": "frontend-developer",
+    "description": "Create an intuitive and user-friendly interface for visualizing weather data and predictions. The design should cater to the needs of meteorologists, climatologists, and general public.",
+    "status": "TO_DO_REVIEW",
+    "assigned_to": "task-decomposer",
     "priority": 5,
     "dependencies": [
       "Define System Architecture"
     ],
     "task_type": "rfc",
-    "rfc_state": "UNKNOWN",
-    "implementation_state": null
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 8968,
     "project_id": "RealTimeWeatherPredictionCluster",
     "title": "Set Up Database and Data Storage",
-    "description": "Configure a database to store the acquired data and predictions.",
-    "status": "TODO",
-    "assigned_to": "project-manager",
+    "description": "Configure a database (preferably NoSQL for scalability) to store the acquired weather data, predictions, and meteorological model parameters. Consider performance, redundancy, and geographic distribution for efficient data access.",
+    "status": "REVIEW",
+    "assigned_to": "database-specialist",
     "priority": 2,
     "dependencies": [
       "Define System Architecture"
     ],
     "task_type": "rfc",
     "rfc_state": "UNKNOWN",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 8969,
     "project_id": "RealTimeWeatherPredictionCluster",
     "title": "Implement DevOps for Deployment and Scaling",
-    "description": "Develop CI/CD pipelines and configure the system to scale based on demand.",
-    "status": "TODO",
-    "assigned_to": "devops-engineer",
+    "description": "Create CI/CD pipelines, configure the system to scale based on demand, and implement monitoring mechanisms for resource utilization.",
+    "status": "IN_REVIEW",
+    "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
       "Define System Architecture"
     ],
     "task_type": "rfc",
     "rfc_state": "UNKNOWN",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 8970,
@@ -121,14 +149,18 @@
     ],
     "task_type": "rfc",
     "rfc_state": "UNKNOWN",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 8971,
     "project_id": "RealTimeWeatherPredictionCluster",
     "title": "Secure System Against Potential Threats",
-    "description": "Ensure the system is secure against any potential threats or vulnerabilities.",
-    "status": "TODO",
+    "description": "Thoroughly assess and implement security measures to protect the RealTimeWeatherPredictionCluster from potential threats or vulnerabilities.",
+    "status": "IN_PROGRESS",
     "assigned_to": "security-specialist",
     "priority": 5,
     "dependencies": [
@@ -136,21 +168,29 @@
     ],
     "task_type": "rfc",
     "rfc_state": "UNKNOWN",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 8972,
     "project_id": "RealTimeWeatherPredictionCluster",
     "title": "Document System Design and Functionality",
-    "description": "Write clear documentation detailing the system design, functionality, and usage.",
+    "description": "Write clear, comprehensive documentation detailing the system design, functionality, and usage. Include sections on architecture, components, interfaces, workflow, APIs, and data flow. Provide examples and best practices for usage.",
     "status": "TODO",
-    "assigned_to": "technical-writer",
+    "assigned_to": "task-decomposer",
     "priority": 4,
     "dependencies": [
       "Define System Architecture"
     ],
     "task_type": "rfc",
     "rfc_state": "UNKNOWN",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   }
 ]

@@ -23,6 +23,116 @@ from coordinator.utils import (
 )
 
 
+class TestExtractJsonFromResponse(unittest.TestCase):
+
+    def test_simple_json(self):
+        input_text = '{"key": "value"}'
+        expected = {"key": "value"}
+        self.assertEqual(extract_json_from_response(input_text), expected)
+
+    def test_nested_json(self):
+        input_text = """
+        {
+          "person": {
+            "name": "John",
+            "age": 30,
+            "address": {
+              "street": "123 Main St",
+              "city": "Anytown"
+            }
+          }
+        }
+        """
+        expected = {
+            "person": {
+                "name": "John",
+                "age": 30,
+                "address": {"street": "123 Main St", "city": "Anytown"},
+            }
+        }
+        self.assertEqual(extract_json_from_response(input_text), expected)
+
+    def test_json_with_comments(self):
+        input_text = """
+        {
+          "task": "Deploy application",
+          // This is a comment
+          "status": "In Progress",
+          "assigned_to": "devops-team", /* Another comment */
+          "priority": 1
+        }
+        """
+        expected = {
+            "task": "Deploy application",
+            "status": "In Progress",
+            "assigned_to": "devops-team",
+            "priority": 1,
+        }
+        self.assertEqual(extract_json_from_response(input_text), expected)
+
+    def test_json_with_text_before_and_after(self):
+        input_text = """
+        Some text before JSON
+        {
+          "result": "success",
+          "data": {
+            "id": 123,
+            "name": "Test"
+          }
+        }
+        Some text after JSON
+        """
+        expected = {"result": "success", "data": {"id": 123, "name": "Test"}}
+        self.assertEqual(extract_json_from_response(input_text), expected)
+
+    def test_json_with_nested_objects_and_comments(self):
+        input_text = """
+        Processing task...
+        {
+          "task": {
+            "id": 1,
+            "name": "Complex Task",
+            // This is a nested object
+            "details": {
+              "steps": [
+                "Plan",
+                "Execute",
+                "Review"
+              ],
+              "timeEstimate": "2 days"
+            }
+          },
+          /* Multi-line
+             comment */
+          "assignee": {
+            "id": 101,
+            "name": "Jane Doe"
+          }
+        }
+        Task processed successfully!
+        """
+        expected = {
+            "task": {
+                "id": 1,
+                "name": "Complex Task",
+                "details": {
+                    "steps": ["Plan", "Execute", "Review"],
+                    "timeEstimate": "2 days",
+                },
+            },
+            "assignee": {"id": 101, "name": "Jane Doe"},
+        }
+        self.assertEqual(extract_json_from_response(input_text), expected)
+
+    def test_invalid_json(self):
+        input_text = '{"key": "value",}'  # Invalid JSON (extra comma)
+        self.assertEqual(extract_json_from_response(input_text), {})
+
+    def test_no_json_content(self):
+        input_text = "This is just a plain text without any JSON."
+        self.assertEqual(extract_json_from_response(input_text), {})
+
+
 def test_extract_json_from_response():
     valid_json = '{"key": "value"}'
     assert extract_json_from_response(valid_json) == {"key": "value"}

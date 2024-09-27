@@ -3,21 +3,25 @@
     "id": 4294,
     "project_id": "RemoteTeamBonder",
     "title": "Project Planning and Requirements Gathering",
-    "description": "Define project scope, goals, and requirements for the RemoteTeamBonder platform. This includes identifying key features, user roles, data models, and technical requirements for the platform.",
-    "status": "IN PROGRESS",
-    "assigned_to": "project-manager",
+    "description": "Define project scope, goals, and requirements for the RemoteTeamBonder platform. This includes identifying key features, user roles, data models, technical requirements, and potential integrations with existing tools for the platform, to foster connections and team spirit among remote and distributed workforce through virtual team-building activities.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
     "priority": 1,
     "dependencies": [],
     "task_type": "rfc",
     "rfc_state": "DRAFT",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 4295,
     "project_id": "RemoteTeamBonder",
     "title": "System Architecture Design",
-    "description": "Design the overall system architecture, including components, data flow, integration points, and infrastructure requirements. Consider scalability, security, and performance aspects. Define the technology stack and architectural patterns to be used.",
-    "status": "TODO",
+    "description": "Design the overall system architecture, including components, data flow, integration points, and infrastructure requirements. Consider scalability, security, and performance aspects. Define the technology stack and architectural patterns to be used, focusing on microservices for improved modularity and scalability. Incorporate containerization technologies such as Docker for easy deployment and management.",
+    "status": "IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 1,
     "dependencies": [
@@ -25,22 +29,30 @@
     ],
     "task_type": "rfc",
     "rfc_state": "DRAFT",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 4296,
     "project_id": "RemoteTeamBonder",
-    "title": "Database Design",
-    "description": "Design the database schema and data models for storing user information, team details, activity data, and related metadata. Consider scalability, data integrity, and performance requirements. Define relationships between entities and ensure proper normalization.",
-    "status": "IN PROGRESS",
-    "assigned_to": "database-specialist",
+    "title": "Database Design for RemoteTeamBonder",
+    "description": "Design the database schema and data models for storing user information, team details, activity data, and related metadata. Consider scalability, data integrity, performance requirements, and security considerations. Define relationships between entities, ensure proper normalization, and leverage best practices for database design. Upon completion, submit a detailed documentation that includes ER diagrams.",
+    "status": "NEEDS_REVIEW",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "System Architecture Design"
     ],
     "task_type": "rfc",
     "rfc_state": "REVIEW",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 4297,
@@ -55,7 +67,11 @@
     ],
     "task_type": "decompose",
     "rfc_state": null,
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 4298,
@@ -71,7 +87,11 @@
     ],
     "task_type": "decompose",
     "rfc_state": null,
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 4299,
@@ -86,7 +106,11 @@
     ],
     "task_type": "rfc_review",
     "rfc_state": null,
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 4300,
@@ -102,15 +126,19 @@
     ],
     "task_type": "decompose",
     "rfc_state": null,
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 4301,
     "project_id": "RemoteTeamBonder",
     "title": "Deployment and DevOps",
-    "description": "Set up the deployment pipeline, infrastructure, and monitoring for the RemoteTeamBonder platform. This includes the following tasks:\n\n- Containerize the application using Docker or similar technology\n- Set up a continuous integration and continuous deployment (CI/CD) pipeline\n- Provision and configure the necessary cloud infrastructure (e.g., virtual machines, load balancers, databases)\n- Implement monitoring and logging solutions for the application and infrastructure\n- Set up automated testing and deployment processes\n- Ensure security best practices are followed (e.g., secure communication, access controls, data encryption)\n- Implement scalability and high availability measures\n- Document the deployment and DevOps processes",
-    "status": "TODO",
-    "assigned_to": "devops-engineer",
+    "description": "Set up the deployment pipeline, infrastructure, and monitoring for the RemoteTeamBonder platform. This includes the following tasks:\n\n- Containerize the application using Docker or similar technology (consider using Kubernetes for cluster management)\n- Set up a continuous integration and continuous deployment (CI/CD) pipeline (Jenkins or GitHub Actions can be considered)\n- Provision and configure the necessary cloud infrastructure (e.g., virtual machines, load balancers, databases) using Infrastructure as Code (Terraform or AWS CloudFormation)\n- Implement monitoring and logging solutions for the application and infrastructure (Prometheus, Grafana, Logz.io, or Elasticsearch can be considered)\n- Set up automated testing and deployment processes (Selenium for frontend, Pytest/Jest for backend)\n- Ensure security best practices are followed (e.g., secure communication, access controls, data encryption) using tools like OWASP ZAP, AWS Security Hub, or Google Cloud Security Command Center\n- Implement scalability and high availability measures (Auto-scaling groups, load balancers, and CDN)\n- Document the deployment and DevOps processes for future reference\n- Assign a team member to maintain and update the documentation as changes occur",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
       "Frontend Development",
@@ -118,7 +146,11 @@
     ],
     "task_type": "rfc",
     "rfc_state": "REVIEW",
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   },
   {
     "id": 4302,
@@ -134,6 +166,10 @@
     ],
     "task_type": "code_review",
     "rfc_state": null,
-    "implementation_state": null
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
   }
 ]

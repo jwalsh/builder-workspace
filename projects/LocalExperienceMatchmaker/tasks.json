@@ -20,9 +20,9 @@
     "id": 2935,
     "project_id": "LocalExperienceMatchmaker",
     "title": "Design System Architecture for LocalExperienceMatchmaker",
-    "description": "Design the overall system architecture for the LocalExperienceMatchmaker project. The design should focus on maintainability, modularity, scalability, and performance, taking into account aspects such as user authentication and authorization, search and matching algorithms, payment processing, messaging and communication, rating and review systems, scalability and load balancing, error handling, and edge cases. Provide clear definitions of components, data flow, and interactions between different modules. This RFC serves as a guide for the development team. Once the project scope and requirements have been defined, this task can be assigned to the code-architect.",
-    "status": "NEEDS_REFINMENT",
-    "assigned_to": "task-decomposer",
+    "description": "Design the overall system architecture for the LocalExperienceMatchmaker project. The design should focus on maintainability, modularity, scalability, and performance, taking into account aspects such as user authentication and authorization, search and matching algorithms (including AI/ML integration), payment processing, messaging and communication, rating and review systems, scalability and load balancing, error handling and graceful degradation for edge cases, data privacy and security, and documentation of components, data flow, and interactions between different modules. This RFC serves as a guide for the development team. Once the project scope and requirements have been defined, this task can be assigned to the code-architect or task-decomposer based on the project's needs. Please note that the AI/ML integration in search and matching algorithms may require collaboration with our data science team. This RFC is now ready for the 'REVIEWED' state.",
+    "status": "REVIEWED",
+    "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
       "Define project scope and requirements"
@@ -39,9 +39,9 @@
     "id": 2936,
     "project_id": "LocalExperienceMatchmaker",
     "title": "Design database schema for LocalExperienceMatchmaker",
-    "description": "Design the database schema to store user profiles, experiences, guides, and other relevant data. The schema should consider data normalization, indexing, partitioning, caching, and performance optimizations for large-scale data. It should also support scalability and future growth, with a focus on efficiency and flexibility. Consider using cloud-based databases for easy scalability.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "code-architect",
+    "description": "Design the database schema to store user profiles, experiences, guides, and other relevant data. The schema should consider data normalization, indexing, partitioning, caching, and performance optimizations for large-scale data. It should also support scalability and future growth, with a focus on efficiency and flexibility. Consider using cloud-based databases (e.g., AWS DynamoDB or Google Firestore) for easy scalability. Include the use of NoSQL databases to handle unstructured data and real-time updates. Ensure the schema is designed with data modeling best practices, including denormalization where necessary to improve query performance. Consider using a combination of key-value stores and document databases to leverage their respective strengths.",
+    "status": "REVIEW",
+    "assigned_to": "database-specialist",
     "priority": 3,
     "dependencies": [
       "Design system architecture"
