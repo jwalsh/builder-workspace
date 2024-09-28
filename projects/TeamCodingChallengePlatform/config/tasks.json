@@ -1,0 +1,114 @@
+[
+  {
+    "id": 5013,
+    "project_id": "TeamCodingChallengePlatform",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document detailed requirements for the TeamCodingChallengePlatform, including features, user roles (e.g., challenger, mentor, judge), workflows (challenge creation, submission, evaluation), integration points (APIs, GitHub, Slack), security considerations (user authentication, data privacy), scalability requirements, performance goals, and design patterns for frontend and backend development.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5014,
+    "project_id": "TeamCodingChallengePlatform",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including components, data flow, technology stack, and infrastructure. Consider scalability, security, and performance requirements. Outline the high-level architecture and identify potential challenges or risks in a clear and concise manner. Include diagrams where necessary to aid understanding.",
+    "status": "READY_FOR_APPROVAL",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5015,
+    "project_id": "TeamCodingChallengePlatform",
+    "title": "Design Database Schema for TeamCodingChallengePlatform",
+    "description": "Design a scalable, performant, and secure database schema to store challenge data, user information, submissions, team formations, scoring mechanisms, and other relevant data. Consider the data integrity requirements, ensure compatibility with our existing technology stack, and follow best practices in database design.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5016,
+    "project_id": "TeamCodingChallengePlatform",
+    "title": "Design User Interface and Experience",
+    "description": "Design the user interface and user experience for the platform, including wireframes, mockups, and prototypes. Consider the needs of different user roles (organizers, participants, judges, etc.) and ensure a seamless and intuitive experience. Incorporate best practices for usability, accessibility, responsive design, and follow industry-standard design guidelines and patterns. Collaborate with stakeholders to gather requirements and validate designs. Given the complexity of this task, it is recommended that a code-architect or UX/UI expert be involved for the next phase of this project.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5017,
+    "project_id": "TeamCodingChallengePlatform",
+    "title": "Define Security Requirements",
+    "description": "Define security requirements and measures to ensure data integrity, user authentication, secure communication, and compliance with industry standards and best practices.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5018,
+    "project_id": "TeamCodingChallengePlatform",
+    "title": "Plan DevOps and Deployment Strategy",
+    "description": "Define the DevOps strategy, including continuous integration, deployment, monitoring processes, infrastructure provisioning, and containerization (to improve scalability and portability). Also, consider implementing a CI/CD pipeline using tools like Jenkins or CircleCI.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

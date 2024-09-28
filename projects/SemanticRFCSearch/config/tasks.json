@@ -1,0 +1,195 @@
+[
+  {
+    "id": 4515,
+    "project_id": "SemanticRFCSearch",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements. Conduct research on existing RFC search engines and identify areas for improvement. Gather input from potential users and stakeholders.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4516,
+    "project_id": "SemanticRFCSearch",
+    "title": "System Architecture Design (Revised)",
+    "description": "Design the overall system architecture for an advanced RFC search engine, focusing on components for natural language processing, indexing, and search. Define data models, APIs, and integration points while ensuring scalability, maintainability, performance optimization, consideration of edge cases, error handling, security aspects, compliance with relevant standards and regulations. To enhance the review process, include a high-level system diagram, a detailed description for each component, along with their interaction and data flow, and a discussion on potential challenges, mitigation strategies, and future scalability plans. Provide a clear roadmap for the implementation phase, outlining the steps required to move from design to deployment.",
+    "status": "REVIEW_IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4517,
+    "project_id": "SemanticRFCSearch",
+    "title": "Natural Language Processing (NLP) Module",
+    "description": "Develop the NLP module responsible for understanding the context and semantics of user queries and RFC content.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4518,
+    "project_id": "SemanticRFCSearch",
+    "title": "Indexing and Search Engine",
+    "description": "Implement the indexing system for RFC documents and the search engine capable of handling semantic queries.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4519,
+    "project_id": "SemanticRFCSearch",
+    "title": "User Interface and Experience",
+    "description": "Design and develop the user interface and experience for the search engine, including input fields, result presentation, and advanced search options.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4520,
+    "project_id": "SemanticRFCSearch",
+    "title": "Data Ingestion and Management",
+    "description": "Implement a system for ingesting and managing RFC documents, including parsing, indexing, and updating mechanisms.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4521,
+    "project_id": "SemanticRFCSearch",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and test cases to ensure the quality and accuracy of the search engine. Conduct manual and automated testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Natural Language Processing (NLP) Module",
+      "Indexing and Search Engine",
+      "User Interface and Experience",
+      "Data Ingestion and Management"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4522,
+    "project_id": "SemanticRFCSearch",
+    "title": "Security and Compliance",
+    "description": "Implement security measures to protect user data and ensure compliance with relevant regulations and standards.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4523,
+    "project_id": "SemanticRFCSearch",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment environment, including infrastructure provisioning, continuous integration, and continuous deployment pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Testing and Quality Assurance",
+      "Security and Compliance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4524,
+    "project_id": "SemanticRFCSearch",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation for users, administrators, and developers. Establish user support channels and processes.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "User Interface and Experience",
+      "Deployment and DevOps"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

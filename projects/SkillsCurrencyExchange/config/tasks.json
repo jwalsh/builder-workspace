@@ -1,0 +1,175 @@
+[
+  {
+    "id": 4595,
+    "project_id": "SkillsCurrencyExchange",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, goals, and requirements. Conduct stakeholder interviews and workshops to understand user needs, business objectives, and technical feasibility. Identify key features, functionality, and potential integration points.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4596,
+    "project_id": "SkillsCurrencyExchange",
+    "title": "Architecture Design",
+    "description": "Design the overall system architecture, including components, data flow, integration points, and key architectural decisions. Consider factors such as scalability, maintainability, security, and performance. Define the high-level architecture and identify the major components and their responsibilities. This design will serve as a foundation for further development tasks.",
+    "status": "READY_FOR_APPROVAL",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4597,
+    "project_id": "SkillsCurrencyExchange",
+    "title": "Database Design - Updated for Better Performance and Scalability",
+    "description": "Updated database schema and data models to support the application's requirements, including user profiles, skills, transactions, and any other necessary entities. Optimized for improved performance and scalability, ensuring proper indexing and partitioning strategies are in place for efficient querying and data retrieval. Enhanced data integrity through normalization and implemented best practices to maintain high data quality.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Architecture Design",
+      "Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4598,
+    "project_id": "SkillsCurrencyExchange",
+    "title": "Frontend Development",
+    "description": "Design and implement the user interface and frontend components of the application.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4599,
+    "project_id": "SkillsCurrencyExchange",
+    "title": "Backend Development",
+    "description": "Implement the server-side logic, APIs, and business rules of the application.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4600,
+    "project_id": "SkillsCurrencyExchange",
+    "title": "Security and Compliance",
+    "description": "Ensure the application adheres to security best practices and compliance requirements.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4601,
+    "project_id": "SkillsCurrencyExchange",
+    "title": "Testing and Quality Assurance",
+    "description": "Plan and execute testing strategies, including unit, integration, and end-to-end testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4602,
+    "project_id": "SkillsCurrencyExchange",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline, infrastructure, and monitoring for the application. This includes the following tasks:\n\n- Choose and configure a cloud provider (e.g., AWS, GCP, Azure) for hosting the application with a focus on cost-effectiveness and performance\n- Set up a CI/CD pipeline for automated builds, testing, and deployments, emphasizing efficiency and reliability\n- Configure infrastructure as code (IaC) for provisioning and managing resources, ensuring scalability and maintainability\n- Set up monitoring and logging solutions for application performance and health, with the ability to alert and respond to issues quickly\n- Implement security best practices (e.g., network security, access controls, data encryption) while maintaining compliance with industry standards\n- Plan for scaling and load balancing strategies that can accommodate growth and handle peak loads\n- Document the deployment and infrastructure setup, making it easily understandable for team members and future reference\n- Collaborate with Backend Development team to ensure seamless integration of deployment pipeline with the backend services",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Backend Development"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4603,
+    "project_id": "SkillsCurrencyExchange",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation, user guides, and training materials for the application.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

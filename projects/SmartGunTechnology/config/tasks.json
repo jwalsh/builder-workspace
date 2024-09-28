@@ -1,0 +1,217 @@
+[
+  {
+    "id": 4693,
+    "project_id": "SmartGunTechnology",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements. Conduct market research, gather stakeholder input, and identify potential risks and constraints.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4694,
+    "project_id": "SmartGunTechnology",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including hardware and software components, integration points, and data flows. Implement robust security measures such as end-to-end encryption, secure authentication protocols, and access controls. Minimize data collection and implement data protection mechanisms to address privacy concerns. Thoroughly evaluate ethical implications and potential misuse cases. Ensure compliance with all relevant laws, regulations, and industry standards related to firearms, biometrics, and data privacy. Collaborate with relevant stakeholders during the design process.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering",
+      "Legal and Regulatory Review",
+      "Ethical and Social Impact Assessment"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4695,
+    "project_id": "SmartGunTechnology",
+    "title": "Biometric Authentication Module",
+    "description": "Design and develop the biometric authentication module, including fingerprint, iris, or other biometric recognition technologies.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4696,
+    "project_id": "SmartGunTechnology",
+    "title": "Firearm Integration",
+    "description": "Develop the hardware and software components required to integrate the biometric authentication module with firearms.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4697,
+    "project_id": "SmartGunTechnology",
+    "title": "Event Tracking and Logging",
+    "description": "Implement a secure and reliable system for tracking and logging firearm discharge events, including user authentication and event details.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4698,
+    "project_id": "SmartGunTechnology",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement a secure database to store user biometric data, firearm information, and event logs. Ensure compliance with relevant data protection regulations (GDPR, CCPA), implement robust encryption and access controls, and integrate with the existing system architecture. This task includes data modeling, schema design, database implementation, and testing.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "database-specialist",
+    "priority": 5,
+    "dependencies": [
+      "System Architecture Design",
+      "Security and Privacy Requirements Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4699,
+    "project_id": "SmartGunTechnology",
+    "title": "User Interface and Reporting",
+    "description": "Develop a user-friendly interface for managing user accounts, biometric data, and accessing event logs and reports.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4700,
+    "project_id": "SmartGunTechnology",
+    "title": "Security and Compliance",
+    "description": "Ensure the system adheres to relevant security standards and regulations, including data protection, access control, and auditing.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4701,
+    "project_id": "SmartGunTechnology",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and execute testing activities, including unit testing, integration testing, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Biometric Authentication Module",
+      "Firearm Integration",
+      "Event Tracking and Logging",
+      "User Interface and Reporting"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4702,
+    "project_id": "SmartGunTechnology",
+    "title": "Deployment and Operations",
+    "description": "Plan and execute the deployment of the system, including infrastructure setup, data migration, and ongoing monitoring and maintenance.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4703,
+    "project_id": "SmartGunTechnology",
+    "title": "Documentation and Training",
+    "description": "Develop comprehensive documentation, including user manuals, technical specifications, and training materials for end-users and support staff.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "User Interface and Reporting",
+      "Deployment and Operations"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

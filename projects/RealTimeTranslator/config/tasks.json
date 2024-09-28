@@ -1,0 +1,192 @@
+[
+  {
+    "id": 4244,
+    "project_id": "RealTimeTranslator",
+    "title": "Project Planning and Management",
+    "description": "Define project scope, objectives, timeline, and resource allocation. Set up project management tools and communication channels.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4245,
+    "project_id": "RealTimeTranslator",
+    "title": "Requirements Gathering and Analysis",
+    "description": "Conduct stakeholder interviews, research existing solutions, and document functional and non-functional requirements for the real-time translation system.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4246,
+    "project_id": "RealTimeTranslator",
+    "title": "System Architecture Design for RealTimeTranslator",
+    "description": "Design the overall system architecture, focusing on components, interfaces, data flow, and deployment strategy. The design should prioritize scalability, fault tolerance, security, and performance requirements while considering real-time processing needs for law enforcement communication with non-native speakers during investigations. Additionally, propose a modular design to facilitate future upgrades and integrations. Include details on the choice of technologies and frameworks that align with our company's standards and considerations for compliance with data privacy regulations.",
+    "status": "NEEDS_REVISION",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4247,
+    "project_id": "RealTimeTranslator",
+    "title": "Translation Engine Development",
+    "description": "Develop the core AI-powered translation engine using machine learning models and natural language processing techniques.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4248,
+    "project_id": "RealTimeTranslator",
+    "title": "User Interface Design and Development",
+    "description": "Design and develop the user interface for law enforcement personnel to interact with the translation system.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4249,
+    "project_id": "RealTimeTranslator",
+    "title": "Data Management and Storage",
+    "description": "Design and implement the data storage and management system for translation data, user profiles, and system logs.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4250,
+    "project_id": "RealTimeTranslator",
+    "title": "Integration and Testing",
+    "description": "Integrate the various components and conduct comprehensive testing, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Translation Engine Development",
+      "User Interface Design and Development",
+      "Data Management and Storage"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4251,
+    "project_id": "RealTimeTranslator",
+    "title": "Security and Compliance",
+    "description": "Implement security measures, such as data encryption, access controls, and auditing, and ensure compliance with relevant laws and regulations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4252,
+    "project_id": "RealTimeTranslator",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment environment, automate the build and release process, and implement monitoring and logging systems.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Integration and Testing",
+      "Security and Compliance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4253,
+    "project_id": "RealTimeTranslator",
+    "title": "Documentation and Training",
+    "description": "Create user manuals, technical documentation, and training materials for law enforcement personnel and system administrators.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "User Interface Design and Development",
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

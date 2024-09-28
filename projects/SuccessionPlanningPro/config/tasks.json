@@ -1,0 +1,174 @@
+[
+  {
+    "id": 4878,
+    "project_id": "SuccessionPlanningPro",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements for the SuccessionPlanningPro tool.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4879,
+    "project_id": "SuccessionPlanningPro",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including the database schema, backend services, frontend components, security considerations, and deployment strategy. This design should be scalable, secure, and efficient to support the requirements of a comprehensive tool for identifying and developing potential future leaders within the organization.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4880,
+    "project_id": "SuccessionPlanningPro",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema for storing employee data, performance evaluations, and succession planning information.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4881,
+    "project_id": "SuccessionPlanningPro",
+    "title": "Backend Development",
+    "description": "Develop the backend services for managing employee data, performance evaluations, and succession planning workflows.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4882,
+    "project_id": "SuccessionPlanningPro",
+    "title": "Frontend Development",
+    "description": "Develop the user interface for the SuccessionPlanningPro tool, including dashboards, forms, and reporting capabilities.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4883,
+    "project_id": "SuccessionPlanningPro",
+    "title": "Security and Access Control",
+    "description": "Implement robust security measures, including multi-factor authentication, role-based access control, data encryption, and secure data storage, to ensure the confidentiality, integrity, and availability of sensitive employee information. Additionally, consider implementing audit logging for tracking changes and actions within the system.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4884,
+    "project_id": "SuccessionPlanningPro",
+    "title": "Integration and Testing",
+    "description": "Integrate the backend, frontend, and database components, and perform comprehensive testing to ensure the application meets the specified requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4885,
+    "project_id": "SuccessionPlanningPro",
+    "title": "Deployment and DevOps",
+    "description": "Set up the production environment, configure continuous integration and deployment pipelines, and prepare for the application's release.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4886,
+    "project_id": "SuccessionPlanningPro",
+    "title": "Documentation and User Training",
+    "description": "Create comprehensive documentation for administrators and end-users, and develop training materials to ensure smooth adoption of the SuccessionPlanningPro tool.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

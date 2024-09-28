@@ -1,0 +1,194 @@
+[
+  {
+    "id": 4284,
+    "project_id": "RemoteProductivityOptimizer",
+    "title": "Project Planning and Management",
+    "description": "Define project scope, goals, timeline, and resource allocation. Set up project management tools and processes.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4285,
+    "project_id": "RemoteProductivityOptimizer",
+    "title": "Requirements Gathering and Analysis",
+    "description": "Conduct user research, gather requirements from stakeholders (including remote workers, project stakeholders, and potentially domain experts), and analyze the needs of remote workers for productivity optimization. This task will inform the design and development phases of the RemoteProductivityOptimizer project. Include a survey or interview script for user feedback collection.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4286,
+    "project_id": "RemoteProductivityOptimizer",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture for RemoteProductivityOptimizer, including web application, mobile apps, backend services, data storage, and infrastructure. Focus on scalability, performance, security, and maintainability. Provide a high-level overview, detailed component diagrams, and discuss strategies for each component's implementation (e.g., frontend tech stack, database choices, serverless or monolithic architecture). Justify the chosen approach based on cost, efficiency, and long-term maintainability. Additionally, consider accessibility, localization, and user experience in your design. If possible, provide a preliminary timeline for implementation and outline any potential risks or challenges.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4287,
+    "project_id": "RemoteProductivityOptimizer",
+    "title": "Database Design for RemoteProductivityOptimizer",
+    "description": "Design the database schema and data models for storing user data, productivity metrics, and other relevant information. Normalization, scalability, security, and compliance with GDPR regulations should be considered during the design process.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4288,
+    "project_id": "RemoteProductivityOptimizer",
+    "title": "Frontend Development",
+    "description": "Develop the user interfaces for the web application and mobile apps, including responsive design and user experience optimization.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4289,
+    "project_id": "RemoteProductivityOptimizer",
+    "title": "Backend Development",
+    "description": "Develop the server-side logic, APIs, and services for data processing, productivity analysis, and integration with third-party tools.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4290,
+    "project_id": "RemoteProductivityOptimizer",
+    "title": "DevOps and Deployment",
+    "description": "Set up the continuous integration and deployment pipeline, infrastructure provisioning, and monitoring for the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4291,
+    "project_id": "RemoteProductivityOptimizer",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and execute test plans for functional, non-functional, and usability testing. Ensure the application meets quality standards.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4292,
+    "project_id": "RemoteProductivityOptimizer",
+    "title": "Security Auditing and Compliance",
+    "description": "Conduct security audits, implement security best practices, and ensure compliance with relevant regulations and standards.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4293,
+    "project_id": "RemoteProductivityOptimizer",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation, user guides, and support resources for the application.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

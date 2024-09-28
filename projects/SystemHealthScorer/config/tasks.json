@@ -1,0 +1,187 @@
+[
+  {
+    "id": 5004,
+    "project_id": "SystemHealthScorer",
+    "title": "Define Project Scope and Requirements (Revised)",
+    "description": "Provide a detailed document outlining the scope, requirements, components to be monitored, metrics to be used, and desired output format for the SystemHealthScorer project. This includes: \n1. A clear definition of the system components to be included in the model's monitoring. \n2. Description of the key performance indicators (KPIs) or specific metrics that will be considered for each component.\n3. Explanation of the desired format and frequency of health scores output.\n4. Any additional considerations such as edge cases, error handling, or system constraints.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "task-decomposer",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5005,
+    "project_id": "SystemHealthScorer",
+    "title": "Design system architecture",
+    "description": "Design the overall architecture of the SystemHealthScorer, including the data pipeline, the machine learning model, and the integration with the monitored systems. Consider the following aspects:\n\n1. Data ingestion and preprocessing: Define the mechanisms for collecting and preprocessing the system metrics data from various sources.\n2. Data storage: Determine the appropriate data storage solution (e.g., relational database, NoSQL database, data lake) based on the volume, velocity, and variety of the data.\n3. Machine learning model: Specify the type of machine learning model (e.g., supervised, unsupervised, deep learning) and the algorithms to be used for health score prediction.\n4. Model training and evaluation: Design the process for training and evaluating the machine learning model, including data splitting, cross-validation, and performance metrics.\n5. Model deployment: Plan for deploying the trained model in a production environment, considering scalability, fault tolerance, and monitoring.\n6. Integration with monitored systems: Define the interfaces and protocols for integrating the SystemHealthScorer with the systems being monitored, ensuring secure and efficient data exchange.\n7. User interface: Outline the requirements for a user interface that allows administrators to view and manage the system health scores and related information.\n8. Logging and monitoring: Incorporate mechanisms for logging and monitoring the SystemHealthScorer components to ensure proper operation and troubleshooting capabilities.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define project scope and requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5006,
+    "project_id": "SystemHealthScorer",
+    "title": "Set up data collection and processing",
+    "description": "Implement the data pipeline to collect and preprocess the necessary metrics from the monitored systems.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design system architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5007,
+    "project_id": "SystemHealthScorer",
+    "title": "Develop machine learning model",
+    "description": "Build and train the machine learning model to assign health scores based on the collected metrics.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design system architecture",
+      "Set up data collection and processing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5008,
+    "project_id": "SystemHealthScorer",
+    "title": "Implement user interface",
+    "description": "Design and develop a user interface to display the system health scores and provide monitoring and configuration capabilities.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design system architecture",
+      "Develop machine learning model"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5009,
+    "project_id": "SystemHealthScorer",
+    "title": "Set up deployment and monitoring",
+    "description": "Configure the deployment environment and set up monitoring and logging for the SystemHealthScorer application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Design system architecture",
+      "Set up data collection and processing",
+      "Develop machine learning model",
+      "Implement user interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5010,
+    "project_id": "SystemHealthScorer",
+    "title": "Conduct security review",
+    "description": "Review the SystemHealthScorer application for potential security vulnerabilities and implement necessary security measures.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design system architecture",
+      "Set up data collection and processing",
+      "Develop machine learning model",
+      "Implement user interface"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5011,
+    "project_id": "SystemHealthScorer",
+    "title": "Write documentation",
+    "description": "Document the SystemHealthScorer application, including installation instructions, user guides, and technical documentation.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Design system architecture",
+      "Set up data collection and processing",
+      "Develop machine learning model",
+      "Implement user interface",
+      "Set up deployment and monitoring"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5012,
+    "project_id": "SystemHealthScorer",
+    "title": "Perform testing and quality assurance",
+    "description": "Test the SystemHealthScorer application thoroughly, including unit tests, integration tests, and end-to-end tests, to ensure high quality and reliability.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Design system architecture",
+      "Set up data collection and processing",
+      "Develop machine learning model",
+      "Implement user interface",
+      "Set up deployment and monitoring"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

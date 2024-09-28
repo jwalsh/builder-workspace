@@ -1,0 +1,193 @@
+[
+  {
+    "id": 4655,
+    "project_id": "SmartContractAuditor",
+    "title": "Define Project Scope and Requirements",
+    "description": "Detailed requirements gathering for the SmartContractAuditor tool: \n1. Supported blockchain platforms (e.g., Ethereum, Hyperledger Fabric, EOS, etc.). \n2. Identification of a wide range of potential vulnerabilities (e.g., re-entrancy, integer overflows, time manipulation, etc.). \n3. Desired output format for the audit results (e.g., JSON, HTML, or a custom format). \n4. Additional functionality such as suggestions for improvements and explanations of the identified vulnerabilities.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4656,
+    "project_id": "SmartContractAuditor",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the SmartContractAuditor system, including the components, data flow, and integration with blockchain platforms.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4657,
+    "project_id": "SmartContractAuditor",
+    "title": "Develop Smart Contract Analysis Engine",
+    "description": "Implement the core analysis engine that can parse and analyze smart contract code, identify potential vulnerabilities, and provide recommendations.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4658,
+    "project_id": "SmartContractAuditor",
+    "title": "Integrate with Blockchain Platforms",
+    "description": "Develop the necessary interfaces and adapters to integrate the SmartContractAuditor tool with various blockchain platforms, enabling seamless interaction and contract retrieval.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4659,
+    "project_id": "SmartContractAuditor",
+    "title": "Build User Interface",
+    "description": "Design and develop a user-friendly interface for the SmartContractAuditor tool, allowing users to submit contracts, view analysis results, and manage their projects.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4660,
+    "project_id": "SmartContractAuditor",
+    "title": "Implement Reporting and Visualization",
+    "description": "Develop reporting and visualization components to present the analysis results in a clear and understandable format, highlighting potential vulnerabilities and providing actionable recommendations.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Smart Contract Analysis Engine"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4661,
+    "project_id": "SmartContractAuditor",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a CI/CD pipeline for the SmartContractAuditor project, enabling automated testing, building, and deployment to various environments.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4662,
+    "project_id": "SmartContractAuditor",
+    "title": "Develop Test Suite",
+    "description": "Create a comprehensive test suite to ensure the correctness and reliability of the SmartContractAuditor tool, including unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Develop Smart Contract Analysis Engine",
+      "Integrate with Blockchain Platforms",
+      "Build User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4663,
+    "project_id": "SmartContractAuditor",
+    "title": "Perform Security Audits",
+    "description": "Engage security specialists to conduct thorough audits of the SmartContractAuditor tool, identifying potential vulnerabilities and ensuring the highest level of security.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Develop Smart Contract Analysis Engine",
+      "Integrate with Blockchain Platforms",
+      "Build User Interface"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4664,
+    "project_id": "SmartContractAuditor",
+    "title": "Write Documentation",
+    "description": "Prepare comprehensive documentation for the SmartContractAuditor tool, including user guides, developer documentation, and API references.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

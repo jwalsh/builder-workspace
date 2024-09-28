@@ -1,0 +1,192 @@
+[
+  {
+    "id": 5046,
+    "project_id": "TeamMoodAnalyzer",
+    "title": "Define Project Scope and Requirements - v2.0",
+    "description": "Revised gathering and documentation of requirements for the TeamMoodAnalyzer tool, including features, user stories, and acceptance criteria. Focus on creating a comprehensive, flexible, and scalable system that effectively gauges team morale and suggests activities or interventions to improve team spirit.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5047,
+    "project_id": "TeamMoodAnalyzer",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including components, data flow, integration points, and considerations for scalability, maintainability, and security.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5048,
+    "project_id": "TeamMoodAnalyzer",
+    "title": "Design Database Schema",
+    "description": "Design the database schema to store team member data, mood data, activity/intervention data, and related metadata.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5049,
+    "project_id": "TeamMoodAnalyzer",
+    "title": "Design User Interface for TeamMoodAnalyzer",
+    "description": "Design the user interface for team members to input mood data and view suggested activities/interventions. The UI should be intuitive, user-friendly, accessible, and engaging. Incorporate gamification elements to encourage participation and engagement, focusing on providing a seamless experience that aligns with the TeamMoodAnalyzer project goals. Consider the following points: \n1. Keep design consistent with the Design System Architecture (dependency)\n2. Ensure compatibility across various platforms (desktop, mobile, web)\n3. Implement feedback mechanism for user suggestions and bug reports\n4. Prioritize security measures to protect user data",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5050,
+    "project_id": "TeamMoodAnalyzer",
+    "title": "Implement Backend Services",
+    "description": "Implement backend services for data storage, mood analysis, and activity/intervention suggestion.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture",
+      "Design Database Schema"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5051,
+    "project_id": "TeamMoodAnalyzer",
+    "title": "Implement Frontend Application",
+    "description": "Implement the frontend application for team members to input mood data and view suggested activities/interventions.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5052,
+    "project_id": "TeamMoodAnalyzer",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Set up CI/CD pipelines for automated testing, building, and deployment of the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5053,
+    "project_id": "TeamMoodAnalyzer",
+    "title": "Write User Documentation",
+    "description": "Write user documentation for team members on how to use the TeamMoodAnalyzer tool.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Implement Frontend Application"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5054,
+    "project_id": "TeamMoodAnalyzer",
+    "title": "Perform Security Audit",
+    "description": "Perform a security audit on the application to identify and mitigate potential vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Implement Backend Services",
+      "Implement Frontend Application"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5055,
+    "project_id": "TeamMoodAnalyzer",
+    "title": "Conduct User Acceptance Testing",
+    "description": "Conduct user acceptance testing with a pilot group of team members to validate the application meets requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Implement Backend Services",
+      "Implement Frontend Application",
+      "Write User Documentation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

@@ -1,0 +1,193 @@
+[
+  {
+    "id": 5411,
+    "project_id": "VirtualFittingRoom",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, goals, and requirements. Conduct market research, gather user feedback, and document functional and non-functional requirements.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5412,
+    "project_id": "VirtualFittingRoom",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including components for 3D modeling, AR integration, sizing algorithms, recommendation engine, data storage, and scalability considerations. The design should also incorporate security measures, ensure seamless user experience, and consider possible future integrations such as VR or AI.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5413,
+    "project_id": "VirtualFittingRoom",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema to store product data, user profiles, and other relevant information.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5414,
+    "project_id": "VirtualFittingRoom",
+    "title": "3D Modeling and AR Integration",
+    "description": "Develop the 3D modeling and AR components to render realistic virtual try-on experiences.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5415,
+    "project_id": "VirtualFittingRoom",
+    "title": "Sizing and Recommendation Engine",
+    "description": "Implement algorithms and machine learning models for accurate size recommendations and personalized style suggestions.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5416,
+    "project_id": "VirtualFittingRoom",
+    "title": "User Interface and Experience Design",
+    "description": "Design and develop the user interface and overall user experience for the virtual fitting room application.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5417,
+    "project_id": "VirtualFittingRoom",
+    "title": "Security and Privacy Considerations",
+    "description": "Implement security measures to protect user data and ensure privacy compliance with relevant regulations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5418,
+    "project_id": "VirtualFittingRoom",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop comprehensive test plans and execute testing strategies to ensure the application meets quality standards and requirements.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "3D Modeling and AR Integration",
+      "Sizing and Recommendation Engine",
+      "User Interface and Experience Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5419,
+    "project_id": "VirtualFittingRoom",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure, continuous integration/continuous deployment (CI/CD) pipelines, and monitoring systems.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5420,
+    "project_id": "VirtualFittingRoom",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation, user guides, and support resources for the virtual fitting room application.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "User Interface and Experience Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

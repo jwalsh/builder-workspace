@@ -1,0 +1,213 @@
+[
+  {
+    "id": 5076,
+    "project_id": "TechDebtQuantifier",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the project requirements, including the types of technical debt to be analyzed (e.g., code smells, architectural issues, security vulnerabilities, performance bottlenecks), the programming languages and frameworks to be supported (Java, Python, React, Angular, Node.js with a focus on popular and commonly used ones in our organization), the desired output formats (reports, dashboards, code annotations, integration with issue trackers like Jira or GitHub Issues), the integration points with existing development tools and processes (CI/CD pipelines, code review tools such as GitHub Code Review and GitLab Merge Requests), and the target environments (cloud, on-premises with a preference for AWS and Azure). Additionally, consider including support for monitoring open-source libraries used in projects to identify any known vulnerabilities or outdated versions. The project should also provide recommendations for remediation strategies for each identified technical debt item.",
+    "status": "IMPLEMENTATION",
+    "assigned_to": "task-decomposer",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5077,
+    "project_id": "TechDebtQuantifier",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including the components, data flow, integration points, and key architectural decisions. Consider factors such as scalability, maintainability, performance, security, and extensibility.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5078,
+    "project_id": "TechDebtQuantifier",
+    "title": "Develop Code Analysis Module",
+    "description": "Implement the core functionality to analyze codebases and identify technical debt issues.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5079,
+    "project_id": "TechDebtQuantifier",
+    "title": "Implement Technical Debt Quantification",
+    "description": "Develop algorithms and models to quantify the identified technical debt issues and assign priority scores.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5080,
+    "project_id": "TechDebtQuantifier",
+    "title": "Build Recommendation Engine",
+    "description": "Create a module that suggests strategies and best practices for reducing technical debt based on the analysis results.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Implement Technical Debt Quantification"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5081,
+    "project_id": "TechDebtQuantifier",
+    "title": "Develop User Interface",
+    "description": "Design and implement a user-friendly interface for interacting with the tool, visualizing results, and configuring settings.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5082,
+    "project_id": "TechDebtQuantifier",
+    "title": "Implement Data Storage and Retrieval",
+    "description": "Set up a database or other storage solution to persist analysis results and project configurations.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5083,
+    "project_id": "TechDebtQuantifier",
+    "title": "Establish Continuous Integration and Deployment",
+    "description": "Configure a CI/CD pipeline for automated testing, building, and deployment of the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Develop Code Analysis Module",
+      "Implement Technical Debt Quantification",
+      "Build Recommendation Engine",
+      "Develop User Interface",
+      "Implement Data Storage and Retrieval"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5084,
+    "project_id": "TechDebtQuantifier",
+    "title": "Implement Security Measures",
+    "description": "Ensure the application follows best practices for secure coding, data protection, and user authentication.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5085,
+    "project_id": "TechDebtQuantifier",
+    "title": "Write Documentation and User Guides",
+    "description": "Create comprehensive documentation for the tool, including installation instructions, user guides, and API references.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Develop User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5086,
+    "project_id": "TechDebtQuantifier",
+    "title": "Conduct Testing and Quality Assurance",
+    "description": "Thoroughly test the application, including unit tests, integration tests, and end-to-end testing, to ensure high quality and reliability.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Establish Continuous Integration and Deployment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

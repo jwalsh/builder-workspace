@@ -1,0 +1,174 @@
+[
+  {
+    "id": 4487,
+    "project_id": "SecurityChatbot",
+    "title": "Define Project Scope and Requirements - Revised",
+    "description": "Revised task to thoroughly gather and document the project requirements. The revised requirements include: chatbot's functionality, security features, integration with existing systems (specify APIs or SDKs if known: Slack for internal communication, Active Directory for user authentication), user personas (include job roles such as IT, HR, and Finance, and user behavior expectations), expected usage scenarios (with examples: real-time phishing detection, security policy reminders, and incident response guidance), data privacy and compliance considerations (e.g., GDPR, HIPAA, and industry-specific regulations like PCI DSS for finance sector), performance and scalability requirements (response time under 3 seconds, maximum concurrent users: 5000, ability to handle peak usage during security incidents), edge cases for each requirement, and usability heuristics such as discoverability, feedback, consistency, minimalism, and error prevention to improve user experience. In addition, this task will include a review of similar solutions in the market for best practices.",
+    "status": "READY_FOR_APPROVAL",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4488,
+    "project_id": "SecurityChatbot",
+    "title": "Design System Architecture for SecurityChatbot - Revised",
+    "description": "Revised design of the overall system architecture for the SecurityChatbot. The revised design includes: \n1. Defining key components and their interactions.\n2. Outlining data flow, emphasizing on privacy-preserving techniques to ensure user data confidentiality.\n3. Integration with existing systems, considering scalability, maintainability, performance requirements, high availability, and compliance with relevant security standards and regulations.\n4. Implementing robust security mechanisms throughout the system.",
+    "status": "READY_FOR_APPROVAL",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Identify Security Requirements and Compliance Standards",
+      "Evaluate Existing Infrastructure and Systems"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4489,
+    "project_id": "SecurityChatbot",
+    "title": "Develop Chatbot Frontend",
+    "description": "Implement the chatbot's user interface, including the chat window, input/output handling, and user authentication.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4490,
+    "project_id": "SecurityChatbot",
+    "title": "Develop Chatbot Backend",
+    "description": "Implement the chatbot's backend logic, including natural language processing, security advice generation, and integration with external systems.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4491,
+    "project_id": "SecurityChatbot",
+    "title": "Implement Security Mechanisms",
+    "description": "Develop and integrate security features, such as user authentication, data encryption, and secure communication channels.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4492,
+    "project_id": "SecurityChatbot",
+    "title": "Set up Database and Data Storage",
+    "description": "Design and implement the database schema and data storage solutions for storing and retrieving security advice, user data, and chat logs.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4493,
+    "project_id": "SecurityChatbot",
+    "title": "Develop Testing Strategy and Test Cases",
+    "description": "Create a comprehensive testing strategy and develop test cases to ensure the chatbot's functionality, security, and performance.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4494,
+    "project_id": "SecurityChatbot",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a CI/CD pipeline for automated building, testing, and deployment of the chatbot application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4495,
+    "project_id": "SecurityChatbot",
+    "title": "Write User Documentation",
+    "description": "Create user guides, FAQs, and other documentation to assist employees in using the chatbot effectively.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Chatbot Frontend",
+      "Develop Chatbot Backend"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

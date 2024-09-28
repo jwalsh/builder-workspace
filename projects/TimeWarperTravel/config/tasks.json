@@ -1,0 +1,175 @@
+[
+  {
+    "id": 5221,
+    "project_id": "TimeWarperTravel",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, goals, and requirements, including user personas, use cases, and functional specifications.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5222,
+    "project_id": "TimeWarperTravel",
+    "title": "Architecture Design",
+    "description": "Design the overall system architecture, including the simulation engine, sensory manipulation components, user interfaces, data storage, and deployment infrastructure. Prioritize scalability, performance, security, and maintainability. Incorporate design patterns to ensure modularity and flexibility, and consider potential future enhancements such as VR/AR integration.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5223,
+    "project_id": "TimeWarperTravel",
+    "title": "Database Design",
+    "description": "Design the database schema and data models for storing user profiles, trip data, sensory manipulation settings, and other relevant information. Consider data normalization, indexing, scalability requirements, and caching mechanisms for frequently accessed data to improve performance. Ensure proper data security and privacy measures are in place, such as encryption, access controls, and anonymization techniques. Additionally, consider using a combination of centralized and distributed caching systems for optimal performance and fault tolerance.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "IMPLEMENTING",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5224,
+    "project_id": "TimeWarperTravel",
+    "title": "Frontend Development",
+    "description": "Develop the user interfaces for the web and mobile applications, including the booking system, trip planning tools, and user profiles.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5225,
+    "project_id": "TimeWarperTravel",
+    "title": "Backend Development",
+    "description": "Implement the server-side logic, including the simulation engine, sensory manipulation algorithms, and APIs for the frontend applications.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Architecture Design",
+      "Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5226,
+    "project_id": "TimeWarperTravel",
+    "title": "Security and Compliance",
+    "description": "Ensure the platform meets security and compliance requirements, including data protection, user privacy, and regulatory compliance.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5227,
+    "project_id": "TimeWarperTravel",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop and implement a comprehensive testing strategy, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5228,
+    "project_id": "TimeWarperTravel",
+    "title": "Deployment and DevOps",
+    "description": "Set up the infrastructure and deployment pipelines for the platform, including continuous integration and continuous deployment (CI/CD).",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5229,
+    "project_id": "TimeWarperTravel",
+    "title": "Documentation and User Support",
+    "description": "Develop comprehensive documentation for users, developers, and administrators, including user guides, API documentation, and support resources.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

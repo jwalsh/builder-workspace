@@ -1,0 +1,212 @@
+[
+  {
+    "id": 5421,
+    "project_id": "VirtualPetCompanion",
+    "title": "Project Planning and Management",
+    "description": "Define project scope, requirements, timeline, and resources needed. Set up project management tools and processes.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5422,
+    "project_id": "VirtualPetCompanion",
+    "title": "Requirements Gathering and Analysis",
+    "description": "Conduct user research, define user personas, gather functional and non-functional requirements for the VirtualPetCompanion app. This task also includes identifying key features, interactions, and potential challenges in augmented reality environment.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5423,
+    "project_id": "VirtualPetCompanion",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including the AR component, backend services, data storage, and integration with external APIs (if required). Consider scalability, performance, security, and maintainability aspects, focusing on modularity, flexibility, and adaptability to future enhancements. Review the dependencies and timelines for each component.",
+    "status": "NEEDS_REVISION",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5424,
+    "project_id": "VirtualPetCompanion",
+    "title": "UI/UX Design for VirtualPetCompanion app",
+    "description": "Design the user interface and user experience for the VirtualPetCompanion app, including AR interactions, gamification elements, and considerations for accessibility and responsive design. Collaborate with the team to incorporate feedback during the design process.",
+    "status": "IN_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5425,
+    "project_id": "VirtualPetCompanion",
+    "title": "Backend Development",
+    "description": "Implement the backend services, including pet behavior simulation, user data management, and integration with third-party services (if needed).",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5426,
+    "project_id": "VirtualPetCompanion",
+    "title": "Frontend Development",
+    "description": "Develop the VirtualPetCompanion app's frontend, including AR integration, UI components, and gamification features.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design",
+      "UI/UX Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5427,
+    "project_id": "VirtualPetCompanion",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema for storing user data, pet data, interactions, achievements, and other relevant information. Consider data normalization, indexing, and scalability requirements. Implement data access layer with appropriate caching mechanisms.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5428,
+    "project_id": "VirtualPetCompanion",
+    "title": "Security and Privacy Considerations",
+    "description": "Implement security measures to protect user data and ensure the app's compliance with relevant privacy regulations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5429,
+    "project_id": "VirtualPetCompanion",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop test plans, write test cases, and perform various types of testing (unit, integration, end-to-end, performance, etc.) to ensure the app's quality.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5430,
+    "project_id": "VirtualPetCompanion",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline, configure infrastructure and environments, and automate the deployment process.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5431,
+    "project_id": "VirtualPetCompanion",
+    "title": "Documentation and User Support",
+    "description": "Create user guides, FAQs, and other supporting documentation. Set up user support channels and processes.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

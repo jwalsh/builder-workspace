@@ -1,0 +1,188 @@
+[
+  {
+    "id": 4356,
+    "project_id": "SafeSpaceConversationSimulator",
+    "title": "Define project scope and requirements: REVISED",
+    "description": "Revised and expanded the gathered requirements for the SafeSpaceConversationSimulator. The project aims to provide a VR tool for employees at all levels, offering various use cases such as feedback scenarios, conflict resolution, and team communication exercises. Desired features include a customizable VR environment, characters, real-time analytics, and a feedback tracking system. User preferences will be accommodated with language options and accessibility settings.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4357,
+    "project_id": "SafeSpaceConversationSimulator",
+    "title": "Design system architecture for SafeSpaceConversationSimulator",
+    "description": "Design the overall system architecture, including components for VR environment, feedback scenarios, user interactions, data storage, and integration with existing systems (if applicable). Consider scalability, performance, security, and maintainability aspects. Propose a modular design that allows easy extension and maintenance. Identify potential bottlenecks and suggest solutions for them.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define project scope and requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4358,
+    "project_id": "SafeSpaceConversationSimulator",
+    "title": "Develop VR environment",
+    "description": "Implement the VR environment, including 3D models, lighting, and user interactions.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design system architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4359,
+    "project_id": "SafeSpaceConversationSimulator",
+    "title": "Implement feedback scenarios",
+    "description": "Develop the feedback scenarios, including dialogue systems, character animations, and branching logic.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design system architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4360,
+    "project_id": "SafeSpaceConversationSimulator",
+    "title": "Design Database Schema (Revised)",
+    "description": "Update the database schema to accommodate user data, feedback scenarios, simulation results, and other relevant data entities. Include consideration for scalability, security, and performance optimization. Ensure normalization for data integrity, and consider using a combination of SQL and NoSQL databases for optimal flexibility and efficiency.",
+    "status": "REVIEW",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design system architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4361,
+    "project_id": "SafeSpaceConversationSimulator",
+    "title": "Implement data storage and retrieval",
+    "description": "Develop the backend components for storing and retrieving data from the database.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design database schema"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4362,
+    "project_id": "SafeSpaceConversationSimulator",
+    "title": "Develop user authentication and authorization (Security Enhancements)",
+    "description": "Implement robust user authentication and authorization mechanisms to ensure secure access to the application. The solution should adhere to best practices for data privacy, security, and scalability, while considering the need for multi-factor authentication and role-based access control. Incorporate industry standards such as OAuth 2.0 or OpenID Connect for seamless user experience.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Design system architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4363,
+    "project_id": "SafeSpaceConversationSimulator",
+    "title": "Set up continuous integration and deployment for SafeSpaceConversationSimulator",
+    "description": "Configure a CI/CD pipeline for automated building, testing, and deployment of the SafeSpaceConversationSimulator application. The pipeline should include the following stages:\n\n1. Code checkout and build\n2. Unit and integration testing (using tools like Jest or Mocha)\n3. Static code analysis (using tools like SonarQube, ESLint, or CodeClimate)\n4. Security scanning (using tools like OWASP ZAP, Snyk, or Veracode)\n5. Performance testing (using tools like JMeter or LoadRunner)\n6. Deployment to staging environment\n7. Smoke testing in staging\n8. Deployment to production environment\n9. Notification of deployment status via email, Slack, or other communication channels\n10. Automated rollback mechanism in case of failure during deployment\n11. Support for code linting and auto-formatting\n\nThe pipeline should be configured to automatically trigger on code commits to the main branch and also support manual triggers for deploying specific versions to staging or production environments. Additionally, consider incorporating feedback from the frontend-developer, backend-developer, and database-specialist during configuration for optimal results.",
+    "status": "IMPLEMENTATION_IN_PROGRESS",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4364,
+    "project_id": "SafeSpaceConversationSimulator",
+    "title": "Create testing strategy and test cases for SafeSpaceConversationSimulator",
+    "description": "Develop a comprehensive testing strategy and write test cases for different components and scenarios of the SafeSpaceConversationSimulator, including unit tests, integration tests, end-to-end tests, and performance tests. Testing should cover aspects such as the VR environment, user interactions, feedback mechanisms, data storage, accessibility, edge cases, error handling, security, and usability. Additionally, consider employing techniques for testing cross-platform compatibility, localization, and scaling. Suggest improvements in testing strategies where necessary, ensure thorough documentation, and provide detailed guidelines for test execution. Once completed, review the testing strategy with the team to solicit feedback and make any necessary adjustments.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Define project scope and requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4365,
+    "project_id": "SafeSpaceConversationSimulator",
+    "title": "Write user documentation",
+    "description": "Create user guides, tutorials, and other documentation to help users effectively use the SafeSpaceConversationSimulator.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Define project scope and requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

@@ -1,0 +1,193 @@
+[
+  {
+    "id": 4604,
+    "project_id": "SkillsMarketplace",
+    "title": "Define Project Scope and Requirements (Revised)",
+    "description": "Revise and expand the requirements for the SkillsMarketplace platform. This includes a comprehensive analysis of user roles, features, and functionality. The revised document will cover both functional and non-functional requirements such as performance, scalability, security, accessibility, data privacy, and any other organizational policies or constraints. Involve all relevant stakeholders (e.g., HR, legal, security) to ensure a comprehensive understanding of the platform's needs. Once complete, share with the project team for feedback before finalizing.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "task-decomposer",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4605,
+    "project_id": "SkillsMarketplace",
+    "title": "Design System Architecture for SkillsMarketplace",
+    "description": "Design the overall system architecture for SkillsMarketplace, considering aspects such as scalability, high availability, security, performance, and maintainability. Provide a detailed architecture diagram, documentation, and ensure that the design is microservices-oriented with clear separation of concerns for frontend, backend, database, and infrastructure components. Consider implementing technologies like Kubernetes for orchestration, GraphQL/REST APIs for communication between services, and serverless functions where appropriate.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4606,
+    "project_id": "SkillsMarketplace",
+    "title": "Develop Frontend",
+    "description": "Implement the user interface and frontend components for the SkillsMarketplace platform.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4607,
+    "project_id": "SkillsMarketplace",
+    "title": "Develop Backend",
+    "description": "Implement the backend services, APIs, and business logic for the SkillsMarketplace platform.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4608,
+    "project_id": "SkillsMarketplace",
+    "title": "Set up Database",
+    "description": "Design and implement the database schema and data models for the SkillsMarketplace platform.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4609,
+    "project_id": "SkillsMarketplace",
+    "title": "Implement Security and Access Controls",
+    "description": "Implement security measures, authentication, and access controls for the SkillsMarketplace platform.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4610,
+    "project_id": "SkillsMarketplace",
+    "title": "Set up CI/CD Pipeline",
+    "description": "Configure a continuous integration and continuous deployment (CI/CD) pipeline for the SkillsMarketplace platform.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4611,
+    "project_id": "SkillsMarketplace",
+    "title": "Write Documentation",
+    "description": "Create user guides, technical documentation, and other supporting materials for the SkillsMarketplace platform.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4612,
+    "project_id": "SkillsMarketplace",
+    "title": "Conduct Testing",
+    "description": "Plan and execute various testing activities, including unit testing, integration testing, and end-to-end testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop Frontend",
+      "Develop Backend",
+      "Set up Database"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4613,
+    "project_id": "SkillsMarketplace",
+    "title": "Deploy to Production",
+    "description": "Deploy the SkillsMarketplace platform to the production environment and perform final testing and validation.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Conduct Testing",
+      "Set up CI/CD Pipeline"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

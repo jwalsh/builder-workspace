@@ -1,0 +1,174 @@
+[
+  {
+    "id": 5319,
+    "project_id": "UserExperienceMonitor",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, objectives, and requirements. Gather input from stakeholders and end-users to understand their needs and expectations.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5320,
+    "project_id": "UserExperienceMonitor",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including backend, frontend, data storage components, communication and integration mechanisms. Address scalability, fault tolerance, and security considerations. Provide a detailed diagram and documentation explaining the different components, their responsibilities, and how they interact with each other. Include details on the chosen technologies and why, considering the project's requirements and constraints.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5321,
+    "project_id": "UserExperienceMonitor",
+    "title": "Backend Development",
+    "description": "Implement the backend components responsible for collecting and processing performance metrics, handling data storage, and exposing APIs for frontend integration.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5322,
+    "project_id": "UserExperienceMonitor",
+    "title": "Frontend Development",
+    "description": "Develop the frontend user interface and experience, including user interaction tracking, performance monitoring, and sentiment analysis integration.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5323,
+    "project_id": "UserExperienceMonitor",
+    "title": "Data Storage and Management for UserExperienceMonitor Project",
+    "description": "Design and implement a scalable, reliable, and efficient data storage solution. This includes performance metrics, user interactions, and sentiment analysis data. The solution should support real-time querying and data retrieval. Consider using a hybrid database system (e.g., combining NoSQL for unstructured data like user interactions and SQL for structured data like performance metrics). To handle the different data types and workloads, consider sharding or partitioning the data. Ensure data redundancy, backup, and disaster recovery mechanisms are in place, including periodic snapshots and asynchronous replication. Additionally, explore potential integration with a time-series database for handling high-velocity time-stamped data. Update the solution design to clearly outline how this will be achieved.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5324,
+    "project_id": "UserExperienceMonitor",
+    "title": "Integration and Testing",
+    "description": "Integrate the backend, frontend, and data storage components. Perform comprehensive testing, including unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Data Storage and Management"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5325,
+    "project_id": "UserExperienceMonitor",
+    "title": "Security and Compliance",
+    "description": "Ensure the system adheres to security best practices and complies with relevant regulations, such as data privacy laws and industry standards.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5326,
+    "project_id": "UserExperienceMonitor",
+    "title": "Deployment and Monitoring",
+    "description": "Deploy the UserExperienceMonitor system to production environments, set up monitoring and logging mechanisms, and establish processes for ongoing maintenance and updates.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Integration and Testing",
+      "Security and Compliance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5327,
+    "project_id": "UserExperienceMonitor",
+    "title": "Documentation and Training",
+    "description": "Create comprehensive documentation for the UserExperienceMonitor system, including user guides, technical documentation, and training materials for stakeholders and end-users.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

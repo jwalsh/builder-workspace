@@ -1,0 +1,97 @@
+[
+  {
+    "id": 4321,
+    "project_id": "ReservoirModelingAI",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, goals, and requirements. Gather input from stakeholders and subject matter experts.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4322,
+    "project_id": "ReservoirModelingAI",
+    "title": "Architecture Design for ReservoirModelingAI",
+    "description": "Design the overall system architecture for the ReservoirModelingAI project. This includes defining components, data flow, integration points, and addressing key considerations such as maintainability, scalability, performance, security, and compliance with industry standards. The design should also include plans for testing, deployment, and potential future upgrades or expansions.",
+    "status": "READY_FOR_REVIEW_CODE_ARCHITECT",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4323,
+    "project_id": "ReservoirModelingAI",
+    "title": "Data Modeling and Database Design",
+    "description": "Design the database schema and data models for storing and managing reservoir data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4324,
+    "project_id": "ReservoirModelingAI",
+    "title": "AI Model Development",
+    "description": "Develop and train AI models for reservoir modeling and analysis.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Architecture Design",
+      "Data Modeling and Database Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4325,
+    "project_id": "ReservoirModelingAI",
+    "title": "User Interface Design for Reservoir Modeling AI",
+    "description": "Design the user interface for visualizing and interacting with reservoir models and analysis results. The UI should be intuitive, responsive, and provide a seamless experience for users to explore and manipulate 3D reservoir models, visualize data overlays, and access analysis results. It should also support collaboration features for multiple users to work on the same model simultaneously. The design should prioritize accessibility and usability for both experts and non-experts in oil and gas industry. Collaborate with UX/UI designers if necessary. Consider incorporating feedback from our team's domain experts (geophysicists, reservoir engineers) to ensure accuracy and utility of the UI elements. Update the design documentation to clearly illustrate the intended functionality and interaction of each feature. This will facilitate better understanding among all stakeholders. Once the design is approved by the project manager, assign it to a frontend-developer for implementation.",
+    "status": "NEEDS_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Architecture Design",
+      "Data Visualization Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

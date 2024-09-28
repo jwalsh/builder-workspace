@@ -1,0 +1,193 @@
+[
+  {
+    "id": 5140,
+    "project_id": "ThreatAttributionEngine",
+    "title": "Define Project Scope and Requirements - RFC Review",
+    "description": "This RFC proposes the gathering and documentation of requirements for the ThreatAttributionEngine. The requirements include, but are not limited to, the types of attack patterns and techniques to be analyzed (e.g., network attacks, phishing, malware), desired level of attribution accuracy, data sources for threat intelligence (open-source, proprietary, or a combination), expected output formats (reports, APIs, dashboards), specific use cases or scenarios to be supported (real-time analysis, historical analysis), and any regulatory or compliance requirements that need to be considered. Additionally, it's important to consider potential integration with existing security systems and any performance or scalability requirements. After reviewing this RFC, please provide feedback or suggest improvements as necessary. If the RFC is ready for the next state, update the 'rfc_state' field accordingly.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5141,
+    "project_id": "ThreatAttributionEngine",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the ThreatAttributionEngine, including the data ingestion pipeline (specify data formats and sources), the AI model(s) for analysis and attribution (provide brief details on the machine learning algorithms to be used), the data storage solution (mention the preferred database system or cloud service), the user interface or API for interacting with the system (describe basic functionalities), and the deployment and scaling strategy (outline the approach to handle high traffic and large datasets).",
+    "status": "READY_FOR_CODE_ARCHITECT_APPROVAL",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5142,
+    "project_id": "ThreatAttributionEngine",
+    "title": "Develop Data Ingestion Pipeline",
+    "description": "Implement the data ingestion pipeline to collect and preprocess attack data from various sources, such as security logs, network traffic, and threat intelligence feeds.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5143,
+    "project_id": "ThreatAttributionEngine",
+    "title": "Build AI Model for Threat Attribution",
+    "description": "Develop and train the AI model(s) responsible for analyzing attack patterns and techniques, and attributing threats to specific actors or groups based on the ingested data.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5144,
+    "project_id": "ThreatAttributionEngine",
+    "title": "Create User Interface or API",
+    "description": "Develop the user interface or API for interacting with the ThreatAttributionEngine, allowing users to submit attack data, view analysis results, and manage system configurations.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5145,
+    "project_id": "ThreatAttributionEngine",
+    "title": "Implement Security Measures",
+    "description": "Ensure the ThreatAttributionEngine adheres to best practices for secure software development, including data encryption, access controls, and vulnerability testing.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5146,
+    "project_id": "ThreatAttributionEngine",
+    "title": "Set up Testing and Continuous Integration",
+    "description": "Establish a testing framework and continuous integration pipeline to ensure the quality and reliability of the ThreatAttributionEngine throughout the development process.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5147,
+    "project_id": "ThreatAttributionEngine",
+    "title": "Conduct System Testing and Validation",
+    "description": "Perform comprehensive testing of the ThreatAttributionEngine, including unit tests, integration tests, and end-to-end tests, to validate the system's functionality, performance, and accuracy.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop Data Ingestion Pipeline",
+      "Build AI Model for Threat Attribution",
+      "Create User Interface or API",
+      "Set up Testing and Continuous Integration"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5148,
+    "project_id": "ThreatAttributionEngine",
+    "title": "Deploy and Monitor the System",
+    "description": "Deploy the ThreatAttributionEngine to a production environment, and implement monitoring and logging mechanisms to ensure its ongoing performance and stability.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Conduct System Testing and Validation"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5149,
+    "project_id": "ThreatAttributionEngine",
+    "title": "Develop Documentation and Training Materials",
+    "description": "Create comprehensive documentation and training materials to support the deployment, configuration, and usage of the ThreatAttributionEngine by end-users and administrators.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Conduct System Testing and Validation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

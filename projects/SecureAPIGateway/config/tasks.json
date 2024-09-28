@@ -1,0 +1,225 @@
+[
+  {
+    "id": 4377,
+    "project_id": "SecureAPIGateway",
+    "title": "Define Project Scope and Requirements: SecureAPIGateway",
+    "description": "Draft a comprehensive document outlining the detailed requirements for the SecureAPIGateway project. This should include security features such as AI-powered threat detection, automated response mechanisms, integration with existing systems (specify which systems), performance expectations, scalability considerations, and any necessary user interface design specifications. The document will also outline the threat types to be detected (e.g., DDoS attacks, SQL injection, XSS) and the automated responses for each (e.g., rate limiting, firewall rules, content filtering), including performance impact of these actions. It is recommended to consider potential false positives and negatives in the AI threat detection system. In addition, provide a high-level architecture diagram that visualizes the flow of data and the interaction between different components.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4378,
+    "project_id": "SecureAPIGateway",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture for the SecureAPIGateway, including components, data flows, and integration points with other systems.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4379,
+    "project_id": "SecureAPIGateway",
+    "title": "Implement API Gateway Core",
+    "description": "Develop the core functionality of the API gateway, including request routing, load balancing, and basic security features.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4380,
+    "project_id": "SecureAPIGateway",
+    "title": "Develop AI-powered Threat Detection",
+    "description": "Implement the AI-powered threat detection component, including machine learning models, data ingestion, and integration with the API gateway.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4381,
+    "project_id": "SecureAPIGateway",
+    "title": "Implement Automated Response Mechanisms",
+    "description": "Develop the automated response mechanisms for detected threats, including blocking requests, rate limiting, and integration with external security systems.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Develop AI-powered Threat Detection"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4382,
+    "project_id": "SecureAPIGateway",
+    "title": "Design and Implement User Interface",
+    "description": "Design and develop the user interface for configuring and monitoring the SecureAPIGateway, including dashboards, alerts, and reporting.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4383,
+    "project_id": "SecureAPIGateway",
+    "title": "Set up CI/CD Pipeline",
+    "description": "Establish a continuous integration and continuous deployment (CI/CD) pipeline for the SecureAPIGateway project, including automated testing, building, and deployment.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Implement API Gateway Core",
+      "Develop AI-powered Threat Detection",
+      "Implement Automated Response Mechanisms",
+      "Design and Implement User Interface"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4384,
+    "project_id": "SecureAPIGateway",
+    "title": "Conduct Security Audits and Penetration Testing",
+    "description": "Perform comprehensive security audits and penetration testing on the SecureAPIGateway to identify and mitigate potential vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 1,
+    "dependencies": [
+      "Implement API Gateway Core",
+      "Develop AI-powered Threat Detection",
+      "Implement Automated Response Mechanisms",
+      "Design and Implement User Interface"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4385,
+    "project_id": "SecureAPIGateway",
+    "title": "Write Documentation and User Guides",
+    "description": "Create comprehensive documentation and user guides for the SecureAPIGateway, covering installation, configuration, usage, and troubleshooting.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Implement API Gateway Core",
+      "Develop AI-powered Threat Detection",
+      "Implement Automated Response Mechanisms",
+      "Design and Implement User Interface"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4386,
+    "project_id": "SecureAPIGateway",
+    "title": "Conduct User Acceptance Testing",
+    "description": "Perform user acceptance testing (UAT) with stakeholders and end-users to validate the SecureAPIGateway meets the defined requirements and expectations.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement API Gateway Core",
+      "Develop AI-powered Threat Detection",
+      "Implement Automated Response Mechanisms",
+      "Design and Implement User Interface",
+      "Write Documentation and User Guides"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4387,
+    "project_id": "SecureAPIGateway",
+    "title": "Deploy and Monitor SecureAPIGateway",
+    "description": "Deploy the SecureAPIGateway to production environments, and set up monitoring and alerting systems to ensure its continuous operation and performance.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Set up CI/CD Pipeline",
+      "Conduct Security Audits and Penetration Testing",
+      "Conduct User Acceptance Testing"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

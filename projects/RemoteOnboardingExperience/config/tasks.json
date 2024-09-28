@@ -1,0 +1,176 @@
+[
+  {
+    "id": 4275,
+    "project_id": "RemoteOnboardingExperience",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements for the remote onboarding experience system.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4276,
+    "project_id": "RemoteOnboardingExperience",
+    "title": "System Architecture Design (Revised) - Detailed Improvements and Clarifications",
+    "description": "Design the overall system architecture, including components, data flow, integration points, scalability considerations, and security measures. The architecture should be modular, maintainable, extendable, and follow best practices for cloud-native solutions. Consider microservices architecture and serverless functions where appropriate, but also explore event-driven architecture for certain use cases. Include a clear roadmap for future enhancements to accommodate future requirements, detailing potential technologies like GraphQL or gRPC for API development, and containerization using Docker or Kubernetes. Ensure the design supports high availability, disaster recovery, and observability. Address any edge cases or non-functional requirements such as performance, reliability, and security in the design. Provide a detailed analysis of the tradeoffs involved in each decision made during the design process. Update the document with UML diagrams for better visualization of the proposed architecture.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4277,
+    "project_id": "RemoteOnboardingExperience",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema to store employee information, onboarding progress, and other relevant data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4278,
+    "project_id": "RemoteOnboardingExperience",
+    "title": "Backend Development",
+    "description": "Develop the backend services and APIs for the remote onboarding experience system.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4279,
+    "project_id": "RemoteOnboardingExperience",
+    "title": "Frontend Development",
+    "description": "Develop the user interface and frontend components for the remote onboarding experience system.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4280,
+    "project_id": "RemoteOnboardingExperience",
+    "title": "Security and Compliance",
+    "description": "Ensure the system adheres to security best practices and complies with relevant regulations and policies.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4281,
+    "project_id": "RemoteOnboardingExperience",
+    "title": "Testing and Quality Assurance",
+    "description": "Plan and execute comprehensive testing strategies, including unit, integration, and end-to-end testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4282,
+    "project_id": "RemoteOnboardingExperience",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment pipeline, infrastructure, and monitoring for the remote onboarding experience system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4283,
+    "project_id": "RemoteOnboardingExperience",
+    "title": "Documentation and Training",
+    "description": "Create comprehensive documentation and training materials for system administrators and end-users.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

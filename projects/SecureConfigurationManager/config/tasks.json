@@ -1,0 +1,235 @@
+[
+  {
+    "id": 4422,
+    "project_id": "SecureConfigurationManager",
+    "title": "Define Project Scope and Requirements - Revised",
+    "description": "This RFC outlines the detailed requirements for the SecureConfigurationManager system. The scope encompasses management of security configurations across an organization's IT infrastructure, including (but not limited to): network devices, servers, applications, databases, and endpoints. The system aims to enforce security policies and standards in accordance with best practices and industry regulations. Key requirements include: configuration templates, real-time monitoring, alerting, and reporting, as well as integrations with existing IT management tools. This RFC encourages feedback and suggestions for improvement. It is currently assigned to the code-architect for review and updates. Once approved, it will be passed to the task-decomposer for further decomposition.",
+    "status": "APPROVED_FOR_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4423,
+    "project_id": "SecureConfigurationManager",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the SecureConfigurationManager system, including the components, modules, and their interactions, as well as the data models and storage mechanisms.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4424,
+    "project_id": "SecureConfigurationManager",
+    "title": "Develop Comprehensive Security Policies and Standards for SecureConfigurationManager",
+    "description": "Develop a comprehensive document outlining the security policies, standards, and best practices to be enforced by the SecureConfigurationManager system. Cover aspects such as access control, data encryption, network security, system hardening, vulnerability management, incident response, compliance with relevant industry standards and regulations. Collaborate with the project team for feedback and incorporate any suggestions into the final document. Prioritize areas of improvement based on potential risks and impact to ensure a secure and robust system.",
+    "status": "REVIEW_COMPLETED",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4425,
+    "project_id": "SecureConfigurationManager",
+    "title": "Design User Interface and Reporting",
+    "description": "Design the user interface and reporting mechanisms for the SecureConfigurationManager system, including the dashboards, configuration management tools, and reporting capabilities.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4426,
+    "project_id": "SecureConfigurationManager",
+    "title": "Implement Core System Components",
+    "description": "Develop and implement the core components of the SecureConfigurationManager system, including the configuration management engine, security policy enforcement mechanisms, and integration with infrastructure components.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Develop Security Policies and Standards"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4427,
+    "project_id": "SecureConfigurationManager",
+    "title": "Develop Data Storage and Management",
+    "description": "Implement the data storage and management mechanisms for the SecureConfigurationManager system, including the configuration data models, storage solutions, and data access layers.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4428,
+    "project_id": "SecureConfigurationManager",
+    "title": "Implement User Interface and Reporting",
+    "description": "Develop the user interface and reporting components of the SecureConfigurationManager system, including the dashboards, configuration management tools, and reporting mechanisms.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design User Interface and Reporting",
+      "Implement Core System Components",
+      "Develop Data Storage and Management"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4429,
+    "project_id": "SecureConfigurationManager",
+    "title": "Integrate with Infrastructure Components",
+    "description": "Integrate the SecureConfigurationManager system with the organization's IT infrastructure components, such as servers, network devices, and cloud services, to enable configuration management and enforcement.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Implement Core System Components"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4430,
+    "project_id": "SecureConfigurationManager",
+    "title": "Develop Comprehensive Testing and Validation Strategies for SecureConfigurationManager System",
+    "description": "Define and implement testing strategies encompassing unit tests, integration tests, security testing, performance testing, and usability testing for the SecureConfigurationManager system. This includes test cases, test data preparation, and reporting mechanisms.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Implement Core System Components",
+      "Implement User Interface and Reporting",
+      "Integrate with Infrastructure Components"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4431,
+    "project_id": "SecureConfigurationManager",
+    "title": "Conduct System Testing and Validation",
+    "description": "Perform comprehensive testing and validation of the SecureConfigurationManager system, including functional testing, performance testing, and security testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop Testing and Validation Strategies"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4432,
+    "project_id": "SecureConfigurationManager",
+    "title": "Prepare Documentation and Training Materials",
+    "description": "Develop comprehensive documentation and training materials for the SecureConfigurationManager system, including user guides, administration manuals, and training resources.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Implement User Interface and Reporting",
+      "Integrate with Infrastructure Components"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 4433,
+    "project_id": "SecureConfigurationManager",
+    "title": "Deploy and Implement System",
+    "description": "Deploy and implement the SecureConfigurationManager system across the organization's IT infrastructure, including configuration, integration, and user training.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Conduct System Testing and Validation",
+      "Prepare Documentation and Training Materials"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

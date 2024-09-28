@@ -1,0 +1,195 @@
+[
+  {
+    "id": 5350,
+    "project_id": "VRCombatTraining",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements for the VRCombatTraining system.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5351,
+    "project_id": "VRCombatTraining",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture for the VRCombatTraining project. This includes the VR environment, simulation engine, integration with hardware components, networking, data management, and ensures scalability, performance, security, and maintainability. Additionally, consider edge cases, error handling, and documentation.",
+    "status": "READY_FOR_NEXT_STATE",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5352,
+    "project_id": "VRCombatTraining",
+    "title": "VR Environment Development",
+    "description": "Develop the virtual reality environment, including terrain, graphics, and physics simulations.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5353,
+    "project_id": "VRCombatTraining",
+    "title": "Combat Simulation Engine",
+    "description": "Develop the combat simulation engine, including weapon models, ballistics, and AI for enemy behavior.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5354,
+    "project_id": "VRCombatTraining",
+    "title": "Hardware Integration",
+    "description": "Integrate the VR system with various hardware components, such as VR headsets, motion controllers, and haptic feedback devices.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5355,
+    "project_id": "VRCombatTraining",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema for storing user data, scenarios, simulation results, and related metadata. Consider data integrity, performance, and scalability requirements. Ensure proper indexing and normalization techniques are applied. Implement data access layers and APIs for interacting with the database.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5356,
+    "project_id": "VRCombatTraining",
+    "title": "Security and Access Control (Revised)",
+    "description": "Implement comprehensive security measures, including user authentication, data encryption (AES-256), access control mechanisms (Role-Based Access Control), secure communication protocols (TLS/SSL), and ensure compliance with industry standards such as GDPR, HIPAA, and PCI-DSS. The implementation should prioritize privacy, resilience, and scalability. Collaborate closely with other teams for seamless integration.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "System Architecture Design",
+      "User Management"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5357,
+    "project_id": "VRCombatTraining",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop a comprehensive testing strategy, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "VR Environment Development",
+      "Combat Simulation Engine",
+      "Hardware Integration",
+      "Database Design and Implementation",
+      "Security and Access Control"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5358,
+    "project_id": "VRCombatTraining",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation, including user manuals, installation guides, and developer documentation.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 5359,
+    "project_id": "VRCombatTraining",
+    "title": "Deployment and Maintenance",
+    "description": "Plan and implement the deployment strategy, including continuous integration, continuous deployment, and maintenance procedures.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]
