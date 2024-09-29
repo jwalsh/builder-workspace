@@ -1,0 +1,192 @@
+[
+  {
+    "id": 6096,
+    "project_id": "BrainComputerHealingInterface",
+    "title": "Project Planning and Management",
+    "description": "Define project scope, objectives, timeline, and resource allocation. Set up project management tools and processes.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6097,
+    "project_id": "BrainComputerHealingInterface",
+    "title": "Requirements Gathering and Analysis",
+    "description": "Conduct user research, gather requirements from stakeholders, and analyze existing BCI systems and mind-body healing techniques.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6098,
+    "project_id": "BrainComputerHealingInterface",
+    "title": "System Architecture and Design",
+    "description": "Define the overall system architecture, including hardware and software components, data flow, integration points, and security considerations. Ensure scalability, maintainability, and modularity. Consider edge cases, error handling, performance optimizations, and user experience. Incorporate feedback from stakeholders and subject matter experts.",
+    "status": "IN PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6099,
+    "project_id": "BrainComputerHealingInterface",
+    "title": "Hardware Development",
+    "description": "Design and develop the hardware components of the BCI system, such as sensors, electrodes, and neural stimulation devices.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture and Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6100,
+    "project_id": "BrainComputerHealingInterface",
+    "title": "Software Development",
+    "description": "Develop the software components of the BCI system, including signal processing, neural decoding, and user interface.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture and Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6101,
+    "project_id": "BrainComputerHealingInterface",
+    "title": "Database Design and Implementation for BrainComputerHealingInterface",
+    "description": "Design and implement the database schema for storing user data (username, password, demographic info), session logs (session start/end time, type of session, neural stimulation parameters), system configurations (server URL, API keys, etc.), provide clear documentation for future reference, and ensure data privacy and security. Also, consider creating indices to optimize queries for performance.",
+    "status": "NEEDS_REFINMENT",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture and Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6102,
+    "project_id": "BrainComputerHealingInterface",
+    "title": "Security and Privacy",
+    "description": "Implement security measures to protect user data and ensure system integrity, including encryption, access controls, and auditing.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture and Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6103,
+    "project_id": "BrainComputerHealingInterface",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop test plans, perform unit, integration, and system testing, and ensure the system meets quality standards.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Software Development",
+      "Hardware Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6104,
+    "project_id": "BrainComputerHealingInterface",
+    "title": "Deployment and DevOps",
+    "description": "Set up the production environment, implement continuous integration and deployment pipelines, and monitor system performance.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Software Development",
+      "Hardware Development",
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6105,
+    "project_id": "BrainComputerHealingInterface",
+    "title": "Documentation and Training",
+    "description": "Develop user manuals, technical documentation, and training materials for end-users and support staff.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Software Development",
+      "Hardware Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

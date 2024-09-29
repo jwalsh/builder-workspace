@@ -1,0 +1,174 @@
+[
+  {
+    "id": 714,
+    "project_id": "AutonomousUnderwaterSurveillance",
+    "title": "Define Project Scope and Requirements - Revised",
+    "description": "Thoroughly document the comprehensive requirements for the Autonomous Underwater Surveillance System. Include detailed specifications on areas of interest, surveillance objectives, operational constraints, performance metrics, as well as consideration for integration with existing systems, data storage solutions, and potential future expansions. Additionally, outline the system architecture, detailing software and hardware components, with an emphasis on modularity for ease of future updates. Provide clear use cases and edge-cases, along with non-functional requirements such as security, scalability, maintainability, reliability, and accessibility (for potential human interaction). Also, consider energy efficiency to ensure long operational life underwater.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 715,
+    "project_id": "AutonomousUnderwaterSurveillance",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including the network topology, communication protocols, and integration of various components such as underwater vehicles, sensors, and data processing systems.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 716,
+    "project_id": "AutonomousUnderwaterSurveillance",
+    "title": "Develop Autonomous Vehicle Software",
+    "description": "Develop the software for the autonomous underwater vehicles, including navigation, control, sensor data acquisition, and communication with the central system.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 717,
+    "project_id": "AutonomousUnderwaterSurveillance",
+    "title": "Implement Central Monitoring and Control System",
+    "description": "Develop the central monitoring and control system for managing the network of autonomous vehicles, processing sensor data, and providing user interfaces for monitoring and control.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 718,
+    "project_id": "AutonomousUnderwaterSurveillance",
+    "title": "Design and Implement Data Storage and Processing",
+    "description": "Design and implement the data storage and processing components for storing and analyzing the sensor data collected by the autonomous vehicles.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 719,
+    "project_id": "AutonomousUnderwaterSurveillance",
+    "title": "Develop Security and Access Control Mechanisms",
+    "description": "Implement security measures and access control mechanisms to ensure the confidentiality, integrity, and availability of the surveillance system and its data.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 720,
+    "project_id": "AutonomousUnderwaterSurveillance",
+    "title": "Plan and Implement System Deployment",
+    "description": "Plan and implement the deployment of the autonomous underwater surveillance system, including the installation of underwater vehicles, sensors, and other hardware components, as well as the deployment of the software components.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Autonomous Vehicle Software",
+      "Implement Central Monitoring and Control System",
+      "Design and Implement Data Storage and Processing",
+      "Develop Security and Access Control Mechanisms"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 721,
+    "project_id": "AutonomousUnderwaterSurveillance",
+    "title": "Conduct System Testing and Validation",
+    "description": "Develop and execute a comprehensive testing plan to validate the functionality, performance, and reliability of the autonomous underwater surveillance system, including unit tests, integration tests, and system-level tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Plan and Implement System Deployment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 722,
+    "project_id": "AutonomousUnderwaterSurveillance",
+    "title": "Prepare User Documentation and Training Materials",
+    "description": "Develop user documentation, training materials, and support resources to assist end-users in effectively operating and maintaining the autonomous underwater surveillance system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "Conduct System Testing and Validation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

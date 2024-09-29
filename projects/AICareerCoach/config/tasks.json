@@ -1,0 +1,195 @@
+[
+  {
+    "id": 70,
+    "project_id": "AICareerCoach",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the project requirements, define the system's scope, and identify key features and functionality.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 71,
+    "project_id": "AICareerCoach",
+    "title": "Design System Architecture for AI-powered Career Coaching System (AICareerCoach)",
+    "description": "Design the overall system architecture for the AI-powered career coaching system (AICareerCoach). This includes the AI model, user interface, data storage components, and integration points. The design should prioritize scalability, maintainability, performance requirements, security, and compliance. Outline the high-level components, their responsibilities, interactions, and data flows. Define the technology stack, deployment strategy, and infrastructure requirements. Ensure the architecture supports continuous integration, continuous deployment, and automated testing. Prioritize modularity, extensibility, and adherence to industry best practices. Suggest a plan for error handling, performance optimization, and monitoring. Furthermore, consider edge cases and potential future scalability challenges. In addition, provide an initial breakdown of the design tasks (task decomposition) within this RFC. This will help guide the team during implementation. It is important to collaborate with data scientists, machine learning engineers, code architects, and a Data Privacy Officer due to the sensitive nature of user data. The 'Data Privacy Officer' should be involved in all aspects related to data handling and privacy compliance. I suggest adding them to the 'assigned_to' field. Also, I recommend assigning this task to 'task-decomposer' for further breakdown of tasks within this RFC before implementation. Update the 'rfc_state' field to 'READY_FOR_DECOMPOSITION'.",
+    "status": "READY_FOR_DECOMPOSITION",
+    "assigned_to": "task-decomposer",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Conduct Market Research and Competitor Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 72,
+    "project_id": "AICareerCoach",
+    "title": "Develop AI Model",
+    "description": "Research, design, and implement the AI model for career coaching and question answering.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 73,
+    "project_id": "AICareerCoach",
+    "title": "Build User Interface",
+    "description": "Design and develop the user interface for the career coaching system, including the web or mobile application.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 74,
+    "project_id": "AICareerCoach",
+    "title": "Implement Data Storage and Management",
+    "description": "Design and implement the data storage and management system for user data, career information, and AI model training data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 75,
+    "project_id": "AICareerCoach",
+    "title": "Set up CI/CD Pipeline",
+    "description": "Establish a continuous integration and continuous deployment (CI/CD) pipeline for automated testing, building, and deployment.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 76,
+    "project_id": "AICareerCoach",
+    "title": "Implement Security Measures",
+    "description": "Implement security measures to protect user data and ensure system integrity, including authentication, authorization, and data encryption.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 77,
+    "project_id": "AICareerCoach",
+    "title": "Write Documentation",
+    "description": "Create comprehensive documentation for the system, including user guides, developer documentation, and maintenance manuals.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 78,
+    "project_id": "AICareerCoach",
+    "title": "Conduct Testing and Quality Assurance",
+    "description": "Plan and execute comprehensive testing and quality assurance activities, including unit testing, integration testing, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop AI Model",
+      "Build User Interface",
+      "Implement Data Storage and Management"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 79,
+    "project_id": "AICareerCoach",
+    "title": "Deploy and Launch System",
+    "description": "Deploy the career coaching system to a production environment and launch it for public use.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Conduct Testing and Quality Assurance",
+      "Implement Security Measures",
+      "Write Documentation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

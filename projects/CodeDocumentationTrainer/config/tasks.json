@@ -1,0 +1,171 @@
+[
+  {
+    "id": 1117,
+    "project_id": "CodeDocumentationTrainer",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements. Identify target users, use cases, and desired features.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1118,
+    "project_id": "CodeDocumentationTrainer",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture, including the frontend, backend, and data storage components. The architecture should be modular, scalable, and maintainable, with clear separation of concerns. Consider the following components: 1) Frontend: A user-friendly interface for presenting code snippets, accepting user input for documentation, and providing feedback. The frontend should be responsive and accessible, with a clean and intuitive UI/UX design (consider using modern frameworks like React or Angular). 2) Backend: Handle user authentication, code snippet management, documentation evaluation, and feedback generation. The backend should be built using a modern, scalable framework or language (e.g., Node.js, Django, Flask), with a RESTful API for communication with the frontend. 3) Data Storage: Store code snippets, user submissions, and other relevant data. Consider using a reliable and scalable database solution, such as a relational database (e.g., PostgreSQL) or a NoSQL database (e.g., MongoDB), depending on the data structure and requirements. 4) Integration with external tools or services (if required), such as code linting tools (e.g., ESLint, JSHint), documentation generators (e.g., Doxygen, Sphinx), or plagiarism checkers (e.g., Copyscape). 5) Security considerations for user data and system access, including authentication (OAuth2, JSON Web Tokens), authorization, data encryption (AES, RSA), and secure communication protocols (HTTPS, SSL/TLS). 6) Deployment and infrastructure requirements, including containerization (Docker), load balancing, and scalability considerations. 7) Logging and monitoring mechanisms for tracking system performance and troubleshooting issues (e.g., ELK Stack, Prometheus).",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "backend-developer",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1119,
+    "project_id": "CodeDocumentationTrainer",
+    "title": "User Interface Design",
+    "description": "Design the user interface for the application, including wireframes and mockups.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1120,
+    "project_id": "CodeDocumentationTrainer",
+    "title": "Code Snippet Management",
+    "description": "Implement a system for managing and storing code snippets to be used in the documentation challenges.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1121,
+    "project_id": "CodeDocumentationTrainer",
+    "title": "Documentation Evaluation and Feedback",
+    "description": "Develop a mechanism to evaluate user-submitted documentation and provide feedback on its quality and completeness.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1122,
+    "project_id": "CodeDocumentationTrainer",
+    "title": "User Authentication and Authorization",
+    "description": "Implement user authentication and authorization mechanisms to manage user accounts and access controls.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1123,
+    "project_id": "CodeDocumentationTrainer",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the CodeExplanationGenerator system, including the components needed for code parsing, explanation generation, user interface, data storage, and deployment/hosting. The design should adhere to the following guidelines: 1) Modular design for scalability and maintainability, 2) Separation of concerns between components, 3) Efficient data flow and communication between components, 4) Handling of different programming languages and code formats (consider using open-source parsing libraries like Tree-sitter or similar), 5) Integration with external services or APIs if needed (e.g., code formatting libraries, machine learning models for explanation generation), 6) Security considerations for user data and code submissions (data encryption, access controls, OWASP guidelines for web application security), 7) Deployment strategies (e.g., containerization using Docker, cloud hosting on AWS or Google Cloud with auto-scaling groups), 8) Monitoring and logging mechanisms (implementing ELK stack or similar with dashboards for real-time monitoring), 9) Error handling and fault tolerance (use centralized logging, retry strategies, and circuit breakers), 10) Consideration for future upgrades and improvements (microservices architecture, A/B testing capabilities, version control), 11) Performance optimization (caching strategies, lazy loading, asynchronous processing), 12) Internationalization and accessibility (support multiple languages and ensure the system is accessible to users with disabilities). This RFC is ready for the next state, so update the 'rfc_state' field to 'PENDING_IMPLEMENTATION'.",
+    "status": "PENDING_IMPLEMENTATION",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1124,
+    "project_id": "CodeDocumentationTrainer",
+    "title": "Continuous Integration and Deployment",
+    "description": "Set up a continuous integration and deployment pipeline for automated testing, building, and deploying the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1125,
+    "project_id": "CodeDocumentationTrainer",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema for storing user data, code snippets, documentation submissions, and related metadata. The schema should support efficient querying and retrieval of data for the application's functionality. Use a scalable and performant database system such as MongoDB or PostgreSQL, depending on the data structure and querying requirements. Ensure proper indexing, data integrity constraints, and scalability considerations, with emphasis on handling high write and read throughput due to the interactive nature of the application. For improved maintainability, adhere to best practices for database schema design, such as normalizing the data, using appropriate data types, and defining clear naming conventions. Additionally, consider implementing caching mechanisms or other performance optimizations where necessary. To ensure scalability, consider using a NoSQL database like MongoDB if the data model is flexible and can handle unstructured data well, or PostgreSQL if the data model is more structured and requires complex queries. Once implemented, perform thorough testing to validate the schema's functionality and performance, and make any necessary adjustments before moving to production.",
+    "status": "REVIEW_REQUESTED",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "IMPLEMENTING",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

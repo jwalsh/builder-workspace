@@ -1,0 +1,175 @@
+[
+  {
+    "id": 303,
+    "project_id": "AIProjectManager",
+    "title": "Define Project Scope and Requirements (Revised)",
+    "description": "Gather, document, and prioritize comprehensive requirements for the AIProjectManager, including desired features, integrations, target users, performance expectations, security considerations, scalability needs, user stories. Utilize stakeholder interviews, market research, and competitor analysis to identify gaps and opportunities. Collaborate with the team to refine these requirements throughout the development process. Focus on understanding the market demand, feasibility, and user experience in order to create an effective project management tool. Include a section for potential risks and mitigation strategies, as well as performance metrics and key success indicators (KPIs). Update the rfc_state field to 'READY_FOR_REVIEW' once completed. Prioritize usability and accessibility considerations throughout the requirements gathering process.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 304,
+    "project_id": "AIProjectManager",
+    "title": "Design System Architecture for AI Project Manager",
+    "description": "Design the overall system architecture, including AI components, project management features, data storage, and integration points. Consider scalability, maintainability, performance requirements, security, and ease of deployment. Define the high-level components, their responsibilities, communication patterns, and data flows between them. Identify potential risks and mitigation strategies. Propose a technology stack and justify the choices, including reasons for scalability, maintainability, performance, security, and deployment considerations. Incorporate feedback from 'Define Project Scope and Requirements' task. Ensure that the design is modular, extensible, and adaptable to future updates or changes. Additionally, consider the use of microservices architecture for better scalability and maintainability. The design should also focus on providing a seamless user experience, efficient data processing, and effective AI capabilities.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 305,
+    "project_id": "AIProjectManager",
+    "title": "Develop AI Components",
+    "description": "Implement the AI components for planning, resource allocation, risk assessment, and progress tracking.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 306,
+    "project_id": "AIProjectManager",
+    "title": "Develop Project Management Features",
+    "description": "Implement the project management features, such as task management, Gantt charts, and reporting.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 307,
+    "project_id": "AIProjectManager",
+    "title": "Set up Data Storage and Integration",
+    "description": "Design and implement the data storage solution and integrate with existing project management tools.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 308,
+    "project_id": "AIProjectManager",
+    "title": "Implement Security and Access Control",
+    "description": "Develop security measures and access control mechanisms to protect user data and project information.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 309,
+    "project_id": "AIProjectManager",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a CI/CD pipeline for automated testing, building, and deployment of the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 310,
+    "project_id": "AIProjectManager",
+    "title": "Develop Test Suite and Quality Assurance",
+    "description": "Create a comprehensive test suite and implement quality assurance processes for the AIProjectManager.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Develop AI Components",
+      "Develop Project Management Features",
+      "Set up Data Storage and Integration"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 311,
+    "project_id": "AIProjectManager",
+    "title": "Write Documentation and User Guides",
+    "description": "Prepare documentation, user guides, and training materials for the AIProjectManager.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Develop AI Components",
+      "Develop Project Management Features",
+      "Set up Data Storage and Integration"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

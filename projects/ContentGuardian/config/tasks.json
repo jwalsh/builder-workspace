@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1357,
+    "project_id": "ContentGuardian",
+    "title": "Define Project Scope and Requirements",
+    "description": "Gather and document the project requirements, including the types of content to be moderated (e.g., text, images, videos), the industries to be targeted (e.g., social media, e-commerce, healthcare), and the desired level of moderation (e.g., profanity filtering, explicit content detection, personal information redaction). Identify key stakeholders (e.g., content moderators, legal/compliance teams, end-users) and their specific needs. Consider scalability, performance, and compliance requirements for each industry. Detail any specific regional or local regulations that might apply. Prioritize user privacy and data protection while ensuring efficiency and effectiveness of the moderation process. Break down the project into smaller tasks for better management and to facilitate collaboration among team members. Update this RFC with a clear timeline, milestones, and deliverables.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "task-decomposer",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1358,
+    "project_id": "ContentGuardian",
+    "title": "Design System Architecture for ContentGuardian (Revised)",
+    "description": "Design the overall system architecture for ContentGuardian, a serverless content moderation system. The revised architecture will include the following components: 1) Ingestion layer for accepting user-contributed content from various sources with built-in error handling and rate limiting, 2) Processing layer for content analysis, moderation, and filtering, including edge cases such as deepfakes and inappropriate language detection, 3) Storage layer for persisting moderated content and metadata using a combination of object storage (for scalability) and relational databases (for querying), 4) Notification and reporting mechanisms with real-time alerts and periodic reports, 5) Integration points with third-party services or APIs as required, including OCR for scanning images and videos. Ensure scalability, reliability, security, and compliance with industry standards and regulations. The solution will be modular, with clear boundaries between components and consideration given to ease of maintenance and upgrading. Document the architecture using UML diagrams, sequence diagrams, and flowcharts. Provide a detailed explanation, including any necessary trade-offs and design decisions. This RFC is ready for implementation; assign it to the appropriate team member(s).",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1359,
+    "project_id": "ContentGuardian",
+    "title": "Define Data Models and Storage",
+    "description": "Design the data models and storage solutions for user-contributed content, moderation rules, and other relevant data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1360,
+    "project_id": "ContentGuardian",
+    "title": "Implement Content Moderation Pipeline",
+    "description": "Develop the serverless functions and components for processing user-contributed content, applying moderation rules, and handling sensitive information.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Define Data Models and Storage"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1361,
+    "project_id": "ContentGuardian",
+    "title": "Build User Interfaces",
+    "description": "Design and implement user interfaces for content submission, moderation, and reporting across various industries.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Define Data Models and Storage"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1362,
+    "project_id": "ContentGuardian",
+    "title": "Implement Security and Compliance",
+    "description": "Ensure the system adheres to industry-specific security and compliance requirements, including data privacy, access controls, and audit trails.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1363,
+    "project_id": "ContentGuardian",
+    "title": "Set up CI/CD and Deployment",
+    "description": "Establish a continuous integration and deployment (CI/CD) pipeline for automated testing, building, and deploying the serverless components.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "Implement Content Moderation Pipeline",
+      "Build User Interfaces"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1364,
+    "project_id": "ContentGuardian",
+    "title": "Develop Testing Strategy",
+    "description": "Create a comprehensive testing strategy, including unit tests, integration tests, and end-to-end tests, to ensure the system's functionality and reliability.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Implement Content Moderation Pipeline",
+      "Build User Interfaces"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1365,
+    "project_id": "ContentGuardian",
+    "title": "Write Documentation",
+    "description": "Prepare documentation for the system, including user guides, developer documentation, and maintenance procedures.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

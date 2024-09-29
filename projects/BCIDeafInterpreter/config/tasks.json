@@ -1,0 +1,191 @@
+[
+  {
+    "id": 6947,
+    "project_id": "BCIDeafInterpreter",
+    "title": "Project Planning and Requirements Gathering for BCIDeafInterpreter",
+    "description": "Define project scope, goals, and requirements. Conduct extensive research on Brain-Computer Interface (BCI) technology, neural signal interpretation, and deaf communication needs. Collaborate with stakeholders, subject matter experts, and cross-functional teams to gather input, validate assumptions, and document findings. Prepare a comprehensive project plan, system design, and requirement documentation for further development. This RFC seeks approval for the next steps in the process.",
+    "status": "PENDING_APPROVAL",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "PENDING_REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6948,
+    "project_id": "BCIDeafInterpreter",
+    "title": "System Architecture Design for BCIDeafInterpreter Project: Revised",
+    "description": "Revised system architecture design for the BCIDeafInterpreter project. This includes hardware and software components, data flow, integration points, neural signal processing pipeline, communication interfaces, and data storage requirements. Considering scalability, performance, security, and maintainability aspects, outline an approach for dealing with potential issues such as noise in neural signals, real-time processing demands, energy efficiency, and error correction strategies to minimize misinterpretations. Address the need for modularity to facilitate future upgrades and integrations. Discuss power management strategies to ensure efficient use of battery power during mobile operation. Include a discussion on potential implementation challenges and suggested solutions. Lastly, provide an initial outline for system documentation including sections for hardware and software architecture, data flow diagrams, error handling, and power management.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6949,
+    "project_id": "BCIDeafInterpreter",
+    "title": "Neural Signal Processing Module",
+    "description": "Develop algorithms and models for interpreting neural signals and translating them into meaningful language or communication outputs.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6950,
+    "project_id": "BCIDeafInterpreter",
+    "title": "User Interface and Visualization",
+    "description": "Design and develop the user interface for the BCI system, including input and output modalities, visualization of neural data, and communication aids for the deaf.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6951,
+    "project_id": "BCIDeafInterpreter",
+    "title": "Data Management and Storage",
+    "description": "Implement a secure and scalable data storage solution for storing and retrieving neural data, user profiles, and system logs.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6952,
+    "project_id": "BCIDeafInterpreter",
+    "title": "System Integration and Testing",
+    "description": "Integrate the various components of the BCI system and perform comprehensive testing, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Neural Signal Processing Module",
+      "User Interface and Visualization",
+      "Data Management and Storage"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6953,
+    "project_id": "BCIDeafInterpreter",
+    "title": "Security and Privacy Considerations",
+    "description": "Implement security measures to protect user data and ensure privacy. Conduct security audits and vulnerability assessments.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6954,
+    "project_id": "BCIDeafInterpreter",
+    "title": "Deployment and DevOps",
+    "description": "Set up the infrastructure and deployment pipelines for the BCI system. Implement monitoring, logging, and maintenance processes.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "System Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6955,
+    "project_id": "BCIDeafInterpreter",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation, including system architecture diagrams, API references, and user guides for the BCI system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design",
+      "User Interface and Visualization"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6956,
+    "project_id": "BCIDeafInterpreter",
+    "title": "Project Management and Coordination",
+    "description": "Oversee and coordinate the project, manage resources, track progress, and facilitate communication among team members and stakeholders.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

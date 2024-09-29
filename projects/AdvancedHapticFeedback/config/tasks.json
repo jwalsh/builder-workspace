@@ -1,0 +1,177 @@
+[
+  {
+    "id": 6710,
+    "project_id": "AdvancedHapticFeedback",
+    "title": "Gather Requirements",
+    "description": "Collect and document requirements for the haptic feedback system, including desired tactile sensations, target VR environments, and user experience goals.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6711,
+    "project_id": "AdvancedHapticFeedback",
+    "title": "Design System Architecture - RFC Update",
+    "description": "Update the description to include specific details about the hardware components (e.g., haptic gloves, vests, or controllers), software modules (e.g., haptic algorithms, driver software, and user interface), data flow diagrams, integration strategies with popular VR environments such as Unity, Unreal Engine, Oculus, SteamVR, communication protocols (e.g., Bluetooth, USB, WiFi, HID), scalability plans for multi-user scenarios including load balancing and concurrency control, compatibility considerations (e.g., device compatibility across popular brands, OS support including Windows, Linux, macOS, and mobile platforms), provide a high-level overview of the proposed modular architecture (decoupling hardware drivers, algorithms, and user interface for easier maintenance and scalability), data storage solutions (centralized vs decentralized, database design considerations), security measures (encryption methods, access controls, and secure communication channels), robustness strategies (error handling, system recovery, and fault tolerance), and request feedback on the design for further refinement. Include a section on performance optimization strategies such as caching, compression, and multithreading. Provide a rough timeline and resource requirements for each stage of the project. Update the task assignment to include software architect, hardware engineer, and system integrator, in addition to the frontend-developer, backend-developer, and task-decomposer. Assign to the code-architect for further refinement before review.",
+    "status": "NEEDS_REVISSION",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Gather Requirements",
+      "Research Existing Solutions",
+      "Performance Optimization Research"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6712,
+    "project_id": "AdvancedHapticFeedback",
+    "title": "Develop Hardware Components",
+    "description": "Design and develop hardware components for generating tactile sensations, such as haptic gloves or vests.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6713,
+    "project_id": "AdvancedHapticFeedback",
+    "title": "Develop Software Components",
+    "description": "Develop software components for controlling the hardware, processing sensor data, and integrating with VR environments.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6714,
+    "project_id": "AdvancedHapticFeedback",
+    "title": "Implement VR Environment Integration",
+    "description": "Integrate the haptic feedback system with various VR environments, ensuring seamless communication and synchronization.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Develop Software Components"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6715,
+    "project_id": "AdvancedHapticFeedback",
+    "title": "Conduct Testing and Quality Assurance",
+    "description": "Perform comprehensive testing of the haptic feedback system, including hardware, software, and VR environment integration, to ensure proper functionality and user experience.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop Hardware Components",
+      "Develop Software Components",
+      "Implement VR Environment Integration"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6716,
+    "project_id": "AdvancedHapticFeedback",
+    "title": "Implement Security Measures",
+    "description": "Implement security measures to protect user data and ensure the system's integrity, including encryption, authentication, and access controls.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Develop Software Components"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6717,
+    "project_id": "AdvancedHapticFeedback",
+    "title": "Deploy and Maintain System",
+    "description": "Deploy the haptic feedback system to production environments, and establish processes for monitoring, updating, and maintaining the system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Conduct Testing and Quality Assurance",
+      "Implement Security Measures"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6718,
+    "project_id": "AdvancedHapticFeedback",
+    "title": "Create Documentation",
+    "description": "Develop comprehensive documentation for the haptic feedback system, including user guides, technical specifications, and API references.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Gather Requirements",
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

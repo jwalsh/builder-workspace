@@ -1,0 +1,219 @@
+[
+  {
+    "id": 239,
+    "project_id": "AIInterrogationAssistant",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, objectives, and requirements. Gather input from stakeholders and subject matter experts in interrogation processes.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 240,
+    "project_id": "AIInterrogationAssistant",
+    "title": "System Architecture Design for AIInterrogationAssistant (Revised)",
+    "description": "Revise and finalize the overall system architecture design focusing on modularity, maintainability, scalability, and security. The design will encompass components for speech analysis, micro-expression detection, physiological data processing, and integration with existing interrogation systems. It will prioritize compliance with relevant laws, regulations, ethical guidelines regarding privacy, consent, data protection, and the responsible use of AI in law enforcement. This task depends on Project Planning and Requirements Gathering, Legal and Ethical Review, Data Privacy and Security Assessment. The design should aim for a flexible and extensible architecture to accommodate future enhancements and modifications. It's recommended to also include an analysis of potential biases in AI decision-making, and consider methods for mitigating these biases within the design. This RFC is currently in REVIEW state and awaits feedback from the team. Upon finalization, the design will be passed on to the task-decomposer for further implementation. It's also important to emphasize the need for transparency in AI decision-making processes, considering this aspect in the design as well. This RFC is ready for the next state, so update the rfc_state field accordingly.",
+    "status": "NEXT",
+    "assigned_to": "task-decomposer",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering",
+      "Legal and Ethical Review",
+      "Data Privacy and Security Assessment"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 241,
+    "project_id": "AIInterrogationAssistant",
+    "title": "Data Collection and Preprocessing",
+    "description": "Identify and acquire relevant datasets for training the AI models, including speech recordings, video footage, and physiological data. Preprocess the data for model training.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 242,
+    "project_id": "AIInterrogationAssistant",
+    "title": "AI Model Development",
+    "description": "Develop and train AI models for speech analysis, micro-expression detection, and physiological data processing using appropriate machine learning techniques.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Data Collection and Preprocessing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 243,
+    "project_id": "AIInterrogationAssistant",
+    "title": "User Interface Design - AI Interrogation Assistant (Revised)",
+    "description": "Design an intuitive, user-friendly, and ethically sound interface for the AI interrogation assistant. The revised design prioritizes usability, accessibility, and data privacy while seamlessly integrating with existing interrogation systems. Collaboration is essential with law enforcement agencies, legal experts, human rights organizations, UI/UX experts, and experts in AI ethics. Incorporate features such as data visualization, real-time monitoring, and customizable settings based on user roles and permissions. Ensure the design adheres to ethical guidelines, relevant regulations, and best practices for interface design, with a special focus on usability and accessibility considerations for users with disabilities. Revise the description to reflect these changes. Update the task status to 'IN_PROGRESS' once work has commenced, and update the rfc_state field to 'APPROVED' if the revised description is accepted. Assign this task to a UI/UX expert or a team of UI/UX experts and AI ethics specialists, with a specific mention that they should consult with the project manager for any implementation-related decisions and coordination with other teams. Key updates include an emphasis on transparency, providing clear indicators of AI decision-making processes, and ensuring user control over data usage.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design",
+      "Ethical Guidelines and Legal Compliance Review",
+      "User Research and Requirements Gathering",
+      "UI/UX Design Principles and Best Practices",
+      "AI Ethics"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 244,
+    "project_id": "AIInterrogationAssistant",
+    "title": "Backend Development",
+    "description": "Implement the backend components, including the AI models, data processing pipelines, and integration with existing interrogation systems.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "AI Model Development",
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 245,
+    "project_id": "AIInterrogationAssistant",
+    "title": "Frontend Development",
+    "description": "Implement the user interface for the AI interrogation assistant, following the design specifications and integrating with the backend components.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "User Interface Design",
+      "Backend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 246,
+    "project_id": "AIInterrogationAssistant",
+    "title": "Security and Privacy Considerations",
+    "description": "Assess and address security and privacy concerns related to the handling of sensitive data, such as speech recordings and physiological data.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 247,
+    "project_id": "AIInterrogationAssistant",
+    "title": "Testing and Evaluation",
+    "description": "Develop a comprehensive testing strategy and conduct thorough testing of the AI interrogation assistant, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 248,
+    "project_id": "AIInterrogationAssistant",
+    "title": "Deployment and Maintenance",
+    "description": "Plan and execute the deployment of the AI interrogation assistant, including infrastructure setup, monitoring, and ongoing maintenance.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Testing and Evaluation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 249,
+    "project_id": "AIInterrogationAssistant",
+    "title": "Documentation and Training",
+    "description": "Create comprehensive documentation for the AI interrogation assistant, including user guides, technical documentation, and training materials for interrogators.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Backend Development",
+      "Frontend Development"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

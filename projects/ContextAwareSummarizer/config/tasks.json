@@ -1,0 +1,193 @@
+[
+  {
+    "id": 1366,
+    "project_id": "ContextAwareSummarizer",
+    "title": "Define Project Scope and Requirements - RFC Review",
+    "description": "This RFC proposes the gathering and documentation of requirements for the ContextAwareSummarizer project. The proposal includes expected features, user personas, use cases, data sources, integration points, security considerations, performance and scalability requirements. Upon completion, this task will serve as a foundation for the subsequent development phases.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1367,
+    "project_id": "ContextAwareSummarizer",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including the components, data flow, and integration points.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1368,
+    "project_id": "ContextAwareSummarizer",
+    "title": "Develop User Context Management",
+    "description": "Implement the functionality to capture and manage user context, such as role, current projects, and preferences.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1369,
+    "project_id": "ContextAwareSummarizer",
+    "title": "Implement Summarization Algorithm",
+    "description": "Develop the core summarization algorithm that takes into account the user's context to generate relevant summaries.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1370,
+    "project_id": "ContextAwareSummarizer",
+    "title": "Design User Interface",
+    "description": "Create wireframes and mockups for the user interface, considering the user experience and accessibility requirements.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1371,
+    "project_id": "ContextAwareSummarizer",
+    "title": "Implement User Interface",
+    "description": "Develop the user interface based on the approved designs, integrating with the backend components.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design User Interface",
+      "Develop User Context Management",
+      "Implement Summarization Algorithm"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1372,
+    "project_id": "ContextAwareSummarizer",
+    "title": "Set up CI/CD Pipeline",
+    "description": "Configure a continuous integration and continuous deployment (CI/CD) pipeline for automated builds, testing, and deployment.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1373,
+    "project_id": "ContextAwareSummarizer",
+    "title": "Implement Security Measures",
+    "description": "Ensure the application follows best practices for security, including authentication, authorization, and data protection.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1374,
+    "project_id": "ContextAwareSummarizer",
+    "title": "Write Documentation",
+    "description": "Prepare comprehensive documentation for the project, including user guides, developer guides, and API references.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Design System Architecture",
+      "Design User Interface"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1375,
+    "project_id": "ContextAwareSummarizer",
+    "title": "Conduct Testing and Quality Assurance",
+    "description": "Plan and execute various testing activities, including unit testing, integration testing, and user acceptance testing, to ensure the application meets the defined requirements and quality standards.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement User Interface",
+      "Implement Security Measures"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "id": 7072,
+    "project_id": "ContainerSecurityScanner",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define project scope, goals, and requirements for the ContainerSecurityScanner tool. Gather input from stakeholders and subject matter experts.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7073,
+    "project_id": "ContainerSecurityScanner",
+    "title": "Design System Architecture for ContainerSecurityScanner (Revised)",
+    "description": "This document outlines the proposed system architecture for the ContainerSecurityScanner project. The design focuses on a modular, scalable, and maintainable structure with an emphasis on best practices for containerized applications, particularly security aspects. Adhering to industry-standard principles such as Defense in Depth and Least Privilege will be prioritized throughout the design process. Key components include the Scanner Engine, Vulnerability Database, User Interface, and Integration Layer. Data flow, integration points, and security considerations are detailed below.",
+    "status": "REVIEW_IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7074,
+    "project_id": "ContainerSecurityScanner",
+    "title": "Define Security Scanning Mechanisms for ContainerSecurityScanner",
+    "description": "A comprehensive research and definition of the security scanning mechanisms and techniques to be employed in our ContainerSecurityScanner tool. This includes both static analysis and dynamic analysis techniques, while adhering to relevant industry standards, best practices, and open-source tools as applicable. The focus should be on container scanning, but also consider integration with CI/CD pipelines for continuous security monitoring.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7075,
+    "project_id": "ContainerSecurityScanner",
+    "title": "Design User Interface and Experience",
+    "description": "Design the user interface and experience for the ContainerSecurityScanner tool, including dashboards, reports, and configurations.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7076,
+    "project_id": "ContainerSecurityScanner",
+    "title": "Define Data Storage and Retrieval Mechanisms",
+    "description": "Design the data storage and retrieval mechanisms for storing and accessing scan results, configurations, and other relevant data, considering scalability, security, and performance. Include a plan for how data will be indexed, accessed, and backed up.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7077,
+    "project_id": "ContainerSecurityScanner",
+    "title": "Define Deployment and Orchestration Strategies",
+    "description": "Design the deployment and orchestration strategies for the ContainerSecurityScanner tool. This includes containerization (using Docker or Kubernetes), scaling (horizontal and vertical), monitoring (using Prometheus/Grafana or ELK stack), disaster recovery (implementing backups and failover strategies), and the selection of appropriate tools or services for each strategy, considering cost-effectiveness, scalability, and ease of integration with our existing tech stack.",
+    "status": "REVIEW_COMPLETED",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "id": 941,
+    "project_id": "BodyCamAIAnalyzer",
+    "title": "Define Project Scope and Requirements (Revised)",
+    "description": "This RFC aims to gather, document, and update the comprehensive requirements for the BodyCamAIAnalyzer system. The documentation should include functional and non-functional requirements, performance expectations, integration with existing systems such as police databases, communication systems, and potential AI-powered systems. It should also address data privacy and security considerations including GDPR, HIPAA compliance, regulatory compliance, and detailed error handling mechanisms. The user interface design for law enforcement personnel is to be included, along with testing strategies and methodologies to validate the system's functionality and performance. The document will also outline potential integrations with other AI-powered systems and detail the testing strategies and methodologies.",
+    "status": "READY_FOR_APPROVAL",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 942,
+    "project_id": "BodyCamAIAnalyzer",
+    "title": "Design System Architecture",
+    "description": "Develop the high-level architecture for the BodyCamAIAnalyzer system, including components for video ingestion, AI processing, situational awareness analysis, and user interfaces.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Scope and Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 943,
+    "project_id": "BodyCamAIAnalyzer",
+    "title": "Set up Development Environment",
+    "description": "Configure the development environment, including version control (e.g., Git), continuous integration/deployment (CI/CD) pipelines (e.g., Jenkins, CircleCI, or GitHub Actions), and development tools (e.g., IDEs, linters, and code formatters). Ensure that the environment supports collaboration, code review (e.g., GitHub Pull Requests or Gerrit), and automated testing (e.g., unit, integration, and end-to-end tests). Implement best practices for security (e.g., secure coding practices, vulnerability scanning, and access controls), scalability (e.g., containerization with Docker or Kubernetes), and maintainability (e.g., modular design, code documentation, and automated dependency updates). Additionally, set up a staging environment for testing and a production environment for deployment, with appropriate monitoring (e.g., Prometheus, Grafana) and logging (e.g., ELK Stack or Splunk) solutions for better visibility and troubleshooting. Furthermore, consider setting up the development environment in a cloud platform like AWS, Azure, or Google Cloud Platform to leverage their services and tools. This RFC also covers the initial setup of containers using Docker or Kubernetes.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 944,
+    "project_id": "BodyCamAIAnalyzer",
+    "title": "Implement Video Ingestion and Processing",
+    "description": "Develop the components for ingesting and processing video streams from body cameras, including video decoding, frame extraction, and preprocessing for AI analysis.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 945,
+    "project_id": "BodyCamAIAnalyzer",
+    "title": "Develop AI Models for Situational Analysis",
+    "description": "Research, train, and implement AI models for analyzing video footage, identifying potential threats, and providing situational awareness.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture",
+      "Implement Video Ingestion and Processing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

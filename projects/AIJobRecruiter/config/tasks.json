@@ -1,0 +1,215 @@
+[
+  {
+    "id": 6689,
+    "project_id": "AIJobRecruiter",
+    "title": "Define Project Scope and Requirements",
+    "description": "This RFC outlines the detailed requirements for the AIJobRecruiter platform. The document includes specifying features and functionality, defining user roles and permissions, creating data models, outlining integration with existing HR systems and job boards, addressing scalability and performance requirements, discussing security and compliance considerations, detailing any other relevant project details, and providing acceptance criteria for each requirement. Additionally, sections for potential future enhancements, known limitations or constraints are included. The document will be shared with the team for review and approval upon completion. If necessary, please provide feedback in the 'review_comments' field. Note that this RFC includes a more detailed breakdown of tasks for each role (task-decomposer, project-manager, code-architect, frontend-developer, backend-developer, database-specialist, devops-engineer, qa-tester, security-specialist, technical-writer), ensuring a clear understanding of the work to be done. Upon completion, this RFC will be moved to the 'APPROVED' state. If any changes are required based on feedback, it will be updated accordingly.",
+    "status": "NEEDS_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6690,
+    "project_id": "AIJobRecruiter",
+    "title": "Design System Architecture for AIJobRecruiter",
+    "description": "Design the overall system architecture, including AI components, user interfaces, data storage solutions, and integration with third-party services (e.g., job boards, background check providers). This task will also cover the design of scalable and resilient microservices architecture to handle real-world traffic and ensure high availability. The design should take into account the performance, security, and scalability requirements for this HR platform.\n\nAdditionally, consider the following points:\n1. Implementing a modular design to facilitate easy maintenance and updates.\n2. Utilizing containerization technologies like Docker for deployments and Kubernetes for orchestration.\n3. Incorporating a CI/CD pipeline for efficient development and deployment cycles.",
+    "status": "NEEDS_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Scope and Requirements",
+      "Research and Evaluate AI Technologies"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "PENDING_REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6691,
+    "project_id": "AIJobRecruiter",
+    "title": "Develop AI Candidate Screening Module",
+    "description": "Implement the AI algorithms and models for screening and ranking job candidates based on their qualifications and job requirements.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6692,
+    "project_id": "AIJobRecruiter",
+    "title": "Build Job Matching and Recommendation Engine",
+    "description": "Develop the engine that matches qualified candidates with open job positions based on their skills, experience, and preferences.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6693,
+    "project_id": "AIJobRecruiter",
+    "title": "Implement User Interfaces",
+    "description": "Design and develop the user interfaces for candidates, recruiters, and HR managers, including job search, candidate profiles, and application tracking.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6694,
+    "project_id": "AIJobRecruiter",
+    "title": "Set up Data Storage and Management",
+    "description": "Design and implement the database schema and data management solutions for storing and managing candidate profiles, job listings, and application data.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6695,
+    "project_id": "AIJobRecruiter",
+    "title": "Integrate with Existing HR Systems",
+    "description": "Develop interfaces and APIs to integrate the AIJobRecruiter platform with existing HR systems, such as applicant tracking systems and employee databases.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6696,
+    "project_id": "AIJobRecruiter",
+    "title": "Implement Security and Access Controls",
+    "description": "Design and implement security measures, including authentication, authorization, and data encryption, to ensure the privacy and protection of candidate and company data.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6697,
+    "project_id": "AIJobRecruiter",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a CI/CD pipeline for automated testing, building, and deploying the AIJobRecruiter platform to various environments.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6698,
+    "project_id": "AIJobRecruiter",
+    "title": "Conduct Quality Assurance and Testing",
+    "description": "Plan and execute comprehensive testing strategies, including unit tests, integration tests, and user acceptance tests, to ensure the quality and reliability of the AIJobRecruiter platform.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Develop AI Candidate Screening Module",
+      "Build Job Matching and Recommendation Engine",
+      "Implement User Interfaces",
+      "Set up Data Storage and Management",
+      "Integrate with Existing HR Systems",
+      "Implement Security and Access Controls"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6699,
+    "project_id": "AIJobRecruiter",
+    "title": "Write Technical Documentation",
+    "description": "Create comprehensive technical documentation, including architecture diagrams, API references, and user guides, to support the development, deployment, and maintenance of the AIJobRecruiter platform.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1098,
+    "project_id": "CloudBridge",
+    "title": "Gather and Document Requirements for CloudBridge Integration",
+    "description": "Collaborate with relevant teams (Networking, Security, Operations) to collect, document, and understand the technical requirements for integrating on-premises infrastructure with cloud networking infrastructure. This includes: a) Understanding the existing on-premises network topology; b) Identifying security requirements, compliance regulations, and desired cloud networking architecture; c) Gathering stakeholder requirements and constraints through interviews or workshops. The output will be a comprehensive document detailing the technical requirements for the CloudBridge project.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1099,
+    "project_id": "CloudBridge",
+    "title": "Design Architecture",
+    "description": "Design the overall architecture for the CloudBridge solution, including transit gateways, site-to-site VPN, and direct connections.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Gather Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1100,
+    "project_id": "CloudBridge",
+    "title": "Implement Transit Gateway",
+    "description": "Set up and configure transit gateways for connecting on-premises and cloud networks.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Architecture"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1101,
+    "project_id": "CloudBridge",
+    "title": "Implement Site-to-Site VPN",
+    "description": "Establish site-to-site VPN connections between on-premises and cloud networks.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Architecture"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1102,
+    "project_id": "CloudBridge",
+    "title": "Implement Direct Connect",
+    "description": "Set up direct connections between on-premises and cloud networks for high-speed, low-latency data transfer.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Architecture"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1103,
+    "project_id": "CloudBridge",
+    "title": "Security Audit",
+    "description": "Perform a security audit on the CloudBridge solution to ensure compliance with industry standards and best practices.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Implement Transit Gateway",
+      "Implement Site-to-Site VPN",
+      "Implement Direct Connect"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1104,
+    "project_id": "CloudBridge",
+    "title": "Testing and Validation",
+    "description": "Test and validate the CloudBridge solution to ensure it meets the requirements and functions as expected.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Transit Gateway",
+      "Implement Site-to-Site VPN",
+      "Implement Direct Connect"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1105,
+    "project_id": "CloudBridge",
+    "title": "Documentation",
+    "description": "Create comprehensive documentation for the CloudBridge solution, including architecture diagrams, configuration guides, and user manuals.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "Testing and Validation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1106,
+    "project_id": "CloudBridge",
+    "title": "Deployment and Monitoring",
+    "description": "Deploy the CloudBridge solution to production environments and set up monitoring and alerting systems.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Testing and Validation",
+      "Security Audit"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

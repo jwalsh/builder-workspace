@@ -1,0 +1,176 @@
+[
+  {
+    "id": 6617,
+    "project_id": "AI-PoweredFinancialAdviser",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, goals, and requirements. Conduct market research and gather user feedback to understand the needs and preferences of potential users.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6618,
+    "project_id": "AI-PoweredFinancialAdviser",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture for the AI-Powered Financial Adviser project. This will include the AI model (explicitly mentioning use of XAI for transparency and user trust, as well as a recommended AI framework such as TensorFlow or PyTorch), data pipelines (specifying Apache NiFi or Airflow for ETL processes and Apache Beam for real-time data streams, considering using Kafka for high volume data, and exploring AWS Glue for managed ETL solutions), integration with financial data sources (discussing APIs like Yahoo Finance, Alpaca, Robinhood, Webex for market news and analysis, and emphasizing the use of FINRA API for regulatory compliance), user interfaces (outlining a frontend stack such as React + Redux for web or Flutter for mobile platforms with a focus on accessibility, responsive design, and AODA compliance for Canadian users, considering PWA for cross-platform compatibility), deployment infrastructure (using cloud providers like AWS, Google Cloud, or Azure, specifying containerization with Docker and Kubernetes, implementing serverless functions where appropriate, suggest using AWS Lambda and Azure Functions for this purpose, and exploring managed services like AWS App Runner and Azure Functions Proxies for easy scaling), ensuring scalability, security, and performance requirements are met (emphasizing data encryption at rest and in transit, secure APIs, multi-factor authentication, and continuous monitoring, as well as incorporating best practices for cloud security such as least privilege access and regular vulnerability assessments), providing a detailed design document for review, addressing potential improvements, compliance analysis during the design phase, a preliminary risk assessment, and plans for testing, documentation, and code reviews to ensure quality. Include strategies for monitoring and logging to facilitate troubleshooting and problem resolution (using ELK Stack or similar solutions). Suggest a timeline for each stage of the project, considering milestones and dependencies on external resources, with a focus on agile methodology. Update this task once the design document is ready for review. Upon completion of the design phase, assign the task to the 'task-decomposer' for further decomposition.",
+    "status": "REVIEW_REQUIRES_CHANGES",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering",
+      "Risk Assessment and Compliance Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "PENDING_REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6619,
+    "project_id": "AI-PoweredFinancialAdviser",
+    "title": "AI Model Development",
+    "description": "Research and develop the AI model for financial analysis and advice generation.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6620,
+    "project_id": "AI-PoweredFinancialAdviser",
+    "title": "Data Pipeline and Integration",
+    "description": "Develop data pipelines to ingest and process financial data from various sources, and integrate with the AI model.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6621,
+    "project_id": "AI-PoweredFinancialAdviser",
+    "title": "User Interface Design for AI-Powered Financial Adviser (Revised)",
+    "description": "Revised design proposal for the user interface of the financial advice platform. This includes user onboarding, profile management, advice presentation, and data visualization components. The updated design emphasizes simplicity, accessibility, responsiveness across various devices, a user-centric approach based on UX research insights, interactive elements, personalized experiences, seamless integration with the system architecture, adherence to security guidelines, collaboration with backend developers during implementation for smooth data flow and efficient performance. It is suggested that the design be further refined considering feedback from frontend-developers and technical-writers during the development phase. Incorporate user feedback (if available) for a more comprehensive and user-friendly interface. The rfc_state field should be updated to 'REVISE_AND_DISCUSS' once all suggested changes are implemented. Additionally, consider including accessibility guidelines for visually impaired users as a part of the design, and prioritize feedback from users with visual impairments during user testing. Furthermore, consider incorporating user feedback for color blindness and other visual disabilities in the design process. The rfc_state field should be updated to 'READY_FOR_REVIEW' once all these changes are implemented.",
+    "status": "REVISE",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "User Experience Research"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "REVISE",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6622,
+    "project_id": "AI-PoweredFinancialAdviser",
+    "title": "Security and Compliance",
+    "description": "Implement security measures and ensure compliance with relevant regulations, such as data privacy and financial regulations.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6623,
+    "project_id": "AI-PoweredFinancialAdviser",
+    "title": "Testing and Quality Assurance",
+    "description": "Develop test plans and strategies for the AI model, data pipelines, and user interface. Conduct thorough testing and quality assurance.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "AI Model Development",
+      "Data Pipeline and Integration",
+      "User Interface Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6624,
+    "project_id": "AI-PoweredFinancialAdviser",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure and implement DevOps practices for continuous integration, delivery, and monitoring.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6625,
+    "project_id": "AI-PoweredFinancialAdviser",
+    "title": "Documentation and User Support",
+    "description": "Create comprehensive documentation for the platform, including user guides, API documentation, and developer resources. Establish user support channels.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "User Interface Design",
+      "Testing and Quality Assurance"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

@@ -1,0 +1,195 @@
+[
+  {
+    "id": 6679,
+    "project_id": "AIArtCurator",
+    "title": "Project Planning and Requirements Gathering",
+    "description": "Define the project scope, goals, and requirements. Conduct market research, gather user feedback, and analyze existing art curation platforms.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6680,
+    "project_id": "AIArtCurator",
+    "title": "System Architecture Design",
+    "description": "Design the overall system architecture for AIArtCurator. This includes AI model, data pipeline, user interface components, and infrastructure. Prioritize scalability, performance, security, maintainability, and ensure a comprehensive solution by involving various stakeholders in the design process. Propose modular and extendable designs that allow for future enhancements while prioritizing collaboration, usability, and accessibility. Regularly update the design based on user feedback and technological advancements. Once approved, delegate task-decomposition to task-decomposer.\n\nAdditionally, consider implementing a robust testing strategy for quality assurance (QA) and ensure that the system is accessible to users with different abilities. This may involve collaborating with the QA tester and technical writer roles.",
+    "status": "READY_FOR_APPROVAL",
+    "assigned_to": "task-decomposer",
+    "priority": 5,
+    "dependencies": [
+      "Project Planning and Requirements Gathering"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6681,
+    "project_id": "AIArtCurator",
+    "title": "AI Model Development",
+    "description": "Develop and train the AI model for art analysis and curation based on the defined requirements.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6682,
+    "project_id": "AIArtCurator",
+    "title": "Data Pipeline Implementation",
+    "description": "Implement the data pipeline for ingesting, processing, and storing art data from various sources.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6683,
+    "project_id": "AIArtCurator",
+    "title": "User Interface Development",
+    "description": "Design and develop the user interface for the art curation platform, including artist and user portals.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6684,
+    "project_id": "AIArtCurator",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement the database schema for storing art data, user profiles, and curation results.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6685,
+    "project_id": "AIArtCurator",
+    "title": "Security and Access Control",
+    "description": "Implement security measures, such as authentication, authorization, and data encryption, to protect user data and art assets.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6686,
+    "project_id": "AIArtCurator",
+    "title": "Integration and Testing",
+    "description": "Integrate the various components and perform thorough testing, including unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "AI Model Development",
+      "Data Pipeline Implementation",
+      "User Interface Development",
+      "Database Design and Implementation",
+      "Security and Access Control"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6687,
+    "project_id": "AIArtCurator",
+    "title": "Deployment and DevOps",
+    "description": "Set up the deployment infrastructure, continuous integration/continuous deployment (CI/CD) pipelines, and monitoring tools.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 6688,
+    "project_id": "AIArtCurator",
+    "title": "Documentation and User Guides",
+    "description": "Create comprehensive documentation, user guides, and training materials for the art curation platform.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 1,
+    "dependencies": [
+      "User Interface Development",
+      "Integration and Testing"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

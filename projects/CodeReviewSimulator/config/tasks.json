@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1204,
+    "project_id": "CodeReviewSimulator",
+    "title": "Define project scope and requirements",
+    "description": "Gather and document the project requirements, including features, user stories, technical specifications, and non-functional requirements such as performance, security, scalability, and maintainability. Collaborate with relevant stakeholders (e.g., product owners, subject matter experts, end-users, developers) to capture a comprehensive set of requirements. This process should include creating mockups or wireframes for major features and establishing UI/UX guidelines. Additionally, consider incorporating best practices for code reviews, such as providing clear feedback, ensuring timely response, and promoting constructive discussions.",
+    "status": "APPROVED",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1205,
+    "project_id": "CodeReviewSimulator",
+    "title": "Design system architecture",
+    "description": "Design the overall system architecture, including components, data flow, and integration points.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define project scope and requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1206,
+    "project_id": "CodeReviewSimulator",
+    "title": "Design user interface",
+    "description": "Design the user interface, including wireframes, mockups, and user experience flow.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Define project scope and requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1207,
+    "project_id": "CodeReviewSimulator",
+    "title": "Set up development environment",
+    "description": "Configure the development environment, including version control, build tools, and deployment pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 4,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1208,
+    "project_id": "CodeReviewSimulator",
+    "title": "Implement backend functionality",
+    "description": "Develop the backend components, including code review simulation logic, data storage, and APIs.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design system architecture",
+      "Set up development environment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1209,
+    "project_id": "CodeReviewSimulator",
+    "title": "Implement frontend functionality",
+    "description": "Develop the frontend components, including user interface, code editor, and code review visualization.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design user interface",
+      "Set up development environment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1210,
+    "project_id": "CodeReviewSimulator",
+    "title": "Set up testing framework",
+    "description": "Establish a testing framework, including unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Set up development environment"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1211,
+    "project_id": "CodeReviewSimulator",
+    "title": "Implement security measures",
+    "description": "Implement security measures, including authentication, authorization, and data protection.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design system architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1212,
+    "project_id": "CodeReviewSimulator",
+    "title": "Write documentation",
+    "description": "Create user guides, developer documentation, and other relevant documentation.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "Define project scope and requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1213,
+    "project_id": "CodeReviewSimulator",
+    "title": "Perform code reviews",
+    "description": "Conduct regular code reviews to ensure code quality, maintainability, and adherence to best practices.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Implement backend functionality",
+      "Implement frontend functionality"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]
