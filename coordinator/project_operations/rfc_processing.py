@@ -7,7 +7,7 @@ from ..db import update_task
 from ..implementation_workflow import create_implementation_plan
 from ..llm import llm_manager
 from ..models import ImplementationState, ProjectDefinition, RFCState, Task, TaskType
-from ..utils import extract_json_from_response
+from ..utils import extract_json_from_response, extract_and_correct_json
 
 
 async def process_rfc(task: Task, project_definition: ProjectDefinition) -> Task:
@@ -39,17 +39,16 @@ Please review the RFC and suggest any necessary changes or improvements. If the 
         logging.error(f"No response received from LLM for task {task.id}")
         return task
 
-    updated_task_data = extract_json_from_response(updated_task_response)
-
-    if not updated_task_data:
-        logging.error(f"Failed to extract valid JSON for task {task.id}")
+    corrected_task = await extract_and_correct_json(updated_task_response)
+    if not corrected_task:
+        logging.error(f"Failed to extract or correct JSON for task {task.id}")
         return task
 
     try:
         # Ensure we're only updating fields that exist in the Task model
         valid_fields = task.model_fields.keys()
         filtered_data = {
-            k: v for k, v in updated_task_data.items() if k in valid_fields
+            k: v for k, v in corrected_task.model_dump().items() if k in valid_fields
         }
 
         # Handle enum fields
