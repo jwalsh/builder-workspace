@@ -39,9 +39,9 @@
     "id": 4806,
     "project_id": "SocietalHealthDashboard",
     "title": "Data Modeling and Database Design",
-    "description": "Design the data models and database schemas to store and manage the societal health indicators and related data. The data models should be flexible and extensible to accommodate new indicators and data sources in the future. Consider using a hybrid approach of relational (PostgreSQL for structured data) and NoSQL databases (MongoDB for unstructured or semi-structured data) to handle different types of data and workloads efficiently. Also, consider implementing data versioning for historical data and data lineage to trace the flow of data within the system.",
-    "status": "REVIEW",
-    "assigned_to": "code-architect",
+    "description": "Design the data models and database schemas to store and manage the societal health indicators and related data. The data models should be flexible and extensible to accommodate new indicators and data sources in the future. Consider using a hybrid approach of relational (PostgreSQL for structured data) and NoSQL databases (MongoDB for unstructured or semi-structured data) to handle different types of data and workloads efficiently. Implement Data Versioning for historical data and Data Lineage to trace the flow of data within the system. Additionally, research on open-source libraries or tools that can aid in data modeling and database design, such as Dbeaver or DataGrip, to ensure an efficient and streamlined process. Also, consider incorporating data validation checks to ensure data integrity.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "database-specialist",
     "priority": 4,
     "dependencies": [
       "System Architecture Design"
@@ -117,10 +117,10 @@
   {
     "id": 4810,
     "project_id": "SocietalHealthDashboard",
-    "title": "Security and Access Control",
-    "description": "Implement robust security measures including authentication, authorization, role-based access control (RBAC), and data encryption to ensure the platform's security, protect sensitive data, and maintain compliance with industry standards.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "code-architect",
+    "title": "Security and Access Control (Updated)",
+    "description": "Implement robust security measures including authentication, authorization, role-based access control (RBAC), encryption for data at rest and in transit, and maintain compliance with industry standards such as GDPR, HIPAA, and PCI DSS. Ensure secure user management by providing password policies, account lockouts, and multi-factor authentication.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "security-specialist",
     "priority": 4,
     "dependencies": [
       "System Architecture Design"
@@ -137,8 +137,8 @@
     "id": 4811,
     "project_id": "SocietalHealthDashboard",
     "title": "Continuous Integration and Deployment (CI/CD)",
-    "description": "Implement a CI/CD pipeline to automate the build, testing, and deployment processes for the SocietalHealthDashboard project. The pipeline should include stages such as code linting, unit testing, integration testing, security scanning, performance testing, and deployment to staging and production environments. Additionally, implement automated rollbacks and monitoring to ensure a smooth and reliable deployment process. Note that dependencies are System Architecture Design, Code Quality Standards, and Testing Strategy.",
-    "status": "NEEDS_REVISE",
+    "description": "Implement a CI/CD pipeline to automate the build, testing, and deployment processes for the SocietalHealthDashboard project. The pipeline should include stages such as code linting, unit testing, integration testing, security scanning, performance testing, and deployment to staging and production environments. Additionally, implement automated rollbacks and monitoring to ensure a smooth and reliable deployment process. Note that dependencies are System Architecture Design, Code Quality Standards, and Testing Strategy. For the CI/CD pipeline implementation, consider using popular tools such as Jenkins, TravisCI, or CircleCI. Also, ensure the pipeline includes continuous monitoring for potential issues, error notifications, and documentation of each stage for future reference.",
+    "status": "READY_FOR_REVIEW",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
@@ -147,7 +147,7 @@
       "Testing Strategy"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVISE",
+    "rfc_state": "REVIEW",
     "implementation_state": null,
     "review_comments": null,
     "approver": null,

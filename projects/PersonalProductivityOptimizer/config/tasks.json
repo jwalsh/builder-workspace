@@ -20,9 +20,9 @@
     "id": 3623,
     "project_id": "PersonalProductivityOptimizer",
     "title": "System Architecture Design",
-    "description": "Design the overall system architecture, including components, data flow, and integration points. The architecture should consider scalability, maintainability, and performance. Identify potential integration points with existing systems or third-party services. Define the high-level data models and storage requirements. Address security and privacy concerns related to handling user data. Include a discussion on microservices architecture for better modularity, and propose solutions for real-time task prioritization and schedule optimization based on AI algorithms. Consider incorporating feedback mechanisms for continuous improvement.",
+    "description": "Design the overall system architecture, including components, data flow, and integration points. The architecture should consider scalability, maintainability, and performance. Identify potential integration points with existing systems or third-party services (e.g., calendar apps, project management tools). Define the high-level data models and storage requirements, emphasizing user privacy and security. Include a discussion on microservices architecture for better modularity, and propose solutions for real-time task prioritization and schedule optimization based on AI algorithms, utilizing machine learning techniques like reinforcement learning. Consider incorporating feedback mechanisms for continuous improvement and usability testing. For the microservices, suggest clear interfaces and communication protocols to facilitate efficient service calls. Discuss the choice of technology stack, ensuring it supports our chosen AI algorithms and scales well. Address potential bottlenecks in the architecture design.",
     "status": "READY_FOR_IMPLEMENTATION",
-    "assigned_to": "code-architect",
+    "assigned_to": "task-decomposer",
     "priority": 2,
     "dependencies": [
       "Project Planning and Requirements Gathering"
@@ -39,9 +39,9 @@
     "id": 3624,
     "project_id": "PersonalProductivityOptimizer",
     "title": "Database Design",
-    "description": "Design the database schema and data models for storing user data, schedules, tasks, productivity metrics, and other relevant information.",
-    "status": "TODO",
-    "assigned_to": "database-specialist",
+    "description": "Design the database schema and data models for storing user data, schedules, tasks, productivity metrics, and other relevant information. Consider the scalability, efficiency, and security requirements of the application.",
+    "status": "NEEDS_EDIT",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "System Architecture Design"
@@ -58,14 +58,14 @@
     "id": 3625,
     "project_id": "PersonalProductivityOptimizer",
     "title": "User Interface Design RFC - PersonalProductivityOptimizer",
-    "description": "This RFC proposes the design of the user interface and user experience for the PersonalProductivityOptimizer application. The proposed design will focus on the following aspects: 1) Intuitive and user-friendly layout, 2) Responsive design for various devices, 3) Accessibility features for users with disabilities, 4) Integration with the application's core functionality, 5) Consistent branding and visual identity. Additionally, I recommend the following improvements: 6) Incorporate feedback from user research and requirements gathering, 7) Include interactive prototypes for better understanding of the proposed design, 8) Consider implementing adaptive UI to accommodate different user preferences and devices, 9) Provide clear instructions and tooltips for less tech-savvy users. To ensure a seamless workflow, I suggest the following dependency adjustments: Dependencies [ System Architecture Design, User Research and Requirements Gathering, Design System Development (for consistent branding and visual identity) ] Also, please note that this RFC requires the review of a UX/UI expert for further improvements. Upon approval, the rfc_state field can be updated to 'APPROVED'.",
-    "status": "REVIEW",
+    "description": "This RFC proposes the design of the user interface and user experience for the PersonalProductivityOptimizer application. The proposed design will focus on the following aspects: 1) Intuitive and user-friendly layout, 2) Responsive design for various devices, 3) Accessibility features for users with disabilities, 4) Integration with the application's core functionality, 5) Consistent branding and visual identity. Additionally, I recommend the following improvements: 6) Incorporate feedback from user research and requirements gathering, 7) Include interactive prototypes for better understanding of the proposed design, 8) Consider implementing adaptive UI to accommodate different user preferences and devices, 9) Provide clear instructions and tooltips for less tech-savvy users. To ensure a seamless workflow, I suggest the following dependency adjustments: Dependencies [ User Research and Requirements Gathering, Design System Development (for consistent branding and visual identity), Implementation of System Architecture Design (once approved) ] It is important to note that this RFC requires the review of a UX/UI expert for further improvements. Upon approval, the rfc_state field can be updated to 'APPROVED'.",
+    "status": "PENDING_REVIEW_UX_UI_EXPERT",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
-      "System Architecture Design",
       "User Research and Requirements Gathering",
-      "Design System Development"
+      "Design System Development",
+      "Implementation of System Architecture Design"
     ],
     "task_type": "rfc",
     "rfc_state": "REVIEW",

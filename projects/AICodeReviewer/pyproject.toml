@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "aicodereviewer"
+version = "0.1.0"
+description = "An AI-powered code review system"
+authors = ["Jason Walsh <j@wal.sh>"]
+readme = "README.md"
+packages = [{include = "aicodereviewer"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+aicodereviewer = "aicodereviewer.main:main"

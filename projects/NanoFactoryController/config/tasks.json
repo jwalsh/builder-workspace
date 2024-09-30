@@ -19,13 +19,13 @@
   {
     "id": 3254,
     "project_id": "NanoFactoryController",
-    "title": "Design System Architecture for NanoFactoryController",
-    "description": "Design the overall architecture of the NanoFactoryController system, including the various components, their interactions, and the communication protocols between them. The architecture should consider scalability, fault tolerance, security, and performance requirements. Ensure that the design follows industry best practices, adheres to relevant standards, and includes a clear documentation for each component's role and responsibilities. Since this task involves critical system-level decisions, it is highly recommended to include a detailed analysis of potential trade-offs and their impact on the system's performance and scalability. The design should also provide an outline for the implementation plan.",
-    "status": "REVIEW",
+    "title": "DesignSystemArchitectureforNanoFactoryController",
+    "description": "DesigntheoverallarchitectureoftheNanoFactoryControllersystem,includingthevariouscomponents,theirinteractions,andthecommunicationprotocolsbetweenthem.Thearchitectureshouldconsiderscalability,faulttolerance,security,andperformancerequirements.Ensurethatthedesignfollowsindustrybestpractices,adherestorelevantstandards(suchasRFC3254fornanofactorycommunications),includesacleardocumentationforeachcomponent'sroleandresponsibilities.Sincethistaskinvolvescriticalsystem-leveldecisions,itishighlyrecommendedtoincludeadetailedanalysisofpotentialtrade-offsandtheirimpactonthesystem'sperformanceandscalability.Thedesignshouldalsoprovideanoutlinefortheimplementationplan.Additionally,considerthefollowingpoints:1.Discussthechoiceofprogramminglanguagesandframeworksforeachcomponent,explainingwhytheyaresuitableforthetaskathand.2.Highlightanyspecifictechnologiesortoolsthatwillbeusedintheproject,andprovidearationalefortheirselection.3.Addresshowdatawillbemanagedandstoredwithinthesystem,includingdatabasedesignconsiderations(ifapplicable).4.Discussanyplannedmonitoringandloggingsolutionstoensurethesystem'shealth,performance,andsecurity.5.Considertheuserinterfacerequirementsandinteractiondesign,ifapplicable.",
+    "status": "OPEN",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
-      "Define Project Scope and Requirements"
+      "DefineProjectScopeandRequirements"
     ],
     "task_type": "rfc",
     "rfc_state": "REVIEW",
@@ -57,10 +57,10 @@
   {
     "id": 3256,
     "project_id": "NanoFactoryController",
-    "title": "Design Revised User Interface for NanoFactoryController System",
-    "description": "Design the user interface for the NanoFactoryController system, ensuring it is intuitive, responsive, and adheres to best practices for user experience (UX) design. The UI should cater to different user roles (Admin, Operator, Scientist) and access levels, integrate seamlessly with other system components, provide monitoring and control capabilities for molecular manufacturing processes, and offer real-time feedback mechanisms, data visualization tools, error handling features, and clear documentation. In addition, consider the need for a flexible design to accommodate future updates and expansions of the system.",
-    "status": "READY_FOR_REVISE",
-    "assigned_to": "frontend-developer",
+    "title": "Design Revised User Interface for NanoFactoryController System (Revision 1)",
+    "description": "This RFC proposes a revised design for the user interface of the NanoFactoryController system. The UI will be intuitive, responsive, and adhere to best practices for user experience (UX) design. It will cater to different user roles (Admin, Operator, Scientist) and access levels, seamlessly integrate with other system components, provide monitoring and control capabilities for molecular manufacturing processes, offer real-time feedback mechanisms, data visualization tools, error handling features, clear documentation, and a flexible design to accommodate future updates and expansions of the system. The UI design will be updated based on feedback received during the first iteration. This RFC serves as an update to the previous design version.",
+    "status": "READY_FOR_APPROVAL",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "Design System Architecture"
@@ -76,16 +76,16 @@
   {
     "id": 3257,
     "project_id": "NanoFactoryController",
-    "title": "Implement Security Measures for NanoFactoryController System",
-    "description": "Implement robust and comprehensive security measures for the NanoFactoryController system. This includes implementing access controls, data encryption, secure communication protocols, and threat detection mechanisms. Collaborate with relevant team members throughout the implementation process, ensuring adherence to industry best practices and standards. Also, consider implementing measures for user authentication, authorization, and accountability. Upon completion, document the implemented security measures in the system's technical documentation. Provide regular updates on progress and any potential challenges during the implementation process.",
-    "status": "DRAFT_FOR_REVIEW",
-    "assigned_to": "security-specialist",
+    "title": "Implement Comprehensive Security Measures for NanoFactoryController System",
+    "description": "Design and implement robust security measures for the NanoFactoryController system. This includes implementing access controls, data encryption, secure communication protocols, threat detection mechanisms, and user authentication, authorization, and accountability features. Collaborate with relevant team members throughout the implementation process, ensuring adherence to industry best practices and standards. Document the implemented security measures in the system's technical documentation and provide regular updates on progress and any potential challenges during the implementation process.",
+    "status": "REVIEW_IN_PROGRESS",
+    "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
       "Design System Architecture"
     ],
     "task_type": "rfc",
-    "rfc_state": "DRAFT",
+    "rfc_state": "REVIEW",
     "implementation_state": null,
     "review_comments": null,
     "approver": null,
@@ -115,8 +115,8 @@
     "id": 3259,
     "project_id": "NanoFactoryController",
     "title": "Develop Comprehensive Testing Framework (Revised)",
-    "description": "Develop a robust testing framework for the NanoFactoryController system. The revised framework will include unit tests, integration tests, and system tests focusing on edge cases, error handling, performance optimizations, and security aspects. Ensure test coverage of all critical functionalities while considering best practices in test-driven development (TDD). Update the test framework to allow for easy maintenance, scalability, and extensibility. Include a focus on test automation and continuous integration/continuous delivery (CI/CD) practices.",
-    "status": "READY_FOR_IMPLEMENTATION",
+    "description": "Develop a robust testing framework for the NanoFactoryController system. The revised framework will include unit tests, integration tests, and system tests focusing on edge cases, error handling, performance optimizations, and security aspects. Ensure test coverage of all critical functionalities while considering best practices in test-driven development (TDD). Update the test framework to allow for easy maintenance, scalability, and extensibility. Include a focus on test automation and continuous integration/continuous delivery (CI/CD) practices. To enhance the quality and reliability of the testing framework, consider implementing techniques such as mocking, stubbing, and benchmarking. Additionally, ensure that the testing framework is compatible with popular testing libraries and follows modern testing methodologies.",
+    "status": "IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [

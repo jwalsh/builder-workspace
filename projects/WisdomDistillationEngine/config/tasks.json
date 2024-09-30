@@ -20,8 +20,8 @@
     "id": 5553,
     "project_id": "WisdomDistillationEngine",
     "title": "System Architecture Design",
-    "description": "Design the overall system architecture, including components for text processing, knowledge extraction, reasoning, decision-making, and user interaction. Define data models, workflows, and system interfaces. Consider scalability, maintainability, and performance requirements. For this RFC, also outline the expected integration points with external APIs, potential edge cases, and strategies for handling them.",
-    "status": "NEEDS_REFINEMENT",
+    "description": "Design the overall system architecture for the Wisdom Distillation Engine. This includes components for text processing, knowledge extraction, reasoning, decision-making, and user interaction. Data models, workflows, and system interfaces should be defined, considering scalability, maintainability, and performance requirements. For this RFC, also outline the expected integration points with external APIs, potential edge cases, and strategies for handling them. Additionally, suggest suitable data structures and algorithms for each component, detailing their pros and cons.",
+    "status": "NEEDS_REVISION",
     "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
@@ -95,9 +95,9 @@
   {
     "id": 5557,
     "project_id": "WisdomDistillationEngine",
-    "title": "User Interface and Experience Design",
-    "description": "Design the user interface and experience for interacting with the AI system. Define input and output formats, create wireframes and mockups, and consider accessibility and usability principles to ensure the interface is intuitive and easy to use for a diverse range of users.",
-    "status": "REVIEW",
+    "title": "User Interface and Experience Design - RFC",
+    "description": "Design the user interface and experience for interacting with the WisdomDistillationEngine AI system. Define input and output formats, create wireframes and mockups, consider accessibility and usability principles to ensure the interface is intuitive and easy to use for a diverse range of users. Address feedback from previous RFCs, especially those related to improving user-friendly elements and incorporating design patterns that facilitate seamless interaction with the system.",
+    "status": "PENDING_FEEDBACK",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
@@ -134,9 +134,9 @@
     "id": 5559,
     "project_id": "WisdomDistillationEngine",
     "title": "Database Design and Implementation",
-    "description": "Design and implement the database schema for storing philosophical texts, extracted knowledge, user data, and metadata. Ensure data integrity, performance, and scalability. Consider using a combination of document-oriented (MongoDB) and relational (PostgreSQL) databases to leverage their respective strengths: MongoDB for unstructured text data and PostgreSQL for structured data. Implement caching mechanisms for frequently accessed data at both the database level (e.g., Redis) and in-memory caching within application code. Develop data access layers and APIs for seamless integration with other components, ensuring they follow best practices and adhere to REST principles. For improved performance and scalability, consider utilizing data partitioning and sharding strategies.",
-    "status": "REVIEW",
-    "assigned_to": "code-architect",
+    "description": "Design and implement the database schema for storing philosophical texts, extracted knowledge, user data, and metadata. Ensure data integrity, performance, and scalability by leveraging a combination of document-oriented (MongoDB) and relational (PostgreSQL) databases. Use MongoDB for unstructured text data and PostgreSQL for structured data. Implement caching mechanisms at both the database level (e.g., Redis) and in-memory caching within application code. Develop data access layers and APIs that follow REST principles and best practices, utilizing data partitioning and sharding strategies for improved performance and scalability. Ensure data privacy by following security best practices.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "database-specialist",
     "priority": 2,
     "dependencies": [
       "System Architecture Design"

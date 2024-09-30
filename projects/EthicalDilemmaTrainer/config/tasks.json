@@ -20,7 +20,7 @@
     "id": 2175,
     "project_id": "EthicalDilemmaTrainer",
     "title": "Design System Architecture",
-    "description": "Design the overall system architecture, including AI components (such as machine learning models for ethical dilemma recognition and decision-making), simulation engine, user interface, data storage (considering scalability, performance, security, and maintainability requirements), and integration points. Define the high-level components, their responsibilities, and interactions. Provide guidelines for technology stack, coding standards, best practices, edge cases, error handling, and performance optimizations. Include considerations for accessibility and localization where applicable. After completion, conduct a code review to ensure adherence to standards, considering the use of tools like static analysis and unit testing. Update documentation as necessary. Once ready, schedule a meeting with relevant stakeholders (including project-manager, frontend-developer, backend-developer, database-specialist, devops-engineer, security-specialist, and technical-writer) for discussion and approval. If any dependencies arise during the design process, update the 'dependencies' field accordingly. If the design is complete, update the 'rfc_state' field to 'READY_FOR_REVIEW'. Consider adding a section for potential future improvements or additional features.",
+    "description": "Design the overall system architecture for EthicalDilemmaTrainer. This includes AI components (such as machine learning models for ethical dilemma recognition and decision-making), simulation engine, user interface, data storage (considering scalability, performance, security, and maintainability requirements), and integration points. Define high-level components, their responsibilities, and interactions. Provide guidelines for technology stack, coding standards, best practices, edge cases, error handling, and performance optimizations. Incorporate accessibility and localization considerations where applicable. Conduct a code review to ensure adherence to standards using tools like static analysis and unit testing. Once complete, schedule a meeting with relevant stakeholders (including project-manager, frontend-developer, backend-developer, database-specialist, devops-engineer, security-specialist, and technical-writer) for discussion and approval. If dependencies arise during the design process, update the 'dependencies' field accordingly. If the design is complete, update the 'rfc_state' field to 'READY_FOR_REVIEW'. Consider adding a section for potential future improvements or additional features. After review, assign the task to the appropriate team member for implementation.",
     "status": "IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 5,
@@ -96,9 +96,9 @@
     "id": 2179,
     "project_id": "EthicalDilemmaTrainer",
     "title": "Set up Data Storage",
-    "description": "Design and implement a secure, scalable, and efficient data storage solution for storing user data, simulation results, and other relevant information. The solution should ensure compliance with relevant regulations (e.g., GDPR, HIPAA), support data analytics and reporting, and implement robust access controls, encryption, and auditing mechanisms to ensure data security and integrity. Additionally, consider integrating the storage system with existing infrastructure and services (e.g., authentication, logging) for seamless operation. To enhance the RFC's clarity and completeness, include specific details about the proposed data structures, performance expectations, and any potential challenges or limitations. Furthermore, provide a high-level implementation roadmap and timeline, and outline any necessary testing and validation steps.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "code-architect",
+    "description": "Design and implement a secure, scalable, and efficient data storage solution for storing user data, simulation results, and other relevant information. The solution should ensure compliance with relevant regulations (e.g., GDPR, HIPAA), support data analytics and reporting, and implement robust access controls, encryption, and auditing mechanisms to ensure data security and integrity. Additionally, consider integrating the storage system with existing infrastructure and services (e.g., authentication, logging) for seamless operation. To enhance the RFC's clarity and completeness, include specific details about the proposed data structures (e.g., tables, schemas), performance expectations (e.g., read/write operations per second, latency), and any potential challenges or limitations (e.g., data volume growth). Furthermore, provide a high-level implementation roadmap and timeline (including milestones and key deliverables), outline the necessary testing and validation steps (e.g., unit tests, integration tests, security audits), and specify the resources required for each phase of development. Additionally, consider incorporating feedback from the designated security specialist to ensure data protection standards are met. If necessary, revise the task dependencies to account for the revised scope. Finally, update the rfc_state field to 'READY_FOR_IMPLEMENTATION' when all required information is provided.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "database-specialist",
     "priority": 3,
     "dependencies": [
       "Design System Architecture"
@@ -114,13 +114,13 @@
   {
     "id": 2180,
     "project_id": "EthicalDilemmaTrainer",
-    "title": "Implement Security Measures",
-    "description": "Ensure the system is secure by implementing appropriate security measures such as user authentication, data encryption, access controls, and secure coding practices. Regularly perform security audits and vulnerability assessments. Implement a robust incident response plan, maintain compliance with relevant security standards and regulations, and ensure adherence to best practices for secure software development life cycle (SDLC).",
-    "status": "IN_PROGRESS",
-    "assigned_to": "security-specialist",
+    "title": "ImplementSecurityMeasures",
+    "description": "Ensurethesystemissecurebyimplementingappropriatesecuritymeasuressuchasuserauthentication,dataencryption,accesscontrols,andsecurecodingpractices.Regularlyperformsecurityauditsandvulnerabilityassessments.Implementarobustincidentresponseplan,maintaincompliancewithrelevantsecuritystandardsandregulations,andensureadherencetobestpracticesforsecuresoftwaredevelopmentlifecycle(SDLC).Inaddition,considerthefollowingimprovements:1.Clearlydefinerolesandresponsibilitiesfordifferentuserswithinthesystem.Thisincludesadministrators,trainers,learners,andpotentialthird-partyintegrations.2.Implementmulti-factorauthenticationforenhancedsecurity.3.Utilizehashedpasswordsandsaltedkeysforbetterdataprotection.4.Regularlyupdatedependenciesandmaintainthelatestversionofsoftwarepackagestominimizevulnerabilities.5.Performregularsecuritytrainingandawarenesssessionsforteammembers.6.Documentallsecuritymeasuresimplemented,includinganydeviationsfrombestpracticesorstandards.",
+    "status": "IN_REVIEW",
+    "assigned_to": "code-architect",
     "priority": 1,
     "dependencies": [
-      "Design System Architecture"
+      "DesignSystemArchitecture"
     ],
     "task_type": "rfc",
     "rfc_state": "IN_REVIEW",

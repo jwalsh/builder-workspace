@@ -3,8 +3,8 @@
     "id": 2993,
     "project_id": "MarketMLSuite",
     "title": "Define Project Scope and Requirements (Revised)",
-    "description": "Gather and document comprehensive requirements for the MarketMLSuite project. This includes detailed features, functionalities, security considerations, data privacy needs, and performance expectations. Prioritize requirements based on business value and usability. Include use cases, edge cases, and error handling scenarios. Emphasize on the integration of our platform with buyers' private clouds, ensuring data privacy, intellectual property protection, and seamless user experience.",
-    "status": "IN_PROGRESS",
+    "description": "Gather and document comprehensive requirements for the MarketMLSuite project. This includes detailed features, functionalities, security considerations, data privacy needs, performance expectations, and user experience design. Prioritize requirements based on business value, usability, and feasibility. Include use cases, edge cases, and error handling scenarios. Emphasize on the integration of our platform with buyers' private clouds, ensuring data privacy, intellectual property protection, seamless user experience, and compatibility with various cloud providers. Also, focus on scalability, reliability, and maintainability of the solution. Consider the integration of monitoring tools for performance analysis. Recommend necessary APIs, architecture, and technology stack. Include security measures against potential threats such as unauthorized access, data breaches, and denial-of-service attacks.",
+    "status": "READY_FOR_REVIEW",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [],
@@ -20,8 +20,8 @@
     "id": 2994,
     "project_id": "MarketMLSuite",
     "title": "Design System Architecture for MarketMLSuite",
-    "description": "Design the overall system architecture for the MarketMLSuite, including components, interactions, and data flow. The design should focus on enabling buyers to consume sellers' applications in their own private cloud while ensuring data privacy and intellectual property protection.",
-    "status": "IN_PROGRESS",
+    "description": "Design the overall system architecture for the MarketMLSuite, focusing on enabling buyers to consume sellers' applications in their own private cloud while ensuring data privacy and intellectual property protection. The design should include components, interactions, and data flow details, addressing aspects such as scalability, security, and performance.",
+    "status": "REVIEW_IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
@@ -39,9 +39,9 @@
     "id": 2995,
     "project_id": "MarketMLSuite",
     "title": "Develop Comprehensive Security and Privacy Strategies (Revised)",
-    "description": "Develop comprehensive strategies and mechanisms to ensure data privacy, protect intellectual property, maintain overall system security, and establish secure data transfer methodology. This includes but is not limited to: encryption techniques, access controls, incident response plans, disaster recovery strategies, secure coding best practices, data storage security measures, application hardening techniques. The focus will also be on industry-standard implementation of these strategies.",
+    "description": "Develop comprehensive strategies and mechanisms to ensure data privacy, protect intellectual property, maintain overall system security, and establish secure data transfer methodology. This includes but is not limited to: encryption techniques, access controls, incident response plans, disaster recovery strategies, secure coding best practices, data storage security measures, application hardening techniques. The focus will also be on industry-standard implementation of these strategies. Additionally, the task will include a review and update of existing security policies and procedures, as well as regular security audits to ensure continued compliance. Collaboration with relevant stakeholders such as security specialists, devops engineers, and QA testers is encouraged for a holistic approach.",
     "status": "IN_PROGRESS",
-    "assigned_to": "code-architect",
+    "assigned_to": "security-specialist",
     "priority": 5,
     "dependencies": [
       "Define Project Scope and Requirements"
@@ -58,9 +58,9 @@
     "id": 2996,
     "project_id": "MarketMLSuite",
     "title": "Design User Interface and Experience - MarketMLSuite (Updated)",
-    "description": "Design the user interface and user experience for both buyers and sellers. This includes usability, accessibility, performance optimizations, security considerations, edge cases, compatibility with various devices and screen sizes. Consider using responsive design principles to ensure optimal display on diverse devices. Prioritize data privacy and intellectual property protection in the UI/UX design. Include interactions for handling errors, notifications, and feedback mechanisms. Ensure that the design is adaptable to different user roles (buyer, seller) and can be easily extended or modified as needed. In addition, consider integrating real-time analytics for usage tracking and diagnostics, and ensure the design conforms to the latest web standards.",
-    "status": "NEEDS_REVIEW",
-    "assigned_to": "frontend-developer",
+    "description": "Design the user interface and user experience for both buyers and sellers. This includes usability, accessibility, performance optimizations, security considerations, edge cases, compatibility with various devices and screen sizes. Consider using responsive design principles to ensure optimal display on diverse devices. Prioritize data privacy and intellectual property protection in the UI/UX design. Include interactions for handling errors, notifications, and feedback mechanisms. Ensure that the design is adaptable to different user roles (buyer, seller) and can be easily extended or modified as needed. Integrate real-time analytics for usage tracking and diagnostics, ensuring the design conforms to the latest web standards. Additionally, include a feature for secure data transfer between the buyer's private cloud and the seller's application, with encryption in transit and at rest. Consider conducting user testing to validate the design before implementation. Update the design documentation accordingly.",
+    "status": "NEEDS_REFINEMENT",
+    "assigned_to": "task-decomposer",
     "priority": 3,
     "dependencies": [
       "Define Project Scope and Requirements"
@@ -76,9 +76,9 @@
   {
     "id": 2997,
     "project_id": "MarketMLSuite",
-    "title": "Plan Infrastructure and Deployment for MarketMLSuite: Private Cloud Environment Strategy",
-    "description": "Develop a comprehensive plan and design for the private cloud infrastructure and deployment strategies of MarketMLSuite. This includes ensuring scalability, availability, security, monitoring, and maintenance, while prioritizing data privacy and intellectual property protection mechanisms such as encryption and access control. Consider integrating containerization technologies like Docker or Kubernetes for increased flexibility and management ease. Additionally, outline a strategy for the implementation of these plans.",
-    "status": "READY_FOR_REVIEW",
+    "title": "Plan Infrastructure and Deployment for MarketMLSuite: Private Cloud Environment Strategy - RFC Review",
+    "description": "Review and update the comprehensive plan and design for the private cloud infrastructure and deployment strategies of MarketMLSuite. This includes ensuring scalability, availability, security, monitoring, and maintenance, while prioritizing data privacy and intellectual property protection mechanisms such as encryption and access control. Consider integrating containerization technologies like Docker or Kubernetes for increased flexibility and management ease. Additionally, outline a strategy for the implementation of these plans and provide recommendations for best practices in each area. Once reviewed, update the rfc_state to 'READY_FOR_IMPLEMENTATION' if approved.",
+    "status": "REVIEWED",
     "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [

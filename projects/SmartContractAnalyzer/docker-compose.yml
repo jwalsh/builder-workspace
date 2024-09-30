@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "4000:4000"
+
+  smart-contract-parser:
+    build: ./smart-contract-parser
+    ports:
+      - "4001:4001"
+
+  analysis-engine:
+    build: ./analysis-engine
+    ports:
+      - "4002:4002"
+
+  legal-compliance:
+    build: ./legal-compliance
+    ports:
+      - "4003:4003"
+
+  vulnerability-scanner:
+    build: ./vulnerability-scanner
+    ports:
+      - "4004:4004"
+
+  report-generator:
+    build: ./report-generator
+    ports:
+      - "4005:4005"
+
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: smartcontractanalyzer
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+volumes:
+  postgres_data:

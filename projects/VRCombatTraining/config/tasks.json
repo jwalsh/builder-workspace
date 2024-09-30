@@ -20,8 +20,8 @@
     "id": 5351,
     "project_id": "VRCombatTraining",
     "title": "System Architecture Design",
-    "description": "Design the overall system architecture for the VRCombatTraining project. This includes the VR environment, simulation engine, integration with hardware components, networking, data management, and ensures scalability, performance, security, and maintainability. Additionally, consider edge cases, error handling, and documentation.",
-    "status": "READY_FOR_NEXT_STATE",
+    "description": "Design the overall system architecture for the VRCombatTraining project. This includes the VR environment, simulation engine, integration with hardware components, networking, data management, and ensures scalability, performance, security, and maintainability. Additionally, consider edge cases, error handling, documentation, and accessibility features to make the system usable by a wide range of users. Also, explore the potential for real-time multiplayer capabilities. Upon completion, prepare a comprehensive technical design document for further development. In case of any uncertainties or suggestions for further tasks, raise new RFCs.",
+    "status": "NEEDS_REVISION",
     "assigned_to": "code-architect",
     "priority": 1,
     "dependencies": [
@@ -96,9 +96,9 @@
     "id": 5355,
     "project_id": "VRCombatTraining",
     "title": "Database Design and Implementation",
-    "description": "Design and implement the database schema for storing user data, scenarios, simulation results, and related metadata. Consider data integrity, performance, and scalability requirements. Ensure proper indexing and normalization techniques are applied. Implement data access layers and APIs for interacting with the database.",
-    "status": "TODO",
-    "assigned_to": "database-specialist",
+    "description": "Design and implement a scalable and efficient database schema for storing user data, scenarios, simulation results, and related metadata. Ensure data integrity, performance, and normalization techniques are applied. Implement data access layers and APIs for interacting with the database. Additionally, consider sharding strategies for handling large volumes of data and implementing caching mechanisms for improved performance.",
+    "status": "TO REVISE",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "System Architecture Design"
@@ -115,8 +115,8 @@
     "id": 5356,
     "project_id": "VRCombatTraining",
     "title": "Security and Access Control (Revised)",
-    "description": "Implement comprehensive security measures, including user authentication, data encryption (AES-256), access control mechanisms (Role-Based Access Control), secure communication protocols (TLS/SSL), and ensure compliance with industry standards such as GDPR, HIPAA, and PCI-DSS. The implementation should prioritize privacy, resilience, and scalability. Collaborate closely with other teams for seamless integration.",
-    "status": "REVIEW",
+    "description": "Implement comprehensive security measures including: user authentication, AES-256 data encryption, Role-Based Access Control, secure communication protocols (TLS/SSL), compliance with industry standards such as GDPR, HIPAA, and PCI-DSS. Prioritize privacy, resilience, and scalability. Collaborate closely with other teams for seamless integration. Revise the implementation plan to include a multi-factor authentication mechanism for added security. Ensure that the system can handle increased load during peak usage periods (scalability). Provide regular updates on progress and potential challenges to the project manager.",
+    "status": "IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [

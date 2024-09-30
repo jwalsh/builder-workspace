@@ -1,0 +1,48 @@
+graph TD
+    A[User] --> B[Frontend Service]
+    B --> C[API Gateway]
+    C --> D[Smart Contract Parser Service]
+    C --> E[Analysis Engine Service]
+    C --> F[Legal Compliance Service]
+    C --> G[Vulnerability Scanner Service]
+    C --> H[Report Generator Service]
+    D --> I[(Database Service)]
+    E --> I
+    F --> I
+    G --> I
+    H --> I
+    D <--> J{Message Queue}
+    E <--> J
+    F <--> J
+    G <--> J
+    H <--> J
+    
+    subgraph "Kubernetes Cluster"
+        B
+        C
+        D
+        E
+        F
+        G
+        H
+        I
+        J
+    end
+    
+    K[CI/CD Pipeline] --> B
+    K --> C
+    K --> D
+    K --> E
+    K --> F
+    K --> G
+    K --> H
+    
+    L[Monitoring & Logging] --> B
+    L --> C
+    L --> D
+    L --> E
+    L --> F
+    L --> G
+    L --> H
+    L --> I
+    L --> J

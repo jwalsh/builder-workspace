@@ -1,0 +1,215 @@
+[
+  {
+    "id": 7279,
+    "project_id": "DronAgricolaInteligente",
+    "title": "Requirements Gathering for DroneAgro Project",
+    "description": "Identify and document the functional (e.g. drone autonomy, monitoring capabilities, resource optimization) and non-functional (performance, security, scalability, user interface) requirements for the DroneAgro project. Ensure the requirements are comprehensive, clear, and prioritized. Additionally, consider the impact of edge cases and potential future updates or expansions.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7280,
+    "project_id": "DronAgricolaInteligente",
+    "title": "Design Drone Architecture",
+    "description": "Develop a high-level design for the autonomous drones, including hardware and software components.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7281,
+    "project_id": "DronAgricolaInteligente",
+    "title": "Develop Drone Firmware",
+    "description": "Write the firmware for the drones to enable autonomous flight and sensor data processing.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Drone Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7282,
+    "project_id": "DronAgricolaInteligente",
+    "title": "Develop Mobile Application Interface",
+    "description": "Create a user-friendly mobile application interface for farmers to interact with the drones and monitor their crops.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design Drone Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7283,
+    "project_id": "DronAgricolaInteligente",
+    "title": "Database Design and Implementation",
+    "description": "Design and implement a database to store sensor data collected by the drones.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Requirements Gathering"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7284,
+    "project_id": "DronAgricolaInteligente",
+    "title": "Integration of Components",
+    "description": "Integrate the drone firmware, mobile application interface, and database to create a functional system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Develop Drone Firmware",
+      "Develop Mobile Application Interface",
+      "Database Design and Implementation"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7285,
+    "project_id": "DronAgricolaInteligente",
+    "title": "Unit Testing",
+    "description": "Perform unit testing on the individual components of the DroneAgro system.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "Develop Drone Firmware",
+      "Develop Mobile Application Interface",
+      "Database Design and Implementation",
+      "Integration of Components"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7286,
+    "project_id": "DronAgricolaInteligente",
+    "title": "System Integration Testing",
+    "description": "Perform integration testing on the complete DroneAgro system.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Unit Testing",
+      "Integration of Components"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7287,
+    "project_id": "DronAgricolaInteligente",
+    "title": "Security Review",
+    "description": "Review the security aspects of the DroneAgro system and suggest improvements.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 5,
+    "dependencies": [
+      "System Integration Testing"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7288,
+    "project_id": "DronAgricolaInteligente",
+    "title": "Deployment Planning",
+    "description": "Plan for the deployment of the DroneAgro system in a controlled environment.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 3,
+    "dependencies": [
+      "System Integration Testing"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7289,
+    "project_id": "DronAgricolaInteligente",
+    "title": "Deployment and Monitoring",
+    "description": "Deploy the DroneAgro system in a controlled environment and monitor its performance.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Deployment Planning"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

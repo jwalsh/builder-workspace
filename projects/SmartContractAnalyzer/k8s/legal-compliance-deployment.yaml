@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: legal-compliance
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: legal-compliance
+  template:
+    metadata:
+      labels:
+        app: legal-compliance
+    spec:
+      containers:
+      - name: legal-compliance
+        image: smartcontractanalyzer/legal-compliance:latest
+        ports:
+        - containerPort: 80

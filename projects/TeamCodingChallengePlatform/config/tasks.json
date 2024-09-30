@@ -3,8 +3,8 @@
     "id": 5013,
     "project_id": "TeamCodingChallengePlatform",
     "title": "Define Project Scope and Requirements",
-    "description": "Gather and document detailed requirements for the TeamCodingChallengePlatform, including features, user roles (e.g., challenger, mentor, judge), workflows (challenge creation, submission, evaluation), integration points (APIs, GitHub, Slack), security considerations (user authentication, data privacy), scalability requirements, performance goals, and design patterns for frontend and backend development.",
-    "status": "IN_PROGRESS",
+    "description": "Gather and document detailed requirements for the TeamCodingChallengePlatform, including features (e.g., challenge creation, submission, evaluation), user roles (challenger, mentor, judge, participant), workflows (registration, team formation, challenge initiation, submission, evaluation, feedback), integration points (APIs: GitHub, Slack, Discord, Google Drive; Webhooks), security considerations (user authentication using OAuth, data privacy with encryption, role-based access control), scalability requirements and strategies, performance goals, design patterns for frontend (React/Redux) and backend (Node.js/Express) development, and documentation guidelines.",
+    "status": "NEEDS_REVIEW",
     "assigned_to": "code-architect",
     "priority": 1,
     "dependencies": [],
@@ -20,9 +20,9 @@
     "id": 5014,
     "project_id": "TeamCodingChallengePlatform",
     "title": "Design System Architecture",
-    "description": "Design the overall system architecture, including components, data flow, technology stack, and infrastructure. Consider scalability, security, and performance requirements. Outline the high-level architecture and identify potential challenges or risks in a clear and concise manner. Include diagrams where necessary to aid understanding.",
-    "status": "READY_FOR_APPROVAL",
-    "assigned_to": "project-manager",
+    "description": "Design the overall system architecture, including components, data flow, technology stack, and infrastructure. Consider scalability, security, and performance requirements. Outline the high-level architecture and identify potential challenges or risks in a clear and concise manner. Include diagrams where necessary to aid understanding. For the design phase, it would be beneficial to collaborate with frontend-developer, backend-developer, database-specialist, devops-engineer, security-specialist, and technical-writer to ensure all aspects are addressed.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
       "Define Project Scope and Requirements"
@@ -39,15 +39,15 @@
     "id": 5015,
     "project_id": "TeamCodingChallengePlatform",
     "title": "Design Database Schema for TeamCodingChallengePlatform",
-    "description": "Design a scalable, performant, and secure database schema to store challenge data, user information, submissions, team formations, scoring mechanisms, and other relevant data. Consider the data integrity requirements, ensure compatibility with our existing technology stack, and follow best practices in database design.",
-    "status": "REVIEW",
-    "assigned_to": "code-architect",
+    "description": "Design a scalable, performant, and secure database schema to store challenge data, user information, submissions, team formations, scoring mechanisms, and other relevant data. Consider the data integrity requirements, ensure compatibility with our existing technology stack (e.g., use PostgreSQL as it is widely used within the company), and follow best practices in database design. Also, consider normalization to improve data consistency and reduce redundancy.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "database-specialist",
     "priority": 2,
     "dependencies": [
       "Design System Architecture"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW",
+    "rfc_state": "APPROVED",
     "implementation_state": null,
     "review_comments": null,
     "approver": null,
@@ -60,7 +60,7 @@
     "title": "Design User Interface and Experience",
     "description": "Design the user interface and user experience for the platform, including wireframes, mockups, and prototypes. Consider the needs of different user roles (organizers, participants, judges, etc.) and ensure a seamless and intuitive experience. Incorporate best practices for usability, accessibility, responsive design, and follow industry-standard design guidelines and patterns. Collaborate with stakeholders to gather requirements and validate designs. Given the complexity of this task, it is recommended that a code-architect or UX/UI expert be involved for the next phase of this project.",
     "status": "IN PROGRESS",
-    "assigned_to": "code-architect",
+    "assigned_to": "frontend-developer",
     "priority": 3,
     "dependencies": [
       "Define Project Scope and Requirements"
@@ -76,10 +76,10 @@
   {
     "id": 5017,
     "project_id": "TeamCodingChallengePlatform",
-    "title": "Define Security Requirements",
-    "description": "Define security requirements and measures to ensure data integrity, user authentication, secure communication, and compliance with industry standards and best practices.",
-    "status": "TODO",
-    "assigned_to": "security-specialist",
+    "title": "Define Security Requirements for TeamCodingChallengePlatform",
+    "description": "Clearly define security requirements and measures to ensure data integrity, user authentication, secure communication, and compliance with industry standards and best practices. The requirements should cover areas such as access control, encryption, and incident response.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
       "Design System Architecture"
@@ -96,9 +96,9 @@
     "id": 5018,
     "project_id": "TeamCodingChallengePlatform",
     "title": "Plan DevOps and Deployment Strategy",
-    "description": "Define the DevOps strategy, including continuous integration, deployment, monitoring processes, infrastructure provisioning, and containerization (to improve scalability and portability). Also, consider implementing a CI/CD pipeline using tools like Jenkins or CircleCI.",
-    "status": "TODO",
-    "assigned_to": "code-architect",
+    "description": "Define the DevOps strategy, including continuous integration, deployment, monitoring processes, infrastructure provisioning, and containerization (to improve scalability and portability). Consider implementing a CI/CD pipeline using tools like Jenkins or CircleCI. Also, investigate the use of Kubernetes for container orchestration and AWS or Google Cloud for infrastructure provisioning. Address security concerns by setting up vulnerability scanning and automated patching.",
+    "status": "REVIEW",
+    "assigned_to": "devops-engineer",
     "priority": 4,
     "dependencies": [
       "Design System Architecture"

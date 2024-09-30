@@ -20,8 +20,8 @@
     "id": 5372,
     "project_id": "VRMortgageAdvisor",
     "title": "Design Virtual Reality Environment for VRMortgageAdvisor",
-    "description": "Create a comprehensive design for the VR environment including user interface, navigation, interactive elements, data flow, and integration with mortgage calculation and recommendation engines. Focus on immersive 3D graphics, spatial audio, hand/gesture tracking, voice commands, and ensure accessibility and responsiveness to various devices. Consider incorporating visual feedback mechanisms, intuitive UI/UX designs, and optimizing performance for a seamless user experience. Also, consider the integration of virtual learning modules and interactive tools to facilitate financial education.",
-    "status": "IN_PROGRESS",
+    "description": "Create a comprehensive design for the VR environment including user interface, navigation, interactive elements, data flow, and integration with mortgage calculation and recommendation engines. Focus on immersive 3D graphics, spatial audio, hand/gesture tracking, voice commands, and ensure accessibility and responsiveness to various devices. Consider incorporating visual feedback mechanisms, intuitive UI/UX designs, and optimizing performance for a seamless user experience. Also, integrate virtual learning modules and interactive tools for financial education. In addition, consider the following points: \n1. Prioritize mobile-first approach while designing.\n2. Ensure that the design complies with VR accessibility guidelines.\n3. Integrate analytics to track user behavior and improve the platform based on insights.\n4. Collaborate closely with other teams such as UX/UI, frontend, backend, and devops during the design process.\n5. Conduct usability testing regularly to refine and iterate the design.",
+    "status": "NEEDS_REVISION",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
@@ -59,8 +59,8 @@
     "id": 5374,
     "project_id": "VRMortgageAdvisor",
     "title": "Design and Implement VR Mortgage Advisor",
-    "description": "Develop the virtual mortgage advisor component, including personalized mortgage options, calculations, recommendations, and integration with external data sources for real-time mortgage rates and financial data. The advisor should also provide immersive financial education and be designed to work seamlessly within the overall VR environment of the platform.",
-    "status": "IN_PROGRESS",
+    "description": "Develop the virtual mortgage advisor component, including personalized mortgage options, calculations, recommendations, and integration with external data sources for real-time mortgage rates and financial data. The advisor should also provide immersive financial education and be designed to work seamlessly within the overall VR environment of the platform. Additionally, ensure that the data privacy and security aspects are prioritized throughout the development process.",
+    "status": "READY_FOR_DEVELOPMENT",
     "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
@@ -101,7 +101,7 @@
     "title": "Implement Data Storage and Management",
     "description": "Design and develop the database schema (including tables for user information, mortgage options, educational content, and application logs), implement data management system for efficient storage and retrieval of data, and ensure data security by implementing necessary encryption methods.",
     "status": "REVIEW",
-    "assigned_to": "code-architect",
+    "assigned_to": "database-specialist",
     "priority": 3,
     "dependencies": [
       "Project Planning and Requirements Gathering"
@@ -118,9 +118,9 @@
     "id": 5377,
     "project_id": "VRMortgageAdvisor",
     "title": "Develop Security and Privacy Measures",
-    "description": "Implement robust security and privacy measures to safeguard user data. This includes encryption, access controls, anonymization techniques, and compliance with GDPR, CCPA, PCI-DSS, and other relevant regulations. Create policies for data handling, incident response, and regular security audits. Ensure these measures are implemented throughout the entire system, not just at specific touchpoints (e.g., frontend, backend, database). Collaborate closely with all team members to ensure integration of these measures from project planning through to deployment.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "code-architect",
+    "description": "Implement robust security and privacy measures to safeguard user data. This includes encryption (AES-256 for data at rest and TLS 1.2+ for data in transit), access controls (Role Based Access Control, Least Privilege Principle), anonymization techniques (e.g., pseudonymization, hashing), compliance with GDPR, CCPA, PCI-DSS, and other relevant regulations. Create policies for data handling, incident response, and regular security audits. Ensure these measures are implemented throughout the entire system, not just at specific touchpoints (e.g., frontend, backend, database). Collaborate closely with all team members to ensure integration of these measures from project planning through to deployment. Additionally, consider incorporating principles such as Privacy by Design and Data Protection by Default.",
+    "status": "REVIEW_NEEDED",
+    "assigned_to": "security-specialist",
     "priority": 5,
     "dependencies": [
       "Project Planning and Requirements Gathering",

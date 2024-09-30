@@ -3,8 +3,8 @@
     "id": 6451,
     "project_id": "LowLatencyMessagingProtocol",
     "title": "Define Protocol Requirements for LowLatencyMessagingProtocol",
-    "description": "Gather and document the requirements for the low-latency messaging protocol, including performance targets (sub-millisecond latency), security considerations (TLS, authentication using JWT, and authorization), compatibility with existing systems such as WebSocket, gRPC, and potentially WebAssembly. An in-depth analysis of trade-offs between latency, reliability, and security is necessary, especially considering high-frequency trading, online gaming, and other real-time applications. Additionally, explore the potential impact on data integrity, consistency, and error handling.",
-    "status": "IN_PROGRESS",
+    "description": "Gather and document the requirements for the low-latency messaging protocol, including performance targets (sub-millisecond latency), security considerations (TLS, authentication using JWT, and authorization), compatibility with existing systems such as WebSocket, gRPC, and potentially WebAssembly. An in-depth analysis of trade-offs between latency, reliability, and security is necessary, especially considering high-frequency trading, online gaming, and other real-time applications. Additionally, explore the potential impact on data integrity, consistency, and error handling, emphasizing the importance of data verification mechanisms for ensuring correctness in critical scenarios. Include a section for detailing the expected performance under heavy load conditions to provide insights on scalability and efficiency. Furthermore, consider the long-term maintainability and extensibility of the protocol as part of the design considerations.",
+    "status": "READY_FOR_REVIEW",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [],
@@ -19,9 +19,9 @@
   {
     "id": 6452,
     "project_id": "LowLatencyMessagingProtocol",
-    "title": "Design Protocol Architecture (Revised)",
-    "description": "This RFC outlines the proposed architecture of the LowLatencyMessagingProtocol. The design includes message formats, transport mechanisms, and error handling strategies tailored for high-frequency trading and online gaming environments. Discussion on latency vs reliability trade-offs, scalability, security, and flexibility considerations are provided. Open issues related to potential architectural choices and their implications are identified, along with proposed solutions. Suggestions for further improvements and potential trade-offs are welcomed.",
-    "status": "NEEDS_FEEDBACK",
+    "title": "Design Protocol Architecture (Revised and Clarified)",
+    "description": "This RFC provides a revised and clarified outline of the proposed architecture of the LowLatencyMessagingProtocol. The design includes message formats, transport mechanisms, error handling strategies, and a discussion on latency vs reliability trade-offs, scalability, security, and flexibility considerations tailored for high-frequency trading and online gaming environments. Open issues related to potential architectural choices and their implications are identified, along with proposed solutions. This document also includes clarifications and elaborations based on feedback received, and suggestions for further improvements and potential trade-offs are welcomed. Discussion points have been organized into clear sections for easy reference.",
+    "status": "NEEDS_REVISION",
     "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [

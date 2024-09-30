@@ -19,15 +19,16 @@
   {
     "id": 4347,
     "project_id": "RoboticsConstructionCrew",
-    "title": "System Architecture Design",
-    "description": "Design the overall system architecture for the RoboticsConstructionCrew project. The architecture should prioritize modularity, scalability, and maintainability. Key aspects to consider are:\n\n1. Hardware components (robots, sensors, controllers, etc.) and their specifications.\n2. Software components (control systems, data processing, user interfaces, etc.) and their interactions.\n3. Communication protocols for robot-to-robot and robot-to-system communication.\n4. Integration with existing construction systems (e.g., project management, inventory management, safety systems).\n5. Fault tolerance, error handling, and failover mechanisms.\n6. Security considerations for data transmission and system access.\n7. Performance optimization and resource allocation strategies.\n8. Detailed design documents should be prepared to facilitate handoff to development teams.\n9. Collaborate with relevant stakeholders (e.g., hardware engineers, software developers, project managers) during the design process. In addition, consider the following points:\n10. Discuss the potential use of AI and Machine Learning in robot decision-making.\n11. Consider the energy efficiency of the system to minimize operational costs.\n12. Provide a high-level architecture diagram to visualize the proposed design.\n13. Include guidelines for testing and validation processes.\n14. Address any potential challenges or limitations that might arise during implementation.\n15. Update the task dependencies to include 'System Requirements Specification' and 'Hardware/Software Procurement'.",
+    "title": "System Architecture Design for RoboticsConstructionCrew",
+    "description": "Design the overall system architecture for the RoboticsConstructionCrew project. The architecture should prioritize modularity, scalability, and maintainability. Key aspects to consider are:\n\n1. Hardware components (robots, sensors, controllers, etc.) and their specifications.\n2. Software components (control systems, data processing, user interfaces, etc.) and their interactions.\n3. Communication protocols for robot-to-robot and robot-to-system communication.\n4. Integration with existing construction systems (e.g., project management, inventory management, safety systems).\n5. Fault tolerance, error handling, and failover mechanisms.\n6. Security considerations for data transmission and system access.\n7. Performance optimization and resource allocation strategies.\n8. Detailed design documents should be prepared to facilitate handoff to development teams.\n9. Collaborate with relevant stakeholders (e.g., hardware engineers, software developers, project managers) during the design process.\n10. Discuss the potential use of AI and Machine Learning in robot decision-making.\n11. Consider the energy efficiency of the system to minimize operational costs.\n12. Provide a high-level architecture diagram to visualize the proposed design.\n13. Include guidelines for testing and validation processes.\n14. Address any potential challenges or limitations that might arise during implementation.\n15. Update the task dependencies to include 'System Requirements Specification' and 'Hardware/Software Procurement', also consider adding 'Design Review' as a dependency to ensure the design is well-structured and understood by all relevant parties.\n16. Upon completion, update the rfc_state field to 'REVIEW_READY'.",
     "status": "DRAFT_FOR_REVISION",
     "assigned_to": "code-architect",
     "priority": 1,
     "dependencies": [
       "Project Planning and Requirements Gathering",
       "System Requirements Specification",
-      "Hardware/Software Procurement"
+      "Hardware/Software Procurement",
+      "Design Review"
     ],
     "task_type": "rfc",
     "rfc_state": "DRAFT",
@@ -116,10 +117,10 @@
   {
     "id": 4352,
     "project_id": "RoboticsConstructionCrew",
-    "title": "Security and Access Control",
-    "description": "Implement robust security measures and access control mechanisms to ensure system integrity, maintain data privacy, and meet industry standards for construction robotics. This task includes authentication, authorization, and encryption strategies, with a focus on implementing multi-factor authentication (MFA) for increased security.",
-    "status": "NEEDS_REVIEW",
-    "assigned_to": "security-specialist",
+    "title": "Security and Access Control for RoboticsConstructionCrew",
+    "description": "Implement robust security measures and access control mechanisms to ensure system integrity, maintain data privacy, and meet industry standards for construction robotics. This task includes the development of authentication, authorization, and encryption strategies with a focus on implementing multi-factor authentication (MFA) for increased security, as well as investigating potential biometric authentication methods for enhanced user verification.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
       "System Architecture Design"

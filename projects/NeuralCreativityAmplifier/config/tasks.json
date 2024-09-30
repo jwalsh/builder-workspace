@@ -3,9 +3,9 @@
     "id": 8111,
     "project_id": "NeuralCreativityAmplifier",
     "title": "Requirements Gathering",
-    "description": "Collaborate with stakeholders to gather and document project requirements in a clear, concise, and feasible manner that aligns with the project scope. Focus on understanding the technical and non-technical aspects of the system design.",
+    "description": "Collaborate with stakeholders to gather and document project requirements. Ensure a clear, concise, and feasible representation that aligns with the project scope, focusing on both technical and non-technical aspects of the system design.",
     "status": "TODO",
-    "assigned_to": "project-manager",
+    "assigned_to": "code-architect",
     "priority": 1,
     "dependencies": [],
     "task_type": "rfc",
@@ -38,9 +38,9 @@
   {
     "id": 8113,
     "project_id": "NeuralCreativityAmplifier",
-    "title": "Develop the Frontend Interface",
-    "description": "Create a user-friendly and intuitive interface for controlling and interacting with the NeuralCreativityAmplifier system. The interface should enable users to adjust settings, monitor progress, receive feedback on their creative output, and offer a seamless user experience. This includes implementing responsive design for various devices.",
-    "status": "PENDING_REVIEW",
+    "title": "Develop the Frontend Interface for NeuralCreativityAmplifier System",
+    "description": "Design and develop a user-friendly, responsive, and intuitive interface for controlling and interacting with the NeuralCreativityAmplifier system. The interface should allow users to adjust settings, monitor progress, receive real-time feedback on their creative output, and provide an seamless user experience across various devices. This includes: 1. Designing wireframes and prototypes for user interaction and feedback mechanisms. 2. Implementing a reusable component architecture. 3. Optimizing the frontend for performance and accessibility. 4. Ensuring the design adheres to established style guidelines and brand identity. 5. Integrating API calls as necessary for data retrieval and control.",
+    "status": "IN_PROGRESS",
     "assigned_to": "frontend-developer",
     "priority": 3,
     "dependencies": [
@@ -57,10 +57,10 @@
   {
     "id": 8114,
     "project_id": "NeuralCreativityAmplifier",
-    "title": "Implement the Backend Logic",
-    "description": "Develop the server-side logic for processing and responding to user inputs. This includes data handling, model integration, and response generation.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "backend-developer",
+    "title": "Implement the Backend Logic - RFC Update",
+    "description": "Update: This task involves developing the server-side logic for processing and responding to user inputs. This includes data handling, model integration (specify machine learning models), response generation, error handling, and performance optimization.",
+    "status": "NEEDS_REVISION",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "Design the NeuralCreativityAmplifier System"
@@ -77,9 +77,9 @@
     "id": 8115,
     "project_id": "NeuralCreativityAmplifier",
     "title": "Integrate Database Functionality",
-    "description": "Design and implement a robust database schema for efficient storage of user data, system logs, and machine learning models relevant to the NeuralCreativityAmplifier. Consider scalability, data security, and easy querying. The design should align with the principles of NoSQL databases due to the expected high volume of data and real-time requirements.",
-    "status": "IN-PROGRESS",
-    "assigned_to": "database-specialist",
+    "description": "Design and implement a robust, scalable, secure, and easy to query database schema for efficient storage of user data, system logs, and machine learning models relevant to the NeuralCreativityAmplifier. Due to the expected high volume of data and real-time requirements, the design should align with the principles of NoSQL databases. Consider data partitioning, indexing strategies, and data compression techniques for efficient storage and retrieval.",
+    "status": "REVIEW_PENDING",
+    "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
       "Design the NeuralCreativityAmplifier System"
@@ -96,8 +96,8 @@
     "id": 8116,
     "project_id": "NeuralCreativityAmplifier",
     "title": "Test the NeuralCreativityAmplifier System",
-    "description": "Execute functional and performance tests on the system to ensure correctness and efficiency. This includes testing the entire system from frontend interface, backend logic, to database functionality. Additionally, suggest improvements for potential issues found during testing.",
-    "status": "TODO",
+    "description": "Execute functional and performance tests on the system to ensure correctness and efficiency. This includes testing the entire system from frontend interface, backend logic, to database functionality. Additionally, suggest improvements for potential issues found during testing. Upon completion of testing, provide a comprehensive report detailing the results and recommendations.",
+    "status": "IN_PROGRESS",
     "assigned_to": "qa-tester",
     "priority": 4,
     "dependencies": [
@@ -117,9 +117,9 @@
     "id": 8117,
     "project_id": "NeuralCreativityAmplifier",
     "title": "Deploy the NeuralCreativityAmplifier System",
-    "description": "Prepare and execute deployment procedures for production environment. Please ensure all necessary tests have been conducted prior to this step.",
-    "status": "TODO",
-    "assigned_to": "devops-engineer",
+    "description": "Prepare and execute deployment procedures for production environment. Please ensure all necessary tests have been conducted prior to this step, including safety and ethical considerations. The system should be deployed in a staging environment before moving to production.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "task-decomposer",
     "priority": 5,
     "dependencies": [
       "Test the NeuralCreativityAmplifier System"

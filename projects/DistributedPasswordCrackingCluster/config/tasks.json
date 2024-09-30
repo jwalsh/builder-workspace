@@ -1,0 +1,174 @@
+[
+  {
+    "id": 7193,
+    "project_id": "DistributedPasswordCrackingCluster",
+    "title": "Requirements Gathering and Analysis",
+    "description": "Identify the key features, functionality, performance requirements, and security considerations for the DistributedPasswordCrackingCluster. This task includes researching existing password cracking tools, understanding user needs, and defining system architecture.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "IN_REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7194,
+    "project_id": "DistributedPasswordCrackingCluster",
+    "title": "Design Architecture for Distributed Password Cracking Cluster",
+    "description": "Create a high-level architecture design for the distributed password cracking cluster, considering scalability, reliability, and security. Propose solutions for data handling, task distribution, and communication between nodes to ensure efficient and secure operation. Provide an overview of the proposed system's structure, including key components and their interactions.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7195,
+    "project_id": "DistributedPasswordCrackingCluster",
+    "title": "Develop Password Cracking Algorithms",
+    "description": "Design and implement various password cracking algorithms for distributed processing.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 3,
+    "dependencies": [
+      "Design Architecture for Distributed System"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7196,
+    "project_id": "DistributedPasswordCrackingCluster",
+    "title": "Create User Interface for Client Interaction",
+    "description": "Develop a user-friendly interface for users to submit passwords, monitor progress, and manage their cluster.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 4,
+    "dependencies": [
+      "Design Architecture for Distributed System"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7197,
+    "project_id": "DistributedPasswordCrackingCluster",
+    "title": "Database Design and Implementation",
+    "description": "Design the database schema to store passwords, results, and cluster information. Develop necessary APIs for data access.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 4,
+    "dependencies": [
+      "Design Architecture for Distributed System"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7198,
+    "project_id": "DistributedPasswordCrackingCluster",
+    "title": "Implement Cluster Management and Scheduling System",
+    "description": "Create a system to manage the cluster of machines, distribute tasks efficiently, and monitor progress.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 3,
+    "dependencies": [
+      "Design Architecture for Distributed System"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7199,
+    "project_id": "DistributedPasswordCrackingCluster",
+    "title": "Security Audit and Implementation",
+    "description": "Perform a thorough security audit to ensure the system is secure against potential threats. Implement necessary security measures.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 2,
+    "dependencies": [
+      "Design Architecture for Distributed System"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7200,
+    "project_id": "DistributedPasswordCrackingCluster",
+    "title": "Unit Testing and Quality Assurance",
+    "description": "Create and execute unit tests for each component of the system. Conduct system-level testing to verify functionality and performance.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [
+      "Develop Password Cracking Algorithms",
+      "Create User Interface for Client Interaction",
+      "Implement Cluster Management and Scheduling System",
+      "Database Design and Implementation"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7201,
+    "project_id": "DistributedPasswordCrackingCluster",
+    "title": "Deploy the DistributedPasswordCrackingCluster",
+    "description": "Prepare and deploy the system in a production environment. Monitor performance, resolve any issues, ensure system security, and provide documentation for all steps taken.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Unit Testing and Quality Assurance"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "PENDING_REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

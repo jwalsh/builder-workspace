@@ -1,0 +1,192 @@
+[
+  {
+    "id": 1720,
+    "project_id": "DataFlowAnalyzer",
+    "title": "Define Project Requirements",
+    "description": "Gather and document the functional and non-functional requirements for the DataFlowAnalyzer tool, including the types of software systems it should support (web applications, mobile apps, desktop apps, and possibly serverless functions), the data flow analysis techniques to be used (dynamic analysis, static analysis, hybrid approach, considering incremental analysis to improve performance on large projects), the desired visualization and reporting capabilities (interactive visualizations, customizable dashboards, exportable reports in various formats such as CSV, PDF, and JSON, providing options for real-time updates), integration with existing development tools such as IDEs (supporting popular ones like Visual Studio Code, IntelliJ IDEA, and Eclipse), version control systems (Git, SVN), and continuous integration/continuous deployment tools (Jenkins, Travis CI, CircleCI), and the specific user roles it should cater to (developers, QA engineers, DevOps, possibly data scientists). Also consider any necessary security requirements for handling sensitive data (compliance with GDPR, HIPAA, and other regulations as applicable), scalability concerns for large software systems, the tool's compatibility with various programming languages and frameworks (Java, Python, JavaScript, .NET, Ruby on Rails, Django), and usability considerations (accessibility, localization, performance optimization). The requirements document should also include a section for potential future enhancements. Once the requirements are defined, create user stories and acceptance criteria to guide the development process. After approval of the requirements document, update the rfc_state field to 'APPROVED' and assign the task to the project-manager.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1721,
+    "project_id": "DataFlowAnalyzer",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the DataFlowAnalyzer tool, including the main components, their interactions, and the data flow between them.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1722,
+    "project_id": "DataFlowAnalyzer",
+    "title": "Develop Data Ingestion Module",
+    "description": "Implement the module responsible for ingesting and parsing the source code of the software systems to be analyzed.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1723,
+    "project_id": "DataFlowAnalyzer",
+    "title": "Implement Data Flow Analysis Engine",
+    "description": "Develop the core engine that performs the data flow analysis on the ingested source code, using the chosen analysis techniques.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1724,
+    "project_id": "DataFlowAnalyzer",
+    "title": "Design Data Visualization and Reporting for DataFlowAnalyzer Tool (Revised)",
+    "description": "Update the description to better reflect the scope of work: Design an intuitive user interface, effective data visualizations, and comprehensive reporting mechanisms for the DataFlowAnalyzer tool. These features will present the results of AI-based data flow analysis within complex software systems in a clear and actionable manner, enabling developers to understand and optimize data processing and storage more efficiently.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1725,
+    "project_id": "DataFlowAnalyzer",
+    "title": "Implement Data Visualization and Reporting",
+    "description": "Develop the user interface and reporting components based on the approved design.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design Data Visualization and Reporting"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1726,
+    "project_id": "DataFlowAnalyzer",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Configure the CI/CD pipeline for automated building, testing, and deployment of the DataFlowAnalyzer tool.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1727,
+    "project_id": "DataFlowAnalyzer",
+    "title": "Develop Test Suite",
+    "description": "Create a comprehensive test suite for the DataFlowAnalyzer tool, covering unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Develop Data Ingestion Module",
+      "Implement Data Flow Analysis Engine",
+      "Implement Data Visualization and Reporting"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1728,
+    "project_id": "DataFlowAnalyzer",
+    "title": "Perform Security Audit",
+    "description": "Conduct a security audit of the DataFlowAnalyzer tool to identify and mitigate potential vulnerabilities.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Develop Data Ingestion Module",
+      "Implement Data Flow Analysis Engine",
+      "Implement Data Visualization and Reporting"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1729,
+    "project_id": "DataFlowAnalyzer",
+    "title": "Write User Documentation",
+    "description": "Create comprehensive user documentation, including installation guides, usage instructions, and troubleshooting tips.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Implement Data Visualization and Reporting"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

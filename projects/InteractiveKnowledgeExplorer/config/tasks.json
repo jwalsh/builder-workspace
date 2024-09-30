@@ -3,9 +3,9 @@
     "id": 2701,
     "project_id": "InteractiveKnowledgeExplorer",
     "title": "Project Planning and Requirements Gathering",
-    "description": "Define the project scope, goals, and requirements. Gather input from stakeholders and subject matter experts to understand the needs and constraints for the knowledge graph visualization tool. This task includes creating a detailed project plan, outlining system architecture, and defining technical specifications.",
+    "description": "Define the project scope, goals, and requirements. Collaborate with stakeholders and subject matter experts to understand needs and constraints for the knowledge graph visualization tool. This task includes creating a detailed project plan, outlining system architecture, defining technical specifications, and detailing user interface/user experience design considerations.",
     "status": "IN_PROGRESS",
-    "assigned_to": "task-decomposer",
+    "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [],
     "task_type": "rfc",
@@ -38,10 +38,10 @@
   {
     "id": 2703,
     "project_id": "InteractiveKnowledgeExplorer",
-    "title": "Knowledge Graph Data Modeling",
-    "description": "Design the data model for representing the knowledge graph, including entities, relationships, and associated metadata. The data model should support efficient storage, retrieval, and querying of the knowledge graph data. Consider factors such as scalability, performance, and data integrity. Additionally, the data model should be flexible enough to accommodate future expansions or changes in the knowledge graph structure. Include a consideration of suitable database technologies that can handle complex data structures and provide good querying capabilities for this purpose. Furthermore, specify the schema design and normalization strategy to optimize the storage and retrieval of the large amounts of data expected.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "code-architect",
+    "title": "Knowledge Graph Data Modeling and Database Selection",
+    "description": "Design the data model for representing the knowledge graph, including entities, relationships, and associated metadata. The data model should support efficient storage, retrieval, and querying of the knowledge graph data, considering factors such as scalability, performance, and data integrity. This includes selecting a suitable database technology that can handle complex data structures and provide good querying capabilities for this purpose. Additionally, specify the schema design and normalization strategy to optimize the storage and retrieval of large amounts of data expected. Consider using a graph database like Neo4j or Amazon Neptune for their ability to efficiently handle complex relationships and queries. Include a brief rationale for the chosen database technology. Also, discuss the potential trade-offs and limitations of this choice. Furthermore, provide an outline of the data modeling process with milestones and expected timeline.",
+    "status": "NEEDS_REFINMENT",
+    "assigned_to": "database-specialist",
     "priority": 3,
     "dependencies": [
       "Architecture Design"
@@ -58,9 +58,9 @@
     "id": 2704,
     "project_id": "InteractiveKnowledgeExplorer",
     "title": "User Interface Design for Interactive Knowledge Graph Visualization Tool",
-    "description": "Design an intuitive and efficient user interface for the knowledge graph visualization tool, ensuring ease of navigation, effective query formulation, and meaningful interaction patterns. Consider edge cases, accessibility, performance optimizations, and adherence to design principles. Include wireframes or mockups in your proposal. This RFC is ready for review by the code-architect. Additionally, I suggest incorporating feedback from potential users (if available) into the design process. Also, consider the potential impact on mobile devices and responsive design.",
+    "description": "Design an intuitive and efficient user interface for the knowledge graph visualization tool, ensuring ease of navigation, effective query formulation, and meaningful interaction patterns. Consider edge cases, accessibility, performance optimizations, adherence to design principles, and responsive design. Incorporate feedback from potential users (if available) into the design process. This RFC is ready for review by the code-architect and suggests further iterations with frontend-developer for detailed wireframes or mockups. Also, consider the impact on mobile devices and optimize designs accordingly.",
     "status": "PENDING_REVIEW",
-    "assigned_to": "code-architect",
+    "assigned_to": "frontend-developer",
     "priority": 3,
     "dependencies": [
       "Architecture Design"

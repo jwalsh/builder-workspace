@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smart-contract-parser
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: smart-contract-parser
+  template:
+    metadata:
+      labels:
+        app: smart-contract-parser
+    spec:
+      containers:
+      - name: smart-contract-parser
+        image: smartcontractanalyzer/smart-contract-parser:latest
+        ports:
+        - containerPort: 80

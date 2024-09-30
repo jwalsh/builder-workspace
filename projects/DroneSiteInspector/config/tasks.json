@@ -1,0 +1,195 @@
+[
+  {
+    "id": 1947,
+    "project_id": "DroneSiteInspector",
+    "title": "Define Project Requirements (Revised)",
+    "description": "This task aims to gather and document comprehensive functional and non-functional requirements for the DroneSiteInspector system. This includes user stories, use cases, technical specifications, regulatory requirements, stakeholder needs, and a prioritized list of features based on user feedback, industry standards, and feasibility studies. The documentation will cover areas such as drone autonomy, real-time data processing, safety measures, privacy concerns, and potential integration with existing construction site management systems (if applicable). Additionally, the document should address aspects like scalability, reliability, and maintainability of the system.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1948,
+    "project_id": "DroneSiteInspector",
+    "title": "Design System Architecture",
+    "description": "Design the overall system architecture, including the drone hardware, software components, communication protocols, and data storage solutions.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 4,
+    "dependencies": [
+      "Define Project Requirements"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1949,
+    "project_id": "DroneSiteInspector",
+    "title": "Develop Drone Control System",
+    "description": "Implement the software for controlling the drone's flight, navigation, and sensor data collection.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1950,
+    "project_id": "DroneSiteInspector",
+    "title": "Implement Data Processing Pipeline",
+    "description": "Develop the backend system for processing and analyzing the collected sensor data, including 3D mapping, progress monitoring, and safety checks.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1951,
+    "project_id": "DroneSiteInspector",
+    "title": "Build User Interface",
+    "description": "Design and develop the user interface for monitoring and interacting with the DroneSiteInspector system.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1952,
+    "project_id": "DroneSiteInspector",
+    "title": "Set up Data Storage and Management",
+    "description": "Design and implement the database schema and data management solutions for storing and retrieving sensor data, 3D models, and inspection reports.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1953,
+    "project_id": "DroneSiteInspector",
+    "title": "Implement Security Measures",
+    "description": "Ensure the system's security by implementing authentication, authorization, and data encryption mechanisms.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1954,
+    "project_id": "DroneSiteInspector",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Establish a CI/CD pipeline for automated testing, building, and deploying the DroneSiteInspector system.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1955,
+    "project_id": "DroneSiteInspector",
+    "title": "Conduct System Testing",
+    "description": "Plan and execute comprehensive testing of the DroneSiteInspector system, including unit tests, integration tests, and end-to-end tests.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Develop Drone Control System",
+      "Implement Data Processing Pipeline",
+      "Build User Interface",
+      "Set up Data Storage and Management",
+      "Implement Security Measures"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1956,
+    "project_id": "DroneSiteInspector",
+    "title": "Prepare Documentation",
+    "description": "Create user manuals, technical documentation, and training materials for the DroneSiteInspector system.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Define Project Requirements",
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

@@ -19,13 +19,13 @@
   {
     "id": 2817,
     "project_id": "LeadershipStyleSimulator",
-    "title": "System Architecture Design",
-    "description": "Design the overall system architecture for the LeadershipStyleSimulator VR tool. This will include the VR environment, simulation engine, user interface components, and data management system. The design should consider scalability, performance, security, and maintainability aspects. Propose a modular design to facilitate future updates and improvements. Specify the choice of technologies for each component and their interoperability. Provide a clear roadmap for development, testing, and deployment stages, detailing milestones, timelines, and dependencies. The design should be compliant with RFC 2817: System Architecture Design Principles.",
-    "status": "APPROVED_FOR_EDIT",
+    "title": "SystemArchitectureDesignforLeadershipStyleSimulatorVRTool",
+    "description": "DesigntheoverallsystemarchitecturefortheLeadershipStyleSimulatorVRtool.ThiswillincludetheVRenvironment,simulationengine,userinterfacecomponents,anddatamanagementsystem.Thedesignshouldprioritizescalability,performance,security,andmaintainabilityaspects,aimingforamodularstructuretofacilitatefutureupdatesandimprovements.Choosetechnologiesthatareinteroperableforeachcomponent,ensuringcompliancewithRFC2817:SystemArchitectureDesignPrinciples.Provideadetailedroadmapfordevelopment,testing,anddeploymentstages,specifyingmilestones,timelines,anddependencies.Thedesignshouldconsiderthefollowingaspects:1.VREnvironment:[Listoftechnologies/frameworks]2.SimulationEngine:[Listoftechnologies/algorithms]3.UserInterfaceComponents:[Listoflibraries/tools]4.DataManagementSystem:[Databasemanagementsystem,APIs,etc.]Pleasenotethatthedesignshouldbeflexibletoaccommodatefutureupdatesandimprovements.ThedesigniscurrentlyinDRAFTstate,awaitingfeedbackandapprovalbeforeproceedingtothenextstage.Assignedto:code-architect",
+    "status": "DRAFT",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
-      "Project Planning and Requirements Gathering"
+      "ProjectPlanningandRequirementsGathering"
     ],
     "task_type": "rfc",
     "rfc_state": "DRAFT",
@@ -96,9 +96,9 @@
     "id": 2821,
     "project_id": "LeadershipStyleSimulator",
     "title": "Database Design and Implementation",
-    "description": "Design and implement the database schema for storing simulation data, user profiles, leadership styles, scenarios, and other relevant information. Consider scalability, performance, and data integrity requirements. Ensure proper indexing and normalization techniques are applied. Define data access patterns and implement necessary APIs or services for data retrieval and manipulation. Incorporate appropriate security measures to protect sensitive user data and ensure compliance with relevant data privacy regulations. Additionally, consider integrating the database design with existing system architecture, and provide documentation on database schema design, implementation, and usage. Once completed, conduct unit testing and integration testing before pushing to production. Update the design based on feedback from the Frontend Developers to ensure seamless integration of the database with the user interface.",
-    "status": "REVIEW_REQUIRED",
-    "assigned_to": "frontend-developer",
+    "description": "Design and implement the database schema for storing simulation data, user profiles, leadership styles, scenarios, and other relevant information. Consider scalability, performance, and data integrity requirements. Ensure proper indexing and normalization techniques are applied. Define data access patterns and implement necessary APIs or services for data retrieval and manipulation. Incorporate appropriate security measures to protect sensitive user data and ensure compliance with relevant data privacy regulations. Additionally, consider integrating the database design with existing system architecture, and provide documentation on database schema design, implementation, and usage. Once completed, conduct unit testing and integration testing before pushing to production. Update the design based on feedback from the Frontend Developers to ensure seamless integration of the database with the user interface. After the design is finalized by the Database Specialist, assign the task to Backend Developer for implementation.",
+    "status": "ASSIGNED_TO_BACKEND_DEVELOPER",
+    "assigned_to": "backend-developer",
     "priority": 2,
     "dependencies": [
       "System Architecture Design"
@@ -115,9 +115,9 @@
     "id": 2822,
     "project_id": "LeadershipStyleSimulator",
     "title": "Security and Access Control",
-    "description": "Implement robust security measures including user authentication, authorization, and data encryption to ensure the application's security. Implement a combination of role-based access control (RBAC) and attribute-based access control (ABAC) for fine-grained permissions. Include auditing mechanisms, secure user management, and multi-factor authentication for added security. Consider implementing least privilege principle to minimize potential security risks.",
-    "status": "REVIEW_IN_PROGRESS",
-    "assigned_to": "code-architect",
+    "description": "Implement robust security measures including user authentication, authorization, and data encryption to ensure the application's security. Implement a combination of role-based access control (RBAC) and attribute-based access control (ABAC) for fine-grained permissions. Include auditing mechanisms, secure user management, multi-factor authentication, and consider implementing least privilege principle for added security. Consider integrating with existing authentication systems such as OAuth or SSO for seamless user experience. Update documentation on the implementation of these security features.",
+    "status": "REVIEW_COMPLETE",
+    "assigned_to": "security-specialist",
     "priority": 2,
     "dependencies": [
       "System Architecture Design"

@@ -1,0 +1,193 @@
+[
+  {
+    "id": 7183,
+    "project_id": "DistributedNaturalLanguageProcessingEngine",
+    "title": "Requirements Gathering and Analysis",
+    "description": "Identify functional (scalability, concurrency, fault tolerance, integration with existing systems) and non-functional requirements (performance benchmarks) of the Distributed Natural Language Processing Engine. Consider edge cases, error handling, and scalability limits.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7184,
+    "project_id": "DistributedNaturalLanguageProcessingEngine",
+    "title": "Design Architecture for Distributed System",
+    "description": "Define the system architecture and components required for a scalable distributed natural language processing engine.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7185,
+    "project_id": "DistributedNaturalLanguageProcessingEngine",
+    "title": "Implement Backend Components (RFC-7185)",
+    "description": "Develop the backend components for natural language processing, text analytics, and language model training. This includes the development of APIs, data handling, integration with other system components, and adherence to RESTful design principles.",
+    "status": "IN_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Design Architecture for Distributed System"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "IN_REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7186,
+    "project_id": "DistributedNaturalLanguageProcessingEngine",
+    "title": "Develop Frontend Interface",
+    "description": "Create a user-friendly interface for interacting with the distributed natural language processing engine. The interface should include functionality for inputting text, monitoring the processing status, and viewing the results. The frontend should be designed with responsive web design principles to ensure compatibility across various devices.",
+    "status": "REVIEW_PENDING",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "Design Architecture for Distributed System"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7187,
+    "project_id": "DistributedNaturalLanguageProcessingEngine",
+    "title": "Database Design and Integration",
+    "description": "Design a scalable, fault-tolerant database schema for the distributed natural language processing engine. This should include performance optimizations for large-scale text analytics, error handling strategies, and ensure compatibility with other components of the system. Integrate this design with the existing architecture. Upon completion, provide a detailed documentation on the database design and its integration process, focusing on explaining the reasoning behind the chosen schema and optimization techniques. Incorporate feedback from the team during the design phase to improve the overall efficiency of the system. Once the design is finalized, conduct thorough testing before proceeding with implementation. If necessary, adjust the design based on testing results. Upon completion, update this RFC with the final database design and any adjustments made during testing.",
+    "status": "IN_REVIEW",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "Design Architecture for Distributed System"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "IN_REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7188,
+    "project_id": "DistributedNaturalLanguageProcessingEngine",
+    "title": "DevOps Configuration and Deployment",
+    "description": "Set up CI/CD pipelines, configure the system for scalability, deploy the distributed natural language processing engine in a production environment. This task also includes documentation of the deployment process, emphasizing best practices for DevOps, scalability, and security.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "devops-engineer",
+    "priority": 5,
+    "dependencies": [
+      "Backend Components Implementation",
+      "Frontend Interface Development",
+      "Database Design and Integration"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "PENDING_REVIEW",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7189,
+    "project_id": "DistributedNaturalLanguageProcessingEngine",
+    "title": "Unit Testing",
+    "description": "Write unit tests for the various components of the distributed natural language processing engine.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Backend Components Implementation"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7190,
+    "project_id": "DistributedNaturalLanguageProcessingEngine",
+    "title": "System Integration Testing",
+    "description": "Perform system integration testing to ensure the different components of the engine work together correctly.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 3,
+    "dependencies": [
+      "Backend Components Implementation",
+      "Frontend Interface Development"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7191,
+    "project_id": "DistributedNaturalLanguageProcessingEngine",
+    "title": "Security Review and Implementation",
+    "description": "Conduct a security review of the distributed natural language processing engine, identify any vulnerabilities, and implement necessary security measures.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 4,
+    "dependencies": [
+      "Backend Components Implementation"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7192,
+    "project_id": "DistributedNaturalLanguageProcessingEngine",
+    "title": "Documentation and Technical Writing",
+    "description": "Write comprehensive documentation for the distributed natural language processing engine, including user guides, API references, and development guidelines.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 5,
+    "dependencies": [
+      "Frontend Interface Development"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

@@ -20,8 +20,8 @@
     "id": 4824,
     "project_id": "SpaceDebrisTracker",
     "title": "System Architecture Design",
-    "description": "Design the overall architecture of the SpaceDebrisTracker system, including components, data flow, integration points, and key considerations such as scalability, fault tolerance, and security. This design should be compatible with future extensions and upgrades, and adhere to best practices in software engineering.",
-    "status": "NEEDS_REVIEW",
+    "description": "Design the overall architecture of the SpaceDebrisTracker system, including components, data flow, integration points, and key considerations such as scalability, fault tolerance, security, and compatibility with future extensions and upgrades. The design should follow best practices in software engineering and include a clear roadmap for implementation, testing, and deployment. This task requires understanding of space debris tracking, satellite systems, and data analysis.",
+    "status": "REVIEW_IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 1,
     "dependencies": [
@@ -77,9 +77,9 @@
     "id": 4827,
     "project_id": "SpaceDebrisTracker",
     "title": "Database Design and Implementation",
-    "description": "Design and implement a robust, scalable database to store and manage space debris data, ensuring high availability and performance. The database should handle large amounts of data related to the debris objects (size, mass, material, orbit parameters, etc.), their current and predicted trajectories, potential collision risks with operational satellites or spacecraft, and any relevant metadata or historical data. Additionally, consider implementing indexing strategies for efficient query performance.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "database-specialist",
+    "description": "Design and implement a robust, scalable database to store and manage space debris data, ensuring high availability and performance. The database should handle large amounts of data related to the debris objects (size, mass, material, orbit parameters, etc.), their current and predicted trajectories, potential collision risks with operational satellites or spacecraft, and any relevant metadata or historical data. Additionally, consider implementing indexing strategies for efficient query performance. Also, ensure that the database design is flexible to accommodate future changes and growth of the system. Further, document the database schema and provide a brief explanation of how it meets the project's requirements.",
+    "status": "REVIEW_PENDING",
+    "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
       "System Architecture Design",
@@ -116,9 +116,9 @@
     "id": 4829,
     "project_id": "SpaceDebrisTracker",
     "title": "Security and Access Control: SpaceDebrisTracker System",
-    "description": "Implement robust security measures and access control mechanisms for the SpaceDebrisTracker system to ensure data integrity, confidentiality, and protection against unauthorized access. Incorporate best practices for role-based access control (RBAC) and identity and access management (IAM).",
-    "status": "IN_PROGRESS",
-    "assigned_to": "security-specialist",
+    "description": "Implement robust security measures and access control mechanisms for the SpaceDebrisTracker system. Ensure data integrity, confidentiality, and protection against unauthorized access. Incorporate best practices for role-based access control (RBAC) and identity and access management (IAM). Utilize modern encryption techniques to secure sensitive data. Update the documentation with security policies and guidelines for developers.",
+    "status": "READY_FOR_CODE",
+    "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
       "System Architecture Design"
@@ -154,8 +154,8 @@
     "id": 4831,
     "project_id": "SpaceDebrisTracker",
     "title": "Deployment and DevOps",
-    "description": "Set up the deployment infrastructure and DevOps processes for the SpaceDebrisTracker system. This includes CI/CD pipelines, version control, containerization, and cloud deployment.",
-    "status": "IN_PROGRESS",
+    "description": "Set up the deployment infrastructure and DevOps processes for the SpaceDebrisTracker system. This includes CI/CD pipelines, version control, containerization, cloud deployment, and automated testing for smooth delivery of code changes. Consider using popular tools such as GitHub for version control, Jenkins or CircleCI for CI/CD, Docker for containerization, and AWS for cloud deployment.",
+    "status": "READY_FOR_REVIEW",
     "assigned_to": "devops-engineer",
     "priority": 4,
     "dependencies": [

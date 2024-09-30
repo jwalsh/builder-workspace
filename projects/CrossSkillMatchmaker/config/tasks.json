@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1572,
+    "project_id": "CrossSkillMatchmaker",
+    "title": "Gather Requirements",
+    "description": "Work with stakeholders and conduct user research to clearly define the scope, goals, and functional requirements for the CrossSkillMatchmaker system. Identify key features, data needs, potential integrations with existing systems, and document use cases and edge cases. Incorporate feedback from multiple departments and departments' varying technical expertise.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "project-manager",
+    "priority": 5,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "DRAFT",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1573,
+    "project_id": "CrossSkillMatchmaker",
+    "title": "Design System Architecture",
+    "description": "Design the overall architecture of the system, including components, data flow, integration points, and key considerations for maintainability, scalability, and performance. The design should adhere to a microservices architecture approach, with a clear separation of frontend and backend. Integrate machine learning algorithms where appropriate to improve the accuracy of skill-building opportunity suggestions, focusing on areas such as clustering employees based on their interests and organizational needs. Consider implementing API gateways for service discovery and load balancing. Additionally, outline strategies for data privacy and security, as well as documentation best practices.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "code-architect",
+    "priority": 5,
+    "dependencies": [
+      "Gather Requirements"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "APPROVED",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1574,
+    "project_id": "CrossSkillMatchmaker",
+    "title": "Develop Data Model",
+    "description": "Design and implement the data model for storing employee profiles, skills, interests, and organizational needs.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1575,
+    "project_id": "CrossSkillMatchmaker",
+    "title": "Implement Matching Algorithm",
+    "description": "Develop the core algorithm for matching employee interests and skills with organizational needs.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture",
+      "Develop Data Model"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1576,
+    "project_id": "CrossSkillMatchmaker",
+    "title": "Build User Interface",
+    "description": "Design and develop the user interface for employees and administrators to interact with the system.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 3,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1577,
+    "project_id": "CrossSkillMatchmaker",
+    "title": "Implement Security Measures",
+    "description": "Ensure the system follows best practices for data security, access control, and user authentication.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1578,
+    "project_id": "CrossSkillMatchmaker",
+    "title": "Set up Continuous Integration and Deployment",
+    "description": "Configure a CI/CD pipeline for automated testing, building, and deploying the application.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 2,
+    "dependencies": [
+      "Design System Architecture"
+    ],
+    "task_type": "rfc_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1579,
+    "project_id": "CrossSkillMatchmaker",
+    "title": "Write Documentation",
+    "description": "Create comprehensive documentation for the system, including user guides, technical specifications, and maintenance procedures.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 2,
+    "dependencies": [
+      "Gather Requirements",
+      "Design System Architecture"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1580,
+    "project_id": "CrossSkillMatchmaker",
+    "title": "Conduct Testing",
+    "description": "Plan and execute various types of testing, including unit tests, integration tests, and user acceptance testing.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 2,
+    "dependencies": [
+      "Implement Matching Algorithm",
+      "Build User Interface"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 1581,
+    "project_id": "CrossSkillMatchmaker",
+    "title": "Deploy and Monitor",
+    "description": "Deploy the system to production and set up monitoring and logging mechanisms for performance and issue tracking.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 1,
+    "dependencies": [
+      "Conduct Testing",
+      "Set up Continuous Integration and Deployment"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

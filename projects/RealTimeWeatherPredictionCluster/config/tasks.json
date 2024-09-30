@@ -38,9 +38,9 @@
   {
     "id": 8965,
     "project_id": "RealTimeWeatherPredictionCluster",
-    "title": "Implement Meteorological Models",
-    "description": "Code the complex meteorological models that will be used for weather prediction. This task includes implementation of numerical weather prediction (NWP) models such as NAM, GFS, and others. Additionally, consider implementing data processing pipelines for efficient model execution.",
-    "status": "TODO",
+    "title": "Implement Meteorological Models for RealTimeWeatherPredictionCluster",
+    "description": "Code the complex meteorological models (NAM, GFS, etc.) that will be used for real-time weather prediction in the RealTimeWeatherPredictionCluster project. This task includes implementation of numerical weather prediction (NWP) models and data processing pipelines for efficient model execution. Consider incorporating parallelization techniques to optimize performance.",
+    "status": "IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
@@ -58,8 +58,8 @@
     "id": 8966,
     "project_id": "RealTimeWeatherPredictionCluster",
     "title": "Create Real-Time Prediction Algorithm",
-    "description": "Develop an efficient and accurate algorithm to process the acquired data in real-time for weather prediction. The algorithm should leverage the power of machine learning techniques where applicable.",
-    "status": "TO REVIEW",
+    "description": "Develop an efficient and accurate algorithm to process the acquired data in real-time for weather prediction. The algorithm should leverage the power of machine learning techniques where applicable, with a focus on accuracy and computational efficiency. Consider exploring ensemble methods or other advanced ML techniques.",
+    "status": "TO DO",
     "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
@@ -78,9 +78,9 @@
     "id": 8967,
     "project_id": "RealTimeWeatherPredictionCluster",
     "title": "Design User Interface for RealTimeWeatherPredictionCluster",
-    "description": "Create an intuitive and user-friendly interface for visualizing weather data and predictions. The design should cater to the needs of meteorologists, climatologists, and general public, providing clear, concise, and interactive representations of data that facilitate understanding, analysis, and decision making.",
-    "status": "REVIEW_IN_PROGRESS",
-    "assigned_to": "frontend-developer",
+    "description": "Create an intuitive and user-friendly interface for visualizing weather data and predictions. The design should cater to the needs of meteorologists, climatologists, and general public, providing clear, concise, interactive, and responsive representations of data that facilitate understanding, analysis, and decision making. Incorporate features such as real-time updates, customizable data visualization options, and advanced filtering mechanisms for seamless user experience.",
+    "status": "REVIEW_COMPLETED",
+    "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
       "Define System Architecture"
@@ -97,9 +97,9 @@
     "id": 8968,
     "project_id": "RealTimeWeatherPredictionCluster",
     "title": "Set Up Database and Data Storage for RealTimeWeatherPredictionCluster",
-    "description": "Configure a scalable NoSQL database (e.g., MongoDB, Cassandra) to store the acquired weather data, predictions, and meteorological model parameters. Consider performance, redundancy, geographic distribution for efficient data access and sharding strategies for handling massive datasets. Ensure compliance with privacy regulations for sensitive weather data.",
-    "status": "NEEDS_REVIEW",
-    "assigned_to": "database-specialist",
+    "description": "Configure a scalable NoSQL database (e.g., MongoDB or Apache Cassandra) to store the acquired weather data, predictions, and meteorological model parameters. Consider performance, redundancy, geographic distribution for efficient data access and sharding strategies for handling massive datasets. Ensure compliance with privacy regulations for sensitive weather data, data retention policies, and disaster recovery plans. For optimal performance, consider using replicas in multiple regions and leverage the power of cloud services for auto-scaling and load balancing. Lastly, provide documentation on database setup, maintenance, and best practices for the team.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
       "Define System Architecture"
@@ -116,9 +116,9 @@
     "id": 8969,
     "project_id": "RealTimeWeatherPredictionCluster",
     "title": "Implement DevOps for Deployment and Scaling",
-    "description": "Create CI/CD pipelines, configure the system to scale based on demand, and implement monitoring mechanisms for resource utilization.",
-    "status": "IN_REVIEW",
-    "assigned_to": "code-architect",
+    "description": "Create CI/CD pipelines, configure the system to scale based on demand, implement monitoring mechanisms for resource utilization, and document the process for future maintenance.",
+    "status": "REVIEW_COMPLETED",
+    "assigned_to": "devops-engineer",
     "priority": 5,
     "dependencies": [
       "Define System Architecture"
@@ -135,7 +135,7 @@
     "id": 8970,
     "project_id": "RealTimeWeatherPredictionCluster",
     "title": "Conduct Quality Assurance Testing",
-    "description": "Perform thorough testing of the system to ensure it functions correctly and can handle real-time data.",
+    "description": "Perform thorough testing of the system to ensure it functions correctly and can handle real-time data. The testing will include both functional and performance tests.",
     "status": "TODO",
     "assigned_to": "qa-tester",
     "priority": 1,
@@ -159,7 +159,7 @@
     "id": 8971,
     "project_id": "RealTimeWeatherPredictionCluster",
     "title": "Secure System Against Potential Threats",
-    "description": "Conduct a comprehensive security assessment of the RealTimeWeatherPredictionCluster and implement necessary security measures to safeguard against potential threats or vulnerabilities.",
+    "description": "Conduct a comprehensive security assessment of the RealTimeWeatherPredictionCluster and implement necessary security measures to safeguard against potential threats or vulnerabilities. This task includes, but is not limited to: identifying and addressing known security weaknesses, implementing secure coding practices, securing data in transit and at rest, protecting system resources, and defining incident response plans.",
     "status": "IN_PROGRESS",
     "assigned_to": "security-specialist",
     "priority": 5,
@@ -167,7 +167,7 @@
       "Define System Architecture"
     ],
     "task_type": "rfc",
-    "rfc_state": "UNKNOWN",
+    "rfc_state": "IN_REVIEW",
     "implementation_state": null,
     "review_comments": null,
     "approver": null,
@@ -178,9 +178,9 @@
     "id": 8972,
     "project_id": "RealTimeWeatherPredictionCluster",
     "title": "Document System Design and Functionality",
-    "description": "Write clear, comprehensive documentation detailing the system design, functionality, and usage. Include sections on architecture, components, interfaces, workflow, APIs, data flow, and provide examples and best practices for usage. The documentation should also include a detailed explanation of each component's role in the system and their interactions, as well as a clear description of the expected behavior and edge cases.",
-    "status": "TODO",
-    "assigned_to": "code-architect",
+    "description": "Write clear, comprehensive documentation detailing the system design, functionality, and usage. Include sections on architecture, components, interfaces, workflow, APIs, data flow, and provide examples and best practices for usage. The documentation should also include a detailed explanation of each component's role in the system and their interactions, as well as a clear description of the expected behavior and edge cases. Additionally, make sure to highlight any potential scalability concerns and proposed solutions, and provide guidelines for troubleshooting common issues.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "technical-writer",
     "priority": 4,
     "dependencies": [
       "Define System Architecture"

@@ -1,0 +1,232 @@
+[
+  {
+    "id": 7145,
+    "project_id": "CyberPhysicalSecuritySystem",
+    "title": "Requirements Gathering and Analysis for CyberPhysicalSecuritySystem",
+    "description": "Gather and analyze the project requirements for the CyberPhysicalSecuritySystem, including system architecture, functionalities, performance, security, interoperability, and user experience. This task involves breaking down the project into smaller tasks, defining the technical specifications, preparing a comprehensive document detailing the project requirements and user stories, and ensuring that the document is easily understandable by developers and non-technical stakeholders.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 1,
+    "dependencies": [],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7146,
+    "project_id": "CyberPhysicalSecuritySystem",
+    "title": "System Architecture Design",
+    "description": "Design the overall architecture of the system, including how AI, IoT sensors, and blockchain will interact with each other and connect to the critical infrastructure.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 2,
+    "dependencies": [
+      "Requirements Gathering and Analysis"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7147,
+    "project_id": "CyberPhysicalSecuritySystem",
+    "title": "Blockchain Implementation Design",
+    "description": "Design the implementation of the blockchain component for data integrity, security, and consensus.",
+    "status": "TODO",
+    "assigned_to": "code-architect",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7148,
+    "project_id": "CyberPhysicalSecuritySystem",
+    "title": "AI Model Development and Integration",
+    "description": "Develop AI models for anomaly detection, intrusion prevention, and threat prediction. Integrate the models with the overall system.",
+    "status": "TODO",
+    "assigned_to": "project-manager",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7149,
+    "project_id": "CyberPhysicalSecuritySystem",
+    "title": "IoT Sensor Integration Design",
+    "description": "Design the integration of IoT sensors with the overall system and specify communication protocols.",
+    "status": "TODO",
+    "assigned_to": "backend-developer",
+    "priority": 5,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7150,
+    "project_id": "CyberPhysicalSecuritySystem",
+    "title": "Database Schema Design",
+    "description": "Design the database schema for storing and managing data from IoT sensors, AI models, and blockchain.",
+    "status": "TODO",
+    "assigned_to": "database-specialist",
+    "priority": 2,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7151,
+    "project_id": "CyberPhysicalSecuritySystem",
+    "title": "Frontend Interface Development",
+    "description": "Design and develop the user interface for system monitoring, configuration, and reporting.",
+    "status": "TODO",
+    "assigned_to": "frontend-developer",
+    "priority": 4,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7152,
+    "project_id": "CyberPhysicalSecuritySystem",
+    "title": "DevOps and Infrastructure Setup",
+    "description": "Set up the development, testing, and production environments and establish Continuous Integration/Continuous Deployment (CI/CD) pipelines.",
+    "status": "TODO",
+    "assigned_to": "devops-engineer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design"
+    ],
+    "task_type": "decompose",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7153,
+    "project_id": "CyberPhysicalSecuritySystem",
+    "title": "Unit Testing",
+    "description": "Write and execute unit tests for individual components of the system to ensure their correctness.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 4,
+    "dependencies": [
+      "AI Model Development and Integration",
+      "IoT Sensor Integration Design",
+      "Database Schema Design",
+      "Frontend Interface Development"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7154,
+    "project_id": "CyberPhysicalSecuritySystem",
+    "title": "System Integration Testing",
+    "description": "Test the overall functionality and performance of the system after integration.",
+    "status": "TODO",
+    "assigned_to": "qa-tester",
+    "priority": 5,
+    "dependencies": [
+      "Unit Testing"
+    ],
+    "task_type": "code_review",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7155,
+    "project_id": "CyberPhysicalSecuritySystem",
+    "title": "Security Audit",
+    "description": "Perform a security audit of the system to identify potential vulnerabilities and ensure compliance with relevant standards.",
+    "status": "TODO",
+    "assigned_to": "security-specialist",
+    "priority": 1,
+    "dependencies": [
+      "System Integration Testing"
+    ],
+    "task_type": "audit",
+    "rfc_state": null,
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  },
+  {
+    "id": 7156,
+    "project_id": "CyberPhysicalSecuritySystem",
+    "title": "Documentation and Knowledge Base",
+    "description": "Create technical documentation for the system architecture, components, setup, usage, maintenance, and troubleshooting.",
+    "status": "TODO",
+    "assigned_to": "technical-writer",
+    "priority": 3,
+    "dependencies": [
+      "System Architecture Design",
+      "Unit Testing"
+    ],
+    "task_type": "rfc",
+    "rfc_state": "UNKNOWN",
+    "implementation_state": null,
+    "review_comments": null,
+    "approver": null,
+    "parent_task_id": null,
+    "related_rfc_id": null
+  }
+]

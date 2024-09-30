@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: analysis-engine
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: analysis-engine
+  template:
+    metadata:
+      labels:
+        app: analysis-engine
+    spec:
+      containers:
+      - name: analysis-engine
+        image: smartcontractanalyzer/analysis-engine:latest
+        ports:
+        - containerPort: 80

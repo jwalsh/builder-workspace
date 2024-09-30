@@ -20,8 +20,8 @@
     "id": 6436,
     "project_id": "ImmersiveLanguageLearning",
     "title": "System Architecture Design for ImmersiveLanguageLearning",
-    "description": "Design the overall system architecture focusing on maintainability, modularity, scalability. Include components for virtual reality rendering (VR), language learning modules, user interactions, error handling, and performance optimizations. Consider edge cases, adhere to best practices, and implement design principles such as SOLID and DRY. Provide detailed documentation and diagrams for each component and their interactions. Break down the architecture into modular, reusable sub-systems for efficient development and maintenance. Ensure that the system is secure, accessible, and can handle real-time user interaction in a VR environment.",
-    "status": "NEEDS_WORK",
+    "description": "Design the overall system architecture focusing on maintainability, modularity, scalability. Include components for virtual reality rendering (VR), language learning modules, user interactions, error handling, and performance optimizations. Consider edge cases, adhere to best practices, and implement design principles such as SOLID and DRY. Provide detailed documentation and diagrams for each component and their interactions. Break down the architecture into modular, reusable sub-systems for efficient development and maintenance. Ensure that the system is secure, accessible, and can handle real-time user interaction in a VR environment. In addition, outline strategies for testing, deployment, and maintenance of the system.",
+    "status": "READY_FOR_IMPLEMENTATION",
     "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
@@ -77,9 +77,9 @@
     "id": 6439,
     "project_id": "ImmersiveLanguageLearning",
     "title": "Database Design and Implementation for Immersive Language Learning",
-    "description": "Design and implement a scalable and secure database schema to store user data, language learning progress, virtual environment assets. The schema should ensure data integrity, normalization, and be compatible with the chosen NoSQL or SQL database system.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "database-specialist",
+    "description": "Design and implement a scalable, secure, and highly available database schema to store user data, language learning progress, virtual environment assets. The schema should ensure data integrity, normalization, and be compatible with the chosen NoSQL or SQL database system. Additionally, consider implementing real-time updates for user interactions and data replication strategies to minimize latency.",
+    "status": "REVIEW_PENDING",
+    "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
       "System Architecture Design"
@@ -96,8 +96,8 @@
     "id": 6440,
     "project_id": "ImmersiveLanguageLearning",
     "title": "User Authentication and Authorization (Updated)",
-    "description": "Implement user authentication and authorization mechanisms, including secure login, user roles, and access control. Additionally, consider implementing multi-factor authentication for increased security and investigate OAuth or similar standards for seamless third-party integration. Ensure the system adheres to data privacy regulations and best practices.",
-    "status": "READY_FOR_REVIEW",
+    "description": "Implement user authentication and authorization mechanisms, including secure login, user roles, and access control. Additionally, consider implementing multi-factor authentication for increased security, and investigate OAuth or similar standards for seamless third-party integration. Ensure the system adheres to data privacy regulations and best practices. For enhanced security, include a password strength check, and consider using JWT (JSON Web Tokens) for session management. Additionally, research and suggest suitable solutions for progressive web app (PWA) support.",
+    "status": "REVIEW_IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
@@ -115,7 +115,7 @@
     "id": 6441,
     "project_id": "ImmersiveLanguageLearning",
     "title": "Continuous Integration and Deployment Pipeline - REVIEW (Updated)",
-    "description": "Update the Continuous Integration and Deployment pipeline to automate the build, testing, and deployment process for the Immersive Language Learning platform in production environments. This includes setting up a CI/CD tool such as Jenkins or CircleCI, creating build scripts, configuring test suites, and establishing deployment strategies.",
+    "description": "Update the Continuous Integration and Deployment pipeline to automate the build, testing, and deployment process for the Immersive Language Learning platform in production environments. This includes setting up a CI/CD tool such as Jenkins or CircleCI, creating build scripts, configuring test suites, establishing deployment strategies, using Docker containers for consistency across environments, and implementing GitHub Actions for additional automation.",
     "status": "REVIEW",
     "assigned_to": "code-architect",
     "priority": 4,

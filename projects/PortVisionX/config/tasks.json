@@ -19,13 +19,13 @@
   {
     "id": 3841,
     "project_id": "PortVisionX",
-    "title": "System Architecture Design",
-    "description": "Design the overall system architecture, including data models, integration points, scalability considerations, security measures, performance optimizations, and a clear plan for testing and validating the design. The design will aim to eliminate data silos for global port terminals and inland logistics facilities, providing near-real-time visibility into operational and financial metrics.",
-    "status": "IN_PROGRESS",
+    "title": "SystemArchitectureDesign-PortVisionX",
+    "description": "DesigntheoverallsystemarchitectureforPortVisionXproject,includingdatamodels,integrationpoints,scalabilityconsiderations,securitymeasures,performanceoptimizations,andaclearplanfortestingandvalidatingthedesign.Theaimistoeliminatedatasilosforglobalportterminalsandinlandlogisticsfacilities,providingnear-real-timevisibilityintooperationalandfinancialmetrics.",
+    "status": "REVIEW_IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
-      "Project Planning and Requirements Gathering"
+      "ProjectPlanningandRequirementsGathering"
     ],
     "task_type": "rfc",
     "rfc_state": "DRAFT",
@@ -58,8 +58,8 @@
     "id": 3843,
     "project_id": "PortVisionX",
     "title": "Database Design and Implementation",
-    "description": "Design and implement the database schema to store and manage operational and financial data for global port terminals and inland logistics facilities. The database should support efficient data retrieval, updates, and analytics for near-real-time visibility. Consider data partitioning, indexing, caching strategies (such as Redis or Memcached), and query optimization techniques for optimal performance. Ensure data integrity, security, and compliance with industry standards and regulations applicable to the logistics and maritime industries. Additionally, consider the use of a distributed database system such as Google's Spanner or Amazon's DynamoDB to handle the global scale of the project.",
-    "status": "IN_REVIEW",
+    "description": "Design and implement the database schema to store and manage operational and financial data for global port terminals and inland logistics facilities. The database should support efficient data retrieval, updates, and analytics for near-real-time visibility. Consider data partitioning, indexing, caching strategies (such as Redis or Memcached), and query optimization techniques for optimal performance. Ensure data integrity, security, and compliance with industry standards and regulations applicable to the logistics and maritime industries. Additionally, consider the use of a distributed database system such as Google's Spanner or Amazon's DynamoDB to handle the global scale of the project. To enhance the review process, it would be beneficial to include examples of similar projects that leverage these technologies for scalability and performance. Suggest potential solutions for handling large volumes of data and ensuring low latency in real-time visibility.",
+    "status": "NEEDS_REVISION",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
@@ -96,10 +96,10 @@
   {
     "id": 3845,
     "project_id": "PortVisionX",
-    "title": "Security and Access Control (v2)",
-    "description": "Implement robust security measures, including authentication, authorization, and data encryption, to ensure data privacy and integrity. Also, consider implementing Role-Based Access Control (RBAC) for secure user management.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "security-specialist",
+    "title": "Security and Access Control (v2) - Update for Review",
+    "description": "Update the current implementation of security measures, including authentication, authorization, and data encryption. Implement Role-Based Access Control (RBAC) for secure user management and ensure compliance with industry standards such as GDPR and HIPAA where applicable. Suggested improvements include a multi-factor authentication system and regular security audits.",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
       "System Architecture Design"

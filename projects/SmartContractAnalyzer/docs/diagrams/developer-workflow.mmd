@@ -1,0 +1,29 @@
+graph TD
+    A[Clone Repository] --> B[Run 'make setup']
+    B --> C[Run 'make install']
+    C --> D[Run 'make build']
+    D --> E[Run 'make test']
+    E --> F{All tests pass?}
+    F -->|Yes| G[Develop new feature]
+    F -->|No| H[Fix failing tests]
+    H --> E
+    G --> I[Write tests for new feature]
+    I --> J[Run 'make test']
+    J --> K{All tests pass?}
+    K -->|Yes| L[Run 'make run']
+    K -->|No| M[Fix failing tests]
+    M --> J
+    L --> N[Manual testing]
+    N --> O{Feature works as expected?}
+    O -->|Yes| P[Commit changes]
+    O -->|No| Q[Debug and fix issues]
+    Q --> L
+    P --> R[Push to repository]
+    R --> S[Create pull request]
+    S --> T[Code review]
+    T --> U{Changes requested?}
+    U -->|Yes| V[Make requested changes]
+    V --> T
+    U -->|No| W[Merge pull request]
+    W --> X[Run 'make deploy']
+    X --> Y[Monitor deployment]

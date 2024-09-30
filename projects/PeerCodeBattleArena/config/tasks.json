@@ -20,8 +20,8 @@
     "id": 3530,
     "project_id": "PeerCodeBattleArena",
     "title": "Design System Architecture",
-    "description": "Design the overall system architecture, including components, data flow, integration points, scalability considerations, security measures, and deployment strategies. This task will guide the development team in creating a robust, efficient, and secure platform.",
-    "status": "IN_PROGRESS",
+    "description": "Design the overall system architecture, including components, data flow, integration points, scalability considerations, security measures, deployment strategies, and error handling mechanisms. This task will guide the development team in creating a robust, efficient, secure, and resilient platform. The design should take into account real-time communication requirements, live spectating, and commentary features.",
+    "status": "NEEDS_REVIEW",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
@@ -40,9 +40,9 @@
     "id": 3531,
     "project_id": "PeerCodeBattleArena",
     "title": "Design User Interface and Experience - RFC Review",
-    "description": "This RFC proposes the design of the user interface and experience for the PeerCodeBattleArena platform. The design will include wireframes, mockups, prototypes, and user flow diagrams that consider accessibility, responsiveness, and intuitive navigation. Potential users' feedback will be gathered and the designs will be iterated upon accordingly. It is recommended to focus on a mobile-first approach for better usability, and to prioritize simplicity and ease of use while maintaining a competitive, engaging atmosphere. The design should also account for live spectating and commentary features, and ensure seamless integration with the overall functionality of the platform. Upon completion, the designs will be handed over to the frontend-developer for implementation.",
-    "status": "NEEDS_REVISION",
-    "assigned_to": "code-architect",
+    "description": "This RFC proposes the design of the user interface and experience for the PeerCodeBattleArena platform. The design will include wireframes, mockups, prototypes, and user flow diagrams that consider accessibility, responsiveness, usability, and intuitive navigation. Potential users' feedback will be gathered and the designs will be iterated upon accordingly. It is recommended to focus on a mobile-first approach for better usability, and to prioritize simplicity and ease of use while maintaining a competitive, engaging atmosphere. The design should also account for live spectating and commentary features, seamless integration with the overall functionality of the platform, and real-time performance indicators for users. Upon completion, the designs will be handed over to the frontend-developer for implementation.",
+    "status": "READY_FOR_REVISION",
+    "assigned_to": "task-decomposer",
     "priority": 3,
     "dependencies": [
       "Define Project Scope and Requirements"
@@ -59,9 +59,9 @@
     "id": 3532,
     "project_id": "PeerCodeBattleArena",
     "title": "Design Database Schema for PeerCodeBattleArena",
-    "description": "Design the database schema to store user data, problem sets, submissions, contests, leaderboards, and other relevant data. Consider the following entities: Users, Problems, Submissions, Contests, Leaderboards, Spectators, Comments, and any other necessary entities. Ensure proper normalization, indexing, and performance optimizations. Define data types, constraints, and relationships between entities. Additionally, consider data persistence, scalability for future expansions of the platform, and high availability, as the platform will have real-time requirements. Provide a design that can handle large volumes of traffic and ensure fast response times. Define data types, constraints, and relationships between entities, and provide an ER diagram to visualize the schema.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "database-specialist",
+    "description": "Design the database schema to store user data, problem sets, submissions, contests, leaderboards, and other relevant data. Consider the following entities: Users, Problems, Submissions, Contests, Leaderboards, Spectators, Comments, and any other necessary entities. Ensure proper normalization, indexing, and performance optimizations. Define data types, constraints, and relationships between entities. Additionally, consider data persistence, scalability for future expansions of the platform, high availability (real-time requirements), large volumes of traffic, fast response times, and data consistency. Provide a design that accounts for eventual consistency in a distributed system. Include sharding strategies if necessary. Define data types, constraints, and relationships between entities, and provide an ER diagram to visualize the schema. Also, consider the use of open-source database solutions like Cassandra or MongoDB due to their scalability and performance benefits.",
+    "status": "READY_FOR_CODE_ARCHITECT",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "Define Project Scope and Requirements"
