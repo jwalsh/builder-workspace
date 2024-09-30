@@ -19,10 +19,10 @@
   {
     "id": 6226,
     "project_id": "ClimateChangeModelingTool",
-    "title": "System Architecture Design",
-    "description": "Design the overall system architecture, including components, data flow, integration points, and infrastructure requirements. Consider scalability, performance, security, and maintainability aspects. Provide a high-level overview of the architecture (including diagrams if possible) and detailed descriptions of each component, focusing on the following: microservices design for modularity, containerization using Docker or Kubernetes for scalability, data storage solutions like MongoDB or PostgreSQL considering both performance and data integrity, API and UI design, security measures such as encryption and authentication, monitoring and logging systems, CI/CD pipelines for efficient deployment, and documentation of the architecture design. Include any potential challenges and proposed mitigation strategies.",
-    "status": "NEEDS_REVIEW",
-    "assigned_to": "code-architect",
+    "title": "System Architecture Design for ClimateChangeModelingTool",
+    "description": "Design the overall system architecture, including components, data flow, integration points, and infrastructure requirements. The design will focus on microservices for modularity, containerization using Docker or Kubernetes for scalability, data storage solutions like MongoDB or PostgreSQL considering both performance and data integrity, API and UI design, security measures such as encryption and authentication, monitoring and logging systems, CI/CD pipelines for efficient deployment, and documentation of the architecture design. Potential challenges and proposed mitigation strategies will also be included. The following is a high-level overview of the architecture (including diagrams if possible). Detailed descriptions of each component will focus on: \n1. Microservices design for modularity\n2. Containerization using Docker or Kubernetes for scalability\n3. Data storage solutions like MongoDB or PostgreSQL considering both performance and data integrity\n4. API and UI design\n5. Security measures such as encryption and authentication\n6. Monitoring and logging systems\n7. CI/CD pipelines for efficient deployment\n8. Documentation of the architecture design.",
+    "status": "READY_FOR_APPROVAL",
+    "assigned_to": "project-manager",
     "priority": 1,
     "dependencies": [
       "Project Planning and Requirements Gathering"
@@ -39,8 +39,8 @@
     "id": 6227,
     "project_id": "ClimateChangeModelingTool",
     "title": "Data Modeling and Database Design for ClimateChangeModelingTool",
-    "description": "Design the data model and database schema to store climate data, simulation parameters, and simulation results. The design should consider the following requirements: 1) Support for storing large volumes of time-series data from various sources (weather stations, satellites, etc.). 2) Efficient querying and retrieval of data for analysis and visualization. 3) Ability to store and retrieve simulation configurations and results. 4) Scalability to handle increasing data volumes over time. Additional considerations include data normalization, data versioning, and data security.",
-    "status": "NEEDS_REVISION",
+    "description": "Design the data model and database schema to store climate data, simulation parameters, and simulation results. The design should consider the following requirements: 1) Support for storing large volumes of time-series data from various sources (weather stations, satellites, etc.). 2) Efficient querying and retrieval of data for analysis and visualization. 3) Ability to store and retrieve simulation configurations and results. 4) Scalability to handle increasing data volumes over time. Additional considerations include data normalization, data versioning, data security, and implementing a system for efficient data backup and disaster recovery. To ensure scalability, the design should also consider the use of NoSQL databases or partitioning strategies. The RFC is seeking code-architect's review.",
+    "status": "REVIEW",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [

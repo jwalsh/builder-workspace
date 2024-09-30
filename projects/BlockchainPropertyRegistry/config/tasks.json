@@ -5,7 +5,7 @@
     "title": "Define Project Scope and Requirements - REVISED",
     "description": "Thoroughly document the comprehensive requirements for the blockchain-based property registry system, covering functional and non-functional aspects, stakeholder needs, regulatory compliance (e.g., real estate laws, data privacy, KYC/AML), security and privacy considerations (e.g., data encryption, access controls), integration with existing systems (if any), and any other relevant constraints or assumptions. Focus on clarity, completeness, and alignment with project goals and objectives. Prioritize scalability, performance, fault tolerance, and future enhancements/integrations. Include edge cases, error handling mechanisms, and consider potential bottlenecks and optimization opportunities.\n\nConsider the following additional details:\n- User Interface Design: Wireframes, mockups, or prototypes for user interactions and interfaces.\n- Data Modeling: Entity Relationship Diagrams (ERDs) or similar visualizations to represent the structure of data within the system. Include normalization strategies and database design patterns. Make sure to address relationships between entities, multi-tenancy, and any other complex data structures.\n- API Specification: Definitions for API endpoints, request/response formats, error handling, authentication, and authorization. Include documentation on API versioning, backwards compatibility, testing strategies, and security considerations such as OAuth 2.0 or JWT. Also, specify the methods used for data validation.\n- System Performance Monitoring: Metrics, logging, and alerting strategies to ensure the system performs optimally under varying loads. Consider adding details on monitoring tools (e.g., Prometheus, Grafana), thresholds, and escalation procedures for critical alerts. Include benchmarking strategies and performance benchmarks.\n- Documentation: Add a section on documentation, including how to write and maintain technical documentation, the structure of the documentation, and who is responsible for it.\n\nUpdate the requirements document as necessary based on feedback from stakeholders, domain experts, and developers. Once complete, review with the project manager for approval.\n\nNote: It is recommended to include a section for performance benchmarks and benchmarking strategies to evaluate the system's scalability and performance.\n\nUpdate the rfc_state field if the RFC is ready for the next state.",
     "status": "PENDING_REVIEW",
-    "assigned_to": "code-architect",
+    "assigned_to": "project-manager",
     "priority": 5,
     "dependencies": [],
     "task_type": "rfc",
@@ -77,15 +77,15 @@
     "id": 902,
     "project_id": "BlockchainPropertyRegistry",
     "title": "Implement Data Storage and Management",
-    "description": "Design and implement a secure, scalable, and tamper-proof data storage solution for off-chain data (property details, user accounts, transaction records, audit logs). The solution should ensure data integrity, security, and maintain performance even under high load conditions. In addition, consider implementing a data backup and recovery mechanism.",
-    "status": "TODO",
+    "description": "Design and implement a secure, scalable, and tamper-proof data storage solution for off-chain data (property details, user accounts, transaction records, audit logs). The solution should ensure data integrity, security, and maintain performance even under high load conditions. In addition, consider implementing a data backup and recovery mechanism, and also prioritize encryption of sensitive data. To improve maintainability, the design should follow a modular approach that allows for easy updates and upgrades. Additionally, include comprehensive documentation detailing system architecture, data models, and integration with other system components.",
+    "status": "IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "Design System Architecture"
     ],
     "task_type": "rfc",
-    "rfc_state": "APPROVED",
+    "rfc_state": "IMPLEMENTING",
     "implementation_state": null,
     "review_comments": null,
     "approver": null,
@@ -95,10 +95,10 @@
   {
     "id": 903,
     "project_id": "BlockchainPropertyRegistry",
-    "title": "Ensure System Security and Compliance",
-    "description": "Implement robust security measures, including encryption, access controls, secure coding practices, and adherence to relevant regulations, standards, and best practices for data privacy and security in the BlockchainPropertyRegistry system. This task will focus on areas such as threat modeling, vulnerability assessment, security testing, and compliance audits (e.g., GDPR, CCPA).",
-    "status": "READY_FOR_REVIEW",
-    "assigned_to": "security-specialist",
+    "title": "Ensure System Security and Compliance (Revised)",
+    "description": "Implement robust security measures, including encryption, access controls, secure coding practices, adherence to relevant regulations (e.g., GDPR, CCPA), and industry-standard security best practices for data privacy and security in the BlockchainPropertyRegistry system. This task will focus on areas such as threat modeling, vulnerability assessment, security testing, and compliance audits, ensuring a secure and compliant system design. It will also include the review and implementation of recommended security measures from the 'Design System Architecture' task.",
+    "status": "NEEDS_REVISION",
+    "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
       "Design System Architecture"

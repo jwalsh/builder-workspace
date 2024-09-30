@@ -20,8 +20,8 @@
     "id": 1056,
     "project_id": "CareerMilestoneTracker",
     "title": "Design System Architecture",
-    "description": "Design the overall architecture of the system, including the components, data flow, integration points with other systems (e.g., HR systems, payroll systems, employee recognition systems), data storage strategy, security considerations (e.g., data privacy, access controls), and scalability/performance requirements (e.g., handling high traffic during peak periods, caching strategies). This design should also take into account the system's extensibility and maintainability for future updates. Additionally, consider the use of microservices architecture to improve scalability and flexibility. The design should also include a clear plan for testing and documentation.",
-    "status": "READY_FOR_IMPLEMENTATION",
+    "description": "Design the overall architecture of the system, including the components, data flow, integration points with other systems (e.g., HR systems, payroll systems, employee recognition systems), data storage strategy, security considerations (e.g., data privacy, access controls), and scalability/performance requirements (e.g., handling high traffic during peak periods, caching strategies). This design should also take into account the system's extensibility and maintainability for future updates. The use of microservices architecture is recommended to improve scalability and flexibility. The design should include a clear plan for testing and documentation. Additionally, consider incorporating modern technologies such as containerization, serverless functions, and event-driven architectures to further enhance the system's scalability and reliability. It would also be beneficial to research and implement best practices from similar projects in the industry.",
+    "status": "IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
@@ -39,9 +39,9 @@
     "id": 1057,
     "project_id": "CareerMilestoneTracker",
     "title": "Design Database Schema for CareerMilestoneTracker System",
-    "description": "Design the database schema for the CareerMilestoneTracker system with consideration given to data normalization, indexing, and performance optimization. The schema should include tables for employee data, milestone and achievement data, reward data, and their relationships. Edge cases, error handling, and security considerations should be addressed. Upon completion, a comprehensive documentation of the schema design will be required. Please ensure that the design is scalable and follows best practices for database design. If there are any dependencies on other tasks, please update the 'dependencies' field accordingly. Additionally, consider using Database Relationship Management (DRM) principles to maintain data integrity. Once completed, review and update the task status and assign it to a Database Specialist for implementation.",
-    "status": "COMPLETED",
-    "assigned_to": "database-specialist",
+    "description": "Design the database schema for the CareerMilestoneTracker system with consideration given to data normalization, indexing, and performance optimization. The schema should include tables for employee data, milestone and achievement data, reward data, and their relationships. Edge cases, error handling, and security considerations should be addressed. Upon completion, a comprehensive documentation of the schema design will be required. Please ensure that the design is scalable and follows best practices for database design. If there are any dependencies on other tasks, please update the 'dependencies' field accordingly. Additionally, consider using Database Relationship Management (DRM) principles to maintain data integrity, and incorporate principles from Entity-Attribute-Value (EAV) model where necessary for flexible data representation. Once completed, review and update the task status and assign it to a Database Specialist for implementation.",
+    "status": "REVIEW",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "Design System Architecture",
@@ -98,9 +98,9 @@
     "id": 1060,
     "project_id": "CareerMilestoneTracker",
     "title": "Implement Comprehensive Security Measures",
-    "description": "Implement comprehensive security measures to protect employee data and ensure secure access to the system. This includes, but is not limited to, data encryption (at rest and in transit), authentication and authorization mechanisms (e.g., multi-factor authentication, role-based access control), secure communication protocols (e.g., HTTPS, SSL/TLS), regular security audits and vulnerability assessments, secure coding practices, a comprehensive security policy and incident response plan, network segmentation, intrusion detection systems, user activity monitoring, and additional measures such as least privilege principle for access management, periodic data backups, and strict compliance with relevant privacy laws and regulations. The implementation will also be guided by the principles of defense in depth and least surprise.",
-    "status": "READY_FOR_IMPLEMENTATION",
-    "assigned_to": "devops-engineer",
+    "description": "Implement comprehensive security measures to protect employee data and ensure secure access to the system. This includes but is not limited to data encryption (at rest and in transit), authentication and authorization mechanisms (e.g., multi-factor authentication, role-based access control), secure communication protocols (e.g., HTTPS, SSL/TLS), regular security audits and vulnerability assessments, secure coding practices, a comprehensive security policy and incident response plan, network segmentation, intrusion detection systems, user activity monitoring, least privilege principle for access management, periodic data backups, strict compliance with relevant privacy laws and regulations. The implementation will also be guided by the principles of defense in depth and least surprise. For the data encryption, consider using AES-256 for sensitive data. It is recommended to use OAuth 2.0 or OpenID Connect for authentication and authorization mechanisms. To further enhance security, consider implementing DDoS protection and web application firewall.",
+    "status": "IMPLEMENTING",
+    "assigned_to": "security-specialist",
     "priority": 5,
     "dependencies": [
       "Design System Architecture"
@@ -133,9 +133,9 @@
   {
     "id": 1062,
     "project_id": "CareerMilestoneTracker",
-    "title": "Develop Test Suite",
-    "description": "Develop a comprehensive test suite for the system, including unit tests, integration tests, end-to-end tests, and performance tests. The test suite should cover all critical components and functionalities of the system, ensuring thorough testing coverage. Implement test automation frameworks and continuous integration/continuous deployment (CI/CD) pipelines to streamline the testing process and enable efficient regression testing.",
-    "status": "TODO",
+    "title": "Develop Comprehensive Test Suite for CareerMilestoneTracker",
+    "description": "Develop a comprehensive test suite encompassing unit tests, integration tests, end-to-end tests, and performance tests. The test suite should cover all critical components and functionalities of the CareerMilestoneTracker system, ensuring thorough testing coverage. Implement test automation frameworks, continuous integration/continuous deployment (CI/CD) pipelines, and utilize tools such as Jest, Mocha, or similar for JavaScript-based projects to streamline the testing process and enable efficient regression testing.",
+    "status": "IN_PROGRESS",
     "assigned_to": "qa-tester",
     "priority": 4,
     "dependencies": [
@@ -153,9 +153,9 @@
     "id": 1063,
     "project_id": "CareerMilestoneTracker",
     "title": "Write Detailed Documentation",
-    "description": "Create detailed and comprehensive documentation for the CareerMilestoneTracker system. This documentation should encompass user guides, administrator guides, technical documentation, and any necessary API reference materials. The documentation must cover all aspects of the system including installation, configuration, usage, maintenance, and troubleshooting. Ensure that the documentation is easily accessible, well-organized, and user-friendly. Additionally, consider creating a glossary of terms to help users understand technical jargon, and provide examples and case studies where possible.",
+    "description": "Create detailed and comprehensive documentation for the CareerMilestoneTracker system. This documentation should encompass user guides, administrator guides, technical documentation, and any necessary API reference materials. The documentation must cover all aspects of the system including installation, configuration, usage, maintenance, troubleshooting, best practices, known issues, and error handling. Ensure that the documentation is easily accessible, well-organized, and user-friendly. Additionally, consider creating a glossary of terms to help users understand technical jargon, and provide examples and case studies where possible. Also, consider using interactive elements such as videos, screenshots, and flowcharts to enhance the understanding of the system.",
     "status": "NEEDS_REVISION",
-    "assigned_to": "task-decomposer",
+    "assigned_to": "technical-writer",
     "priority": 4,
     "dependencies": [
       "Define Project Scope and Requirements",
