@@ -7,6 +7,7 @@ import faiss
 import numpy as np
 import ollama
 
+
 def extract_text_from_html(file_path: str) -> str:
     """
     Extract plain text content from an HTML file.
@@ -22,15 +23,16 @@ def extract_text_from_html(file_path: str) -> str:
         IOError: If there's an error reading the file.
     """
     try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            soup = BeautifulSoup(file.read(), 'html.parser')
+        with open(file_path, "r", encoding="utf-8") as file:
+            soup = BeautifulSoup(file.read(), "html.parser")
             return soup.get_text()
     except FileNotFoundError:
         raise FileNotFoundError(f"HTML file not found: {file_path}")
     except IOError as e:
         raise IOError(f"Error reading file {file_path}: {str(e)}")
 
-def create_embeddings(texts: List[str], model: str = 'mistral') -> np.ndarray:
+
+def create_embeddings(texts: List[str], model: str = "mistral") -> np.ndarray:
     """
     Create embeddings for a list of texts using the specified Ollama model.
 
@@ -47,7 +49,10 @@ def create_embeddings(texts: List[str], model: str = 'mistral') -> np.ndarray:
         embeddings.append(embedding)
     return np.array(embeddings)
 
-def create_index(docs_dir: str, model: str = 'mistral') -> Tuple[faiss.IndexFlatL2, List[str]]:
+
+def create_index(
+    docs_dir: str, model: str = "mistral"
+) -> Tuple[faiss.IndexFlatL2, List[str]]:
     """
     Create a FAISS index from HTML documentation files.
 
@@ -64,7 +69,7 @@ def create_index(docs_dir: str, model: str = 'mistral') -> Tuple[faiss.IndexFlat
     texts = []
     for root, _, files in os.walk(docs_dir):
         for file in files:
-            if file.endswith('.html'):
+            if file.endswith(".html"):
                 file_path = os.path.join(root, file)
                 text = extract_text_from_html(file_path)
                 texts.append(text)
@@ -79,7 +84,10 @@ def create_index(docs_dir: str, model: str = 'mistral') -> Tuple[faiss.IndexFlat
 
     return index, texts
 
-def save_index_and_texts(index: faiss.IndexFlatL2, texts: List[str], index_path: str, texts_path: str):
+
+def save_index_and_texts(
+    index: faiss.IndexFlatL2, texts: List[str], index_path: str, texts_path: str
+):
     """
     Save the FAISS index and processed texts to files.
 
@@ -99,7 +107,10 @@ def save_index_and_texts(index: faiss.IndexFlatL2, texts: List[str], index_path:
     except IOError as e:
         raise IOError(f"Error saving index or texts: {str(e)}")
 
-def build_rag_index(docs_dir: str, index_path: str, texts_path: str, model: str = 'mistral'):
+
+def build_rag_index(
+    docs_dir: str, index_path: str, texts_path: str, model: str = "mistral"
+):
     """
     Build and save a RAG index from documentation files.
 
@@ -118,16 +129,17 @@ def build_rag_index(docs_dir: str, index_path: str, texts_path: str, model: str 
     """
     print(f"Processing documentation in {docs_dir}...")
     index, texts = create_index(docs_dir, model)
-    
+
     print(f"Saving index to {index_path} and texts to {texts_path}...")
     save_index_and_texts(index, texts, index_path, texts_path)
-    
+
     print("RAG index built and saved successfully.")
+
 
 if __name__ == "__main__":
     # Example usage
     docs_directory = "docs/_build/html"
     index_output = "coordinator_docs.index"
     texts_output = "coordinator_docs.texts"
-    
+
     build_rag_index(docs_directory, index_output, texts_output)

@@ -10,7 +10,8 @@ from pydantic import ValidationError
 from ..llm import llm_manager
 from ..models import Task, TaskType, RFCState, ImplementationState
 
-json_logger = logging.getLogger('json_extractor')
+json_logger = logging.getLogger("json_extractor")
+
 
 def extract_json_from_response(text: str) -> dict:
     json_logger.debug(f"Attempting to extract JSON from text: {text[:100]}...")
@@ -31,7 +32,7 @@ def extract_json_from_response(text: str) -> dict:
 
     # Step 2: Try to extract JSON using regex
     json_logger.debug("Attempting to extract JSON using regex")
-    json_match = re.search(r'(\{.*\})', text, re.DOTALL)
+    json_match = re.search(r"(\{.*\})", text, re.DOTALL)
     if json_match:
         json_str = json_match.group(1)
         parsed = try_parse(json_str, "regex extraction stage")
@@ -40,17 +41,17 @@ def extract_json_from_response(text: str) -> dict:
 
     # Step 3: Remove comments and try again
     json_logger.debug("Removing comments and attempting to parse again")
-    text_no_comments = re.sub(r'//.*$', '', text, flags=re.MULTILINE)
-    text_no_comments = re.sub(r'/\*.*?\*/', '', text_no_comments, flags=re.DOTALL)
-    
+    text_no_comments = re.sub(r"//.*$", "", text, flags=re.MULTILINE)
+    text_no_comments = re.sub(r"/\*.*?\*/", "", text_no_comments, flags=re.DOTALL)
+
     parsed = try_parse(text_no_comments, "comment removal stage")
     if parsed:
         return parsed
 
     # Step 4: Clean up whitespace and try one more time
     json_logger.debug("Cleaning up whitespace and attempting to parse again")
-    text_clean = re.sub(r'\s+', '', text_no_comments)
-    
+    text_clean = re.sub(r"\s+", "", text_no_comments)
+
     parsed = try_parse(text_clean, "whitespace cleanup stage")
     if parsed:
         return parsed
@@ -59,18 +60,18 @@ def extract_json_from_response(text: str) -> dict:
     json_logger.error("Failed to parse JSON after all attempts.")
     json_logger.error(f"Raw text length: {len(text)}")
     json_logger.error(f"Full raw text: {text}")
-    
+
     # Additional debugging information
     json_logger.error("Character frequency analysis:")
     char_freq = {char: text.count(char) for char in set(text)}
     for char, freq in sorted(char_freq.items(), key=lambda x: x[1], reverse=True):
         json_logger.error(f"'{char}': {freq}")
-    
+
     json_logger.error("Last 10 characters:")
     json_logger.error(text[-10:])
-    
+
     # Try to identify where the JSON might be truncated
-    last_brace = text.rfind('}')
+    last_brace = text.rfind("}")
     if last_brace != -1:
         json_logger.error(f"Last closing brace found at position {last_brace}")
         json_logger.error(f"Text after last closing brace: {text[last_brace+1:]}")
@@ -83,8 +84,10 @@ def extract_json_from_response(text: str) -> dict:
 async def correct_json_with_llm(json_text: str) -> Optional[Task]:
     task_type_values = ", ".join([f'"{t.value}"' for t in TaskType])
     rfc_state_values = ", ".join([f'"{s.value}"' for s in RFCState])
-    implementation_state_values = ", ".join([f'"{s.value}"' for s in ImplementationState])
-    
+    implementation_state_values = ", ".join(
+        [f'"{s.value}"' for s in ImplementationState]
+    )
+
     prompt = f"""
     Please format the following text as a valid JSON object representing a Task, strictly adhering to this structure:
 
@@ -115,9 +118,7 @@ async def correct_json_with_llm(json_text: str) -> Optional[Task]:
 
     try:
         response = await llm_manager.run_llm_command(
-            prompt=prompt,
-            cache_key="json_correction",
-            role="json_corrector"
+            prompt=prompt, cache_key="json_correction", role="json_corrector"
         )
 
         # Attempt to parse the response as JSON
@@ -137,17 +138,22 @@ async def correct_json_with_llm(json_text: str) -> Optional[Task]:
             return None
 
     except Exception as e:
-        json_logger.error(f"An unexpected error occurred during JSON correction: {str(e)}")
+        json_logger.error(
+            f"An unexpected error occurred during JSON correction: {str(e)}"
+        )
         return None
+
 
 async def extract_and_correct_json(text: str) -> Optional[Task]:
     json_logger.info("Attempting to extract and correct JSON")
     extracted_json = extract_json_from_response(text)
-    
+
     if not extracted_json:
-        json_logger.warning("Failed to extract valid JSON, attempting correction with LLM")
+        json_logger.warning(
+            "Failed to extract valid JSON, attempting correction with LLM"
+        )
         return await correct_json_with_llm(text)
-    
+
     try:
         validated_task = Task(**extracted_json)
         json_logger.info("Extracted JSON is valid")

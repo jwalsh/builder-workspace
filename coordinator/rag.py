@@ -5,6 +5,7 @@ import faiss
 import numpy as np
 from typing import List, Tuple, Optional
 
+
 class RAGSystem:
     """
     Retrieval-Augmented Generation (RAG) system for enhancing query responses.
@@ -65,11 +66,15 @@ class RAGSystem:
         """
         relevant_docs = self.query(query)
         context = "\n".join([doc for doc, _ in relevant_docs])
-        response = ollama.generate(model=self.model, prompt=f"Context:\n{context}\n\nQuery: {query}")
+        response = ollama.generate(
+            model=self.model, prompt=f"Context:\n{context}\n\nQuery: {query}"
+        )
         return response
+
 
 # Global RAG system instance
 rag_system: Optional[RAGSystem] = None
+
 
 def initialize_rag(index_path: str, texts_path: str, model_name: str = "mistral"):
     """
@@ -87,6 +92,7 @@ def initialize_rag(index_path: str, texts_path: str, model_name: str = "mistral"
     """
     global rag_system
     rag_system = RAGSystem(index_path, texts_path, model_name)
+
 
 def rag_generate(query: str) -> str:
     """

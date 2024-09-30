@@ -5,6 +5,7 @@ from datetime import datetime
 from typing import List
 from ..models import Task  # Adjust this import based on your actual project structure
 
+
 def create_project_directory(project_name: str, description: str, tasks: List[Task]):
     project_dir = os.path.abspath(os.path.join("projects", project_name, "config"))
     os.makedirs(project_dir, exist_ok=True)
@@ -12,7 +13,7 @@ def create_project_directory(project_name: str, description: str, tasks: List[Ta
     project_info = {
         "name": project_name,
         "description": description,
-        "created_at": datetime.now().isoformat()
+        "created_at": datetime.now().isoformat(),
     }
 
     project_info_path = os.path.join(project_dir, "project_info.json")
@@ -28,8 +29,9 @@ def create_project_directory(project_name: str, description: str, tasks: List[Ta
 
     logging.info(f"Project directory created/updated: {project_dir}")
 
+
 def sanitize_filename(filename: str) -> str:
     # Remove invalid characters and replace spaces with underscores
-    sanitized = re.sub(r'[^\w\-_\. ]', '', filename)
-    sanitized = sanitized.replace(' ', '_')
+    sanitized = re.sub(r"[^\w\-_\. ]", "", filename)
+    sanitized = sanitized.replace(" ", "_")
     return sanitized[:255]  # Truncate to 255 characters
