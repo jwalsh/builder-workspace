@@ -77,9 +77,9 @@
     "id": 1290,
     "project_id": "CollaborativeRFCEditor",
     "title": "Database Design and Implementation",
-    "description": "Design and implement the database schema for storing RFCs, revisions, user data, and related metadata. The schema should support versioning, collaboration features, efficient querying, and real-time updates. Consider using a document-oriented database like MongoDB or a relational database with appropriate indexing and normalization strategies such as PostgreSQL. Additionally, consider implementing conflict resolution strategies for collaborative editing scenarios.",
+    "description": "Design and implement the database schema for storing RFCs, revisions, user data, and related metadata. The schema should support versioning, collaboration features, efficient querying, and real-time updates. Consider using a document-oriented database like MongoDB or a relational database with appropriate indexing and normalization strategies such as PostgreSQL. Additionally, consider implementing conflict resolution strategies for collaborative editing scenarios, ensuring optimal performance through sharding and caching strategies where applicable. Also, explore the use of version control systems (VCS) for tracking changes in the database schema, and ensure data security by following best practices for data encryption and access controls.",
     "status": "READY_FOR_REVIEW",
-    "assigned_to": "code-architect",
+    "assigned_to": "database-specialist",
     "priority": 3,
     "dependencies": [
       "System Architecture Design"
@@ -96,9 +96,9 @@
     "id": 1291,
     "project_id": "CollaborativeRFCEditor",
     "title": "Security and Access Control",
-    "description": "Implement user authentication, role-based access control (RBAC), and permissions management for the collaborative editing platform. Ensure secure data storage and transmission.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "code-architect",
+    "description": "Implement user authentication, role-based access control (RBAC), and permissions management for the collaborative editing platform. Ensure secure data storage and transmission, considering industry-standard best practices such as OAuth for authentication, JWT for token-based authorization, and encryption for data at rest and in transit.",
+    "status": "REVIEW",
+    "assigned_to": "security-specialist",
     "priority": 2,
     "dependencies": [
       "System Architecture Design"
