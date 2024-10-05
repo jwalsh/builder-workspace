@@ -77,9 +77,9 @@
     "id": 5154,
     "project_id": "ThreatHuntingPlatform",
     "title": "Design Data Storage and Management (Revised)",
-    "description": "Design and implement a scalable, high-performance, and secure data storage and management system for storing and processing threat data, logs, and analysis results. The system should support ingesting data from various sources, efficient querying and retrieval, data archiving, integration with other components of the platform, and ensure compliance with relevant data privacy and security regulations. The system should also provide mechanisms for real-time data streaming, anomaly detection, and data visualization. Consider optimizing the design to support horizontal scaling, improve performance through caching strategies, and implement data compression techniques to reduce storage costs. Also, consider integrating with popular open-source big data processing frameworks like Apache Hadoop or Apache Spark.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "database-specialist",
+    "description": "Design and implement a scalable, high-performance, and secure data storage and management system for storing and processing threat data, logs, and analysis results. The system should support ingesting data from various sources, efficient querying and retrieval, data archiving, integration with other components of the platform, and ensure compliance with relevant data privacy and security regulations. The system should also provide mechanisms for real-time data streaming, anomaly detection, and data visualization. Consider optimizing the design to support horizontal scaling, improve performance through caching strategies, and implement data compression techniques to reduce storage costs. Integrate with popular open-source big data processing frameworks like Apache Hadoop or Apache Spark, focusing on Spark Streaming for real-time data processing and Apache Parquet for efficient data storage. Also, consider implementing an event-driven architecture for better scalability and fault tolerance, and use containerization technologies such as Docker for easy deployment and management.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "Design System Architecture",
@@ -135,8 +135,8 @@
     "id": 5157,
     "project_id": "ThreatHuntingPlatform",
     "title": "Set up CI/CD Pipeline with Improved Details",
-    "description": "Implement a comprehensive continuous integration and continuous deployment (CI/CD) pipeline for the ThreatHuntingPlatform. This pipeline will automate building, testing, and deployment processes while ensuring code quality. The pipeline should include stages for linting, static analysis, unit testing, integration testing, and security scanning. Additionally, it should support multiple environments (e.g., development, staging, production) and allow for easy rollbacks if issues arise. To optimize the pipeline's efficiency, consider using popular tools like Jenkins, Travis CI or GitHub Actions.",
-    "status": "REVIEW",
+    "description": "Implement a comprehensive continuous integration and continuous deployment (CI/CD) pipeline for the ThreatHuntingPlatform. This pipeline will automate building, testing, and deployment processes while ensuring code quality. The pipeline should include stages for linting, static analysis, unit testing, integration testing, and security scanning. Additionally, it should support multiple environments (e.g., development, staging, production) and allow for easy rollbacks if issues arise. To optimize the pipeline's efficiency, consider using popular tools like Jenkins, Travis CI or GitHub Actions. For improved detail, specify the exact tools to be used in each stage of the pipeline (e.g., ESLint for linting, SonarQube for static analysis), and outline the expected outcomes for each tool's application. Also, include a step for documentation generation, preferably using tools like Doxygen or Sphinx.",
+    "status": "IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
@@ -154,9 +154,9 @@
     "id": 5158,
     "project_id": "ThreatHuntingPlatform",
     "title": "Develop Comprehensive Testing Strategy for ThreatHuntingPlatform",
-    "description": "Create and implement a comprehensive testing strategy that encompasses unit tests, integration tests, and end-to-end tests for the ThreatHuntingPlatform. The strategy should clearly define test cases, expected outcomes, and any necessary test data. Additionally, include performance and security testing where applicable, detailing specific methodologies, tools, and metrics to be used. To facilitate collaboration and ensure that all aspects are covered, consider involving relevant team members such as frontend/backend developers, database specialist, devops engineer, QA tester, and security specialist in the process.",
-    "status": "READY_FOR_IMPLEMENTATION",
-    "assigned_to": "task-decomposer",
+    "description": "Create and implement a comprehensive testing strategy that encompasses unit tests, integration tests, end-to-end tests, performance testing, security testing (penetration and vulnerability) for the ThreatHuntingPlatform. The strategy should clearly define test cases, expected outcomes, and any necessary test data. Collaborate with relevant team members such as frontend/backend developers, database specialist, devops engineer, QA tester, and security specialist in the process, ensuring that all aspects are covered. This collaboration will involve defining methodologies, tools, and metrics for each type of testing. Update the strategy periodically based on feedback from the testing phase and incorporate any necessary changes.",
+    "status": "IN_PROGRESS",
+    "assigned_to": "qa-tester",
     "priority": 3,
     "dependencies": [
       "Design System Architecture"

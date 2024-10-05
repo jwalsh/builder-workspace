@@ -20,8 +20,8 @@
     "id": 4640,
     "project_id": "SmartCityOrchestrator",
     "title": "System Architecture Design",
-    "description": "Design the overall system architecture, including components, interfaces, data flows, and data models. Consider scalability, security, and performance requirements. Define the roles and responsibilities of each component, as well as the communication protocols and data formats. In addition, outline the strategies for integrating various urban systems such as traffic management, waste collection, and public safety using IoT devices and centralized data analytics.",
-    "status": "IN_PROGRESS",
+    "description": "Design the overall system architecture, including components, interfaces, data flows, and data models. Consider scalability, security, and performance requirements. Define the roles and responsibilities of each component, as well as the communication protocols and data formats. In addition, outline the strategies for integrating various urban systems such as traffic management, waste collection, and public safety using IoT devices and centralized data analytics. Provide a detailed design document that includes system diagrams and mockups, and clearly explain how each component will interact with others in the system.",
+    "status": "NEEDS_REVIEW",
     "assigned_to": "code-architect",
     "priority": 5,
     "dependencies": [
@@ -79,16 +79,17 @@
     "id": 4643,
     "project_id": "SmartCityOrchestrator",
     "title": "User Interface Design for SmartCityOrchestrator",
-    "description": "Design a responsive, intuitive, and accessible user interface for monitoring and controlling the integrated urban systems. The UI should provide a centralized dashboard with real-time data visualization, alerts, and control mechanisms. Consider usability, security, and accessibility best practices. Collaborate with frontend-developer to ensure seamless implementation of the design.\n\nDependencies: System Architecture Design, Data Visualization Requirements\n\nAdditional Notes: Ensure the UI is scalable and can handle large amounts of data effectively.\n",
-    "status": "OPEN",
+    "description": "Design a responsive, intuitive, and accessible user interface for monitoring and controlling the integrated urban systems. The UI should provide a centralized dashboard with real-time data visualization, alerts, and control mechanisms. Consider usability, security, and accessibility best practices. Collaborate with frontend-developer to ensure seamless implementation of the design. Ensure the UI is scalable and can handle large amounts of data effectively.\n\nDependencies: System Architecture Design, Data Visualization Requirements, Accessibility Guidelines for Web Applications (If not yet considered)\n\nAdditional Notes: To improve efficiency, consider implementing an interactive interface that allows users to adjust system parameters in real-time. Also, incorporate a feature for generating custom reports.\n",
+    "status": "IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "System Architecture Design",
-      "Data Visualization Requirements"
+      "Data Visualization Requirements",
+      "Accessibility Guidelines for Web Applications"
     ],
     "task_type": "rfc",
-    "rfc_state": "DRAFT",
+    "rfc_state": "REVIEW",
     "implementation_state": null,
     "review_comments": null,
     "approver": null,
@@ -118,8 +119,8 @@
     "id": 4645,
     "project_id": "SmartCityOrchestrator",
     "title": "Infrastructure and Deployment Planning",
-    "description": "Plan the infrastructure requirements, deployment strategies, and monitoring tools for the SmartCityOrchestrator system. This includes detailing hardware, software, network, and security considerations for a robust, scalable, and secure city-wide IoT deployment. Consider edge computing for real-time data processing and ensure compatibility with existing urban systems.",
-    "status": "APPROVAL_REQUIRED",
+    "description": "Plan the infrastructure requirements, deployment strategies, and monitoring tools for the SmartCityOrchestrator system. This includes detailing hardware, software, network, and security considerations for a robust, scalable, and secure city-wide IoT deployment. Consider edge computing for real-time data processing, ensure compatibility with existing urban systems, and outline disaster recovery strategies. Also, suggest methods for minimizing latency and optimizing data transfer across the system.",
+    "status": "NEEDS_REVISION",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
