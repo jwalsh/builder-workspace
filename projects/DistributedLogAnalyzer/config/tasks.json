@@ -56,7 +56,7 @@
     "id": 1851,
     "project_id": "DistributedLogAnalyzer",
     "title": "Design Log Processing - Modular and Scalable Approach",
-    "description": "Design a modular, scalable log processing component that includes log parsing, normalization, analysis rule engines, and data pipelines. Ensure error handling for edge cases, performance optimizations, compatibility with various distributed system logs, and consider integrating with existing system architecture where applicable. The design should also be extensible to accommodate future enhancements.",
+    "description": "Design a modular, scalable log processing component that includes log parsing, normalization, analysis rule engines, and data pipelines. Ensure error handling for edge cases, performance optimizations, compatibility with various distributed system logs, and consider integrating with existing system architecture where applicable. The design should also be extensible to accommodate future enhancements, specifically focusing on: 1. Flexible log format support (e.g., JSON, CSV, plain text) 2. Real-time/near real-time processing for immediate incident detection 3. Implementing a multi-tenant architecture for handling logs from multiple systems securely and efficiently 4. Integration with popular log analysis tools such as Splunk, Elasticsearch, etc., where possible. Provide your recommendations on the design approach to ensure a robust, efficient, and reliable solution. Once approved, update the rfc_state field accordingly.",
     "status": "REVIEW",
     "assigned_to": "code-architect",
     "priority": 3,
@@ -75,9 +75,9 @@
     "id": 1852,
     "project_id": "DistributedLogAnalyzer",
     "title": "Design Data Storage - Optimized for Performance and Scalability",
-    "description": "Design the data storage component, including database schemas, indexing strategies (considering both full-text search and range queries), data retention policies based on system's performance needs and compliance requirements, data partitioning strategies for scalability and performance. The design should cater to the real-time analysis requirements of the system, be optimized for security and cost efficiency, and follow best practices for concurrency control, ensuring transactional integrity. Additionally, consider using a distributed database system like Apache Cassandra or Google Bigtable for high write throughput, high availability, and scalability.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "database-specialist",
+    "description": "Design the data storage component, including database schemas, indexing strategies (considering both full-text search and range queries), data retention policies based on system's performance needs and compliance requirements, data partitioning strategies for scalability and performance. The design should cater to the real-time analysis requirements of the system, be optimized for security and cost efficiency, and follow best practices for concurrency control, ensuring transactional integrity. Additionally, consider using a distributed database system like Apache Cassandra or Google Bigtable for high write throughput, high availability, and scalability. Include provisions for data compression to reduce storage costs. Consider implementing data sharding for horizontal scaling and improve the design by considering data replication strategies for fault tolerance.",
+    "status": "NEEDS_REVISION",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "Define System Architecture"

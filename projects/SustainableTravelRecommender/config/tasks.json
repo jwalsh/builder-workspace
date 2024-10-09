@@ -58,10 +58,10 @@
   {
     "id": 4923,
     "project_id": "SustainableTravelRecommender",
-    "title": "User Interface Design",
-    "description": "Design the user interface for the eco-friendly travel recommendation system. This includes input forms, search results, carbon footprint information, and display of eco-friendly travel options. The design should be intuitive, visually appealing, accessible to all users, and mobile-responsive as a significant number of our users are expected to access the system through mobile devices.\n\nTo ensure consistency with our Design System Architecture, please also consider integrating the design with existing UI patterns and components. Additionally, ensure that the design is compliant with Web Content Accessibility Guidelines (WCAG) 2.1 Level AA for accessibility.",
-    "status": "NEEDS_WORK",
-    "assigned_to": "frontend-developer",
+    "title": "User Interface Design (Revised)",
+    "description": "Revise the user interface design for the eco-friendly travel recommendation system. This includes input forms, search results, carbon footprint information, and display of eco-friendly travel options. The revised design should be intuitive, visually appealing, accessible to all users, mobile-responsive as a significant number of our users are expected to access the system through mobile devices.\n\nTo ensure consistency with our Design System Architecture, please integrate the design with existing UI patterns and components. Additionally, ensure that the revised design is compliant with Web Content Accessibility Guidelines (WCAG) 2.1 Level AA for accessibility and responsive to different screen sizes.\n\nFor better separation of concerns, I suggest breaking down the task into smaller parts: Design Input Form, Search Results Layout, Carbon Footprint Display, and Eco-friendly Travel Options UI.\n\nFurthermore, consider adding a feature for users to customize their preferences, such as preferred travel mode, budget, and desired eco-friendly features. Also, consider incorporating a feedback system to improve the quality of recommendations.",
+    "status": "NEEDS_REWORK",
+    "assigned_to": "task-decomposer",
     "priority": 3,
     "dependencies": [
       "Design System Architecture",
@@ -99,8 +99,8 @@
     "id": 4925,
     "project_id": "SustainableTravelRecommender",
     "title": "Carbon Footprint Calculation",
-    "description": "Implement the logic for calculating the carbon footprint of travel options based on various factors (e.g., mode of transportation, distance, and emissions factors specific to each mode), considering the latest research and industry standards. This implementation should be modular and scalable to accommodate future improvements in data and methods. Include a detailed documentation for the calculation methodology. The code should be tested for accuracy and efficiency.",
-    "status": "REVIEW",
+    "description": "Implement the logic for calculating the carbon footprint of travel options based on various factors (e.g., mode of transportation, distance, and emissions factors specific to each mode), considering the latest research and industry standards. This implementation should be modular and scalable to accommodate future improvements in data and methods. Include a detailed documentation for the calculation methodology. The code should be tested for accuracy and efficiency with emphasis on using appropriate unit testing strategies. Ensure the algorithm is optimized for performance, taking into account potential large datasets. Update the rfc_state field to 'APPROVED FOR IMPLEMENTATION' once approved. Provide your review comments in the 'review_comments' field.",
+    "status": "APPROVED_FOR_IMPLEMENTATION",
     "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
@@ -119,9 +119,9 @@
     "id": 4926,
     "project_id": "SustainableTravelRecommender",
     "title": "Carbon Offsetting Integration",
-    "description": "Integrate with third-party carbon offsetting services or develop in-house mechanisms for offsetting carbon footprints. The integration should support multiple offsetting providers and allow for easy addition or removal of providers. Develop a flexible and extensible architecture to accommodate future changes in offsetting mechanisms or providers. In addition, consider implementing carbon offsetting options based on various travel activities such as transportation, accommodations, and activities, and provide users with transparent information about the carbon emissions offset and the corresponding cost.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "project-manager",
+    "description": "Integrate with third-party carbon offsetting services or develop in-house mechanisms for offsetting carbon footprints. The integration should support multiple offsetting providers and allow for easy addition or removal of providers. Develop a flexible and extensible architecture to accommodate future changes in offsetting mechanisms or providers. Implement carbon offsetting options based on various travel activities such as transportation, accommodations, and activities, and provide users with transparent information about the carbon emissions offset and the corresponding cost. Consider implementing a mechanism for tracking the offsets and their impact on the environment, and allow users to view this data.\n\nFor better scalability and maintainability, ensure that the code is modular and well-documented, following best practices and design patterns.\n\nOnce the integration is complete, conduct thorough testing to ensure its functionality, performance, and security.",
+    "status": "REOPENED_FOR_EDIT",
+    "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
       "Design System Architecture",

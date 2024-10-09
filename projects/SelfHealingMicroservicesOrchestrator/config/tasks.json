@@ -58,12 +58,13 @@
     "id": 6536,
     "project_id": "SelfHealingMicroservicesOrchestrator",
     "title": "Design Monitoring and Logging Components for SelfHealing Microservices Orchestrator",
-    "description": "Design the monitoring and logging components responsible for: a) health monitoring of microservices, b) capturing relevant events, metrics, and traces for analysis, troubleshooting, and auditing purposes. Consider integrating with existing monitoring solutions (e.g., Prometheus, Grafana, ELK Stack) or developing custom components based on project requirements. To ensure scalability and efficiency, consider implementing distributed tracing techniques such as Jaeger or Zipkin. Include guidelines for structured logs (using popular formats like JSON or YAML), alert thresholds, log retention policies, and logging best practices. Additionally, suggest monitoring strategies that can identify root causes of issues quickly. If custom components are necessary, ensure they can be easily integrated with the existing system architecture. Upon completion, conduct a performance analysis to optimize the system for efficient resource usage.",
+    "description": "Design the monitoring and logging components responsible for: a) health monitoring of microservices, b) capturing relevant events, metrics, and traces for analysis, troubleshooting, and auditing purposes. Consider integrating with existing monitoring solutions (e.g., Prometheus, Grafana, ELK Stack) or developing custom components based on project requirements. To ensure scalability and efficiency, consider implementing distributed tracing techniques such as Jaeger or Zipkin. Include guidelines for structured logs (using popular formats like JSON or YAML), alert thresholds, log retention policies, and logging best practices. Additionally, suggest monitoring strategies that can identify root causes of issues quickly. If custom components are necessary, ensure they can be easily integrated with the existing system architecture. Upon completion, conduct a performance analysis to optimize the system for efficient resource usage. Clarify the scope of this task by specifying that the focus is on designing these components, not their implementation, and that an additional task will be created for the actual implementation of these designs. Also, recommend using OpenTelemetry as a unified monitoring and instrumentation framework. Update the dependencies to include 'Design System Architecture' and 'Design Monitoring and Alerting Strategy'.",
     "status": "NEEDS_REVISION",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
-      "Design System Architecture"
+      "Design System Architecture",
+      "Design Monitoring and Alerting Strategy"
     ],
     "task_type": "rfc",
     "rfc_state": "REVIEW",

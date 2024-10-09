@@ -99,16 +99,16 @@
     "id": 6746,
     "project_id": "AnalisisAgricolaIa",
     "title": "Implement Comprehensive Security Measures (Revised)",
-    "description": "Secure the system by implementing robust authentication using OAuth2.0 for stateless bearer token access delegation, authorization with Role-Based Access Control (RBAC) and Access Control Lists (ACL), data encryption at rest and in transit using AES-256, secure communication protocols (HTTPS) with HSTS enabled, input validation with Content Security Policy (CSP), adhering to security best practices throughout the application lifecycle, and compliance with relevant industry standards such as GDPR, HIPAA, or PCI DSS where applicable. Regular security audits, penetration testing, and multi-factor authentication should be performed whenever possible. Implementing these measures may require consulting with security experts for best practices and potential risks. Additionally, it's crucial to document all implemented security measures in the Security Guide for future reference. This task is further divided into subtasks: OAuth2.0 implementation, RBAC and ACL implementation, data encryption setup, secure communication configuration, input validation, industry standards compliance, security audits, penetration testing, multi-factor authentication setup, and incorporating security testing as part of the Continuous Integration/Continuous Deployment (CI/CD) pipeline. Update the task dependencies to include 'Design System Architecture', 'Security Best Practices Research' and assign this task to the code-architect for further progress. To ensure the system remains secure over time, it's important to schedule regular updates and patches, and monitor for any emerging security threats or vulnerabilities.",
-    "status": "NEEDS_REVISED",
-    "assigned_to": "code-architect",
+    "description": "Secure the system by implementing robust authentication using OAuth2.0 for stateless bearer token access delegation, authorization with Role-Based Access Control (RBAC) and Access Control Lists (ACL), data encryption at rest and in transit using AES-256, secure communication protocols (HTTPS) with HSTS enabled, input validation with Content Security Policy (CSP), adhering to security best practices throughout the application lifecycle, and compliance with relevant industry standards such as GDPR, HIPAA, or PCI DSS where applicable. Regular security audits, penetration testing, and multi-factor authentication should be performed whenever possible. It's crucial to document all implemented security measures in the Security Guide for future reference. This task is further divided into subtasks: OAuth2.0 implementation, RBAC and ACL implementation, data encryption setup, secure communication configuration, input validation, industry standards compliance, security audits, penetration testing, multi-factor authentication setup, and incorporating security testing as part of the Continuous Integration/Continuous Deployment (CI/CD) pipeline. This task also includes consulting with security experts for best practices and potential risks, and ensuring regular updates and patches, and monitoring for any emerging security threats or vulnerabilities. Update the task dependencies to include 'Design System Architecture', 'Security Best Practices Research' and assign this task to the 'security-specialist' for further progress.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "security-specialist",
     "priority": 1,
     "dependencies": [
       "Design System Architecture",
       "Security Best Practices Research"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW",
+    "rfc_state": "IMPLEMENTING",
     "implementation_state": null,
     "review_comments": null,
     "approver": null,
@@ -119,9 +119,9 @@
     "id": 6747,
     "project_id": "AnalisisAgricolaIa",
     "title": "Set up Comprehensive Testing Framework",
-    "description": "Implement a comprehensive testing framework that includes unit tests, integration tests, end-to-end tests, and performance tests to ensure system quality, reliability, and efficiency. This will involve designing test cases, implementing them, executing them, and maintaining them. Consider using existing testing libraries or tools (such as Jest, Mocha, Cypress, Selenium) to streamline the process. It is also recommended to include automated UI tests for a more robust testing suite, prioritize test coverage for critical system functions, and ensure test coverage for edge cases. Upon implementation, documentation of the testing framework should be provided for future reference. Additionally, consider incorporating continuous integration/continuous deployment (CI/CD) practices to automate the testing and deployment process. To enhance the efficiency of the task, it would be beneficial to break down this task into smaller, manageable sub-tasks, such as: selecting the appropriate testing tools, designing test cases, writing tests, implementing CI/CD pipeline, and documenting the testing framework. Upon completion of each sub-task, document the progress and share with the team.",
-    "status": "IN_PROGRESS",
-    "assigned_to": "code-architect",
+    "description": "Implement a comprehensive testing framework that includes unit tests, integration tests, end-to-end tests, and performance tests to ensure system quality, reliability, and efficiency. This will involve designing test cases, implementing them, executing them, and maintaining them. Consider using existing testing libraries or tools (such as Jest, Mocha, Cypress, Selenium) to streamline the process. It is also recommended to include automated UI tests for a more robust testing suite, prioritize test coverage for critical system functions, and ensure test coverage for edge cases. Upon implementation, documentation of the testing framework should be provided for future reference. Additionally, consider incorporating continuous integration/continuous deployment (CI/CD) practices to automate the testing and deployment process. To enhance the efficiency of the task, it would be beneficial to break down this task into smaller, manageable sub-tasks, such as: selecting the appropriate testing tools, designing test cases, writing tests, implementing CI/CD pipeline, and documenting the testing framework. Upon completion of each sub-task, document the progress and share with the team. To improve clarity and efficiency, I suggest adding a timeline for each sub-task and specify any particular libraries or tools that will be used.",
+    "status": "READY_FOR_DECOMPOSITION",
+    "assigned_to": "task-decomposer",
     "priority": 3,
     "dependencies": [
       "Design System Architecture"

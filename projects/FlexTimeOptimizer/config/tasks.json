@@ -20,8 +20,8 @@
     "id": 2303,
     "project_id": "FlexTimeOptimizer",
     "title": "System Architecture Design - FlexTimeOptimizer",
-    "description": "Design the overall system architecture for FlexTimeOptimizer, including components, data flow, and integration points. This design should consider scalability, security, performance aspects, user experience, and accessibility based on gathered project requirements. The design will also need to accommodate potential future integrations with other systems such as HRMS or scheduling tools. To ensure the system is efficient and maintainable, it's recommended to follow Microservices Architecture, and to use modern technologies like Docker, Kubernetes, and GraphQL/REST APIs for backend development. Also, include detailed documentation and diagrams for easy understanding.",
-    "status": "NEEDS_WORK",
+    "description": "Design the overall system architecture for FlexTimeOptimizer, including components, data flow, and integration points. This design should consider scalability, security, performance aspects, user experience, and accessibility based on gathered project requirements. The design will also need to accommodate potential future integrations with other systems such as HRMS or scheduling tools. To ensure the system is efficient and maintainable, it's recommended to follow Microservices Architecture, and to use modern technologies like Docker, Kubernetes, and GraphQL/REST APIs for backend development. Also, include detailed documentation and diagrams for easy understanding. For improved readability, break down the design into logical modules and provide a clear flow of data among them. Ensure that the design is flexible enough to accommodate changes in future requirements without compromising performance or security. Finally, consider implementing a hybrid approach of GraphQL and REST APIs based on specific use cases to achieve optimal balance between flexibility, efficiency, and ease of implementation.",
+    "status": "READY_FOR_REVIEW",
     "assigned_to": "code-architect",
     "priority": 2,
     "dependencies": [
@@ -57,9 +57,9 @@
   {
     "id": 2305,
     "project_id": "FlexTimeOptimizer",
-    "title": "User Interface Design (UI/UX)",
-    "description": "Design the user interface for the application, including wireframes, mockups, and interactive prototypes. Ensure the UI is intuitive, user-friendly, accessible, usable, and adheres to best practices and FlexTimeOptimizer branding guidelines. Collaborate with the User Research and Persona Development team for user insights, taking into account different user personas and their specific needs. After design completion, conduct user testing, make necessary adjustments based on feedback, and iterate if required. Upon approval of designs, hand over to Frontend Developers for implementation.",
-    "status": "NEEDS_APPROVAL",
+    "title": "User Interface Design (UI/UX) - Review and Update",
+    "description": "Update the User Interface design for the FlexTimeOptimizer application, including wireframes, mockups, and interactive prototypes. The updated UI should be intuitive, user-friendly, accessible, usable, and adhere to best practices and FlexTimeOptimizer branding guidelines. Collaborate with the User Research and Persona Development team for user insights, taking into account different user personas and their specific needs. After the update, conduct user testing, make necessary adjustments based on feedback, and iterate if required. Upon approval of designs, hand over to Frontend Developers for implementation. This task is a revisit to ensure that the UI design incorporates recent changes in system architecture design.",
+    "status": "IN_PROGRESS",
     "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
@@ -67,7 +67,7 @@
       "User Research and Persona Development"
     ],
     "task_type": "rfc",
-    "rfc_state": "REVIEW",
+    "rfc_state": "APPROVED",
     "implementation_state": null,
     "review_comments": null,
     "approver": null,
@@ -97,7 +97,7 @@
     "id": 2307,
     "project_id": "FlexTimeOptimizer",
     "title": "Deployment and DevOps Planning (Revised)",
-    "description": "Develop a comprehensive deployment strategy, specify infrastructure requirements, and outline DevOps processes for the application. This should cover continuous integration, continuous deployment, monitoring, logging, scaling strategies, infrastructure as code (IaC), containerization, cloud provider selection, and edge cases/error handling considerations. The plan will also include a clear definition of roles and responsibilities in the DevOps lifecycle. Additionally, it is recommended to include a section for disaster recovery and security measures, and to consider microservices architecture for scalability.",
+    "description": "Develop a comprehensive deployment strategy, specify infrastructure requirements, outline DevOps processes for the application. This should cover continuous integration, continuous deployment, monitoring, logging, scaling strategies, infrastructure as code (IaC), containerization, cloud provider selection, and edge cases/error handling considerations. The plan will also include a clear definition of roles and responsibilities in the DevOps lifecycle. Additionally, it is recommended to include sections for disaster recovery and security measures, microservices architecture for scalability, and testing strategies within the CI/CD pipeline. Consideration should be given to the use of popular DevOps tools (e.g., Jenkins, Docker, Kubernetes, AWS, Azure) where appropriate. The plan will also include a section on version control best practices.",
     "status": "READY_FOR_EXECUTION",
     "assigned_to": "devops-engineer",
     "priority": 4,
@@ -115,10 +115,10 @@
   {
     "id": 2308,
     "project_id": "FlexTimeOptimizer",
-    "title": "Documentation Planning",
-    "description": "Plan the documentation requirements for the FlexTimeOptimizer project. This includes user guides, technical documentation, and training materials. The documentation should cover both end-user and administrative perspectives, and should be tailored to different user roles and technical proficiency levels. Incorporate examples and case studies for better understanding, and ensure accessibility guidelines are followed. Consider creating a structure that allows easy navigation between sections. To facilitate understanding, break down complex concepts into simpler, digestible parts. Additionally, prioritize interactivity in the documentation to enhance user experience. Collaborate with the User Interface Design team to align documentation style with the final UI design. Once the System Architecture Design and Data Model Design tasks are completed, use their details to provide more accurate and detailed technical documentation.",
-    "status": "READY_FOR_CODE_ARCHITECT",
-    "assigned_to": "technical-writer",
+    "title": "Documentation Planning - FlexTimeOptimizer",
+    "description": "Plan the documentation requirements for the FlexTimeOptimizer project. This includes user guides, technical documentation, and training materials. The documentation should cover both end-user and administrative perspectives, and should be tailored to different user roles (e.g., employee, admin) and technical proficiency levels (beginner, intermediate, advanced). Incorporate examples and case studies for better understanding, and ensure accessibility guidelines are followed. Consider creating a structure that allows easy navigation between sections and subsections. To facilitate understanding, break down complex concepts into simpler, digestible parts. Additionally, prioritize interactivity in the documentation to enhance user experience. Collaborate with the User Interface Design team to align documentation style with the final UI design. Once the System Architecture Design, Data Model Design tasks are completed, use their details to provide more accurate and detailed technical documentation. For end-user documentation, it would be beneficial to include a step-by-step guide on how to set up an optimal work schedule based on productivity patterns and personal commitments.",
+    "status": "REVIEW_CODE_ARCHITECT",
+    "assigned_to": "code-architect",
     "priority": 3,
     "dependencies": [
       "System Architecture Design",

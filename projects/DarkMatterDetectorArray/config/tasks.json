@@ -133,10 +133,10 @@
   {
     "id": 1718,
     "project_id": "DarkMatterDetectorArray",
-    "title": "Create Testing and Quality Assurance Plan",
-    "description": "Develop a comprehensive testing and quality assurance plan for the DarkMatterDetectorArray system. This includes unit tests, integration tests, system tests, and end-to-end tests. The testing will cover all components of the system, including edge cases, to ensure robustness and reliability. Additionally, consider automating testing where possible to improve efficiency and resilience. To facilitate a thorough review, suggest test strategies for each component (e.g., data processing, visualization, network communication), outline how test coverage will be measured, discuss the tools or frameworks planned for use, and provide an estimated timeline.\n\n",
-    "status": "NEEDS_REWORK",
-    "assigned_to": "code-architect",
+    "title": "Create Testing and Quality Assurance Plan (Updated)",
+    "description": "This RFC proposes the development of a comprehensive testing and quality assurance plan for the DarkMatterDetectorArray system. The testing will include unit tests, integration tests, system tests, and end-to-end tests. This plan will cover all components of the system, including edge cases, to ensure robustness and reliability. To improve efficiency and resilience, automation of testing where possible is suggested. \n\nFor each component (data processing, visualization, network communication), specific test strategies are proposed below: \n\n1. Data Processing: Test data for correctness, completeness, and timeliness. Use edge cases to ensure robustness against unexpected data. \n2. Visualization: Ensure accurate rendering of data in real-time, with focus on usability and performance optimization. \n3. Network Communication: Test network connectivity, message integrity, and latency across the global array of detectors. \n\nTo measure test coverage, a combination of code coverage metrics (e.g., line coverage, branch coverage) and functional test scenarios will be used. For tools or frameworks, we plan to use [Jest](https://jestjs.io/) for unit testing, [Selenium](https://www.selenium.dev/) for end-to-end testing, and [Appveyor](https://www.appveyor.com/) for continuous integration. The estimated timeline is 8 weeks.\n\n**Review Comments:** This RFC should be assigned to the QA Tester for further development. Upon completion of the task, a technical report detailing the test results and any identified issues will be provided for review.\n",
+    "status": "READY_FOR_REVIEW",
+    "assigned_to": "qa-tester",
     "priority": 2,
     "dependencies": [
       "Design System Architecture"

@@ -77,9 +77,9 @@
     "id": 6439,
     "project_id": "ImmersiveLanguageLearning",
     "title": "Database Design and Implementation for Immersive Language Learning",
-    "description": "Design and implement a scalable, secure, highly available, and NoSQL/SQL compatible database schema. The schema should ensure data integrity, normalization, and real-time updates for user interactions. Consider data replication strategies to minimize latency. The design should also account for storage of user data, language learning progress, and virtual environment assets. Dependencies include the System Architecture Design.",
-    "status": "REVIEW_IN_PROGRESS",
-    "assigned_to": "database-specialist",
+    "description": "Design and implement a scalable, secure, highly available, and NoSQL/SQL compatible database schema. The schema should ensure data integrity, normalization, real-time updates for user interactions, and efficient storage of user data, language learning progress, and virtual environment assets. Data replication strategies should be considered to minimize latency. The design should also account for potential future growth, considering data sharding and partitioning where necessary. Dependencies include the System Architecture Design. Additional considerations for this task are: \n1. Implementing efficient indexing mechanisms to improve query performance.\n2. Ensuring data consistency across writes and reads using appropriate transaction management techniques.\n3. Implementing effective caching strategies to reduce database load.",
+    "status": "REVIEW_COMPLETE",
+    "assigned_to": "code-architect",
     "priority": 4,
     "dependencies": [
       "System Architecture Design"
@@ -115,15 +115,15 @@
     "id": 6441,
     "project_id": "ImmersiveLanguageLearning",
     "title": "Continuous Integration and Deployment Pipeline - REVIEW (Updated)",
-    "description": "Update the Continuous Integration and Deployment pipeline to automate the build, testing, and deployment process for the Immersive Language Learning platform in production environments. This includes setting up a CI/CD tool such as Jenkins or CircleCI, creating build scripts, configuring test suites, establishing deployment strategies (with focus on Blue-Green deployment), using Docker containers for consistency across environments, implementing GitHub Actions for additional automation, and integrating existing linting tools for code quality checks. Also, consider adding monitoring and alerting tools like Sentry or Datadog to ensure smooth operation of the pipeline.",
-    "status": "REVIEW",
-    "assigned_to": "code-architect",
+    "description": "Update the Continuous Integration and Deployment pipeline to automate the build, testing, and deployment process for the Immersive Language Learning platform in production environments. This includes setting up a CI/CD tool such as Jenkins or CircleCI, creating build scripts, configuring test suites, establishing deployment strategies (with focus on Blue-Green deployment), using Docker containers for consistency across environments, implementing GitHub Actions for additional automation, integrating existing linting tools for code quality checks, and adding monitoring and alerting tools like Sentry or Datadog to ensure smooth operation of the pipeline. Additionally, consider implementing artifact management solutions such as Amazon S3 or Google Cloud Storage for efficient and secure storage and distribution of build artifacts. Lastly, document all steps taken during setup and configuration, providing clear instructions for future reference.",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "assigned_to": "devops-engineer",
     "priority": 4,
     "dependencies": [
       "System Architecture Design"
     ],
     "task_type": "rfc",
-    "rfc_state": "DRAFT",
+    "rfc_state": "APPROVED",
     "implementation_state": null,
     "review_comments": null,
     "approver": null,

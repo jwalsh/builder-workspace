@@ -115,12 +115,15 @@
     "id": 2822,
     "project_id": "LeadershipStyleSimulator",
     "title": "Security and Access Control",
-    "description": "Implement robust security measures including user authentication, authorization, and data encryption to ensure the application's security. Implement a combination of role-based access control (RBAC) and attribute-based access control (ABAC) for fine-grained permissions. Include auditing mechanisms, secure user management, multi-factor authentication, and consider implementing least privilege principle for added security. Consider integrating with existing authentication systems such as OAuth or SSO for seamless user experience. Update documentation on the implementation of these security features.",
-    "status": "REVIEW_COMPLETE",
-    "assigned_to": "security-specialist",
+    "description": "Implement robust security measures including user authentication, authorization, and data encryption to ensure the application's security. Implement a combination of role-based access control (RBAC) and attribute-based access control (ABAC) for fine-grained permissions. Include auditing mechanisms, secure user management, multi-factor authentication, and consider implementing least privilege principle for added security. Integrate with existing authentication systems such as OAuth or SSO for seamless user experience. Update documentation on the implementation of these security features, including a clear explanation of how least privilege principle is applied. Also, consider adding functionality to automatically enforce least privilege access based on user roles and actions within the system. For better clarity, restructure the dependencies section by mentioning specific tasks that need to be completed before this task can start. Lastly, update the rfc_state field to 'REVIEW_IN_PROGRESS' as the task is not yet ready for the next state.",
+    "status": "REVIEW_IN_PROGRESS",
+    "assigned_to": "task-decomposer",
     "priority": 2,
     "dependencies": [
-      "System Architecture Design"
+      "System Architecture Design",
+      "User Authentication and Authorization Design",
+      "Data Encryption Strategy",
+      "Least Privilege Implementation Design"
     ],
     "task_type": "rfc",
     "rfc_state": "DRAFT",
