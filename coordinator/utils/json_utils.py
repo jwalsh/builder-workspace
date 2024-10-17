@@ -6,6 +6,7 @@ from typing import Optional
 from json.decoder import JSONDecodeError
 
 from pydantic import ValidationError
+import re
 
 from ..llm import llm_manager
 from ..models import Task, TaskType, RFCState, ImplementationState

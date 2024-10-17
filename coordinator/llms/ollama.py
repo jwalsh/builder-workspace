@@ -5,7 +5,7 @@ from .provider import LLMProvider
 
 class OllamaProvider(LLMProvider):
     def __init__(
-        self, base_url: str = "http://localhost:11434", model: str = "mistral:latest"
+        self, base_url: str = "http://localhost:11434", model: str = "coordinator"
     ):
         self.base_url = base_url
         self.model = model

@@ -1,3 +1,4 @@
+from typing import List, Tuple, Dict, Optional
 import google.generativeai as genai
 import orgparse
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -7,7 +8,16 @@ from analyzer.models.category import CategoryEnum
 from analyzer.utils.embedding import get_embedding
 
 
-def extract_description(body):
+def extract_description(body: str) -> str:
+    """
+    Extract the description from the body of an Org mode node.
+
+    Args:
+        body (str): The body text of an Org mode node.
+
+    Returns:
+        str: The extracted description, or an empty string if not found.
+    """
     lines = body.strip().splitlines()
     for line in lines:
         if line.startswith("#+begin_src txt :tangle"):
@@ -18,7 +28,22 @@ def extract_description(body):
     return ""
 
 
-def categorize_description(model, description, priority_categories):
+def categorize_description(
+    model: genai.GenerativeModel, 
+    description: str, 
+    priority_categories: List[str]
+) -> str:
+    """
+    Categorize a project description using a generative AI model.
+
+    Args:
+        model (genai.GenerativeModel): The generative AI model to use for categorization.
+        description (str): The project description to categorize.
+        priority_categories (List[str]): A list of category names to prioritize.
+
+    Returns:
+        str: The name of the assigned category.
+    """
     categories = [
         category.name for category in CategoryEnum if category != CategoryEnum.UNKNOWN
     ]
@@ -37,7 +62,20 @@ def categorize_description(model, description, priority_categories):
     )
 
 
-def check_similarity(papers, existing_projects):
+def check_similarity(
+    papers: List[Dict[str, str]], 
+    existing_projects: List[Dict[str, str]]
+) -> List[Tuple[Dict[str, str], Dict[str, str], float]]:
+    """
+    Check similarity between new papers and existing projects.
+
+    Args:
+        papers (List[Dict[str, str]]): A list of dictionaries containing paper information.
+        existing_projects (List[Dict[str, str]]): A list of dictionaries containing existing project information.
+
+    Returns:
+        List[Tuple[Dict[str, str], Dict[str, str], float]]: A list of tuples containing similar paper-project pairs and their similarity score.
+    """
     all_texts = [(p["title"] + " " + p["abstract"]) for p in papers] + [
         (p["title"] + " " + p.get("description", "")) for p in existing_projects
     ]
@@ -58,14 +96,19 @@ def check_similarity(papers, existing_projects):
     return similar_projects
 
 
-def merge_projects(target_node, source_node):
-    target_description = extract_description(target_node.body)
-    source_description = extract_description(source_node.body)
+def merge_projects(target_node: orgparse.OrgNode, source_node: orgparse.OrgNode) -> None:
+    """
+    Merge two Org mode nodes, combining their descriptions and properties.
+
+    Args:
+        target_node (orgparse.OrgNode): The target node to merge into.
+        source_node (orgparse.OrgNode): The source node to merge from.
+    """
+    target_description = extract_description(target_node.get_body())
+    source_description = extract_description(source_node.get_body())
     combined_description = f"{target_description}\n\nMerged with {source_node.heading}:\n{source_description}"
 
-    target_node.body = target_node.body.replace(
-        target_description, combined_description
-    )
+    target_node.content = target_node.content.replace(target_description, combined_description)
 
     for key, value in source_node.properties.items():
         if key not in target_node.properties:
@@ -75,10 +118,25 @@ def merge_projects(target_node, source_node):
 
     target_node.properties["MERGED"] = "True"
 
+    target_node._refresh_entries()
+
 
 def deduplicate_projects(
-    filename="PROJECTS.org", similarity_threshold=0.9, interactive=False
-):
+    filename: str = "PROJECTS.org", 
+    similarity_threshold: float = 0.9, 
+    interactive: bool = False
+) -> List[Tuple[Dict[str, str], Dict[str, str], float]]:
+    """
+    Deduplicate projects in an Org mode file based on similarity.
+
+    Args:
+        filename (str): The name of the Org mode file containing projects.
+        similarity_threshold (float): The threshold above which projects are considered similar.
+        interactive (bool): Whether to prompt for user input during deduplication.
+
+    Returns:
+        List[Tuple[Dict[str, str], Dict[str, str], float]]: A list of similar project pairs and their similarity scores.
+    """
     tree = orgparse.load(filename)
     projects = []
     for node in tree[1:]:
@@ -142,13 +200,11 @@ def deduplicate_projects(
         print("No similar projects found.")
 
     if merged_projects:
-        # Create a new tree without the merged projects
         new_tree = orgparse.loads(tree.root.to_string())
         new_tree.children = [
             node for node in new_tree.children if node.heading not in merged_projects
         ]
 
-        # Save the updated tree
         with open(filename, "w") as f:
             f.write(new_tree.to_string())
         print(f"Updated {filename} with merged projects.")
