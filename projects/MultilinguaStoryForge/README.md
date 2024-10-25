@@ -1,1 +1,1 @@
-# Project README
+# MultilinguaStoryForge\n\nAn advanced multilingual story generation and translation system.\n\n## Components\n\n- Story Generator\n- Cultural Adapter\n- Translation Engine\n- Style Preservation\n- Context Validator
