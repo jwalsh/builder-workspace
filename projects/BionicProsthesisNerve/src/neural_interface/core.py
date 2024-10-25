@@ -1,0 +1,1 @@
+import numpy as np\n\nclass NeuralInterface:\n    def __init__(self, sampling_rate=1000):\n        self.sampling_rate = sampling_rate\n        self.signal_buffer = []\n        self.calibration_matrix = np.eye(4)\n\n    def process_neural_signals(self, raw_signals):\n        pass\n\n    def generate_motor_commands(self, processed_signals):\n        pass
