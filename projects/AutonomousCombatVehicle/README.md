@@ -1,0 +1,1 @@
+# Autonomous Combat Vehicle System\n\nAdvanced autonomous control system for combat vehicles.\n\n## Core Systems\n\n- Tactical Navigation\n- Threat Detection\n- Decision Making\n- Weapons Control\n- Safety Systems\n- Mission Planning
