@@ -1,0 +1,1 @@
+# Agent Manager Module\n\nclass AgentManager:\n    def __init__(self):\n        self.agents = {}\n        self.tasks = []\n        self.knowledge_base = KnowledgeBase()\n\n    def register_agent(self, agent_id, capabilities):\n        pass\n\n    def assign_task(self, task_id, agent_id):\n        pass
