@@ -1,0 +1,1 @@
+# Quantum Computing Simulator\n\nHigh-performance quantum circuit simulation platform.\n\n## Features\n\n- Quantum Gate Operations\n- Quantum Algorithm Library\n- State Vector Simulation\n- Quantum Error Correction\n- Visual Circuit Designer
