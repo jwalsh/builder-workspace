@@ -106,19 +106,23 @@ def merge_projects(target_node: orgparse.OrgNode, source_node: orgparse.OrgNode)
     """
     target_description = extract_description(target_node.get_body())
     source_description = extract_description(source_node.get_body())
+    
+    # Create combined description
     combined_description = f"{target_description}\n\nMerged with {source_node.heading}:\n{source_description}"
+    
+    # Update the body text
+    old_body = target_node.get_body()
+    new_body = old_body.replace(target_description, combined_description)
+    target_node.body = new_body
 
-    target_node.content = target_node.content.replace(target_description, combined_description)
-
+    # Merge properties
     for key, value in source_node.properties.items():
         if key not in target_node.properties:
-            target_node.properties[key] = value
+            target_node.set_property(key, value)
         elif key == "CATEGORY":
-            target_node.properties[key] = f"{target_node.properties[key]}, {value}"
+            target_node.set_property(key, f"{target_node.properties[key]}, {value}")
 
-    target_node.properties["MERGED"] = "True"
-
-    target_node._refresh_entries()
+    target_node.set_property("MERGED", "True")
 
 
 def deduplicate_projects(

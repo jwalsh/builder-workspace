@@ -26,28 +26,28 @@ def generate_task_id(project_id: str, title: str) -> str:
     return hashlib.md5(f"{project_id}:{title}".encode()).hexdigest()[:8]
 
 
-def calculate_project_progress(tasks: List[dict]) -> float:
+def calculate_project_progress(tasks: List[Task]) -> float:
     total_tasks = len(tasks)
-    completed_tasks = sum(1 for task in tasks if task["status"] == "COMPLETED")
+    completed_tasks = sum(1 for task in tasks if task.status == "COMPLETED")
     return (completed_tasks / total_tasks) * 100 if total_tasks > 0 else 0
 
 
-def format_org_mode_task(task: dict) -> str:
-    status = "DONE" if task["status"] == "COMPLETED" else "TODO"
-    org_task = f"* {status} {task['title']}\n"
+def format_org_mode_task(task: Task) -> str:
+    status = "DONE" if task.status == "COMPLETED" else "TODO"
+    org_task = f"* {status} {task.title}\n"
     org_task += f"  :PROPERTIES:\n"
-    org_task += f"  :ID: {task['id']}\n"
-    org_task += f"  :PRIORITY: {task['priority']}\n"
-    org_task += f"  :ASSIGNED: {task['assigned_to']}\n"
+    org_task += f"  :ID: {task.id}\n"
+    org_task += f"  :PRIORITY: {task.priority}\n"
+    org_task += f"  :ASSIGNED: {task.assigned_to}\n"
     org_task += f"  :END:\n\n"
-    org_task += f"  {task['description']}\n\n"
-    if task["dependencies"]:
-        org_task += f"  Dependencies: {', '.join(task['dependencies'])}\n"
+    org_task += f"  {task.description}\n\n"
+    if task.dependencies:
+        org_task += f"  Dependencies: {', '.join(task.dependencies)}\n"
     return org_task
 
 
 def generate_project_summary(
-    project_name: str, description: str, tasks: List[dict]
+    project_name: str, description: str, tasks: List[Task]
 ) -> str:
     progress = calculate_project_progress(tasks)
     summary = f"* Project: {project_name}\n"

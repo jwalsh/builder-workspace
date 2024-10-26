@@ -4,7 +4,7 @@ from datetime import datetime
 from enum import Enum
 from typing import List, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 
 
 class ImplementationState(str, Enum):
@@ -60,15 +60,16 @@ class LLMConfig(BaseModel):
     ollama_healthy: bool = True
     claude_healthy: bool = True
     last_check: Optional[datetime] = Field(default_factory=datetime.now)
-
-    class Config:
-        json_encoders = {datetime: lambda v: v.isoformat()}
+    
+    model_config = ConfigDict(
+        json_encoders={datetime: lambda v: v.isoformat()}
+    )
 
     @classmethod
-    def parse_obj(cls, obj):
+    def model_validate(cls, obj):
         if isinstance(obj.get("last_check"), str):
             obj["last_check"] = datetime.fromisoformat(obj["last_check"])
-        return super().parse_obj(obj)
+        return super().model_validate(obj)
 
 
 class ProjectDefinition(BaseModel):
