@@ -3,6 +3,8 @@ import re
 from datetime import datetime
 from typing import List
 
+from ..models import Task
+
 
 def generate_cache_key(prompt: str, role: str) -> str:
     return hashlib.md5(f"{prompt}:{role}".encode()).hexdigest()
