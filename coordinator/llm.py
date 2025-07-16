@@ -33,6 +33,7 @@ class LLMManager:
             provider=LLMProvider.OLLAMA,
             ollama_healthy=True,
             claude_healthy=True,
+            gemini_healthy=True,
             last_check=datetime.now(),
         )
         self.save_config(config)
@@ -52,6 +53,9 @@ class LLMManager:
             self.config.claude_healthy = await create_llm_provider(
                 "claude"
             ).health_check()
+            self.config.gemini_healthy = await create_llm_provider(
+                "gemini"
+            ).health_check()
             self.config.last_check = datetime.now()
             self.save_config(self.config)
 
@@ -62,6 +66,7 @@ class LLMManager:
                 for provider, is_healthy in {
                     "ollama": self.config.ollama_healthy,
                     "claude": self.config.claude_healthy,
+                    "gemini": self.config.gemini_healthy,
                 }.items()
                 if is_healthy
             ]

@@ -30,7 +30,7 @@ logging.basicConfig(
 @click.option("--list", is_flag=True, help="List all projects and their task counts")
 @click.option(
     "--use-llm",
-    type=click.Choice(["ollama", "claude", "random"]),
+    type=click.Choice(["ollama", "claude", "gemini", "random"]),
     default="ollama",
     help="Choose LLM provider",
 )
@@ -67,6 +67,9 @@ def main(
                 )
                 click.echo(
                     f"Claude health: {'Healthy' if llm_manager.config.claude_healthy else 'Unhealthy'}"
+                )
+                click.echo(
+                    f"Gemini health: {'Healthy' if llm_manager.config.gemini_healthy else 'Unhealthy'}"
                 )
                 return
 

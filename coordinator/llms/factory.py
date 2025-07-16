@@ -1,6 +1,7 @@
 from .azure_openai import AzureOpenAIProvider
 from .bedrock import BedrockProvider
 from .claude import ClaudeProvider
+from .gemini import GeminiProvider
 from .ollama import OllamaProvider
 from .openai import OpenAIProvider
 from .provider import LLMProvider
@@ -31,6 +32,11 @@ def create_llm_provider(provider: str, **kwargs) -> LLMProvider:
     elif provider == "bedrock":
         return BedrockProvider(
             model=kwargs.get("model", "amazon.titan-tg1-large"),
+        )
+    elif provider == "gemini":
+        return GeminiProvider(
+            api_key=kwargs.get("api_key"),
+            model=kwargs.get("model", "gemini-2.0-flash"),
         )
     else:
         raise ValueError(f"Unknown provider: {provider}")

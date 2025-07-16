@@ -52,6 +52,7 @@ class RFCState(str, Enum):
 class LLMProvider(str, Enum):
     OLLAMA = "ollama"
     CLAUDE = "claude"
+    GEMINI = "gemini"
     RANDOM = "random"
 
 
@@ -59,6 +60,7 @@ class LLMConfig(BaseModel):
     provider: LLMProvider
     ollama_healthy: bool = True
     claude_healthy: bool = True
+    gemini_healthy: bool = True
     last_check: Optional[datetime] = Field(default_factory=datetime.now)
     
     model_config = ConfigDict(
