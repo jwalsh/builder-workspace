@@ -1,0 +1,71 @@
+{
+  "processor": "demo-processor",
+  "timestamp": "2025-09-10T20:36:31.269178",
+  "tasks_processed": 4,
+  "results": [
+    {
+      "success": true,
+      "processor": "demo-processor",
+      "task_id": "task-001",
+      "result": {
+        "original": "Hello World from Queue System",
+        "transformed": "METSYS EUEUQ MORF DLROW OLLEH",
+        "operations_applied": [
+          "uppercase",
+          "reverse"
+        ]
+      },
+      "processed_at": "2025-09-10T20:36:29.259274"
+    },
+    {
+      "success": true,
+      "processor": "demo-processor",
+      "task_id": "task-002",
+      "result": {
+        "filename": "queue_test.txt",
+        "path": "output/generated/queue_test.txt",
+        "size": 81,
+        "created": true
+      },
+      "processed_at": "2025-09-10T20:36:29.762147"
+    },
+    {
+      "success": true,
+      "processor": "demo-processor",
+      "task_id": "task-003",
+      "result": {
+        "count": 10,
+        "sum": 30,
+        "min": 1,
+        "max": 5,
+        "avg": 3.0
+      },
+      "processed_at": "2025-09-10T20:36:30.264634"
+    },
+    {
+      "success": true,
+      "processor": "demo-processor",
+      "task_id": "task-004",
+      "result": {
+        "count": 6,
+        "unique": 4,
+        "first": "apple",
+        "last": "date"
+      },
+      "processed_at": "2025-09-10T20:36:30.766999"
+    }
+  ],
+  "statistics": {
+    "processor_id": "demo-processor",
+    "processed_count": 4,
+    "uptime_seconds": 2.009396,
+    "rate_per_minute": 119.43887615980124,
+    "storage": {
+      "type": "memory",
+      "connected": true,
+      "keys": 0,
+      "sorted_sets": 0,
+      "hashes": 0
+    }
+  }
+}
