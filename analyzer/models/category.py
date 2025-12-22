@@ -73,6 +73,7 @@ class CategoryEnum(str, Enum):
     PHILOSOPHY = (
         "Ethical frameworks and philosophical implications of advanced technologies."
     )
+    # DEPRECATED: Use ENERGY instead. Kept for backwards compatibility.
     RENEWABLE_ENERGY = "Sustainable energy solutions including solar, wind, geothermal, and energy storage."
     SIMULATION = "Engineering and simulation tech for modeling, digital twins, and virtual testing environments."
     SOFTWARE_ENGINEERING = "App development tech, languages, frameworks, DevOps tools, and software engineering practices."
