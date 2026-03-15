@@ -53,7 +53,7 @@ TOTAL_PROJECTS=$(ls -d projects/*/ 2>/dev/null | wc -l | tr -d ' ')
 SPEC_COUNT=$(ls projects/*/spec.org 2>/dev/null | wc -l | tr -d ' ')
 CLAUDE_COUNT=$(ls projects/*/CLAUDE.md 2>/dev/null | wc -l | tr -d ' ')
 CONJ_COUNT=$(cprr list 2>/dev/null | wc -l | tr -d ' ')
-ISSUE_COUNT=$(bd list 2>/dev/null | grep -c 'builder-workspace' || echo 0)
+ISSUE_COUNT=$(bd list --limit 0 --json 2>/dev/null | python3 -c "import json,sys; print(len(json.load(sys.stdin)))" 2>/dev/null || bd list --limit 0 2>/dev/null | grep -c 'builder-workspace' || echo 0)
 BROADCAST_COUNT=$(aq status --json 2>/dev/null | python3 -c "import json,sys; print(len(json.load(sys.stdin)))" 2>/dev/null || echo 0)
 
 # Determine exit code
