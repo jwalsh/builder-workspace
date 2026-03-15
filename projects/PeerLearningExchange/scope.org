@@ -1,0 +1,94 @@
+#+TITLE: PeerLearningExchange - Step 1: Project Planning and Requirements Gathering
+#+DATE: 2026-03-15
+#+AUTHOR: Team ECHO (Agent A)
+#+STATUS: COMPLETE
+
+* Scope
+
+PeerLearningExchange is a peer-to-peer learning facilitation system for employees.
+The scope is deliberately narrow: match learners with teachers, schedule sessions,
+and track comprehension outcomes. It is NOT a general-purpose LMS.
+
+* Functional Requirements
+
+** FR-1: Session Creation
+   Users can propose learning sessions with topic, prerequisites, and capacity.
+
+** FR-2: Skill Profile
+   Users maintain a profile of skills they can teach and skills they want to learn.
+
+** FR-3: Matching
+   System suggests session matches based on skill supply/demand.
+
+** FR-4: Scheduling
+   Calendar integration for booking peer sessions (30-60 min slots).
+
+** FR-5: Comprehension Verification
+   Post-session quiz or assessment confirms learning transfer occurred.
+
+** FR-6: Feedback Loop
+   Ratings and feedback for continuous improvement of teaching quality.
+
+* Non-Functional Requirements
+
+** NFR-1: Performance
+   - Response time: < 500ms for common actions
+   - Concurrent users: up to 10,000
+
+** NFR-2: Security
+   - Data encryption: AES-256
+   - Access control: Role-based (RBAC)
+   - Compliance: GDPR-ready for PII handling
+
+** NFR-3: Scalability
+   - Microservices architecture with defined service boundaries
+   - Horizontal scaling for session matching service
+
+* User Personas
+
+** Persona 1: The Teacher
+   An employee with deep expertise in a domain who wants to share knowledge.
+   Needs: easy session creation, visibility to potential learners, feedback.
+
+** Persona 2: The Learner
+   An employee seeking to develop new skills through peer interaction.
+   Needs: skill gap discovery, session browsing, comprehension tracking.
+
+** Persona 3: The Manager
+   A team lead who wants to see learning metrics for their reports.
+   Needs: dashboard of team learning activity, skill coverage reports.
+
+* Architecture Decisions (preliminary)
+
+- Stack: Python (as per spec.org)
+- Architecture: Microservices (Session Service, Profile Service, Matching Service, Notification Service)
+- Database: PostgreSQL for relational data, Redis for session caching
+- API: REST with OpenAPI spec
+- Frontend: TBD in Step 8
+
+* Constraints
+
+- Must integrate with existing corporate SSO (OAuth2/OIDC)
+- Must not require manual intervention for routine matching operations
+- Must not become a general-purpose platform (anti-goal)
+
+* Risks
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|-----------|--------|------------|
+| Low adoption | Medium | High | Gamification, management endorsement |
+| Poor match quality | Medium | Medium | Iterative algorithm improvement |
+| Session no-shows | High | Medium | Calendar integration, reminders |
+
+* Handoff Notes for Step 2 (System Architecture Design)
+
+The next agent should:
+1. Read this scope document for requirements context
+2. Design service boundaries for the 4 core microservices
+3. Define API contracts between services
+4. Choose message broker for async communication (e.g., RabbitMQ vs Kafka)
+5. Create architecture decision records (ADRs)
+
+Key constraint: the comprehension verification feature (FR-5) is the
+differentiator -- it's what makes this NOT just another session scheduler.
+Architecture must support pluggable assessment strategies.
