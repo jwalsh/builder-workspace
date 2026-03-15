@@ -1,0 +1,10 @@
+#!/bin/sh
+# aq post-commit hook — announce completion
+AQ=$(command -v aq 2>/dev/null || { [ -x "./aq" ] && echo "./aq"; } || exit 0)
+FILES=$(git diff-tree --no-commit-id --name-only -r HEAD | paste -sd, -)
+[ -z "$FILES" ] && exit 0
+BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "unknown")
+CONJECTURE=$(echo "$BRANCH" | grep -oE 'C-[0-9]+' || echo "C-0")
+MSG=$(git log --format=%s -1 HEAD)
+$AQ announce -c "$CONJECTURE" --claim "$MSG" --phase proof -f "$FILES" --status done 2>/dev/null || true
+exit 0
