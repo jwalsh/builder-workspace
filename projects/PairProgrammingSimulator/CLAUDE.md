@@ -56,11 +56,23 @@ If an acceptance test fails, STOP. Document what failed, what you tried, and the
 
 ## Stack
 
-- TypeScript/JavaScript
-- PostgreSQL
-- MongoDB
-- GraphQL
-- REST API
+- Python + Flask or FastAPI for backend
+- HTML/CSS/JavaScript for frontend (vanilla JS or Alpine.js, no heavy frameworks)
+- SQLite for persistence (via sqlite3 standard library)
+- Jinja2 for server-side templates
+- Replit-compatible: no external services, single `main.py` entry point
+
+## Implementation Notes
+
+This project is designed for deployment on Replit.
+- Single entry point: `main.py` with Flask/FastAPI app
+- Use `.replit` file for run configuration
+- SQLite database in `data/` directory for persistence
+- Static files in `static/`, templates in `templates/`
+- Environment variables via `.env` (never commit secrets)
+- Must work with Replit's free tier constraints (512MB RAM, shared CPU)
+- Include a `replit.nix` for system dependencies if needed
+- Support both local development and Replit deployment
 
 ## Success Criteria
 

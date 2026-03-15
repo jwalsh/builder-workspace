@@ -54,7 +54,21 @@ If an acceptance test fails, STOP. Document what failed, what you tried, and the
 
 ## Stack
 
-- Python (default)
+- Go with Bubble Tea (charmbracelet/bubbletea) for TUI framework
+- Lip Gloss (charmbracelet/lipgloss) for styling
+- Bubbles (charmbracelet/bubbles) for common TUI components
+- Go standard library for backend logic
+
+## Implementation Notes
+
+This project is implemented as a terminal user interface (TUI) application.
+- Use Bubble Tea's Model-Update-View (MVU) architecture
+- Main views: dashboard (default), detail, help
+- Support keyboard navigation (j/k for up/down, enter for select, q to quit, ? for help)
+- Use Lip Gloss for consistent styling with a dark theme
+- Refresh data on a configurable tick interval (default 5s)
+- Support `--json` flag for non-interactive headless output
+- Include a Makefile with `build`, `run`, `test` targets
 
 ## Success Criteria
 

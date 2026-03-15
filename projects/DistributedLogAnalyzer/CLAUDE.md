@@ -52,9 +52,22 @@ If an acceptance test fails, STOP. Document what failed, what you tried, and the
 
 ## Stack
 
-- Python
-- TypeScript/JavaScript
-- Kubernetes
+- Babashka (bb) — Clojure scripting for CLI
+- clojure.tools.cli for argument parsing
+- babashka.fs for file operations
+- babashka.process for shell interop
+- cheshire for JSON processing
+
+## Implementation Notes
+
+This project is implemented as a babashka script. Key constraints:
+- Single-file `bb.edn` + `src/<name>.clj` entry point
+- Use `babashka.cli` for argument parsing, not manual arg processing
+- Output structured results as EDN or JSON (use cheshire)
+- Exit code 0 for success, 1 for issues found, 2 for errors
+- Support `--format json|edn|text` flag for output format
+- Support reading from stdin or file arguments
+- Include a `bb.edn` with `:tasks` for common operations
 
 ## Success Criteria
 

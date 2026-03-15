@@ -1,0 +1,12 @@
+{:paths ["src"]
+ :deps {org.babashka/cli {:mvn/version "0.8.61"}
+        org.babashka/fs {:mvn/version "0.5.22"}}
+ :tasks
+ {run {:doc "Scan files for deprecated patterns"
+       :task (exec 'deprecation-detective.core/-main)
+       :exec-args {:format "text"}}
+  test {:doc "Run tests"
+        :task (shell "bb test/core_test.clj")}
+  scan {:doc "Scan current directory"
+        :task (exec 'deprecation-detective.core/-main)
+        :exec-args {:dir "." :format "text"}}}}
