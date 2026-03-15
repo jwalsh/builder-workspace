@@ -19,78 +19,97 @@ from subprocess import run as subprocess_run
 
 OLLAMA_URL = "http://localhost:11434"
 
-# Prompts calibrated to aq's actual semantics:
-# - L1.5 gossip layer, NDJSON/TTL, Seven Concerns stack
-# - Three-primitive interlock (sb/cprr/aq)
-# - CPRR phases, conflict detection, Boston/FreeBSD context
+# Prompts reflecting the builder-workspace ecosystem:
+# - 973 projects bootstrapped via meta-meta prompt
+# - Five-tool interlock: bd (issues), cprr (conjectures), aq (gossip),
+#   sb (worktrees), spec.org -> CLAUDE.md pipeline
+# - Team structure: ALPHA/BRAVO/CHARLIE/DELTA/ECHO
+# - Dependency chains, conjecture prosecution, conflict detection
 PROMPTS = [
     {
-        "id": "p1_gossip_network",
-        "title": "Gossip Network / TTL Decay",
+        "id": "p1_thousand_projects",
+        "title": "A Thousand Spec Files / The Bootstrap",
         "model_hint": "z-image",
         "prompt": (
-            "network of glowing terminal nodes connected by translucent light filaments "
-            "in a void, each node pulsing with soft amber TTL countdown rings, "
-            "NDJSON text fragments drifting between nodes like luminous smoke, "
-            "some filaments fading mid-transmission, monochrome blue-green palette "
-            "with warm amber highlights, cinematic depth of field, 8k, ultra-detailed, "
-            "technical diagram meets generative art, no text labels"
+            "aerial view of a vast grid of one thousand glowing blueprint documents "
+            "arranged on a dark surface, each blueprint connected to its neighbors by "
+            "thin dependency lines forming a directed acyclic graph, "
+            "five colored team zones radiate outward from the center in concentric rings, "
+            "amber for ALPHA, green for BRAVO, blue for CHARLIE, red for DELTA, violet for ECHO, "
+            "spec.org files transforming into CLAUDE.md through a luminous pipeline in the center, "
+            "monochrome background with warm amber highlights, 8k, ultra-detailed, "
+            "technical diagram meets cartography, cinematic overhead shot, no text labels"
         ),
-        "negative": "cluttered, busy, colorful, logos, text, watermark",
+        "negative": "cluttered, busy, logos, text, watermark, people",
     },
     {
-        "id": "p2_ouroboros_queue",
-        "title": "Ouroboros / The Wheel Turns",
+        "id": "p2_five_tool_interlock",
+        "title": "Five-Tool Interlock / bd-cprr-aq-sb-spec",
         "model_hint": "z-image",
         "prompt": (
-            "serpent made entirely of scrolling amber JSON log lines consuming its own tail, "
-            "coiled around a vintage 1990s server rack in a dark data center, "
-            "neon amber terminal glow on black background, dramatic chiaroscuro, "
-            "watercolor wash suggesting ancient manuscript illumination, "
-            "moody atmospheric lighting, cinematic composition, no text"
+            "five interlocking mechanical gears of different sizes floating in darkness, "
+            "each gear made of a different glowing material: "
+            "amber crystalline gear for issue tracking, "
+            "green phosphorescent gear for conjecture prosecution, "
+            "blue electric gear for gossip broadcasts, "
+            "silver metallic gear for worktree isolation, "
+            "gold filigree gear for spec-to-agent pipeline, "
+            "gears meshing perfectly with visible teeth engaging, "
+            "sparks at contact points where tools exchange data, "
+            "dramatic chiaroscuro lighting, clockwork mechanism aesthetic, "
+            "dark background, cinematic composition, no text"
         ),
-        "negative": "text labels, logos, bright colors, daytime",
+        "negative": "text labels, logos, bright colors, flat, cartoon",
     },
     {
-        "id": "p3_filesystem_ghost",
-        "title": "Filesystem Ghost / Unix Tree",
+        "id": "p3_conjecture_wall",
+        "title": "Three Thousand Conjectures / The Evidence Wall",
         "model_hint": "flux",
         "prompt": (
-            "ethereal translucent hand reaching from darkness into a glowing Unix directory tree, "
-            "touching a hidden dot-directory node that radiates soft presence signals outward "
-            "as expanding concentric rings, pure black background, chalk-white line art "
-            "with single amber accent, flat vector aesthetic, 1980s hacker zine illustration style, "
-            "negative space hero composition, minimalist"
+            "massive evidence wall in a dimly lit detective office, "
+            "three thousand index cards pinned to a cork board stretching to infinity, "
+            "red string connecting cards in clusters by project, "
+            "some cards glowing green for confirmed, most neutral for open, "
+            "a few marked with red X for refuted, "
+            "magnifying glass hovering over one cluster showing falsification criteria, "
+            "noir detective aesthetic meets scientific method, "
+            "warm amber desk lamp, chalk-white card text, "
+            "1940s film noir meets modern data visualization, minimalist"
         ),
-        "negative": "colorful, photorealistic, busy, logos, text",
+        "negative": "colorful, digital, neon, busy, logos, modern",
     },
     {
-        "id": "p4_harbor_agents",
-        "title": "Multi-Agent Swarm / Boston Harbor",
+        "id": "p4_team_sprint",
+        "title": "Five Teams in Parallel / Worktree Isolation",
         "model_hint": "z-image",
         "prompt": (
-            "five translucent AI agent silhouettes standing in a foggy harbor at night, "
-            "Boston container ships visible in background, each agent broadcasting "
-            "circular sonar-like presence rings that overlap and interfere, "
-            "one ring visibly fading and expiring at low TTL, "
+            "five parallel railroad tracks stretching into foggy distance, "
+            "each track a different color representing a team, "
+            "translucent train cars on each track carrying glowing cargo of different types: "
+            "AI models, biosensors, solar panels, security shields, social graphs, "
+            "tracks occasionally crossing at junction switches where conflict sparks fly, "
+            "a central signal tower broadcasting amber presence rings to all tracks, "
             "cold blue atmospheric fog, long exposure photographic aesthetic, "
-            "no faces, abstract geometric agents, cinematic"
+            "industrial infrastructure meets neural network diagram, cinematic"
         ),
-        "negative": "text, logos, people faces, bright colors, daytime",
+        "negative": "text, logos, people faces, bright daylight, cartoon",
     },
     {
-        "id": "p5_seven_concerns",
-        "title": "Seven Concerns Stack / Layer 1.5",
+        "id": "p5_dependency_cascade",
+        "title": "Dependency Cascade / Step 1 Closes",
         "model_hint": "flux",
         "prompt": (
-            "technical cutaway cross-section of a seven-layer stack like OSI model but organic, "
-            "layer 1.5 glowing warm amber labeled with gossip particles flowing laterally, "
-            "other layers pulsing vertically in cool blue, "
+            "chain of dominoes arranged in a spiral viewed from above, "
+            "the first domino falling and triggering a cascade, "
+            "each domino is a translucent card showing a build step, "
+            "fallen dominoes glow green, standing dominoes pulse amber waiting, "
+            "blocked dominoes have visible chains to their prerequisites, "
+            "the spiral contains thousands of dominoes in concentric rings, "
             "style of 1970s Bell Labs scientific illustration, "
-            "muted color palette, serif typography integrated as art, "
-            "ink on cream paper texture, clean margins, no clutter"
+            "muted color palette, ink on cream paper texture, "
+            "clean margins, architectural precision, no clutter"
         ),
-        "negative": "digital, neon, busy, logos, photographs",
+        "negative": "digital, neon, busy, logos, photographs, 3D render",
     },
 ]
 
