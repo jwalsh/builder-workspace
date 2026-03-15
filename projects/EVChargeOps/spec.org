@@ -1,0 +1,148 @@
+#+TITLE: EVChargeOps
+#+SUBTITLE: Build a highly-scalable, low-latency EV charge point operator system using IoT and serverless technologies.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Build a highly-scalable, low-latency EV charge point operator system using IoT and serverless technologies.
+
+* Foundational Axiom
+
+Existing approaches to build a highly-scalable, low-latency ev charge point operato fail because they optimize for the common case while ignoring structural constraints; EVChargeOps makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: EVChargeOps solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Scope and Requirements - Revised
+   :STATUS: REVIEW
+   Gather and document the project requirements, including functional and non-functional requirements, system architecture, integration points with existing systems, data models, security considerations (including compliance with EV charging industry standards), scalability and performance requirements, roadmap for phased implementation with milestones, and a clear timeline for each phase. The focus should be on creating comprehensive, easy-to-understand documentation that will guide the developmen...
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements - Revised
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Gather and document the project requirements, including functional and non-functional requirements, system architecture, integration points with existing systems, data models, security considerations (including compliance with EV charging industry standards), scalability and performance requirements...
+
+   *Acceptance test*: Define Project Scope and Requirements - Revised component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 4
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design the overall system architecture, including the IoT infrastructure, serverless components, and data flow.
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Implement Backend Services
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop the backend services, including charge point management, billing, and integration with external systems.
+
+   *Acceptance test*: Implement Backend Services component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Frontend Applications
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Build the frontend applications for charge point operators, customers, and administrators.
+
+   *Acceptance test*: Develop Frontend Applications component is implemented, tested, and integrated.
+
+** TODO Step 5: Set up IoT Infrastructure
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design System Architecture)
+   Configure and deploy the IoT infrastructure, including device management, data ingestion, and communication protocols.
+
+   *Acceptance test*: Set up IoT Infrastructure component is implemented, tested, and integrated.
+
+** TODO Step 6: Implement Data Storage and Analytics
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the data storage and analytics components, including real-time and historical data processing.
+
+   *Acceptance test*: Implement Data Storage and Analytics component is implemented, tested, and integrated.
+
+** TODO Step 7: Develop Security and Compliance Measures
+   :PRIORITY: 2
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement security measures, including authentication, authorization, and data encryption, and ensure compliance with relevant regulations and standards.
+
+   *Acceptance test*: Develop Security and Compliance Measures component is implemented, tested, and integrated.
+
+** TODO Step 8: Create Testing and Deployment Pipelines
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Implement Backend Services, Develop Frontend Applications, Set up IoT Infrastructure, Implement Data Storage and Analytics)
+   Set up automated testing and deployment pipelines for continuous integration and continuous deployment (CI/CD).
+
+   *Acceptance test*: Create Testing and Deployment Pipelines component is implemented, tested, and integrated.
+
+** TODO Step 9: Conduct System Testing and Quality Assurance
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Create Testing and Deployment Pipelines)
+   Perform comprehensive testing, including unit, integration, and end-to-end testing, to ensure system quality and reliability.
+
+   *Acceptance test*: Conduct System Testing and Quality Assurance component is implemented, tested, and integrated.
+
+** TODO Step 10: Prepare Documentation and User Guides
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Implement Backend Services, Develop Frontend Applications, Set up IoT Infrastructure, Implement Data Storage and Analytics)
+   Create comprehensive documentation, including system architecture diagrams, API documentation, and user guides.
+
+   *Acceptance test*: Prepare Documentation and User Guides component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: EVChargeOps can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-005: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Build a highly-scalable, low-latency EV charge point operator system using IoT and serverless techno
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

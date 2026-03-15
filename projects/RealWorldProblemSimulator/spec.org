@@ -1,0 +1,141 @@
+#+TITLE: RealWorldProblemSimulator
+#+SUBTITLE: A system that generates coding challenges based on real-world scenarios, helping bridge the gap between academic problems and practical applications.
+#+CATEGORY: SIMULATION
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A system that generates coding challenges based on real-world scenarios, helping bridge the gap between academic problems and practical applications.
+
+* Foundational Axiom
+
+Simulations fail when they sacrifice fidelity for speed without quantifying the trade-off; RealWorldProblemSimulator makes approximation error explicit and bounded.
+
+* Anti-Goals
+
+- *General-purpose platform*: RealWorldProblemSimulator solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Project Planning and Requirements Gathering
+   :STATUS: DRAFT
+   Define the scope, goals, and requirements for the RealWorldProblemSimulator project. This task involves gathering input from various stakeholders including instructors, students, and industry professionals to understand their needs and expectations. The requirements should cover the types of real-world scenarios to be simulated (including a mix of basic, intermediate, and advanced topics), the difficulty levels, the evaluation criteria (both automatic and manual), and the user experience for bot...
+
+** System Architecture Design - Revised
+   :STATUS: DRAFT
+   Revised design of the overall architecture of the RealWorldProblemSimulator system. This document serves as a Request For Comments (RFC) to solicit feedback from team members before proceeding with implementation. The revised design includes components, data flow, integration points, and considerations for scalability, maintainability, and performance.
+
+* Build Order
+
+** TODO Step 1: Project Planning and Requirements Gathering
+   :PRIORITY: 1
+   :ASSIGNED: project-manager
+   Define the scope, goals, and requirements for the RealWorldProblemSimulator project. This task involves gathering input from various stakeholders including instructors, students, and industry professionals to understand their needs and expectations. The requirements should cover the types of real-wo...
+
+   *Acceptance test*: Project Planning and Requirements Gathering component is implemented, tested, and integrated.
+
+** TODO Step 2: System Architecture Design - Revised
+   :PRIORITY: 2
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Project Planning and Requirements Gathering)
+   Revised design of the overall architecture of the RealWorldProblemSimulator system. This document serves as a Request For Comments (RFC) to solicit feedback from team members before proceeding with implementation. The revised design includes components, data flow, integration points, and considerati...
+
+   *Acceptance test*: System Architecture Design - Revised component is implemented, tested, and integrated.
+
+** TODO Step 3: Backend Development
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Develop the backend components for generating coding challenges, managing scenarios, and integrating with other systems.
+
+   *Acceptance test*: Backend Development component is implemented, tested, and integrated.
+
+** TODO Step 4: Frontend Development
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Develop the user interface for interacting with the system, including challenge presentation and submission.
+
+   *Acceptance test*: Frontend Development component is implemented, tested, and integrated.
+
+** TODO Step 5: Database Design and Implementation
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: System Architecture Design)
+   Design and implement the database schema to store coding challenges, real-world scenarios, and related data.
+
+   *Acceptance test*: Database Design and Implementation component is implemented, tested, and integrated.
+
+** TODO Step 6: Deployment and DevOps
+   :PRIORITY: 5
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Backend Development, Frontend Development, Database Design and Implementation)
+   Plan and implement the deployment strategy, including infrastructure setup, automation, and monitoring.
+
+   *Acceptance test*: Deployment and DevOps component is implemented, tested, and integrated.
+
+** TODO Step 7: Testing and Quality Assurance
+   :PRIORITY: 4
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Backend Development, Frontend Development)
+   Plan and execute testing strategies to ensure the system meets requirements and functions as expected.
+
+   *Acceptance test*: Testing and Quality Assurance component is implemented, tested, and integrated.
+
+** TODO Step 8: Security and Compliance
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: System Architecture Design)
+   Ensure the system adheres to security best practices and complies with relevant regulations and standards.
+
+   *Acceptance test*: Security and Compliance component is implemented, tested, and integrated.
+
+** TODO Step 9: Documentation and User Guides
+   :PRIORITY: 4
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: System Architecture Design, Backend Development, Frontend Development)
+   Create comprehensive documentation, including user guides, API references, and system architecture documentation.
+
+   *Acceptance test*: Documentation and User Guides component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: RealWorldProblemSimulator can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A system that generates coding challenges based on real-world scenarios, helping bridge the gap betw
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Engineers and researchers who need high-fidelity simulations
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

@@ -1,0 +1,160 @@
+#+TITLE: AIJobRecruiter
+#+SUBTITLE: An AI-powered HR platform that screens candidates and matches them with job openings.
+#+CATEGORY: HR
+#+DATE: 2024-10-13
+#+STARTUP: overview
+
+* Overview
+
+An AI-powered HR platform that screens candidates and matches them with job openings.
+
+* Foundational Axiom
+
+Existing approaches to ai-powered hr platform fail because they optimize for the common case while ignoring structural constraints; AIJobRecruiter makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: AIJobRecruiter solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Scope and Requirements
+   :STATUS: UNKNOWN
+   This RFC outlines the detailed requirements for the AIJobRecruiter platform. The document includes specifying features and functionality, defining user roles and permissions, creating data models, outlining integration with existing HR systems and job boards, addressing scalability and performance requirements, discussing security and compliance considerations, detailing any other relevant project details, and providing acceptance criteria for each requirement. Additionally, sections for potenti...
+
+** Design System Architecture for AIJobRecruiter
+   :STATUS: PENDING_REVIEW
+   Design the overall system architecture, including AI components, user interfaces, data storage solutions, and integration with third-party services (e.g., job boards, background check providers). This task will also cover the design of scalable and resilient microservices architecture to handle real-world traffic and ensure high availability. The design should take into account the performance, security, and scalability requirements for this HR platform.
+
+Additionally, consider the following poi...
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   This RFC outlines the detailed requirements for the AIJobRecruiter platform. The document includes specifying features and functionality, defining user roles and permissions, creating data models, outlining integration with existing HR systems and job boards, addressing scalability and performance r...
+
+   *Acceptance test*: Define Project Scope and Requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture for AIJobRecruiter
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements, Research and Evaluate AI Technologies)
+   Design the overall system architecture, including AI components, user interfaces, data storage solutions, and integration with third-party services (e.g., job boards, background check providers). This task will also cover the design of scalable and resilient microservices architecture to handle real...
+
+   *Acceptance test*: Design System Architecture for AIJobRecruiter component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop AI Candidate Screening Module
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement the AI algorithms and models for screening and ranking job candidates based on their qualifications and job requirements.
+
+   *Acceptance test*: Develop AI Candidate Screening Module component is implemented, tested, and integrated.
+
+** TODO Step 4: Build Job Matching and Recommendation Engine
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop the engine that matches qualified candidates with open job positions based on their skills, experience, and preferences.
+
+   *Acceptance test*: Build Job Matching and Recommendation Engine component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement User Interfaces
+   :PRIORITY: 4
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and develop the user interfaces for candidates, recruiters, and HR managers, including job search, candidate profiles, and application tracking.
+
+   *Acceptance test*: Implement User Interfaces component is implemented, tested, and integrated.
+
+** TODO Step 6: Set up Data Storage and Management
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the database schema and data management solutions for storing and managing candidate profiles, job listings, and application data.
+
+   *Acceptance test*: Set up Data Storage and Management component is implemented, tested, and integrated.
+
+** TODO Step 7: Integrate with Existing HR Systems
+   :PRIORITY: 4
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop interfaces and APIs to integrate the AIJobRecruiter platform with existing HR systems, such as applicant tracking systems and employee databases.
+
+   *Acceptance test*: Integrate with Existing HR Systems component is implemented, tested, and integrated.
+
+** TODO Step 8: Implement Security and Access Controls
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement security measures, including authentication, authorization, and data encryption, to ensure the privacy and protection of candidate and company data.
+
+   *Acceptance test*: Implement Security and Access Controls component is implemented, tested, and integrated.
+
+** TODO Step 9: Conduct Quality Assurance and Testing
+   :PRIORITY: 5
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Develop AI Candidate Screening Module, Build Job Matching and Recommendation Engine, Implement User Interfaces, Set up Data Storage and Management, Integrate with Existing HR Systems, Implement Security and Access Controls)
+   Plan and execute comprehensive testing strategies, including unit tests, integration tests, and user acceptance tests, to ensure the quality and reliability of the AIJobRecruiter platform.
+
+   *Acceptance test*: Conduct Quality Assurance and Testing component is implemented, tested, and integrated.
+
+** TODO Step 10: Set up Continuous Integration and Deployment
+   :PRIORITY: 4
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design System Architecture)
+   Establish a CI/CD pipeline for automated testing, building, and deploying the AIJobRecruiter platform to various environments.
+
+   *Acceptance test*: Set up Continuous Integration and Deployment component is implemented, tested, and integrated.
+
+** TODO Step 11: Write Technical Documentation
+   :PRIORITY: 4
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Design System Architecture)
+   Create comprehensive technical documentation, including architecture diagrams, API references, and user guides, to support the development, deployment, and maintenance of the AIJobRecruiter platform.
+
+   *Acceptance test*: Write Technical Documentation component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: AIJobRecruiter can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Docker
+- Kubernetes
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An AI-powered HR platform that screens candidates and matches them with job openings.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+HR professionals and talent acquisition teams
+
+* Primary Output Artifact
+
+A deployed platform with user-facing interface

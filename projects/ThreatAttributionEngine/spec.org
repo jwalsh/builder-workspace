@@ -1,0 +1,156 @@
+#+TITLE: ThreatAttributionEngine
+#+SUBTITLE: An AI system that analyzes attack patterns and techniques to attribute threats to specific actors or groups.
+#+CATEGORY: SECURITY
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+An AI system that analyzes attack patterns and techniques to attribute threats to specific actors or groups.
+
+* Foundational Axiom
+
+Security in ai system fails when it is bolted on after the fact; ThreatAttributionEngine makes security a structural property of the system rather than an additional layer.
+
+* Anti-Goals
+
+- *General-purpose platform*: ThreatAttributionEngine solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Scope and Requirements - RFC Review
+   :STATUS: REVIEW
+   This RFC proposes the gathering and documentation of requirements for the ThreatAttributionEngine. The requirements include, but are not limited to, the types of attack patterns and techniques to be analyzed (e.g., network attacks, phishing, malware, insider threats), desired level of attribution accuracy, data sources for threat intelligence (open-source, proprietary, or a combination), expected output formats (reports, APIs, dashboards), specific use cases or scenarios to be supported (real-ti...
+
+** Design System Architecture
+   :STATUS: APPROVED
+   Design the overall architecture of the ThreatAttributionEngine, including the data ingestion pipeline (specify data formats such as JSON and CSV, and sources like logs, APIs, and file uploads), the AI model(s) for analysis and attribution (provide brief details on machine learning algorithms such as Random Forest, SVM, or Neural Networks with their specific use cases), the data storage solution (mention the preferred database system like MongoDB Atlas for flexible schema or PostgreSQL for struct...
+
+* Build Order
+
+** IN_PROGRESS Step 1: Define Project Scope and Requirements - RFC Review
+   :PRIORITY: 5
+   :ASSIGNED: task-decomposer
+   This RFC proposes the gathering and documentation of requirements for the ThreatAttributionEngine. The requirements include, but are not limited to, the types of attack patterns and techniques to be analyzed (e.g., network attacks, phishing, malware, insider threats), desired level of attribution ac...
+
+   *Acceptance test*: Define Project Scope and Requirements - RFC Review component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design the overall architecture of the ThreatAttributionEngine, including the data ingestion pipeline (specify data formats such as JSON and CSV, and sources like logs, APIs, and file uploads), the AI model(s) for analysis and attribution (provide brief details on machine learning algorithms such as...
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Implement Security Measures
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Ensure the ThreatAttributionEngine adheres to best practices for secure software development, including data encryption, access controls, and vulnerability testing.
+
+   *Acceptance test*: Implement Security Measures component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Data Ingestion Pipeline
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement the data ingestion pipeline to collect and preprocess attack data from various sources, such as security logs, network traffic, and threat intelligence feeds.
+
+   *Acceptance test*: Develop Data Ingestion Pipeline component is implemented, tested, and integrated.
+
+** TODO Step 5: Build AI Model for Threat Attribution
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop and train the AI model(s) responsible for analyzing attack patterns and techniques, and attributing threats to specific actors or groups based on the ingested data.
+
+   *Acceptance test*: Build AI Model for Threat Attribution component is implemented, tested, and integrated.
+
+** TODO Step 6: Set up Testing and Continuous Integration
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design System Architecture)
+   Establish a testing framework and continuous integration pipeline to ensure the quality and reliability of the ThreatAttributionEngine throughout the development process.
+
+   *Acceptance test*: Set up Testing and Continuous Integration component is implemented, tested, and integrated.
+
+** TODO Step 7: Create User Interface or API
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop the user interface or API for interacting with the ThreatAttributionEngine, allowing users to submit attack data, view analysis results, and manage system configurations.
+
+   *Acceptance test*: Create User Interface or API component is implemented, tested, and integrated.
+
+** TODO Step 8: Conduct System Testing and Validation
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Develop Data Ingestion Pipeline, Build AI Model for Threat Attribution, Create User Interface or API, Set up Testing and Continuous Integration)
+   Perform comprehensive testing of the ThreatAttributionEngine, including unit tests, integration tests, and end-to-end tests, to validate the system's functionality, performance, and accuracy.
+
+   *Acceptance test*: Conduct System Testing and Validation component is implemented, tested, and integrated.
+
+** TODO Step 9: Deploy and Monitor the System
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Conduct System Testing and Validation)
+   Deploy the ThreatAttributionEngine to a production environment, and implement monitoring and logging mechanisms to ensure its ongoing performance and stability.
+
+   *Acceptance test*: Deploy and Monitor the System component is implemented, tested, and integrated.
+
+** TODO Step 10: Develop Documentation and Training Materials
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Conduct System Testing and Validation)
+   Create comprehensive documentation and training materials to support the deployment, configuration, and usage of the ThreatAttributionEngine by end-users and administrators.
+
+   *Acceptance test*: Develop Documentation and Training Materials component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: ThreatAttributionEngine can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-005: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- PostgreSQL
+- MongoDB
+- Docker
+- Kubernetes
+- AWS
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An AI system that analyzes attack patterns and techniques to attribute threats to specific actors or
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Security engineers and SOC analysts responsible for system protection
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

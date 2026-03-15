@@ -1,0 +1,145 @@
+#+TITLE: SkillGapBridge
+#+SUBTITLE: An AI system that identifies skill gaps between an employee's current role and their desired future role, suggesting learning paths to bridge the gap.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+An AI system that identifies skill gaps between an employee's current role and their desired future role, suggesting learning paths to bridge the gap.
+
+* Foundational Axiom
+
+Existing approaches to ai system fail because they optimize for the common case while ignoring structural constraints; SkillGapBridge makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: SkillGapBridge solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Scope and Requirements (Revised)
+   :STATUS: DRAFT
+   Gather and document the comprehensive project scope, detailed functional and non-functional requirements, potential solutions, constraints, and any limitations for the SkillGapBridge system. The focus should be on providing a clear understanding of the project's objectives, essential features, performance characteristics, security considerations, scalability needs, and any other applicable aspects.
+
+* Build Order
+
+** IN_PROGRESS Step 1: Define Project Scope and Requirements (Revised)
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Gather and document the comprehensive project scope, detailed functional and non-functional requirements, potential solutions, constraints, and any limitations for the SkillGapBridge system. The focus should be on providing a clear understanding of the project's objectives, essential features, perfo...
+
+   *Acceptance test*: Define Project Scope and Requirements (Revised) component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design the overall system architecture, including components, data flow, and integration points.
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop User Interface
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the user interface for employees and administrators to interact with the system.
+
+   *Acceptance test*: Develop User Interface component is implemented, tested, and integrated.
+
+** TODO Step 4: Implement Skill Assessment Module
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop the module responsible for assessing an employee's current skill set and desired future role.
+
+   *Acceptance test*: Implement Skill Assessment Module component is implemented, tested, and integrated.
+
+** TODO Step 5: Develop Learning Path Recommendation Engine
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture, Implement Skill Assessment Module)
+   Implement the AI engine that recommends learning paths to bridge the identified skill gaps.
+
+   *Acceptance test*: Develop Learning Path Recommendation Engine component is implemented, tested, and integrated.
+
+** TODO Step 6: Create User Documentation and Training Materials
+   :PRIORITY: 5
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Develop User Interface, Implement Skill Assessment Module, Develop Learning Path Recommendation Engine)
+   Develop user guides, training materials, and other documentation to support the adoption and effective use of the SkillGapBridge system.
+
+   *Acceptance test*: Create User Documentation and Training Materials component is implemented, tested, and integrated.
+
+** TODO Step 7: Implement Security and Access Controls
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Ensure proper security measures and access controls are in place to protect employee data and system integrity.
+
+   *Acceptance test*: Implement Security and Access Controls component is implemented, tested, and integrated.
+
+** TODO Step 8: Set up Continuous Integration and Deployment
+   :PRIORITY: 4
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design System Architecture)
+   Establish a CI/CD pipeline for automated testing, building, and deploying the SkillGapBridge system.
+
+   *Acceptance test*: Set up Continuous Integration and Deployment component is implemented, tested, and integrated.
+
+** TODO Step 9: Develop Testing Strategy and Test Cases
+   :PRIORITY: 4
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Design System Architecture)
+   Define a comprehensive testing strategy and create test cases to ensure the system's functionality and reliability.
+
+   *Acceptance test*: Develop Testing Strategy and Test Cases component is implemented, tested, and integrated.
+
+** TODO Step 10: Set up Data Storage and Management
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the database schema and data management processes for storing and retrieving employee data, skill assessments, and learning paths.
+
+   *Acceptance test*: Set up Data Storage and Management component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: SkillGapBridge can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An AI system that identifies skill gaps between an employee's current role and their desired future 
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

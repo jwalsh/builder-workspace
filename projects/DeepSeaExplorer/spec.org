@@ -1,0 +1,152 @@
+#+TITLE: DeepSeaExplorer
+#+SUBTITLE: Create an AI-driven system for deep-sea exploration robots, enabling autonomous navigation and specimen collection in extreme environments.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Create an AI-driven system for deep-sea exploration robots, enabling autonomous navigation and specimen collection in extreme environments.
+
+* Foundational Axiom
+
+Existing approaches to create an ai-driven system fail because they optimize for the common case while ignoring structural constraints; DeepSeaExplorer makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: DeepSeaExplorer solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** System Architecture Design for DeepSeaExplorer
+   :STATUS: APPROVED
+   Design the overall architecture of the DeepSeaExplorer system, including components for autonomous navigation, specimen collection, data processing, and communication with surface vessels. Consider fault tolerance, scalability, real-time data processing requirements, integration with existing systems or standards used in deep-sea exploration (e.g., IEEE 1451, OPC UA), and outline a plan for testing and validation of the architecture design. This task includes creating system diagrams to visually...
+
+** Data Management and Storage for DeepSeaExplorer: RFC Review
+   :STATUS: DRAFT
+   This document proposes a design for a robust data management and storage system for the DeepSeaExplorer project. The system will include data organization, backup mechanisms, access control, retrieval strategies, and implementation of an efficient specimen database. The proposal includes considerations for high-latency, low-bandwidth connections in deep-sea environments, as well as security measures to protect sensitive data during transmission and storage. (Currently in Progress, assigned to co...
+
+* Build Order
+
+** TODO Step 1: Project Planning and Requirements Gathering
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Define the project scope, goals, and requirements for the DeepSeaExplorer system. Gather input from stakeholders, subject matter experts, and potential users.
+
+   *Acceptance test*: Project Planning and Requirements Gathering component is implemented, tested, and integrated.
+
+** IN_PROGRESS Step 2: System Architecture Design for DeepSeaExplorer
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Project Planning and Requirements Gathering)
+   Design the overall architecture of the DeepSeaExplorer system, including components for autonomous navigation, specimen collection, data processing, and communication with surface vessels. Consider fault tolerance, scalability, real-time data processing requirements, integration with existing system...
+
+   *Acceptance test*: System Architecture Design for DeepSeaExplorer component is implemented, tested, and integrated.
+
+** TODO Step 3: Navigation and Control System
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Develop the AI algorithms and software components for autonomous navigation and control of the deep-sea exploration robots.
+
+   *Acceptance test*: Navigation and Control System component is implemented, tested, and integrated.
+
+** TODO Step 4: Specimen Collection and Processing
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Implement the functionality for collecting and processing specimens from the deep-sea environment.
+
+   *Acceptance test*: Specimen Collection and Processing component is implemented, tested, and integrated.
+
+** TODO Step 5: Data Management and Storage for DeepSeaExplorer: RFC Review
+   :PRIORITY: 3
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: System Architecture Design)
+   This document proposes a design for a robust data management and storage system for the DeepSeaExplorer project. The system will include data organization, backup mechanisms, access control, retrieval strategies, and implementation of an efficient specimen database. The proposal includes considerati...
+
+   *Acceptance test*: Data Management and Storage for DeepSeaExplorer: RFC Review component is implemented, tested, and integrated.
+
+** TODO Step 6: Security and Compliance
+   :PRIORITY: 3
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: System Architecture Design)
+   Ensure the DeepSeaExplorer system adheres to relevant security standards and regulatory compliance requirements.
+
+   *Acceptance test*: Security and Compliance component is implemented, tested, and integrated.
+
+** TODO Step 7: User Interface and Visualization
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Develop a user-friendly interface and data visualization tools for monitoring and controlling the exploration robots and analyzing the collected data.
+
+   *Acceptance test*: User Interface and Visualization component is implemented, tested, and integrated.
+
+** TODO Step 8: System Integration and Testing
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Navigation and Control System, Specimen Collection and Processing, Data Management and Storage, User Interface and Visualization)
+   Integrate the various components of the DeepSeaExplorer system and conduct thorough testing, including unit tests, integration tests, and system tests.
+
+   *Acceptance test*: System Integration and Testing component is implemented, tested, and integrated.
+
+** TODO Step 9: Deployment and Operations
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: System Integration and Testing)
+   Plan and implement the deployment strategy for the DeepSeaExplorer system, including infrastructure provisioning, monitoring, and maintenance.
+
+   *Acceptance test*: Deployment and Operations component is implemented, tested, and integrated.
+
+** TODO Step 10: Documentation and Training
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: System Integration and Testing)
+   Develop comprehensive documentation for the DeepSeaExplorer system, including user manuals, technical specifications, and training materials.
+
+   *Acceptance test*: Documentation and Training component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: DeepSeaExplorer can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-005: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Create an AI-driven system for deep-sea exploration robots, enabling autonomous navigation and speci
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

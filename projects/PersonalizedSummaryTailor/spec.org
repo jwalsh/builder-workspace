@@ -1,0 +1,104 @@
+#+TITLE: PersonalizedSummaryTailor
+#+SUBTITLE: An AI system that tailors document summaries based on the reader's role, interests, and prior knowledge.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+An AI system that tailors document summaries based on the reader's role, interests, and prior knowledge.
+
+* Foundational Axiom
+
+Existing approaches to ai system fail because they optimize for the common case while ignoring structural constraints; PersonalizedSummaryTailor makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: PersonalizedSummaryTailor solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define System Requirements - RFC DRAFT Update
+   :STATUS: DRAFT
+   Revised functional and non-functional requirements for the PersonalizedSummaryTailor system. The updated requirements include user roles (Editor, Researcher, Manager, etc.), input formats (DOCX, PDF, TXT), output formats (HTML, plain text), performance expectations (summarize a 1000-word document in under 5 seconds), security/privacy considerations (data encryption, anonymization, user consent management), potential integrations with existing systems (Google Docs, Microsoft Word), edge cases (mu...
+
+* Build Order
+
+** TODO Step 1: Define System Requirements - RFC DRAFT Update
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Revised functional and non-functional requirements for the PersonalizedSummaryTailor system. The updated requirements include user roles (Editor, Researcher, Manager, etc.), input formats (DOCX, PDF, TXT), output formats (HTML, plain text), performance expectations (summarize a 1000-word document in...
+
+   *Acceptance test*: Define System Requirements - RFC DRAFT Update component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 4
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define System Requirements)
+   Design the high-level architecture of the system, including components for user management, document processing, summarization, personalization, and user interface.
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Set up Development Environment
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   Set up the development environment, including version control, continuous integration/deployment pipelines, and development tools.
+
+   *Acceptance test*: Set up Development Environment component is implemented, tested, and integrated.
+
+** TODO Step 4: Implement User Management
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture, Set up Development Environment)
+   Implement the user management component, including user registration, authentication, and role management.
+
+   *Acceptance test*: Implement User Management component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement Document Processing
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture, Set up Development Environment)
+   Implement the document processing component, including document ingestion, parsing, and storage.
+
+   *Acceptance test*: Implement Document Processing component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: PersonalizedSummaryTailor can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An AI system that tailors document summaries based on the reader's role, interests, and prior knowle
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

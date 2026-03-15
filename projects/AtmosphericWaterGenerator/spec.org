@@ -1,0 +1,157 @@
+#+TITLE: AtmosphericWaterGenerator
+#+SUBTITLE: A personal device that extracts drinking water from the air, ensuring access to clean water anywhere.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A personal device that extracts drinking water from the air, ensuring access to clean water anywhere.
+
+* Foundational Axiom
+
+Existing approaches to personal device fail because they optimize for the common case while ignoring structural constraints; AtmosphericWaterGenerator makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: AtmosphericWaterGenerator solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Design System Architecture
+   :STATUS: UNKNOWN
+   Design the overall system architecture for the AtmosphericWaterGenerator project. This will include the design of hardware components, software modules, their interactions, and addressing the following aspects: air intake and filtration, dehumidification and condensation, water storage and purification, user interface, power management, connectivity (optional), maintenance and serviceability, safety and fail-safe mechanisms, regulatory compliance. Special attention will be given to energy effici...
+
+** Design and Implement Comprehensive Security Measures (Revised)
+   :STATUS: IMPLEMENTING
+   Perform a thorough analysis of potential security risks in the Atmospheric Water Generator. Propose robust security measures to safeguard device security, user data privacy, IoT connectivity, and network resilience. Include guidelines for secure design principles, encryption methods (AES-256, RSA), access control mechanisms (user authentication, authorization, and accountability), and industry-standard best practices for securing similar devices (such as OWASP IoT Top 10). Provide recommendation...
+
+* Build Order
+
+** TODO Step 1: Gather Requirements
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Define the functional and non-functional requirements for the AtmosphericWaterGenerator, including user needs, performance expectations, and design constraints.
+
+   *Acceptance test*: Gather Requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 5
+   :ASSIGNED: task-decomposer
+   :DEPENDS: (depends on: Gather Requirements)
+   Design the overall system architecture for the AtmosphericWaterGenerator project. This will include the design of hardware components, software modules, their interactions, and addressing the following aspects: air intake and filtration, dehumidification and condensation, water storage and purificat...
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Design and Implement Comprehensive Security Measures (Revised)
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Perform a thorough analysis of potential security risks in the Atmospheric Water Generator. Propose robust security measures to safeguard device security, user data privacy, IoT connectivity, and network resilience. Include guidelines for secure design principles, encryption methods (AES-256, RSA), ...
+
+   *Acceptance test*: Design and Implement Comprehensive Security Measures (Revised) component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Air Intake and Filtration Module
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the module responsible for drawing in air and filtering out contaminants.
+
+   *Acceptance test*: Develop Air Intake and Filtration Module component is implemented, tested, and integrated.
+
+** TODO Step 5: Develop Water Condensation and Collection Module
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the module responsible for condensing water vapor from the filtered air and collecting the resulting water.
+
+   *Acceptance test*: Develop Water Condensation and Collection Module component is implemented, tested, and integrated.
+
+** TODO Step 6: Develop User Interface and Control Module
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the user interface and control module for the device, including input/output mechanisms and user settings.
+
+   *Acceptance test*: Develop User Interface and Control Module component is implemented, tested, and integrated.
+
+** TODO Step 7: Implement Data Storage and Logging
+   :PRIORITY: 2
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the data storage and logging mechanisms for the device, including usage data, performance metrics, and error logs.
+
+   *Acceptance test*: Implement Data Storage and Logging component is implemented, tested, and integrated.
+
+** TODO Step 8: Develop Device Firmware and Embedded Software
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Develop Air Intake and Filtration Module, Develop Water Condensation and Collection Module, Develop User Interface and Control Module, Implement Data Storage and Logging)
+   Develop the firmware and embedded software required to control the hardware components and integrate the software modules.
+
+   *Acceptance test*: Develop Device Firmware and Embedded Software component is implemented, tested, and integrated.
+
+** TODO Step 9: Develop Testing Strategy and Test Cases
+   :PRIORITY: 3
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Design System Architecture)
+   Define the testing strategy, including unit tests, integration tests, and end-to-end tests, and develop test cases to ensure the device's functionality and reliability.
+
+   *Acceptance test*: Develop Testing Strategy and Test Cases component is implemented, tested, and integrated.
+
+** TODO Step 10: Implement Continuous Integration and Deployment Pipeline
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Develop Testing Strategy and Test Cases)
+   Set up a continuous integration and deployment pipeline to automate the build, testing, and deployment processes.
+
+   *Acceptance test*: Implement Continuous Integration and Deployment Pipeline component is implemented, tested, and integrated.
+
+** TODO Step 11: Create User Documentation and Support Materials
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Develop User Interface and Control Module)
+   Develop user manuals, installation guides, and other support materials to assist users in setting up and using the device.
+
+   *Acceptance test*: Create User Documentation and Support Materials component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: AtmosphericWaterGenerator can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A personal device that extracts drinking water from the air, ensuring access to clean water anywhere
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A trained model with evaluation metrics and serving infrastructure

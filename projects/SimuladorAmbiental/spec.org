@@ -1,0 +1,133 @@
+#+TITLE: SimuladorAmbiental
+#+SUBTITLE: Un simulador que predice el impacto ambiental de actividades humanas.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Un simulador que predice el impacto ambiental de actividades humanas.
+
+* Foundational Axiom
+
+Existing approaches to un simulador que predice el impacto ambiental de actividades fail because they optimize for the common case while ignoring structural constraints; SimuladorAmbiental makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: SimuladorAmbiental solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Build Order
+
+** TODO Step 1: Define project scope and requirements
+   :PRIORITY: 1
+   :ASSIGNED: project-manager
+   Determine the specific areas of environmental impact to be simulated, what data will be required, and the desired outputs of the simulation.
+
+   *Acceptance test*: Define project scope and requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Design the simulation algorithm
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define project scope and requirements)
+   Develop a mathematical model to predict the environmental impact based on user-defined activities.
+
+   *Acceptance test*: Design the simulation algorithm component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop the user interface
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design the simulation algorithm)
+   Create a user-friendly interface for users to input activity data and view simulation results.
+
+   *Acceptance test*: Develop the user interface component is implemented, tested, and integrated.
+
+** TODO Step 4: Implement the database structure
+   :PRIORITY: 4
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design the simulation algorithm)
+   Create and configure a suitable database to store user data and simulation results.
+
+   *Acceptance test*: Implement the database structure component is implemented, tested, and integrated.
+
+** TODO Step 5: Develop the backend API
+   :PRIORITY: 5
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Develop the user interface, Implement the database structure)
+   Write server-side code to handle user requests and calls to the simulation algorithm.
+
+   *Acceptance test*: Develop the backend API component is implemented, tested, and integrated.
+
+** TODO Step 6: Code review for backend API development
+   :PRIORITY: 5
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Develop the backend API)
+   Review the implemented backend API to ensure it works correctly and handles requests efficiently.
+
+   *Acceptance test*: Code review for backend API development component is implemented, tested, and integrated.
+
+** TODO Step 7: Code review for user interface development
+   :PRIORITY: 4
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Develop the user interface)
+   Review the implemented user interface to ensure it meets design specifications and provides a good user experience.
+
+   *Acceptance test*: Code review for user interface development component is implemented, tested, and integrated.
+
+** TODO Step 8: Code review for simulation algorithm implementation
+   :PRIORITY: 3
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Implement the simulation algorithm)
+   Review the implemented simulation algorithm to ensure it adheres to design specifications.
+
+   *Acceptance test*: Code review for simulation algorithm implementation component is implemented, tested, and integrated.
+
+** TODO Step 9: Review project requirements and design
+   :PRIORITY: 2
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Define project scope and requirements)
+   Ensure that the project's requirements are being met, and make any necessary adjustments to the project design.
+
+   *Acceptance test*: Review project requirements and design component is implemented, tested, and integrated.
+
+** TODO Step 10: Test and debug the system
+   :PRIORITY: 1
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Develop the user interface, Implement the database structure, Develop the backend API)
+   Perform functional testing to ensure that the simulation works as intended and fix any bugs.
+
+   *Acceptance test*: Test and debug the system component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: SimuladorAmbiental can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Un simulador que predice el impacto ambiental de actividades humanas.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

@@ -1,0 +1,112 @@
+#+TITLE: plateformeSoinPersonnalisé
+#+SUBTITLE: Une plateforme qui utilise l'IA pour fournir des soins de santé personnalisés basés sur des données génétiques.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Une plateforme qui utilise l'IA pour fournir des soins de santé personnalisés basés sur des données génétiques.
+
+* Foundational Axiom
+
+Existing approaches to une plateforme qui utilise l'ia pour fournir des soins de sa fail because they optimize for the common case while ignoring structural constraints; plateformeSoinPersonnalisé makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: plateformeSoinPersonnalisé solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Build Order
+
+** TODO Step 1: Define Overall Architecture
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Create a high-level architectural design for the platform.
+
+   *Acceptance test*: Define Overall Architecture component is implemented, tested, and integrated.
+
+** TODO Step 2: Create Database Schema and Set Up Data Storage
+   :PRIORITY: 5
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Define Overall Architecture)
+   Design the database schema and set up storage for genetic data and AI model results.
+
+   *Acceptance test*: Create Database Schema and Set Up Data Storage component is implemented, tested, and integrated.
+
+** TODO Step 3: Design User Interface for Data Input and Output
+   :PRIORITY: 4
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Define Overall Architecture)
+   Create a user-friendly interface for inputting genetic data and viewing personalized health recommendations.
+
+   *Acceptance test*: Design User Interface for Data Input and Output component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Genetic Data Handling Module
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Define Overall Architecture)
+   Design and implement a module to handle genetic data.
+
+   *Acceptance test*: Develop Genetic Data Handling Module component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement AI Model for Personalized Healthcare
+   :PRIORITY: 3
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Develop Genetic Data Handling Module)
+   Develop an AI model capable of providing personalized healthcare based on genetic data.
+
+   *Acceptance test*: Implement AI Model for Personalized Healthcare component is implemented, tested, and integrated.
+
+** TODO Step 6: Implement DevOps Pipeline
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Define Overall Architecture)
+   Create a CI/CD pipeline for the platform.
+
+   *Acceptance test*: Implement DevOps Pipeline component is implemented, tested, and integrated.
+
+** TODO Step 7: Conduct Security Audit and Implement Measures
+   :PRIORITY: 1
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Define Overall Architecture)
+   Perform a security audit of the platform and implement necessary measures.
+
+   *Acceptance test*: Conduct Security Audit and Implement Measures component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: plateformeSoinPersonnalisé can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Une plateforme qui utilise l'IA pour fournir des soins de santé personnalisés basés sur des données 
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

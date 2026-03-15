@@ -1,0 +1,143 @@
+#+TITLE: CrossDisciplinaryInnovator
+#+SUBTITLE: An AI system that generates innovative ideas by combining concepts from different scientific disciplines.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+An AI system that generates innovative ideas by combining concepts from different scientific disciplines.
+
+* Foundational Axiom
+
+Existing approaches to ai system fail because they optimize for the common case while ignoring structural constraints; CrossDisciplinaryInnovator makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: CrossDisciplinaryInnovator solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Scope and Requirements
+   :STATUS: UNKNOWN
+   Gather and document comprehensive project requirements from various stakeholders such as scientists, AI experts, end-users, potential users from different disciplines. This includes understanding the desired features, use cases, performance metrics, technical constraints, and potential integration with existing systems. The output will be a detailed requirements document.
+
+** Gather User Feedback and Iterate
+   :STATUS: PENDING_REVIEW
+   Collaborate with users to gather feedback, analyze it, and iterate on the system based on their experiences, aiming to enhance usability and overall performance. This process will involve regular communication, updates, and documentation for transparency.
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements
+   :PRIORITY: 1
+   :ASSIGNED: project-manager
+   Gather and document comprehensive project requirements from various stakeholders such as scientists, AI experts, end-users, potential users from different disciplines. This includes understanding the desired features, use cases, performance metrics, technical constraints, and potential integration w...
+
+   *Acceptance test*: Define Project Scope and Requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Design AI System Architecture
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design the overall architecture of the AI system, including data input sources, processing algorithms, and output generation mechanisms.
+
+   *Acceptance test*: Design AI System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop Data Collection Module
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design AI System Architecture)
+   Create a module to collect data from various scientific disciplines and format it for AI processing.
+
+   *Acceptance test*: Develop Data Collection Module component is implemented, tested, and integrated.
+
+** TODO Step 4: Implement AI Processing Algorithms
+   :PRIORITY: 4
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Develop Data Collection Module, Design AI System Architecture)
+   Develop the algorithms that will combine concepts from different disciplines and generate innovative ideas.
+
+   *Acceptance test*: Implement AI Processing Algorithms component is implemented, tested, and integrated.
+
+** TODO Step 5: Create User Interface for Idea Generation
+   :PRIORITY: 5
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Implement AI Processing Algorithms)
+   Design and develop a user-friendly interface for end-users to interact with the system and generate ideas.
+
+   *Acceptance test*: Create User Interface for Idea Generation component is implemented, tested, and integrated.
+
+** TODO Step 6: Perform System Audit
+   :PRIORITY: 5
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Implement AI Processing Algorithms)
+   Conduct a comprehensive audit to ensure the system is secure and adheres to all relevant regulations.
+
+   *Acceptance test*: Perform System Audit component is implemented, tested, and integrated.
+
+** TODO Step 7: Test AI System Functionality
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Implement AI Processing Algorithms)
+   Perform extensive testing to ensure the system is functioning correctly and generating innovative ideas as intended.
+
+   *Acceptance test*: Test AI System Functionality component is implemented, tested, and integrated.
+
+** TODO Step 8: Deploy AI System for User Testing
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Test AI System Functionality)
+   Prepare the system for deployment and make it available to a limited group of users for testing.
+
+   *Acceptance test*: Deploy AI System for User Testing component is implemented, tested, and integrated.
+
+** IN_PROGRESS Step 9: Gather User Feedback and Iterate
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Deploy AI System for User Testing)
+   Collaborate with users to gather feedback, analyze it, and iterate on the system based on their experiences, aiming to enhance usability and overall performance. This process will involve regular communication, updates, and documentation for transparency.
+
+   *Acceptance test*: Gather User Feedback and Iterate component is implemented, tested, and integrated.
+
+** TODO Step 10: Iterate on AI System and Improve Performance
+   :PRIORITY: 5
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Gather User Feedback and Iterate)
+   Make necessary improvements to the system based on user feedback and aim to increase its performance.
+
+   *Acceptance test*: Iterate on AI System and Improve Performance component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: CrossDisciplinaryInnovator can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An AI system that generates innovative ideas by combining concepts from different scientific discipl
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

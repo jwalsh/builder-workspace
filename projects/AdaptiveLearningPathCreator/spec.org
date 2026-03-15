@@ -1,0 +1,142 @@
+#+TITLE: AdaptiveLearningPathCreator
+#+SUBTITLE: An AI-driven system that creates personalized learning paths for users based on their goals, current skills, and performance on coding challenges.
+#+CATEGORY: EDUCATION
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+An AI-driven system that creates personalized learning paths for users based on their goals, current skills, and performance on coding challenges.
+
+* Foundational Axiom
+
+Educational tools fail when they optimize for content delivery over understanding; AdaptiveLearningPathCreator closes the gap between instruction and verified comprehension.
+
+* Anti-Goals
+
+- *General-purpose platform*: AdaptiveLearningPathCreator solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Requirements
+   :STATUS: UNKNOWN
+   Gather and document the requirements for the AdaptiveLearningPathCreator system, including user personas, goals, features, constraints, and non-functional requirements such as performance, scalability, security, accessibility, usability, and maintainability. Identify stakeholders and conduct interviews or workshops to gather requirements. Ensure to cover requirements related to the AI-driven personalization engine (including data input/output formats, training data sources, models), user interfa...
+
+** Design System Architecture
+   :STATUS: IMPLEMENTED
+   Design the overall system architecture, including components, data flow, and integration points. Key aspects include: 1) User management and authentication (e.g., role-based access control, user profiles), 2) Skill assessment and coding challenge engine (e.g., problem statement management, submission handling, automated testing), 3) Learning path generation algorithm (e.g., user profiling, content mapping, personalization techniques), 4) Content management system for learning resources (e.g., co...
+
+* Build Order
+
+** TODO Step 1: Define Project Requirements
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Gather and document the requirements for the AdaptiveLearningPathCreator system, including user personas, goals, features, constraints, and non-functional requirements such as performance, scalability, security, accessibility, usability, and maintainability. Identify stakeholders and conduct intervi...
+
+   *Acceptance test*: Define Project Requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Requirements)
+   Design the overall system architecture, including components, data flow, and integration points. Key aspects include: 1) User management and authentication (e.g., role-based access control, user profiles), 2) Skill assessment and coding challenge engine (e.g., problem statement management, submissio...
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Implement Security and Access Controls
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop and implement security measures and access controls to protect user data and system integrity.
+
+   *Acceptance test*: Implement Security and Access Controls component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop User Interface
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the user interface for the AdaptiveLearningPathCreator system.
+
+   *Acceptance test*: Develop User Interface component is implemented, tested, and integrated.
+
+** TODO Step 5: Set up Data Storage and Management
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the data storage and management system for user data, coding challenges, and learning paths.
+
+   *Acceptance test*: Set up Data Storage and Management component is implemented, tested, and integrated.
+
+** TODO Step 6: Set up Continuous Integration and Deployment
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design System Architecture)
+   Configure and implement a continuous integration and deployment pipeline for the AdaptiveLearningPathCreator system.
+
+   *Acceptance test*: Set up Continuous Integration and Deployment component is implemented, tested, and integrated.
+
+** TODO Step 7: Create Test Suite and Test Plan
+   :PRIORITY: 3
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop a comprehensive test suite and test plan to ensure the quality and functionality of the system.
+
+   *Acceptance test*: Create Test Suite and Test Plan component is implemented, tested, and integrated.
+
+** TODO Step 8: Write Technical Documentation
+   :PRIORITY: 3
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Design System Architecture)
+   Create technical documentation for the AdaptiveLearningPathCreator system, including user guides, developer guides, and system architecture documentation.
+
+   *Acceptance test*: Write Technical Documentation component is implemented, tested, and integrated.
+
+** TODO Step 9: Implement Adaptive Learning Algorithm
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop the core algorithm that creates personalized learning paths based on user data and performance.
+
+   *Acceptance test*: Implement Adaptive Learning Algorithm component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: AdaptiveLearningPathCreator can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Docker
+- Kubernetes
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An AI-driven system that creates personalized learning paths for users based on their goals, current
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Educators and learners in structured learning environments
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

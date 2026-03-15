@@ -1,0 +1,143 @@
+#+TITLE: BionicProsthesisNerve
+#+SUBTITLE: Create a neural interface system for advanced bionic prosthetics, enabling intuitive control and sensory feedback.
+#+CATEGORY: BIOTECH
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Create a neural interface system for advanced bionic prosthetics, enabling intuitive control and sensory feedback.
+
+* Foundational Axiom
+
+Biotech tools fail when they treat biological systems as deterministic; BionicProsthesisNerve embraces stochasticity as a design constraint.
+
+* Anti-Goals
+
+- *General-purpose platform*: BionicProsthesisNerve solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** System Architecture Design for Neural Interface System - REVISED
+   :STATUS: DRAFT
+   Revised and updated version of the task: Develop the overall architecture and design for the neural interface system of advanced bionic prosthetics, focusing on intuitive control and sensory feedback. The architecture should be modular, allowing for easy replacement or upgrade of individual components, and incorporate AI and machine learning algorithms to improve control and feedback. Key considerations include hardware and software components, data flow, integration with existing prosthetic dev...
+
+* Build Order
+
+** TODO Step 1: Project Planning and Requirements Gathering
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Define project scope, objectives, and requirements for the neural interface system. Conduct research and gather input from stakeholders, including medical professionals, prosthetics experts, and potential users.
+
+   *Acceptance test*: Project Planning and Requirements Gathering component is implemented, tested, and integrated.
+
+** TODO Step 2: System Architecture Design for Neural Interface System - REVISED
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Project Planning and Requirements Gathering)
+   Revised and updated version of the task: Develop the overall architecture and design for the neural interface system of advanced bionic prosthetics, focusing on intuitive control and sensory feedback. The architecture should be modular, allowing for easy replacement or upgrade of individual componen...
+
+   *Acceptance test*: System Architecture Design for Neural Interface System - REVISED component is implemented, tested, and integrated.
+
+** TODO Step 3: Neural Signal Processing
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Implement algorithms and techniques for acquiring, processing, and interpreting neural signals from the user's nervous system.
+
+   *Acceptance test*: Neural Signal Processing component is implemented, tested, and integrated.
+
+** TODO Step 4: Prosthetic Device Integration
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Develop interfaces and communication protocols to seamlessly integrate the neural interface system with various types of bionic prosthetics.
+
+   *Acceptance test*: Prosthetic Device Integration component is implemented, tested, and integrated.
+
+** TODO Step 5: User Interface and Feedback
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Design and implement user interfaces and feedback mechanisms to provide intuitive control and sensory feedback to the user.
+
+   *Acceptance test*: User Interface and Feedback component is implemented, tested, and integrated.
+
+** TODO Step 6: Security and Privacy
+   :PRIORITY: 2
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: System Architecture Design)
+   Implement robust security measures to protect user data and ensure the privacy and integrity of the neural interface system.
+
+   *Acceptance test*: Security and Privacy component is implemented, tested, and integrated.
+
+** TODO Step 7: Testing and Validation
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Neural Signal Processing, Prosthetic Device Integration, User Interface and Feedback)
+   Develop comprehensive testing strategies and validation procedures to ensure the reliability, safety, and performance of the neural interface system.
+
+   *Acceptance test*: Testing and Validation component is implemented, tested, and integrated.
+
+** TODO Step 8: Deployment and Support
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Testing and Validation)
+   Plan and implement strategies for deploying the neural interface system in various healthcare and research settings, and provide ongoing support and maintenance.
+
+   *Acceptance test*: Deployment and Support component is implemented, tested, and integrated.
+
+** TODO Step 9: Documentation and Training
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: System Architecture Design, Neural Signal Processing, Prosthetic Device Integration, User Interface and Feedback)
+   Create comprehensive documentation, user guides, and training materials to support the adoption and proper use of the neural interface system.
+
+   *Acceptance test*: Documentation and Training component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: BionicProsthesisNerve can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Create a neural interface system for advanced bionic prosthetics, enabling intuitive control and sen
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Biotechnology researchers and lab scientists
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook
+
+* Research Context
+
+- [[file:rfcs/README.md][README.md]]
+- [[file:rfcs/RFC-000-neural-interface.org][RFC-000-neural-interface.org]]
+- [[file:rfcs/rfc-001-system-architecture-design.md][rfc-001-system-architecture-design.md]]

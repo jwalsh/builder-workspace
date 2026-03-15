@@ -1,0 +1,105 @@
+#+TITLE: SolarPoweredTransport
+#+SUBTITLE: Electric vehicles that run entirely on solar power for sustainable transportation.
+#+CATEGORY: ENERGY
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Electric vehicles that run entirely on solar power for sustainable transportation.
+
+* Foundational Axiom
+
+Energy systems fail when they optimize for peak efficiency at the cost of resilience; SolarPoweredTransport maintains correctness across the full operating envelope.
+
+* Anti-Goals
+
+- *General-purpose platform*: SolarPoweredTransport solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Build Order
+
+** TODO Step 1: Design Solar-Powered Vehicle Architecture
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Develop the blueprint for an electric vehicle that runs entirely on solar power
+
+   *Acceptance test*: Design Solar-Powered Vehicle Architecture component is implemented, tested, and integrated.
+
+** TODO Step 2: Develop Charging Mechanism Design
+   :PRIORITY: 4
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Design Solar-Powered Vehicle Architecture)
+   Create a design for the charging mechanism that will store excess solar energy
+
+   *Acceptance test*: Develop Charging Mechanism Design component is implemented, tested, and integrated.
+
+** TODO Step 3: Select and Specify Battery Requirements
+   :PRIORITY: 3
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Design Solar-Powered Vehicle Architecture)
+   Research and specify the battery requirements for the solar-powered vehicle
+
+   *Acceptance test*: Select and Specify Battery Requirements component is implemented, tested, and integrated.
+
+** TODO Step 4: Research and Select Solar Panel Manufacturer
+   :PRIORITY: 2
+   :ASSIGNED: project-manager
+   Research various solar panel manufacturers to select the best one for the project
+
+   *Acceptance test*: Research and Select Solar Panel Manufacturer component is implemented, tested, and integrated.
+
+** TODO Step 5: Develop Solar Panel Purchase and Integration Plan
+   :PRIORITY: 3
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Research and Select Solar Panel Manufacturer)
+   Create a plan for purchasing solar panels and integrating them into the vehicle design
+
+   *Acceptance test*: Develop Solar Panel Purchase and Integration Plan component is implemented, tested, and integrated.
+
+** TODO Step 6: Develop Solar Panels Integration Design
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Design Solar-Powered Vehicle Architecture)
+   Create a design for integrating solar panels into the vehicle
+
+   *Acceptance test*: Develop Solar Panels Integration Design component is implemented, tested, and integrated.
+
+** TODO Step 7: Create Project Roadmap
+   :PRIORITY: 1
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design Solar-Powered Vehicle Architecture)
+   Develop a roadmap for the project, including milestones and key deadlines
+
+   *Acceptance test*: Create Project Roadmap component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: SolarPoweredTransport can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Electric vehicles that run entirely on solar power for sustainable transportation.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Energy system operators and grid engineers
+
+* Primary Output Artifact
+
+A trained model with evaluation metrics and serving infrastructure

@@ -1,0 +1,141 @@
+#+TITLE: AIArchitect
+#+SUBTITLE: An AI system that generates and evaluates software architecture designs based on project requirements, considering factors such as scalability, maintainability, and performance.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-25
+#+STARTUP: overview
+
+* Overview
+
+An AI system that generates and evaluates software architecture designs based on project requirements, considering factors such as scalability, maintainability, and performance.
+
+* Foundational Axiom
+
+Existing approaches to ai system fail because they optimize for the common case while ignoring structural constraints; AIArchitect makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: AIArchitect solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Requirements - Revised
+   :STATUS: APPROVED
+   Gather and document the comprehensive requirements for the AIArchitect system. The requirements should include input formats (structured data, programming languages, supporting files), desired outputs (architecture designs, performance metrics, scalability metrics, maintainability scores, interactive visualizations), any specific constraints or considerations (security standards, platform compatibility, performance benchmarks, usability guidelines, accessibility standards), non-functional requir...
+
+** Design System Architecture (Approved and Ready for Task Decomposition)
+   :STATUS: APPROVED
+   This RFC presents the approved design of AIArchitect system's architecture. It includes components, data flow, interactions between different modules, considerations for scalability, maintainability, performance, security, fault tolerance, and extensibility. To progress to the next phase, it is recommended to update the RFC document with detailed specifications for each module (including their functionalities, APIs, data structures, and expected performance metrics), interfaces, and expected int...
+
+* Build Order
+
+** TODO Step 1: Define Project Requirements - Revised
+   :PRIORITY: 5
+   :ASSIGNED: task-decomposer
+   Gather and document the comprehensive requirements for the AIArchitect system. The requirements should include input formats (structured data, programming languages, supporting files), desired outputs (architecture designs, performance metrics, scalability metrics, maintainability scores, interactiv...
+
+   *Acceptance test*: Define Project Requirements - Revised component is implemented, tested, and integrated.
+
+** IN_PROGRESS Step 2: Design System Architecture (Approved and Ready for Task Decomposition)
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Requirements)
+   This RFC presents the approved design of AIArchitect system's architecture. It includes components, data flow, interactions between different modules, considerations for scalability, maintainability, performance, security, fault tolerance, and extensibility. To progress to the next phase, it is reco...
+
+   *Acceptance test*: Design System Architecture (Approved and Ready for Task Decomposition) component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop AI Model
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement the core AI model responsible for generating and evaluating software architecture designs based on project requirements.
+
+   *Acceptance test*: Develop AI Model component is implemented, tested, and integrated.
+
+** TODO Step 4: Build User Interface
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop the user interface for interacting with the AIArchitect system, including input forms, visualization tools, and result displays.
+
+   *Acceptance test*: Build User Interface component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement Data Storage
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Set up the database and storage systems for storing project requirements, generated architecture designs, and any other necessary data.
+
+   *Acceptance test*: Implement Data Storage component is implemented, tested, and integrated.
+
+** TODO Step 6: Establish Deployment and Monitoring
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Develop AI Model, Build User Interface, Implement Data Storage)
+   Configure the deployment environment, continuous integration/continuous deployment (CI/CD) pipelines, and monitoring systems for the AIArchitect system.
+
+   *Acceptance test*: Establish Deployment and Monitoring component is implemented, tested, and integrated.
+
+** TODO Step 7: Conduct Security Audits
+   :PRIORITY: 2
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Develop AI Model, Build User Interface, Implement Data Storage)
+   Perform security audits and implement necessary security measures to ensure the AIArchitect system is secure and compliant with relevant regulations.
+
+   *Acceptance test*: Conduct Security Audits component is implemented, tested, and integrated.
+
+** TODO Step 8: Create Documentation
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Develop AI Model, Build User Interface, Implement Data Storage)
+   Develop comprehensive documentation for the AIArchitect system, including user guides, technical documentation, and maintenance manuals.
+
+   *Acceptance test*: Create Documentation component is implemented, tested, and integrated.
+
+** TODO Step 9: Test and Validate
+   :PRIORITY: 1
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Develop AI Model, Build User Interface, Implement Data Storage, Establish Deployment and Monitoring)
+   Perform thorough testing and validation of the AIArchitect system, including unit tests, integration tests, and user acceptance testing.
+
+   *Acceptance test*: Test and Validate component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: AIArchitect can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An AI system that generates and evaluates software architecture designs based on project requirement
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

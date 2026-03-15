@@ -1,0 +1,123 @@
+#+TITLE: VehiculosAutonomos
+#+SUBTITLE: Una flota de vehículos completamente autónomos diseñados para entornos urbanos.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Una flota de vehículos completamente autónomos diseñados para entornos urbanos.
+
+* Foundational Axiom
+
+Existing approaches to una flota de vehículos completamente autónomos diseñados par fail because they optimize for the common case while ignoring structural constraints; VehiculosAutonomos makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: VehiculosAutonomos solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Test and Validate Autonomous Vehicles
+   :STATUS: UNKNOWN
+   Conduct thorough testing and validation of the autonomous vehicles in controlled environments. This includes verifying the functionality of implemented autonomous driving algorithms and ensuring compatibility with the urban mapping system.
+
+* Build Order
+
+** TODO Step 1: Design Autonomous Vehicle Architecture
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Create a high-level design for the autonomous vehicles in urban environments.
+
+   *Acceptance test*: Design Autonomous Vehicle Architecture component is implemented, tested, and integrated.
+
+** TODO Step 2: Implement Autonomous Driving Algorithms
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design Autonomous Vehicle Architecture)
+   Develop algorithms for the vehicles to navigate and make decisions autonomously.
+
+   *Acceptance test*: Implement Autonomous Driving Algorithms component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop Urban Mapping System
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design Autonomous Vehicle Architecture)
+   Create a mapping system for urban environments that enables autonomous vehicles to navigate safely.
+
+   *Acceptance test*: Develop Urban Mapping System component is implemented, tested, and integrated.
+
+** TODO Step 4: Test and Validate Autonomous Vehicles
+   :PRIORITY: 5
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Implement Autonomous Driving Algorithms, Develop Urban Mapping System)
+   Conduct thorough testing and validation of the autonomous vehicles in controlled environments. This includes verifying the functionality of implemented autonomous driving algorithms and ensuring compatibility with the urban mapping system.
+
+   *Acceptance test*: Test and Validate Autonomous Vehicles component is implemented, tested, and integrated.
+
+** TODO Step 5: Deploy Fleet of Autonomous Vehicles in Controlled Environment
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Test and Validate Autonomous Vehicles)
+   Prepare for and execute the deployment of a fleet of autonomous vehicles in a controlled urban environment.
+
+   *Acceptance test*: Deploy Fleet of Autonomous Vehicles in Controlled Environment component is implemented, tested, and integrated.
+
+** TODO Step 6: Address Security Concerns
+   :PRIORITY: 5
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Deploy Fleet of Autonomous Vehicles in Controlled Environment)
+   Implement necessary security measures to ensure the safety and privacy of users and autonomous vehicles.
+
+   *Acceptance test*: Address Security Concerns component is implemented, tested, and integrated.
+
+** TODO Step 7: Develop User Interface for Vehicles and Management System
+   :PRIORITY: 4
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design Autonomous Vehicle Architecture)
+   Create a user interface for controlling the vehicles and managing the fleet.
+
+   *Acceptance test*: Develop User Interface for Vehicles and Management System component is implemented, tested, and integrated.
+
+** TODO Step 8: Analyze Fleet Performance Data
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Deploy Fleet of Autonomous Vehicles in Controlled Environment)
+   Analyze data collected from the deployed fleet to identify any issues or areas for improvement.
+
+   *Acceptance test*: Analyze Fleet Performance Data component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: VehiculosAutonomos can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Una flota de vehículos completamente autónomos diseñados para entornos urbanos.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

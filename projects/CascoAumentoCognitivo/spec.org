@@ -1,0 +1,131 @@
+#+TITLE: CascoAumentoCognitivo
+#+SUBTITLE: Un casco que mejora las capacidades cognitivas a través de la neuroestimulación.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Un casco que mejora las capacidades cognitivas a través de la neuroestimulación.
+
+* Foundational Axiom
+
+Existing approaches to un casco que mejora las capacidades cognitivas a través de l fail because they optimize for the common case while ignoring structural constraints; CascoAumentoCognitivo makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: CascoAumentoCognitivo solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Detailed Project Requirements for Cognitive Enhancement Helmet
+   :STATUS: PENDING_REVIEW
+   Gather, document and organize comprehensive project requirements for the development of the cognitive enhancement helmet. The requirements should include technical specifications, user needs, performance expectations, safety guidelines, compatibility with other devices (if any), and potential future upgrades or integrations. Also consider the impact on accessibility and usability for different user groups.
+
+* Build Order
+
+** TODO Step 1: Develop Frontend for User Interface
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Define Project Requirements)
+   Design and build the user interface for the helmet's control system.
+
+   *Acceptance test*: Develop Frontend for User Interface component is implemented, tested, and integrated.
+
+** TODO Step 2: Design Cognitive Enhancement Algorithm
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Requirements)
+   Create a design for the neurostimulation algorithm that enhances cognitive abilities.
+
+   *Acceptance test*: Design Cognitive Enhancement Algorithm component is implemented, tested, and integrated.
+
+** TODO Step 3: Implement Neurostimulation Algorithm (Backend Development)
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design Cognitive Enhancement Algorithm)
+   Develop the backend code to implement the neurostimulation algorithm.
+
+   *Acceptance test*: Implement Neurostimulation Algorithm (Backend Development) component is implemented, tested, and integrated.
+
+** TODO Step 4: Integrate User Interface with Backend
+   :PRIORITY: 4
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Develop Frontend for User Interface, Implement Neurostimulation Algorithm)
+   Connect the frontend user interface to the implemented backend.
+
+   *Acceptance test*: Integrate User Interface with Backend component is implemented, tested, and integrated.
+
+** TODO Step 5: Test Cognitive Enhancement Helmet
+   :PRIORITY: 5
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Integrate User Interface with Backend)
+   Conduct functional and performance tests on the cognitive enhancement helmet.
+
+   *Acceptance test*: Test Cognitive Enhancement Helmet component is implemented, tested, and integrated.
+
+** TODO Step 6: Security Audit of Helmet's Software
+   :PRIORITY: 5
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Integrate User Interface with Backend)
+   Perform a security audit to ensure the safety and privacy of users.
+
+   *Acceptance test*: Security Audit of Helmet's Software component is implemented, tested, and integrated.
+
+** TODO Step 7: Review Frontend User Interface Design
+   :PRIORITY: 3
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Develop Frontend for User Interface)
+   Review and provide feedback on the design of the frontend user interface.
+
+   *Acceptance test*: Review Frontend User Interface Design component is implemented, tested, and integrated.
+
+** TODO Step 8: Revise Cognitive Enhancement Algorithm Design
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Design Cognitive Enhancement Algorithm)
+   Review and provide feedback on the design of the neurostimulation algorithm.
+
+   *Acceptance test*: Revise Cognitive Enhancement Algorithm Design component is implemented, tested, and integrated.
+
+** TODO Step 9: Define Detailed Project Requirements for Cognitive Enhancement Helmet
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Gather, document and organize comprehensive project requirements for the development of the cognitive enhancement helmet. The requirements should include technical specifications, user needs, performance expectations, safety guidelines, compatibility with other devices (if any), and potential future...
+
+   *Acceptance test*: Define Detailed Project Requirements for Cognitive Enhancement Helmet component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: CascoAumentoCognitivo can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Un casco que mejora las capacidades cognitivas a través de la neuroestimulación.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

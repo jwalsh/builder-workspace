@@ -1,0 +1,154 @@
+#+TITLE: SkillsMarketplace
+#+SUBTITLE: An internal gig economy platform where employees can offer or request help on projects based on their skills.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+An internal gig economy platform where employees can offer or request help on projects based on their skills.
+
+* Foundational Axiom
+
+Existing approaches to internal gig economy platform where employees can offer or r fail because they optimize for the common case while ignoring structural constraints; SkillsMarketplace makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: SkillsMarketplace solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Scope and Requirements (Revised)
+   :STATUS: APPROVED
+   This RFC focuses on revising and expanding the requirements for the SkillsMarketplace platform. The revised document will cover both functional and non-functional requirements, such as performance, scalability, security, accessibility, data privacy, organizational policies, and other constraints. All relevant stakeholders (e.g., HR, legal, security) will be involved to ensure a comprehensive understanding of the platform's needs. The document will also include user interface design consideration...
+
+** Design System Architecture for SkillsMarketplace
+   :STATUS: REVIEW
+   Design the overall system architecture for SkillsMarketplace, considering aspects such as scalability, high availability, security, performance, and maintainability. Provide a detailed architecture diagram, documentation, and ensure that the design is microservices-oriented with clear separation of concerns for frontend, backend, database, and infrastructure components. Consider implementing technologies like Kubernetes for orchestration, GraphQL/REST APIs for communication between services, and...
+
+* Build Order
+
+** IN_PROGRESS Step 1: Define Project Scope and Requirements (Revised)
+   :PRIORITY: 5
+   :ASSIGNED: task-decomposer
+   This RFC focuses on revising and expanding the requirements for the SkillsMarketplace platform. The revised document will cover both functional and non-functional requirements, such as performance, scalability, security, accessibility, data privacy, organizational policies, and other constraints. Al...
+
+   *Acceptance test*: Define Project Scope and Requirements (Revised) component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture for SkillsMarketplace
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design the overall system architecture for SkillsMarketplace, considering aspects such as scalability, high availability, security, performance, and maintainability. Provide a detailed architecture diagram, documentation, and ensure that the design is microservices-oriented with clear separation of ...
+
+   *Acceptance test*: Design System Architecture for SkillsMarketplace component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop Frontend
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement the user interface and frontend components for the SkillsMarketplace platform.
+
+   *Acceptance test*: Develop Frontend component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Backend
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement the backend services, APIs, and business logic for the SkillsMarketplace platform.
+
+   *Acceptance test*: Develop Backend component is implemented, tested, and integrated.
+
+** TODO Step 5: Set up Database
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the database schema and data models for the SkillsMarketplace platform.
+
+   *Acceptance test*: Set up Database component is implemented, tested, and integrated.
+
+** TODO Step 6: Implement Security and Access Controls
+   :PRIORITY: 2
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement security measures, authentication, and access controls for the SkillsMarketplace platform.
+
+   *Acceptance test*: Implement Security and Access Controls component is implemented, tested, and integrated.
+
+** TODO Step 7: Set up CI/CD Pipeline
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design System Architecture)
+   Configure a continuous integration and continuous deployment (CI/CD) pipeline for the SkillsMarketplace platform.
+
+   *Acceptance test*: Set up CI/CD Pipeline component is implemented, tested, and integrated.
+
+** TODO Step 8: Write Documentation
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Create user guides, technical documentation, and other supporting materials for the SkillsMarketplace platform.
+
+   *Acceptance test*: Write Documentation component is implemented, tested, and integrated.
+
+** TODO Step 9: Conduct Testing
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Develop Frontend, Develop Backend, Set up Database)
+   Plan and execute various testing activities, including unit testing, integration testing, and end-to-end testing.
+
+   *Acceptance test*: Conduct Testing component is implemented, tested, and integrated.
+
+** TODO Step 10: Deploy to Production
+   :PRIORITY: 1
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Conduct Testing, Set up CI/CD Pipeline)
+   Deploy the SkillsMarketplace platform to the production environment and perform final testing and validation.
+
+   *Acceptance test*: Deploy to Production component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: SkillsMarketplace can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- TypeScript/JavaScript
+- MongoDB
+- Kubernetes
+- AWS
+- GraphQL
+- REST API
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An internal gig economy platform where employees can offer or request help on projects based on thei
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A deployed platform with user-facing interface

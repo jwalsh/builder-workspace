@@ -1,0 +1,137 @@
+#+TITLE: BioelectronicMedicineForge
+#+SUBTITLE: Develop a platform for designing and testing bioelectronic medical devices that interface directly with the nervous system.
+#+CATEGORY: HEALTHCARE
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Develop a platform for designing and testing bioelectronic medical devices that interface directly with the nervous system.
+
+* Foundational Axiom
+
+Healthcare tools fail when they optimize for data collection over clinical workflow; BioelectronicMedicineForge embeds clinical reasoning into the system's structure.
+
+* Anti-Goals
+
+- *General-purpose platform*: BioelectronicMedicineForge solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Revise Project Scope and Requirements - Update
+   :STATUS: APPROVED
+   Update the project scope, objectives, and requirements for the bioelectronic medical device platform. Engage relevant stakeholders, including medical professionals, regulatory bodies, end-users, and subject matter experts in bioelectronics and neural interfaces. Prioritize consideration of factors like safety, security, usability, scalability, regulatory compliance, data privacy, and ethical considerations. After gathering feedback from the approved RFC, evaluate and update the project requireme...
+
+* Build Order
+
+** TODO Step 1: Revise Project Scope and Requirements - Update
+   :PRIORITY: 5
+   :ASSIGNED: task-decomposer
+   Update the project scope, objectives, and requirements for the bioelectronic medical device platform. Engage relevant stakeholders, including medical professionals, regulatory bodies, end-users, and subject matter experts in bioelectronics and neural interfaces. Prioritize consideration of factors l...
+
+   *Acceptance test*: Revise Project Scope and Requirements - Update component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 4
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design the overall system architecture, including components, interfaces, and data flows for the bioelectronic medical device platform.
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop Backend Systems
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement the backend systems, including data processing, device communication, and integration with other systems.
+
+   *Acceptance test*: Develop Backend Systems component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Frontend User Interface
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and develop the user interface for the bioelectronic medical device platform.
+
+   *Acceptance test*: Develop Frontend User Interface component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement Data Storage and Management
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the data storage and management systems for the bioelectronic medical device platform.
+
+   *Acceptance test*: Implement Data Storage and Management component is implemented, tested, and integrated.
+
+** TODO Step 6: Set up Continuous Integration and Deployment
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design System Architecture)
+   Establish a continuous integration and deployment pipeline for the bioelectronic medical device platform.
+
+   *Acceptance test*: Set up Continuous Integration and Deployment component is implemented, tested, and integrated.
+
+** TODO Step 7: Develop Testing and Quality Assurance Strategies
+   :PRIORITY: 3
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Design System Architecture)
+   Define and implement testing and quality assurance strategies for the bioelectronic medical device platform.
+
+   *Acceptance test*: Develop Testing and Quality Assurance Strategies component is implemented, tested, and integrated.
+
+** TODO Step 8: Establish Security and Compliance
+   :PRIORITY: 2
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement security measures and ensure compliance with relevant regulations and standards for medical devices.
+
+   *Acceptance test*: Establish Security and Compliance component is implemented, tested, and integrated.
+
+** TODO Step 9: Create Documentation and User Guides
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop comprehensive documentation and user guides for the bioelectronic medical device platform.
+
+   *Acceptance test*: Create Documentation and User Guides component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: BioelectronicMedicineForge can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Develop a platform for designing and testing bioelectronic medical devices that interface directly w
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Healthcare professionals (clinicians, administrators) in clinical settings
+
+* Primary Output Artifact
+
+A deployed platform with user-facing interface

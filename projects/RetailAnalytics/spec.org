@@ -1,0 +1,144 @@
+#+TITLE: RetailAnalytics
+#+SUBTITLE: A comprehensive analytics platform for retail businesses, providing insights on customer behavior, sales trends, and inventory optimization.
+#+CATEGORY: MARKETING
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A comprehensive analytics platform for retail businesses, providing insights on customer behavior, sales trends, and inventory optimization.
+
+* Foundational Axiom
+
+Existing approaches to comprehensive analytics platform fail because they optimize for the common case while ignoring structural constraints; RetailAnalytics makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: RetailAnalytics solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements
+   :PRIORITY: 1
+   :ASSIGNED: task-decomposer
+   Document the project's objectives, features, and functionalities. Define key performance indicators (KPIs) for each module.
+
+   *Acceptance test*: Define Project Scope and Requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Implement DevOps Strategy
+   :PRIORITY: 5
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Setup continuous integration/continuous deployment (CI/CD) pipelines and scalable infrastructure for the platform.
+
+   *Acceptance test*: Implement DevOps Strategy component is implemented, tested, and integrated.
+
+** TODO Step 3: Design User Interface
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Create an intuitive and user-friendly interface for the analytics platform.
+
+   *Acceptance test*: Design User Interface component is implemented, tested, and integrated.
+
+** TODO Step 4: Perform Quality Assurance Tests
+   :PRIORITY: 5
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Implement Backend for Analytics Platform, Design User Interface)
+   Test the platform for functionality, usability, performance, and security.
+
+   *Acceptance test*: Perform Quality Assurance Tests component is implemented, tested, and integrated.
+
+** TODO Step 5: Develop Database Scheme
+   :PRIORITY: 4
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design the database schema to store and manage all necessary data.
+
+   *Acceptance test*: Develop Database Scheme component is implemented, tested, and integrated.
+
+** TODO Step 6: Develop Backend for Analytics Platform
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Implement the backend services for data processing, analysis, and reporting.
+
+   *Acceptance test*: Develop Backend for Analytics Platform component is implemented, tested, and integrated.
+
+** TODO Step 7: Design Customer Behavior Module
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Create a module for analyzing customer behavior, including heat maps, customer segmentation, and buying patterns.
+
+   *Acceptance test*: Design Customer Behavior Module component is implemented, tested, and integrated.
+
+** TODO Step 8: Design Sales Trends Module
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Create a module for analyzing sales trends, including revenue forecasting, product performance analysis, and seasonal trends.
+
+   *Acceptance test*: Design Sales Trends Module component is implemented, tested, and integrated.
+
+** TODO Step 9: Design Inventory Optimization Module
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Create a module for optimizing inventory, including demand forecasting, reordering recommendations, and out-of-stock alerts.
+
+   *Acceptance test*: Design Inventory Optimization Module component is implemented, tested, and integrated.
+
+** TODO Step 10: Review and Approve Code
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Implement Backend for Analytics Platform)
+   Review code for quality, performance, and adherence to best practices.
+
+   *Acceptance test*: Review and Approve Code component is implemented, tested, and integrated.
+
+** TODO Step 11: Review and Approve Design Documents
+   :PRIORITY: 1
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design Customer Behavior Module, Design Sales Trends Module, Design Inventory Optimization Module, Design User Interface)
+   Review design documents to ensure they meet project requirements.
+
+   *Acceptance test*: Review and Approve Design Documents component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: RetailAnalytics can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-003: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A comprehensive analytics platform for retail businesses, providing insights on customer behavior, s
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Marketing professionals and campaign managers
+
+* Primary Output Artifact
+
+A deployed platform with user-facing interface

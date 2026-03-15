@@ -1,0 +1,110 @@
+#+TITLE: robotsConstructionAutonome
+#+SUBTITLE: Des robots automatisés pour réaliser des tâches de construction comme la pose de briques et le coulage de béton.
+#+CATEGORY: AUTONOMOUS_SYSTEMS
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Des robots automatisés pour réaliser des tâches de construction comme la pose de briques et le coulage de béton.
+
+* Foundational Axiom
+
+Autonomous systems fail when they optimize for nominal conditions; robotsConstructionAutonome guarantees safe behavior across the full distribution of operating conditions.
+
+* Anti-Goals
+
+- *General-purpose platform*: robotsConstructionAutonome solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Test and Refine Robots' Construction Capabilities
+   :STATUS: PENDING_REVIEW
+   Perform tests to ensure robots can perform their construction tasks accurately and safely. This includes testing the brick placement robotic arm, verifying the brick selection and delivery system, evaluating concrete pouring automation, and documenting all test procedures and results.
+
+* Build Order
+
+** TODO Step 1: Design and prototype robotic arm for brick placement
+   :PRIORITY: 3
+   :ASSIGNED: code-architect
+   Develop a design for the robotic arm that will handle bricks and position them accurately.
+
+   *Acceptance test*: Design and prototype robotic arm for brick placement component is implemented, tested, and integrated.
+
+** TODO Step 2: Create a system for brick selection and delivery
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design and prototype robotic arm for brick placement)
+   Develop a system that will automatically select bricks of the appropriate size and deliver them to the robotic arm.
+
+   *Acceptance test*: Create a system for brick selection and delivery component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop robotic arm control software
+   :PRIORITY: 4
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design and prototype robotic arm for brick placement)
+   Write the software that will control the movement and positioning of the robotic arm.
+
+   *Acceptance test*: Develop robotic arm control software component is implemented, tested, and integrated.
+
+** TODO Step 4: Research and implement concrete pouring automation
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Investigate methods for automated concrete pouring and develop a solution for the robots.
+
+   *Acceptance test*: Research and implement concrete pouring automation component is implemented, tested, and integrated.
+
+** TODO Step 5: Test and Refine Robots' Construction Capabilities
+   :PRIORITY: 4
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Design and prototype robotic arm for brick placement, Create a system for brick selection and delivery, Research and implement concrete pouring automation)
+   Perform tests to ensure robots can perform their construction tasks accurately and safely. This includes testing the brick placement robotic arm, verifying the brick selection and delivery system, evaluating concrete pouring automation, and documenting all test procedures and results.
+
+   *Acceptance test*: Test and Refine Robots' Construction Capabilities component is implemented, tested, and integrated.
+
+** TODO Step 6: Develop robotic arm gripper design
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Design and prototype robotic arm for brick placement)
+   Create a design for the gripper that will hold and release bricks.
+
+   *Acceptance test*: Develop robotic arm gripper design component is implemented, tested, and integrated.
+
+** TODO Step 7: Design and develop safety mechanisms for the robots
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   Create a design for the safety features that will prevent accidents during construction.
+
+   *Acceptance test*: Design and develop safety mechanisms for the robots component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: robotsConstructionAutonome can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Des robots automatisés pour réaliser des tâches de construction comme la pose de briques et le coula
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Robotics engineers and autonomous systems operators
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

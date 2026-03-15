@@ -1,0 +1,139 @@
+#+TITLE: FloatingOffshoreWindFarm
+#+SUBTITLE: A design for floating wind turbines that can be deployed in deep offshore waters, expanding wind energy potential.
+#+CATEGORY: ENERGY
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A design for floating wind turbines that can be deployed in deep offshore waters, expanding wind energy potential.
+
+* Foundational Axiom
+
+Energy systems fail when they optimize for peak efficiency at the cost of resilience; FloatingOffshoreWindFarm maintains correctness across the full operating envelope.
+
+* Anti-Goals
+
+- *General-purpose platform*: FloatingOffshoreWindFarm solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Requirements Gathering for Floating Offshore Wind Farm System
+   :STATUS: IN_REVIEW
+   Comprehensive gathering and documentation of functional and non-functional requirements for the floating offshore wind farm system. This includes input from stakeholders such as wind turbine manufacturers, electrical engineers, marine engineers, software developers (for automation and control systems), and data scientists (for predictive maintenance and optimization). The goal is to ensure a holistic understanding of system requirements for effective design, implementation, and optimization.
+
+** Integration and Testing of Floating Offshore Wind Farm System Components
+   :STATUS: UNKNOWN
+   Integrate the individual components of the floating offshore wind farm system, test for functionality, compatibility, and performance.
+
+** Deployment and Installation of Floating Offshore Wind Farm
+   :STATUS: PENDING_REVIEW
+   Plan, coordinate, and execute the deployment and installation of the floating offshore wind farm system in a deep-sea location. This task includes preliminary site surveys, equipment preparation, coordination with logistics, and supervision during the installation process. The goal is to ensure seamless integration with existing infrastructure and minimal environmental impact. Additionally, consider implementing a phased approach for deployment to minimize disruption and risk.
+
+* Build Order
+
+** TODO Step 1: Requirements Gathering for Floating Offshore Wind Farm System
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Comprehensive gathering and documentation of functional and non-functional requirements for the floating offshore wind farm system. This includes input from stakeholders such as wind turbine manufacturers, electrical engineers, marine engineers, software developers (for automation and control system...
+
+   *Acceptance test*: Requirements Gathering for Floating Offshore Wind Farm System component is implemented, tested, and integrated.
+
+** TODO Step 2: Design Concept for Floating Offshore Wind Turbines
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Requirements Gathering for Floating Offshore Wind Farm System)
+   Develop a conceptual design for the floating wind turbines that can be deployed in deep offshore waters.
+
+   *Acceptance test*: Design Concept for Floating Offshore Wind Turbines component is implemented, tested, and integrated.
+
+** TODO Step 3: Detailed Design of Floating Offshore Wind Turbine Structure
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design Concept for Floating Offshore Wind Turbines)
+   Create a detailed design for the structure of the floating wind turbines, including materials, dimensions, and engineering specifications.
+
+   *Acceptance test*: Detailed Design of Floating Offshore Wind Turbine Structure component is implemented, tested, and integrated.
+
+** TODO Step 4: Electrical Systems Design for Floating Offshore Wind Farm
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design Concept for Floating Offshore Wind Turbines)
+   Develop the electrical systems design for the floating offshore wind farm, including the turbine generator, power distribution, and grid connection.
+
+   *Acceptance test*: Electrical Systems Design for Floating Offshore Wind Farm component is implemented, tested, and integrated.
+
+** TODO Step 5: Mechanical Systems Design for Floating Offshore Wind Farm
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design Concept for Floating Offshore Wind Turbines)
+   Create the mechanical systems design for the floating offshore wind farm, including bearings, hydraulics, and control systems.
+
+   *Acceptance test*: Mechanical Systems Design for Floating Offshore Wind Farm component is implemented, tested, and integrated.
+
+** TODO Step 6: Software Architecture Design for Floating Offshore Wind Farm
+   :PRIORITY: 3
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Design Concept for Floating Offshore Wind Turbines)
+   Develop the software architecture design for the monitoring, control, and communication systems of the floating offshore wind farm.
+
+   *Acceptance test*: Software Architecture Design for Floating Offshore Wind Farm component is implemented, tested, and integrated.
+
+** TODO Step 7: Implementation of Floating Offshore Wind Farm System Components
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Detailed Design of Floating Offshore Wind Turbine Structure, Electrical Systems Design for Floating Offshore Wind Farm, Mechanical Systems Design for Floating Offshore Wind Farm, Software Architecture Design for Floating Offshore Wind Farm)
+   Develop the individual components of the floating offshore wind farm system, including turbine generators, electrical systems, mechanical systems, and control software.
+
+   *Acceptance test*: Implementation of Floating Offshore Wind Farm System Components component is implemented, tested, and integrated.
+
+** TODO Step 8: Integration and Testing of Floating Offshore Wind Farm System Components
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Implementation of Floating Offshore Wind Farm System Components)
+   Integrate the individual components of the floating offshore wind farm system, test for functionality, compatibility, and performance.
+
+   *Acceptance test*: Integration and Testing of Floating Offshore Wind Farm System Components component is implemented, tested, and integrated.
+
+** TODO Step 9: Deployment and Installation of Floating Offshore Wind Farm
+   :PRIORITY: 5
+   :ASSIGNED: task-decomposer
+   :DEPENDS: (depends on: Integration and Testing of Floating Offshore Wind Farm System Components)
+   Plan, coordinate, and execute the deployment and installation of the floating offshore wind farm system in a deep-sea location. This task includes preliminary site surveys, equipment preparation, coordination with logistics, and supervision during the installation process. The goal is to ensure seam...
+
+   *Acceptance test*: Deployment and Installation of Floating Offshore Wind Farm component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: FloatingOffshoreWindFarm can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A design for floating wind turbines that can be deployed in deep offshore waters, expanding wind ene
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Energy system operators and grid engineers
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

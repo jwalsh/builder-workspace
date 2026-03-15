@@ -1,0 +1,114 @@
+#+TITLE: traducteurPenséeTexte
+#+SUBTITLE: Un système BCI qui traduit les schémas de pensée en texte écrit, facilitant la communication des personnes avec des troubles de la parole.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Un système BCI qui traduit les schémas de pensée en texte écrit, facilitant la communication des personnes avec des troubles de la parole.
+
+* Foundational Axiom
+
+Existing approaches to un système bci qui traduit les schémas de pensée en texte éc fail because they optimize for the common case while ignoring structural constraints; traducteurPenséeTexte makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: traducteurPenséeTexte solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Build Order
+
+** TODO Step 1: Define System Architecture
+   :PRIORITY: 1
+   :ASSIGNED: project-manager
+   Develop a high-level architecture for the BCI system that translates thought patterns into written text.
+
+   *Acceptance test*: Define System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 2: Design BCI Interface
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Define System Architecture)
+   Create a user interface design for the BCI system to capture thought patterns from the user.
+
+   *Acceptance test*: Design BCI Interface component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop BCI Algorithm
+   :PRIORITY: 3
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define System Architecture)
+   Create the algorithm that will interpret thought patterns and translate them into text.
+
+   *Acceptance test*: Develop BCI Algorithm component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Text Generation Module
+   :PRIORITY: 4
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Develop BCI Algorithm)
+   Create a module that will convert the interpreted thought patterns into written text.
+
+   *Acceptance test*: Develop Text Generation Module component is implemented, tested, and integrated.
+
+** TODO Step 5: Integrate System Components
+   :PRIORITY: 5
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design BCI Interface, Develop BCI Algorithm, Develop Text Generation Module)
+   Combine the developed components into a functional system.
+
+   *Acceptance test*: Integrate System Components component is implemented, tested, and integrated.
+
+** TODO Step 6: Test System Functionality
+   :PRIORITY: 1
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Integrate System Components)
+   Perform extensive testing on the system to ensure it functions correctly.
+
+   *Acceptance test*: Test System Functionality component is implemented, tested, and integrated.
+
+** TODO Step 7: Review System Design
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Integrate System Components)
+   Review the system design and architecture for potential improvements.
+
+   *Acceptance test*: Review System Design component is implemented, tested, and integrated.
+
+** TODO Step 8: Write Technical Documentation
+   :PRIORITY: 3
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Test System Functionality, Review System Design)
+   Create technical documentation for the system to guide developers and users.
+
+   *Acceptance test*: Write Technical Documentation component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: traducteurPenséeTexte can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Un système BCI qui traduit les schémas de pensée en texte écrit, facilitant la communication des per
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

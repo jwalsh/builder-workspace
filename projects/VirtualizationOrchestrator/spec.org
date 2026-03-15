@@ -1,0 +1,120 @@
+#+TITLE: VirtualizationOrchestrator
+#+SUBTITLE: A platform for managing and orchestrating virtualized resources across hybrid cloud environments.
+#+CATEGORY: INFRASTRUCTURE
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A platform for managing and orchestrating virtualized resources across hybrid cloud environments.
+
+* Foundational Axiom
+
+Infrastructure tools fail when they treat configuration as static; VirtualizationOrchestrator models infrastructure as a continuously evolving system.
+
+* Anti-Goals
+
+- *General-purpose platform*: VirtualizationOrchestrator solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Build Order
+
+** TODO Step 1: Define project requirements and use cases
+   :PRIORITY: 1
+   :ASSIGNED: project-manager
+   Identify the key functionalities and non-functional requirements of the VirtualizationOrchestrator platform.
+
+   *Acceptance test*: Define project requirements and use cases component is implemented, tested, and integrated.
+
+** TODO Step 2: Design the architecture for the platform
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define project requirements and use cases)
+   Develop a high-level design of the VirtualizationOrchestrator system, including its components and interactions.
+
+   *Acceptance test*: Design the architecture for the platform component is implemented, tested, and integrated.
+
+** TODO Step 3: Implement database schema and models
+   :PRIORITY: 5
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design the architecture for the platform)
+   Develop the necessary database schema and models to store and manage data related to virtualized resources.
+
+   *Acceptance test*: Implement database schema and models component is implemented, tested, and integrated.
+
+** TODO Step 4: Secure the VirtualizationOrchestrator platform
+   :PRIORITY: 5
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Implement backend services)
+   Perform security audits and implement necessary measures to protect the VirtualizationOrchestrator from potential threats.
+
+   *Acceptance test*: Secure the VirtualizationOrchestrator platform component is implemented, tested, and integrated.
+
+** TODO Step 5: Develop the backend services for the platform
+   :PRIORITY: 4
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design the architecture for the platform)
+   Implement the necessary backend services to support the functionalities of the VirtualizationOrchestrator.
+
+   *Acceptance test*: Develop the backend services for the platform component is implemented, tested, and integrated.
+
+** TODO Step 6: Write functional and unit tests
+   :PRIORITY: 4
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Implement backend services, Implement database schema and models)
+   Create test cases for the VirtualizationOrchestrator platform to ensure its correct functioning.
+
+   *Acceptance test*: Write functional and unit tests component is implemented, tested, and integrated.
+
+** TODO Step 7: Create a user interface design for the platform
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Define project requirements and use cases)
+   Design the frontend user interface for managing and orchestrating virtualized resources across hybrid cloud environments.
+
+   *Acceptance test*: Create a user interface design for the platform component is implemented, tested, and integrated.
+
+** TODO Step 8: Integrate DevOps practices and tools
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design the architecture for the platform)
+   Choose and configure appropriate DevOps tools for continuous integration, delivery, and deployment of the VirtualizationOrchestrator.
+
+   *Acceptance test*: Integrate DevOps practices and tools component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: VirtualizationOrchestrator can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A platform for managing and orchestrating virtualized resources across hybrid cloud environments.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+DevOps engineers and infrastructure operators
+
+* Primary Output Artifact
+
+A deployed platform with user-facing interface

@@ -1,0 +1,137 @@
+#+TITLE: RealTimeIoTDataProcessingPlatform
+#+SUBTITLE: A platform for ingesting and processing data from millions of IoT devices in real-time, with support for complex event processing and automated actions.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A platform for ingesting and processing data from millions of IoT devices in real-time, with support for complex event processing and automated actions.
+
+* Foundational Axiom
+
+Existing approaches to platform fail because they optimize for the common case while ignoring structural constraints; RealTimeIoTDataProcessingPlatform makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: RealTimeIoTDataProcessingPlatform solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Write User Documentation
+   :STATUS: UNKNOWN
+   Create user documentation detailing the usage of the platform, including setup, configuration, and troubleshooting.
+
+* Build Order
+
+** TODO Step 1: Design Architecture for Real-Time Data Processing
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Create a high-level architecture design for the platform that can handle real-time data from millions of IoT devices.
+
+   *Acceptance test*: Design Architecture for Real-Time Data Processing component is implemented, tested, and integrated.
+
+** TODO Step 2: Implement Automated Action Support
+   :PRIORITY: 5
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design Architecture for Real-Time Data Processing)
+   Add support for automated actions based on real-time data processing and event triggering.
+
+   *Acceptance test*: Implement Automated Action Support component is implemented, tested, and integrated.
+
+** TODO Step 3: Write User Documentation
+   :PRIORITY: 5
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Design Architecture for Real-Time Data Processing)
+   Create user documentation detailing the usage of the platform, including setup, configuration, and troubleshooting.
+
+   *Acceptance test*: Write User Documentation component is implemented, tested, and integrated.
+
+** TODO Step 4: Create Web Interface for Monitoring and Management
+   :PRIORITY: 4
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design Architecture for Real-Time Data Processing)
+   Develop a user interface for monitoring the platform's performance, managing devices, and configuring rules.
+
+   *Acceptance test*: Create Web Interface for Monitoring and Management component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement Complex Event Processing Layer
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design Architecture for Real-Time Data Processing)
+   Develop the layer responsible for processing complex events based on real-time data.
+
+   *Acceptance test*: Implement Complex Event Processing Layer component is implemented, tested, and integrated.
+
+** TODO Step 6: Perform DevOps Configuration and Setup
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design Architecture for Real-Time Data Processing)
+   Configure the platform to follow best practices in DevOps, including continuous integration/continuous deployment (CI/CD) and infrastructure as code (IaC).
+
+   *Acceptance test*: Perform DevOps Configuration and Setup component is implemented, tested, and integrated.
+
+** TODO Step 7: Define Interface for IoT Devices Ingestion
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design Architecture for Real-Time Data Processing)
+   Design and specify the interface to be used by IoT devices for data ingestion.
+
+   *Acceptance test*: Define Interface for IoT Devices Ingestion component is implemented, tested, and integrated.
+
+** TODO Step 8: Set Up Database Schema and Storage Strategy
+   :PRIORITY: 2
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design Architecture for Real-Time Data Processing)
+   Define the database schema and storage strategy to support efficient data processing and retrieval.
+
+   *Acceptance test*: Set Up Database Schema and Storage Strategy component is implemented, tested, and integrated.
+
+** TODO Step 9: Perform Security Audit and Risk Assessment
+   :PRIORITY: 1
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design Architecture for Real-Time Data Processing)
+   Evaluate the security risks associated with the platform and propose countermeasures to mitigate them.
+
+   *Acceptance test*: Perform Security Audit and Risk Assessment component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: RealTimeIoTDataProcessingPlatform can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A platform for ingesting and processing data from millions of IoT devices in real-time, with support
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A deployed platform with user-facing interface

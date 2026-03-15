@@ -1,0 +1,145 @@
+#+TITLE: BiometricAccessControl
+#+SUBTITLE: Advanced biometric systems for secure access control in high-security facilities, using a combination of facial recognition, fingerprint, and iris scanning.
+#+CATEGORY: BIOTECH
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Advanced biometric systems for secure access control in high-security facilities, using a combination of facial recognition, fingerprint, and iris scanning.
+
+* Foundational Axiom
+
+Biotech tools fail when they treat biological systems as deterministic; BiometricAccessControl embraces stochasticity as a design constraint.
+
+* Anti-Goals
+
+- *General-purpose platform*: BiometricAccessControl solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** System Architecture Design for Biometric Access Control System
+   :STATUS: APPROVED
+   Design the overall architecture of the biometric access control system, including components for facial recognition, fingerprint scanning, iris scanning, and access control management. Define data flows, interfaces, integration points, and security considerations. Address scalability, performance, fault tolerance, maintainability aspects, as well as data privacy and compliance requirements. Emphasize on modularity, extensibility, and ease of integration with third-party systems. Provide detailed...
+
+* Build Order
+
+** TODO Step 1: Project Planning and Requirements Gathering
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Define project scope, objectives, and requirements for the biometric access control system. Conduct stakeholder interviews, analyze existing systems, and document functional and non-functional requirements.
+
+   *Acceptance test*: Project Planning and Requirements Gathering component is implemented, tested, and integrated.
+
+** TODO Step 2: System Architecture Design for Biometric Access Control System
+   :PRIORITY: 5
+   :ASSIGNED: task-decomposer
+   :DEPENDS: (depends on: Project Planning and Requirements Gathering)
+   Design the overall architecture of the biometric access control system, including components for facial recognition, fingerprint scanning, iris scanning, and access control management. Define data flows, interfaces, integration points, and security considerations. Address scalability, performance, f...
+
+   *Acceptance test*: System Architecture Design for Biometric Access Control System component is implemented, tested, and integrated.
+
+** TODO Step 3: Biometric Data Acquisition and Processing
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Develop components for acquiring and processing biometric data from various sources (cameras, fingerprint scanners, iris scanners). Implement algorithms for feature extraction, matching, and identification.
+
+   *Acceptance test*: Biometric Data Acquisition and Processing component is implemented, tested, and integrated.
+
+** TODO Step 4: Database Design and Implementation
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: System Architecture Design)
+   Design and implement the database schema for storing biometric data, user profiles, access logs, and other relevant information. Ensure data security, integrity, and compliance with relevant regulations.
+
+   *Acceptance test*: Database Design and Implementation component is implemented, tested, and integrated.
+
+** TODO Step 5: Access Control Management
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design, Database Design and Implementation)
+   Develop the access control management system, including user authentication, authorization, and access log management. Integrate with the biometric data processing components and other security systems.
+
+   *Acceptance test*: Access Control Management component is implemented, tested, and integrated.
+
+** TODO Step 6: User Interface Development
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Design and develop the user interface for the biometric access control system, including interfaces for enrollment, authentication, and administration. Ensure usability, accessibility, and compliance with relevant standards.
+
+   *Acceptance test*: User Interface Development component is implemented, tested, and integrated.
+
+** TODO Step 7: Security Audit and Hardening
+   :PRIORITY: 1
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Biometric Data Acquisition and Processing, Access Control Management, Database Design and Implementation)
+   Perform a comprehensive security audit of the biometric access control system, identifying potential vulnerabilities and implementing security hardening measures. Ensure compliance with relevant security standards and regulations.
+
+   *Acceptance test*: Security Audit and Hardening component is implemented, tested, and integrated.
+
+** TODO Step 8: Integration and System Testing
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Biometric Data Acquisition and Processing, Access Control Management, User Interface Development, Security Audit and Hardening)
+   Integrate all components of the biometric access control system and perform comprehensive system testing, including functional, performance, and security testing. Ensure end-to-end functionality and compliance with requirements.
+
+   *Acceptance test*: Integration and System Testing component is implemented, tested, and integrated.
+
+** TODO Step 9: Deployment and Maintenance Planning
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Integration and System Testing)
+   Plan for the deployment of the biometric access control system in high-security facilities, including installation, configuration, and maintenance procedures. Develop documentation and training materials for end-users and support staff.
+
+   *Acceptance test*: Deployment and Maintenance Planning component is implemented, tested, and integrated.
+
+** TODO Step 10: Documentation and User Guides
+   :PRIORITY: 4
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Integration and System Testing, Deployment and Maintenance Planning)
+   Develop comprehensive documentation and user guides for the biometric access control system, including installation guides, user manuals, and technical reference materials.
+
+   *Acceptance test*: Documentation and User Guides component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: BiometricAccessControl can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Advanced biometric systems for secure access control in high-security facilities, using a combinatio
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Biotechnology researchers and lab scientists
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

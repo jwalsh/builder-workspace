@@ -1,0 +1,158 @@
+#+TITLE: CrossGenerationalMentorMatcher
+#+SUBTITLE: A tool specifically designed to facilitate mentorship between different generational groups in the workplace.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A tool specifically designed to facilitate mentorship between different generational groups in the workplace.
+
+* Foundational Axiom
+
+Existing approaches to tool specifically designed fail because they optimize for the common case while ignoring structural constraints; CrossGenerationalMentorMatcher makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: CrossGenerationalMentorMatcher solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Architecture Design
+   :STATUS: REVISE
+   Design the overall system architecture for CrossGenerationalMentorMatcher, including web application, database, and any necessary integrations with existing systems or third-party services (e.g., authentication, messaging, notifications). This includes user management, profile management, matching algorithm, communication channels, reporting and analytics, and administration tools. Consider scalability, security, and performance in the design.
+
+* Build Order
+
+** TODO Step 1: Project Planning and Requirements Gathering
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Define project scope, objectives, and requirements. Conduct research and gather input from stakeholders to understand the needs of different generational groups in the workplace.
+
+   *Acceptance test*: Project Planning and Requirements Gathering component is implemented, tested, and integrated.
+
+** IN_PROGRESS Step 2: Architecture Design
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Project Planning and Requirements Gathering)
+   Design the overall system architecture for CrossGenerationalMentorMatcher, including web application, database, and any necessary integrations with existing systems or third-party services (e.g., authentication, messaging, notifications). This includes user management, profile management, matching a...
+
+   *Acceptance test*: Architecture Design component is implemented, tested, and integrated.
+
+** TODO Step 3: Security and Data Privacy
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Architecture Design)
+   Implement security measures to protect user data and ensure compliance with relevant data privacy regulations.
+
+   *Acceptance test*: Security and Data Privacy component is implemented, tested, and integrated.
+
+** TODO Step 4: Database Design and Implementation
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Architecture Design)
+   Design and implement the database schema to store user profiles, mentorship relationships, and other relevant data.
+
+   *Acceptance test*: Database Design and Implementation component is implemented, tested, and integrated.
+
+** TODO Step 5: User Authentication and Authorization
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Architecture Design)
+   Implement user authentication and authorization mechanisms, including user registration, login, and role-based access control.
+
+   *Acceptance test*: User Authentication and Authorization component is implemented, tested, and integrated.
+
+** TODO Step 6: User Interface Design and Development
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Architecture Design)
+   Design and develop the user interface for the web application, including pages for user profiles, mentorship matching, communication, and progress tracking.
+
+   *Acceptance test*: User Interface Design and Development component is implemented, tested, and integrated.
+
+** TODO Step 7: Communication and Collaboration Features
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Architecture Design, Database Design and Implementation)
+   Implement features for mentors and mentees to communicate, share resources, and collaborate effectively, such as messaging, video conferencing, and file sharing.
+
+   *Acceptance test*: Communication and Collaboration Features component is implemented, tested, and integrated.
+
+** TODO Step 8: Mentorship Matching Algorithm
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Architecture Design, Database Design and Implementation)
+   Develop the core algorithm for matching mentors and mentees based on various criteria, such as skills, interests, goals, and generational differences.
+
+   *Acceptance test*: Mentorship Matching Algorithm component is implemented, tested, and integrated.
+
+** TODO Step 9: Progress Tracking and Reporting
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Architecture Design, Database Design and Implementation)
+   Develop mechanisms for tracking the progress of mentorship relationships and generating reports or analytics for program evaluation and improvement.
+
+   *Acceptance test*: Progress Tracking and Reporting component is implemented, tested, and integrated.
+
+** TODO Step 10: Testing and Quality Assurance
+   :PRIORITY: 3
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: User Interface Design and Development, Mentorship Matching Algorithm, Communication and Collaboration Features, Progress Tracking and Reporting)
+   Develop and execute comprehensive test plans to ensure the application meets functional and non-functional requirements, including usability, performance, and accessibility.
+
+   *Acceptance test*: Testing and Quality Assurance component is implemented, tested, and integrated.
+
+** TODO Step 11: Deployment and DevOps
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Testing and Quality Assurance)
+   Set up the deployment environment, configure continuous integration and continuous deployment (CI/CD) pipelines, and automate the deployment process.
+
+   *Acceptance test*: Deployment and DevOps component is implemented, tested, and integrated.
+
+** TODO Step 12: Documentation and User Support
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: User Interface Design and Development, Mentorship Matching Algorithm, Communication and Collaboration Features, Progress Tracking and Reporting)
+   Create comprehensive documentation for users, administrators, and developers, including user guides, technical documentation, and support resources.
+
+   *Acceptance test*: Documentation and User Support component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: CrossGenerationalMentorMatcher can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-003: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A tool specifically designed to facilitate mentorship between different generational groups in the w
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A production-ready tool with CLI and/or web interface

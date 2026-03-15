@@ -1,0 +1,148 @@
+#+TITLE: AIConsciousnessExplorer
+#+SUBTITLE: A research tool for studying and simulating various theories of consciousness in artificial intelligence.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-13
+#+STARTUP: overview
+
+* Overview
+
+A research tool for studying and simulating various theories of consciousness in artificial intelligence.
+
+* Foundational Axiom
+
+Existing approaches to research tool fail because they optimize for the common case while ignoring structural constraints; AIConsciousnessExplorer makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: AIConsciousnessExplorer solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Scope and Requirements - REVISED
+   :STATUS: UNKNOWN
+   This RFC aims to revise the project scope, objectives, and requirements for the AIConsciousnessExplorer tool. The revised document will be based on feedback from stakeholders, subject matter experts, and potential end-users. It will include identification of the target audience, use cases, and key features. The system architecture, data models, and integration points with existing systems or data sources will also be defined. Performance, scalability, security, and compliance requirements will b...
+
+** Design System Architecture for AIConsciousnessExplorer
+   :STATUS: APPROVED
+   Design the overall system architecture for the AIConsciousnessExplorer tool, including components, modules, their interactions, and the data flow. The design should emphasize modularity, scalability, performance optimization, error handling, and maintainability. The architecture should support the integration of various consciousness theories and simulation models, as well as the ability to add new theories and models in the future. Additionally, it should include a user interface for researcher...
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements - REVISED
+   :PRIORITY: 5
+   :ASSIGNED: task-decomposer
+   This RFC aims to revise the project scope, objectives, and requirements for the AIConsciousnessExplorer tool. The revised document will be based on feedback from stakeholders, subject matter experts, and potential end-users. It will include identification of the target audience, use cases, and key f...
+
+   *Acceptance test*: Define Project Scope and Requirements - REVISED component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture for AIConsciousnessExplorer
+   :PRIORITY: 5
+   :ASSIGNED: task-decomposer
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design the overall system architecture for the AIConsciousnessExplorer tool, including components, modules, their interactions, and the data flow. The design should emphasize modularity, scalability, performance optimization, error handling, and maintainability. The architecture should support the i...
+
+   *Acceptance test*: Design System Architecture for AIConsciousnessExplorer component is implemented, tested, and integrated.
+
+** TODO Step 3: Research Existing Theories and Approaches
+   :PRIORITY: 4
+   :ASSIGNED: backend-developer
+   Conduct a thorough literature review and research existing theories and approaches related to consciousness in artificial intelligence.
+
+   *Acceptance test*: Research Existing Theories and Approaches component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Simulation Engine
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement the core simulation engine that can execute and simulate various theories of consciousness in artificial intelligence.
+
+   *Acceptance test*: Develop Simulation Engine component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement User Interface
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and develop the user interface for the AIConsciousnessExplorer tool, allowing users to configure simulations, visualize results, and interact with the system.
+
+   *Acceptance test*: Implement User Interface component is implemented, tested, and integrated.
+
+** TODO Step 6: Develop Data Management System
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement a data management system to store and retrieve simulation data, configurations, and results.
+
+   *Acceptance test*: Develop Data Management System component is implemented, tested, and integrated.
+
+** TODO Step 7: Implement Security Measures
+   :PRIORITY: 3
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Ensure the security of the AIConsciousnessExplorer tool by implementing appropriate security measures, such as authentication, authorization, and data encryption.
+
+   *Acceptance test*: Implement Security Measures component is implemented, tested, and integrated.
+
+** TODO Step 8: Set up Continuous Integration and Deployment
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Develop Simulation Engine, Implement User Interface, Develop Data Management System, Implement Security Measures)
+   Establish a continuous integration and deployment pipeline for the AIConsciousnessExplorer tool, enabling automated testing, building, and deployment.
+
+   *Acceptance test*: Set up Continuous Integration and Deployment component is implemented, tested, and integrated.
+
+** TODO Step 9: Conduct Testing and Quality Assurance
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Develop Simulation Engine, Implement User Interface, Develop Data Management System, Implement Security Measures)
+   Perform comprehensive testing and quality assurance activities, including unit testing, integration testing, and user acceptance testing.
+
+   *Acceptance test*: Conduct Testing and Quality Assurance component is implemented, tested, and integrated.
+
+** TODO Step 10: Develop User Documentation and Training Materials
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Implement User Interface)
+   Create user documentation, tutorials, and training materials to assist users in effectively utilizing the AIConsciousnessExplorer tool.
+
+   *Acceptance test*: Develop User Documentation and Training Materials component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: AIConsciousnessExplorer can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A research tool for studying and simulating various theories of consciousness in artificial intellig
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A production-ready tool with CLI and/or web interface

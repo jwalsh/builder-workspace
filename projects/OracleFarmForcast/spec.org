@@ -1,0 +1,150 @@
+#+TITLE: OracleFarmForcast
+#+SUBTITLE: Satellite imagery of farms is analyzed by AI to forecast crop yield and suggest ways to improve field conditions.
+#+CATEGORY: AGRICULTURAL
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Satellite imagery of farms is analyzed by AI to forecast crop yield and suggest ways to improve field conditions.
+
+* Foundational Axiom
+
+Existing approaches to satellite imagery of farms is analyzed by ai fail because they optimize for the common case while ignoring structural constraints; OracleFarmForcast makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: OracleFarmForcast solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Write Technical Documentation
+   :STATUS: UNKNOWN
+   Comprehensively document the project design, implementation details, and usage instructions for future maintenance. The documentation should include sections on system architecture, API reference, data flow, security considerations, and troubleshooting guides. Include detailed explanations of key algorithms, AI models, and satellite imagery processing techniques used.
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements
+   :PRIORITY: 1
+   :ASSIGNED: project-manager
+   Develop a clear and detailed project scope, including functional and non-functional requirements for the OracleFarmForcast system.
+
+   *Acceptance test*: Define Project Scope and Requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Design AI Model Architecture
+   :PRIORITY: 2
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Create a design for the AI model that will analyze satellite imagery and predict crop yields.
+
+   *Acceptance test*: Design AI Model Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop AI Model Algorithms
+   :PRIORITY: 3
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design AI Model Architecture)
+   Implement the algorithms for the AI model to analyze satellite imagery and make predictions.
+
+   *Acceptance test*: Develop AI Model Algorithms component is implemented, tested, and integrated.
+
+** TODO Step 4: Conduct Model Training and Validation
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Develop AI Model Algorithms)
+   Train the AI model on a dataset of satellite images and validate its performance.
+
+   *Acceptance test*: Conduct Model Training and Validation component is implemented, tested, and integrated.
+
+** TODO Step 5: Design User Interface for Dashboard
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Create wireframes and mockups for the user interface of the dashboard where farmers can view predictions.
+
+   *Acceptance test*: Design User Interface for Dashboard component is implemented, tested, and integrated.
+
+** TODO Step 6: Implement Dashboard User Interface
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design User Interface for Dashboard)
+   Build the frontend for the dashboard according to the designed wireframes and mockups.
+
+   *Acceptance test*: Implement Dashboard User Interface component is implemented, tested, and integrated.
+
+** TODO Step 7: Test AI Model and Dashboard Functionality
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Implement Dashboard User Interface)
+   Perform thorough testing of the AI model and dashboard functionality to ensure proper operation.
+
+   *Acceptance test*: Test AI Model and Dashboard Functionality component is implemented, tested, and integrated.
+
+** IN_PROGRESS Step 8: Write Technical Documentation
+   :PRIORITY: 5
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: All other tasks)
+   Comprehensively document the project design, implementation details, and usage instructions for future maintenance. The documentation should include sections on system architecture, API reference, data flow, security considerations, and troubleshooting guides. Include detailed explanations of key al...
+
+   *Acceptance test*: Write Technical Documentation component is implemented, tested, and integrated.
+
+** TODO Step 9: Develop API Endpoints for Model and Dashboard
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Implement Dashboard User Interface)
+   Create API endpoints to handle requests from the frontend and pass data to the AI model.
+
+   *Acceptance test*: Develop API Endpoints for Model and Dashboard component is implemented, tested, and integrated.
+
+** TODO Step 10: Integrate AI Model with Dashboard API Endpoints
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Develop API Endpoints for Model and Dashboard)
+   Connect the AI model to the appropriate API endpoints for communication with the dashboard.
+
+   *Acceptance test*: Integrate AI Model with Dashboard API Endpoints component is implemented, tested, and integrated.
+
+** TODO Step 11: Develop Farm Image Preprocessing Pipeline
+   :PRIORITY: 3
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design AI Model Architecture)
+   Create a pipeline to preprocess the satellite images before feeding them into the AI model.
+
+   *Acceptance test*: Develop Farm Image Preprocessing Pipeline component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: OracleFarmForcast can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Satellite imagery of farms is analyzed by AI to forecast crop yield and suggest ways to improve fiel
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Agricultural scientists and farm operators
+
+* Primary Output Artifact
+
+A trained model with evaluation metrics and serving infrastructure

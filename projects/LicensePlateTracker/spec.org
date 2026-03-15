@@ -1,0 +1,144 @@
+#+TITLE: LicensePlateTracker
+#+SUBTITLE: A system using AI and networked cameras to track vehicle movements across a city by recognizing license plates.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A system using AI and networked cameras to track vehicle movements across a city by recognizing license plates.
+
+* Foundational Axiom
+
+Existing approaches to system using ai and networked cameras fail because they optimize for the common case while ignoring structural constraints; LicensePlateTracker makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: LicensePlateTracker solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Scope and Requirements - Updated
+   :STATUS: DRAFT
+   Update the scope, requirements, and constraints for the LicensePlateTracker project. This includes a comprehensive list of desired features, performance criteria, security considerations (including GDPR and local privacy laws), relevant regulations or policies, data privacy and ethical concerns, potential risks or limitations, future scalability and maintainability considerations, and any other important factors that could impact the system. Collaborate with all relevant stakeholders to ensure a...
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements - Updated
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   Update the scope, requirements, and constraints for the LicensePlateTracker project. This includes a comprehensive list of desired features, performance criteria, security considerations (including GDPR and local privacy laws), relevant regulations or policies, data privacy and ethical concerns, pot...
+
+   *Acceptance test*: Define Project Scope and Requirements - Updated component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 4
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design the overall system architecture, including the components, data flow, and communication between different modules, such as AI, camera network, and license plate recognition.
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Implement Security Measures
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement security measures to protect the system from unauthorized access, data breaches, and other potential threats, including access controls, encryption, and auditing mechanisms.
+
+   *Acceptance test*: Implement Security Measures component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop AI Module
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop the AI module responsible for processing camera footage and recognizing license plates, including training data preparation, model selection, and performance optimization.
+
+   *Acceptance test*: Develop AI Module component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement Camera Network Integration
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop the components responsible for integrating with the existing camera network, handling data streams, and communicating with the AI module.
+
+   *Acceptance test*: Implement Camera Network Integration component is implemented, tested, and integrated.
+
+** TODO Step 6: Design and Develop Database
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the database schema to store vehicle movement data, license plate information, and any other relevant data required by the system.
+
+   *Acceptance test*: Design and Develop Database component is implemented, tested, and integrated.
+
+** TODO Step 7: Set up CI/CD Pipeline
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   Establish a continuous integration and continuous deployment (CI/CD) pipeline to automate the build, testing, and deployment processes for the system.
+
+   *Acceptance test*: Set up CI/CD Pipeline component is implemented, tested, and integrated.
+
+** TODO Step 8: Develop Test Suite
+   :PRIORITY: 3
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Design System Architecture)
+   Create a comprehensive test suite to ensure the system's functionality, performance, and reliability, including unit tests, integration tests, and end-to-end tests.
+
+   *Acceptance test*: Develop Test Suite component is implemented, tested, and integrated.
+
+** TODO Step 9: Develop User Interface
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture, Design and Develop Database)
+   Design and develop the user interface for monitoring and managing the system, including visualizing vehicle movements, querying license plate data, and configuring system settings.
+
+   *Acceptance test*: Develop User Interface component is implemented, tested, and integrated.
+
+** TODO Step 10: Write Documentation
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Define Project Scope and Requirements, Design System Architecture)
+   Develop comprehensive documentation for the system, including user guides, technical documentation, and maintenance procedures.
+
+   *Acceptance test*: Write Documentation component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: LicensePlateTracker can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- AWS
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A system using AI and networked cameras to track vehicle movements across a city by recognizing lice
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

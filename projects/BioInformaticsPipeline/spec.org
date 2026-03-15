@@ -1,0 +1,153 @@
+#+TITLE: BioInformaticsPipeline
+#+SUBTITLE: Develop a scalable pipeline for processing and analyzing large-scale genomic data, supporting personalized medicine initiatives.
+#+CATEGORY: BIOTECH
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Develop a scalable pipeline for processing and analyzing large-scale genomic data, supporting personalized medicine initiatives.
+
+* Foundational Axiom
+
+Biotech tools fail when they treat biological systems as deterministic; BioInformaticsPipeline embraces stochasticity as a design constraint.
+
+* Anti-Goals
+
+- *General-purpose platform*: BioInformaticsPipeline solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Requirements
+   :STATUS: UNKNOWN
+   Gather and document the requirements for the BioInformaticsPipeline project, including input data formats (FASTA, VCF, BAM), analysis techniques (variant calling, gene expression analysis, mutation annotation, visualization tools, and statistical methods), output formats (VCF, TSV), performance requirements (24-hour processing for a human genome with the ability to scale for larger datasets), security considerations (HIPAA compliance, encryption at rest and in transit, access controls, auditing ...
+
+* Build Order
+
+** TODO Step 1: Define Project Requirements
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   Gather and document the requirements for the BioInformaticsPipeline project, including input data formats (FASTA, VCF, BAM), analysis techniques (variant calling, gene expression analysis, mutation annotation, visualization tools, and statistical methods), output formats (VCF, TSV), performance requ...
+
+   *Acceptance test*: Define Project Requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 4
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Requirements)
+   Design the overall architecture of the BioInformaticsPipeline, including components for data ingestion, processing, analysis, storage, and visualization. Consider scalability, fault tolerance, and modular design.
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Implement Security Measures
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Ensure the security of the BioInformaticsPipeline by implementing appropriate measures for data encryption, access control, and auditing.
+
+   *Acceptance test*: Implement Security Measures component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Data Ingestion Module
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement a module for ingesting genomic data from various sources, handling different file formats, and validating data integrity.
+
+   *Acceptance test*: Develop Data Ingestion Module component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement Data Processing Pipeline
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop a scalable pipeline for processing and transforming genomic data, including parallelization, fault tolerance, and efficient resource utilization.
+
+   *Acceptance test*: Implement Data Processing Pipeline component is implemented, tested, and integrated.
+
+** TODO Step 6: Develop Analysis Algorithms
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement various algorithms and techniques for analyzing genomic data, such as variant calling, gene expression analysis, and pathway analysis.
+
+   *Acceptance test*: Develop Analysis Algorithms component is implemented, tested, and integrated.
+
+** TODO Step 7: Design and Implement Data Storage
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement a scalable and efficient data storage solution for storing and retrieving genomic data and analysis results.
+
+   *Acceptance test*: Design and Implement Data Storage component is implemented, tested, and integrated.
+
+** TODO Step 8: Set up Continuous Integration and Deployment
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design System Architecture)
+   Establish a continuous integration and deployment pipeline for the BioInformaticsPipeline, including automated testing, building, and deployment to production environments.
+
+   *Acceptance test*: Set up Continuous Integration and Deployment component is implemented, tested, and integrated.
+
+** TODO Step 9: Develop Test Suite
+   :PRIORITY: 3
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Design System Architecture)
+   Create a comprehensive test suite for the BioInformaticsPipeline, including unit tests, integration tests, and end-to-end tests, to ensure the quality and reliability of the system.
+
+   *Acceptance test*: Develop Test Suite component is implemented, tested, and integrated.
+
+** TODO Step 10: Develop User Interface
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement a user-friendly interface for interacting with the BioInformaticsPipeline, including data upload, analysis configuration, and visualization of results.
+
+   *Acceptance test*: Develop User Interface component is implemented, tested, and integrated.
+
+** TODO Step 11: Write Documentation
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop comprehensive documentation for the BioInformaticsPipeline, including user guides, developer guides, and API documentation.
+
+   *Acceptance test*: Write Documentation component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: BioInformaticsPipeline can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Develop a scalable pipeline for processing and analyzing large-scale genomic data, supporting person
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Biotechnology researchers and lab scientists
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

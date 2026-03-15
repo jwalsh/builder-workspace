@@ -1,0 +1,129 @@
+#+TITLE: NeuroFeedbackMeditationAssistant
+#+SUBTITLE: A device that provides real-time neurofeedback to assist in meditation and mindfulness practices.
+#+CATEGORY: BCI
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A device that provides real-time neurofeedback to assist in meditation and mindfulness practices.
+
+* Foundational Axiom
+
+Brain-computer interfaces fail when they treat neural signals as simple input streams; NeuroFeedbackMeditationAssistant models the bidirectional adaptation between brain and system.
+
+* Anti-Goals
+
+- *General-purpose platform*: NeuroFeedbackMeditationAssistant solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Scope and Requirements - REVISED
+   :STATUS: DRAFT
+   Clearly outline the project's goals, features, user requirements, and technical specifications for the NeuroFeedbackMeditationAssistant device. This includes detailing the hardware (e.g., EEG sensors, display screen), software (e.g., AI algorithms, user interface), connectivity (e.g., Bluetooth, Wi-Fi), and power requirements of the device. Additionally, provide a detailed use case scenario to demonstrate the device's functionality.
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements - REVISED
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Clearly outline the project's goals, features, user requirements, and technical specifications for the NeuroFeedbackMeditationAssistant device. This includes detailing the hardware (e.g., EEG sensors, display screen), software (e.g., AI algorithms, user interface), connectivity (e.g., Bluetooth, Wi-...
+
+   *Acceptance test*: Define Project Scope and Requirements - REVISED component is implemented, tested, and integrated.
+
+** TODO Step 2: Design User Interface Wireframes
+   :PRIORITY: 2
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Create wireframes for the user interface of the NeuroFeedbackMeditationAssistant device, including layout and interaction design.
+
+   *Acceptance test*: Design User Interface Wireframes component is implemented, tested, and integrated.
+
+** TODO Step 3: Select Suitable Hardware Components
+   :PRIORITY: 3
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Research and select appropriate hardware components (e.g., EEG sensors, microcontrollers) for the NeuroFeedbackMeditationAssistant device.
+
+   *Acceptance test*: Select Suitable Hardware Components component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Neurofeedback Algorithm
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Select Suitable Hardware Components)
+   Design and implement an algorithm to analyze EEG data in real-time for providing neurofeedback during meditation.
+
+   *Acceptance test*: Develop Neurofeedback Algorithm component is implemented, tested, and integrated.
+
+** TODO Step 5: Integrate User Interface with Backend System
+   :PRIORITY: 2
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design User Interface Wireframes, Develop Neurofeedback Algorithm)
+   Connect the frontend user interface with the backend system for seamless data exchange and neurofeedback display.
+
+   *Acceptance test*: Integrate User Interface with Backend System component is implemented, tested, and integrated.
+
+** TODO Step 6: Conduct Device Testing
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Integrate User Interface with Backend System)
+   Test the NeuroFeedbackMeditationAssistant device for functionality, usability, and performance.
+
+   *Acceptance test*: Conduct Device Testing component is implemented, tested, and integrated.
+
+** TODO Step 7: Document Project Design and Implementation
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Define Project Scope and Requirements, Integrate User Interface with Backend System)
+   Create comprehensive documentation for the project design, architecture, and implementation details.
+
+   *Acceptance test*: Document Project Design and Implementation component is implemented, tested, and integrated.
+
+** TODO Step 8: Implement Security Measures
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Integrate User Interface with Backend System)
+   Ensure data privacy and security by implementing encryption, authentication, and other security measures.
+
+   *Acceptance test*: Implement Security Measures component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: NeuroFeedbackMeditationAssistant can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A device that provides real-time neurofeedback to assist in meditation and mindfulness practices.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Neuroscientists and clinical researchers working with neural interfaces
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

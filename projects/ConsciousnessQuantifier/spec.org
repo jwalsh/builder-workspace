@@ -1,0 +1,149 @@
+#+TITLE: ConsciousnessQuantifier
+#+SUBTITLE: A research tool that attempts to measure and quantify levels of consciousness for scientific study.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A research tool that attempts to measure and quantify levels of consciousness for scientific study.
+
+* Foundational Axiom
+
+Existing approaches to research tool fail because they optimize for the common case while ignoring structural constraints; ConsciousnessQuantifier makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: ConsciousnessQuantifier solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Scope and Requirements
+   :STATUS: REVIEW
+   Gather and document the project requirements, including a clear definition of consciousness (researching and defining various models or theories such as Orchestrated Objective Reduction (Orch-OR), Integrated Information Theory, and Phantom Limb Syndrome as an additional model), the target audience (scientific community, research institutions, healthcare professionals, and potential clients in the mental health sector), the intended use cases for the tool (research purposes, clinical studies, neu...
+
+** Design System Architecture (Revised)
+   :STATUS: APPROVED
+   Design the overall system architecture for the ConsciousnessQuantifier project. The design will focus on maintainability, modularity, scalability, and performance requirements. It will encompass the data model, algorithms, user interfaces, and system components. Provide a high-level architecture overview, detailing the interactions between components, potential challenges, risks, and edge cases for each component, as well as error handling mechanisms, performance optimizations, and security cons...
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Gather and document the project requirements, including a clear definition of consciousness (researching and defining various models or theories such as Orchestrated Objective Reduction (Orch-OR), Integrated Information Theory, and Phantom Limb Syndrome as an additional model), the target audience (...
+
+   *Acceptance test*: Define Project Scope and Requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture (Revised)
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design the overall system architecture for the ConsciousnessQuantifier project. The design will focus on maintainability, modularity, scalability, and performance requirements. It will encompass the data model, algorithms, user interfaces, and system components. Provide a high-level architecture ove...
+
+   *Acceptance test*: Design System Architecture (Revised) component is implemented, tested, and integrated.
+
+** TODO Step 3: Write Documentation and User Guides
+   :PRIORITY: 5
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Design System Architecture)
+   Prepare documentation, user guides, and training materials for the ConsciousnessQuantifier tool.
+
+   *Acceptance test*: Write Documentation and User Guides component is implemented, tested, and integrated.
+
+** TODO Step 4: Design and Develop User Interface
+   :PRIORITY: 4
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the user interface for the ConsciousnessQuantifier tool, including data visualization and reporting features.
+
+   *Acceptance test*: Design and Develop User Interface component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement Security and Access Controls
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop and implement security measures and access controls to ensure data privacy and protect the system from unauthorized access.
+
+   *Acceptance test*: Implement Security and Access Controls component is implemented, tested, and integrated.
+
+** TODO Step 6: Set up Continuous Integration and Deployment
+   :PRIORITY: 4
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design System Architecture)
+   Establish a continuous integration and deployment pipeline for automated testing, building, and deploying the application.
+
+   *Acceptance test*: Set up Continuous Integration and Deployment component is implemented, tested, and integrated.
+
+** TODO Step 7: Develop Test Suite and Quality Assurance
+   :PRIORITY: 4
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Design System Architecture)
+   Create a comprehensive test suite and implement quality assurance processes to ensure the reliability and accuracy of the ConsciousnessQuantifier tool.
+
+   *Acceptance test*: Develop Test Suite and Quality Assurance component is implemented, tested, and integrated.
+
+** TODO Step 8: Develop Data Collection and Processing Pipeline
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement the data collection and processing pipeline for gathering and preparing the necessary data for consciousness quantification.
+
+   *Acceptance test*: Develop Data Collection and Processing Pipeline component is implemented, tested, and integrated.
+
+** TODO Step 9: Implement Consciousness Quantification Algorithms
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop and implement the algorithms for quantifying levels of consciousness based on the collected data.
+
+   *Acceptance test*: Implement Consciousness Quantification Algorithms component is implemented, tested, and integrated.
+
+** TODO Step 10: Set up Database and Data Storage
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the database schema and data storage solutions for storing and retrieving the collected data and quantification results.
+
+   *Acceptance test*: Set up Database and Data Storage component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: ConsciousnessQuantifier can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A research tool that attempts to measure and quantify levels of consciousness for scientific study.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A production-ready tool with CLI and/or web interface

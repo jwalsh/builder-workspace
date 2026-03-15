@@ -1,0 +1,156 @@
+#+TITLE: OilPumpSentry
+#+SUBTITLE: Enable condition-based maintenance with near real-time inference results and notifications for sucker rod pumping systems in the oil and gas industry.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Enable condition-based maintenance with near real-time inference results and notifications for sucker rod pumping systems in the oil and gas industry.
+
+* Foundational Axiom
+
+Existing approaches to enable condition-based maintenance with near real-time infer fail because they optimize for the common case while ignoring structural constraints; OilPumpSentry makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: OilPumpSentry solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** System Architecture Design for OilPumpSentry
+   :STATUS: PENDING_REVIEW
+   Design the overall system architecture for OilPumpSentry, focusing on data ingestion, processing, storage, visualization, and security components. Consider scalability, fault tolerance, and performance requirements, focusing on industry-standard tools that are both efficient and reliable. Include a detailed discussion on the integration of real-time inference and near real-time notifications into the system architecture, considering the use of edge computing for low-latency processing. Provide a...
+
+* Build Order
+
+** TODO Step 1: Project Planning and Requirements Gathering
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Define project scope, objectives, and requirements through stakeholder interviews, market research, and analysis of existing solutions.
+
+   *Acceptance test*: Project Planning and Requirements Gathering component is implemented, tested, and integrated.
+
+** TODO Step 2: System Architecture Design for OilPumpSentry
+   :PRIORITY: 5
+   :ASSIGNED: task-decomposer
+   :DEPENDS: (depends on: Project Planning and Requirements Gathering)
+   Design the overall system architecture for OilPumpSentry, focusing on data ingestion, processing, storage, visualization, and security components. Consider scalability, fault tolerance, and performance requirements, focusing on industry-standard tools that are both efficient and reliable. Include a ...
+
+   *Acceptance test*: System Architecture Design for OilPumpSentry component is implemented, tested, and integrated.
+
+** TODO Step 3: Data Ingestion and Processing Pipeline
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Develop a pipeline to ingest and process sensor data from sucker rod pumping systems in near real-time.
+
+   *Acceptance test*: Data Ingestion and Processing Pipeline component is implemented, tested, and integrated.
+
+** TODO Step 4: Machine Learning Model Development
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Develop and train machine learning models for condition-based maintenance prediction and anomaly detection.
+
+   *Acceptance test*: Machine Learning Model Development component is implemented, tested, and integrated.
+
+** TODO Step 5: Data Storage and Management
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: System Architecture Design)
+   Design and implement a scalable and secure data storage solution for sensor data and model results.
+
+   *Acceptance test*: Data Storage and Management component is implemented, tested, and integrated.
+
+** TODO Step 6: User Interface and Visualization
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Develop a user-friendly web application for visualizing sensor data, model results, and maintenance notifications.
+
+   *Acceptance test*: User Interface and Visualization component is implemented, tested, and integrated.
+
+** TODO Step 7: Notification and Alerting System
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design, Machine Learning Model Development)
+   Implement a system for generating and delivering timely notifications and alerts based on model results.
+
+   *Acceptance test*: Notification and Alerting System component is implemented, tested, and integrated.
+
+** TODO Step 8: Security and Access Control
+   :PRIORITY: 2
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: System Architecture Design)
+   Design and implement secure authentication, authorization, and access control mechanisms for the application.
+
+   *Acceptance test*: Security and Access Control component is implemented, tested, and integrated.
+
+** TODO Step 9: Continuous Integration and Deployment
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: System Architecture Design)
+   Set up a CI/CD pipeline for automated testing, building, and deployment of the application.
+
+   *Acceptance test*: Continuous Integration and Deployment component is implemented, tested, and integrated.
+
+** TODO Step 10: Testing and Quality Assurance
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: System Architecture Design)
+   Develop and execute comprehensive test plans for functional, performance, and security testing of the application.
+
+   *Acceptance test*: Testing and Quality Assurance component is implemented, tested, and integrated.
+
+** TODO Step 11: Documentation and User Guides
+   :PRIORITY: 1
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: System Architecture Design)
+   Create technical documentation, user guides, and training materials for the application.
+
+   *Acceptance test*: Documentation and User Guides component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: OilPumpSentry can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-005: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Enable condition-based maintenance with near real-time inference results and notifications for sucke
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

@@ -1,0 +1,118 @@
+#+TITLE: NeuroProstheticLimbController
+#+SUBTITLE: An advanced BCI system for controlling prosthetic limbs with natural, thought-driven movements.
+#+CATEGORY: BCI
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+An advanced BCI system for controlling prosthetic limbs with natural, thought-driven movements.
+
+* Foundational Axiom
+
+Brain-computer interfaces fail when they treat neural signals as simple input streams; NeuroProstheticLimbController models the bidirectional adaptation between brain and system.
+
+* Anti-Goals
+
+- *General-purpose platform*: NeuroProstheticLimbController solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Comprehensive Project Requirements for NeuroProstheticLimbController - Revised
+   :STATUS: DRAFT
+   Create a detailed and comprehensive document outlining the functional and non-functional requirements for the NeuroProstheticLimbController. The document should clearly define user needs, system constraints, performance expectations, security considerations, interface design, and provide detailed sections for each major component of the system (e.g., BCI hardware, software algorithms, prosthetic limb control). The document will serve as a foundation for the project's development. The requirement...
+
+* Build Order
+
+** TODO Step 1: Design BCI System Architecture
+   :PRIORITY: 2
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Define Project Requirements)
+   Create a detailed architecture for the Brain-Computer Interface (BCI) system, including hardware and software components.
+
+   *Acceptance test*: Design BCI System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 2: Develop Frontend for BCI Interface
+   :PRIORITY: 3
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design BCI System Architecture)
+   Design and implement the user interface for the BCI system, allowing users to interact with their prosthetic limb.
+
+   *Acceptance test*: Develop Frontend for BCI Interface component is implemented, tested, and integrated.
+
+** TODO Step 3: Implement Backend Processing Logic
+   :PRIORITY: 3
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design BCI System Architecture)
+   Create the backend logic responsible for processing signals from the BCI system and controlling the prosthetic limb.
+
+   *Acceptance test*: Implement Backend Processing Logic component is implemented, tested, and integrated.
+
+** TODO Step 4: Integrate Hardware Components
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design BCI System Architecture)
+   Connect and integrate the necessary hardware components into the NeuroProstheticLimbController system.
+
+   *Acceptance test*: Integrate Hardware Components component is implemented, tested, and integrated.
+
+** TODO Step 5: Test and Validate BCI System
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Develop Frontend for BCI Interface, Implement Backend Processing Logic, Integrate Hardware Components)
+   Perform thorough testing of the BCI system to ensure proper functionality and user safety.
+
+   *Acceptance test*: Test and Validate BCI System component is implemented, tested, and integrated.
+
+** TODO Step 6: Document System Design and Implementation
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design BCI System Architecture, Develop Frontend for BCI Interface, Implement Backend Processing Logic, Integrate Hardware Components, Test and Validate BCI System)
+   Write clear, concise documentation detailing the design and implementation of the NeuroProstheticLimbController.
+
+   *Acceptance test*: Document System Design and Implementation component is implemented, tested, and integrated.
+
+** TODO Step 7: Define Comprehensive Project Requirements for NeuroProstheticLimbController - Revised
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Create a detailed and comprehensive document outlining the functional and non-functional requirements for the NeuroProstheticLimbController. The document should clearly define user needs, system constraints, performance expectations, security considerations, interface design, and provide detailed se...
+
+   *Acceptance test*: Define Comprehensive Project Requirements for NeuroProstheticLimbController - Revised component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: NeuroProstheticLimbController can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An advanced BCI system for controlling prosthetic limbs with natural, thought-driven movements.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Neuroscientists and clinical researchers working with neural interfaces
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

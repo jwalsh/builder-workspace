@@ -1,0 +1,107 @@
+#+TITLE: SpaceMiningRobots
+#+SUBTITLE: Robots designed for autonomous resource extraction from asteroids and planets.
+#+CATEGORY: AUTONOMOUS_SYSTEMS
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Robots designed for autonomous resource extraction from asteroids and planets.
+
+* Foundational Axiom
+
+Autonomous systems fail when they optimize for nominal conditions; SpaceMiningRobots guarantees safe behavior across the full distribution of operating conditions.
+
+* Anti-Goals
+
+- *General-purpose platform*: SpaceMiningRobots solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Build Order
+
+** TODO Step 1: Design Robot Architecture
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Create the overall design of the robots including mechanical structure, sensors, and propulsion systems.
+
+   *Acceptance test*: Design Robot Architecture component is implemented, tested, and integrated.
+
+** TODO Step 2: Design and Develop Power Systems for Robots
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design Robot Architecture)
+   Create power systems that can withstand space conditions and provide sufficient energy for operations.
+
+   *Acceptance test*: Design and Develop Power Systems for Robots component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop Navigation System
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design Robot Architecture)
+   Create a system for the robots to navigate asteroids and planets autonomously.
+
+   *Acceptance test*: Develop Navigation System component is implemented, tested, and integrated.
+
+** TODO Step 4: Create Communication Systems for Robots and Earth Control Centers
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design Robot Architecture, Develop Navigation System)
+   Develop reliable communication systems between the robots in space and earth control centers.
+
+   *Acceptance test*: Create Communication Systems for Robots and Earth Control Centers component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement Resource Detection and Extraction Mechanisms
+   :PRIORITY: 3
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design Robot Architecture, Develop Navigation System)
+   Develop the software and hardware for detecting asteroid resources and implementing robotic arms or drills.
+
+   *Acceptance test*: Implement Resource Detection and Extraction Mechanisms component is implemented, tested, and integrated.
+
+** TODO Step 6: Establish Safety and Security Protocols for Robots
+   :PRIORITY: 2
+   :ASSIGNED: project-manager
+   Create protocols to ensure the safety and security of the robots in space.
+
+   *Acceptance test*: Establish Safety and Security Protocols for Robots component is implemented, tested, and integrated.
+
+** TODO Step 7: Formulate Mission Control Strategy
+   :PRIORITY: 1
+   :ASSIGNED: project-manager
+   Develop a strategy for managing the robots' missions on asteroids and planets.
+
+   *Acceptance test*: Formulate Mission Control Strategy component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: SpaceMiningRobots can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Robots designed for autonomous resource extraction from asteroids and planets.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Robotics engineers and autonomous systems operators
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

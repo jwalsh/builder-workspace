@@ -1,0 +1,51 @@
+#+TITLE: SmartEnergyGrid
+#+SUBTITLE: Intelligent energy distribution and management system
+#+CATEGORY: ENERGY
+#+DATE: unknown
+#+STARTUP: overview
+
+* Overview
+
+Intelligent energy distribution and management system
+
+* Foundational Axiom
+
+Energy systems fail when they optimize for peak efficiency at the cost of resilience; SmartEnergyGrid maintains correctness across the full operating envelope.
+
+* Anti-Goals
+
+- *General-purpose platform*: SmartEnergyGrid solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Build Order
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: SmartEnergyGrid can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Intelligent energy distribution and management system
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Energy system operators and grid engineers
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

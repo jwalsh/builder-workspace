@@ -1,0 +1,138 @@
+#+TITLE: CellularRegenerationStimulator
+#+SUBTITLE: A device that uses targeted electromagnetic fields to stimulate cellular regeneration and healing.
+#+CATEGORY: BIOTECH
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A device that uses targeted electromagnetic fields to stimulate cellular regeneration and healing.
+
+* Foundational Axiom
+
+Biotech tools fail when they treat biological systems as deterministic; CellularRegenerationStimulator embraces stochasticity as a design constraint.
+
+* Anti-Goals
+
+- *General-purpose platform*: CellularRegenerationStimulator solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Design System Architecture
+   :STATUS: DRAFT
+   Design the overall system architecture, including hardware components, software modules, communication interfaces, data flow, and security considerations. This task also includes defining the system's interaction with the device's operating system, power management, user interface design, and providing a clear overview of the system's software and hardware architecture, highlighting any potential challenges or trade-offs, and proposing solutions to address them.
+
+** Implement Comprehensive Security Measures for Patient Data Protection (Revised)
+   :STATUS: DRAFT
+   Update the task description to reflect changes and improvements. Design, develop, and implement robust security measures for safeguarding patient data, preventing unauthorized access, maintaining data integrity, and ensuring secure remote access. This includes: encryption (AES-256 for sensitive data), secure multi-factor authentication (including biometric options), intrusion detection and prevention systems, regular system audits, VPN implementation for remote access, a role-based access contro...
+
+* Build Order
+
+** TODO Step 1: Define Project Requirements
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Gather and document all requirements for the CellularRegenerationStimulator, including functional, non-functional, and regulatory requirements.
+
+   *Acceptance test*: Define Project Requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Requirements, Conduct Market Research, Identify Regulatory Requirements)
+   Design the overall system architecture, including hardware components, software modules, communication interfaces, data flow, and security considerations. This task also includes defining the system's interaction with the device's operating system, power management, user interface design, and provid...
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop Electromagnetic Field Generation Module
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement the module responsible for generating and controlling the electromagnetic fields used for cellular stimulation.
+
+   *Acceptance test*: Develop Electromagnetic Field Generation Module component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop User Interface
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the user interface for controlling and monitoring the device.
+
+   *Acceptance test*: Develop User Interface component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement Data Storage and Analysis
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop the database and data analysis components for storing and analyzing treatment data.
+
+   *Acceptance test*: Implement Data Storage and Analysis component is implemented, tested, and integrated.
+
+** TODO Step 6: Ensure Regulatory Compliance
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Define Project Requirements)
+   Conduct necessary tests and obtain certifications to ensure compliance with relevant regulations for medical devices.
+
+   *Acceptance test*: Ensure Regulatory Compliance component is implemented, tested, and integrated.
+
+** TODO Step 7: Implement Comprehensive Security Measures for Patient Data Protection (Revised)
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Design System Architecture)
+   Update the task description to reflect changes and improvements. Design, develop, and implement robust security measures for safeguarding patient data, preventing unauthorized access, maintaining data integrity, and ensuring secure remote access. This includes: encryption (AES-256 for sensitive data...
+
+   *Acceptance test*: Implement Comprehensive Security Measures for Patient Data Protection (Revised) component is implemented, tested, and integrated.
+
+** TODO Step 8: Create Deployment and Maintenance Plan
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop a plan for deploying the device to healthcare facilities and providing ongoing maintenance and support.
+
+   *Acceptance test*: Create Deployment and Maintenance Plan component is implemented, tested, and integrated.
+
+** TODO Step 9: Write User Documentation
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Develop User Interface)
+   Create comprehensive user documentation, including installation guides, operation manuals, and troubleshooting instructions.
+
+   *Acceptance test*: Write User Documentation component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: CellularRegenerationStimulator can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A device that uses targeted electromagnetic fields to stimulate cellular regeneration and healing.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Biotechnology researchers and lab scientists
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

@@ -1,0 +1,121 @@
+#+TITLE: ZeroWastePackagingDesigner
+#+SUBTITLE: An AI tool that designs packaging solutions with zero waste, using biodegradable or infinitely recyclable materials.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+An AI tool that designs packaging solutions with zero waste, using biodegradable or infinitely recyclable materials.
+
+* Foundational Axiom
+
+Existing approaches to ai tool fail because they optimize for the common case while ignoring structural constraints; ZeroWastePackagingDesigner makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: ZeroWastePackagingDesigner solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Review the project requirements and plan
+   :STATUS: UNKNOWN
+   Thoroughly review the project's requirements, identify potential challenges and opportunities, and create a detailed development roadmap including milestones, timelines, and task delegation.
+
+* Build Order
+
+** TODO Step 1: Define the AI model architecture
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Research and design the AI model that will create packaging designs with zero waste.
+
+   *Acceptance test*: Define the AI model architecture component is implemented, tested, and integrated.
+
+** TODO Step 2: Design the user interface for AI model input
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Define the AI model architecture)
+   Create a user-friendly interface for users to input packaging design specifications.
+
+   *Acceptance test*: Design the user interface for AI model input component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop biodegradable and recyclable materials database
+   :PRIORITY: 2
+   :ASSIGNED: database-specialist
+   Create a database of certified biodegradable and infinitely recyclable materials.
+
+   *Acceptance test*: Develop biodegradable and recyclable materials database component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop an algorithm for zero waste packaging design
+   :PRIORITY: 1
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Define the AI model architecture, Develop biodegradable and recyclable materials database)
+   Create an algorithm that generates packaging designs with minimal waste using the provided materials database.
+
+   *Acceptance test*: Develop an algorithm for zero waste packaging design component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement AI model for packaging design
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design the user interface for AI model input, Develop an algorithm for zero waste packaging design)
+   Integrate the developed algorithm into the AI model.
+
+   *Acceptance test*: Implement AI model for packaging design component is implemented, tested, and integrated.
+
+** TODO Step 6: Test and refine AI model performance
+   :PRIORITY: 3
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Implement AI model for packaging design)
+   Perform tests to ensure the AI model consistently generates effective zero waste packaging designs.
+
+   *Acceptance test*: Test and refine AI model performance component is implemented, tested, and integrated.
+
+** TODO Step 7: Document the project and AI model functionality
+   :PRIORITY: 5
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Test and refine AI model performance)
+   Create comprehensive documentation for the project and its features.
+
+   *Acceptance test*: Document the project and AI model functionality component is implemented, tested, and integrated.
+
+** TODO Step 8: Review the project requirements and plan
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Thoroughly review the project's requirements, identify potential challenges and opportunities, and create a detailed development roadmap including milestones, timelines, and task delegation.
+
+   *Acceptance test*: Review the project requirements and plan component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: ZeroWastePackagingDesigner can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An AI tool that designs packaging solutions with zero waste, using biodegradable or infinitely recyc
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A production-ready tool with CLI and/or web interface

@@ -1,0 +1,117 @@
+#+TITLE: assistantPhilosophieIA
+#+SUBTITLE: Un outil d'IA qui aide les utilisateurs à explorer et analyser des arguments et théories philosophiques.
+#+CATEGORY: PHILOSOPHY
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Un outil d'IA qui aide les utilisateurs à explorer et analyser des arguments et théories philosophiques.
+
+* Foundational Axiom
+
+Existing approaches to un outil d'ia qui aide les utilisateurs à explorer et analys fail because they optimize for the common case while ignoring structural constraints; assistantPhilosophieIA makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: assistantPhilosophieIA solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements
+   :PRIORITY: 1
+   :ASSIGNED: project-manager
+   Identify the specific areas of philosophy that the tool will focus on, and gather user requirements for the tool's functionality.
+
+   *Acceptance test*: Define Project Scope and Requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Design the User Interface
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Create wireframes and mockups for the user interface of the tool.
+
+   *Acceptance test*: Design the User Interface component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop the Backend Infrastructure
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design and implement the backend architecture for handling user requests, data storage, and algorithm processing.
+
+   *Acceptance test*: Develop the Backend Infrastructure component is implemented, tested, and integrated.
+
+** TODO Step 4: Integrate the Frontend with the Backend
+   :PRIORITY: 5
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design the User Interface, Develop the Backend Infrastructure)
+   Connect the designed user interface to the backend infrastructure for data exchange.
+
+   *Acceptance test*: Integrate the Frontend with the Backend component is implemented, tested, and integrated.
+
+** TODO Step 5: Write User Documentation
+   :PRIORITY: 5
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Design the User Interface)
+   Create user guides, tutorials, and FAQs for assisting users in using the tool effectively.
+
+   *Acceptance test*: Write User Documentation component is implemented, tested, and integrated.
+
+** TODO Step 6: Implement Argument Analysis Algorithms
+   :PRIORITY: 4
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Develop algorithms for parsing, analyzing, and comparing philosophical arguments.
+
+   *Acceptance test*: Implement Argument Analysis Algorithms component is implemented, tested, and integrated.
+
+** TODO Step 7: Security Assessment and Implementation
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Develop the Backend Infrastructure)
+   Evaluate the tool's security vulnerabilities and implement necessary safeguards to protect user data.
+
+   *Acceptance test*: Security Assessment and Implementation component is implemented, tested, and integrated.
+
+** TODO Step 8: Test the Tool's Functionality
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Implement Argument Analysis Algorithms, Integrate the Frontend with the Backend)
+   Perform various testing scenarios to ensure the tool is functioning correctly and efficiently.
+
+   *Acceptance test*: Test the Tool's Functionality component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: assistantPhilosophieIA can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Un outil d'IA qui aide les utilisateurs à explorer et analyser des arguments et théories philosophiq
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Researchers and educators in philosophy and ethics
+
+* Primary Output Artifact
+
+A trained model with evaluation metrics and serving infrastructure

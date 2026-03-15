@@ -1,0 +1,161 @@
+#+TITLE: NeuroFeedbackTherapist
+#+SUBTITLE: Build a brain-computer interface system for mental health therapy, providing real-time neurofeedback to patients and clinicians.
+#+CATEGORY: BCI
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Build a brain-computer interface system for mental health therapy, providing real-time neurofeedback to patients and clinicians.
+
+* Foundational Axiom
+
+Brain-computer interfaces fail when they treat neural signals as simple input streams; NeuroFeedbackTherapist models the bidirectional adaptation between brain and system.
+
+* Anti-Goals
+
+- *General-purpose platform*: NeuroFeedbackTherapist solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** System Architecture Design for NeuroFeedbackTherapist Project (Updated)
+   :STATUS: REVIEW
+   Revised task description emphasizing the following points: 
+1. Update the original description with more specific details about the task. 
+2. Design the overall system architecture for the NeuroFeedbackTherapist project, encompassing both hardware and software components, focusing on real-time neurofeedback functionality while ensuring patient privacy and data security.
+3. Detail data flow, integration points, scalability, performance optimizations, modular design principles, user-friendly inter...
+
+** User Interface Design (Revised)
+   :STATUS: IMPLEMENTING
+   Design the user interface for both patient and clinician applications. Prioritize usability, accessibility, data visualization, compliance with relevant healthcare regulations and guidelines (e.g., HIPAA, ADA), and consistency with the overall system architecture. Incorporate feedback from User Experience Research and UX/UI best practices for healthcare applications. Ensure the design is scalable and adaptable to future updates or expansions of the system.
+
+** Database Design and Implementation
+   :STATUS: DRAFT
+   Design and implement a scalable, secure, and HIPAA-compliant database schema for storing patient data, session logs, and system configurations. The schema should be designed to efficiently handle the expected growth in data volume, ensure data integrity, privacy, and compliance with relevant regulations (e.g., HIPAA). Include mechanisms for data backup, recovery, and auditing. Consider using encryption at rest and in transit where applicable.
+
+* Build Order
+
+** TODO Step 1: Project Planning and Requirements Gathering
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Define project scope, objectives, and requirements through stakeholder meetings and research.
+
+   *Acceptance test*: Project Planning and Requirements Gathering component is implemented, tested, and integrated.
+
+** TODO Step 2: System Architecture Design for NeuroFeedbackTherapist Project (Updated)
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Project Planning and Requirements Gathering)
+   Revised task description emphasizing the following points: 
+1. Update the original description with more specific details about the task. 
+2. Design the overall system architecture for the NeuroFeedbackTherapist project, encompassing both hardware and software components, focusing on real-time neuro...
+
+   *Acceptance test*: System Architecture Design for NeuroFeedbackTherapist Project (Updated) component is implemented, tested, and integrated.
+
+** TODO Step 3: Security and Privacy Considerations
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: System Architecture Design)
+   Implement security measures and ensure compliance with data privacy regulations for handling sensitive patient data.
+
+   *Acceptance test*: Security and Privacy Considerations component is implemented, tested, and integrated.
+
+** TODO Step 4: Brain-Computer Interface (BCI) Hardware Selection
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Research and select the appropriate BCI hardware devices for signal acquisition and processing.
+
+   *Acceptance test*: Brain-Computer Interface (BCI) Hardware Selection component is implemented, tested, and integrated.
+
+** TODO Step 5: Signal Processing and Analysis
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design, Brain-Computer Interface (BCI) Hardware Selection)
+   Develop algorithms and techniques for real-time signal processing, feature extraction, and neurofeedback analysis.
+
+   *Acceptance test*: Signal Processing and Analysis component is implemented, tested, and integrated.
+
+** IN_PROGRESS Step 6: User Interface Design (Revised)
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: System Architecture Design, User Experience Research)
+   Design the user interface for both patient and clinician applications. Prioritize usability, accessibility, data visualization, compliance with relevant healthcare regulations and guidelines (e.g., HIPAA, ADA), and consistency with the overall system architecture. Incorporate feedback from User Expe...
+
+   *Acceptance test*: User Interface Design (Revised) component is implemented, tested, and integrated.
+
+** TODO Step 7: Database Design and Implementation
+   :PRIORITY: 3
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: System Architecture Design)
+   Design and implement a scalable, secure, and HIPAA-compliant database schema for storing patient data, session logs, and system configurations. The schema should be designed to efficiently handle the expected growth in data volume, ensure data integrity, privacy, and compliance with relevant regulat...
+
+   *Acceptance test*: Database Design and Implementation component is implemented, tested, and integrated.
+
+** TODO Step 8: Integration and Testing
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Signal Processing and Analysis, User Interface Design, Database Design and Implementation, Security and Privacy Considerations)
+   Integrate all components and perform comprehensive testing, including unit, integration, and end-to-end testing.
+
+   *Acceptance test*: Integration and Testing component is implemented, tested, and integrated.
+
+** TODO Step 9: Documentation and Training
+   :PRIORITY: 3
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Integration and Testing)
+   Develop comprehensive documentation, user guides, and training materials for clinicians and support staff.
+
+   *Acceptance test*: Documentation and Training component is implemented, tested, and integrated.
+
+** TODO Step 10: Deployment and Maintenance
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Integration and Testing)
+   Deploy the system to production environments, set up monitoring and logging, and plan for ongoing maintenance and updates.
+
+   *Acceptance test*: Deployment and Maintenance component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: NeuroFeedbackTherapist can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-005: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Build a brain-computer interface system for mental health therapy, providing real-time neurofeedback
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Neuroscientists and clinical researchers working with neural interfaces
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

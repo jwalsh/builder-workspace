@@ -1,0 +1,170 @@
+#+TITLE: BiorhythmOptimizer
+#+SUBTITLE: An AI system that analyzes personal biorhythms to optimize daily schedules for peak performance and wellbeing.
+#+CATEGORY: BIOTECH
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+An AI system that analyzes personal biorhythms to optimize daily schedules for peak performance and wellbeing.
+
+* Foundational Axiom
+
+Biotech tools fail when they treat biological systems as deterministic; BiorhythmOptimizer embraces stochasticity as a design constraint.
+
+* Anti-Goals
+
+- *General-purpose platform*: BiorhythmOptimizer solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Gather Requirements for BiorhythmOptimizer System
+   :STATUS: DRAFT
+   Conduct extensive research and gather comprehensive requirements for the BiorhythmOptimizer system. This includes understanding user needs, identifying suitable biorhythm data sources, investigating scheduling algorithms, defining performance/wellbeing metrics, addressing data privacy and security concerns, exploring potential integration with existing systems or APIs, and researching third-party services or libraries to leverage for optimal functionality. The following specific areas require mo...
+
+** DesignSystemArchitectureforBiorhythmOptimizer
+   :STATUS: UNKNOWN
+   DesigntheoverallsystemarchitecturefortheBiorhythmOptimizerproject.Thisincludescomponentsfordataingestion,biorhythmanalysis,schedulingoptimization,userinterfaces,anddatastorage.Thedesignshouldconsiderscalability,performance,security,maintainability,faulttolerance,andedgecases(e.g.,handlingmissingorinconsistentdata).Definetheinteractionsbetweencomponents,dataflow,andcommunicationprotocols.Identifypotentialthird-partyservicesorlibrariestobeintegrated,withafocusoncompatibility,licensing,andreliabili...
+
+** Design User Interfaces - RFC (Revised)
+   :STATUS: DRAFT
+   Design intuitive and user-friendly interfaces for inputting biorhythm data, viewing analysis results, and managing optimized schedules. The interfaces should be responsive, accessible, and follow best practices for user experience (UX) design. Integrate the design with existing design system architecture, cater to defined user personas and use cases, provide clear documentation for each component and screen, and include wireframes or prototypes as part of the proposal. Ensure that the design is ...
+
+* Build Order
+
+** TODO Step 1: Gather Requirements for BiorhythmOptimizer System
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Conduct extensive research and gather comprehensive requirements for the BiorhythmOptimizer system. This includes understanding user needs, identifying suitable biorhythm data sources, investigating scheduling algorithms, defining performance/wellbeing metrics, addressing data privacy and security c...
+
+   *Acceptance test*: Gather Requirements for BiorhythmOptimizer System component is implemented, tested, and integrated.
+
+** TODO Step 2: DesignSystemArchitectureforBiorhythmOptimizer
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: GatherRequirements)
+   DesigntheoverallsystemarchitecturefortheBiorhythmOptimizerproject.Thisincludescomponentsfordataingestion,biorhythmanalysis,schedulingoptimization,userinterfaces,anddatastorage.Thedesignshouldconsiderscalability,performance,security,maintainability,faulttolerance,andedgecases(e.g.,handlingmissingorin...
+
+   *Acceptance test*: DesignSystemArchitectureforBiorhythmOptimizer component is implemented, tested, and integrated.
+
+** TODO Step 3: Implement Data Ingestion
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement the data ingestion component to collect and process biorhythm data from various sources.
+
+   *Acceptance test*: Implement Data Ingestion component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Biorhythm Analysis
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop the biorhythm analysis component to process and analyze biorhythm data using AI/ML techniques.
+
+   *Acceptance test*: Develop Biorhythm Analysis component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement Scheduling Optimization
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture, Develop Biorhythm Analysis)
+   Implement the scheduling optimization component to generate optimized daily schedules based on biorhythm analysis and user preferences.
+
+   *Acceptance test*: Implement Scheduling Optimization component is implemented, tested, and integrated.
+
+** TODO Step 6: Design User Interfaces - RFC (Revised)
+   :PRIORITY: 3
+   :ASSIGNED: task-decomposer
+   :DEPENDS: (depends on: Design System Architecture, Define User Personas and Use Cases)
+   Design intuitive and user-friendly interfaces for inputting biorhythm data, viewing analysis results, and managing optimized schedules. The interfaces should be responsive, accessible, and follow best practices for user experience (UX) design. Integrate the design with existing design system archite...
+
+   *Acceptance test*: Design User Interfaces - RFC (Revised) component is implemented, tested, and integrated.
+
+** TODO Step 7: Implement User Interfaces
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design User Interfaces)
+   Implement the user interfaces based on the approved designs, ensuring responsiveness and accessibility.
+
+   *Acceptance test*: Implement User Interfaces component is implemented, tested, and integrated.
+
+** TODO Step 8: Conduct Security Audits
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Implement Data Ingestion, Develop Biorhythm Analysis, Implement Scheduling Optimization, Implement User Interfaces)
+   Perform security audits to identify and mitigate potential vulnerabilities in the system.
+
+   *Acceptance test*: Conduct Security Audits component is implemented, tested, and integrated.
+
+** TODO Step 9: Set up Development Environment
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   Set up the development environment, including version control, continuous integration/deployment pipelines, and development tools.
+
+   *Acceptance test*: Set up Development Environment component is implemented, tested, and integrated.
+
+** TODO Step 10: Set up Testing Framework
+   :PRIORITY: 3
+   :ASSIGNED: qa-tester
+   Set up a comprehensive testing framework, including unit tests, integration tests, and end-to-end tests.
+
+   *Acceptance test*: Set up Testing Framework component is implemented, tested, and integrated.
+
+** TODO Step 11: Write Documentation
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Design System Architecture, Design User Interfaces)
+   Create comprehensive documentation, including user guides, developer guides, and system architecture documentation.
+
+   *Acceptance test*: Write Documentation component is implemented, tested, and integrated.
+
+** TODO Step 12: Deploy and Monitor
+   :PRIORITY: 1
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Implement Data Ingestion, Develop Biorhythm Analysis, Implement Scheduling Optimization, Implement User Interfaces, Conduct Security Audits)
+   Deploy the BiorhythmOptimizer system to production environments, and set up monitoring and logging systems.
+
+   *Acceptance test*: Deploy and Monitor component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: BiorhythmOptimizer can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-005: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An AI system that analyzes personal biorhythms to optimize daily schedules for peak performance and 
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Biotechnology researchers and lab scientists
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

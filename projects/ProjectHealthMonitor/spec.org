@@ -1,0 +1,147 @@
+#+TITLE: ProjectHealthMonitor
+#+SUBTITLE: A tool that provides real-time insights into project progress, team morale, and potential bottlenecks.
+#+CATEGORY: HEALTHCARE
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A tool that provides real-time insights into project progress, team morale, and potential bottlenecks.
+
+* Foundational Axiom
+
+Healthcare tools fail when they optimize for data collection over clinical workflow; ProjectHealthMonitor embeds clinical reasoning into the system's structure.
+
+* Anti-Goals
+
+- *General-purpose platform*: ProjectHealthMonitor solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Scope and Requirements - RFC REVISED
+   :STATUS: DRAFT
+   This RFC proposes a detailed specification for the ProjectHealthMonitor tool. The following refined requirements are suggested: 1) Desired features, including real-time progress tracking (including task completion status, time spent, and priority), team morale indicators (such as sentiment analysis from communication platforms like Slack, Microsoft Teams, and surveys), and bottleneck detection (using machine learning algorithms to identify trends in project workflows). 2) User roles, such as pro...
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements - RFC REVISED
+   :PRIORITY: 5
+   :ASSIGNED: task-decomposer
+   This RFC proposes a detailed specification for the ProjectHealthMonitor tool. The following refined requirements are suggested: 1) Desired features, including real-time progress tracking (including task completion status, time spent, and priority), team morale indicators (such as sentiment analysis ...
+
+   *Acceptance test*: Define Project Scope and Requirements - RFC REVISED component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 4
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design the overall system architecture, including components, data flow, and communication between modules.
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Set up Development Environment
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   Configure the development environment, including version control, build tools, and continuous integration/deployment pipelines.
+
+   *Acceptance test*: Set up Development Environment component is implemented, tested, and integrated.
+
+** TODO Step 4: Implement Security Measures
+   :PRIORITY: 3
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement security measures to protect sensitive project data and ensure secure access to the tool.
+
+   *Acceptance test*: Implement Security Measures component is implemented, tested, and integrated.
+
+** TODO Step 5: Design and Implement Data Collection Mechanisms
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop mechanisms to collect project data from various sources, such as version control systems, issue trackers, and collaboration tools.
+
+   *Acceptance test*: Design and Implement Data Collection Mechanisms component is implemented, tested, and integrated.
+
+** TODO Step 6: Design and Implement Data Storage and Processing
+   :PRIORITY: 2
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement a data storage solution and mechanisms for processing and analyzing the collected data.
+
+   *Acceptance test*: Design and Implement Data Storage and Processing component is implemented, tested, and integrated.
+
+** TODO Step 7: Design and Implement User Interface
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and develop the user interface for visualizing project health metrics and providing insights to users.
+
+   *Acceptance test*: Design and Implement User Interface component is implemented, tested, and integrated.
+
+** TODO Step 8: Write Documentation
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Design System Architecture, Design and Implement User Interface)
+   Create comprehensive documentation for the ProjectHealthMonitor tool, including installation guides, user manuals, and API references.
+
+   *Acceptance test*: Write Documentation component is implemented, tested, and integrated.
+
+** TODO Step 9: Implement Testing and Quality Assurance
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Design System Architecture, Design and Implement Data Collection Mechanisms, Design and Implement Data Storage and Processing, Design and Implement User Interface)
+   Develop and implement a comprehensive testing strategy, including unit tests, integration tests, and end-to-end tests, to ensure the quality and reliability of the tool.
+
+   *Acceptance test*: Implement Testing and Quality Assurance component is implemented, tested, and integrated.
+
+** TODO Step 10: Deploy and Monitor
+   :PRIORITY: 1
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Implement Testing and Quality Assurance, Write Documentation)
+   Deploy the ProjectHealthMonitor tool to a production environment and implement monitoring and alerting mechanisms to ensure its reliable operation.
+
+   *Acceptance test*: Deploy and Monitor component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: ProjectHealthMonitor can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-005: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Docker
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A tool that provides real-time insights into project progress, team morale, and potential bottleneck
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Healthcare professionals (clinicians, administrators) in clinical settings
+
+* Primary Output Artifact
+
+A production-ready tool with CLI and/or web interface

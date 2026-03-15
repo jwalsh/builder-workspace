@@ -1,0 +1,153 @@
+#+TITLE: SocialMobilityNavigator
+#+SUBTITLE: A predictive AI tool that helps individuals optimize their path to social mobility, considering education, career choices, and socioeconomic factors.
+#+CATEGORY: SOCIAL_MEDIA
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A predictive AI tool that helps individuals optimize their path to social mobility, considering education, career choices, and socioeconomic factors.
+
+* Foundational Axiom
+
+Existing approaches to predictive ai tool fail because they optimize for the common case while ignoring structural constraints; SocialMobilityNavigator makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: SocialMobilityNavigator solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** System Architecture Design
+   :STATUS: UNKNOWN
+   Design the overall system architecture, including data models, algorithms, and integration with external services. The architecture should consider scalability, maintainability, and performance. Identify potential data sources and APIs for socioeconomic and educational data (considering open datasets and partnerships with relevant institutions). Define the core prediction algorithms and machine learning models to be used (explain choice of specific models and their relevance to the problem). Out...
+
+** User Interface Design for SocialMobilityNavigator
+   :STATUS: DRAFT
+   Design an intuitive, user-friendly, and accessible interface that allows users to input their information (education history, career goals, socioeconomic factors), visualize data, and receive personalized recommendations. The design should prioritize usability, accessibility, data privacy, and responsiveness across various devices. A special emphasis should be given to the mobile experience as a significant portion of our user base is expected to use the app on mobile devices.
+
+** Database Design and Implementation
+   :STATUS: REVIEW
+   Design and implement a secure, scalable, high-performance database system to store user data, predictions, socioeconomic factors, and other relevant information. The database should support efficient data retrieval, analysis, and reporting. Ensure data privacy, compliance with GDPR and other relevant regulations, and consider potential growth of the application (for example, handling millions of users). Include features for auditing and data anonymization to further protect user data. Collaborat...
+
+* Build Order
+
+** TODO Step 1: Project Planning and Requirements Gathering
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Define project scope, objectives, and requirements through stakeholder interviews and market research.
+
+   *Acceptance test*: Project Planning and Requirements Gathering component is implemented, tested, and integrated.
+
+** TODO Step 2: System Architecture Design
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Project Planning and Requirements Gathering)
+   Design the overall system architecture, including data models, algorithms, and integration with external services. The architecture should consider scalability, maintainability, and performance. Identify potential data sources and APIs for socioeconomic and educational data (considering open dataset...
+
+   *Acceptance test*: System Architecture Design component is implemented, tested, and integrated.
+
+** TODO Step 3: Security and Privacy Considerations
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: System Architecture Design)
+   Implement robust security measures and ensure compliance with data privacy regulations.
+
+   *Acceptance test*: Security and Privacy Considerations component is implemented, tested, and integrated.
+
+** TODO Step 4: Data Collection and Processing
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Identify and acquire relevant socioeconomic, educational, and career data sources, and design data processing pipelines.
+
+   *Acceptance test*: Data Collection and Processing component is implemented, tested, and integrated.
+
+** TODO Step 5: Predictive Modeling
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Data Collection and Processing)
+   Develop and train machine learning models to predict social mobility outcomes based on input factors.
+
+   *Acceptance test*: Predictive Modeling component is implemented, tested, and integrated.
+
+** TODO Step 6: User Interface Design for SocialMobilityNavigator
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Design an intuitive, user-friendly, and accessible interface that allows users to input their information (education history, career goals, socioeconomic factors), visualize data, and receive personalized recommendations. The design should prioritize usability, accessibility, data privacy, and respo...
+
+   *Acceptance test*: User Interface Design for SocialMobilityNavigator component is implemented, tested, and integrated.
+
+** IN_PROGRESS Step 7: Database Design and Implementation
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: System Architecture Design, Data Modeling and Requirements Gathering)
+   Design and implement a secure, scalable, high-performance database system to store user data, predictions, socioeconomic factors, and other relevant information. The database should support efficient data retrieval, analysis, and reporting. Ensure data privacy, compliance with GDPR and other relevan...
+
+   *Acceptance test*: Database Design and Implementation component is implemented, tested, and integrated.
+
+** TODO Step 8: Testing and Quality Assurance
+   :PRIORITY: 3
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Predictive Modeling, User Interface Design, Database Design and Implementation)
+   Develop comprehensive test plans and execute thorough testing to ensure the application's reliability and accuracy.
+
+   *Acceptance test*: Testing and Quality Assurance component is implemented, tested, and integrated.
+
+** TODO Step 9: Deployment and DevOps
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Testing and Quality Assurance)
+   Set up the infrastructure and automate the deployment process for the application.
+
+   *Acceptance test*: Deployment and DevOps component is implemented, tested, and integrated.
+
+** TODO Step 10: Documentation and User Support
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: User Interface Design, Deployment and DevOps)
+   Create comprehensive documentation for users, developers, and administrators, and establish support channels.
+
+   *Acceptance test*: Documentation and User Support component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: SocialMobilityNavigator can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A predictive AI tool that helps individuals optimize their path to social mobility, considering educ
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Content creators and community managers
+
+* Primary Output Artifact
+
+A production-ready tool with CLI and/or web interface

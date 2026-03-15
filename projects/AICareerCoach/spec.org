@@ -1,0 +1,145 @@
+#+TITLE: AICareerCoach
+#+SUBTITLE: An AI-powered career coaching system providing personalized advice and answering career-related questions.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-21
+#+STARTUP: overview
+
+* Overview
+
+An AI-powered career coaching system providing personalized advice and answering career-related questions.
+
+* Foundational Axiom
+
+Existing approaches to ai-powered career coaching system providing personalized adv fail because they optimize for the common case while ignoring structural constraints; AICareerCoach makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: AICareerCoach solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Design System Architecture for AI-powered Career Coaching System (AICareerCoach)
+   :STATUS: APPROVED
+   Design the overall system architecture for the AI-powered career coaching system (AICareerCoach). This includes the AI model, user interface, data storage components, and integration points. The design should prioritize scalability, maintainability, performance requirements, security, and compliance. Outline the high-level components, their responsibilities, interactions, and data flows. Define the technology stack, deployment strategy, and infrastructure requirements. Ensure the architecture su...
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Gather and document the project requirements, define the system's scope, and identify key features and functionality.
+
+   *Acceptance test*: Define Project Scope and Requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture for AI-powered Career Coaching System (AICareerCoach)
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements, Conduct Market Research and Competitor Analysis)
+   Design the overall system architecture for the AI-powered career coaching system (AICareerCoach). This includes the AI model, user interface, data storage components, and integration points. The design should prioritize scalability, maintainability, performance requirements, security, and compliance...
+
+   *Acceptance test*: Design System Architecture for AI-powered Career Coaching System (AICareerCoach) component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop AI Model
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Research, design, and implement the AI model for career coaching and question answering.
+
+   *Acceptance test*: Develop AI Model component is implemented, tested, and integrated.
+
+** TODO Step 4: Build User Interface
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and develop the user interface for the career coaching system, including the web or mobile application.
+
+   *Acceptance test*: Build User Interface component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement Data Storage and Management
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the data storage and management system for user data, career information, and AI model training data.
+
+   *Acceptance test*: Implement Data Storage and Management component is implemented, tested, and integrated.
+
+** TODO Step 6: Set up CI/CD Pipeline
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design System Architecture)
+   Establish a continuous integration and continuous deployment (CI/CD) pipeline for automated testing, building, and deployment.
+
+   *Acceptance test*: Set up CI/CD Pipeline component is implemented, tested, and integrated.
+
+** TODO Step 7: Implement Security Measures
+   :PRIORITY: 2
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement security measures to protect user data and ensure system integrity, including authentication, authorization, and data encryption.
+
+   *Acceptance test*: Implement Security Measures component is implemented, tested, and integrated.
+
+** TODO Step 8: Write Documentation
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Design System Architecture)
+   Create comprehensive documentation for the system, including user guides, developer documentation, and maintenance manuals.
+
+   *Acceptance test*: Write Documentation component is implemented, tested, and integrated.
+
+** TODO Step 9: Conduct Testing and Quality Assurance
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Develop AI Model, Build User Interface, Implement Data Storage and Management)
+   Plan and execute comprehensive testing and quality assurance activities, including unit testing, integration testing, and user acceptance testing.
+
+   *Acceptance test*: Conduct Testing and Quality Assurance component is implemented, tested, and integrated.
+
+** TODO Step 10: Deploy and Launch System
+   :PRIORITY: 1
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Conduct Testing and Quality Assurance, Implement Security Measures, Write Documentation)
+   Deploy the career coaching system to a production environment and launch it for public use.
+
+   *Acceptance test*: Deploy and Launch System component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: AICareerCoach can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An AI-powered career coaching system providing personalized advice and answering career-related ques
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

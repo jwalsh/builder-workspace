@@ -1,0 +1,165 @@
+#+TITLE: ARConstructionAssistant
+#+SUBTITLE: An augmented reality system for construction workers, providing real-time guidance, measurements, and safety information on-site.
+#+CATEGORY: REAL_ESTATE
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+An augmented reality system for construction workers, providing real-time guidance, measurements, and safety information on-site.
+
+* Foundational Axiom
+
+Existing approaches to augmented reality system fail because they optimize for the common case while ignoring structural constraints; ARConstructionAssistant makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: ARConstructionAssistant solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** System Architecture Design
+   :STATUS: APPROVED
+   Design the overall system architecture, including components, data flows, and integration points. The architecture should consider the following key aspects:
+
+1. Device compatibility: The system should support various AR-enabled devices (e.g., smartphones, tablets, AR headsets) and handle different hardware capabilities. Consider a modular design that separates device-specific logic from core functionality. Provide clear interfaces for device integration and consider using platform-specific SDKs...
+
+** User Interface Design for Augmented Reality Application (AR)
+   :STATUS: APPROVED
+   Design the user interface for the augmented reality application (AR), considering usability, accessibility, integration with the core functionality of the system, and adherence to industry standards and best practices for AR user interfaces. The design should also account for potential hardware limitations such as processing power and battery life, optimizing the user experience accordingly. Additionally, ensure that the design is flexible enough to accommodate future updates and improvements in...
+
+** Database Design and Implementation for AR Construction Assistant
+   :STATUS: APPROVED
+   Design and implement the database schema for storing project data, measurements, user information, safety records, equipment data, and other relevant data required for the AR Construction Assistant application. Adhere to best practices for scalability, performance, data integrity, and security by utilizing a hybrid approach of NoSQL (for large amounts of sensor data and measurements) and relational databases (for structured data like user information and project details). Ensure the database des...
+
+* Build Order
+
+** TODO Step 1: Project Planning and Requirements Gathering
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Define project scope, goals, and requirements through stakeholder interviews and research.
+
+   *Acceptance test*: Project Planning and Requirements Gathering component is implemented, tested, and integrated.
+
+** IN_PROGRESS Step 2: System Architecture Design
+   :PRIORITY: 5
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Project Planning and Requirements Gathering)
+   Design the overall system architecture, including components, data flows, and integration points. The architecture should consider the following key aspects:
+
+1. Device compatibility: The system should support various AR-enabled devices (e.g., smartphones, tablets, AR headsets) and handle different ...
+
+   *Acceptance test*: System Architecture Design component is implemented, tested, and integrated.
+
+** TODO Step 3: Security and Compliance
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: System Architecture Design)
+   Ensure the system adheres to security best practices and industry regulations for construction sites.
+
+   *Acceptance test*: Security and Compliance component is implemented, tested, and integrated.
+
+** TODO Step 4: User Interface Design for Augmented Reality Application (AR)
+   :PRIORITY: 3
+   :ASSIGNED: task-decomposer
+   :DEPENDS: (depends on: Project Planning and Requirements Gathering, Core Functionality Development, Hardware Selection and Integration)
+   Design the user interface for the augmented reality application (AR), considering usability, accessibility, integration with the core functionality of the system, and adherence to industry standards and best practices for AR user interfaces. The design should also account for potential hardware limi...
+
+   *Acceptance test*: User Interface Design for Augmented Reality Application (AR) component is implemented, tested, and integrated.
+
+** IN_PROGRESS Step 5: Database Design and Implementation for AR Construction Assistant
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: System Architecture Design, Data Modeling and Requirements Gathering)
+   Design and implement the database schema for storing project data, measurements, user information, safety records, equipment data, and other relevant data required for the AR Construction Assistant application. Adhere to best practices for scalability, performance, data integrity, and security by ut...
+
+   *Acceptance test*: Database Design and Implementation for AR Construction Assistant component is implemented, tested, and integrated.
+
+** TODO Step 6: Backend Development
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Implement the backend services, including data processing, computer vision, and integration with external systems.
+
+   *Acceptance test*: Backend Development component is implemented, tested, and integrated.
+
+** TODO Step 7: Frontend Development
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: User Interface Design, Backend Development)
+   Develop the augmented reality user interface, integrating with the backend services.
+
+   *Acceptance test*: Frontend Development component is implemented, tested, and integrated.
+
+** TODO Step 8: Deployment and DevOps
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Backend Development, Frontend Development, Database Design and Implementation)
+   Set up the deployment pipeline, infrastructure, and monitoring for the production environment.
+
+   *Acceptance test*: Deployment and DevOps component is implemented, tested, and integrated.
+
+** TODO Step 9: Documentation and User Training
+   :PRIORITY: 3
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Frontend Development, Backend Development)
+   Create comprehensive documentation and training materials for end-users and administrators.
+
+   *Acceptance test*: Documentation and User Training component is implemented, tested, and integrated.
+
+** TODO Step 10: Testing and Quality Assurance
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Frontend Development, Backend Development)
+   Plan and execute comprehensive testing strategies, including unit, integration, and user acceptance testing.
+
+   *Acceptance test*: Testing and Quality Assurance component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: ARConstructionAssistant can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-005: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- PostgreSQL
+- MongoDB
+- Redis
+- Docker
+- Kubernetes
+- AWS
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An augmented reality system for construction workers, providing real-time guidance, measurements, an
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Real estate professionals and property developers
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

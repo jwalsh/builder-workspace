@@ -1,0 +1,137 @@
+#+TITLE: AgroGenomeEditor
+#+SUBTITLE: Design a CRISPR-based genome editing platform for agricultural applications, focusing on crop resilience and yield improvement.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Design a CRISPR-based genome editing platform for agricultural applications, focusing on crop resilience and yield improvement.
+
+* Foundational Axiom
+
+Existing approaches to design a crispr-based genome editing platform fail because they optimize for the common case while ignoring structural constraints; AgroGenomeEditor makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: AgroGenomeEditor solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Design CRISPR-based Genome Editing Platform for Agricultural Applications
+   :STATUS: APPROVED
+   Design the architecture and components of the CRISPR-based genome editing platform for agricultural applications, focusing on crop resilience and yield improvement. The design should include the user interface, data management, integration with existing agricultural systems, security considerations, scalability, performance requirements, deployment strategies, detailed design documents and diagrams for each component, ensuring modularity, extensibility, and adherence to best practices in softwar...
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Gather requirements from stakeholders, including agricultural experts, geneticists, and farmers. Define the project scope, objectives, and target crops.
+
+   *Acceptance test*: Define Project Scope and Requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Design CRISPR-based Genome Editing Platform for Agricultural Applications
+   :PRIORITY: 5
+   :ASSIGNED: task-decomposer
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design the architecture and components of the CRISPR-based genome editing platform for agricultural applications, focusing on crop resilience and yield improvement. The design should include the user interface, data management, integration with existing agricultural systems, security considerations,...
+
+   *Acceptance test*: Design CRISPR-based Genome Editing Platform for Agricultural Applications component is implemented, tested, and integrated.
+
+** TODO Step 3: Implement Security and Privacy Measures
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design CRISPR-based Genome Editing Platform)
+   Ensure the platform adheres to security and privacy standards, including data encryption, access controls, and compliance with relevant regulations.
+
+   *Acceptance test*: Implement Security and Privacy Measures component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Genome Editing Algorithms
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design CRISPR-based Genome Editing Platform)
+   Develop algorithms and models for precise and efficient genome editing, considering factors such as target specificity, off-target effects, and editing efficiency.
+
+   *Acceptance test*: Develop Genome Editing Algorithms component is implemented, tested, and integrated.
+
+** TODO Step 5: Build User Interface and Data Management
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design CRISPR-based Genome Editing Platform)
+   Develop the user interface for the genome editing platform, including tools for target selection, editing parameters, and result visualization. Implement data management systems for storing and analyzing genomic data.
+
+   *Acceptance test*: Build User Interface and Data Management component is implemented, tested, and integrated.
+
+** TODO Step 6: Integrate with Agricultural Systems
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design CRISPR-based Genome Editing Platform)
+   Develop interfaces and APIs to integrate the genome editing platform with existing agricultural systems, such as farm management software, crop monitoring systems, and genetic databases.
+
+   *Acceptance test*: Integrate with Agricultural Systems component is implemented, tested, and integrated.
+
+** TODO Step 7: Conduct Testing and Validation
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Develop Genome Editing Algorithms, Build User Interface and Data Management, Integrate with Agricultural Systems)
+   Develop test plans and scenarios to validate the genome editing platform's functionality, accuracy, and performance. Conduct field trials and gather feedback from agricultural experts and farmers.
+
+   *Acceptance test*: Conduct Testing and Validation component is implemented, tested, and integrated.
+
+** TODO Step 8: Prepare Documentation and Training Materials
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Conduct Testing and Validation)
+   Create comprehensive documentation, user guides, and training materials to support the adoption and effective use of the genome editing platform by agricultural stakeholders.
+
+   *Acceptance test*: Prepare Documentation and Training Materials component is implemented, tested, and integrated.
+
+** TODO Step 9: Deploy and Maintain the Platform
+   :PRIORITY: 1
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Conduct Testing and Validation)
+   Set up the infrastructure and deploy the genome editing platform in a production environment. Establish processes for monitoring, updating, and maintaining the system over time.
+
+   *Acceptance test*: Deploy and Maintain the Platform component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: AgroGenomeEditor can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Design a CRISPR-based genome editing platform for agricultural applications, focusing on crop resili
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A deployed platform with user-facing interface

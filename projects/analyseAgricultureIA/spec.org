@@ -1,0 +1,137 @@
+#+TITLE: analyseAgricultureIA
+#+SUBTITLE: Un système d'IA qui analyse les données agricoles pour maximiser les rendements et minimiser les pertes.
+#+CATEGORY: AGRICULTURAL
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Un système d'IA qui analyse les données agricoles pour maximiser les rendements et minimiser les pertes.
+
+* Foundational Axiom
+
+Existing approaches to un système d'ia qui analyse les données agricoles pour maxim fail because they optimize for the common case while ignoring structural constraints; analyseAgricultureIA makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: analyseAgricultureIA solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Write Comprehensive Technical Documentation
+   :STATUS: UNKNOWN
+   Create detailed documentation for the system, including architecture, implementation, and usage instructions. Include sections on frontend and backend interfaces, APIs, databases, and security measures.
+
+* Build Order
+
+** TODO Step 1: Define System Requirements
+   :PRIORITY: 1
+   :ASSIGNED: project-manager
+   Outline the system's functional and non-functional requirements to effectively analyze agricultural data and maximize yields.
+
+   *Acceptance test*: Define System Requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define System Requirements)
+   Create a system architecture that can handle large amounts of agricultural data and provide actionable insights.
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop Database Schema
+   :PRIORITY: 5
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Create an efficient and scalable database schema to store agricultural data.
+
+   *Acceptance test*: Develop Database Schema component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Backend Services
+   :PRIORITY: 4
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop the backend services that can process and analyze large amounts of agricultural data.
+
+   *Acceptance test*: Develop Backend Services component is implemented, tested, and integrated.
+
+** TODO Step 5: Develop Frontend Interface
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Create an intuitive and user-friendly interface for data input, visualization, and analysis.
+
+   *Acceptance test*: Develop Frontend Interface component is implemented, tested, and integrated.
+
+** TODO Step 6: Write Comprehensive Technical Documentation
+   :PRIORITY: 4
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Develop Frontend Interface, Develop Backend Services)
+   Create detailed documentation for the system, including architecture, implementation, and usage instructions. Include sections on frontend and backend interfaces, APIs, databases, and security measures.
+
+   *Acceptance test*: Write Comprehensive Technical Documentation component is implemented, tested, and integrated.
+
+** TODO Step 7: Perform Quality Assurance Testing
+   :PRIORITY: 3
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Develop Frontend Interface, Develop Backend Services)
+   Test the system to ensure it meets functional and non-functional requirements.
+
+   *Acceptance test*: Perform Quality Assurance Testing component is implemented, tested, and integrated.
+
+** TODO Step 8: Integrate DevOps Practices
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Develop Frontend Interface, Develop Backend Services)
+   Implement CI/CD pipelines and infrastructure to ensure efficient development, testing, and deployment.
+
+   *Acceptance test*: Integrate DevOps Practices component is implemented, tested, and integrated.
+
+** TODO Step 9: Review System Design and Implementation
+   :PRIORITY: 1
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design System Architecture, Develop Frontend Interface, Develop Backend Services)
+   Review the system design and implementation to ensure adherence to best practices and requirements.
+
+   *Acceptance test*: Review System Design and Implementation component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: analyseAgricultureIA can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Un système d'IA qui analyse les données agricoles pour maximiser les rendements et minimiser les per
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Agricultural scientists and farm operators
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

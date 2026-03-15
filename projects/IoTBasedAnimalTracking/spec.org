@@ -1,0 +1,152 @@
+#+TITLE: IoTBasedAnimalTracking
+#+SUBTITLE: An IoT system for tracking the movement and health of wild or domestic animals.
+#+CATEGORY: PETS
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+An IoT system for tracking the movement and health of wild or domestic animals.
+
+* Foundational Axiom
+
+Existing approaches to iot system fail because they optimize for the common case while ignoring structural constraints; IoTBasedAnimalTracking makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: IoTBasedAnimalTracking solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Scope and Functional/Non-Functional Requirements for IoT-based Animal Tracking System (Revised)
+   :STATUS: DRAFT
+   This RFC outlines the functional and non-functional requirements for the IoT-based animal tracking system, including system architecture, hardware specifications, software components, data storage solutions, user interface design, security measures, performance benchmarks, scalability considerations, guidelines for testing and documentation. The revised version includes more specific details about the system's data processing capabilities (e.g., real-time vs batch processing), clarifies the type...
+
+** Document System Functionality
+   :STATUS: DRAFT
+   Write comprehensive documentation for the system architecture (including diagrams), APIs, and user guide. Cover all components, interactions, usage scenarios, data privacy, security measures, and error handling mechanisms implemented in the system. Include examples of typical use cases to clarify the usage of the system, with a focus on explaining how these features interact with each other and how they can be integrated into existing ecosystems. This documentation should also provide guidance f...
+
+* Build Order
+
+** TODO Step 1: Design System Architecture
+   :PRIORITY: 2
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Develop a high-level architecture that covers frontend, backend, and IoT components.
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 2: Document System Functionality
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Design System Architecture)
+   Write comprehensive documentation for the system architecture (including diagrams), APIs, and user guide. Cover all components, interactions, usage scenarios, data privacy, security measures, and error handling mechanisms implemented in the system. Include examples of typical use cases to clarify th...
+
+   *Acceptance test*: Document System Functionality component is implemented, tested, and integrated.
+
+** TODO Step 3: Implement Backend Services
+   :PRIORITY: 3
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design System Architecture)
+   Create the necessary APIs and backend services to handle data from IoT devices.
+
+   *Acceptance test*: Implement Backend Services component is implemented, tested, and integrated.
+
+** TODO Step 4: Set Up IoT Device Integration
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Implement Backend Services)
+   Integrate the tracking devices and sensors with the backend services.
+
+   *Acceptance test*: Set Up IoT Device Integration component is implemented, tested, and integrated.
+
+** TODO Step 5: Write Unit Tests for Core Functionality
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Implement Backend Services)
+   Develop unit tests to ensure correct functioning of core components.
+
+   *Acceptance test*: Write Unit Tests for Core Functionality component is implemented, tested, and integrated.
+
+** TODO Step 6: Develop Frontend Interface Design
+   :PRIORITY: 3
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design System Architecture)
+   Design the user interface for visualizing animal data, tracking movement, and managing devices.
+
+   *Acceptance test*: Develop Frontend Interface Design component is implemented, tested, and integrated.
+
+** TODO Step 7: Create Database Schema and Models
+   :PRIORITY: 3
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Implement Backend Services)
+   Design and implement the database schema for animal data, tracking information, and device management.
+
+   *Acceptance test*: Create Database Schema and Models component is implemented, tested, and integrated.
+
+** TODO Step 8: Conduct Code Review for Frontend Components
+   :PRIORITY: 3
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Develop Frontend Interface Design)
+   Review and provide feedback on the frontend code to ensure quality and adherence to best practices.
+
+   *Acceptance test*: Conduct Code Review for Frontend Components component is implemented, tested, and integrated.
+
+** TODO Step 9: Conduct Code Review for Backend Services
+   :PRIORITY: 3
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Implement Backend Services)
+   Review and provide feedback on the backend code to ensure quality and adherence to best practices.
+
+   *Acceptance test*: Conduct Code Review for Backend Services component is implemented, tested, and integrated.
+
+** TODO Step 10: Define Project Scope and Functional/Non-Functional Requirements for IoT-based Animal Tracking System (Revised)
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   This RFC outlines the functional and non-functional requirements for the IoT-based animal tracking system, including system architecture, hardware specifications, software components, data storage solutions, user interface design, security measures, performance benchmarks, scalability considerations...
+
+   *Acceptance test*: Define Project Scope and Functional/Non-Functional Requirements for IoT-based Animal Tracking System (Revised) component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: IoTBasedAnimalTracking can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-005: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An IoT system for tracking the movement and health of wild or domestic animals.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Pet owners and veterinary professionals
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

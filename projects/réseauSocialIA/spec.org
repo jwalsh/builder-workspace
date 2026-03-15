@@ -1,0 +1,120 @@
+#+TITLE: réseauSocialIA
+#+SUBTITLE: Un réseau social intelligent qui propose des connexions et contenus basés sur les centres d'intérêts et le comportement utilisateur.
+#+CATEGORY: SOCIAL_MEDIA
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Un réseau social intelligent qui propose des connexions et contenus basés sur les centres d'intérêts et le comportement utilisateur.
+
+* Foundational Axiom
+
+Existing approaches to un réseau social intelligent qui propose des connexions et c fail because they optimize for the common case while ignoring structural constraints; réseauSocialIA makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: réseauSocialIA solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Build Order
+
+** TODO Step 1: Define User Interface Requirements
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   Develop the visual and interactive requirements for the user interface of réseauSocialIA.
+
+   *Acceptance test*: Define User Interface Requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Design Machine Learning Model Architecture
+   :PRIORITY: 4
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define User Interface Requirements)
+   Create the architecture for the machine learning models that will be used to understand user behavior and interests.
+
+   *Acceptance test*: Design Machine Learning Model Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop Machine Learning Algorithms
+   :PRIORITY: 5
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design Machine Learning Model Architecture)
+   Implement the machine learning algorithms for understanding user behavior and interests based on the designed architecture.
+
+   *Acceptance test*: Develop Machine Learning Algorithms component is implemented, tested, and integrated.
+
+** TODO Step 4: Integrate Frontend and Backend Components
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Define User Interface Requirements, Develop Machine Learning Algorithms)
+   Combine the frontend and backend components to create a functional réseauSocialIA application.
+
+   *Acceptance test*: Integrate Frontend and Backend Components component is implemented, tested, and integrated.
+
+** TODO Step 5: Develop User Data Collection Mechanisms
+   :PRIORITY: 2
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design Machine Learning Model Architecture)
+   Create mechanisms for collecting user data necessary for the machine learning models.
+
+   *Acceptance test*: Develop User Data Collection Mechanisms component is implemented, tested, and integrated.
+
+** TODO Step 6: Perform Quality Assurance Testing
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Integrate Frontend and Backend Components)
+   Test the réseauSocialIA application to ensure it functions as expected.
+
+   *Acceptance test*: Perform Quality Assurance Testing component is implemented, tested, and integrated.
+
+** TODO Step 7: Develop User Authentication and Authorization Mechanisms
+   :PRIORITY: 1
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Define User Interface Requirements)
+   Create mechanisms for user authentication and authorization within the réseauSocialIA platform.
+
+   *Acceptance test*: Develop User Authentication and Authorization Mechanisms component is implemented, tested, and integrated.
+
+** TODO Step 8: Write Technical Documentation
+   :PRIORITY: 1
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Integrate Frontend and Backend Components)
+   Create technical documentation for réseauSocialIA, including architecture diagrams, usage guides, and troubleshooting tips.
+
+   *Acceptance test*: Write Technical Documentation component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: réseauSocialIA can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Un réseau social intelligent qui propose des connexions et contenus basés sur les centres d'intérêts
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Content creators and community managers
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

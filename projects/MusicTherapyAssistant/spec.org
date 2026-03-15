@@ -1,0 +1,145 @@
+#+TITLE: MusicTherapyAssistant
+#+SUBTITLE: An AI-driven music therapy tool that selects and generates music to address specific emotional and physical health issues.
+#+CATEGORY: HEALTHCARE
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+An AI-driven music therapy tool that selects and generates music to address specific emotional and physical health issues.
+
+* Foundational Axiom
+
+Healthcare tools fail when they optimize for data collection over clinical workflow; MusicTherapyAssistant embeds clinical reasoning into the system's structure.
+
+* Anti-Goals
+
+- *General-purpose platform*: MusicTherapyAssistant solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** DefineProjectRequirementsforMusicTherapyAssistant
+   :STATUS: DRAFT
+   Gatheranddocumentuserstories,functionalrequirements(includingedgecases),non-functionalrequirements(e.g.,performance,scalability,accessibility,security),successcriteria,technicalrequirements(e.g.,APIdesign,datastoragesolutions)fortheMusicTherapyAssistant.Engagewithvariousstakeholderssuchasusers,therapists,musicexperts,anddeveloperstoensureacomprehensiveunderstandingoftheirneeds.Considerthefollowingpoints:1.UserStories:Defineuserstoriesthatcoverdifferentusertypes(patients,therapists,administrators...
+
+* Build Order
+
+** TODO Step 1: Design User Interface for MusicTherapyAssistant
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Define Project Requirements)
+   Create a wireframe and visual design for the frontend of the MusicTherapyAssistant, focusing on usability and accessibility.
+
+   *Acceptance test*: Design User Interface for MusicTherapyAssistant component is implemented, tested, and integrated.
+
+** TODO Step 2: Develop Frontend for User Interface
+   :PRIORITY: 5
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design User Interface for MusicTherapyAssistant)
+   Implement the designed user interface using a suitable frontend framework.
+
+   *Acceptance test*: Develop Frontend for User Interface component is implemented, tested, and integrated.
+
+** TODO Step 3: Design Music Therapy AI Algorithm
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Requirements)
+   Develop a design for the AI component that selects and generates music based on user's emotional and physical health issues.
+
+   *Acceptance test*: Design Music Therapy AI Algorithm component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Backend for Music Therapy AI
+   :PRIORITY: 4
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design Music Therapy AI Algorithm)
+   Implement the designed algorithm using a suitable programming language and framework.
+
+   *Acceptance test*: Develop Backend for Music Therapy AI component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement Database and Data Model
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Define Project Requirements)
+   Design, develop, and set up the database schema to store user data and music files.
+
+   *Acceptance test*: Implement Database and Data Model component is implemented, tested, and integrated.
+
+** TODO Step 6: Test MusicTherapyAssistant
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Develop Backend for Music Therapy AI, Develop Frontend for User Interface, Implement Database and Data Model)
+   Perform functional and non-functional testing to ensure the application works as intended and meets all requirements.
+
+   *Acceptance test*: Test MusicTherapyAssistant component is implemented, tested, and integrated.
+
+** TODO Step 7: Deploy MusicTherapyAssistant
+   :PRIORITY: 1
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Test MusicTherapyAssistant)
+   Package, test, and deploy the application to a suitable production environment.
+
+   *Acceptance test*: Deploy MusicTherapyAssistant component is implemented, tested, and integrated.
+
+** TODO Step 8: Conduct Post-Deployment Review
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Deploy MusicTherapyAssistant)
+   Review the performance of the deployed application, identify any issues or areas for improvement, and make necessary adjustments.
+
+   *Acceptance test*: Conduct Post-Deployment Review component is implemented, tested, and integrated.
+
+** TODO Step 9: Integrate Backend and Frontend
+   :PRIORITY: 4
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Develop Backend for Music Therapy AI, Develop Frontend for User Interface)
+   Connect the backend with the frontend, ensuring seamless communication between components.
+
+   *Acceptance test*: Integrate Backend and Frontend component is implemented, tested, and integrated.
+
+** IN_PROGRESS Step 10: DefineProjectRequirementsforMusicTherapyAssistant
+   :PRIORITY: 1
+   :ASSIGNED: task-decomposer
+   Gatheranddocumentuserstories,functionalrequirements(includingedgecases),non-functionalrequirements(e.g.,performance,scalability,accessibility,security),successcriteria,technicalrequirements(e.g.,APIdesign,datastoragesolutions)fortheMusicTherapyAssistant.Engagewithvariousstakeholderssuchasusers,thera...
+
+   *Acceptance test*: DefineProjectRequirementsforMusicTherapyAssistant component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: MusicTherapyAssistant can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An AI-driven music therapy tool that selects and generates music to address specific emotional and p
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Healthcare professionals (clinicians, administrators) in clinical settings
+
+* Primary Output Artifact
+
+A production-ready tool with CLI and/or web interface

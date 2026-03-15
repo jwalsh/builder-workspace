@@ -1,0 +1,148 @@
+#+TITLE: GeoFaciesAI
+#+SUBTITLE: Apply a low-code ML model on well log data to obtain facies classification at each measured depth.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Apply a low-code ML model on well log data to obtain facies classification at each measured depth.
+
+* Foundational Axiom
+
+Existing approaches to apply a low-code ml model on well log data fail because they optimize for the common case while ignoring structural constraints; GeoFaciesAI makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: GeoFaciesAI solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** User Interface Design (Revised)
+   :STATUS: DRAFT
+   Design a user-friendly, intuitive, and efficient interface for geologists and domain experts to interact with the facies classification model. The interface should allow users to upload well log data, visualize results, adjust parameters if necessary, and include features for real-time collaboration, data privacy settings, historical version control, and export options (such as CSV or PDF). Also, consider integrating the interface with existing geological software platforms used by our clients f...
+
+* Build Order
+
+** TODO Step 1: Project Planning and Requirements Gathering
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Define project scope, objectives, and requirements. Gather data sources and understand well log data format. Identify stakeholders and establish communication channels.
+
+   *Acceptance test*: Project Planning and Requirements Gathering component is implemented, tested, and integrated.
+
+** TODO Step 2: Data Preparation and Exploration
+   :PRIORITY: 4
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Project Planning and Requirements Gathering)
+   Preprocess well log data, handle missing values, and perform exploratory data analysis. Understand data distribution and identify potential issues.
+
+   *Acceptance test*: Data Preparation and Exploration component is implemented, tested, and integrated.
+
+** TODO Step 3: Model Selection and Development
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Data Preparation and Exploration)
+   Research and select appropriate machine learning models for facies classification. Develop and train the models using the preprocessed well log data.
+
+   *Acceptance test*: Model Selection and Development component is implemented, tested, and integrated.
+
+** TODO Step 4: Model Evaluation and Validation
+   :PRIORITY: 3
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Model Selection and Development)
+   Evaluate the performance of the trained models using appropriate metrics. Validate the models against test data and domain experts.
+
+   *Acceptance test*: Model Evaluation and Validation component is implemented, tested, and integrated.
+
+** TODO Step 5: Backend Integration
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Model Evaluation and Validation)
+   Integrate the trained machine learning model with the backend system. Develop APIs and data pipelines for model deployment.
+
+   *Acceptance test*: Backend Integration component is implemented, tested, and integrated.
+
+** TODO Step 6: Security and Compliance
+   :PRIORITY: 3
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Backend Integration)
+   Ensure data privacy and security measures are in place. Comply with relevant industry regulations and standards.
+
+   *Acceptance test*: Security and Compliance component is implemented, tested, and integrated.
+
+** TODO Step 7: User Interface Design (Revised)
+   :PRIORITY: 2
+   :ASSIGNED: task-decomposer
+   :DEPENDS: (depends on: Model Evaluation and Validation)
+   Design a user-friendly, intuitive, and efficient interface for geologists and domain experts to interact with the facies classification model. The interface should allow users to upload well log data, visualize results, adjust parameters if necessary, and include features for real-time collaboration...
+
+   *Acceptance test*: User Interface Design (Revised) component is implemented, tested, and integrated.
+
+** TODO Step 8: Testing and Quality Assurance
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: User Interface Design, Backend Integration)
+   Develop comprehensive test cases for the facies classification system. Perform integration, system, and user acceptance testing.
+
+   *Acceptance test*: Testing and Quality Assurance component is implemented, tested, and integrated.
+
+** TODO Step 9: Deployment and Monitoring
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Testing and Quality Assurance, Security and Compliance)
+   Deploy the facies classification system to a production environment. Set up monitoring and logging mechanisms for system health and performance.
+
+   *Acceptance test*: Deployment and Monitoring component is implemented, tested, and integrated.
+
+** TODO Step 10: Documentation and Training
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: User Interface Design, Testing and Quality Assurance)
+   Develop user manuals, technical documentation, and training materials for geologists and domain experts.
+
+   *Acceptance test*: Documentation and Training component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: GeoFaciesAI can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-005: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Apply a low-code ML model on well log data to obtain facies classification at each measured depth.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A trained model with evaluation metrics and serving infrastructure

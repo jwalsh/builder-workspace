@@ -1,0 +1,126 @@
+#+TITLE: GeothermalResidentialSystem
+#+SUBTITLE: A compact, efficient geothermal heating and cooling system designed for residential use.
+#+CATEGORY: SOFTWARE_ENGINEERING
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A compact, efficient geothermal heating and cooling system designed for residential use.
+
+* Foundational Axiom
+
+The bottleneck in compact, efficient geothermal heating and cooling system designed is not compute or data but the feedback loop between intent and artifact; GeothermalResidentialSystem compresses that loop.
+
+* Anti-Goals
+
+- *General-purpose platform*: GeothermalResidentialSystem solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Requirements Gathering for GeothermalResidentialSystem
+   :STATUS: IN_REVIEW
+   Identify and document functional and non-functional requirements for the GeothermalResidentialSystem. This includes performance requirements, safety standards (e.g., UL 1742 for geothermal heat pumps), user interface specifications (UI/UX design considerations), system constraints (e.g., energy efficiency ratings, compatibility with existing residential infrastructure), and any other relevant system requirements.
+
+* Build Order
+
+** IN_PROGRESS Step 1: Requirements Gathering for GeothermalResidentialSystem
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Identify and document functional and non-functional requirements for the GeothermalResidentialSystem. This includes performance requirements, safety standards (e.g., UL 1742 for geothermal heat pumps), user interface specifications (UI/UX design considerations), system constraints (e.g., energy effi...
+
+   *Acceptance test*: Requirements Gathering for GeothermalResidentialSystem component is implemented, tested, and integrated.
+
+** TODO Step 2: Design Architecture for GeothermalResidentialSystem
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Requirements Gathering for GeothermalResidentialSystem)
+   Develop the high-level and detailed design of the system architecture for the GeothermalResidentialSystem.
+
+   *Acceptance test*: Design Architecture for GeothermalResidentialSystem component is implemented, tested, and integrated.
+
+** TODO Step 3: Database Design for GeothermalResidentialSystem
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design Architecture for GeothermalResidentialSystem)
+   Design the database schema and data models required for the GeothermalResidentialSystem.
+
+   *Acceptance test*: Database Design for GeothermalResidentialSystem component is implemented, tested, and integrated.
+
+** TODO Step 4: Frontend Design for GeothermalResidentialSystem
+   :PRIORITY: 4
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design Architecture for GeothermalResidentialSystem)
+   Create the user interface design and layout for the frontend of the GeothermalResidentialSystem.
+
+   *Acceptance test*: Frontend Design for GeothermalResidentialSystem component is implemented, tested, and integrated.
+
+** TODO Step 5: Backend Development for GeothermalResidentialSystem
+   :PRIORITY: 4
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Database Design for GeothermalResidentialSystem, Frontend Design for GeothermalResidentialSystem)
+   Develop the backend services and APIs required for the GeothermalResidentialSystem.
+
+   *Acceptance test*: Backend Development for GeothermalResidentialSystem component is implemented, tested, and integrated.
+
+** TODO Step 6: Integration Testing for GeothermalResidentialSystem
+   :PRIORITY: 5
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Backend Development for GeothermalResidentialSystem, Frontend Design for GeothermalResidentialSystem)
+   Perform system-level integration tests to verify the correct functioning of the GeothermalResidentialSystem.
+
+   *Acceptance test*: Integration Testing for GeothermalResidentialSystem component is implemented, tested, and integrated.
+
+** TODO Step 7: Deployment Plan for GeothermalResidentialSystem
+   :PRIORITY: 5
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Integration Testing for GeothermalResidentialSystem)
+   Create a deployment plan and execute the deployment of the GeothermalResidentialSystem.
+
+   *Acceptance test*: Deployment Plan for GeothermalResidentialSystem component is implemented, tested, and integrated.
+
+** TODO Step 8: Security Assessment for GeothermalResidentialSystem
+   :PRIORITY: 5
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Deployment Plan for GeothermalResidentialSystem)
+   Perform a security assessment to identify and address any vulnerabilities in the GeothermalResidentialSystem.
+
+   *Acceptance test*: Security Assessment for GeothermalResidentialSystem component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: GeothermalResidentialSystem can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A compact, efficient geothermal heating and cooling system designed for residential use.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Software developers working in professional development environments
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

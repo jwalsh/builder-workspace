@@ -1,0 +1,109 @@
+#+TITLE: WearableAirQualityMonitor
+#+SUBTITLE: A wearable device that continuously monitors air quality and alerts users to dangerous levels.
+#+CATEGORY: IOT
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A wearable device that continuously monitors air quality and alerts users to dangerous levels.
+
+* Foundational Axiom
+
+Existing approaches to wearable device fail because they optimize for the common case while ignoring structural constraints; WearableAirQualityMonitor makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: WearableAirQualityMonitor solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Build Order
+
+** TODO Step 1: Define Air Quality Metrics
+   :PRIORITY: 1
+   :ASSIGNED: task-decomposer
+   Research and define the key air quality metrics to be monitored.
+
+   *Acceptance test*: Define Air Quality Metrics component is implemented, tested, and integrated.
+
+** TODO Step 2: Design Wearable Device Architecture
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Air Quality Metrics)
+   Design the overall architecture for the wearable device.
+
+   *Acceptance test*: Design Wearable Device Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop Sensors Interface for Device
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design Wearable Device Architecture)
+   Design and develop the interface to connect air quality sensors with the device.
+
+   *Acceptance test*: Develop Sensors Interface for Device component is implemented, tested, and integrated.
+
+** TODO Step 4: Integrate Air Quality Sensor Modules
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Develop Sensors Interface for Device)
+   Integrate the air quality sensor modules into the wearable device.
+
+   *Acceptance test*: Integrate Air Quality Sensor Modules component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement Air Quality Data Processing Algorithm
+   :PRIORITY: 4
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Integrate Air Quality Sensor Modules)
+   Develop an algorithm to process the air quality data and determine dangerous levels.
+
+   *Acceptance test*: Implement Air Quality Data Processing Algorithm component is implemented, tested, and integrated.
+
+** TODO Step 6: Implement Alert System for Dangerous Levels
+   :PRIORITY: 5
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Implement Air Quality Data Processing Algorithm)
+   Develop a system to alert users when dangerous air quality levels are detected.
+
+   *Acceptance test*: Implement Alert System for Dangerous Levels component is implemented, tested, and integrated.
+
+** TODO Step 7: Develop User Interface for Device
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design Wearable Device Architecture)
+   Design and develop the user interface for the device to display air quality data.
+
+   *Acceptance test*: Develop User Interface for Device component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: WearableAirQualityMonitor can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A wearable device that continuously monitors air quality and alerts users to dangerous levels.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+IoT engineers and embedded systems developers
+
+* Primary Output Artifact
+
+A trained model with evaluation metrics and serving infrastructure

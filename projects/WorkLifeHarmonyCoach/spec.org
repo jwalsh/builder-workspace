@@ -1,0 +1,107 @@
+#+TITLE: WorkLifeHarmonyCoach
+#+SUBTITLE: An AI coach that helps users achieve better work-life balance through personalized scheduling and habit formation.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+An AI coach that helps users achieve better work-life balance through personalized scheduling and habit formation.
+
+* Foundational Axiom
+
+Existing approaches to ai coach fail because they optimize for the common case while ignoring structural constraints; WorkLifeHarmonyCoach makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: WorkLifeHarmonyCoach solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Build Order
+
+** TODO Step 1: Develop AI Scheduling Algorithm
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   Create an algorithm that can analyze user's work and personal schedules to suggest optimal schedules for better work-life balance.
+
+   *Acceptance test*: Develop AI Scheduling Algorithm component is implemented, tested, and integrated.
+
+** TODO Step 2: Develop Habit Formation Module
+   :PRIORITY: 4
+   :ASSIGNED: backend-developer
+   Create a module that helps users form and maintain good habits to improve their work-life balance.
+
+   *Acceptance test*: Develop Habit Formation Module component is implemented, tested, and integrated.
+
+** TODO Step 3: Define User Interface Requirements
+   :PRIORITY: 3
+   :ASSIGNED: task-decomposer
+   Develop a list of user interface requirements for the WorkLifeHarmonyCoach application, including features, functionalities, and design elements.
+
+   *Acceptance test*: Define User Interface Requirements component is implemented, tested, and integrated.
+
+** TODO Step 4: Design the User Interface
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Define User Interface Requirements)
+   Create wireframes and mockups for the user interface of WorkLifeHarmonyCoach based on the defined requirements.
+
+   *Acceptance test*: Design the User Interface component is implemented, tested, and integrated.
+
+** TODO Step 5: Integrate User Interface with AI Modules
+   :PRIORITY: 1
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design the User Interface, Develop AI Scheduling Algorithm, Develop Habit Formation Module)
+   Connect the user interface with the AI scheduling and habit formation modules to create a seamless user experience.
+
+   *Acceptance test*: Integrate User Interface with AI Modules component is implemented, tested, and integrated.
+
+** TODO Step 6: Perform Unit Testing
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Develop AI Scheduling Algorithm, Develop Habit Formation Module, Integrate User Interface with AI Modules)
+   Test each component of WorkLifeHarmonyCoach to ensure they function correctly and don't introduce any errors or bugs.
+
+   *Acceptance test*: Perform Unit Testing component is implemented, tested, and integrated.
+
+** TODO Step 7: Perform System Integration Testing
+   :PRIORITY: 1
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Perform Unit Testing)
+   Test the overall functionality of WorkLifeHarmonyCoach, including all its components and how they interact with each other.
+
+   *Acceptance test*: Perform System Integration Testing component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: WorkLifeHarmonyCoach can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An AI coach that helps users achieve better work-life balance through personalized scheduling and ha
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A trained model with evaluation metrics and serving infrastructure

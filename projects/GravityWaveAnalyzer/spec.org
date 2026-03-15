@@ -1,0 +1,148 @@
+#+TITLE: GravityWaveAnalyzer
+#+SUBTITLE: Build a data processing pipeline for detecting and analyzing gravitational waves from cosmic events across the universe.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Build a data processing pipeline for detecting and analyzing gravitational waves from cosmic events across the universe.
+
+* Foundational Axiom
+
+Existing approaches to build a data processing pipeline fail because they optimize for the common case while ignoring structural constraints; GravityWaveAnalyzer makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: GravityWaveAnalyzer solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Gather Requirements for GravityWaveAnalyzer
+   :STATUS: DRAFT
+   Collaboratively collect and document the functional and non-functional requirements for the GravityWaveAnalyzer project. This includes identifying data sources, analysis techniques, output formats, performance expectations, potential scalability issues, security concerns, compliance requirements, as well as any constraints or assumptions. Consider potential future extensions, such as real-time processing, data visualization, and integration with existing astronomical databases. Address areas lik...
+
+* Build Order
+
+** IN_PROGRESS Step 1: Gather Requirements for GravityWaveAnalyzer
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   Collaboratively collect and document the functional and non-functional requirements for the GravityWaveAnalyzer project. This includes identifying data sources, analysis techniques, output formats, performance expectations, potential scalability issues, security concerns, compliance requirements, as...
+
+   *Acceptance test*: Gather Requirements for GravityWaveAnalyzer component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 4
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Gather Requirements)
+   Design the overall system architecture, including the data ingestion pipeline, data processing components, storage solutions, and user interfaces.
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Implement Data Ingestion Pipeline
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop the components responsible for ingesting and preprocessing gravitational wave data from various sources.
+
+   *Acceptance test*: Implement Data Ingestion Pipeline component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Data Processing Algorithms
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement the algorithms and techniques for detecting and analyzing gravitational waves from the ingested data.
+
+   *Acceptance test*: Develop Data Processing Algorithms component is implemented, tested, and integrated.
+
+** TODO Step 5: Set up Data Storage and Management
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the data storage and management solutions for raw data, processed data, and analysis results.
+
+   *Acceptance test*: Set up Data Storage and Management component is implemented, tested, and integrated.
+
+** TODO Step 6: Implement Security and Access Controls
+   :PRIORITY: 3
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement security measures and access controls to ensure data privacy and protect the system from unauthorized access.
+
+   *Acceptance test*: Implement Security and Access Controls component is implemented, tested, and integrated.
+
+** TODO Step 7: Build User Interfaces
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop the user interfaces for visualizing and interacting with the gravitational wave data and analysis results.
+
+   *Acceptance test*: Build User Interfaces component is implemented, tested, and integrated.
+
+** TODO Step 8: Set up Continuous Integration and Deployment
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Implement Data Ingestion Pipeline, Develop Data Processing Algorithms, Set up Data Storage and Management, Build User Interfaces, Implement Security and Access Controls)
+   Establish a CI/CD pipeline for automated testing, building, and deploying the GravityWaveAnalyzer application.
+
+   *Acceptance test*: Set up Continuous Integration and Deployment component is implemented, tested, and integrated.
+
+** TODO Step 9: Conduct Testing and Quality Assurance
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Set up Continuous Integration and Deployment)
+   Perform comprehensive testing, including unit tests, integration tests, and end-to-end tests, to ensure the quality and reliability of the GravityWaveAnalyzer application.
+
+   *Acceptance test*: Conduct Testing and Quality Assurance component is implemented, tested, and integrated.
+
+** TODO Step 10: Write Documentation
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Gather Requirements, Design System Architecture)
+   Create comprehensive documentation for the GravityWaveAnalyzer project, including user guides, technical documentation, and maintenance procedures.
+
+   *Acceptance test*: Write Documentation component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: GravityWaveAnalyzer can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-005: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Build a data processing pipeline for detecting and analyzing gravitational waves from cosmic events 
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

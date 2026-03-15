@@ -1,0 +1,113 @@
+#+TITLE: ConsciousnessFlowTracker
+#+SUBTITLE: A speculative system for tracking and visualizing the flow of consciousness across individuals and collective groups.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A speculative system for tracking and visualizing the flow of consciousness across individuals and collective groups.
+
+* Foundational Axiom
+
+Existing approaches to speculative system fail because they optimize for the common case while ignoring structural constraints; ConsciousnessFlowTracker makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: ConsciousnessFlowTracker solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Scope and Requirements
+   :STATUS: DRAFT
+   This RFC aims to revise the project's scope, objectives, and requirements. The focus is on defining consciousness flow (integrating both Global Workspace Theory and Integrated Information Theory), identifying data sources (brain-computer interfaces, EEG devices, self-reported data, potential integration with wearable tech for real-time tracking), outlining visualization needs (interactive dashboards, real-time tracking, statistical analysis tools, options for exporting data for further analysis)...
+
+** Define Data Models and Schemas for Consciousness Flow Tracking System
+   :STATUS: REVIEW
+   Design the data models and schemas for storing and representing consciousness flow data. This includes individual and collective consciousness states, events, and metadata. Consider incorporating temporal data structures to capture the dynamic nature of consciousness flow over time. Additionally, explore the integration of external data sources, such as brain activity data from wearable devices or social media feeds, to enrich the consciousness flow representation. Define APIs for data ingestion...
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements
+   :PRIORITY: 5
+   :ASSIGNED: task-decomposer
+   This RFC aims to revise the project's scope, objectives, and requirements. The focus is on defining consciousness flow (integrating both Global Workspace Theory and Integrated Information Theory), identifying data sources (brain-computer interfaces, EEG devices, self-reported data, potential integra...
+
+   *Acceptance test*: Define Project Scope and Requirements component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 4
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design the overall system architecture, including components for data ingestion, processing, storage, and visualization, as well as the communication between components.
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Define Data Models and Schemas for Consciousness Flow Tracking System
+   :PRIORITY: 3
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Design System Architecture)
+   Design the data models and schemas for storing and representing consciousness flow data. This includes individual and collective consciousness states, events, and metadata. Consider incorporating temporal data structures to capture the dynamic nature of consciousness flow over time. Additionally, ex...
+
+   *Acceptance test*: Define Data Models and Schemas for Consciousness Flow Tracking System component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Data Ingestion and Processing Components
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Define Data Models and Schemas)
+   Implement components for ingesting and processing consciousness flow data from various sources, including sensors, surveys, and other data sources.
+
+   *Acceptance test*: Develop Data Ingestion and Processing Components component is implemented, tested, and integrated.
+
+** TODO Step 5: Design and Implement Visualization Components
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Define Data Models and Schemas)
+   Design and develop the user interface and visualization components for displaying and interacting with consciousness flow data, including individual and collective visualizations.
+
+   *Acceptance test*: Design and Implement Visualization Components component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: ConsciousnessFlowTracker can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-005: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Docker
+- Kubernetes
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A speculative system for tracking and visualizing the flow of consciousness across individuals and c
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

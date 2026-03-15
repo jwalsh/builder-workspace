@@ -1,0 +1,117 @@
+#+TITLE: RopaInteligente
+#+SUBTITLE: Prendas inteligentes capaces de monitorear la temperatura corporal y signos vitales en tiempo real.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Prendas inteligentes capaces de monitorear la temperatura corporal y signos vitales en tiempo real.
+
+* Foundational Axiom
+
+Existing approaches to prendas inteligentes capaces de monitorear la temperatura co fail because they optimize for the common case while ignoring structural constraints; RopaInteligente makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: RopaInteligente solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Build Order
+
+** TODO Step 1: Design Smart Clothing Architecture
+   :PRIORITY: 1
+   :ASSIGNED: project-manager
+   Define the overall design and structure of the smart clothing, including sensors placement, power source, communication methods, and data processing.
+
+   *Acceptance test*: Design Smart Clothing Architecture component is implemented, tested, and integrated.
+
+** TODO Step 2: Develop Temperature Monitoring Sensor
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design Smart Clothing Architecture)
+   Design and build a sensor that can measure the wearer's body temperature accurately.
+
+   *Acceptance test*: Develop Temperature Monitoring Sensor component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop Vital Signs Monitoring Sensor
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design Smart Clothing Architecture)
+   Design and build a sensor that can monitor the wearer's vital signs in real-time.
+
+   *Acceptance test*: Develop Vital Signs Monitoring Sensor component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Power Source for Smart Clothing
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design Smart Clothing Architecture)
+   Create a power source that can efficiently and safely power the sensors and other components of the smart clothing.
+
+   *Acceptance test*: Develop Power Source for Smart Clothing component is implemented, tested, and integrated.
+
+** TODO Step 5: Develop Real-time Data Processing System
+   :PRIORITY: 2
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design Smart Clothing Architecture)
+   Create a system that can process the data from the sensors in real-time and provide useful insights.
+
+   *Acceptance test*: Develop Real-time Data Processing System component is implemented, tested, and integrated.
+
+** TODO Step 6: Develop Mobile Application for Data Visualization
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Develop Real-time Data Processing System)
+   Create a mobile application that allows users to visualize the data collected by the smart clothing.
+
+   *Acceptance test*: Develop Mobile Application for Data Visualization component is implemented, tested, and integrated.
+
+** TODO Step 7: Test and Validate Smart Clothing Prototype
+   :PRIORITY: 4
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Develop Temperature Monitoring Sensor, Develop Vital Signs Monitoring Sensor, Develop Power Source for Smart Clothing, Develop Real-time Data Processing System, Develop Mobile Application for Data Visualization)
+   Perform thorough testing and validation of the smart clothing prototype to ensure it meets all requirements.
+
+   *Acceptance test*: Test and Validate Smart Clothing Prototype component is implemented, tested, and integrated.
+
+** TODO Step 8: Revise and Approve Final Design Documentation
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design Smart Clothing Architecture, Test and Validate Smart Clothing Prototype)
+   Review the final design documentation and provide necessary approvals.
+
+   *Acceptance test*: Revise and Approve Final Design Documentation component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: RopaInteligente can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Prendas inteligentes capaces de monitorear la temperatura corporal y signos vitales en tiempo real.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A monitoring/analysis dashboard with alerting capabilities

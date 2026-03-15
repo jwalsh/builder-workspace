@@ -1,0 +1,147 @@
+#+TITLE: MilitaryIoTNetwork
+#+SUBTITLE: A secure Internet of Things (IoT) network for military applications, connecting various sensors and devices for enhanced situational awareness.
+#+CATEGORY: MILITARY
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A secure Internet of Things (IoT) network for military applications, connecting various sensors and devices for enhanced situational awareness.
+
+* Foundational Axiom
+
+Existing approaches to secure internet of things (iot) network fail because they optimize for the common case while ignoring structural constraints; MilitaryIoTNetwork makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: MilitaryIoTNetwork solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Scope and Requirements - RFC
+   :STATUS: DRAFT
+   Prepare a comprehensive document detailing the scope, requirements, security considerations, performance expectations, scalability needs, integration points with existing military systems, compliance requirements, relevant standards, key stakeholders for the MilitaryIoTNetwork project. Identify subject matter experts for input. This RFC is open to feedback from all team members. Clarify the purpose of the network (to provide a secure IoT network for military applications enhancing situational aw...
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements - RFC
+   :PRIORITY: 5
+   :ASSIGNED: technical-writer
+   Prepare a comprehensive document detailing the scope, requirements, security considerations, performance expectations, scalability needs, integration points with existing military systems, compliance requirements, relevant standards, key stakeholders for the MilitaryIoTNetwork project. Identify subj...
+
+   *Acceptance test*: Define Project Scope and Requirements - RFC component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 4
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design the overall system architecture, including network topology, communication protocols, and hardware/software components.
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop Security Protocols and Mechanisms
+   :PRIORITY: 5
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement robust security protocols and mechanisms to ensure data confidentiality, integrity, and availability in the MilitaryIoTNetwork.
+
+   *Acceptance test*: Develop Security Protocols and Mechanisms component is implemented, tested, and integrated.
+
+** TODO Step 4: Design and Implement Network Infrastructure
+   :PRIORITY: 4
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the network infrastructure, including routers, switches, and communication links, to support the MilitaryIoTNetwork.
+
+   *Acceptance test*: Design and Implement Network Infrastructure component is implemented, tested, and integrated.
+
+** TODO Step 5: Develop IoT Device Integration
+   :PRIORITY: 4
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop software components to integrate various IoT devices and sensors into the MilitaryIoTNetwork, including device discovery, registration, and data collection.
+
+   *Acceptance test*: Develop IoT Device Integration component is implemented, tested, and integrated.
+
+** TODO Step 6: Design and Implement Data Management System
+   :PRIORITY: 4
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement a data management system to store, process, and analyze data collected from IoT devices in the MilitaryIoTNetwork.
+
+   *Acceptance test*: Design and Implement Data Management System component is implemented, tested, and integrated.
+
+** TODO Step 7: Develop User Interfaces and Visualization Tools
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture, Design and Implement Data Management System)
+   Develop user interfaces and data visualization tools to present real-time and historical data from the MilitaryIoTNetwork in a meaningful and actionable way.
+
+   *Acceptance test*: Develop User Interfaces and Visualization Tools component is implemented, tested, and integrated.
+
+** TODO Step 8: Develop Test Plans and Conduct Testing
+   :PRIORITY: 4
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Develop Security Protocols and Mechanisms, Design and Implement Network Infrastructure, Develop IoT Device Integration, Design and Implement Data Management System, Develop User Interfaces and Visualization Tools)
+   Create comprehensive test plans and execute various testing activities, including unit testing, integration testing, performance testing, and security testing.
+
+   *Acceptance test*: Develop Test Plans and Conduct Testing component is implemented, tested, and integrated.
+
+** TODO Step 9: Implement Continuous Integration and Deployment (CI/CD)
+   :PRIORITY: 3
+   :ASSIGNED: devops-engineer
+   Set up a CI/CD pipeline to automate the build, testing, and deployment processes for the MilitaryIoTNetwork components.
+
+   *Acceptance test*: Implement Continuous Integration and Deployment (CI/CD) component is implemented, tested, and integrated.
+
+** TODO Step 10: Create Documentation and User Guides
+   :PRIORITY: 3
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Define Project Scope and Requirements, Design System Architecture)
+   Develop comprehensive documentation, including system architecture diagrams, API documentation, and user guides, to support the deployment and maintenance of the MilitaryIoTNetwork.
+
+   *Acceptance test*: Create Documentation and User Guides component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: MilitaryIoTNetwork can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-005: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A secure Internet of Things (IoT) network for military applications, connecting various sensors and 
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

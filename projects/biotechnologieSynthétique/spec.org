@@ -1,0 +1,106 @@
+#+TITLE: biotechnologieSynthétique
+#+SUBTITLE: Utilisation de la biotechnologie synthétique pour créer des médicaments sur mesure adaptés aux besoins des patients.
+#+CATEGORY: BIOTECH
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Utilisation de la biotechnologie synthétique pour créer des médicaments sur mesure adaptés aux besoins des patients.
+
+* Foundational Axiom
+
+Biotech tools fail when they treat biological systems as deterministic; biotechnologieSynthétique embraces stochasticity as a design constraint.
+
+* Anti-Goals
+
+- *General-purpose platform*: biotechnologieSynthétique solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Research and gather information on synthetic biotechnology for personalized drug creation
+   :STATUS: PENDING_REVIEW
+   Conduct comprehensive research to gain a thorough understanding of the field of synthetic biotechnology, its potential applications in drug creation, and how these technologies can be effectively utilized for creating personalized medications. Focus on identifying recent advancements, industry best practices, and potential challenges.
+
+* Build Order
+
+** TODO Step 1: Design customized drug creation process
+   :PRIORITY: 3
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Research and gather information on synthetique biotechnology)
+   Develop a process for creating drugs tailored to individual patient needs using synthetique biotechnology.
+
+   *Acceptance test*: Design customized drug creation process component is implemented, tested, and integrated.
+
+** TODO Step 2: Develop necessary technologies for drug creation
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design customized drug creation process)
+   Design and build the required technologies to enable the customized drug creation process.
+
+   *Acceptance test*: Develop necessary technologies for drug creation component is implemented, tested, and integrated.
+
+** TODO Step 3: Collaborate with pharmaceutical experts for validation
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Develop necessary technologies for drug creation)
+   Work closely with pharmaceutical experts to validate the feasibility and efficacy of the customized drug creation process.
+
+   *Acceptance test*: Collaborate with pharmaceutical experts for validation component is implemented, tested, and integrated.
+
+** TODO Step 4: Test and refine the customized drug creation process
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Collaborate with pharmaceutical experts for validation)
+   Perform testing on the customized drug creation process to ensure its efficiency and accuracy, making necessary adjustments as needed.
+
+   *Acceptance test*: Test and refine the customized drug creation process component is implemented, tested, and integrated.
+
+** IN_PROGRESS Step 5: Research and gather information on synthetic biotechnology for personalized drug creation
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   Conduct comprehensive research to gain a thorough understanding of the field of synthetic biotechnology, its potential applications in drug creation, and how these technologies can be effectively utilized for creating personalized medications. Focus on identifying recent advancements, industry best ...
+
+   *Acceptance test*: Research and gather information on synthetic biotechnology for personalized drug creation component is implemented, tested, and integrated.
+
+** TODO Step 6: Define project scope and objectives
+   :PRIORITY: 1
+   :ASSIGNED: project-manager
+   Establish the specific areas of biotechnology synthetique that will be focused on in the project, and set clear goals for what the project aims to achieve.
+
+   *Acceptance test*: Define project scope and objectives component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: biotechnologieSynthétique can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Utilisation de la biotechnologie synthétique pour créer des médicaments sur mesure adaptés aux besoi
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Biotechnology researchers and lab scientists
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

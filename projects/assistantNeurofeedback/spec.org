@@ -1,0 +1,104 @@
+#+TITLE: assistantNeurofeedback
+#+SUBTITLE: Un dispositif qui offre une rétroaction neuro en temps réel pour améliorer les pratiques de méditation et pleine conscience.
+#+CATEGORY: BCI
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Un dispositif qui offre une rétroaction neuro en temps réel pour améliorer les pratiques de méditation et pleine conscience.
+
+* Foundational Axiom
+
+Brain-computer interfaces fail when they treat neural signals as simple input streams; assistantNeurofeedback models the bidirectional adaptation between brain and system.
+
+* Anti-Goals
+
+- *General-purpose platform*: assistantNeurofeedback solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Build Order
+
+** TODO Step 1: Define project requirements and specifications
+   :PRIORITY: 1
+   :ASSIGNED: project-manager
+   Outline the functional and non-functional requirements for the assistantNeurofeedback project.
+
+   *Acceptance test*: Define project requirements and specifications component is implemented, tested, and integrated.
+
+** TODO Step 2: Design the user interface and user experience
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define project requirements and specifications)
+   Create wireframes, mockups, and prototypes for the assistantNeurofeedback device.
+
+   *Acceptance test*: Design the user interface and user experience component is implemented, tested, and integrated.
+
+** TODO Step 3: Develop the real-time neuro feedback system
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Define project requirements and specifications)
+   Create the algorithms and systems necessary to capture, analyze, and interpret neural signals in real-time.
+
+   *Acceptance test*: Develop the real-time neuro feedback system component is implemented, tested, and integrated.
+
+** TODO Step 4: Integrate the real-time neuro feedback system with the UI/UX design
+   :PRIORITY: 4
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design the user interface and user experience, Develop the real-time neuro feedback system)
+   Combine the real-time neuro feedback system with the user interface and user experience design.
+
+   *Acceptance test*: Integrate the real-time neuro feedback system with the UI/UX design component is implemented, tested, and integrated.
+
+** TODO Step 5: Test and validate the assistantNeurofeedback device
+   :PRIORITY: 5
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Integrate the real-time neuro feedback system with the UI/UX design)
+   Conduct rigorous testing and validation of the assistantNeurofeedback device to ensure it meets the defined requirements.
+
+   *Acceptance test*: Test and validate the assistantNeurofeedback device component is implemented, tested, and integrated.
+
+** TODO Step 6: Document the assistantNeurofeedback device design and functionality
+   :PRIORITY: 5
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Test and validate the assistantNeurofeedback device)
+   Write technical documentation detailing the design, functionality, and usage of the assistantNeurofeedback device.
+
+   *Acceptance test*: Document the assistantNeurofeedback device design and functionality component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: assistantNeurofeedback can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Un dispositif qui offre une rétroaction neuro en temps réel pour améliorer les pratiques de méditati
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Neuroscientists and clinical researchers working with neural interfaces
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

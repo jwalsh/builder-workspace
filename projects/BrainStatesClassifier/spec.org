@@ -1,0 +1,151 @@
+#+TITLE: BrainStatesClassifier
+#+SUBTITLE: An AI-powered system that classifies various brain states for research and diagnostic purposes.
+#+CATEGORY: BCI
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+An AI-powered system that classifies various brain states for research and diagnostic purposes.
+
+* Foundational Axiom
+
+Brain-computer interfaces fail when they treat neural signals as simple input streams; BrainStatesClassifier models the bidirectional adaptation between brain and system.
+
+* Anti-Goals
+
+- *General-purpose platform*: BrainStatesClassifier solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** System Architecture Design for BrainStatesClassifier Project
+   :STATUS: APPROVED
+   Design the overall system architecture, including components, data flow, and integration points. Utilize Transfer Learning for faster training and other state-of-the-art machine learning techniques such as Convolutional Neural Networks (CNN) and Recurrent Neural Networks (RNN). Outline each step of the data processing pipeline with specific algorithms or libraries to be used, such as PyTorch, TensorFlow, NumPy, and Pandas. Propose a scalable cloud-based database solution like AWS RDS or Azure SQ...
+
+* Build Order
+
+** TODO Step 1: Project Planning and Requirements Gathering
+   :PRIORITY: 5
+   :ASSIGNED: project-manager
+   Define project scope, objectives, and requirements. Conduct research on brain states classification and identify potential use cases. Gather input from subject matter experts and stakeholders.
+
+   *Acceptance test*: Project Planning and Requirements Gathering component is implemented, tested, and integrated.
+
+** TODO Step 2: System Architecture Design for BrainStatesClassifier Project
+   :PRIORITY: 5
+   :ASSIGNED: task-decomposer
+   :DEPENDS: (depends on: Project Planning and Requirements Gathering)
+   Design the overall system architecture, including components, data flow, and integration points. Utilize Transfer Learning for faster training and other state-of-the-art machine learning techniques such as Convolutional Neural Networks (CNN) and Recurrent Neural Networks (RNN). Outline each step of ...
+
+   *Acceptance test*: System Architecture Design for BrainStatesClassifier Project component is implemented, tested, and integrated.
+
+** TODO Step 3: Data Acquisition and Preprocessing
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Identify and acquire relevant brain data sources (e.g., EEG, fMRI) for training and testing the AI model. Develop data preprocessing and cleaning pipelines.
+
+   *Acceptance test*: Data Acquisition and Preprocessing component is implemented, tested, and integrated.
+
+** TODO Step 4: AI Model Development
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: System Architecture Design, Data Acquisition and Preprocessing)
+   Develop and train the AI model for brain state classification using appropriate machine learning algorithms and techniques.
+
+   *Acceptance test*: AI Model Development component is implemented, tested, and integrated.
+
+** TODO Step 5: User Interface Design and Development
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: System Architecture Design)
+   Design and develop the user interface for the system, including visualization of brain state classifications and user interactions.
+
+   *Acceptance test*: User Interface Design and Development component is implemented, tested, and integrated.
+
+** TODO Step 6: Database Design and Implementation
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: System Architecture Design)
+   Design and implement the database schema for storing brain data, AI model parameters, and classification results.
+
+   *Acceptance test*: Database Design and Implementation component is implemented, tested, and integrated.
+
+** TODO Step 7: Security and Compliance
+   :PRIORITY: 3
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: System Architecture Design)
+   Ensure the system adheres to relevant security and privacy regulations, such as GDPR and HIPAA. Implement appropriate security measures and data protection mechanisms.
+
+   *Acceptance test*: Security and Compliance component is implemented, tested, and integrated.
+
+** TODO Step 8: Integration and Testing
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: AI Model Development, User Interface Design and Development, Database Design and Implementation)
+   Integrate the various components of the system and perform comprehensive testing, including unit tests, integration tests, and end-to-end tests.
+
+   *Acceptance test*: Integration and Testing component is implemented, tested, and integrated.
+
+** TODO Step 9: Deployment and Monitoring
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Integration and Testing, Security and Compliance)
+   Deploy the system to a production environment and implement monitoring and logging mechanisms for performance and error tracking.
+
+   *Acceptance test*: Deployment and Monitoring component is implemented, tested, and integrated.
+
+** TODO Step 10: Documentation and User Training
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: User Interface Design and Development, Integration and Testing)
+   Develop comprehensive documentation for the system, including user manuals, technical documentation, and training materials.
+
+   *Acceptance test*: Documentation and User Training component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: BrainStatesClassifier can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-004: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Rust
+- Docker
+- Kubernetes
+- AWS
+- TensorFlow
+- PyTorch
+- REST API
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An AI-powered system that classifies various brain states for research and diagnostic purposes.
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Neuroscientists and clinical researchers working with neural interfaces
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook

@@ -1,0 +1,163 @@
+#+TITLE: GeneticOptimizationPlatform
+#+SUBTITLE: A platform for analyzing personal genetic data and providing recommendations for optimizing health and performance.
+#+CATEGORY: BIOTECH
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+A platform for analyzing personal genetic data and providing recommendations for optimizing health and performance.
+
+* Foundational Axiom
+
+Biotech tools fail when they treat biological systems as deterministic; GeneticOptimizationPlatform embraces stochasticity as a design constraint.
+
+* Anti-Goals
+
+- *General-purpose platform*: GeneticOptimizationPlatform solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Comprehensive Project Requirements for GeneticOptimizationPlatform
+   :STATUS: IN_REVIEW
+   Thoroughly document all project requirements from stakeholders. This includes functional, non-functional, performance, and specific privacy/security considerations due to the sensitive nature of genetic data. Additionally, outline the expected data handling and storage procedures, user interface design requirements, and any potential integration needs with existing health or fitness platforms.
+
+* Build Order
+
+** TODO Step 1: Conduct Unit Testing
+   :PRIORITY: 5
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Backend Services Development, Frontend Development)
+   Write and execute unit tests for the GeneticOptimizationPlatform components to ensure they meet functional requirements.
+
+   *Acceptance test*: Conduct Unit Testing component is implemented, tested, and integrated.
+
+** TODO Step 2: Integration Testing
+   :PRIORITY: 5
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Backend Services Development, Frontend Development)
+   Test the integration between different components of the GeneticOptimizationPlatform to ensure proper functionality.
+
+   *Acceptance test*: Integration Testing component is implemented, tested, and integrated.
+
+** TODO Step 3: Perform Code Reviews
+   :PRIORITY: 5
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Backend Services Development, Frontend Development)
+   Review the code developed for the GeneticOptimizationPlatform to ensure it adheres to best practices and design patterns.
+
+   *Acceptance test*: Perform Code Reviews component is implemented, tested, and integrated.
+
+** TODO Step 4: Design Platform Architecture
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Requirements)
+   Create an architectural design for the GeneticOptimizationPlatform, including frontend, backend, database, and deployment components.
+
+   *Acceptance test*: Design Platform Architecture component is implemented, tested, and integrated.
+
+** TODO Step 5: Implement Data Security Measures
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design Platform Architecture)
+   Secure the GeneticOptimizationPlatform by implementing appropriate data encryption, authentication, and authorization mechanisms.
+
+   *Acceptance test*: Implement Data Security Measures component is implemented, tested, and integrated.
+
+** TODO Step 6: Deploy GeneticOptimizationPlatform
+   :PRIORITY: 5
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design Platform Architecture, Implement Data Security Measures)
+   Prepare and execute the deployment of the GeneticOptimizationPlatform to a staging environment for further testing.
+
+   *Acceptance test*: Deploy GeneticOptimizationPlatform component is implemented, tested, and integrated.
+
+** TODO Step 7: Test in Staging Environment
+   :PRIORITY: 5
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Deploy GeneticOptimizationPlatform)
+   Execute tests on the GeneticOptimizationPlatform in the staging environment to ensure proper functionality and performance.
+
+   *Acceptance test*: Test in Staging Environment component is implemented, tested, and integrated.
+
+** TODO Step 8: Prepare for Production Deployment
+   :PRIORITY: 5
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Test in Staging Environment)
+   Prepare the GeneticOptimizationPlatform for production deployment, including updating configuration settings and performing final checks.
+
+   *Acceptance test*: Prepare for Production Deployment component is implemented, tested, and integrated.
+
+** TODO Step 9: Production Deployment
+   :PRIORITY: 5
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Prepare for Production Deployment)
+   Deploy the GeneticOptimizationPlatform to a production environment and monitor its performance.
+
+   *Acceptance test*: Production Deployment component is implemented, tested, and integrated.
+
+** TODO Step 10: Develop Backend Services
+   :PRIORITY: 4
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design Platform Architecture)
+   Implement the backend services for the GeneticOptimizationPlatform, including data processing, analytics, and API endpoints.
+
+   *Acceptance test*: Develop Backend Services component is implemented, tested, and integrated.
+
+** TODO Step 11: Set Up Database Schema
+   :PRIORITY: 4
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design Platform Architecture)
+   Create and configure the database schema for the GeneticOptimizationPlatform, including tables, relationships, and indexes.
+
+   *Acceptance test*: Set Up Database Schema component is implemented, tested, and integrated.
+
+** TODO Step 12: Create Frontend User Interface Design
+   :PRIORITY: 3
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design Platform Architecture)
+   Design the user interface for the GeneticOptimizationPlatform, considering user experience, accessibility, and responsiveness.
+
+   *Acceptance test*: Create Frontend User Interface Design component is implemented, tested, and integrated.
+
+** IN_PROGRESS Step 13: Define Comprehensive Project Requirements for GeneticOptimizationPlatform
+   :PRIORITY: 1
+   :ASSIGNED: code-architect
+   Thoroughly document all project requirements from stakeholders. This includes functional, non-functional, performance, and specific privacy/security considerations due to the sensitive nature of genetic data. Additionally, outline the expected data handling and storage procedures, user interface des...
+
+   *Acceptance test*: Define Comprehensive Project Requirements for GeneticOptimizationPlatform component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: GeneticOptimizationPlatform can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: A platform for analyzing personal genetic data and providing recommendations for optimizing health a
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Biotechnology researchers and lab scientists
+
+* Primary Output Artifact
+
+A deployed platform with user-facing interface

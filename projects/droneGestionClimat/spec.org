@@ -1,0 +1,117 @@
+#+TITLE: droneGestionClimat
+#+SUBTITLE: Des drones autonomes pour la gestion du climat en milieu agricole, optimisant l'humidité et la température.
+#+CATEGORY: AUTONOMOUS_SYSTEMS
+#+DATE: 2024-10-09
+#+STARTUP: overview
+
+* Overview
+
+Des drones autonomes pour la gestion du climat en milieu agricole, optimisant l'humidité et la température.
+
+* Foundational Axiom
+
+Autonomous systems fail when they optimize for nominal conditions; droneGestionClimat guarantees safe behavior across the full distribution of operating conditions.
+
+* Anti-Goals
+
+- *General-purpose platform*: droneGestionClimat solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Build Order
+
+** TODO Step 1: Design the drone hardware
+   :PRIORITY: 3
+   :ASSIGNED: task-decomposer
+   Create a detailed design for the autonomous drone that will be used in this project.
+
+   *Acceptance test*: Design the drone hardware component is implemented, tested, and integrated.
+
+** TODO Step 2: Define the software architecture for drone control and data processing
+   :PRIORITY: 4
+   :ASSIGNED: project-manager
+   :DEPENDS: (depends on: Design the drone hardware)
+   Develop a high-level design for the software that will manage the drone's autonomous navigation, climate data collection, and data processing.
+
+   *Acceptance test*: Define the software architecture for drone control and data processing component is implemented, tested, and integrated.
+
+** TODO Step 3: Implement the drone's autonomous navigation system
+   :PRIORITY: 5
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design the drone hardware, Define the software architecture for drone control and data processing)
+   Develop the software that allows the drone to navigate autonomously within the agricultural environment.
+
+   *Acceptance test*: Implement the drone's autonomous navigation system component is implemented, tested, and integrated.
+
+** TODO Step 4: Create a user-friendly interface for the drone system
+   :PRIORITY: 1
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Implement the drone's autonomous navigation system)
+   Develop an intuitive interface that allows farmers to easily operate, monitor, and manage their autonomous climate-controlling drones.
+
+   *Acceptance test*: Create a user-friendly interface for the drone system component is implemented, tested, and integrated.
+
+** TODO Step 5: Setup continuous integration and deployment pipeline
+   :PRIORITY: 4
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Implement the drone's autonomous navigation system, Create a user-friendly interface for the drone system)
+   Create a CI/CD pipeline to ensure smooth, automatic code deployments and testing.
+
+   *Acceptance test*: Setup continuous integration and deployment pipeline component is implemented, tested, and integrated.
+
+** TODO Step 6: Develop a database structure for storing climate and drone data
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Define the software architecture for drone control and data processing)
+   Design and implement a robust database to store the collected climate data, drone status information, and other relevant data.
+
+   *Acceptance test*: Develop a database structure for storing climate and drone data component is implemented, tested, and integrated.
+
+** TODO Step 7: Develop the climate data processing algorithms
+   :PRIORITY: 2
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define the software architecture for drone control and data processing)
+   Create algorithms to process and analyze the collected climate data, optimizing humidity and temperature for agricultural purposes.
+
+   *Acceptance test*: Develop the climate data processing algorithms component is implemented, tested, and integrated.
+
+** TODO Step 8: Perform initial testing on drones and software
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Implement the drone's autonomous navigation system, Create a user-friendly interface for the drone system)
+   Conduct thorough tests to ensure that the drones, their software, and the overall system function as intended.
+
+   *Acceptance test*: Perform initial testing on drones and software component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: droneGestionClimat can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+* Stack Preferences
+
+- Python (default)
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: Des drones autonomes pour la gestion du climat en milieu agricole, optimisant l'humidité et la tempé
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Robotics engineers and autonomous systems operators
+
+* Primary Output Artifact
+
+A working implementation with tests, documentation, and deployment guide

@@ -1,0 +1,148 @@
+#+TITLE: AIAssistedForensics
+#+SUBTITLE: An AI system that assists in digital forensics investigations by analyzing large volumes of data and identifying relevant evidence.
+#+CATEGORY: UNKNOWN
+#+DATE: 2024-10-21
+#+STARTUP: overview
+
+* Overview
+
+An AI system that assists in digital forensics investigations by analyzing large volumes of data and identifying relevant evidence.
+
+* Foundational Axiom
+
+Existing approaches to ai system fail because they optimize for the common case while ignoring structural constraints; AIAssistedForensics makes those constraints first-class.
+
+* Anti-Goals
+
+- *General-purpose platform*: AIAssistedForensics solves a specific problem, not a platform for all problems in this domain. Building a platform leads to feature sprawl and loss of core value.
+- *Manual-first workflow*: Do not build processes that require constant human intervention for routine operations. If a human must babysit it, the automation has failed.
+- *Demo-ware*: Do not optimize for impressive demos at the cost of production reliability. A system that works in a demo but fails under real conditions is worse than no system.
+
+* Architectural Decisions
+
+** Define Project Scope and Requirements (Revised)
+   :STATUS: APPROVED
+   This RFC outlines the process of gathering and documenting project requirements, scope, and objectives for the AI-assisted digital forensics system. The focus areas include: data sources to be analyzed (e.g., disk images, network traffic logs, email archives, mobile device data, cloud storage data), desired outputs or evidence to be identified (e.g., malware signatures, suspicious file transfers, communication patterns, data exfiltration attempts), performance and scalability requirements (e.g.,...
+
+* Build Order
+
+** TODO Step 1: Define Project Scope and Requirements (Revised)
+   :PRIORITY: 5
+   :ASSIGNED: task-decomposer
+   This RFC outlines the process of gathering and documenting project requirements, scope, and objectives for the AI-assisted digital forensics system. The focus areas include: data sources to be analyzed (e.g., disk images, network traffic logs, email archives, mobile device data, cloud storage data),...
+
+   *Acceptance test*: Define Project Scope and Requirements (Revised) component is implemented, tested, and integrated.
+
+** TODO Step 2: Design System Architecture
+   :PRIORITY: 4
+   :ASSIGNED: code-architect
+   :DEPENDS: (depends on: Define Project Scope and Requirements)
+   Design the overall system architecture, including components, data flow, and integration points.
+
+   *Acceptance test*: Design System Architecture component is implemented, tested, and integrated.
+
+** TODO Step 3: Establish Security and Compliance Measures
+   :PRIORITY: 4
+   :ASSIGNED: security-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement security measures and ensure compliance with relevant regulations and standards for handling sensitive data.
+
+   *Acceptance test*: Establish Security and Compliance Measures component is implemented, tested, and integrated.
+
+** TODO Step 4: Develop Data Ingestion and Preprocessing
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Implement mechanisms for ingesting and preprocessing large volumes of data from various sources.
+
+   *Acceptance test*: Develop Data Ingestion and Preprocessing component is implemented, tested, and integrated.
+
+** TODO Step 5: Build AI Models for Evidence Identification
+   :PRIORITY: 3
+   :ASSIGNED: backend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Develop and train AI models for identifying relevant evidence from the ingested data.
+
+   *Acceptance test*: Build AI Models for Evidence Identification component is implemented, tested, and integrated.
+
+** TODO Step 6: Implement Data Storage and Management
+   :PRIORITY: 3
+   :ASSIGNED: database-specialist
+   :DEPENDS: (depends on: Design System Architecture)
+   Set up secure and scalable data storage and management solutions for ingested data and identified evidence.
+
+   *Acceptance test*: Implement Data Storage and Management component is implemented, tested, and integrated.
+
+** TODO Step 7: Create User Interface and Reporting
+   :PRIORITY: 2
+   :ASSIGNED: frontend-developer
+   :DEPENDS: (depends on: Design System Architecture)
+   Design and implement the user interface and reporting mechanisms for presenting identified evidence to investigators.
+
+   *Acceptance test*: Create User Interface and Reporting component is implemented, tested, and integrated.
+
+** TODO Step 8: Set up Continuous Integration and Deployment
+   :PRIORITY: 2
+   :ASSIGNED: devops-engineer
+   :DEPENDS: (depends on: Design System Architecture)
+   Configure a CI/CD pipeline for automated testing, building, and deployment of the system.
+
+   *Acceptance test*: Set up Continuous Integration and Deployment component is implemented, tested, and integrated.
+
+** TODO Step 9: Conduct System Testing and Quality Assurance
+   :PRIORITY: 2
+   :ASSIGNED: qa-tester
+   :DEPENDS: (depends on: Develop Data Ingestion and Preprocessing, Build AI Models for Evidence Identification, Create User Interface and Reporting, Implement Data Storage and Management, Establish Security and Compliance Measures)
+   Perform comprehensive testing, including unit tests, integration tests, and end-to-end tests, to ensure system quality and reliability.
+
+   *Acceptance test*: Conduct System Testing and Quality Assurance component is implemented, tested, and integrated.
+
+** TODO Step 10: Document System Architecture and Usage
+   :PRIORITY: 2
+   :ASSIGNED: technical-writer
+   :DEPENDS: (depends on: Design System Architecture)
+   Create comprehensive documentation for the system architecture, components, and usage guidelines.
+
+   *Acceptance test*: Document System Architecture and Usage component is implemented, tested, and integrated.
+
+** Failure Handler
+   If an acceptance test fails, stop. Document what failed,
+   what you tried, and what the blocker is. Do not proceed
+   to the next step. Surface the failure as a CPRR refutation
+   candidate.
+
+* Open Conjectures
+
+** C-001: AIAssistedForensics can deliver its core value proposition as described
+   :FALSIFICATION: Integration test of end-to-end workflow fails to produce expected output
+
+** C-002: AI/ML components achieve sufficient accuracy for production use
+   :FALSIFICATION: Model accuracy on held-out test set falls below domain-specific threshold
+
+** C-003: System meets real-time latency requirements under load
+   :FALSIFICATION: P95 latency exceeds target under simulated production load
+
+** C-004: Architecture scales horizontally to meet projected demand
+   :FALSIFICATION: Load test shows non-linear degradation before target throughput
+
+** C-005: Security implementation meets compliance requirements
+   :FALSIFICATION: Penetration test or security audit reveals critical vulnerability
+
+* Stack Preferences
+
+- AWS
+
+* Success Criteria
+
+1. All build steps completed with passing acceptance tests
+2. End-to-end workflow demonstrates core value: An AI system that assists in digital forensics investigations by analyzing large volumes of data and
+3. All open conjectures either confirmed with evidence or refuted with data
+4. System deployed and accessible to primary users
+
+* Primary User
+
+Domain professionals who need specialized tooling
+
+* Primary Output Artifact
+
+An integrated system with monitoring and operational runbook
